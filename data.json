@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771873969574,
+  "updatedAt": 1771874408239,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1771891970000
+          "resetAt": 1771892408000
         },
         {
           "label": "Day",
@@ -26,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1771960369000
+          "resetAt": 1771960808000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1771960369000
+          "resetAt": 1771960808000
         }
       ],
       "error": null
@@ -57,7 +57,10 @@
       "lastError": "Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
       "lastSummary": null,
       "nextRunAt": 1771934400000,
-      "model": null
+      "model": null,
+      "lastTotalTokens": 10698,
+      "lastInputTokens": 6923,
+      "lastOutputTokens": 804
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -72,7 +75,10 @@
       "lastError": "FailoverError: ⚠️ API rate limit reached. Please try again later.",
       "lastSummary": null,
       "nextRunAt": 1771921800000,
-      "model": null
+      "model": null,
+      "lastTotalTokens": 54013,
+      "lastInputTokens": 51851,
+      "lastOutputTokens": 7280
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -87,7 +93,10 @@
       "lastError": "FailoverError: No available auth profile for openai-codex (all in cooldown or unavailable).",
       "lastSummary": null,
       "nextRunAt": 1771933800000,
-      "model": null
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -102,7 +111,10 @@
       "lastError": "FailoverError: ⚠️ API rate limit reached. Please try again later.",
       "lastSummary": null,
       "nextRunAt": 1771876800000,
-      "model": "openai-codex/gpt-4o-mini"
+      "model": "openai-codex/gpt-4o-mini",
+      "lastTotalTokens": 135928,
+      "lastInputTokens": 954689,
+      "lastOutputTokens": 2381
     }
   ]
 }

@@ -83,6 +83,7 @@
               <th>Status</th>
               <th>Last Run</th>
               <th>Duration</th>
+              <th>Tokens</th>
               <th>Next Run</th>
               <th>Model</th>
               <th>Error</th>
@@ -246,6 +247,14 @@ function fmtDuration(ms) {
   return `${Math.floor(ms/60000)}m ${Math.floor((ms%60000)/1000)}s`;
 }
 
+function fmtTokens(total, input, output) {
+  if (total == null && input == null) return '—';
+  const t = total ?? (input ?? 0) + (output ?? 0);
+  if (t >= 1_000_000) return `${(t/1_000_000).toFixed(2)}m`;
+  if (t >= 1_000) return `${(t/1_000).toFixed(1)}k`;
+  return String(t);
+}
+
 function statusBadge(status) {
   const cls = status === 'ok' ? 'badge-ok' : status === 'error' ? 'badge-error' : 'badge-unknown';
   return `<span class="px-2 py-0.5 rounded-full text-xs font-semibold ${cls}">${status ?? '—'}</span>`;
@@ -294,10 +303,12 @@ function renderProviders(providers) {
     }
 
     const planHtml = p.plan ? `<span class="text-xs text-gray-500 ml-2">${escHtml(p.plan)}</span>` : '';
+    const subtitleHtml = p.id === 'gemini'
+      ? `<span class="text-xs text-gray-600 ml-1">(request quota)</span>` : '';
 
     card.innerHTML = `
       <div class="flex items-center justify-between">
-        <span class="font-semibold text-sm">${escHtml(p.label)}</span>
+        <div><span class="font-semibold text-sm">${escHtml(p.label)}</span>${subtitleHtml}</div>
         ${planHtml}
       </div>
       ${windowsHtml}`;
@@ -359,6 +370,7 @@ function renderCronJobs(jobs) {
       <td>${statusBadge(job.lastStatus)}</td>
       <td class="text-sm text-gray-300">${relativeTime(job.lastRunAt)}</td>
       <td class="text-sm text-gray-300">${fmtDuration(job.lastDurationMs)}</td>
+      <td class="text-sm text-gray-300" title="${job.lastInputTokens != null ? `in ${job.lastInputTokens?.toLocaleString()} / out ${job.lastOutputTokens?.toLocaleString()}` : ''}">${fmtTokens(job.lastTotalTokens, job.lastInputTokens, job.lastOutputTokens)}</td>
       <td class="text-sm text-gray-300">${job.nextRunAt ? inFuture(job.nextRunAt - Date.now()) : '—'}</td>
       <td class="text-xs text-gray-400 font-mono">${escHtml(job.model ?? '—')}</td>
       <td>${errorText}</td>`;
