@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771873008486,
+  "updatedAt": 1771873969574,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1771891009000
+          "resetAt": 1771891970000
         },
         {
           "label": "Day",
@@ -24,12 +24,14 @@
       "label": "Gemini",
       "windows": [
         {
-          "label": "Pro",
-          "usedPercent": 0
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1771960369000
         },
         {
-          "label": "Flash",
-          "usedPercent": 0
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1771960369000
         }
       ],
       "error": null
