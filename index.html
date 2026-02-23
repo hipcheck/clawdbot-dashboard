@@ -52,9 +52,9 @@
     <div class="flex items-center gap-3">
       <span class="font-semibold text-base">OpenClaw Dashboard</span>
     </div>
-    <div class="flex items-center gap-4 text-sm text-gray-400">
+    <div class="flex items-center gap-3 text-sm text-gray-400">
       <span id="updated-at"></span>
-      <span id="refresh-indicator" class="hidden"><span class="spinner"></span> Refreshing…</span>
+      <button id="refresh-btn" title="Refresh" style="font-size:18px;line-height:1;background:none;border:none;cursor:pointer;color:#8b949e;padding:4px 6px;border-radius:6px;" onmouseover="this.style.color='#e6edf3'" onmouseout="this.style.color='#8b949e'">↻</button>
       <button id="logout-btn" class="text-xs text-gray-500 hover:text-gray-300 transition-colors">Sign out</button>
     </div>
   </header>
@@ -129,6 +129,8 @@ patSubmit.addEventListener('click', async () => {
 
 patInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') patSubmit.click(); });
 
+document.getElementById('refresh-btn').addEventListener('click', () => loadData());
+
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem(PAT_KEY);
   ghPat = null;
@@ -176,15 +178,15 @@ async function fetchDataJson() {
 }
 
 async function loadData() {
-  const indicator = document.getElementById('refresh-indicator');
-  indicator.classList.remove('hidden');
+  const btn = document.getElementById('refresh-btn');
+  if (btn) { btn.style.animation = 'spin 0.7s linear infinite'; btn.disabled = true; }
   try {
     const data = await fetchDataJson();
     renderDashboard(data);
   } catch (err) {
     console.error('Failed to load data.json:', err);
   } finally {
-    indicator.classList.add('hidden');
+    if (btn) { btn.style.animation = ''; btn.disabled = false; }
   }
 }
 
@@ -402,9 +404,12 @@ function renderCronJobs(jobs) {
 // ---------------------------------------------------------------------------
 // Main render
 // ---------------------------------------------------------------------------
+let _lastData = null;
+
 function renderDashboard(data) {
+  _lastData = data;
   const updatedEl = document.getElementById('updated-at');
-  updatedEl.textContent = `Updated ${relativeTime(data.updatedAt)}`;
+  updatedEl.textContent = data.updatedAt ? `Data from ${relativeTime(data.updatedAt)}` : '';
 
   renderProviders(data.providers ?? []);
   renderCronJobs(data.cronJobs ?? []);
