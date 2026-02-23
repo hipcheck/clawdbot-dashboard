@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771875007111,
+  "updatedAt": 1771875719872,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1771893007000
+          "resetAt": 1771893720000
         },
         {
           "label": "Day",
@@ -26,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1771961407000
+          "resetAt": 1771962120000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1771961407000
+          "resetAt": 1771962120000
         }
       ],
       "error": null
@@ -39,8 +39,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "No token"
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 63,
+          "resetAt": 1771884000252
+        },
+        {
+          "label": "Week",
+          "usedPercent": 23,
+          "resetAt": 1772244000252
+        }
+      ],
+      "error": null
     }
   ],
   "cronJobs": [
