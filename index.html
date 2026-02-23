@@ -25,11 +25,6 @@
       border: 2px solid #30363d; border-top-color: #58a6ff;
       border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #21262d; }
-    th { color: #8b949e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-    tr:last-child td { border-bottom: none; }
-    .truncate-cell { max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   </style>
 </head>
 <body class="min-h-screen">
@@ -75,23 +70,7 @@
     <!-- Cron jobs -->
     <section>
       <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Cron Jobs</h2>
-      <div class="card rounded-xl overflow-hidden">
-        <table id="cron-table">
-          <thead>
-            <tr>
-              <th>Job</th>
-              <th>Status</th>
-              <th>Last Run</th>
-              <th>Duration</th>
-              <th>Tokens</th>
-              <th>Next Run</th>
-              <th>Model</th>
-              <th>Error</th>
-            </tr>
-          </thead>
-          <tbody id="cron-tbody"></tbody>
-        </table>
-      </div>
+      <div id="cron-list" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
     </section>
 
   </main>
@@ -366,34 +345,62 @@ function renderProviders(providers) {
 }
 
 // ---------------------------------------------------------------------------
-// Cron table
+// Cron cards
 // ---------------------------------------------------------------------------
 function renderCronJobs(jobs) {
-  const tbody = document.getElementById('cron-tbody');
-  tbody.innerHTML = '';
+  const list = document.getElementById('cron-list');
+  list.innerHTML = '';
   if (jobs.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" class="text-gray-500 text-sm text-center py-6">No cron jobs</td></tr>';
+    list.innerHTML = '<p class="text-gray-500 text-sm">No cron jobs</p>';
     return;
   }
   for (const job of jobs) {
-    const tr = document.createElement('tr');
-    const scheduleStr = job.schedule + (job.tz ? ` (${job.tz})` : '');
-    const errorText = job.lastError
-      ? `<span class="text-red-400 text-xs truncate-cell" title="${escHtml(job.lastError)}">${escHtml(job.lastError.slice(0, 80))}${job.lastError.length > 80 ? '…' : ''}</span>`
-      : '—';
-    tr.innerHTML = `
-      <td>
-        <div class="font-medium text-sm">${escHtml(job.name)}</div>
-        <div class="text-xs text-gray-500 font-mono mt-0.5">${escHtml(scheduleStr)}</div>
-      </td>
-      <td>${statusBadge(job.lastStatus)}</td>
-      <td class="text-sm text-gray-300">${relativeTime(job.lastRunAt)}</td>
-      <td class="text-sm text-gray-300">${fmtDuration(job.lastDurationMs)}</td>
-      <td class="text-sm text-gray-300" title="${job.lastInputTokens != null ? `in ${job.lastInputTokens?.toLocaleString()} / out ${job.lastOutputTokens?.toLocaleString()}` : ''}">${fmtTokens(job.lastTotalTokens, job.lastInputTokens, job.lastOutputTokens)}</td>
-      <td class="text-sm text-gray-300">${job.nextRunAt ? inFuture(job.nextRunAt - Date.now()) : '—'}</td>
-      <td class="text-xs text-gray-400 font-mono">${escHtml(job.model ?? '—')}</td>
-      <td>${errorText}</td>`;
-    tbody.appendChild(tr);
+    const card = document.createElement('div');
+    card.className = 'card rounded-xl p-4';
+
+    const scheduleStr = job.schedule + (job.tz ? ` · ${job.tz}` : '');
+    const tokens = fmtTokens(job.lastTotalTokens, job.lastInputTokens, job.lastOutputTokens);
+    const tokenTitle = job.lastInputTokens != null
+      ? `in ${job.lastInputTokens.toLocaleString()} / out ${job.lastOutputTokens?.toLocaleString()}`
+      : '';
+
+    const statsItems = [
+      job.lastRunAt ? relativeTime(job.lastRunAt) : null,
+      job.lastDurationMs != null ? fmtDuration(job.lastDurationMs) : null,
+      tokens !== '—' ? `${tokens} tok` : null,
+    ].filter(Boolean).join(' · ');
+
+    const modelStr = job.model
+      ? job.model.replace('openai-codex/', '').replace('google-gemini-cli/', '')
+      : null;
+
+    const errorHtml = job.lastError
+      ? `<div class="mt-2 text-xs text-red-400 leading-snug break-words">${escHtml(job.lastError)}</div>`
+      : '';
+
+    card.innerHTML = `
+      <div class="flex items-start justify-between gap-2">
+        <span class="font-medium text-sm leading-snug">${escHtml(job.name)}</span>
+        ${statusBadge(job.lastStatus)}
+      </div>
+      <div class="text-xs text-gray-500 font-mono mt-1">${escHtml(scheduleStr)}</div>
+      <div class="mt-3 border-t border-gray-800 pt-3 space-y-1">
+        <div class="flex justify-between text-xs">
+          <span class="text-gray-500">Last</span>
+          <span class="text-gray-300" title="${escHtml(tokenTitle)}">${statsItems || '—'}</span>
+        </div>
+        <div class="flex justify-between text-xs">
+          <span class="text-gray-500">Next</span>
+          <span class="text-gray-300">${job.nextRunAt ? inFuture(job.nextRunAt - Date.now()) : '—'}</span>
+        </div>
+        ${modelStr ? `<div class="flex justify-between text-xs">
+          <span class="text-gray-500">Model</span>
+          <span class="text-gray-400 font-mono">${escHtml(modelStr)}</span>
+        </div>` : ''}
+      </div>
+      ${errorHtml}`;
+
+    list.appendChild(card);
   }
 }
 
