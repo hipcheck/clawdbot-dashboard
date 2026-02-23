@@ -120,13 +120,13 @@ const authError = document.getElementById('auth-error');
 const logoutBtn = document.getElementById('logout-btn');
 
 async function validatePat(pat) {
-  const res = await fetch('https://api.github.com/user', {
+  // Verify the PAT can read the dashboard repo (works for personal accounts and org members)
+  const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}`, {
     headers: { Authorization: `Bearer ${pat}`, Accept: 'application/vnd.github+json' }
   });
+  if (res.status === 401) throw new Error('Invalid token');
+  if (res.status === 404) throw new Error(`Cannot access ${OWNER}/${REPO} — check PAT scopes`);
   if (!res.ok) throw new Error(`GitHub API returned ${res.status}`);
-  const user = await res.json();
-  if (user.login !== OWNER) throw new Error(`PAT belongs to '${user.login}', expected '${OWNER}'`);
-  return user.login;
 }
 
 patSubmit.addEventListener('click', async () => {
