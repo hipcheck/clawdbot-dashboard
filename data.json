@@ -1,5 +1,106 @@
 {
-  "updatedAt": 0,
-  "providers": [],
-  "cronJobs": []
+  "updatedAt": 1771873008486,
+  "providers": [
+    {
+      "id": "openai-codex",
+      "label": "OpenAI Codex",
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 0,
+          "resetAt": 1771891009000
+        },
+        {
+          "label": "Day",
+          "usedPercent": 100,
+          "resetAt": 1771880849000
+        }
+      ],
+      "plan": "plus ($0.00)",
+      "error": null
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "windows": [
+        {
+          "label": "Pro",
+          "usedPercent": 0
+        },
+        {
+          "label": "Flash",
+          "usedPercent": 0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "anthropic",
+      "label": "Anthropic",
+      "windows": [],
+      "error": "No token"
+    }
+  ],
+  "cronJobs": [
+    {
+      "id": "461680fe-9815-4dc5-8a0a-5898316619f8",
+      "name": "feature-builder:morning-proposal",
+      "schedule": "0 7 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": 1771848000010,
+      "lastStatus": "error",
+      "lastDurationMs": 163,
+      "consecutiveErrors": 1,
+      "lastError": "Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
+      "lastSummary": null,
+      "nextRunAt": 1771934400000,
+      "model": null
+    },
+    {
+      "id": "99b353aa-2921-4694-8da5-9074680234a2",
+      "name": "healthcheck:overnight-prescan",
+      "schedule": "30 3 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": 1771835400012,
+      "lastStatus": "error",
+      "lastDurationMs": 8396,
+      "consecutiveErrors": 1,
+      "lastError": "FailoverError: ⚠️ API rate limit reached. Please try again later.",
+      "lastSummary": null,
+      "nextRunAt": 1771921800000,
+      "model": null
+    },
+    {
+      "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
+      "name": "healthcheck:security-preflight",
+      "schedule": "50 6 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": 1771847400008,
+      "lastStatus": "error",
+      "lastDurationMs": 838,
+      "consecutiveErrors": 1,
+      "lastError": "FailoverError: No available auth profile for openai-codex (all in cooldown or unavailable).",
+      "lastSummary": null,
+      "nextRunAt": 1771933800000,
+      "model": null
+    },
+    {
+      "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
+      "name": "NYC Senior Marketing Manager Pipeline",
+      "schedule": "0 20 * * 1,4",
+      "tz": null,
+      "enabled": true,
+      "lastRunAt": 1771808400016,
+      "lastStatus": "error",
+      "lastDurationMs": 9934,
+      "consecutiveErrors": 1,
+      "lastError": "FailoverError: ⚠️ API rate limit reached. Please try again later.",
+      "lastSummary": null,
+      "nextRunAt": 1771876800000,
+      "model": "openai-codex/gpt-4o-mini"
+    }
+  ]
 }
