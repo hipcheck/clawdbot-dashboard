@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771875719872,
+  "updatedAt": 1771876809099,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1771893720000
+          "resetAt": 1771894810000
         },
         {
           "label": "Day",
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1771962120000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1771962120000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -43,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 63,
-          "resetAt": 1771884000252
+          "resetAt": 1771884000348
         },
         {
           "label": "Week",
           "usedPercent": 23,
-          "resetAt": 1772244000252
+          "resetAt": 1772244000348
         }
       ],
       "error": null
@@ -115,13 +104,13 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1771808400016,
+      "lastRunAt": 1771876800018,
       "lastStatus": "error",
-      "lastDurationMs": 9934,
-      "consecutiveErrors": 1,
-      "lastError": "FailoverError: ⚠️ API rate limit reached. Please try again later.",
+      "lastDurationMs": 60,
+      "consecutiveErrors": 2,
+      "lastError": "model not allowed: openai-codex/gpt-4o-mini",
       "lastSummary": null,
-      "nextRunAt": 1771876800000,
+      "nextRunAt": 1772136000000,
       "model": "openai-codex/gpt-4o-mini",
       "lastTotalTokens": 135928,
       "lastInputTokens": 954689,
