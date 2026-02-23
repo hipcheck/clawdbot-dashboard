@@ -155,8 +155,8 @@ logoutBtn.addEventListener('click', () => {
   localStorage.removeItem(PAT_KEY);
   ghPat = null;
   clearInterval(refreshTimer);
-  authGate.classList.remove('hidden');
-  dashboard.classList.add('hidden');
+  authGate.style.display = 'flex';
+  dashboard.style.display = 'none';
   patInput.value = '';
 });
 
@@ -173,8 +173,8 @@ async function tryAutoLogin() {
 }
 
 function showDashboard() {
-  authGate.classList.add('hidden');
-  dashboard.classList.remove('hidden');
+  authGate.style.display = 'none';
+  dashboard.style.display = 'block';
   loadData();
   clearInterval(refreshTimer);
   refreshTimer = setInterval(loadData, REFRESH_MS);
