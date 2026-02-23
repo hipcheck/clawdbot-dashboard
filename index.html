@@ -284,6 +284,25 @@ function renderProviders(providers) {
       windowsHtml = `<p class="text-red-400 text-sm mt-2">${escHtml(p.error)}</p>`;
     } else if (p.windows.length === 0) {
       windowsHtml = `<p class="text-gray-500 text-sm mt-2">No usage data</p>`;
+    } else if (p.id === 'gemini') {
+      // Binary status display — Gemini quota is either available or exhausted
+      windowsHtml = `<div class="flex flex-col gap-2 mt-3">`;
+      for (const w of p.windows) {
+        const exhausted = w.usedPercent >= 100;
+        const dot = exhausted
+          ? `<span style="color:#f85149">●</span>`
+          : `<span style="color:#3fb950">●</span>`;
+        const statusText = exhausted ? 'Rate limited' : 'Available';
+        const resetLabel = w.resetAt ? `· resets ${inFuture(w.resetAt - Date.now())}` : '';
+        windowsHtml += `
+          <div class="flex items-center gap-2 text-sm">
+            ${dot}
+            <span class="text-gray-300 font-medium w-12">${escHtml(w.label)}</span>
+            <span class="${exhausted ? 'text-red-400' : 'text-green-400'}">${statusText}</span>
+            <span class="text-gray-600 text-xs">${escHtml(resetLabel)}</span>
+          </div>`;
+      }
+      windowsHtml += `</div>`;
     } else {
       windowsHtml = `<div class="flex flex-wrap gap-4 mt-3">`;
       for (const w of p.windows) {
