@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771887610440,
+  "updatedAt": 1771889407426,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,12 +8,12 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1771905611000
+          "resetAt": 1771907408000
         },
         {
           "label": "Day",
           "usedPercent": 0,
-          "resetAt": 1772492411000
+          "resetAt": 1772494208000
         }
       ],
       "plan": "plus ($0.00)",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 6,
-          "resetAt": 1771902000717
+          "resetAt": 1771902000641
         },
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1772244000717
+          "resetAt": 1772244000641
         }
       ],
       "error": null
