@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <style>
+    body { background: #0d1117; color: #e6edf3; }
+    .card { background: #161b22; border: 1px solid #30363d; }
+    .badge-ok { background: #1f6129; color: #3fb950; }
+    .badge-error { background: #4d1d1d; color: #f85149; }
+    .badge-skipped { background: #2d2d2d; color: #8b949e; }
+    .badge-unknown { background: #2d2d2d; color: #8b949e; }
+    .donut-wrap { position: relative; width: 80px; height: 80px; }
+    .donut-label {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+    }
+    #auth-gate { position: fixed; inset: 0; background: #0d1117; z-index: 50;
+      display: flex; align-items: center; justify-content: center; }
+    .spinner { display: inline-block; width: 14px; height: 14px;
+      border: 2px solid #30363d; border-top-color: #58a6ff;
+      border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #21262d; }
+    th { color: #8b949e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    tr:last-child td { border-bottom: none; }
+    .truncate-cell { max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<!-- Auth gate -->
+<div id="auth-gate">
+  <div class="card rounded-xl p-8 w-full max-w-sm mx-4">
+    <h2 class="text-lg font-semibold mb-1">OpenClaw Dashboard</h2>
+    <p class="text-sm text-gray-400 mb-6">Enter your GitHub Personal Access Token to continue.<br>
+      Needs <code class="text-blue-400">repo</code> scope to read <code class="text-blue-400">hipcheck/clawdbot-dashboard</code>.</p>
+    <input id="pat-input" type="password" placeholder="github_pat_..."
+      class="w-full px-3 py-2 rounded-lg bg-gray-900 border border-gray-600 text-sm focus:outline-none focus:border-blue-500 mb-3" />
+    <button id="pat-submit"
+      class="w-full py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-sm font-medium transition-colors">
+      Sign in
+    </button>
+    <p id="auth-error" class="text-red-400 text-sm mt-3 hidden"></p>
+  </div>
+</div>
+
+<!-- Main dashboard -->
+<div id="dashboard" class="hidden">
+  <!-- Top bar -->
+  <header class="border-b border-gray-800 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="font-semibold text-base">OpenClaw Dashboard</span>
+    </div>
+    <div class="flex items-center gap-4 text-sm text-gray-400">
+      <span id="updated-at"></span>
+      <span id="refresh-indicator" class="hidden"><span class="spinner"></span> Refreshing…</span>
+      <button id="logout-btn" class="text-xs text-gray-500 hover:text-gray-300 transition-colors">Sign out</button>
+    </div>
+  </header>
+
+  <main class="px-6 py-6 max-w-7xl mx-auto space-y-8">
+
+    <!-- Provider token usage -->
+    <section>
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Token Usage</h2>
+      <div id="providers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- Cron jobs -->
+    <section>
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Cron Jobs</h2>
+      <div class="card rounded-xl overflow-hidden">
+        <table id="cron-table">
+          <thead>
+            <tr>
+              <th>Job</th>
+              <th>Status</th>
+              <th>Last Run</th>
+              <th>Duration</th>
+              <th>Next Run</th>
+              <th>Model</th>
+              <th>Error</th>
+            </tr>
+          </thead>
+          <tbody id="cron-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+// ---------------------------------------------------------------------------
+// Constants
+// ---------------------------------------------------------------------------
+const OWNER = 'hipcheck';
+const REPO = 'clawdbot-dashboard';
+const DATA_PATH = 'data.json';
+const REFRESH_MS = 60_000; // auto-refresh every 60s
+const PAT_KEY = 'clawdbot_dashboard_pat';
+
+// ---------------------------------------------------------------------------
+// Auth
+// ---------------------------------------------------------------------------
+let ghPat = null;
+let refreshTimer = null;
+
+const authGate = document.getElementById('auth-gate');
+const dashboard = document.getElementById('dashboard');
+const patInput = document.getElementById('pat-input');
+const patSubmit = document.getElementById('pat-submit');
+const authError = document.getElementById('auth-error');
+const logoutBtn = document.getElementById('logout-btn');
+
+async function validatePat(pat) {
+  const res = await fetch('https://api.github.com/user', {
+    headers: { Authorization: `Bearer ${pat}`, Accept: 'application/vnd.github+json' }
+  });
+  if (!res.ok) throw new Error(`GitHub API returned ${res.status}`);
+  const user = await res.json();
+  if (user.login !== OWNER) throw new Error(`PAT belongs to '${user.login}', expected '${OWNER}'`);
+  return user.login;
+}
+
+patSubmit.addEventListener('click', async () => {
+  const pat = patInput.value.trim();
+  if (!pat) return;
+  patSubmit.disabled = true;
+  patSubmit.textContent = 'Verifying…';
+  authError.classList.add('hidden');
+  try {
+    await validatePat(pat);
+    localStorage.setItem(PAT_KEY, pat);
+    ghPat = pat;
+    showDashboard();
+  } catch (err) {
+    authError.textContent = err.message;
+    authError.classList.remove('hidden');
+  } finally {
+    patSubmit.disabled = false;
+    patSubmit.textContent = 'Sign in';
+  }
+});
+
+patInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') patSubmit.click(); });
+
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem(PAT_KEY);
+  ghPat = null;
+  clearInterval(refreshTimer);
+  authGate.classList.remove('hidden');
+  dashboard.classList.add('hidden');
+  patInput.value = '';
+});
+
+async function tryAutoLogin() {
+  const saved = localStorage.getItem(PAT_KEY);
+  if (!saved) return;
+  try {
+    await validatePat(saved);
+    ghPat = saved;
+    showDashboard();
+  } catch {
+    localStorage.removeItem(PAT_KEY);
+  }
+}
+
+function showDashboard() {
+  authGate.classList.add('hidden');
+  dashboard.classList.remove('hidden');
+  loadData();
+  clearInterval(refreshTimer);
+  refreshTimer = setInterval(loadData, REFRESH_MS);
+}
+
+// ---------------------------------------------------------------------------
+// Data loading
+// ---------------------------------------------------------------------------
+async function fetchDataJson() {
+  // Use GitHub Contents API to get the raw file (works with public + PAT)
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${DATA_PATH}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${ghPat}`,
+      Accept: 'application/vnd.github+json',
+    },
+    cache: 'no-store',
+  });
+  if (!res.ok) throw new Error(`Contents API ${res.status}`);
+  const meta = await res.json();
+  // Decode base64 content
+  const raw = atob(meta.content.replace(/\n/g, ''));
+  return JSON.parse(raw);
+}
+
+async function loadData() {
+  const indicator = document.getElementById('refresh-indicator');
+  indicator.classList.remove('hidden');
+  try {
+    const data = await fetchDataJson();
+    renderDashboard(data);
+  } catch (err) {
+    console.error('Failed to load data.json:', err);
+  } finally {
+    indicator.classList.add('hidden');
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Rendering helpers
+// ---------------------------------------------------------------------------
+function relativeTime(ms) {
+  if (!ms) return '—';
+  const diff = Date.now() - ms;
+  if (diff < 0) return inFuture(-diff);
+  const s = Math.floor(diff / 1000);
+  if (s < 60) return `${s}s ago`;
+  const m = Math.floor(s / 60);
+  if (m < 60) return `${m}m ago`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h}h ago`;
+  return `${Math.floor(h / 24)}d ago`;
+}
+
+function inFuture(ms) {
+  const s = Math.floor(ms / 1000);
+  if (s < 60) return `in ${s}s`;
+  const m = Math.floor(s / 60);
+  if (m < 60) return `in ${m}m`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `in ${h}h`;
+  return `in ${Math.floor(h / 24)}d`;
+}
+
+function fmtDuration(ms) {
+  if (ms == null) return '—';
+  if (ms < 1000) return `${ms}ms`;
+  if (ms < 60000) return `${(ms/1000).toFixed(1)}s`;
+  return `${Math.floor(ms/60000)}m ${Math.floor((ms%60000)/1000)}s`;
+}
+
+function statusBadge(status) {
+  const cls = status === 'ok' ? 'badge-ok' : status === 'error' ? 'badge-error' : 'badge-unknown';
+  return `<span class="px-2 py-0.5 rounded-full text-xs font-semibold ${cls}">${status ?? '—'}</span>`;
+}
+
+function percentColor(pct) {
+  if (pct < 50) return '#3fb950';
+  if (pct < 80) return '#d29922';
+  return '#f85149';
+}
+
+// ---------------------------------------------------------------------------
+// Provider cards
+// ---------------------------------------------------------------------------
+const donutCharts = {};
+
+function renderProviders(providers) {
+  const grid = document.getElementById('providers-grid');
+  grid.innerHTML = '';
+
+  for (const p of providers) {
+    const card = document.createElement('div');
+    card.className = 'card rounded-xl p-5';
+
+    let windowsHtml = '';
+    if (p.error) {
+      windowsHtml = `<p class="text-red-400 text-sm mt-2">${escHtml(p.error)}</p>`;
+    } else if (p.windows.length === 0) {
+      windowsHtml = `<p class="text-gray-500 text-sm mt-2">No usage data</p>`;
+    } else {
+      windowsHtml = `<div class="flex flex-wrap gap-4 mt-3">`;
+      for (const w of p.windows) {
+        const canvasId = `donut-${p.id}-${w.label}`;
+        const resetLabel = w.resetAt ? `Resets ${inFuture(w.resetAt - Date.now())}` : '';
+        windowsHtml += `
+          <div class="flex flex-col items-center gap-1">
+            <div class="donut-wrap">
+              <canvas id="${canvasId}" width="80" height="80"></canvas>
+              <div class="donut-label">${Math.round(w.usedPercent)}%</div>
+            </div>
+            <span class="text-xs font-medium text-gray-300">${escHtml(w.label)}</span>
+            ${resetLabel ? `<span class="text-xs text-gray-500">${escHtml(resetLabel)}</span>` : ''}
+          </div>`;
+      }
+      windowsHtml += `</div>`;
+    }
+
+    const planHtml = p.plan ? `<span class="text-xs text-gray-500 ml-2">${escHtml(p.plan)}</span>` : '';
+
+    card.innerHTML = `
+      <div class="flex items-center justify-between">
+        <span class="font-semibold text-sm">${escHtml(p.label)}</span>
+        ${planHtml}
+      </div>
+      ${windowsHtml}`;
+
+    grid.appendChild(card);
+
+    // Draw charts after DOM insertion
+    if (!p.error) {
+      for (const w of p.windows) {
+        const canvasId = `donut-${p.id}-${w.label}`;
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) continue;
+        const pct = w.usedPercent;
+        const color = percentColor(pct);
+        if (donutCharts[canvasId]) {
+          donutCharts[canvasId].destroy();
+        }
+        donutCharts[canvasId] = new Chart(canvas, {
+          type: 'doughnut',
+          data: {
+            datasets: [{
+              data: [pct, 100 - pct],
+              backgroundColor: [color, '#21262d'],
+              borderWidth: 0,
+            }]
+          },
+          options: {
+            cutout: '72%',
+            animation: false,
+            plugins: { legend: { display: false }, tooltip: { enabled: false } },
+          }
+        });
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Cron table
+// ---------------------------------------------------------------------------
+function renderCronJobs(jobs) {
+  const tbody = document.getElementById('cron-tbody');
+  tbody.innerHTML = '';
+  if (jobs.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="7" class="text-gray-500 text-sm text-center py-6">No cron jobs</td></tr>';
+    return;
+  }
+  for (const job of jobs) {
+    const tr = document.createElement('tr');
+    const scheduleStr = job.schedule + (job.tz ? ` (${job.tz})` : '');
+    const errorText = job.lastError
+      ? `<span class="text-red-400 text-xs truncate-cell" title="${escHtml(job.lastError)}">${escHtml(job.lastError.slice(0, 80))}${job.lastError.length > 80 ? '…' : ''}</span>`
+      : '—';
+    tr.innerHTML = `
+      <td>
+        <div class="font-medium text-sm">${escHtml(job.name)}</div>
+        <div class="text-xs text-gray-500 font-mono mt-0.5">${escHtml(scheduleStr)}</div>
+      </td>
+      <td>${statusBadge(job.lastStatus)}</td>
+      <td class="text-sm text-gray-300">${relativeTime(job.lastRunAt)}</td>
+      <td class="text-sm text-gray-300">${fmtDuration(job.lastDurationMs)}</td>
+      <td class="text-sm text-gray-300">${job.nextRunAt ? inFuture(job.nextRunAt - Date.now()) : '—'}</td>
+      <td class="text-xs text-gray-400 font-mono">${escHtml(job.model ?? '—')}</td>
+      <td>${errorText}</td>`;
+    tbody.appendChild(tr);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Main render
+// ---------------------------------------------------------------------------
+function renderDashboard(data) {
+  const updatedEl = document.getElementById('updated-at');
+  updatedEl.textContent = `Updated ${relativeTime(data.updatedAt)}`;
+
+  renderProviders(data.providers ?? []);
+  renderCronJobs(data.cronJobs ?? []);
+}
+
+function escHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ---------------------------------------------------------------------------
+// Boot
+// ---------------------------------------------------------------------------
+tryAutoLogin();
+</script>
+</body>
+</html>
