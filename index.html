@@ -83,14 +83,12 @@
 const OWNER = 'hipcheck';
 const REPO = 'clawdbot-dashboard';
 const DATA_PATH = 'data.json';
-const REFRESH_MS = 30 * 60_000; // auto-refresh every 30 min
 const PAT_KEY = 'clawdbot_dashboard_pat';
 
 // ---------------------------------------------------------------------------
 // Auth
 // ---------------------------------------------------------------------------
 let ghPat = null;
-let refreshTimer = null;
 
 const authGate = document.getElementById('auth-gate');
 const dashboard = document.getElementById('dashboard');
@@ -134,7 +132,6 @@ patInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') patSubmit.c
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem(PAT_KEY);
   ghPat = null;
-  clearInterval(refreshTimer);
   authGate.style.display = 'flex';
   dashboard.style.display = 'none';
   patInput.value = '';
@@ -156,8 +153,6 @@ function showDashboard() {
   authGate.style.display = 'none';
   dashboard.style.display = 'block';
   loadData();
-  clearInterval(refreshTimer);
-  refreshTimer = setInterval(loadData, REFRESH_MS);
 }
 
 // ---------------------------------------------------------------------------
