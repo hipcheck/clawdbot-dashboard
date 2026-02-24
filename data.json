@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771939806932,
+  "updatedAt": 1771941607272,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
+          "usedPercent": 14,
           "resetAt": 1771943564000
         },
         {
           "label": "Day",
-          "usedPercent": 9,
+          "usedPercent": 10,
           "resetAt": 1772497599000
         }
       ],
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"74\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nGateway back?",
       "activityChannel": "telegram",
-      "lastRunAt": 1771931966238,
+      "lastRunAt": 1771940971124,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Yes — gateway is back up and healthy.\n\n- `openclaw gateway status`: **running**, RPC probe **ok**, pid **559620**, listening **127.0.0.1:18789**\n- `openclaw status`: gateway **reachable** (~155ms), Te"
     },
     {
       "id": "km",
