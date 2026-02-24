@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771898411691,
+  "updatedAt": 1771900207553,
   "providers": [
     {
       "id": "openai-codex",
@@ -26,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1771984812000
+          "resetAt": 1771986607000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1771984812000
+          "resetAt": 1771986607000
         }
       ],
       "error": null
@@ -43,12 +43,12 @@
         {
           "label": "5h",
           "usedPercent": 49,
-          "resetAt": 1771902000933
+          "resetAt": 1771902000782
         },
         {
           "label": "Week",
           "usedPercent": 29,
-          "resetAt": 1772244000933
+          "resetAt": 1772244000782
         }
       ],
       "error": null
@@ -84,12 +84,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "tui message",
+      "activityLabel": "json\n{\n  \"message_id\": \"e223844a-4111-490b-b74d-bba362dc562c\",\n  \"sender_id\": \"gateway-client\",\n  \"sender\": \"gateway-client\"\n}\n```\n\nInstead of book id",
       "activityChannel": "tui",
-      "lastRunAt": 1771898314036,
+      "lastRunAt": 1771899153312,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Here are the **11 matches** for **“creative visualization”** from Nikola’s local Readwise highlights index (showing id, source book_id, date, link if present, and the highlight text):\n\n1) **id:** 9745"
+      "lastSummary": "Yes. For these 11 matches I can replace `book_id` with the **book title** (and I’ll keep the highlight `id` + date for reference).\n\nHere are the same 11 matches, now with **Book title**:\n\n1) **id 9745"
     },
     {
       "id": "km",
