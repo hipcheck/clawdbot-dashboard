@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771929007544,
+  "updatedAt": 1771930808635,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 10,
+          "usedPercent": 12,
           "resetAt": 1771943564000
         },
         {
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "System: Exec completed (keen-bis, code 1) :: Error: gateway timeout after 30000ms Gateway target: ws://127.0.0.1:18789 Source: local loopback Config: ",
+      "activityLabel": "json\n{\n  \"message_id\": \"68\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nYes, manual test run.",
       "activityChannel": "telegram",
-      "lastRunAt": 1771928491973,
+      "lastRunAt": 1771930656171,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nikola didn’t add thoughts because the **nightly journal cron job was misconfigured and then failed on delivery** — so it never reliably reached (or wrote to) the actual Obsidian journal file.\n\nWhat I"
+      "lastSummary": "Gateway restart is done and healthy now.\n\n- `openclaw gateway status` → **running**, RPC probe **ok**, new pid `558178`, listening on `127.0.0.1:18789`.\n- `openclaw status` → gateway **reachable ~158m"
     },
     {
       "id": "km",
