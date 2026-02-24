@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771934408635,
+  "updatedAt": 1771936207638,
   "providers": [
     {
       "id": "openai-codex",
@@ -37,13 +37,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "cron",
-      "activityLabel": "feature-builder:morning-proposal",
-      "activityChannel": null,
-      "lastRunAt": 1771848000010,
-      "lastStatus": "error",
-      "lastError": "Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
-      "lastSummary": null
+      "activityKind": "chat",
+      "activityLabel": "A cron job \"feature-builder:morning-proposal\" just completed successfully.\n\nResult:\nBased on the prescan findings, the system is facing a critical ser",
+      "activityChannel": "telegram",
+      "lastRunAt": 1771934587868,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "The OpenClaw Gateway is offline. This is a critical outage.\n\nMy proposal is to restart the service immediately to restore functionality. After that, I'll add a healthcheck to monitor it and prevent fu"
     },
     {
       "id": "infraops",
@@ -89,17 +89,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771848000010,
+      "lastRunAt": 1771934400014,
       "lastStatus": "error",
-      "lastDurationMs": 163,
-      "consecutiveErrors": 1,
-      "lastError": "Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
-      "lastSummary": null,
-      "nextRunAt": 1771934400000,
+      "lastDurationMs": 188173,
+      "consecutiveErrors": 2,
+      "lastError": "cron announce delivery failed",
+      "lastSummary": "Based on the prescan findings, the system is facing a critical service outage. My proposal is to address this immediately.\n\n**Proposal:** Investigate and resolve the OpenClaw Gateway outage. The immediate action is to restart the service, but we should also add a persistent healthcheck to prevent future silent failures.\n\n**Impact:** High. Restoring the gateway is essential for all agent functionality. Without it, no other tasks can be performed. This fix will bring the entire OpenClaw system back online.\n\n**Risks:** Low. The primary risk is that a simple restart does not resolve the issue, pointing to a more complex underlying problem like data corruption or a persistent bug. A restart might also interrupt any in-flight operations, but since the gateway is already unresponsive, this risk is acceptable.\n\n**First Step:** Execute `openclaw gateway restart` to attempt to restore the service immediately.",
+      "nextRunAt": 1772020800000,
       "model": null,
-      "lastTotalTokens": 10698,
-      "lastInputTokens": 6923,
-      "lastOutputTokens": 804
+      "lastTotalTokens": 4496,
+      "lastInputTokens": 5137,
+      "lastOutputTokens": 1164
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
