@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771905609126,
+  "updatedAt": 1771907407617,
   "providers": [
     {
       "id": "openai-codex",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 29,
-          "resetAt": 1772244000388
+          "resetAt": 1772244000853
         }
       ],
       "error": null
@@ -83,13 +83,13 @@
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": null,
-      "activityLabel": null,
-      "activityChannel": null,
-      "lastRunAt": null,
-      "lastStatus": null,
+      "activityKind": "chat",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nOkay, let's get to work on the journal. First, I'll get today's date in ",
+      "activityChannel": "telegram",
+      "lastRunAt": 1771905678023,
+      "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Hey Andreas, it's 11 PM. I'm starting my nightly review of your journal entry. I'll read it over and add my thoughts to the file."
     }
   ],
   "cronJobs": [
@@ -171,17 +171,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1771905600000,
+      "lastRunAt": 1771905600017,
+      "lastStatus": "error",
+      "lastDurationMs": 71551,
+      "consecutiveErrors": 1,
+      "lastError": "cron announce delivery failed",
+      "lastSummary": "Okay, let's get to work on the journal. First, I'll get today's date in New York and read the corresponding journal entry from the Mac.",
+      "nextRunAt": 1771992000000,
       "model": null,
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 3380,
+      "lastInputTokens": 3380,
+      "lastOutputTokens": 642
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
