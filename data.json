@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771930808635,
+  "updatedAt": 1771932606583,
   "providers": [
     {
       "id": "openai-codex",
@@ -62,24 +62,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"68\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nYes, manual test run.",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1771930656171,
+      "lastRunAt": 1771931966238,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Gateway restart is done and healthy now.\n\n- `openclaw gateway status` → **running**, RPC probe **ok**, new pid `558178`, listening on `127.0.0.1:18789`.\n- `openclaw status` → gateway **reachable ~158m"
+      "lastSummary": null
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: ERROR (Journal file missing: /Users/andreasallma",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n<execute_ipython>\nprint(nodes(action=\"status\"))\n</execute_ipython>\n\nStat",
       "activityChannel": "telegram",
-      "lastRunAt": 1771926187975,
+      "lastRunAt": 1771932069796,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I tried to run my nightly journal review, but it looks like the journal file for February 24th is missing. I couldn't find it at the expected path: `/Users/andreasallmaier/Documents/Brain/journal/2026"
+      "lastSummary": "NO_REPLY"
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771925939135,
+      "lastRunAt": 1771932003091,
       "lastStatus": "ok",
-      "lastDurationMs": 243394,
+      "lastDurationMs": 66793,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: ERROR (Journal file missing: /Users/andreasallmaier/Documents/Brain/journal/2026-02-24.md)",
+      "lastSummary": "<execute_ipython>\nprint(nodes(action=\"status\"))\n</execute_ipython>",
       "nextRunAt": 1771992000000,
       "model": null,
-      "lastTotalTokens": 4334,
-      "lastInputTokens": 9123,
-      "lastOutputTokens": 661
+      "lastTotalTokens": 2023,
+      "lastInputTokens": 2023,
+      "lastOutputTokens": 1252
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
