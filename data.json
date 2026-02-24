@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771950607359,
+  "updatedAt": 1771952407794,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
+          "usedPercent": 6,
           "resetAt": 1771961992000
         },
         {
           "label": "Day",
-          "usedPercent": 11,
+          "usedPercent": 12,
           "resetAt": 1772497599000
         }
       ],
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "tui message",
-      "activityChannel": "tui",
-      "lastRunAt": 1771944331187,
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1771951739344,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
+      "lastSummary": "Got it — **auto-approve** is the right move here.\n\nWhat I changed already (server-side)\n- I updated Nikola’s cron instructions to **only use `/usr/bin/python3`** on your Mac for journal read/append/ve"
     },
     {
       "id": "km",
