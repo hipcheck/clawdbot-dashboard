@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771925407184,
+  "updatedAt": 1771927208102,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1771943407000
+          "usedPercent": 9,
+          "resetAt": 1771943564000
         },
         {
           "label": "Day",
-          "usedPercent": 6,
+          "usedPercent": 8,
           "resetAt": 1772497599000
         }
       ],
@@ -62,24 +62,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "tui message",
-      "activityChannel": "tui",
-      "lastRunAt": 1771900688088,
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1771926183757,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
+      "lastSummary": "Nikola didn’t add thoughts because the **nightly journal cron job was misconfigured and then failed on delivery** — so it never reliably reached (or wrote to) the actual Obsidian journal file.\n\nWhat I"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nOkay, let's get to work on the journal. First, I'll get today's date in ",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: ERROR (Journal file missing: /Users/andreasallma",
       "activityChannel": "telegram",
-      "lastRunAt": 1771905678023,
+      "lastRunAt": 1771926187975,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Hey Andreas, it's 11 PM. I'm starting my nightly review of your journal entry. I'll read it over and add my thoughts to the file."
+      "lastSummary": "I tried to run my nightly journal review, but it looks like the journal file for February 24th is missing. I couldn't find it at the expected path: `/Users/andreasallmaier/Documents/Brain/journal/2026"
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771905600017,
-      "lastStatus": "error",
-      "lastDurationMs": 71551,
-      "consecutiveErrors": 1,
-      "lastError": "cron announce delivery failed",
-      "lastSummary": "Okay, let's get to work on the journal. First, I'll get today's date in New York and read the corresponding journal entry from the Mac.",
+      "lastRunAt": 1771925939135,
+      "lastStatus": "ok",
+      "lastDurationMs": 243394,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Nikola nightly journal: ERROR (Journal file missing: /Users/andreasallmaier/Documents/Brain/journal/2026-02-24.md)",
       "nextRunAt": 1771992000000,
       "model": null,
-      "lastTotalTokens": 3380,
-      "lastInputTokens": 3380,
-      "lastOutputTokens": 642
+      "lastTotalTokens": 4334,
+      "lastInputTokens": 9123,
+      "lastOutputTokens": 661
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
