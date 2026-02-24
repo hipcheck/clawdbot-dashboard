@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771932606583,
+  "updatedAt": 1771934408635,
   "providers": [
     {
       "id": "openai-codex",
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1771921800029,
+      "activityKind": "chat",
+      "activityLabel": "A cron job \"healthcheck:security-preflight\" just completed successfully.\n\nResult:\nFAIL: Security preflight check failed.\n\nTop blockers:\n- **CRITICAL: ",
+      "activityChannel": "telegram",
+      "lastRunAt": 1771934121571,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "CRITICAL ALERT: The overnight healthcheck detected that the OpenClaw Gateway is down.\n\nThe `openclaw gateway probe` command failed with an RPC timeout, meaning the core service is unresponsive. All agent functions will fail until this is resolved.\n\n**Recommendation:** The gateway service requires an immediate restart. Please run `openclaw gateway restart`.\n\nA detailed report has been saved to `/tmp/openclaw_prescan_summary.md` on the host machine."
+      "lastSummary": "I just finished a routine security check and found a couple of critical issues that need your attention.\n\nFirst, and most importantly, a skill named **`readwise`** has a serious security flaw that cou"
     },
     {
       "id": "main",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771847400008,
+      "lastRunAt": 1771933800018,
       "lastStatus": "error",
-      "lastDurationMs": 838,
-      "consecutiveErrors": 1,
-      "lastError": "FailoverError: No available auth profile for openai-codex (all in cooldown or unavailable).",
-      "lastSummary": null,
-      "nextRunAt": 1771933800000,
+      "lastDurationMs": 308344,
+      "consecutiveErrors": 2,
+      "lastError": "cron announce delivery failed",
+      "lastSummary": "FAIL: Security preflight check failed.\n\nTop blockers:\n- **CRITICAL: Skill Vulnerability:** The \"readwise\" skill at `/home/clawd/.openclaw/workspace/skills/readwise` contains dangerous code patterns (env-harvesting) that could lead to credential theft.\n- **CRITICAL: Empty Deny List:** The `gateway.nodes.denyCommands` configuration is empty, meaning there is no blocklist for potentially dangerous commands on connected nodes.\n\nConfig patch suggestions:\n1.  **Disable the vulnerable skill immediately.** Until the code is audited and fixed, the skill should be removed to prevent exploitation.\n    ```bash\n    rm -rf /home/clawd/.openclaw/workspace/skills/readwise\n    ```\n2.  **Establish a baseline command deny list.** Add a default set of dangerous command IDs to `gateway.nodes.denyCommands` to reduce risk on nodes. The exact IDs depend on the enabled tools, but a safe starting point would be to block shell access and file system modification tools. A specific recommendation requires a list of available command IDs.\n3.  **Strengthen model fallbacks.** Replace `openai-codex/gpt-4o-mini` with a stronger model from the GPT-5 or Claude 4.5+ family to reduce prompt injection risks.\n    ```yaml\n    # In your config file under agents.list.main.model.fallbacks\n    - \"openai-codex/gpt-5.3-codex\"\n    ```",
+      "nextRunAt": 1772020200000,
       "model": null,
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 5933,
+      "lastInputTokens": 6924,
+      "lastOutputTokens": 1126
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
