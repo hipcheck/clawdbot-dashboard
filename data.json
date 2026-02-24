@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771943406705,
+  "updatedAt": 1771945207661,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
-          "resetAt": 1771943564000
+          "usedPercent": 4,
+          "resetAt": 1771961992000
         },
         {
           "label": "Day",
-          "usedPercent": 10,
+          "usedPercent": 11,
           "resetAt": 1772497599000
         }
       ],
@@ -62,24 +62,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"74\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nGateway back?",
-      "activityChannel": "telegram",
-      "lastRunAt": 1771940971124,
+      "activityLabel": "tui message",
+      "activityChannel": "tui",
+      "lastRunAt": 1771944331187,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Yes — gateway is back up and healthy.\n\n- `openclaw gateway status`: **running**, RPC probe **ok**, pid **559620**, listening **127.0.0.1:18789**\n- `openclaw status`: gateway **reachable** (~155ms), Te"
+      "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n<execute_ipython>\nprint(nodes(action=\"status\"))\n</execute_ipython>\n\nStat",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n⚠️ 📱 Nodes: `with node Andreas MacBook, title Nikola nightly journal ne",
       "activityChannel": "telegram",
-      "lastRunAt": 1771932069796,
+      "lastRunAt": 1771944287361,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NO_REPLY"
+      "lastSummary": "The nightly journal run is blocked because it needs your approval to execute commands on your Mac (to read and append the journal entry). I tried to send the approval prompt to your “Andreas MacBook”,"
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771932003091,
+      "lastRunAt": 1771943998017,
       "lastStatus": "ok",
-      "lastDurationMs": 66793,
+      "lastDurationMs": 289517,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "<execute_ipython>\nprint(nodes(action=\"status\"))\n</execute_ipython>",
+      "lastSummary": "⚠️ 📱 Nodes: `with node Andreas MacBook, title Nikola nightly journal needs approval, body Please approve the upcoming OpenClaw command execution request so I can read/append yesterday’s journal entry.` failed",
       "nextRunAt": 1771992000000,
       "model": null,
-      "lastTotalTokens": 2023,
-      "lastInputTokens": 2023,
-      "lastOutputTokens": 1252
+      "lastTotalTokens": 3594,
+      "lastInputTokens": 4361,
+      "lastOutputTokens": 1063
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
