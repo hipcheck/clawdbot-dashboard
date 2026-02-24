@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771900207553,
+  "updatedAt": 1771902007335,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 16,
+          "usedPercent": 18,
           "resetAt": 1771910799000
         },
         {
           "label": "Day",
-          "usedPercent": 5,
+          "usedPercent": 6,
           "resetAt": 1772497599000
         }
       ],
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1771986607000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1771986607000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -42,13 +31,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 49,
-          "resetAt": 1771902000782
+          "usedPercent": 0
         },
         {
           "label": "Week",
           "usedPercent": 29,
-          "resetAt": 1772244000782
+          "resetAt": 1772244000744
         }
       ],
       "error": null
@@ -84,12 +72,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"e223844a-4111-490b-b74d-bba362dc562c\",\n  \"sender_id\": \"gateway-client\",\n  \"sender\": \"gateway-client\"\n}\n```\n\nInstead of book id",
+      "activityLabel": "tui message",
       "activityChannel": "tui",
-      "lastRunAt": 1771899153312,
+      "lastRunAt": 1771900688088,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Yes. For these 11 matches I can replace `book_id` with the **book title** (and I’ll keep the highlight `id` + date for reference).\n\nHere are the same 11 matches, now with **Book title**:\n\n1) **id 9745"
+      "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
     },
     {
       "id": "km",
