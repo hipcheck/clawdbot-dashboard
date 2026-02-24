@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771894811895,
+  "updatedAt": 1771896615385,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
+          "usedPercent": 13,
           "resetAt": 1771910799000
         },
         {
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 24,
-          "resetAt": 1771902001119
+          "usedPercent": 27,
+          "resetAt": 1771902000626
         },
         {
           "label": "Week",
           "usedPercent": 26,
-          "resetAt": 1772244000119
+          "resetAt": 1772244000626
         }
       ],
       "error": null
@@ -115,6 +115,24 @@
       "lastTotalTokens": 135928,
       "lastInputTokens": 954689,
       "lastOutputTokens": 2381
+    },
+    {
+      "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
+      "name": "km:nightly-journal-comment",
+      "schedule": "0 23 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1771905600000,
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
     }
   ]
 }
