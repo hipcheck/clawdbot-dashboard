@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771896615385,
+  "updatedAt": 1771898411691,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 13,
+          "usedPercent": 16,
           "resetAt": 1771910799000
         },
         {
           "label": "Day",
-          "usedPercent": 4,
+          "usedPercent": 5,
           "resetAt": 1772497599000
         }
       ],
@@ -22,8 +22,19 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1771984812000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1771984812000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
@@ -31,19 +42,31 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 27,
-          "resetAt": 1771902000626
+          "usedPercent": 49,
+          "resetAt": 1771902000933
         },
         {
           "label": "Week",
-          "usedPercent": 26,
-          "resetAt": 1772244000626
+          "usedPercent": 29,
+          "resetAt": 1772244000933
         }
       ],
       "error": null
     }
   ],
   "agents": [
+    {
+      "id": "feature-builder",
+      "name": "Q",
+      "emoji": "⚡",
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1771848000010,
+      "lastStatus": "error",
+      "lastError": "Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
+      "lastSummary": null
+    },
     {
       "id": "infraops",
       "name": "Geordi",
@@ -57,16 +80,16 @@
       "lastSummary": null
     },
     {
-      "id": "feature-builder",
-      "name": "Q",
-      "emoji": "⚡",
-      "activityKind": "cron",
-      "activityLabel": "feature-builder:morning-proposal",
-      "activityChannel": null,
-      "lastRunAt": 1771848000010,
-      "lastStatus": "error",
-      "lastError": "Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
-      "lastSummary": null
+      "id": "main",
+      "name": "main",
+      "emoji": "🤖",
+      "activityKind": "chat",
+      "activityLabel": "tui message",
+      "activityChannel": "tui",
+      "lastRunAt": 1771898314036,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Here are the **11 matches** for **“creative visualization”** from Nikola’s local Readwise highlights index (showing id, source book_id, date, link if present, and the highlight text):\n\n1) **id:** 9745"
     },
     {
       "id": "km",
@@ -167,6 +190,24 @@
       "lastError": null,
       "lastSummary": null,
       "nextRunAt": 1771905600000,
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
+    },
+    {
+      "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
+      "name": "km:weekly-readwise-indexer",
+      "schedule": "30 2 * * 0",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1772350200000,
       "model": null,
       "lastTotalTokens": null,
       "lastInputTokens": null,
