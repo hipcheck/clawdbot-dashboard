@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771921806823,
+  "updatedAt": 1771923610183,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1771939807000
+          "resetAt": 1771941611000
         },
         {
           "label": "Day",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1771847400008,
-      "lastStatus": "error",
-      "lastError": "FailoverError: No available auth profile for openai-codex (all in cooldown or unavailable).",
-      "lastSummary": null
+      "lastRunAt": 1771921800029,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "CRITICAL ALERT: The overnight healthcheck detected that the OpenClaw Gateway is down.\n\nThe `openclaw gateway probe` command failed with an RPC timeout, meaning the core service is unresponsive. All agent functions will fail until this is resolved.\n\n**Recommendation:** The gateway service requires an immediate restart. Please run `openclaw gateway restart`.\n\nA detailed report has been saved to `/tmp/openclaw_prescan_summary.md` on the host machine."
     },
     {
       "id": "main",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771835400012,
-      "lastStatus": "error",
-      "lastDurationMs": 8396,
-      "consecutiveErrors": 1,
-      "lastError": "FailoverError: ⚠️ API rate limit reached. Please try again later.",
-      "lastSummary": null,
-      "nextRunAt": 1771921800000,
+      "lastRunAt": 1771921800029,
+      "lastStatus": "ok",
+      "lastDurationMs": 426429,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "CRITICAL ALERT: The overnight healthcheck detected that the OpenClaw Gateway is down.\n\nThe `openclaw gateway probe` command failed with an RPC timeout, meaning the core service is unresponsive. All agent functions will fail until this is resolved.\n\n**Recommendation:** The gateway service requires an immediate restart. Please run `openclaw gateway restart`.\n\nA detailed report has been saved to `/tmp/openclaw_prescan_summary.md` on the host machine.",
+      "nextRunAt": 1772008200000,
       "model": null,
-      "lastTotalTokens": 54013,
-      "lastInputTokens": 51851,
-      "lastOutputTokens": 7280
+      "lastTotalTokens": 9834,
+      "lastInputTokens": 13203,
+      "lastOutputTokens": 4195
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
