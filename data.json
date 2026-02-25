@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772004607006,
+  "updatedAt": 1772006407088,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772022608000
+          "resetAt": 1772023806000
         },
         {
           "label": "Day",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000242
+          "resetAt": 1772244000395
         }
       ],
       "error": null
@@ -74,7 +74,7 @@
       "activityKind": "chat",
       "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
       "activityChannel": "tui",
-      "lastRunAt": 1771992108052,
+      "lastRunAt": 1772005955103,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "HEARTBEAT_OK"
@@ -83,13 +83,13 @@
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "clawdbot:daily-ops-journal",
-      "activityChannel": null,
-      "lastRunAt": 1771992600027,
-      "lastStatus": "skipped",
-      "lastError": "disabled",
-      "lastSummary": "You are Clawdbot. Create a daily operational journal entry summarizing TODAY’S OpenClaw activity.\n\nImportant: Do NOT read or use Andreas’s personal Obsidian journal for this.\n\n1) Determine today's local date in America/New_York (YYYY-MM-DD).\n\n2) Summarize today’s activity based on:\n   - the day’s chats/requests in this main session\n   - what you executed/built/changed (agents, crons, config, scripts)\n   - what worked vs. what failed (rate limits, auth, tooling issues)\n   - any important decisions / new conventions\n\n3) Write to the VPS daily log file (append-only):\n   /home/clawd/.openclaw/workspace/memory/YYYY-MM-DD.md\n\nFormatting rules (append-only):\n- Add a section header: `## Clawdbot Daily Ops Journal`\n- Add an ISO timestamp line.\n- Use bullets with sub-bullets:\n  - Shipped / Changed\n  - Worked\n  - Failed / Flaky\n  - Decisions\n  - Follow-ups\n\n4) “Commit to memory”:\n   - If there are truly durable items (IDs, schedules, key decisions), append them to `/home/clawd/.openclaw/workspace/MEMORY.md` under an appropriate section.\n   - Keep MEMORY.md concise; do not paste full logs.\n\n5) Send the same daily summary to Telegram."
+      "activityKind": "chat",
+      "activityLabel": "A cron job \"km:x-to-reader-daily\" just completed successfully.\n\nResult:\n⚠️ 📱 Nodes: `with command bash, -lc, ls -la ~/.openclaw/workspace-km/scripts ",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772006083639,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "The daily X→Reader run couldn’t complete because the command it tried to run on your Mac (“Andreas MacBook”) failed, so it wasn’t able to access the needed scripts there.\n\nIf your Mac is online, the q"
     }
   ],
   "cronJobs": [
@@ -225,17 +225,17 @@
       "schedule": "50 2 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
+      "lastRunAt": 1772005800031,
+      "lastStatus": "ok",
+      "lastDurationMs": 283845,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772005800000,
+      "lastSummary": "⚠️ 📱 Nodes: `with command bash, -lc, ls -la ~/.openclaw/workspace-km/scripts | head, node Andreas MacBook` failed",
+      "nextRunAt": 1772092200000,
       "model": null,
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 3286,
+      "lastInputTokens": 6373,
+      "lastOutputTokens": 1229
     }
   ]
 }
