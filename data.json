@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771979407128,
+  "updatedAt": 1771981207729,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 6,
-          "resetAt": 1771996105000
+          "usedPercent": 12,
+          "resetAt": 1771996104000
         },
         {
           "label": "Day",
-          "usedPercent": 14,
+          "usedPercent": 15,
           "resetAt": 1772497599000
         }
       ],
@@ -64,7 +64,7 @@
       "activityKind": "chat",
       "activityLabel": "tui message",
       "activityChannel": "tui",
-      "lastRunAt": 1771978423913,
+      "lastRunAt": 1771980415052,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
@@ -74,12 +74,12 @@
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: 2026-02-23 found and non-empty.\n\nStatus: **SKIPP",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBoo",
       "activityChannel": "telegram",
-      "lastRunAt": 1771978347654,
+      "lastRunAt": 1771980380323,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I was able to find your **2026-02-23** journal entry and it’s non-empty, but I **didn’t add anything** because it already ends with a `- [[clawdbot]] ...` block (“Nightly review (snow day / energy / t"
+      "lastSummary": "I was able to update the journal successfully on your Mac.\n\nFor NYC time **2026-02-24 19:46 EST** (so **TARGET_DATE = 2026-02-23**), I opened:\n\n`/Users/andreasallmaier/Documents/Brain/journal/2026-02-"
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771978313328,
+      "lastRunAt": 1771980293101,
       "lastStatus": "ok",
-      "lastDurationMs": 34491,
+      "lastDurationMs": 87398,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: 2026-02-23 found and non-empty.\n\nStatus: **SKIPPED (already commented)** — the file already contains a top-level bullet starting with `- [[clawdbot]]` (“Nightly review (snow day / energy / tooling)”, with timestamp `2026-02-24 19:10 EST`) at the end of the note, so I did **not** append a second clawdbot block (append-only / exactly-one-bullet rule).",
+      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBook).\n- NYC local time: 2026-02-24 19:46 EST → TARGET_DATE = **2026-02-23**\n- File: `/Users/andreasallmaier/Documents/Brain/journal/2026-02-23.md`\n  - Found non-empty.\n  - `\\t* [[clawdbot]]` section under the main journal outline was **missing** → inserted **immediately after** the `[[crystallized thought]]` block (tab-indented to match template).\n  - Added **one** new entry under that section (indent `\\t\\t* ...`) with a nested timestamp bullet.\n  - Detected a previously-added top-level `- [[clawdbot]] ...` block at the bottom and **moved/normalized** it into the dedicated `[[clawdbot]]` section (to avoid duplicates and keep content localized).\n- Verification: re-read the `[[clawdbot]]` section + tail; the new content is present.\n\nReadwise highlight: not included (no local index access from the Mac run in this task).",
       "nextRunAt": 1771992000000,
       "model": null,
-      "lastTotalTokens": 4460,
-      "lastInputTokens": 4160,
-      "lastOutputTokens": 1168
+      "lastTotalTokens": 8866,
+      "lastInputTokens": 10837,
+      "lastOutputTokens": 4068
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
