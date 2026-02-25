@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771992008176,
+  "updatedAt": 1771993806415,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 24,
-          "resetAt": 1771996104000
+          "resetAt": 1771996105000
         },
         {
           "label": "Day",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 10,
-          "resetAt": 1772002800505
+          "resetAt": 1772002800769
         },
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000505
+          "resetAt": 1772244000769
         }
       ],
       "error": null
@@ -73,24 +73,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"b8525c19-0f04-4dc8-bb26-e9a65de43a69\",\n  \"sender_id\": \"gateway-client\",\n  \"sender\": \"gateway-client\"\n}\n```\n\nWhy can't you do i",
+      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
       "activityChannel": "tui",
-      "lastRunAt": 1771991831157,
+      "lastRunAt": 1771992108052,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can *use* Gemini as an LLM fallback, but that’s not the same thing as having **Gemini’s image-generation API wired up as a tool** inside this OpenClaw runtime.\n\nRight now, in this environment I have"
+      "lastSummary": "HEARTBEAT_OK"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBoo",
-      "activityChannel": "telegram",
-      "lastRunAt": 1771980380323,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "I was able to update the journal successfully on your Mac.\n\nFor NYC time **2026-02-24 19:46 EST** (so **TARGET_DATE = 2026-02-23**), I opened:\n\n`/Users/andreasallmaier/Documents/Brain/journal/2026-02-"
+      "activityKind": "cron",
+      "activityLabel": "clawdbot:daily-ops-journal",
+      "activityChannel": null,
+      "lastRunAt": 1771992600027,
+      "lastStatus": "skipped",
+      "lastError": "disabled",
+      "lastSummary": "You are Clawdbot. Create a daily operational journal entry summarizing TODAY’S OpenClaw activity.\n\nImportant: Do NOT read or use Andreas’s personal Obsidian journal for this.\n\n1) Determine today's local date in America/New_York (YYYY-MM-DD).\n\n2) Summarize today’s activity based on:\n   - the day’s chats/requests in this main session\n   - what you executed/built/changed (agents, crons, config, scripts)\n   - what worked vs. what failed (rate limits, auth, tooling issues)\n   - any important decisions / new conventions\n\n3) Write to the VPS daily log file (append-only):\n   /home/clawd/.openclaw/workspace/memory/YYYY-MM-DD.md\n\nFormatting rules (append-only):\n- Add a section header: `## Clawdbot Daily Ops Journal`\n- Add an ISO timestamp line.\n- Use bullets with sub-bullets:\n  - Shipped / Changed\n  - Worked\n  - Failed / Flaky\n  - Decisions\n  - Follow-ups\n\n4) “Commit to memory”:\n   - If there are truly durable items (IDs, schedules, key decisions), append them to `/home/clawd/.openclaw/workspace/MEMORY.md` under an appropriate section.\n   - Keep MEMORY.md concise; do not paste full logs.\n\n5) Send the same daily summary to Telegram."
     }
   ],
   "cronJobs": [
@@ -172,17 +172,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771980293101,
+      "lastRunAt": 1771992000029,
       "lastStatus": "ok",
-      "lastDurationMs": 87398,
+      "lastDurationMs": 111785,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBook).\n- NYC local time: 2026-02-24 19:46 EST → TARGET_DATE = **2026-02-23**\n- File: `/Users/andreasallmaier/Documents/Brain/journal/2026-02-23.md`\n  - Found non-empty.\n  - `\\t* [[clawdbot]]` section under the main journal outline was **missing** → inserted **immediately after** the `[[crystallized thought]]` block (tab-indented to match template).\n  - Added **one** new entry under that section (indent `\\t\\t* ...`) with a nested timestamp bullet.\n  - Detected a previously-added top-level `- [[clawdbot]] ...` block at the bottom and **moved/normalized** it into the dedicated `[[clawdbot]]` section (to avoid duplicates and keep content localized).\n- Verification: re-read the `[[clawdbot]]` section + tail; the new content is present.\n\nReadwise highlight: not included (no local index access from the Mac run in this task).",
-      "nextRunAt": 1771992000000,
+      "lastSummary": "⚠️ 📱 Nodes: `bash, -lc, ~/.openclaw/workspace-km/scripts/readwise_search_local.sh \"tracking experiments\" | head -n 40` failed",
+      "nextRunAt": 1772078400000,
       "model": null,
-      "lastTotalTokens": 8866,
-      "lastInputTokens": 10837,
-      "lastOutputTokens": 4068
+      "lastTotalTokens": 8064,
+      "lastInputTokens": 10520,
+      "lastOutputTokens": 4503
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -208,13 +208,13 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
+      "lastRunAt": 1771992600027,
+      "lastStatus": "skipped",
+      "lastDurationMs": 72,
       "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1771992600000,
+      "lastError": "disabled",
+      "lastSummary": "You are Clawdbot. Create a daily operational journal entry summarizing TODAY’S OpenClaw activity.\n\nImportant: Do NOT read or use Andreas’s personal Obsidian journal for this.\n\n1) Determine today's local date in America/New_York (YYYY-MM-DD).\n\n2) Summarize today’s activity based on:\n   - the day’s chats/requests in this main session\n   - what you executed/built/changed (agents, crons, config, scripts)\n   - what worked vs. what failed (rate limits, auth, tooling issues)\n   - any important decisions / new conventions\n\n3) Write to the VPS daily log file (append-only):\n   /home/clawd/.openclaw/workspace/memory/YYYY-MM-DD.md\n\nFormatting rules (append-only):\n- Add a section header: `## Clawdbot Daily Ops Journal`\n- Add an ISO timestamp line.\n- Use bullets with sub-bullets:\n  - Shipped / Changed\n  - Worked\n  - Failed / Flaky\n  - Decisions\n  - Follow-ups\n\n4) “Commit to memory”:\n   - If there are truly durable items (IDs, schedules, key decisions), append them to `/home/clawd/.openclaw/workspace/MEMORY.md` under an appropriate section.\n   - Keep MEMORY.md concise; do not paste full logs.\n\n5) Send the same daily summary to Telegram.",
+      "nextRunAt": 1772079000000,
       "model": null,
       "lastTotalTokens": null,
       "lastInputTokens": null,
