@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772042407384,
+  "updatedAt": 1772044207307,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 8,
-          "resetAt": 1772043275000
+          "usedPercent": 0,
+          "resetAt": 1772061276000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772041472909,
+      "lastRunAt": 1772043272922,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: `EXIT:0` (success)\n- Output: none (stdout empty)\n\nLogged this second run in `memory/2026-02-25.md` (~17:44 UTC)."
+      "lastSummary": "openclaw-auto-update ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: no output, exit code `0`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772041472909,
+      "lastRunAt": 1772043272922,
       "lastStatus": "ok",
-      "lastDurationMs": 31478,
+      "lastDurationMs": 29055,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: `EXIT:0` (success)\n- Output: none (stdout empty)\n\nLogged this second run in `memory/2026-02-25.md` (~17:44 UTC).",
-      "nextRunAt": 1772043272909,
+      "lastSummary": "openclaw-auto-update ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: no output, exit code `0`",
+      "nextRunAt": 1772045072922,
       "model": null,
-      "lastTotalTokens": 10311,
-      "lastInputTokens": 7277,
-      "lastOutputTokens": 620
+      "lastTotalTokens": 7624,
+      "lastInputTokens": 4357,
+      "lastOutputTokens": 247
     }
   ]
 }
