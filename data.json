@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772033406889,
+  "updatedAt": 1772035208880,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 4,
           "resetAt": 1772043275000
         },
         {
           "label": "Day",
-          "usedPercent": 23,
+          "usedPercent": 24,
           "resetAt": 1772497599000
         }
       ],
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772032472844,
+      "activityKind": "chat",
+      "activityLabel": "---\nQueued #1\nA cron job \"clawdbot:daily-ops-journal\" just completed successfully.\n\nResult:\nLocal date (America/New_York): 2026-02-25\n\n## Clawdbot Dai",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772034964759,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran the cron command:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **exit code 0**, **no stdout output**\n\nHousekeeping:\n- Created missing `/home/clawd/.openclaw/workspace/MEMORY.md` (initialized stub)\n- Logged this run in `/home/clawd/.openclaw/workspace/memory/2026-02-25.md`"
+      "lastSummary": "Nightly ops journal is back online and ran successfully.\n\nIt recorded (NYC date: **2026-02-25**) and appended to `/home/clawd/.openclaw/workspace/memory/2026-02-25.md`:\n\n- **Shipped / Changed:** no ne"
     },
     {
       "id": "km",
@@ -197,17 +197,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771992600027,
-      "lastStatus": "skipped",
-      "lastDurationMs": 72,
+      "lastRunAt": 1772034837630,
+      "lastStatus": "ok",
+      "lastDurationMs": 36593,
       "consecutiveErrors": 0,
-      "lastError": "disabled",
-      "lastSummary": "You are Clawdbot. Create a daily operational journal entry summarizing TODAY’S OpenClaw activity.\n\nImportant: Do NOT read or use Andreas’s personal Obsidian journal for this.\n\n1) Determine today's local date in America/New_York (YYYY-MM-DD).\n\n2) Summarize today’s activity based on:\n   - the day’s chats/requests in this main session\n   - what you executed/built/changed (agents, crons, config, scripts)\n   - what worked vs. what failed (rate limits, auth, tooling issues)\n   - any important decisions / new conventions\n\n3) Write to the VPS daily log file (append-only):\n   /home/clawd/.openclaw/workspace/memory/YYYY-MM-DD.md\n\nFormatting rules (append-only):\n- Add a section header: `## Clawdbot Daily Ops Journal`\n- Add an ISO timestamp line.\n- Use bullets with sub-bullets:\n  - Shipped / Changed\n  - Worked\n  - Failed / Flaky\n  - Decisions\n  - Follow-ups\n\n4) “Commit to memory”:\n   - If there are truly durable items (IDs, schedules, key decisions), append them to `/home/clawd/.openclaw/workspace/MEMORY.md` under an appropriate section.\n   - Keep MEMORY.md concise; do not paste full logs.\n\n5) Send the same daily summary to Telegram.",
+      "lastError": null,
+      "lastSummary": "Local date (America/New_York): 2026-02-25\n\n## Clawdbot Daily Ops Journal\n2026-02-25T15:54:45Z\n\n- Shipped/Changed:\n  - No new builds/config changes today; only routine cron execution.\n  - Cron `infraops:openclaw-auto-update` ran `scripts/openclaw_auto_update.py` (exit 0, no stdout).\n- Worked:\n  - Auto-update cron completed successfully.\n- Failed/Flaky:\n  - `memory/openclaw-updates.log` shows repeated update checks skipped (“direct session active” / “cron wake soon”); no hard failures recorded.\n- Decisions:\n  - None.\n- Follow-ups:\n  - Review why update checks are frequently skipped (confirm intended scheduling/guardrails and whether any updates are being missed).",
       "nextRunAt": 1772079000000,
       "model": null,
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 9396,
+      "lastInputTokens": 6662,
+      "lastOutputTokens": 1037
     },
     {
       "id": "af6fe05b-0496-48f2-882f-4925cc64a1f2",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772032472844,
+      "lastRunAt": 1772034272858,
       "lastStatus": "ok",
-      "lastDurationMs": 37488,
+      "lastDurationMs": 25648,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran the cron command:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **exit code 0**, **no stdout output**\n\nHousekeeping:\n- Created missing `/home/clawd/.openclaw/workspace/MEMORY.md` (initialized stub)\n- Logged this run in `/home/clawd/.openclaw/workspace/memory/2026-02-25.md`",
-      "nextRunAt": 1772034272844,
+      "lastSummary": "openclaw-auto-update ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: no output\n- Exit code: `0`",
+      "nextRunAt": 1772036072858,
       "model": null,
-      "lastTotalTokens": 9909,
-      "lastInputTokens": 8329,
-      "lastOutputTokens": 718
+      "lastTotalTokens": 7606,
+      "lastInputTokens": 4334,
+      "lastOutputTokens": 236
     }
   ]
 }
