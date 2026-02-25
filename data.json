@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771977608639,
+  "updatedAt": 1771979407128,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1771995609000
+          "usedPercent": 6,
+          "resetAt": 1771996105000
         },
         {
           "label": "Day",
-          "usedPercent": 12,
+          "usedPercent": 14,
           "resetAt": 1772497599000
         }
       ],
@@ -62,24 +62,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1771951739344,
+      "activityLabel": "tui message",
+      "activityChannel": "tui",
+      "lastRunAt": 1771978423913,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Got it — **auto-approve** is the right move here.\n\nWhat I changed already (server-side)\n- I updated Nikola’s cron instructions to **only use `/usr/bin/python3`** on your Mac for journal read/append/ve"
+      "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n⚠️ 📱 Nodes: `with node Andreas MacBook, title Nikola nightly journal ne",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: 2026-02-23 found and non-empty.\n\nStatus: **SKIPP",
       "activityChannel": "telegram",
-      "lastRunAt": 1771944287361,
+      "lastRunAt": 1771978347654,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The nightly journal run is blocked because it needs your approval to execute commands on your Mac (to read and append the journal entry). I tried to send the approval prompt to your “Andreas MacBook”,"
+      "lastSummary": "I was able to find your **2026-02-23** journal entry and it’s non-empty, but I **didn’t add anything** because it already ends with a `- [[clawdbot]] ...` block (“Nightly review (snow day / energy / t"
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771943998017,
+      "lastRunAt": 1771978313328,
       "lastStatus": "ok",
-      "lastDurationMs": 289517,
+      "lastDurationMs": 34491,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "⚠️ 📱 Nodes: `with node Andreas MacBook, title Nikola nightly journal needs approval, body Please approve the upcoming OpenClaw command execution request so I can read/append yesterday’s journal entry.` failed",
+      "lastSummary": "Nikola nightly journal: 2026-02-23 found and non-empty.\n\nStatus: **SKIPPED (already commented)** — the file already contains a top-level bullet starting with `- [[clawdbot]]` (“Nightly review (snow day / energy / tooling)”, with timestamp `2026-02-24 19:10 EST`) at the end of the note, so I did **not** append a second clawdbot block (append-only / exactly-one-bullet rule).",
       "nextRunAt": 1771992000000,
       "model": null,
-      "lastTotalTokens": 3594,
-      "lastInputTokens": 4361,
-      "lastOutputTokens": 1063
+      "lastTotalTokens": 4460,
+      "lastInputTokens": 4160,
+      "lastOutputTokens": 1168
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
