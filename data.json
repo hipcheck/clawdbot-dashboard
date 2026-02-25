@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772051407723,
+  "updatedAt": 1772053207954,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772061276000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772050472980,
+      "lastRunAt": 1772052272995,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — **exit 0** (no update attempted).\n\nThe updater **skipped** due to its “cron wake soon” idle-check. Latest log entry:\n\n- `2026-02-25T20:14:52Z SKIP (cron wake soon (-14046ms))`\n\nNote: the “cron wake soon” delta is **negative** (i.e., next wake appears to be in the past), so this heuristic is currently causing repeated skips. If you want, I can patch the script to treat negative deltas as “no imminent wake” (or re-check cron status once) so auto-updates can actually run."
+      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: no output\n- Exit code: `0`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772050472980,
+      "lastRunAt": 1772052272995,
       "lastStatus": "ok",
-      "lastDurationMs": 38793,
+      "lastDurationMs": 23409,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — **exit 0** (no update attempted).\n\nThe updater **skipped** due to its “cron wake soon” idle-check. Latest log entry:\n\n- `2026-02-25T20:14:52Z SKIP (cron wake soon (-14046ms))`\n\nNote: the “cron wake soon” delta is **negative** (i.e., next wake appears to be in the past), so this heuristic is currently causing repeated skips. If you want, I can patch the script to treat negative deltas as “no imminent wake” (or re-check cron status once) so auto-updates can actually run.",
-      "nextRunAt": 1772052272980,
+      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: no output\n- Exit code: `0`",
+      "nextRunAt": 1772054072995,
       "model": null,
-      "lastTotalTokens": 9590,
-      "lastInputTokens": 10480,
-      "lastOutputTokens": 621
+      "lastTotalTokens": 7609,
+      "lastInputTokens": 4341,
+      "lastOutputTokens": 236
     }
   ]
 }
