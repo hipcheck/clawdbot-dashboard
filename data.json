@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771990212550,
+  "updatedAt": 1771992008176,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 20,
-          "resetAt": 1771996105000
+          "usedPercent": 24,
+          "resetAt": 1771996104000
         },
         {
           "label": "Day",
-          "usedPercent": 18,
+          "usedPercent": 19,
           "resetAt": 1772497599000
         }
       ],
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772076612000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772076612000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -42,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
-          "resetAt": 1772002800765
+          "usedPercent": 10,
+          "resetAt": 1772002800505
         },
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000765
+          "resetAt": 1772244000505
         }
       ],
       "error": null
@@ -84,12 +73,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "tui message",
+      "activityLabel": "json\n{\n  \"message_id\": \"b8525c19-0f04-4dc8-bb26-e9a65de43a69\",\n  \"sender_id\": \"gateway-client\",\n  \"sender\": \"gateway-client\"\n}\n```\n\nWhy can't you do i",
       "activityChannel": "tui",
-      "lastRunAt": 1771988821186,
+      "lastRunAt": 1771991831157,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — I updated that daily job so it **no longer reads your Obsidian journal at all**.\n\nIt now does what you asked:\n\n- **Summarizes our daily chats + what I built/changed + what worked/didn’t**\n- **A"
+      "lastSummary": "I can *use* Gemini as an LLM fallback, but that’s not the same thing as having **Gemini’s image-generation API wired up as a tool** inside this OpenClaw runtime.\n\nRight now, in this environment I have"
     },
     {
       "id": "km",
@@ -226,6 +215,24 @@
       "lastError": null,
       "lastSummary": null,
       "nextRunAt": 1771992600000,
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
+    },
+    {
+      "id": "af6fe05b-0496-48f2-882f-4925cc64a1f2",
+      "name": "km:x-to-reader-daily",
+      "schedule": "50 2 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1772005800000,
       "model": null,
       "lastTotalTokens": null,
       "lastInputTokens": null,
