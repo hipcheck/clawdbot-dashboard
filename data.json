@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772015407610,
+  "updatedAt": 1772017207650,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 7,
           "resetAt": 1772023806000
         },
         {
           "label": "Day",
-          "usedPercent": 19,
+          "usedPercent": 21,
           "resetAt": 1772497599000
         }
       ],
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 30,
-          "resetAt": 1772244000832
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -72,24 +62,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
-      "activityChannel": "tui",
-      "lastRunAt": 1772005955103,
+      "activityLabel": "json\n{\n  \"message_id\": \"121\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nI'll post readwise token here, okay?",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772017137907,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "HEARTBEAT_OK"
+      "lastSummary": "Yes—post it here.\n\nA couple quick safety notes:\n- This chat is going through Telegram; treat the token like a password. After we confirm it’s working, I can help you rotate it if you want.\n- Paste **o"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:x-to-reader-daily\" just completed successfully.\n\nResult:\n⚠️ 📱 Nodes: `with command bash, -lc, ls -la ~/.openclaw/workspace-km/scripts ",
+      "activityLabel": "A cron job \"km:x-to-reader-daily\" just completed successfully.\n\nResult:\nERROR: READWISE_TOKEN missing on VPS; cannot save to Reader.\n\nLinks saved: 0  ",
       "activityChannel": "telegram",
-      "lastRunAt": 1772006083639,
+      "lastRunAt": 1772017037991,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The daily X→Reader run couldn’t complete because the command it tried to run on your Mac (“Andreas MacBook”) failed, so it wasn’t able to access the needed scripts there.\n\nIf your Mac is online, the q"
+      "lastSummary": "The **X → Reader** run didn’t start because the VPS is missing the `READWISE_TOKEN`, so it can’t save anything to Reader.\n\n- Links saved: 0  \n- Follows: 0  \n- Draft replies: 0  \n- Error: `READWISE_TOK"
     }
   ],
   "cronJobs": [
@@ -225,17 +215,17 @@
       "schedule": "50 2 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772005800031,
+      "lastRunAt": 1772017029760,
       "lastStatus": "ok",
-      "lastDurationMs": 283845,
+      "lastDurationMs": 8430,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "⚠️ 📱 Nodes: `with command bash, -lc, ls -la ~/.openclaw/workspace-km/scripts | head, node Andreas MacBook` failed",
+      "lastSummary": "ERROR: READWISE_TOKEN missing on VPS; cannot save to Reader.\n\nLinks saved: 0  \nFollows: 0  \nDraft replies: 0  \nErrors: READWISE_TOKEN missing on VPS; run aborted before executing x_daily_reader.py",
       "nextRunAt": 1772092200000,
       "model": null,
-      "lastTotalTokens": 3286,
-      "lastInputTokens": 6373,
-      "lastOutputTokens": 1229
+      "lastTotalTokens": 3702,
+      "lastInputTokens": 795,
+      "lastOutputTokens": 223
     }
   ]
 }
