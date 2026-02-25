@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772060407094,
+  "updatedAt": 1772062206362,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772061276000
+          "usedPercent": 0,
+          "resetAt": 1772079277000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772059473050,
+      "lastRunAt": 1772061273066,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw-auto-update` cron ran:\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: completed successfully (`EXIT:0`)\n- Output: none (script was silent)"
+      "lastSummary": "OpenClaw auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code `0`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772059473050,
+      "lastRunAt": 1772061273066,
       "lastStatus": "ok",
-      "lastDurationMs": 21672,
+      "lastDurationMs": 23352,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw-auto-update` cron ran:\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: completed successfully (`EXIT:0`)\n- Output: none (script was silent)",
-      "nextRunAt": 1772061273050,
+      "lastSummary": "OpenClaw auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code `0`",
+      "nextRunAt": 1772063073066,
       "model": null,
-      "lastTotalTokens": 7632,
-      "lastInputTokens": 4373,
-      "lastOutputTokens": 253
+      "lastTotalTokens": 7649,
+      "lastInputTokens": 4418,
+      "lastOutputTokens": 277
     }
   ]
 }
