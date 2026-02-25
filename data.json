@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771988408719,
+  "updatedAt": 1771990212550,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 16,
-          "resetAt": 1771996104000
+          "usedPercent": 20,
+          "resetAt": 1771996105000
         },
         {
           "label": "Day",
-          "usedPercent": 17,
+          "usedPercent": 18,
           "resetAt": 1772497599000
         }
       ],
@@ -26,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1772074809000
+          "resetAt": 1772076612000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1772074809000
+          "resetAt": 1772076612000
         }
       ],
       "error": null
@@ -42,13 +42,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1772002800985
+          "usedPercent": 9,
+          "resetAt": 1772002800765
         },
         {
           "label": "Week",
-          "usedPercent": 29,
-          "resetAt": 1772244000985
+          "usedPercent": 30,
+          "resetAt": 1772244000765
         }
       ],
       "error": null
@@ -86,10 +86,10 @@
       "activityKind": "chat",
       "activityLabel": "tui message",
       "activityChannel": "tui",
-      "lastRunAt": 1771988278920,
+      "lastRunAt": 1771988821186,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Done — I updated that daily job so it **no longer reads your Obsidian journal at all**.\n\nIt now does what you asked:\n\n- **Summarizes our daily chats + what I built/changed + what worked/didn’t**\n- **A"
     },
     {
       "id": "km",
@@ -208,6 +208,24 @@
       "lastError": null,
       "lastSummary": null,
       "nextRunAt": 1772350200000,
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
+    },
+    {
+      "id": "a8c1dd0d-feb9-4882-9cfb-a49526c169d7",
+      "name": "clawdbot:daily-ops-journal",
+      "schedule": "10 23 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1771992600000,
       "model": null,
       "lastTotalTokens": null,
       "lastInputTokens": null,
