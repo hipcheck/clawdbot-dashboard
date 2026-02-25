@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1771983007240,
+  "updatedAt": 1771984807341,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
-          "resetAt": 1771996104000
+          "usedPercent": 14,
+          "resetAt": 1771996105000
         },
         {
           "label": "Day",
-          "usedPercent": 15,
+          "usedPercent": 16,
           "resetAt": 1772497599000
         }
       ],
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "tui message",
-      "activityChannel": "tui",
-      "lastRunAt": 1771980415052,
+      "activityLabel": "json\n{\n  \"message_id\": \"96\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nOkay, last update: that cron job should update the note for ",
+      "activityChannel": "telegram",
+      "lastRunAt": 1771984403900,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — Nikola’s default “show matches” format will now include **Book title** (pulled from a local books index), not `book_id`.\n\nWhat I changed:\n\n- Extended the weekly indexer to also build a **books "
+      "lastSummary": "Updated.\n\nThe `km:nightly-journal-comment` cron job (11pm ET) now targets **today’s** NYC-local date:\n\n- **TARGET_DATE = (NYC local date)** (YYYY-MM-DD)  \n- File: `/Users/andreasallmaier/Documents/Bra"
     },
     {
       "id": "km",
