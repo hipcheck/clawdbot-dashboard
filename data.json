@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772022606864,
+  "updatedAt": 1772024409448,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 13,
-          "resetAt": 1772023806000
+          "usedPercent": 0,
+          "resetAt": 1772042410000
         },
         {
           "label": "Day",
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772021704023,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772023472776,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Got it.\n\n### 1) “Ignore OS updates for now”\nDone — the auto-update I implemented is **OpenClaw-only** (npm/git OpenClaw updates). It does **not** check or install OS updates.\n\n### 2) Auto-install Open"
+      "lastSummary": "Auto-update script ran, but **no update was attempted** (no stdout).\n\nLog entries show it **skipped due to “cron wake soon”**:\n\n- `2026-02-25T12:44:42Z SKIP (cron wake soon (-3068ms))`\n- `2026-02-25T12:44:53Z SKIP (cron wake soon (-14397ms))`\n\nSo at runtime it believed the next cron wake time was within the 20‑minute buffer (in fact, slightly *in the past*, likely because the “nextWakeAtMs” timestamp can be the current wake and the script checks a moment after).\n\nIf you want, I can patch `openclaw_auto_update.py` to treat small negative deltas (e.g., “wake just happened”) differently so it doesn’t permanently skip when the cron wake time is essentially “now.”"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
+      "lastRunAt": 1772023472776,
+      "lastStatus": "ok",
+      "lastDurationMs": 50114,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772023472766,
+      "lastSummary": "Auto-update script ran, but **no update was attempted** (no stdout).\n\nLog entries show it **skipped due to “cron wake soon”**:\n\n- `2026-02-25T12:44:42Z SKIP (cron wake soon (-3068ms))`\n- `2026-02-25T12:44:53Z SKIP (cron wake soon (-14397ms))`\n\nSo at runtime it believed the next cron wake time was within the 20‑minute buffer (in fact, slightly *in the past*, likely because the “nextWakeAtMs” timestamp can be the current wake and the script checks a moment after).\n\nIf you want, I can patch `openclaw_auto_update.py` to treat small negative deltas (e.g., “wake just happened”) differently so it doesn’t permanently skip when the cron wake time is essentially “now.”",
+      "nextRunAt": 1772025272776,
       "model": null,
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 9378,
+      "lastInputTokens": 12685,
+      "lastOutputTokens": 853
     }
   ]
 }
