@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772031607906,
+  "updatedAt": 1772033406889,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772043275000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772030672830,
+      "lastRunAt": 1772032472844,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`"
+      "lastSummary": "Ran the cron command:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **exit code 0**, **no stdout output**\n\nHousekeeping:\n- Created missing `/home/clawd/.openclaw/workspace/MEMORY.md` (initialized stub)\n- Logged this run in `/home/clawd/.openclaw/workspace/memory/2026-02-25.md`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772030672830,
+      "lastRunAt": 1772032472844,
       "lastStatus": "ok",
-      "lastDurationMs": 23831,
+      "lastDurationMs": 37488,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`",
-      "nextRunAt": 1772032472830,
+      "lastSummary": "Ran the cron command:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **exit code 0**, **no stdout output**\n\nHousekeeping:\n- Created missing `/home/clawd/.openclaw/workspace/MEMORY.md` (initialized stub)\n- Logged this run in `/home/clawd/.openclaw/workspace/memory/2026-02-25.md`",
+      "nextRunAt": 1772034272844,
       "model": null,
-      "lastTotalTokens": 7603,
-      "lastInputTokens": 4335,
-      "lastOutputTokens": 222
+      "lastTotalTokens": 9909,
+      "lastInputTokens": 8329,
+      "lastOutputTokens": 718
     }
   ]
 }
