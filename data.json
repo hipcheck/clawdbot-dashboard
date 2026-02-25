@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772019010275,
+  "updatedAt": 1772020807920,
   "providers": [
     {
       "id": "openai-codex",
@@ -49,25 +49,25 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1772008200033,
+      "activityKind": "chat",
+      "activityLabel": "A cron job \"healthcheck:security-preflight\" just completed successfully.\n\nResult:\nFAIL: Security preflight check failed.\n\nTop blockers:\n- **Critical S",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772020576314,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I have completed the overnight prescan. The detailed report has been saved to `/tmp/openclaw_prescan_summary.md`.\n\nMy findings were:\n- **Security**: No critical vulnerabilities were found during the basic scan. Open ports and running processes align with expected services like SSH, the OpenClaw gateway, and Tailscale.\n- **System Updates**: I was **unable** to check for updates because I don't have the necessary permissions. I have noted this limitation in the report.\n- **Web Scan**: Found one recent article discussing OpenClaw's memory features, but no new major skills were announced.\n\nSince no critical issues were discovered, I will not be sending any notifications. The task is complete."
+      "lastSummary": "Hey, that same critical security warning from my daily scan has popped up again. Since it's a persistent alert, I think we should probably deal with it.\n\nThe good news is that today's report gave me t"
     },
     {
       "id": "main",
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"137\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\n2",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1772019005276,
+      "lastRunAt": 1772019120848,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Tried to post all 5 replies via `xurl reply` just now. **All 5 failed with the same X API error**:\n\n**403 Forbidden**  \n> “Reply to this conversation is not allowed because you have not been mentioned"
+      "lastSummary": "Done — since **replies and quotes are forbidden** on those threads for this authenticated X account (403 “not part of the conversation”), I posted each approved draft as a **standalone post** that inc"
     },
     {
       "id": "km",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771933800018,
+      "lastRunAt": 1772020200020,
       "lastStatus": "error",
-      "lastDurationMs": 308344,
-      "consecutiveErrors": 2,
+      "lastDurationMs": 369186,
+      "consecutiveErrors": 3,
       "lastError": "cron announce delivery failed",
-      "lastSummary": "FAIL: Security preflight check failed.\n\nTop blockers:\n- **CRITICAL: Skill Vulnerability:** The \"readwise\" skill at `/home/clawd/.openclaw/workspace/skills/readwise` contains dangerous code patterns (env-harvesting) that could lead to credential theft.\n- **CRITICAL: Empty Deny List:** The `gateway.nodes.denyCommands` configuration is empty, meaning there is no blocklist for potentially dangerous commands on connected nodes.\n\nConfig patch suggestions:\n1.  **Disable the vulnerable skill immediately.** Until the code is audited and fixed, the skill should be removed to prevent exploitation.\n    ```bash\n    rm -rf /home/clawd/.openclaw/workspace/skills/readwise\n    ```\n2.  **Establish a baseline command deny list.** Add a default set of dangerous command IDs to `gateway.nodes.denyCommands` to reduce risk on nodes. The exact IDs depend on the enabled tools, but a safe starting point would be to block shell access and file system modification tools. A specific recommendation requires a list of available command IDs.\n3.  **Strengthen model fallbacks.** Replace `openai-codex/gpt-4o-mini` with a stronger model from the GPT-5 or Claude 4.5+ family to reduce prompt injection risks.\n    ```yaml\n    # In your config file under agents.list.main.model.fallbacks\n    - \"openai-codex/gpt-5.3-codex\"\n    ```",
-      "nextRunAt": 1772020200000,
+      "lastSummary": "FAIL: Security preflight check failed.\n\nTop blockers:\n- **Critical Skill Vulnerability:** The `readwise` skill (`/home/clawd/.openclaw/workspace/skills/readwise`) contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is the most severe finding and must be addressed.\n- **Empty Node Command Denylist:** The `gateway.nodes.denyCommands` configuration is empty. This allows all commands, including potentially sensitive ones, to be executed on paired nodes, increasing the risk of misuse if a node is compromised or a skill is malicious.\n\nConfiguration patch suggestions:\n1.  **Disable or Remediate Insecure Skill:** The `readwise` skill should be removed or disabled immediately until the code is audited and fixed.\n    ```bash\n    # Option 1: Remove the skill (recommended if untrusted)\n    rm -rf /home/clawd/.openclaw/workspace/skills/readwise\n\n    # Option 2: Disable by renaming (if you plan to fix it)\n    mv /home/clawd/.openclaw/workspace/skills/readwise /home/clawd/.openclaw/workspace/skills/readwise.disabled\n    ```\n\n2.  **Strengthen Node Command Denylist:** Add essential security and configuration commands to the denylist to prevent remote tampering.\n    ```bash\n    # Run these commands to update the configuration:\n    openclaw config set --json gateway.nodes.denyCommands '[\"openclaw-config-set\", \"openclaw-config-unset\", \"openclaw-security-audit\", \"openclaw-skills-install\", \"openclaw-skills-uninstall\"]'\n    ```\n\n3.  **Review Model Policy:** The use of `gpt-4o-mini` as a fallback model is flagged as a warning. While not a critical failure, consider removing it from the fallback list to maintain a higher security baseline.\n    ```bash\n    # Example command (actual path might differ):\n    openclaw config unset agents.list.main.model.fallbacks 'openai-codex/gpt-4o-mini'\n    ```",
+      "nextRunAt": 1772106600000,
       "model": null,
-      "lastTotalTokens": 5933,
-      "lastInputTokens": 6924,
-      "lastOutputTokens": 1126
+      "lastTotalTokens": 6254,
+      "lastInputTokens": 7598,
+      "lastOutputTokens": 1428
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
