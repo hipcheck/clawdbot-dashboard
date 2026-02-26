@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772141406713,
+  "updatedAt": 1772143206478,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
+          "usedPercent": 5,
           "resetAt": 1772144076000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772140473031,
+      "lastRunAt": 1772142273081,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update job looks healthy.\n\n- **Latest run(s):** `NOOP (no update)` — nothing to install. (Most recent log entry: **2026-02-26T21:15:04Z**)\n- **Last successful update:** **2026-02-26T05:49:18Z** → `UPDATE_OK (latest=2026.2.25)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **didn’t apply anything** because **no update was available**.\n\nLatest log entries:\n- `2026-02-26T21:45:28Z NOOP (no update)`\n- Last successful auto-update: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772140473031,
+      "lastRunAt": 1772142273081,
       "lastStatus": "ok",
-      "lastDurationMs": 52879,
+      "lastDurationMs": 69568,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update job looks healthy.\n\n- **Latest run(s):** `NOOP (no update)` — nothing to install. (Most recent log entry: **2026-02-26T21:15:04Z**)\n- **Last successful update:** **2026-02-26T05:49:18Z** → `UPDATE_OK (latest=2026.2.25)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772142273031,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **didn’t apply anything** because **no update was available**.\n\nLatest log entries:\n- `2026-02-26T21:45:28Z NOOP (no update)`\n- Last successful auto-update: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
+      "nextRunAt": 1772144073081,
       "model": null,
-      "lastTotalTokens": 14404,
-      "lastInputTokens": 20077,
-      "lastOutputTokens": 747
+      "lastTotalTokens": 12519,
+      "lastInputTokens": 9419,
+      "lastOutputTokens": 559
     }
   ]
 }
