@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772080206946,
+  "updatedAt": 1772082006784,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772097279000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772079273203,
+      "lastRunAt": 1772081073217,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron fired and the script ran fine (exit code 0), but it **didn’t apply any update**.\n\nLatest run entry says it **skipped because OpenClaw didn’t consider the system idle**:\n\n- `2026-02-26T03:44:55Z SKIP (direct session active (age=22380ms))`\n- Audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nSo: cron triggered → auto-update checked “busy/idle” heuristics → saw a recently-active direct session → bailed.\n\nIf you want it to actually update more often overnight, we can lower the “busy session” window (env var like `OC_BUSY_SESSION_MS`) or change the cron schedule to a time you’re never chatting with it."
+      "lastSummary": "That run **didn’t update anything** — it **skipped** because OpenClaw detected an active direct (human) session at the time:\n\n- `2026-02-26T04:44:55Z SKIP (direct session active (age=21523ms))`\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want, I can check whether an update is currently available (`openclaw update status --json`) and report back."
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772079273203,
+      "lastRunAt": 1772081073217,
       "lastStatus": "ok",
-      "lastDurationMs": 61563,
+      "lastDurationMs": 45623,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron fired and the script ran fine (exit code 0), but it **didn’t apply any update**.\n\nLatest run entry says it **skipped because OpenClaw didn’t consider the system idle**:\n\n- `2026-02-26T03:44:55Z SKIP (direct session active (age=22380ms))`\n- Audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nSo: cron triggered → auto-update checked “busy/idle” heuristics → saw a recently-active direct session → bailed.\n\nIf you want it to actually update more often overnight, we can lower the “busy session” window (env var like `OC_BUSY_SESSION_MS`) or change the cron schedule to a time you’re never chatting with it.",
-      "nextRunAt": 1772081073203,
+      "lastSummary": "That run **didn’t update anything** — it **skipped** because OpenClaw detected an active direct (human) session at the time:\n\n- `2026-02-26T04:44:55Z SKIP (direct session active (age=21523ms))`\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want, I can check whether an update is currently available (`openclaw update status --json`) and report back.",
+      "nextRunAt": 1772082873217,
       "model": null,
-      "lastTotalTokens": 14152,
-      "lastInputTokens": 11764,
-      "lastOutputTokens": 821
+      "lastTotalTokens": 13345,
+      "lastInputTokens": 17452,
+      "lastOutputTokens": 896
     }
   ]
 }
