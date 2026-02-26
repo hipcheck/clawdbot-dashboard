@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772137806739,
+  "updatedAt": 1772139607552,
   "providers": [
     {
       "id": "openai-codex",
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772224207000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772224207000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -75,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772136873009,
+      "lastRunAt": 1772138673020,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run is behaving normally.\n\nFrom the auto-update log:\n\n- **2026-02-26 05:46Z → 05:49Z:** it **did apply an update** → `UPDATE_OK (latest=2026.2.25)`\n- **Since then (including just now):** it’s been a **no-op** because **no newer update is available**.\n  - Latest entry: `2026-02-26T20:15:17Z NOOP (no update)`\n\nSo you’re already on the newest OpenClaw it can see right now; the cron job is just re-checking and exiting cleanly (exit code `0` for NOOP/SKIP)."
+      "lastSummary": "The `infraops:openclaw-auto-update` cron ran as expected.\n\nLatest entry in the update log for that run:\n- `2026-02-26T20:45:03Z NOOP (no update)`\n\nSo it checked for an OpenClaw update and found nothing to apply this time."
     },
     {
       "id": "km",
@@ -244,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772136873009,
+      "lastRunAt": 1772138673020,
       "lastStatus": "ok",
-      "lastDurationMs": 57563,
+      "lastDurationMs": 53653,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run is behaving normally.\n\nFrom the auto-update log:\n\n- **2026-02-26 05:46Z → 05:49Z:** it **did apply an update** → `UPDATE_OK (latest=2026.2.25)`\n- **Since then (including just now):** it’s been a **no-op** because **no newer update is available**.\n  - Latest entry: `2026-02-26T20:15:17Z NOOP (no update)`\n\nSo you’re already on the newest OpenClaw it can see right now; the cron job is just re-checking and exiting cleanly (exit code `0` for NOOP/SKIP).",
-      "nextRunAt": 1772138673009,
+      "lastSummary": "The `infraops:openclaw-auto-update` cron ran as expected.\n\nLatest entry in the update log for that run:\n- `2026-02-26T20:45:03Z NOOP (no update)`\n\nSo it checked for an OpenClaw update and found nothing to apply this time.",
+      "nextRunAt": 1772140473020,
       "model": null,
-      "lastTotalTokens": 13565,
-      "lastInputTokens": 20092,
-      "lastOutputTokens": 701
+      "lastTotalTokens": 13589,
+      "lastInputTokens": 10703,
+      "lastOutputTokens": 696
     }
   ]
 }
