@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772143206478,
+  "updatedAt": 1772145007027,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1772144076000
+          "usedPercent": 0,
+          "resetAt": 1772162086000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772142273081,
+      "lastRunAt": 1772144073096,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **didn’t apply anything** because **no update was available**.\n\nLatest log entries:\n- `2026-02-26T21:45:28Z NOOP (no update)`\n- Last successful auto-update: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
+      "lastSummary": "Auto-update run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0** (no stdout/stderr output from the script)\n- OpenClaw status: **OK**\n- OpenClaw version: **2026.2.25**"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772142273081,
+      "lastRunAt": 1772144073096,
       "lastStatus": "ok",
-      "lastDurationMs": 69568,
+      "lastDurationMs": 52711,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **didn’t apply anything** because **no update was available**.\n\nLatest log entries:\n- `2026-02-26T21:45:28Z NOOP (no update)`\n- Last successful auto-update: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
-      "nextRunAt": 1772144073081,
+      "lastSummary": "Auto-update run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0** (no stdout/stderr output from the script)\n- OpenClaw status: **OK**\n- OpenClaw version: **2026.2.25**",
+      "nextRunAt": 1772145873096,
       "model": null,
-      "lastTotalTokens": 12519,
-      "lastInputTokens": 9419,
-      "lastOutputTokens": 559
+      "lastTotalTokens": 11675,
+      "lastInputTokens": 8671,
+      "lastOutputTokens": 481
     }
   ]
 }
