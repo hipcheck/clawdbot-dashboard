@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772074807448,
+  "updatedAt": 1772076606603,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772073873164,
+      "lastRunAt": 1772075673176,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply any update — it **skipped** because OpenClaw saw an active direct session at the time.\n\nLatest log entry:\n\n- `2026-02-26T02:44:55Z SKIP (direct session active (age=21902ms))`\n\nLog file (for auditing):  \n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want it to be more willing to update at night, we can lower the “busy session” window via `OC_BUSY_SESSION_MS` (currently 15 minutes) or adjust the cron schedule."
+      "lastSummary": "Auto-update cron ran successfully.\n\n- `openclaw_auto_update.py` exited **0** (no output produced).\n- Current OpenClaw version: **2026.2.24**\n- Gateway status: **running**, RPC probe **ok**, listening on **127.0.0.1:18789** (loopback-only)\n- Log file (per gateway status): `/tmp/openclaw-1000/openclaw-2026-02-26.log`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772073873164,
+      "lastRunAt": 1772075673176,
       "lastStatus": "ok",
-      "lastDurationMs": 43368,
+      "lastDurationMs": 43188,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply any update — it **skipped** because OpenClaw saw an active direct session at the time.\n\nLatest log entry:\n\n- `2026-02-26T02:44:55Z SKIP (direct session active (age=21902ms))`\n\nLog file (for auditing):  \n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want it to be more willing to update at night, we can lower the “busy session” window via `OC_BUSY_SESSION_MS` (currently 15 minutes) or adjust the cron schedule.",
-      "nextRunAt": 1772075673164,
+      "lastSummary": "Auto-update cron ran successfully.\n\n- `openclaw_auto_update.py` exited **0** (no output produced).\n- Current OpenClaw version: **2026.2.24**\n- Gateway status: **running**, RPC probe **ok**, listening on **127.0.0.1:18789** (loopback-only)\n- Log file (per gateway status): `/tmp/openclaw-1000/openclaw-2026-02-26.log`",
+      "nextRunAt": 1772077473176,
       "model": null,
-      "lastTotalTokens": 13278,
-      "lastInputTokens": 17379,
-      "lastOutputTokens": 873
+      "lastTotalTokens": 10999,
+      "lastInputTokens": 15541,
+      "lastOutputTokens": 401
     }
   ]
 }
