@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772067608443,
+  "updatedAt": 1772069413287,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 2,
           "resetAt": 1772079277000
         },
         {
           "label": "Day",
-          "usedPercent": 26,
+          "usedPercent": 27,
           "resetAt": 1772497599000
         }
       ],
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772066673107,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"167\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nDo it now",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772068940476,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`\n- Output: (none)"
+      "lastSummary": "Not yet — OpenClaw is **still not updated** to the latest.\n\n- `openclaw update status` shows **latestVersion = 2026.2.24** and **hasRegistryUpdate = true**, so an update is available but hasn’t been a"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772066673107,
+      "lastRunAt": 1772068473122,
       "lastStatus": "ok",
-      "lastDurationMs": 29300,
+      "lastDurationMs": 21151,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`\n- Output: (none)",
-      "nextRunAt": 1772068473107,
+      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`\n- No output was produced by the script this run.",
+      "nextRunAt": 1772070273122,
       "model": null,
-      "lastTotalTokens": 7772,
-      "lastInputTokens": 8591,
-      "lastOutputTokens": 362
+      "lastTotalTokens": 7598,
+      "lastInputTokens": 4332,
+      "lastOutputTokens": 238
     }
   ]
 }
