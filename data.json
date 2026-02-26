@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772145007027,
+  "updatedAt": 1772146806906,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772162086000
+          "usedPercent": 1,
+          "resetAt": 1772162075000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772144073096,
+      "lastRunAt": 1772145873136,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0** (no stdout/stderr output from the script)\n- OpenClaw status: **OK**\n- OpenClaw version: **2026.2.25**"
+      "lastSummary": "Cron run completed.\n\n- **Result:** `NOOP (no update)` — nothing to install right now.  \n- **Last successful auto-update:** `2026-02-26T05:49:18Z` → `latest=2026.2.25`\n\nSource: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (entries around `2026-02-26T22:45:05Z` and `2026-02-26T05:49:18Z`)"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772144073096,
+      "lastRunAt": 1772145873136,
       "lastStatus": "ok",
-      "lastDurationMs": 52711,
+      "lastDurationMs": 50285,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0** (no stdout/stderr output from the script)\n- OpenClaw status: **OK**\n- OpenClaw version: **2026.2.25**",
-      "nextRunAt": 1772145873096,
+      "lastSummary": "Cron run completed.\n\n- **Result:** `NOOP (no update)` — nothing to install right now.  \n- **Last successful auto-update:** `2026-02-26T05:49:18Z` → `latest=2026.2.25`\n\nSource: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (entries around `2026-02-26T22:45:05Z` and `2026-02-26T05:49:18Z`)",
+      "nextRunAt": 1772147673136,
       "model": null,
-      "lastTotalTokens": 11675,
-      "lastInputTokens": 8671,
-      "lastOutputTokens": 481
+      "lastTotalTokens": 14399,
+      "lastInputTokens": 20361,
+      "lastOutputTokens": 798
     }
   ]
 }
