@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772110807413,
+  "updatedAt": 1772112606663,
   "providers": [
     {
       "id": "openai-codex",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 2,
-          "resetAt": 1772121599700
+          "resetAt": 1772121599874
         },
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000700
+          "resetAt": 1772244000874
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772109872789,
+      "lastRunAt": 1772111672805,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now.\n\n- Result: **exit code 0 (success)**\n- Output: **none** (the script didn’t print anything to stdout/stderr)\n\nIf you want a quick verification that everything’s healthy post-update, tell me and I’ll run `openclaw status` (and/or check for any updated versions/commits, depending on what this script is supposed to update)."
+      "lastSummary": "That cron run is a **noop** — the auto-update script exited cleanly and didn’t apply anything (no update available).\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail):\n\n- `2026-02-26T13:15:07Z NOOP (no update)`\n- Earlier today it already updated successfully:\n  - `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n  - `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
     },
     {
       "id": "km",
@@ -244,17 +244,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772109872789,
+      "lastRunAt": 1772111672805,
       "lastStatus": "ok",
-      "lastDurationMs": 36841,
+      "lastDurationMs": 50648,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now.\n\n- Result: **exit code 0 (success)**\n- Output: **none** (the script didn’t print anything to stdout/stderr)\n\nIf you want a quick verification that everything’s healthy post-update, tell me and I’ll run `openclaw status` (and/or check for any updated versions/commits, depending on what this script is supposed to update).",
-      "nextRunAt": 1772111672789,
+      "lastSummary": "That cron run is a **noop** — the auto-update script exited cleanly and didn’t apply anything (no update available).\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail):\n\n- `2026-02-26T13:15:07Z NOOP (no update)`\n- Earlier today it already updated successfully:\n  - `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n  - `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
+      "nextRunAt": 1772113472805,
       "model": null,
-      "lastTotalTokens": 10670,
-      "lastInputTokens": 15842,
-      "lastOutputTokens": 322
+      "lastTotalTokens": 13304,
+      "lastInputTokens": 17650,
+      "lastOutputTokens": 639
     }
   ]
 }
