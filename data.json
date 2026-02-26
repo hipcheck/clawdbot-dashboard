@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772136007610,
+  "updatedAt": 1772137806739,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1772144076000
         },
         {
@@ -26,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1772222408000
+          "resetAt": 1772224207000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1772222408000
+          "resetAt": 1772224207000
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772135072987,
+      "lastRunAt": 1772136873009,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**) but didn’t print anything to stdout.\n\nI also checked the installed OpenClaw version: **2026.2.25** (`openclaw --version`).\n\nIf you want the updater to be more “visible” in cron logs, we can tweak the script to emit a one-line summary (e.g., “already up to date” / “updated from X → Y”)."
+      "lastSummary": "That cron run is behaving normally.\n\nFrom the auto-update log:\n\n- **2026-02-26 05:46Z → 05:49Z:** it **did apply an update** → `UPDATE_OK (latest=2026.2.25)`\n- **Since then (including just now):** it’s been a **no-op** because **no newer update is available**.\n  - Latest entry: `2026-02-26T20:15:17Z NOOP (no update)`\n\nSo you’re already on the newest OpenClaw it can see right now; the cron job is just re-checking and exiting cleanly (exit code `0` for NOOP/SKIP)."
     },
     {
       "id": "km",
@@ -154,13 +154,13 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1771876800018,
+      "lastRunAt": 1772136000057,
       "lastStatus": "error",
-      "lastDurationMs": 60,
-      "consecutiveErrors": 2,
-      "lastError": "model not allowed: openai-codex/gpt-4o-mini",
+      "lastDurationMs": 300068,
+      "consecutiveErrors": 3,
+      "lastError": "cron: job execution timed out",
       "lastSummary": null,
-      "nextRunAt": 1772136000000,
+      "nextRunAt": 1772481600000,
       "model": "openai-codex/gpt-4o-mini",
       "lastTotalTokens": 135928,
       "lastInputTokens": 954689,
@@ -244,17 +244,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772135072987,
+      "lastRunAt": 1772136873009,
       "lastStatus": "ok",
-      "lastDurationMs": 65696,
+      "lastDurationMs": 57563,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**) but didn’t print anything to stdout.\n\nI also checked the installed OpenClaw version: **2026.2.25** (`openclaw --version`).\n\nIf you want the updater to be more “visible” in cron logs, we can tweak the script to emit a one-line summary (e.g., “already up to date” / “updated from X → Y”).",
-      "nextRunAt": 1772136872987,
+      "lastSummary": "That cron run is behaving normally.\n\nFrom the auto-update log:\n\n- **2026-02-26 05:46Z → 05:49Z:** it **did apply an update** → `UPDATE_OK (latest=2026.2.25)`\n- **Since then (including just now):** it’s been a **no-op** because **no newer update is available**.\n  - Latest entry: `2026-02-26T20:15:17Z NOOP (no update)`\n\nSo you’re already on the newest OpenClaw it can see right now; the cron job is just re-checking and exiting cleanly (exit code `0` for NOOP/SKIP).",
+      "nextRunAt": 1772138673009,
       "model": null,
-      "lastTotalTokens": 11574,
-      "lastInputTokens": 9096,
-      "lastOutputTokens": 451
+      "lastTotalTokens": 13565,
+      "lastInputTokens": 20092,
+      "lastOutputTokens": 701
     }
   ]
 }
