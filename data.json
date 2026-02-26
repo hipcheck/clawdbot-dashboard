@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772073006757,
+  "updatedAt": 1772074807448,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772072073150,
+      "lastRunAt": 1772073873164,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run completed fine — the auto-updater **skipped** this time.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n- `2026-02-26T02:14:56Z SKIP (direct session active (age=22856ms))`\n\nAlso checked `openclaw update status --json`: **no update is currently available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`), so even if it hadn’t skipped, it would’ve been a no-op."
+      "lastSummary": "That cron run didn’t apply any update — it **skipped** because OpenClaw saw an active direct session at the time.\n\nLatest log entry:\n\n- `2026-02-26T02:44:55Z SKIP (direct session active (age=21902ms))`\n\nLog file (for auditing):  \n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want it to be more willing to update at night, we can lower the “busy session” window via `OC_BUSY_SESSION_MS` (currently 15 minutes) or adjust the cron schedule."
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772072073150,
+      "lastRunAt": 1772073873164,
       "lastStatus": "ok",
-      "lastDurationMs": 46421,
+      "lastDurationMs": 43368,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run completed fine — the auto-updater **skipped** this time.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n- `2026-02-26T02:14:56Z SKIP (direct session active (age=22856ms))`\n\nAlso checked `openclaw update status --json`: **no update is currently available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`), so even if it hadn’t skipped, it would’ve been a no-op.",
-      "nextRunAt": 1772073873150,
+      "lastSummary": "That cron run didn’t apply any update — it **skipped** because OpenClaw saw an active direct session at the time.\n\nLatest log entry:\n\n- `2026-02-26T02:44:55Z SKIP (direct session active (age=21902ms))`\n\nLog file (for auditing):  \n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want it to be more willing to update at night, we can lower the “busy session” window via `OC_BUSY_SESSION_MS` (currently 15 minutes) or adjust the cron schedule.",
+      "nextRunAt": 1772075673164,
       "model": null,
-      "lastTotalTokens": 13726,
-      "lastInputTokens": 17791,
-      "lastOutputTokens": 757
+      "lastTotalTokens": 13278,
+      "lastInputTokens": 17379,
+      "lastOutputTokens": 873
     }
   ]
 }
