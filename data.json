@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772107216892,
+  "updatedAt": 1772109007142,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
+          "usedPercent": 12,
           "resetAt": 1772124818000
         },
         {
           "label": "Day",
-          "usedPercent": 31,
+          "usedPercent": 32,
           "resetAt": 1772497599000
         }
       ],
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 2,
-          "resetAt": 1772121600245
+          "resetAt": 1772121600346
         },
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000245
+          "resetAt": 1772244000346
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"feature-builder:morning-proposal\" just completed successfully.\n\nResult:\n**Proposal: Create a Secure System Update Checker**\n\nBased on the ",
+      "activityLabel": "A cron job \"feature-builder:morning-proposal\" just completed successfully.\n\nResult:\n⚠️ Morning proposal skipped — prescan data is stale (found date: 2",
       "activityChannel": "telegram",
-      "lastRunAt": 1772020927917,
+      "lastRunAt": 1772107435994,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I've identified a security gap: the system isn't checking for its own OS updates.\n\nI propose building a secure, restricted agent that can find and report pending updates without being able to install "
+      "lastSummary": "The overnight system prescan failed to run, so the data I need is stale. I've skipped generating a new proposal this morning.\n\nI need to investigate the `healthcheck:overnight-prescan` cron job to fin"
     },
     {
       "id": "infraops",
@@ -72,25 +72,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "System: Exec completed (young-ce, code 1) :: Error: gateway timeout after 20000ms Gateway target: ws://127.0.0.1:18789 Source: local loopback Config: ",
-      "activityChannel": "tui",
-      "lastRunAt": 1772107191602,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772108072778,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I found the “Obsidian Journal review” job on this OpenClaw host:\n\n- **Cron:** `km:nightly-journal-comment`\n- **ID:** `c915b0d5-5160-45e8-8c57-a60d742a4640`\n- **Last run:** **error** (it failed on a No"
+      "lastSummary": "Auto-update cron ran successfully.\n\n- Result this run (2026-02-26 12:15Z): **SKIP** — direct session active (age≈218,303ms). Logged in `memory/openclaw-updates.log`.\n- Latest update status: **already updated** earlier today — `UPDATE_OK (latest=2026.2.25)` at 05:49Z.\n- Current OpenClaw version: **2026.2.25**"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n⚠️ 📱 Nodes: `with command /bin/bash, -lc, TZ=America/New_York date '+%Y",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: MISSING\n\n- Mac node: online ✅\n- TARGET_DATE (Ame",
       "activityChannel": "telegram",
-      "lastRunAt": 1772078547208,
+      "lastRunAt": 1772107646649,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The nightly journal run couldn’t start tonight because it failed when trying to run a basic command on your Mac (to get the current New York time). That usually means the **“Andreas MacBook”** node wa"
+      "lastSummary": "I was able to connect to your Mac, but today’s journal entry for **2026-02-26 (NYC)** wasn’t found, so I didn’t make any changes.\n\nExpected file (missing):\n- `/Users/andreasallmaier/Documents/Brain/jo"
     }
   ],
   "cronJobs": [
@@ -100,17 +100,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772020800039,
+      "lastRunAt": 1772107273172,
       "lastStatus": "ok",
-      "lastDurationMs": 128211,
+      "lastDurationMs": 167250,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "**Proposal: Create a Secure System Update Checker**\n\nBased on the prescan summary, the most critical issue is the system's inability to check for its own OS-level updates. This is a major gap in security and stability monitoring.\n\n*   **Impact:** This feature will close a significant blind spot in our daily health checks. By automating the detection of pending system updates, we can ensure the underlying OS is always patched against vulnerabilities, improving the overall security and reliability of the platform.\n\n*   **Risks:** Granting elevated (`sudo`) permissions is inherently risky. A compromised or misconfigured agent could potentially damage the system. This risk will be mitigated by creating a highly specialized and restricted agent that is only permitted to run specific, read-only package manager commands (e.g., `apt-get update` and `apt-get --dry-run upgrade`). It will not be granted general-purpose root access.\n\n*   **First Step:** The first implementation step is to create a new OpenClaw skill or a dedicated agent that uses the `exec` tool with the `elevated: true` parameter to run the command `apt-get update && apt-get --just-print upgrade`. This will safely check for and list pending updates without installing them, immediately providing the visibility that is currently missing.",
-      "nextRunAt": 1772107200000,
+      "lastSummary": "⚠️ Morning proposal skipped — prescan data is stale (found date: 2026.2.25, ~24h ago). The overnight prescan does not appear to have run today. Check the `healthcheck:overnight-prescan` cron job.",
+      "nextRunAt": 1772193600000,
       "model": null,
-      "lastTotalTokens": 4446,
-      "lastInputTokens": 4952,
-      "lastOutputTokens": 1274
+      "lastTotalTokens": 7085,
+      "lastInputTokens": 7031,
+      "lastOutputTokens": 1158
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -124,7 +124,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "I have completed the overnight prescan. The detailed report has been saved to `/tmp/openclaw_prescan_summary.md`.\n\nMy findings were:\n- **Security**: No critical vulnerabilities were found during the basic scan. Open ports and running processes align with expected services like SSH, the OpenClaw gateway, and Tailscale.\n- **System Updates**: I was **unable** to check for updates because I don't have the necessary permissions. I have noted this limitation in the report.\n- **Web Scan**: Found one recent article discussing OpenClaw's memory features, but no new major skills were announced.\n\nSince no critical issues were discovered, I will not be sending any notifications. The task is complete.",
-      "nextRunAt": 1772094600000,
+      "nextRunAt": 1772181000000,
       "model": null,
       "lastTotalTokens": 13817,
       "lastInputTokens": 21554,
@@ -142,7 +142,7 @@
       "consecutiveErrors": 3,
       "lastError": "cron announce delivery failed",
       "lastSummary": "FAIL: Security preflight check failed.\n\nTop blockers:\n- **Critical Skill Vulnerability:** The `readwise` skill (`/home/clawd/.openclaw/workspace/skills/readwise`) contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is the most severe finding and must be addressed.\n- **Empty Node Command Denylist:** The `gateway.nodes.denyCommands` configuration is empty. This allows all commands, including potentially sensitive ones, to be executed on paired nodes, increasing the risk of misuse if a node is compromised or a skill is malicious.\n\nConfiguration patch suggestions:\n1.  **Disable or Remediate Insecure Skill:** The `readwise` skill should be removed or disabled immediately until the code is audited and fixed.\n    ```bash\n    # Option 1: Remove the skill (recommended if untrusted)\n    rm -rf /home/clawd/.openclaw/workspace/skills/readwise\n\n    # Option 2: Disable by renaming (if you plan to fix it)\n    mv /home/clawd/.openclaw/workspace/skills/readwise /home/clawd/.openclaw/workspace/skills/readwise.disabled\n    ```\n\n2.  **Strengthen Node Command Denylist:** Add essential security and configuration commands to the denylist to prevent remote tampering.\n    ```bash\n    # Run these commands to update the configuration:\n    openclaw config set --json gateway.nodes.denyCommands '[\"openclaw-config-set\", \"openclaw-config-unset\", \"openclaw-security-audit\", \"openclaw-skills-install\", \"openclaw-skills-uninstall\"]'\n    ```\n\n3.  **Review Model Policy:** The use of `gpt-4o-mini` as a fallback model is flagged as a warning. While not a critical failure, consider removing it from the fallback list to maintain a higher security baseline.\n    ```bash\n    # Example command (actual path might differ):\n    openclaw config unset agents.list.main.model.fallbacks 'openai-codex/gpt-4o-mini'\n    ```",
-      "nextRunAt": 1772106600000,
+      "nextRunAt": 1772193000000,
       "model": null,
       "lastTotalTokens": 6254,
       "lastInputTokens": 7598,
@@ -172,17 +172,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772078400021,
-      "lastStatus": "error",
-      "lastDurationMs": 147410,
-      "consecutiveErrors": 1,
-      "lastError": "⚠️ 📱 Nodes: `with command /bin/bash, -lc, TZ=America/New_York date '+%Y-%m-%d %H:%M:%S %Z', node Andreas MacBook` failed",
-      "lastSummary": "⚠️ 📱 Nodes: `with command /bin/bash, -lc, TZ=America/New_York date '+%Y-%m-%d %H:%M:%S %Z', node Andreas MacBook` failed",
+      "lastRunAt": 1772107617050,
+      "lastStatus": "ok",
+      "lastDurationMs": 29785,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Nikola nightly journal: MISSING\n\n- Mac node: online ✅\n- TARGET_DATE (America/New_York): 2026-02-26\n- CURRENT_TS (America/New_York): 2026-02-26 07:07:14 EST\n- Expected file not found, so no changes made:\n  - `/Users/andreasallmaier/Documents/Brain/journal/2026-02-26.md`",
       "nextRunAt": 1772164800000,
       "model": null,
-      "lastTotalTokens": 7366,
-      "lastInputTokens": 7229,
-      "lastOutputTokens": 735
+      "lastTotalTokens": 7375,
+      "lastInputTokens": 8581,
+      "lastOutputTokens": 989
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -232,7 +232,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Links saved (5):\n- https://t.co/Bvj8ouo8XZ\n- https://t.co/t52IGtWkML\n- https://t.co/I2Pv63buIu\n- https://t.co/1FJx6CMY4t\n- https://t.co/cYioFergnR\n\nFollows (5):\n- @naval — followed\n- @mgsiegler — followed\n- @alexeheath — followed\n- @steipete — followed\n- @samsheffer — followed\n\nDraft replies (5) — for approval (not posted):\n1) To @alexeheath (post_id: 2026540691204317647)\n\"I’m with you. The 'bubble' convo is weirdly disconnected from whether teams are actually getting leverage day-to-day.\"\n\n2) To @samsheffer (post_id: 2026510289051476446)\n\"This is where the boring stuff wins: pick one metric that would falsify the claim, track it for 30 days, then adjust.\"\n\n3) To @ID_AA_Carmack (post_id: 2026506990608847124)\n\"One line I keep coming back to: “**Turn Desire Into A Written Plan** - Fix a precise money goal, name a deadline, and decide what you'll give in return before taking action.”\"\n\n4) To @steipete (post_id: 2026506862250610822)\n\"Feels like a lot of this comes down to expectations vs. actual workflow pull. Hype is loud; day-to-day usage is the signal.\"\n\n5) To @samsheffer (post_id: 2026503737863205283)\n\"Good point. Also: the UX tax is real—one extra click multiplied by 50/day turns into 'I stop using it' surprisingly fast.\"\n\nErrors:\n- None (READWISE_TOKEN present; script completed successfully).",
-      "nextRunAt": 1772092200000,
+      "nextRunAt": 1772178600000,
       "model": null,
       "lastTotalTokens": 5689,
       "lastInputTokens": 9336,
@@ -244,17 +244,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772082873230,
+      "lastRunAt": 1772108072778,
       "lastStatus": "ok",
-      "lastDurationMs": 41201,
+      "lastDurationMs": 52078,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` ran successfully, but **it did not update** OpenClaw this time — it **skipped because a direct (human) session was active**.\n\nLatest log line:\n- `2026-02-26T05:14:56Z SKIP (direct session active (age=22944ms))`\n\nLog file:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772084673230,
+      "lastSummary": "Auto-update cron ran successfully.\n\n- Result this run (2026-02-26 12:15Z): **SKIP** — direct session active (age≈218,303ms). Logged in `memory/openclaw-updates.log`.\n- Latest update status: **already updated** earlier today — `UPDATE_OK (latest=2026.2.25)` at 05:49Z.\n- Current OpenClaw version: **2026.2.25**",
+      "nextRunAt": 1772109872778,
       "model": null,
-      "lastTotalTokens": 12730,
-      "lastInputTokens": 18327,
-      "lastOutputTokens": 664
+      "lastTotalTokens": 12753,
+      "lastInputTokens": 17165,
+      "lastOutputTokens": 553
     }
   ]
 }
