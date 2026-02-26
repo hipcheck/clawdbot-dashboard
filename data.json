@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772118007519,
+  "updatedAt": 1772119807034,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 13,
+          "usedPercent": 14,
           "resetAt": 1772124818000
         },
         {
           "label": "Day",
-          "usedPercent": 32,
+          "usedPercent": 33,
           "resetAt": 1772497599000
         }
       ],
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 2,
-          "resetAt": 1772121599762
+          "resetAt": 1772121600244
         },
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000762
+          "resetAt": 1772244000244
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772117072843,
+      "lastRunAt": 1772118872856,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Your OpenClaw auto-update cron looks healthy right now.\n\n- **Latest applied update:** `2026.2.25` (ran **05:46Z → 05:49Z**, logged `UPDATE_OK`)\n- **Current status:** `openclaw update status` reports **no update available** (already on latest registry version)\n- **Most recent runs today:** `NOOP (no update)` (e.g., **12:45Z, 13:15Z, 13:45Z, 14:15Z** in `memory/openclaw-updates.log`)\n\nIf you want, I can tweak the cron “idle” heuristics (session age / cron buffer) so it updates more aggressively or more conservatively."
+      "lastSummary": "That cron run was a **NOOP** — there was **no OpenClaw update available**.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n\n- `2026-02-26T15:15:06Z NOOP (no update)`\n\nLast successful auto-update was earlier today:\n\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
     },
     {
       "id": "km",
@@ -244,17 +244,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772117072843,
+      "lastRunAt": 1772118872856,
       "lastStatus": "ok",
-      "lastDurationMs": 41515,
+      "lastDurationMs": 52157,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Your OpenClaw auto-update cron looks healthy right now.\n\n- **Latest applied update:** `2026.2.25` (ran **05:46Z → 05:49Z**, logged `UPDATE_OK`)\n- **Current status:** `openclaw update status` reports **no update available** (already on latest registry version)\n- **Most recent runs today:** `NOOP (no update)` (e.g., **12:45Z, 13:15Z, 13:45Z, 14:15Z** in `memory/openclaw-updates.log`)\n\nIf you want, I can tweak the cron “idle” heuristics (session age / cron buffer) so it updates more aggressively or more conservatively.",
-      "nextRunAt": 1772118872843,
+      "lastSummary": "That cron run was a **NOOP** — there was **no OpenClaw update available**.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n\n- `2026-02-26T15:15:06Z NOOP (no update)`\n\nLast successful auto-update was earlier today:\n\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
+      "nextRunAt": 1772120672856,
       "model": null,
-      "lastTotalTokens": 14295,
-      "lastInputTokens": 21762,
-      "lastOutputTokens": 757
+      "lastTotalTokens": 14287,
+      "lastInputTokens": 27395,
+      "lastOutputTokens": 726
     }
   ]
 }
