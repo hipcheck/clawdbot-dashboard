@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772128806993,
+  "updatedAt": 1772130606540,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 33,
+          "usedPercent": 34,
           "resetAt": 1772497599000
         }
       ],
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000169
+          "resetAt": 1772244000762
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772127872931,
+      "lastRunAt": 1772129672945,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` ran.\n\n- **Current OpenClaw version:** `2026.2.25`\n- **This run:** **SKIP** (it detected an active direct session at `2026-02-26T17:44:56Z`)\n- **Last successful auto-update:** `2026-02-26T05:46:15Z` → **UPDATE_OK** (`latest=2026.2.25`)\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Your auto-update job is working, and it already **applied an OpenClaw update earlier today**:\n\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`\n\nAfter that, the subsequent cron runs have been mostly:\n\n- `NOOP (no update)` (nothing new available), and occasionally\n- `SKIP (direct session active ...)` (it detected an active human session and backed off)\n\nSo the run you pasted at **18:14 UTC** is very likely just another **NOOP/SKIP** cycle (i.e., nothing to do).\n\nIf you want, I can pull the most recent line around 18:14 from:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n(just say “check the latest log line”)."
     },
     {
       "id": "km",
@@ -243,17 +243,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772127872931,
+      "lastRunAt": 1772129672945,
       "lastStatus": "ok",
-      "lastDurationMs": 58834,
+      "lastDurationMs": 23187,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` ran.\n\n- **Current OpenClaw version:** `2026.2.25`\n- **This run:** **SKIP** (it detected an active direct session at `2026-02-26T17:44:56Z`)\n- **Last successful auto-update:** `2026-02-26T05:46:15Z` → **UPDATE_OK** (`latest=2026.2.25`)\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772129672931,
+      "lastSummary": "Your auto-update job is working, and it already **applied an OpenClaw update earlier today**:\n\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`\n\nAfter that, the subsequent cron runs have been mostly:\n\n- `NOOP (no update)` (nothing new available), and occasionally\n- `SKIP (direct session active ...)` (it detected an active human session and backed off)\n\nSo the run you pasted at **18:14 UTC** is very likely just another **NOOP/SKIP** cycle (i.e., nothing to do).\n\nIf you want, I can pull the most recent line around 18:14 from:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n(just say “check the latest log line”).",
+      "nextRunAt": 1772131472945,
       "model": null,
-      "lastTotalTokens": 13851,
-      "lastInputTokens": 21591,
-      "lastOutputTokens": 779
+      "lastTotalTokens": 13214,
+      "lastInputTokens": 25205,
+      "lastOutputTokens": 815
     }
   ]
 }
