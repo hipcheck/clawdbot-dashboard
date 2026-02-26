@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772078407491,
+  "updatedAt": 1772080206946,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
-          "resetAt": 1772079277000
+          "usedPercent": 0,
+          "resetAt": 1772097279000
         },
         {
           "label": "Day",
-          "usedPercent": 27,
+          "usedPercent": 28,
           "resetAt": 1772497599000
         }
       ],
@@ -64,22 +64,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772077473188,
+      "lastRunAt": 1772079273203,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This run completed successfully (exit code 0) and **did not apply an update** — it **skipped** because the system wasn’t considered idle.\n\nLatest log entry:\n- `2026-02-26T03:44:55Z SKIP (direct session active (age=22380ms))`  \n  (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)\n\nSo: cron fired, script checked “idle” heuristics, saw a recent direct chat session, and bailed."
+      "lastSummary": "That cron fired and the script ran fine (exit code 0), but it **didn’t apply any update**.\n\nLatest run entry says it **skipped because OpenClaw didn’t consider the system idle**:\n\n- `2026-02-26T03:44:55Z SKIP (direct session active (age=22380ms))`\n- Audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nSo: cron triggered → auto-update checked “busy/idle” heuristics → saw a recently-active direct session → bailed.\n\nIf you want it to actually update more often overnight, we can lower the “busy session” window (env var like `OC_BUSY_SESSION_MS`) or change the cron schedule to a time you’re never chatting with it."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:x-to-reader-daily\" just completed successfully.\n\nResult:\nLinks saved (5):\n- https://t.co/Bvj8ouo8XZ\n- https://t.co/t52IGtWkML\n- https:/",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n⚠️ 📱 Nodes: `with command /bin/bash, -lc, TZ=America/New_York date '+%Y",
       "activityChannel": "telegram",
-      "lastRunAt": 1772018874557,
+      "lastRunAt": 1772078547208,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Today’s **X → Reader** run completed successfully.\n\n**Links saved to Reader (5):**\n- https://t.co/Bvj8ouo8XZ  \n- https://t.co/t52IGtWkML  \n- https://t.co/I2Pv63buIu  \n- https://t.co/1FJx6CMY4t  \n- htt"
+      "lastSummary": "The nightly journal run couldn’t start tonight because it failed when trying to run a basic command on your Mac (to get the current New York time). That usually means the **“Andreas MacBook”** node wa"
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1771992000029,
-      "lastStatus": "ok",
-      "lastDurationMs": 111785,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "⚠️ 📱 Nodes: `bash, -lc, ~/.openclaw/workspace-km/scripts/readwise_search_local.sh \"tracking experiments\" | head -n 40` failed",
-      "nextRunAt": 1772078400000,
+      "lastRunAt": 1772078400021,
+      "lastStatus": "error",
+      "lastDurationMs": 147410,
+      "consecutiveErrors": 1,
+      "lastError": "⚠️ 📱 Nodes: `with command /bin/bash, -lc, TZ=America/New_York date '+%Y-%m-%d %H:%M:%S %Z', node Andreas MacBook` failed",
+      "lastSummary": "⚠️ 📱 Nodes: `with command /bin/bash, -lc, TZ=America/New_York date '+%Y-%m-%d %H:%M:%S %Z', node Andreas MacBook` failed",
+      "nextRunAt": 1772164800000,
       "model": null,
-      "lastTotalTokens": 8064,
-      "lastInputTokens": 10520,
-      "lastOutputTokens": 4503
+      "lastTotalTokens": 7366,
+      "lastInputTokens": 7229,
+      "lastOutputTokens": 735
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -197,17 +197,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772034837630,
+      "lastRunAt": 1772079000026,
       "lastStatus": "ok",
-      "lastDurationMs": 36593,
+      "lastDurationMs": 163423,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Local date (America/New_York): 2026-02-25\n\n## Clawdbot Daily Ops Journal\n2026-02-25T15:54:45Z\n\n- Shipped/Changed:\n  - No new builds/config changes today; only routine cron execution.\n  - Cron `infraops:openclaw-auto-update` ran `scripts/openclaw_auto_update.py` (exit 0, no stdout).\n- Worked:\n  - Auto-update cron completed successfully.\n- Failed/Flaky:\n  - `memory/openclaw-updates.log` shows repeated update checks skipped (“direct session active” / “cron wake soon”); no hard failures recorded.\n- Decisions:\n  - None.\n- Follow-ups:\n  - Review why update checks are frequently skipped (confirm intended scheduling/guardrails and whether any updates are being missed).",
-      "nextRunAt": 1772079000000,
+      "lastSummary": "Local date (America/New_York): 2026-02-25\n\n## Clawdbot Daily Ops Journal\n2026-02-26T04:13:45Z\n\n- Shipped/Changed:\n  - Added an idle-safe OpenClaw auto-update script: `scripts/openclaw_auto_update.py`.\n  - Fixed auto-updater logic to prevent skipping when the next cron wake timestamp is already in the past (negative “cron wake soon” window). (Git commits in last 24h: `c514cd8`, `f744f0e`)\n\n- Worked:\n  - Cron `infraops:openclaw-auto-update` ran repeatedly (about every 30 minutes) and consistently exited `0` (generally with no stdout).\n  - Overnight prescan completed; report saved to `/tmp/openclaw_prescan_summary.md`.\n  - X/Readwise “daily reader” flow succeeded in at least one run (saved 5 links, followed 5 accounts, drafted 5 replies).\n\n- Failed/Flaky:\n  - Auto-updater frequently no-op’d/skipped due to idle checks:\n    - Earlier runs showed the problematic “cron wake soon” logic (including negative ms windows); later runs skipped due to “direct session active”.\n  - X/Readwise automation intermittently failed:\n    - `xurl timeline` hit `CreditsDepleted`.\n    - `READWISE_TOKEN` missing on VPS caused at least one abort.\n    - Multiple “Message failed” events occurred.\n  - Node commands against “Andreas MacBook” failed at least twice (remote execution issues).\n  - One run reported: “cron announce delivery failed”.\n\n- Decisions:\n  - Keep auto-updates conservative: skip when not idle (direct session active / cron wake soon) to avoid interrupting live sessions.\n\n- Follow-ups:\n  - Verify the negative “cron wake soon” edge case is fully resolved (and add a regression guard/test).\n  - Restore/validate VPS secrets for the daily-reader pipeline (`READWISE_TOKEN`) and confirm X API credits/`xurl` auth.\n  - Debug messaging delivery failures (including “cron announce delivery failed”).\n  - Troubleshoot node connectivity/pairing/permissions for “Andreas MacBook”.\n\nSupporting notes (data sources used):\n- Cron activity (last ~24h): 46 events across multiple run logs; key items includ…",
+      "nextRunAt": 1772165400000,
       "model": null,
-      "lastTotalTokens": 9396,
-      "lastInputTokens": 6662,
-      "lastOutputTokens": 1037
+      "lastTotalTokens": 23671,
+      "lastInputTokens": 28720,
+      "lastOutputTokens": 5292
     },
     {
       "id": "af6fe05b-0496-48f2-882f-4925cc64a1f2",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772077473188,
+      "lastRunAt": 1772079273203,
       "lastStatus": "ok",
-      "lastDurationMs": 41099,
+      "lastDurationMs": 61563,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This run completed successfully (exit code 0) and **did not apply an update** — it **skipped** because the system wasn’t considered idle.\n\nLatest log entry:\n- `2026-02-26T03:44:55Z SKIP (direct session active (age=22380ms))`  \n  (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)\n\nSo: cron fired, script checked “idle” heuristics, saw a recent direct chat session, and bailed.",
-      "nextRunAt": 1772079273188,
+      "lastSummary": "That cron fired and the script ran fine (exit code 0), but it **didn’t apply any update**.\n\nLatest run entry says it **skipped because OpenClaw didn’t consider the system idle**:\n\n- `2026-02-26T03:44:55Z SKIP (direct session active (age=22380ms))`\n- Audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nSo: cron triggered → auto-update checked “busy/idle” heuristics → saw a recently-active direct session → bailed.\n\nIf you want it to actually update more often overnight, we can lower the “busy session” window (env var like `OC_BUSY_SESSION_MS`) or change the cron schedule to a time you’re never chatting with it.",
+      "nextRunAt": 1772081073203,
       "model": null,
-      "lastTotalTokens": 12490,
-      "lastInputTokens": 9688,
-      "lastOutputTokens": 751
+      "lastTotalTokens": 14152,
+      "lastInputTokens": 11764,
+      "lastOutputTokens": 821
     }
   ]
 }
