@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772121607488,
+  "updatedAt": 1772123407371,
   "providers": [
     {
       "id": "openai-codex",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000821
+          "resetAt": 1772244000606
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772120672868,
+      "lastRunAt": 1772122472885,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran the cron job:\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **exit code 0** (no stdout/stderr produced)\n\nPost-checks:\n\n- `openclaw --version` → **2026.2.25**\n- `openclaw gateway status` → **running**, RPC probe **ok**, listening on **127.0.0.1:18789**"
+      "lastSummary": "openclaw-auto-update cron ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` and it exited cleanly (exit code 0). No stdout/stderr was produced this run."
     },
     {
       "id": "km",
@@ -243,17 +243,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772120672868,
+      "lastRunAt": 1772122472885,
       "lastStatus": "ok",
-      "lastDurationMs": 51363,
+      "lastDurationMs": 33616,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran the cron job:\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **exit code 0** (no stdout/stderr produced)\n\nPost-checks:\n\n- `openclaw --version` → **2026.2.25**\n- `openclaw gateway status` → **running**, RPC probe **ok**, listening on **127.0.0.1:18789**",
-      "nextRunAt": 1772122472868,
+      "lastSummary": "openclaw-auto-update cron ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` and it exited cleanly (exit code 0). No stdout/stderr was produced this run.",
+      "nextRunAt": 1772124272885,
       "model": null,
-      "lastTotalTokens": 11056,
-      "lastInputTokens": 16109,
-      "lastOutputTokens": 405
+      "lastTotalTokens": 10666,
+      "lastInputTokens": 7994,
+      "lastOutputTokens": 239
     }
   ]
 }
