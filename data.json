@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772069413287,
+  "updatedAt": 1772071207542,
   "providers": [
     {
       "id": "openai-codex",
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"167\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"1263595535\"\n}\n```\n\nDo it now",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772068940476,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772070273136,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Not yet — OpenClaw is **still not updated** to the latest.\n\n- `openclaw update status` shows **latestVersion = 2026.2.24** and **hasRegistryUpdate = true**, so an update is available but hasn’t been a"
+      "lastSummary": "That run didn’t apply an update — it **skipped because a direct (human) session was active** at the time, so it won’t update while you’re chatting.\n\nLatest log entries are in:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nMost recent line I see:\n- `2026-02-26T01:45:08Z SKIP (direct session active (age=35057ms))`"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772068473122,
+      "lastRunAt": 1772070273136,
       "lastStatus": "ok",
-      "lastDurationMs": 21151,
+      "lastDurationMs": 44601,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`\n- No output was produced by the script this run.",
-      "nextRunAt": 1772070273122,
+      "lastSummary": "That run didn’t apply an update — it **skipped because a direct (human) session was active** at the time, so it won’t update while you’re chatting.\n\nLatest log entries are in:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nMost recent line I see:\n- `2026-02-26T01:45:08Z SKIP (direct session active (age=35057ms))`",
+      "nextRunAt": 1772072073136,
       "model": null,
-      "lastTotalTokens": 7598,
-      "lastInputTokens": 4332,
-      "lastOutputTokens": 238
+      "lastTotalTokens": 13450,
+      "lastInputTokens": 10730,
+      "lastOutputTokens": 719
     }
   ]
 }
