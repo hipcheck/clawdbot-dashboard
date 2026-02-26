@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772105407135,
+  "updatedAt": 1772107216892,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772123408000
+          "usedPercent": 9,
+          "resetAt": 1772124818000
         },
         {
           "label": "Day",
-          "usedPercent": 28,
+          "usedPercent": 31,
           "resetAt": 1772497599000
         }
       ],
@@ -28,8 +28,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 2,
+          "resetAt": 1772121600245
+        },
+        {
+          "label": "Week",
+          "usedPercent": 30,
+          "resetAt": 1772244000245
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -61,13 +72,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772082873230,
+      "activityKind": "chat",
+      "activityLabel": "System: Exec completed (young-ce, code 1) :: Error: gateway timeout after 20000ms Gateway target: ws://127.0.0.1:18789 Source: local loopback Config: ",
+      "activityChannel": "tui",
+      "lastRunAt": 1772107191602,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` ran successfully, but **it did not update** OpenClaw this time — it **skipped because a direct (human) session was active**.\n\nLatest log line:\n- `2026-02-26T05:14:56Z SKIP (direct session active (age=22944ms))`\n\nLog file:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "I found the “Obsidian Journal review” job on this OpenClaw host:\n\n- **Cron:** `km:nightly-journal-comment`\n- **ID:** `c915b0d5-5160-45e8-8c57-a60d742a4640`\n- **Last run:** **error** (it failed on a No"
     },
     {
       "id": "km",
