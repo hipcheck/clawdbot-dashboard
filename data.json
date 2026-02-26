@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772134207460,
+  "updatedAt": 1772136007610,
   "providers": [
     {
       "id": "openai-codex",
@@ -22,24 +22,25 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1772222408000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1772222408000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 30,
-          "resetAt": 1772244000674
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -74,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772133272974,
+      "lastRunAt": 1772135072987,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update cron ran successfully.\n\n- Latest OpenClaw version seen: unchanged\n- Result: **NOOP (no update)** at **2026-02-26T19:15:16Z**\n\n(Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**) but didn’t print anything to stdout.\n\nI also checked the installed OpenClaw version: **2026.2.25** (`openclaw --version`).\n\nIf you want the updater to be more “visible” in cron logs, we can tweak the script to emit a one-line summary (e.g., “already up to date” / “updated from X → Y”)."
     },
     {
       "id": "km",
@@ -243,17 +244,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772133272974,
+      "lastRunAt": 1772135072987,
       "lastStatus": "ok",
-      "lastDurationMs": 53129,
+      "lastDurationMs": 65696,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron ran successfully.\n\n- Latest OpenClaw version seen: unchanged\n- Result: **NOOP (no update)** at **2026-02-26T19:15:16Z**\n\n(Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772135072974,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**) but didn’t print anything to stdout.\n\nI also checked the installed OpenClaw version: **2026.2.25** (`openclaw --version`).\n\nIf you want the updater to be more “visible” in cron logs, we can tweak the script to emit a one-line summary (e.g., “already up to date” / “updated from X → Y”).",
+      "nextRunAt": 1772136872987,
       "model": null,
-      "lastTotalTokens": 13814,
-      "lastInputTokens": 11169,
-      "lastOutputTokens": 686
+      "lastTotalTokens": 11574,
+      "lastInputTokens": 9096,
+      "lastOutputTokens": 451
     }
   ]
 }
