@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772071207542,
+  "updatedAt": 1772073006757,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1772079277000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772070273136,
+      "lastRunAt": 1772072073150,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That run didn’t apply an update — it **skipped because a direct (human) session was active** at the time, so it won’t update while you’re chatting.\n\nLatest log entries are in:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nMost recent line I see:\n- `2026-02-26T01:45:08Z SKIP (direct session active (age=35057ms))`"
+      "lastSummary": "That cron run completed fine — the auto-updater **skipped** this time.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n- `2026-02-26T02:14:56Z SKIP (direct session active (age=22856ms))`\n\nAlso checked `openclaw update status --json`: **no update is currently available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`), so even if it hadn’t skipped, it would’ve been a no-op."
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772070273136,
+      "lastRunAt": 1772072073150,
       "lastStatus": "ok",
-      "lastDurationMs": 44601,
+      "lastDurationMs": 46421,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That run didn’t apply an update — it **skipped because a direct (human) session was active** at the time, so it won’t update while you’re chatting.\n\nLatest log entries are in:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nMost recent line I see:\n- `2026-02-26T01:45:08Z SKIP (direct session active (age=35057ms))`",
-      "nextRunAt": 1772072073136,
+      "lastSummary": "That cron run completed fine — the auto-updater **skipped** this time.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n- `2026-02-26T02:14:56Z SKIP (direct session active (age=22856ms))`\n\nAlso checked `openclaw update status --json`: **no update is currently available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`), so even if it hadn’t skipped, it would’ve been a no-op.",
+      "nextRunAt": 1772073873150,
       "model": null,
-      "lastTotalTokens": 13450,
-      "lastInputTokens": 10730,
-      "lastOutputTokens": 719
+      "lastTotalTokens": 13726,
+      "lastInputTokens": 17791,
+      "lastOutputTokens": 757
     }
   ]
 }
