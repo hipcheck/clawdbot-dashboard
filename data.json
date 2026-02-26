@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772112606663,
+  "updatedAt": 1772114406618,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
+          "usedPercent": 13,
           "resetAt": 1772124818000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 2,
-          "resetAt": 1772121599874
+          "resetAt": 1772121599844
         },
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000874
+          "resetAt": 1772244000844
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772111672805,
+      "lastRunAt": 1772113472817,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run is a **noop** — the auto-update script exited cleanly and didn’t apply anything (no update available).\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail):\n\n- `2026-02-26T13:15:07Z NOOP (no update)`\n- Earlier today it already updated successfully:\n  - `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n  - `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
+      "lastSummary": "That run was a no-op — there wasn’t a newer OpenClaw version available.\n\nLatest entries from `memory/openclaw-updates.log`:\n- `2026-02-26T13:45:36Z NOOP (no update)`\n\nMost recent successful auto-update:\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
     },
     {
       "id": "km",
@@ -244,17 +244,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772111672805,
+      "lastRunAt": 1772113472817,
       "lastStatus": "ok",
-      "lastDurationMs": 50648,
+      "lastDurationMs": 68674,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run is a **noop** — the auto-update script exited cleanly and didn’t apply anything (no update available).\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail):\n\n- `2026-02-26T13:15:07Z NOOP (no update)`\n- Earlier today it already updated successfully:\n  - `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n  - `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
-      "nextRunAt": 1772113472805,
+      "lastSummary": "That run was a no-op — there wasn’t a newer OpenClaw version available.\n\nLatest entries from `memory/openclaw-updates.log`:\n- `2026-02-26T13:45:36Z NOOP (no update)`\n\nMost recent successful auto-update:\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
+      "nextRunAt": 1772115272817,
       "model": null,
-      "lastTotalTokens": 13304,
-      "lastInputTokens": 17650,
-      "lastOutputTokens": 639
+      "lastTotalTokens": 14387,
+      "lastInputTokens": 11449,
+      "lastOutputTokens": 784
     }
   ]
 }
