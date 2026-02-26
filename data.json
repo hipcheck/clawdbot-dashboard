@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772127009042,
+  "updatedAt": 1772128806993,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 2,
           "resetAt": 1772144076000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000250
+          "resetAt": 1772244000169
         }
       ],
       "error": null
@@ -71,13 +71,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"has_reply_context\": true\n}\n```\n\nReplied message (untrusted, for context):\n```json\n{\n  \"sender_label\": \"Sam\",\n  \"body\": \"I was able to connec",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772127002894,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772127872931,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Retry done.\n\n- Gateway is up and healthy.\n- Mac node **Andreas MacBook** is **online**.\n- Nikola ran successfully, but **didn’t write anything** because **today’s journal file doesn’t exist yet**:\n\nEx"
+      "lastSummary": "Cron `infraops:openclaw-auto-update` ran.\n\n- **Current OpenClaw version:** `2026.2.25`\n- **This run:** **SKIP** (it detected an active direct session at `2026-02-26T17:44:56Z`)\n- **Last successful auto-update:** `2026-02-26T05:46:15Z` → **UPDATE_OK** (`latest=2026.2.25`)\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -243,17 +243,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772126072918,
+      "lastRunAt": 1772127872931,
       "lastStatus": "ok",
-      "lastDurationMs": 38917,
+      "lastDurationMs": 58834,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Exit code: **0 (success)**\n- Output: **none recorded** (script was silent this run)",
-      "nextRunAt": 1772127872918,
+      "lastSummary": "Cron `infraops:openclaw-auto-update` ran.\n\n- **Current OpenClaw version:** `2026.2.25`\n- **This run:** **SKIP** (it detected an active direct session at `2026-02-26T17:44:56Z`)\n- **Last successful auto-update:** `2026-02-26T05:46:15Z` → **UPDATE_OK** (`latest=2026.2.25`)\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772129672931,
       "model": null,
-      "lastTotalTokens": 10620,
-      "lastInputTokens": 14742,
-      "lastOutputTokens": 222
+      "lastTotalTokens": 13851,
+      "lastInputTokens": 21591,
+      "lastOutputTokens": 779
     }
   ]
 }
