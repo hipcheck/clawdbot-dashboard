@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772065807805,
+  "updatedAt": 1772067608443,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772064873092,
+      "lastRunAt": 1772066673107,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`"
+      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`\n- Output: (none)"
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772064873092,
+      "lastRunAt": 1772066673107,
       "lastStatus": "ok",
-      "lastDurationMs": 34203,
+      "lastDurationMs": 29300,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`",
-      "nextRunAt": 1772066673092,
+      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Exit code: `0`\n- Output: (none)",
+      "nextRunAt": 1772068473107,
       "model": null,
-      "lastTotalTokens": 7706,
-      "lastInputTokens": 9525,
-      "lastOutputTokens": 304
+      "lastTotalTokens": 7772,
+      "lastInputTokens": 8591,
+      "lastOutputTokens": 362
     }
   ]
 }
