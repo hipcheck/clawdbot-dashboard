@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772062206362,
+  "updatedAt": 1772064009215,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772061273066,
+      "lastRunAt": 1772063073076,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "OpenClaw auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code `0`"
+      "lastSummary": "Ran `openclaw_auto_update.py` ✅ (exit code **0**).\n\nIt **skipped** the update because it thinks a cron wake is imminent:\n\nLast log entry:\n- `2026-02-25T23:44:52Z SKIP (cron wake soon (-14103ms))`\n\nNote: the negative `ms` value suggests `openclaw cron status` is returning a `nextWakeAtMs` that’s already in the past, and the script treats that as “wake soon,” so it will keep skipping.\n\nIf you want, I can patch the script to only skip when `nextWakeAtMs > now` *and* within the buffer (so past timestamps don’t block updates)."
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772061273066,
+      "lastRunAt": 1772063073076,
       "lastStatus": "ok",
-      "lastDurationMs": 23352,
+      "lastDurationMs": 36187,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "OpenClaw auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code `0`",
-      "nextRunAt": 1772063073066,
+      "lastSummary": "Ran `openclaw_auto_update.py` ✅ (exit code **0**).\n\nIt **skipped** the update because it thinks a cron wake is imminent:\n\nLast log entry:\n- `2026-02-25T23:44:52Z SKIP (cron wake soon (-14103ms))`\n\nNote: the negative `ms` value suggests `openclaw cron status` is returning a `nextWakeAtMs` that’s already in the past, and the script treats that as “wake soon,” so it will keep skipping.\n\nIf you want, I can patch the script to only skip when `nextWakeAtMs > now` *and* within the buffer (so past timestamps don’t block updates).",
+      "nextRunAt": 1772064873076,
       "model": null,
-      "lastTotalTokens": 7649,
-      "lastInputTokens": 4418,
-      "lastOutputTokens": 277
+      "lastTotalTokens": 9135,
+      "lastInputTokens": 6073,
+      "lastOutputTokens": 711
     }
   ]
 }
