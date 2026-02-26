@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772123407371,
+  "updatedAt": 1772125208564,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
-          "resetAt": 1772124818000
+          "usedPercent": 0,
+          "resetAt": 1772143209000
         },
         {
           "label": "Day",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 30,
-          "resetAt": 1772244000606
+          "resetAt": 1772244000801
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772122472885,
+      "lastRunAt": 1772124272901,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` and it exited cleanly (exit code 0). No stdout/stderr was produced this run."
+      "lastSummary": "That cron is your `openclaw_auto_update.py` job kicking off.\n\nCurrent state from the updater log:\n\n- **Last successful update:** `2026.2.25` (started **05:46:15Z**, finished **05:49:18Z**)  \n- **This afternoon’s runs:** **NOOP (no update available)** — most recently logged at **16:45:42Z**\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -243,17 +243,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772122472885,
+      "lastRunAt": 1772124272901,
       "lastStatus": "ok",
-      "lastDurationMs": 33616,
+      "lastDurationMs": 75901,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` and it exited cleanly (exit code 0). No stdout/stderr was produced this run.",
-      "nextRunAt": 1772124272885,
+      "lastSummary": "That cron is your `openclaw_auto_update.py` job kicking off.\n\nCurrent state from the updater log:\n\n- **Last successful update:** `2026.2.25` (started **05:46:15Z**, finished **05:49:18Z**)  \n- **This afternoon’s runs:** **NOOP (no update available)** — most recently logged at **16:45:42Z**\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772126072901,
       "model": null,
-      "lastTotalTokens": 10666,
-      "lastInputTokens": 7994,
-      "lastOutputTokens": 239
+      "lastTotalTokens": 14418,
+      "lastInputTokens": 23619,
+      "lastOutputTokens": 1201
     }
   ]
 }
