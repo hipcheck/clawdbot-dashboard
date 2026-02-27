@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772193607563,
+  "updatedAt": 1772195407754,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 18,
+          "usedPercent": 20,
           "resetAt": 1772198089000
         },
         {
@@ -28,8 +28,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 9,
+          "resetAt": 1772211599992
+        },
+        {
+          "label": "Week",
+          "usedPercent": 1,
+          "resetAt": 1772798399992
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -52,22 +63,22 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1772193428863,
+      "lastRunAt": 1772193674461,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Okay, that's interesting. The gateway status report shows that the service is running fine and is using the configuration file at `~/.openclaw/openclaw.json`.\n\nThis means the file isn't \"missing\" in t"
+      "lastSummary": "Excellent news. I've read the `openclaw.json` configuration file, and I have a clear picture of what's happening.\n\nThe file isn't missing after all. However, I can confirm the security settings *insid"
     },
     {
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772193474690,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772194473119,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I tried to do option **2 (fully headless on the VPS)**, but I’m blocked right now because this OpenClaw runtime **doesn’t allow elevated/sudo commands** — so I can’t install Chrome/Chromium (or `pytho"
+      "lastSummary": "The auto-update job is behaving normally.\n\n- **Last actual update:** applied successfully to **2026.2.26** at `2026-02-27T00:50:07Z`  \n- **Current run(s):** **SKIP** because a **direct session was active** (so it won’t update while you’re chatting)\n- **Current update availability:** **none** (`hasRegistryUpdate=false`, `hasGitUpdate=false`)\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest line: `2026-02-27T12:15:28Z SKIP (direct session active ...)`)."
     },
     {
       "id": "km",
@@ -95,7 +106,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "⚠️ Morning proposal skipped — prescan data is stale (found date: 2026.2.25, ~24h ago). The overnight prescan does not appear to have run today. Check the `healthcheck:overnight-prescan` cron job.",
-      "nextRunAt": 1772193600000,
+      "nextRunAt": 1772280000000,
       "model": null,
       "lastTotalTokens": 7085,
       "lastInputTokens": 7031,
@@ -215,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772192673103,
+      "lastRunAt": 1772194473119,
       "lastStatus": "ok",
-      "lastDurationMs": 85059,
+      "lastDurationMs": 60704,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This cron run **did not update** OpenClaw — it **skipped because a direct session was active**.\n\nLatest entries from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n\n- `2026-02-27T11:44:54Z SKIP (direct session active (age=797628ms))`\n\nFor context, the most recent successful auto-update earlier today was:\n\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`",
-      "nextRunAt": 1772194473103,
+      "lastSummary": "The auto-update job is behaving normally.\n\n- **Last actual update:** applied successfully to **2026.2.26** at `2026-02-27T00:50:07Z`  \n- **Current run(s):** **SKIP** because a **direct session was active** (so it won’t update while you’re chatting)\n- **Current update availability:** **none** (`hasRegistryUpdate=false`, `hasGitUpdate=false`)\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest line: `2026-02-27T12:15:28Z SKIP (direct session active ...)`).",
+      "nextRunAt": 1772196273119,
       "model": null,
-      "lastTotalTokens": 14067,
-      "lastInputTokens": 11270,
-      "lastOutputTokens": 838
+      "lastTotalTokens": 14048,
+      "lastInputTokens": 10457,
+      "lastOutputTokens": 802
     }
   ]
 }
