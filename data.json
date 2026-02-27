@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772202606609,
+  "updatedAt": 1772204407433,
   "providers": [
     {
       "id": "openai-codex",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 12,
-          "resetAt": 1772211600829
+          "resetAt": 1772211600513
         },
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400829
+          "resetAt": 1772798400513
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772201673174,
+      "lastRunAt": 1772203473186,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code 0). No stdout/stderr was produced.\n\nCurrent OpenClaw version on this host: **2026.2.26**."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: **exit code 0 (success)**\n- Output: **none** (script didn’t print anything)\n\nIf you want, I can run a quick `openclaw --version` / `openclaw status` to confirm what (if anything) changed."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772201673174,
+      "lastRunAt": 1772203473186,
       "lastStatus": "ok",
-      "lastDurationMs": 51905,
+      "lastDurationMs": 37683,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code 0). No stdout/stderr was produced.\n\nCurrent OpenClaw version on this host: **2026.2.26**.",
-      "nextRunAt": 1772203473174,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: **exit code 0 (success)**\n- Output: **none** (script didn’t print anything)\n\nIf you want, I can run a quick `openclaw --version` / `openclaw status` to confirm what (if anything) changed.",
+      "nextRunAt": 1772205273186,
       "model": null,
-      "lastTotalTokens": 10965,
-      "lastInputTokens": 7006,
-      "lastOutputTokens": 289
+      "lastTotalTokens": 10849,
+      "lastInputTokens": 6814,
+      "lastOutputTokens": 282
     }
   ]
 }
