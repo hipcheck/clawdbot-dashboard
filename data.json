@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772161207375,
+  "updatedAt": 1772163008402,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
-          "resetAt": 1772162075000
+          "usedPercent": 0,
+          "resetAt": 1772180078000
         },
         {
           "label": "Day",
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 32,
-          "resetAt": 1772175601077
+          "usedPercent": 47,
+          "resetAt": 1772175600610
         },
         {
           "label": "Week",
-          "usedPercent": 33,
-          "resetAt": 1772244000077
+          "usedPercent": 35,
+          "resetAt": 1772244000610
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772160272828,
+      "lastRunAt": 1772162072836,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update cron ran `openclaw_auto_update.py` successfully (exit code 0; the script produced no stdout/stderr).\n\nPost-check:\n- `openclaw --version`: **2026.2.26**\n- `openclaw gateway status`: **running**, RPC probe **ok**, listening on **127.0.0.1:18789** (loopback-only)"
+      "lastSummary": "Auto-update run at ~03:14–03:15 UTC was a **NOOP (no update available)**.\n\nLatest activity in `memory/openclaw-updates.log` shows the last update was already applied successfully earlier:\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n- `2026-02-27T03:15:00Z NOOP (no update)`"
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772160272828,
+      "lastRunAt": 1772162072836,
       "lastStatus": "ok",
-      "lastDurationMs": 57854,
+      "lastDurationMs": 44805,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron ran `openclaw_auto_update.py` successfully (exit code 0; the script produced no stdout/stderr).\n\nPost-check:\n- `openclaw --version`: **2026.2.26**\n- `openclaw gateway status`: **running**, RPC probe **ok**, listening on **127.0.0.1:18789** (loopback-only)",
-      "nextRunAt": 1772162072828,
+      "lastSummary": "Auto-update run at ~03:14–03:15 UTC was a **NOOP (no update available)**.\n\nLatest activity in `memory/openclaw-updates.log` shows the last update was already applied successfully earlier:\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n- `2026-02-27T03:15:00Z NOOP (no update)`",
+      "nextRunAt": 1772163872836,
       "model": null,
-      "lastTotalTokens": 11251,
-      "lastInputTokens": 13766,
-      "lastOutputTokens": 366
+      "lastTotalTokens": 13003,
+      "lastInputTokens": 9006,
+      "lastOutputTokens": 488
     }
   ]
 }
