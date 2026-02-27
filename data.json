@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772175608106,
+  "updatedAt": 1772177407276,
   "providers": [
     {
       "id": "openai-codex",
@@ -73,10 +73,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772174672934,
+      "lastRunAt": 1772176472948,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully.\n\n- `openclaw_auto_update.py` exited **0** (no stdout/stderr output).\n- `openclaw status` shows **Update: pnpm · npm latest 2026.2.26**\n- Gateway service is **running** (systemd active)."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**). It didn’t emit any stdout/stderr.\n\nPost-check: `openclaw status` is **OK** and shows:\n- OpenClaw app version: **2026.2.26**\n- Gateway service: **running** (systemd active)\n- No events/errors reported\n\nOne note from the built-in security audit: **1 warn** about some configured models being below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, tell me which agents still use it and I’ll propose the safest swap."
     },
     {
       "id": "km",
@@ -224,17 +224,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772174672934,
+      "lastRunAt": 1772176472948,
       "lastStatus": "ok",
-      "lastDurationMs": 58951,
+      "lastDurationMs": 63867,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully.\n\n- `openclaw_auto_update.py` exited **0** (no stdout/stderr output).\n- `openclaw status` shows **Update: pnpm · npm latest 2026.2.26**\n- Gateway service is **running** (systemd active).",
-      "nextRunAt": 1772176472934,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**). It didn’t emit any stdout/stderr.\n\nPost-check: `openclaw status` is **OK** and shows:\n- OpenClaw app version: **2026.2.26**\n- Gateway service: **running** (systemd active)\n- No events/errors reported\n\nOne note from the built-in security audit: **1 warn** about some configured models being below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, tell me which agents still use it and I’ll propose the safest swap.",
+      "nextRunAt": 1772178272948,
       "model": null,
-      "lastTotalTokens": 12399,
-      "lastInputTokens": 14917,
-      "lastOutputTokens": 388
+      "lastTotalTokens": 12403,
+      "lastInputTokens": 8598,
+      "lastOutputTokens": 408
     }
   ]
 }
