@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772195407754,
+  "updatedAt": 1772197207909,
   "providers": [
     {
       "id": "openai-codex",
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
-          "resetAt": 1772211599992
+          "usedPercent": 12,
+          "resetAt": 1772211600220
         },
         {
           "label": "Week",
-          "usedPercent": 1,
-          "resetAt": 1772798399992
+          "usedPercent": 2,
+          "resetAt": 1772798400220
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772194473119,
+      "lastRunAt": 1772196273130,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The auto-update job is behaving normally.\n\n- **Last actual update:** applied successfully to **2026.2.26** at `2026-02-27T00:50:07Z`  \n- **Current run(s):** **SKIP** because a **direct session was active** (so it won’t update while you’re chatting)\n- **Current update availability:** **none** (`hasRegistryUpdate=false`, `hasGitUpdate=false`)\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest line: `2026-02-27T12:15:28Z SKIP (direct session active ...)`)."
+      "lastSummary": "That cron run was a no-op — **no OpenClaw update was available**.\n\n- Latest log entry: `2026-02-27T12:45:05Z NOOP (no update)` (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)\n- Last successful auto-update applied: `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`"
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772194473119,
+      "lastRunAt": 1772196273130,
       "lastStatus": "ok",
-      "lastDurationMs": 60704,
+      "lastDurationMs": 45341,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update job is behaving normally.\n\n- **Last actual update:** applied successfully to **2026.2.26** at `2026-02-27T00:50:07Z`  \n- **Current run(s):** **SKIP** because a **direct session was active** (so it won’t update while you’re chatting)\n- **Current update availability:** **none** (`hasRegistryUpdate=false`, `hasGitUpdate=false`)\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest line: `2026-02-27T12:15:28Z SKIP (direct session active ...)`).",
-      "nextRunAt": 1772196273119,
+      "lastSummary": "That cron run was a no-op — **no OpenClaw update was available**.\n\n- Latest log entry: `2026-02-27T12:45:05Z NOOP (no update)` (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)\n- Last successful auto-update applied: `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`",
+      "nextRunAt": 1772198073130,
       "model": null,
-      "lastTotalTokens": 14048,
-      "lastInputTokens": 10457,
-      "lastOutputTokens": 802
+      "lastTotalTokens": 15527,
+      "lastInputTokens": 18013,
+      "lastOutputTokens": 581
     }
   ]
 }
