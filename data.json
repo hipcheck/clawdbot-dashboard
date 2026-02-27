@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772222407561,
+  "updatedAt": 1772224207557,
   "providers": [
     {
       "id": "openai-codex",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400018
+          "resetAt": 1772798400841
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772221473314,
+      "lastRunAt": 1772223273324,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron `openclaw-auto-update` just ran successfully and **did nothing** (no update available).\n\n- Latest log entry: `2026-02-27T19:45:05Z NOOP (no update)`\n- Last applied update (from the log): `UPDATE_OK (latest=2026.2.26)` at `2026-02-27T00:50:07Z`"
+      "lastSummary": "Auto-update cron ran and it was a **NOOP** — **no OpenClaw update was available** at the time.\n\nCurrent state on the box:\n- OpenClaw version: **2026.2.26** (stable)\n- Gateway service: **running (systemd, pid 756524)** and reachable on **127.0.0.1:18789**\n- Update status (from `openclaw status`): **pnpm/npm latest 2026.2.26**\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest entry around this run shows `NOOP (no update)`)."
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772221473314,
+      "lastRunAt": 1772223273324,
       "lastStatus": "ok",
-      "lastDurationMs": 48619,
+      "lastDurationMs": 79132,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron `openclaw-auto-update` just ran successfully and **did nothing** (no update available).\n\n- Latest log entry: `2026-02-27T19:45:05Z NOOP (no update)`\n- Last applied update (from the log): `UPDATE_OK (latest=2026.2.26)` at `2026-02-27T00:50:07Z`",
-      "nextRunAt": 1772223273314,
+      "lastSummary": "Auto-update cron ran and it was a **NOOP** — **no OpenClaw update was available** at the time.\n\nCurrent state on the box:\n- OpenClaw version: **2026.2.26** (stable)\n- Gateway service: **running (systemd, pid 756524)** and reachable on **127.0.0.1:18789**\n- Update status (from `openclaw status`): **pnpm/npm latest 2026.2.26**\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest entry around this run shows `NOOP (no update)`).",
+      "nextRunAt": 1772225073324,
       "model": null,
-      "lastTotalTokens": 15630,
-      "lastInputTokens": 11764,
-      "lastOutputTokens": 442
+      "lastTotalTokens": 17464,
+      "lastInputTokens": 13789,
+      "lastOutputTokens": 706
     }
   ]
 }
