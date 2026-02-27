@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772217007200,
+  "updatedAt": 1772218807568,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 2,
           "resetAt": 1772234091000
         },
         {
           "label": "Day",
-          "usedPercent": 47,
+          "usedPercent": 48,
           "resetAt": 1772497599000
         }
       ],
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400488
+          "resetAt": 1772798400849
         }
       ],
       "error": null
@@ -60,12 +60,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"timestamp\": \"Fri 2026-02-27 18:23 UTC\"\n}\n```\n\nDo 2, ignore 3",
+      "activityLabel": "System: Exec denied (gateway id=502f9c3f-7217-42fb-9247-7c095efe3238, approval-timeout): ls -l /home/clawd/.openclaw/openclaw.json\nSystem: Exec denied",
       "activityChannel": "telegram",
-      "lastRunAt": 1772216670906,
+      "lastRunAt": 1772217704742,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This is bizarre. The `edit` tool is still failing to find the file, even with a full, absolute path. I'm able to read it, so it must be there. This suggests the `edit` tool might be running in a diffe"
+      "lastSummary": "Okay, I've checked the list of all recent conversations, and the result is revealing: there are **no sessions at all** for agent Q (`feature-builder`).\n\nThis is a strong indicator that messages sent t"
     },
     {
       "id": "main",
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772216073270,
+      "lastRunAt": 1772217873279,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP (no update)\n\nThe `openclaw_auto_update.py` cron run completed successfully (exit code `0`) and determined there was **no OpenClaw update available**, so it didn’t perform any update.\n\nIf you want to audit past runs, the script appends to:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Auto-update job result is a **skip** right now because there’s an active direct session:\n\n- `2026-02-27T18:44:56Z SKIP (direct session active (age=191430ms))`\n- `2026-02-27T18:45:25Z SKIP (direct session active (age=220419ms))`\n\nGood news: an update **was already applied earlier today**:\n\n- `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772216073270,
+      "lastRunAt": 1772217873279,
       "lastStatus": "ok",
-      "lastDurationMs": 44608,
+      "lastDurationMs": 64739,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP (no update)\n\nThe `openclaw_auto_update.py` cron run completed successfully (exit code `0`) and determined there was **no OpenClaw update available**, so it didn’t perform any update.\n\nIf you want to audit past runs, the script appends to:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772217873270,
+      "lastSummary": "Auto-update job result is a **skip** right now because there’s an active direct session:\n\n- `2026-02-27T18:44:56Z SKIP (direct session active (age=191430ms))`\n- `2026-02-27T18:45:25Z SKIP (direct session active (age=220419ms))`\n\nGood news: an update **was already applied earlier today**:\n\n- `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772219673279,
       "model": null,
-      "lastTotalTokens": 12480,
-      "lastInputTokens": 8548,
-      "lastOutputTokens": 415
+      "lastTotalTokens": 13875,
+      "lastInputTokens": 10743,
+      "lastOutputTokens": 704
     }
   ]
 }
