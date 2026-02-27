@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772211606925,
+  "updatedAt": 1772213406549,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 2,
-          "resetAt": 1772216090000
+          "resetAt": 1772216089000
         },
         {
           "label": "Day",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400184
+          "resetAt": 1772798399900
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772210673235,
+      "lastRunAt": 1772212473246,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Today’s auto-update run was a **NOOP (no update available)** — OpenClaw is already up to date.\n\nFrom the update log:\n- **00:50:07Z**: **UPDATE_OK** to **latest=2026.2.26**\n- **16:45:05Z** (≈ your 4:44 PM UTC run): **NOOP (no update)**\n\nCurrent `openclaw update status --json` also reports **no registry/git update available** (latest seen: **2026.2.26**)."
+      "lastSummary": "Cron run completed OK.\n\n- Result: **NOOP (no update available)**  \n- Logged at: **2026-02-27T17:15:06Z** in `memory/openclaw-updates.log`\n\nMost recent successful auto-update before this was **latest=2026.2.26** (logged **2026-02-27T00:50:07Z**)."
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772210673235,
+      "lastRunAt": 1772212473246,
       "lastStatus": "ok",
-      "lastDurationMs": 65439,
+      "lastDurationMs": 48154,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Today’s auto-update run was a **NOOP (no update available)** — OpenClaw is already up to date.\n\nFrom the update log:\n- **00:50:07Z**: **UPDATE_OK** to **latest=2026.2.26**\n- **16:45:05Z** (≈ your 4:44 PM UTC run): **NOOP (no update)**\n\nCurrent `openclaw update status --json` also reports **no registry/git update available** (latest seen: **2026.2.26**).",
-      "nextRunAt": 1772212473235,
+      "lastSummary": "Cron run completed OK.\n\n- Result: **NOOP (no update available)**  \n- Logged at: **2026-02-27T17:15:06Z** in `memory/openclaw-updates.log`\n\nMost recent successful auto-update before this was **latest=2026.2.26** (logged **2026-02-27T00:50:07Z**).",
+      "nextRunAt": 1772214273246,
       "model": null,
-      "lastTotalTokens": 13911,
-      "lastInputTokens": 17332,
-      "lastOutputTokens": 626
+      "lastTotalTokens": 15531,
+      "lastInputTokens": 11684,
+      "lastOutputTokens": 476
     }
   ]
 }
