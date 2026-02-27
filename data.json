@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772231407451,
+  "updatedAt": 1772233207556,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772230473376,
+      "lastRunAt": 1772232273387,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now to sanity-check the cron behavior — it exited cleanly and reported:\n\n- `NOOP (no update)`\n\nSo the auto-update job is functioning and, at least on this run, there wasn’t anything new to install."
+      "lastSummary": "Auto-update check just ran.\n\nResult: **NOOP (no update)** — everything’s already up to date, so nothing changed."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772230473376,
+      "lastRunAt": 1772232273387,
       "lastStatus": "ok",
-      "lastDurationMs": 42769,
+      "lastDurationMs": 33937,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now to sanity-check the cron behavior — it exited cleanly and reported:\n\n- `NOOP (no update)`\n\nSo the auto-update job is functioning and, at least on this run, there wasn’t anything new to install.",
-      "nextRunAt": 1772232273376,
+      "lastSummary": "Auto-update check just ran.\n\nResult: **NOOP (no update)** — everything’s already up to date, so nothing changed.",
+      "nextRunAt": 1772234073387,
       "model": null,
-      "lastTotalTokens": 11268,
-      "lastInputTokens": 7092,
-      "lastOutputTokens": 461
+      "lastTotalTokens": 10780,
+      "lastInputTokens": 6311,
+      "lastOutputTokens": 163
     }
   ]
 }
