@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772182807367,
+  "updatedAt": 1772184606924,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772198089000
+          "usedPercent": 1,
+          "resetAt": 1772198077000
         },
         {
           "label": "Day",
@@ -73,10 +73,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772181873008,
+      "lastRunAt": 1772183673040,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Exit code: **0 (success)**\n- Script output: **none recorded** (it completed quietly)"
+      "lastSummary": "Auto-update run result: **NOOP (no update available)** — it exited cleanly.\n\nLatest in the stable channel is already **2026.2.26**, and the auto-updater successfully applied that earlier today at **00:50Z** (logged as `UPDATE_OK`).\n\nIf you want the exact log line for this run, it’ll be in:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (you should see a `NOOP (no update)` entry around 09:15Z)."
     },
     {
       "id": "km",
@@ -224,17 +224,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772181873008,
+      "lastRunAt": 1772183673040,
       "lastStatus": "ok",
-      "lastDurationMs": 31419,
+      "lastDurationMs": 93952,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Exit code: **0 (success)**\n- Script output: **none recorded** (it completed quietly)",
-      "nextRunAt": 1772183673008,
+      "lastSummary": "Auto-update run result: **NOOP (no update available)** — it exited cleanly.\n\nLatest in the stable channel is already **2026.2.26**, and the auto-updater successfully applied that earlier today at **00:50Z** (logged as `UPDATE_OK`).\n\nIf you want the exact log line for this run, it’ll be in:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (you should see a `NOOP (no update)` entry around 09:15Z).",
+      "nextRunAt": 1772185473040,
       "model": null,
-      "lastTotalTokens": 10838,
-      "lastInputTokens": 6787,
-      "lastOutputTokens": 184
+      "lastTotalTokens": 13493,
+      "lastInputTokens": 9450,
+      "lastOutputTokens": 597
     }
   ]
 }
