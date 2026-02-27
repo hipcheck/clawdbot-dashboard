@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772154008547,
+  "updatedAt": 1772155806725,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772151273176,
+      "lastRunAt": 1772154872786,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Your auto-update cron fired at **00:15 UTC** and the updater **detected an available update (2026.2.26)**, but it looks like the run **never completed cleanly**.\n\nWhat I see:\n\n- `memory/openclaw-updates.log` ends with:\n  - `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n  - …and **no `UPDATE_OK` / `UPDATE_FAIL` afterwards**\n- `openclaw update status --json` currently still reports:\n  - `hasRegistryUpdate: true`\n  - `latestVersion: 2026.2.26`\n- No `openclaw update` / `pnpm` process is running now.\n\nMost likely cause: the script can exit mid-update without logging a failure if `openclaw update` hangs long enough to trigger a subprocess timeout (that exception wasn’t being caught).\n\nI patched the script to log a proper failure on timeout:\n- `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n  - `run_update()` now catches `subprocess.TimeoutExpired` and returns an `UPDATE_FAIL` detail instead of crashing silently.\n\nIf you want, I can kick it once manually now (same command the cron uses) to see if the update actually succeeds:\n- `openclaw update --yes --timeout 1200`\n\nSay “run it” and I’ll execute it and report back what happened."
+      "lastSummary": "You’re currently up to date.\n\n- Installed OpenClaw version: **2026.2.26**\n- Last successful auto-update: **2026-02-27T00:50:07Z** (`UPDATE_OK (latest=2026.2.26)`)\n- Latest run (around your 01:14 UTC cron notice) effectively resulted in: **NOOP (no update)** — logged at **2026-02-27T01:16:21Z**\n\nOne tweak I made just now: your log showed two `UPDATE_START` entries back-to-back earlier (00:15 and 00:45) before the eventual `UPDATE_OK`, which suggests overlapping cron invocations can race. I added a simple lockfile (`memory/openclaw-auto-update.lock`) so only one auto-update run can execute at a time; others will log `SKIP (another auto-update run is in progress)`."
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772151273176,
+      "lastRunAt": 1772154872786,
       "lastStatus": "ok",
-      "lastDurationMs": 125500,
+      "lastDurationMs": 116312,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Your auto-update cron fired at **00:15 UTC** and the updater **detected an available update (2026.2.26)**, but it looks like the run **never completed cleanly**.\n\nWhat I see:\n\n- `memory/openclaw-updates.log` ends with:\n  - `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n  - …and **no `UPDATE_OK` / `UPDATE_FAIL` afterwards**\n- `openclaw update status --json` currently still reports:\n  - `hasRegistryUpdate: true`\n  - `latestVersion: 2026.2.26`\n- No `openclaw update` / `pnpm` process is running now.\n\nMost likely cause: the script can exit mid-update without logging a failure if `openclaw update` hangs long enough to trigger a subprocess timeout (that exception wasn’t being caught).\n\nI patched the script to log a proper failure on timeout:\n- `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n  - `run_update()` now catches `subprocess.TimeoutExpired` and returns an `UPDATE_FAIL` detail instead of crashing silently.\n\nIf you want, I can kick it once manually now (same command the cron uses) to see if the update actually succeeds:\n- `openclaw update --yes --timeout 1200`\n\nSay “run it” and I’ll execute it and report back what happened.",
-      "nextRunAt": 1772154872766,
+      "lastSummary": "You’re currently up to date.\n\n- Installed OpenClaw version: **2026.2.26**\n- Last successful auto-update: **2026-02-27T00:50:07Z** (`UPDATE_OK (latest=2026.2.26)`)\n- Latest run (around your 01:14 UTC cron notice) effectively resulted in: **NOOP (no update)** — logged at **2026-02-27T01:16:21Z**\n\nOne tweak I made just now: your log showed two `UPDATE_START` entries back-to-back earlier (00:15 and 00:45) before the eventual `UPDATE_OK`, which suggests overlapping cron invocations can race. I added a simple lockfile (`memory/openclaw-auto-update.lock`) so only one auto-update run can execute at a time; others will log `SKIP (another auto-update run is in progress)`.",
+      "nextRunAt": 1772156672786,
       "model": null,
-      "lastTotalTokens": 21888,
-      "lastInputTokens": 32546,
-      "lastOutputTokens": 2149
+      "lastTotalTokens": 16355,
+      "lastInputTokens": 29877,
+      "lastOutputTokens": 2250
     }
   ]
 }
