@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772218807568,
+  "updatedAt": 1772220607035,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1772234091000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400849
+          "resetAt": 1772798400261
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772217873279,
+      "lastRunAt": 1772219673299,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update job result is a **skip** right now because there’s an active direct session:\n\n- `2026-02-27T18:44:56Z SKIP (direct session active (age=191430ms))`\n- `2026-02-27T18:45:25Z SKIP (direct session active (age=220419ms))`\n\nGood news: an update **was already applied earlier today**:\n\n- `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "The auto-update cron ran cleanly and did **not** apply an update.\n\n- Result: **NOOP (no update)**\n- Logged at: **2026-02-27T19:15:05Z**  \n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772217873279,
+      "lastRunAt": 1772219673299,
       "lastStatus": "ok",
-      "lastDurationMs": 64739,
+      "lastDurationMs": 45130,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update job result is a **skip** right now because there’s an active direct session:\n\n- `2026-02-27T18:44:56Z SKIP (direct session active (age=191430ms))`\n- `2026-02-27T18:45:25Z SKIP (direct session active (age=220419ms))`\n\nGood news: an update **was already applied earlier today**:\n\n- `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772219673279,
+      "lastSummary": "The auto-update cron ran cleanly and did **not** apply an update.\n\n- Result: **NOOP (no update)**\n- Logged at: **2026-02-27T19:15:05Z**  \n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772221473299,
       "model": null,
-      "lastTotalTokens": 13875,
-      "lastInputTokens": 10743,
-      "lastOutputTokens": 704
+      "lastTotalTokens": 12989,
+      "lastInputTokens": 15421,
+      "lastOutputTokens": 395
     }
   ]
 }
