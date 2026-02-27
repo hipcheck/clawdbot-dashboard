@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772177407276,
+  "updatedAt": 1772179206885,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 6,
-          "resetAt": 1772180078000
+          "resetAt": 1772180092000
         },
         {
           "label": "Day",
@@ -73,10 +73,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772176472948,
+      "lastRunAt": 1772178272964,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**). It didn’t emit any stdout/stderr.\n\nPost-check: `openclaw status` is **OK** and shows:\n- OpenClaw app version: **2026.2.26**\n- Gateway service: **running** (systemd active)\n- No events/errors reported\n\nOne note from the built-in security audit: **1 warn** about some configured models being below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, tell me which agents still use it and I’ll propose the safest swap."
+      "lastSummary": "That cron run was a **no-op** — no OpenClaw update was available.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n- `2026-02-27T07:45:07Z NOOP (no update)`\n\nLast successful auto-update was earlier:\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`"
     },
     {
       "id": "km",
@@ -224,17 +224,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772176472948,
+      "lastRunAt": 1772178272964,
       "lastStatus": "ok",
-      "lastDurationMs": 63867,
+      "lastDurationMs": 47613,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**). It didn’t emit any stdout/stderr.\n\nPost-check: `openclaw status` is **OK** and shows:\n- OpenClaw app version: **2026.2.26**\n- Gateway service: **running** (systemd active)\n- No events/errors reported\n\nOne note from the built-in security audit: **1 warn** about some configured models being below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, tell me which agents still use it and I’ll propose the safest swap.",
-      "nextRunAt": 1772178272948,
+      "lastSummary": "That cron run was a **no-op** — no OpenClaw update was available.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n- `2026-02-27T07:45:07Z NOOP (no update)`\n\nLast successful auto-update was earlier:\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`",
+      "nextRunAt": 1772180072964,
       "model": null,
-      "lastTotalTokens": 12403,
-      "lastInputTokens": 8598,
-      "lastOutputTokens": 408
+      "lastTotalTokens": 13312,
+      "lastInputTokens": 9319,
+      "lastOutputTokens": 521
     }
   ]
 }
