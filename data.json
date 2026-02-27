@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772208007496,
+  "updatedAt": 1772209807502,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772216089000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 12,
-          "resetAt": 1772211600706
+          "resetAt": 1772211600751
         },
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400706
+          "resetAt": 1772798400751
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772207073210,
+      "lastRunAt": 1772208873221,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update looks healthy.\n\n- It successfully applied an OpenClaw update earlier today: `latest=2026.2.26` (logged `UPDATE_OK` at `2026-02-27T00:50:07Z`).  \n- Since then it’s been consistently **NOOP (no update)**; `openclaw update status` currently shows **no registry/git update available**.\n\nIf you want, I can tweak the idle heuristics (busy-session window / cron buffer) via the env vars in that script, but nothing looks broken."
+      "lastSummary": "Auto-update run completed successfully (exit code 0). The script didn’t print any output.\n\nCurrent OpenClaw status after the run:\n- **Version:** 2026.2.26 (npm latest: 2026.2.26)\n- **Channel:** stable\n- **Gateway service:** systemd **enabled + running** (active)\n\nOne note from `openclaw status`:\n- **Security audit:** 0 critical, 1 warning — some configured models are below recommended tiers (mentions `gpt-4o-mini` in config). If you want, I can point you to the exact config entry to swap it to a safer default."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772207073210,
+      "lastRunAt": 1772208873221,
       "lastStatus": "ok",
-      "lastDurationMs": 38965,
+      "lastDurationMs": 62456,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update looks healthy.\n\n- It successfully applied an OpenClaw update earlier today: `latest=2026.2.26` (logged `UPDATE_OK` at `2026-02-27T00:50:07Z`).  \n- Since then it’s been consistently **NOOP (no update)**; `openclaw update status` currently shows **no registry/git update available**.\n\nIf you want, I can tweak the idle heuristics (busy-session window / cron buffer) via the env vars in that script, but nothing looks broken.",
-      "nextRunAt": 1772208873210,
+      "lastSummary": "Auto-update run completed successfully (exit code 0). The script didn’t print any output.\n\nCurrent OpenClaw status after the run:\n- **Version:** 2026.2.26 (npm latest: 2026.2.26)\n- **Channel:** stable\n- **Gateway service:** systemd **enabled + running** (active)\n\nOne note from `openclaw status`:\n- **Security audit:** 0 critical, 1 warning — some configured models are below recommended tiers (mentions `gpt-4o-mini` in config). If you want, I can point you to the exact config entry to swap it to a safer default.",
+      "nextRunAt": 1772210673221,
       "model": null,
-      "lastTotalTokens": 14564,
-      "lastInputTokens": 11213,
-      "lastOutputTokens": 892
+      "lastTotalTokens": 12373,
+      "lastInputTokens": 8619,
+      "lastOutputTokens": 467
     }
   ]
 }
