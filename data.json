@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772204407433,
+  "updatedAt": 1772206207836,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1772216089000
+          "resetAt": 1772216090000
         },
         {
           "label": "Day",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 12,
-          "resetAt": 1772211600513
+          "resetAt": 1772211600076
         },
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400513
+          "resetAt": 1772798400076
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772203473186,
+      "lastRunAt": 1772205273201,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: **exit code 0 (success)**\n- Output: **none** (script didn’t print anything)\n\nIf you want, I can run a quick `openclaw --version` / `openclaw status` to confirm what (if anything) changed."
+      "lastSummary": "Auto-update run logged at **2026-02-27T15:15:08Z** as:\n\n- **NOOP (no update)** — nothing to install this time.\n\nMost recent successful auto-update was earlier today:\n\n- **2026-02-27T00:50:07Z** — **UPDATE_OK (latest=2026.2.26)**"
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772203473186,
+      "lastRunAt": 1772205273201,
       "lastStatus": "ok",
-      "lastDurationMs": 37683,
+      "lastDurationMs": 57673,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: **exit code 0 (success)**\n- Output: **none** (script didn’t print anything)\n\nIf you want, I can run a quick `openclaw --version` / `openclaw status` to confirm what (if anything) changed.",
-      "nextRunAt": 1772205273186,
+      "lastSummary": "Auto-update run logged at **2026-02-27T15:15:08Z** as:\n\n- **NOOP (no update)** — nothing to install this time.\n\nMost recent successful auto-update was earlier today:\n\n- **2026-02-27T00:50:07Z** — **UPDATE_OK (latest=2026.2.26)**",
+      "nextRunAt": 1772207073201,
       "model": null,
-      "lastTotalTokens": 10849,
-      "lastInputTokens": 6814,
-      "lastOutputTokens": 282
+      "lastTotalTokens": 14029,
+      "lastInputTokens": 10272,
+      "lastOutputTokens": 646
     }
   ]
 }
