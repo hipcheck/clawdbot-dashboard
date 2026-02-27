@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772229607759,
+  "updatedAt": 1772231407451,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772228673363,
+      "lastRunAt": 1772230473376,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update looks healthy and already up to date.\n\n- **Current OpenClaw version:** `2026.2.26`\n- **Update availability:** none (no registry/git update available)\n- **Last successful auto-update:** `2026-02-27T00:50:07Z` (to `2026.2.26`)\n- **Most recent logged cron runs since then:** all `NOOP (no update)` (latest log entry: `2026-02-27T21:15:07Z`)\n\nLog file if you want to inspect it: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now to sanity-check the cron behavior — it exited cleanly and reported:\n\n- `NOOP (no update)`\n\nSo the auto-update job is functioning and, at least on this run, there wasn’t anything new to install."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772228673363,
+      "lastRunAt": 1772230473376,
       "lastStatus": "ok",
-      "lastDurationMs": 47718,
+      "lastDurationMs": 42769,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update looks healthy and already up to date.\n\n- **Current OpenClaw version:** `2026.2.26`\n- **Update availability:** none (no registry/git update available)\n- **Last successful auto-update:** `2026-02-27T00:50:07Z` (to `2026.2.26`)\n- **Most recent logged cron runs since then:** all `NOOP (no update)` (latest log entry: `2026-02-27T21:15:07Z`)\n\nLog file if you want to inspect it: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772230473363,
+      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now to sanity-check the cron behavior — it exited cleanly and reported:\n\n- `NOOP (no update)`\n\nSo the auto-update job is functioning and, at least on this run, there wasn’t anything new to install.",
+      "nextRunAt": 1772232273376,
       "model": null,
-      "lastTotalTokens": 14670,
-      "lastInputTokens": 11101,
-      "lastOutputTokens": 1025
+      "lastTotalTokens": 11268,
+      "lastInputTokens": 7092,
+      "lastOutputTokens": 461
     }
   ]
 }
