@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772200807677,
+  "updatedAt": 1772202606609,
   "providers": [
     {
       "id": "openai-codex",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 12,
-          "resetAt": 1772211599944
+          "resetAt": 1772211600829
         },
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798399944
+          "resetAt": 1772798400829
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772199873159,
+      "lastRunAt": 1772201673174,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` just ran `openclaw_auto_update.py` successfully and it **no-op’d** (nothing to update).\n\nLatest log entry:\n- `2026-02-27T13:45:04Z NOOP (no update)` (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code 0). No stdout/stderr was produced.\n\nCurrent OpenClaw version on this host: **2026.2.26**."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772199873159,
+      "lastRunAt": 1772201673174,
       "lastStatus": "ok",
-      "lastDurationMs": 48995,
+      "lastDurationMs": 51905,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` just ran `openclaw_auto_update.py` successfully and it **no-op’d** (nothing to update).\n\nLatest log entry:\n- `2026-02-27T13:45:04Z NOOP (no update)` (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772201673159,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code 0). No stdout/stderr was produced.\n\nCurrent OpenClaw version on this host: **2026.2.26**.",
+      "nextRunAt": 1772203473174,
       "model": null,
-      "lastTotalTokens": 14333,
-      "lastInputTokens": 19744,
-      "lastOutputTokens": 535
+      "lastTotalTokens": 10965,
+      "lastInputTokens": 7006,
+      "lastOutputTokens": 289
     }
   ]
 }
