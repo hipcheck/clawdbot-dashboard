@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772190006386,
+  "updatedAt": 1772191806214,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1772198107000
+          "usedPercent": 14,
+          "resetAt": 1772198089000
         },
         {
           "label": "Day",
-          "usedPercent": 41,
+          "usedPercent": 45,
           "resetAt": 1772497599000
         }
       ],
@@ -28,17 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 0
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -73,7 +64,7 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1772189597165,
+      "lastRunAt": 1772191545493,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": null
@@ -83,12 +74,12 @@
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBoo",
+      "activityLabel": "json\n{\n  \"timestamp\": \"Fri 2026-02-27 11:15 UTC\",\n  \"has_reply_context\": true\n}\n```\n\nReplied message (untrusted, for context):\n```json\n{\n  \"sender_lab",
       "activityChannel": "telegram",
-      "lastRunAt": 1772164958713,
+      "lastRunAt": 1772190962307,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Tonight’s journal comment went through successfully.\n\n- I connected to your Mac and detected NYC time **2026-02-26 23:02**, so **TARGET_DATE = 2026-02-26**.\n- I found `/Users/andreasallmaier/Documents"
+      "lastSummary": "[[reply_to_current]]\n“RSVP-style reading” here is almost certainly shorthand for **a structured, active-reading loop**—read a bit, then quickly *rehearse/summarize and extract* something concrete—rath"
     }
   ],
   "cronJobs": [
@@ -152,17 +143,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772136000057,
-      "lastStatus": "error",
-      "lastDurationMs": 300068,
-      "consecutiveErrors": 3,
-      "lastError": "cron: job execution timed out",
-      "lastSummary": null,
+      "lastRunAt": 1772191193285,
+      "lastStatus": "ok",
+      "lastDurationMs": 92496,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "- Pipeline file read; extracted 18 existing open-role URLs + their “Last seen” dates (deduped by URL).\n- Minimal search: 1 Brave query (`pw`, 10 results) returned 0 results (no 429).\n- Direct sources fetched:\n  - Google Careers page yielded ~20 job-result links, but none matched “Senior Marketing Manager (NYC)” in scope after filtering.\n  - Amazon Jobs + Apple Jobs search pages appear JS-rendered via `web_fetch`; no individual posting links were extractable this run.\n- Net-new roles appended: 0\n- Existing open roles “Last seen” updates: none (no existing open-role URLs were observed in today’s source pages/search results).\n- Metadata + Run log updated (last_run_status=ok, last_run_new_roles=0) and changes committed + pushed to GitHub (commit `8bb1591`).",
       "nextRunAt": 1772481600000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 135928,
-      "lastInputTokens": 954689,
-      "lastOutputTokens": 2381
+      "lastTotalTokens": 26065,
+      "lastInputTokens": 23693,
+      "lastOutputTokens": 3587
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
@@ -224,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772189073079,
+      "lastRunAt": 1772190873093,
       "lastStatus": "ok",
-      "lastDurationMs": 50478,
+      "lastDurationMs": 63474,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` manually just now.\n\n- Exit code: **0 (success)**\n- Script output: **none recorded** (it appears to run quietly when there’s nothing notable to report)\n- OpenClaw Gateway health check: **running + RPC probe OK** (`openclaw gateway status` shows the service active and responding)\n\nIf you want, I can also grab the relevant log excerpt from `/tmp/openclaw/openclaw-2026-02-27.log` to confirm whether it actually pulled/updated anything.",
-      "nextRunAt": 1772190873079,
+      "lastSummary": "The auto-update cron ran at **2026-02-27 11:14:58Z** and **skipped** because there was an active direct session:\n\n- `2026-02-27T11:14:58Z SKIP (direct session active (age=93601ms))`\n\nLast successful update was earlier today:\n\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772192673093,
       "model": null,
-      "lastTotalTokens": 11249,
-      "lastInputTokens": 7189,
-      "lastOutputTokens": 426
+      "lastTotalTokens": 13515,
+      "lastInputTokens": 10001,
+      "lastOutputTokens": 736
     }
   ]
 }
