@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772224207557,
+  "updatedAt": 1772226007081,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1772234091000
         },
         {
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 2,
-          "resetAt": 1772798400841
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -74,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772223273324,
+      "lastRunAt": 1772225073337,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update cron ran and it was a **NOOP** — **no OpenClaw update was available** at the time.\n\nCurrent state on the box:\n- OpenClaw version: **2026.2.26** (stable)\n- Gateway service: **running (systemd, pid 756524)** and reachable on **127.0.0.1:18789**\n- Update status (from `openclaw status`): **pnpm/npm latest 2026.2.26**\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest entry around this run shows `NOOP (no update)`)."
+      "lastSummary": "NOOP (no update)\n\nNothing to apply right now. Latest successful auto-update in the log was **2026.2.26** (applied at **2026-02-27T00:50:07Z**)."
     },
     {
       "id": "km",
@@ -225,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772223273324,
+      "lastRunAt": 1772225073337,
       "lastStatus": "ok",
-      "lastDurationMs": 79132,
+      "lastDurationMs": 81347,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron ran and it was a **NOOP** — **no OpenClaw update was available** at the time.\n\nCurrent state on the box:\n- OpenClaw version: **2026.2.26** (stable)\n- Gateway service: **running (systemd, pid 756524)** and reachable on **127.0.0.1:18789**\n- Update status (from `openclaw status`): **pnpm/npm latest 2026.2.26**\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest entry around this run shows `NOOP (no update)`).",
-      "nextRunAt": 1772225073324,
+      "lastSummary": "NOOP (no update)\n\nNothing to apply right now. Latest successful auto-update in the log was **2026.2.26** (applied at **2026-02-27T00:50:07Z**).",
+      "nextRunAt": 1772226873337,
       "model": null,
-      "lastTotalTokens": 17464,
-      "lastInputTokens": 13789,
-      "lastOutputTokens": 706
+      "lastTotalTokens": 16041,
+      "lastInputTokens": 12377,
+      "lastOutputTokens": 643
     }
   ]
 }
