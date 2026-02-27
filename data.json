@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772191806214,
+  "updatedAt": 1772193607563,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
+          "usedPercent": 18,
           "resetAt": 1772198089000
         },
         {
           "label": "Day",
-          "usedPercent": 45,
+          "usedPercent": 46,
           "resetAt": 1772497599000
         }
       ],
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1772181000026,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772193428863,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Okay, that's interesting. The gateway status report shows that the service is running fine and is using the configuration file at `~/.openclaw/openclaw.json`.\n\nThis means the file isn't \"missing\" in t"
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1772191545493,
+      "lastRunAt": 1772193474690,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I tried to do option **2 (fully headless on the VPS)**, but I’m blocked right now because this OpenClaw runtime **doesn’t allow elevated/sudo commands** — so I can’t install Chrome/Chromium (or `pytho"
     },
     {
       "id": "km",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772020200020,
-      "lastStatus": "error",
-      "lastDurationMs": 369186,
-      "consecutiveErrors": 3,
-      "lastError": "cron announce delivery failed",
-      "lastSummary": "FAIL: Security preflight check failed.\n\nTop blockers:\n- **Critical Skill Vulnerability:** The `readwise` skill (`/home/clawd/.openclaw/workspace/skills/readwise`) contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is the most severe finding and must be addressed.\n- **Empty Node Command Denylist:** The `gateway.nodes.denyCommands` configuration is empty. This allows all commands, including potentially sensitive ones, to be executed on paired nodes, increasing the risk of misuse if a node is compromised or a skill is malicious.\n\nConfiguration patch suggestions:\n1.  **Disable or Remediate Insecure Skill:** The `readwise` skill should be removed or disabled immediately until the code is audited and fixed.\n    ```bash\n    # Option 1: Remove the skill (recommended if untrusted)\n    rm -rf /home/clawd/.openclaw/workspace/skills/readwise\n\n    # Option 2: Disable by renaming (if you plan to fix it)\n    mv /home/clawd/.openclaw/workspace/skills/readwise /home/clawd/.openclaw/workspace/skills/readwise.disabled\n    ```\n\n2.  **Strengthen Node Command Denylist:** Add essential security and configuration commands to the denylist to prevent remote tampering.\n    ```bash\n    # Run these commands to update the configuration:\n    openclaw config set --json gateway.nodes.denyCommands '[\"openclaw-config-set\", \"openclaw-config-unset\", \"openclaw-security-audit\", \"openclaw-skills-install\", \"openclaw-skills-uninstall\"]'\n    ```\n\n3.  **Review Model Policy:** The use of `gpt-4o-mini` as a fallback model is flagged as a warning. While not a critical failure, consider removing it from the fallback list to maintain a higher security baseline.\n    ```bash\n    # Example command (actual path might differ):\n    openclaw config unset agents.list.main.model.fallbacks 'openai-codex/gpt-4o-mini'\n    ```",
-      "nextRunAt": 1772193000000,
+      "lastRunAt": 1772193000016,
+      "lastStatus": "ok",
+      "lastDurationMs": 380292,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "FAIL\n\nTop Blockers:\n*   **CRITICAL:** The `readwise` skill contains dangerous code patterns with potential credential harvesting. It should be reviewed and, if untrusted, removed.\n*   **WARN:** Some configured models (specifically `openai-codex/gpt-4o-mini`) are below recommended tiers and are more susceptible to prompt injection and tool misuse.\n*   Unable to verify `gateway.nodes.denyCommands` entries due to missing gateway configuration file.\n*   Unable to verify trusted proxy posture due to missing gateway configuration file.\n\nRecommendations:\n*   Review and remove the `readwise` skill if it is not trusted.\n*   Upgrade to the latest, top-tier model (GPT-5+ or Claude 4.5+) for bots with tools or untrusted inboxes.\n*   Locate the gateway configuration file to verify command restrictions and trusted proxy settings.",
+      "nextRunAt": 1772279400000,
       "model": null,
-      "lastTotalTokens": 6254,
-      "lastInputTokens": 7598,
-      "lastOutputTokens": 1428
+      "lastTotalTokens": 12679,
+      "lastInputTokens": 12679,
+      "lastOutputTokens": 275
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -143,17 +143,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772191193285,
+      "lastRunAt": 1772191643255,
       "lastStatus": "ok",
-      "lastDurationMs": 92496,
+      "lastDurationMs": 190757,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Pipeline file read; extracted 18 existing open-role URLs + their “Last seen” dates (deduped by URL).\n- Minimal search: 1 Brave query (`pw`, 10 results) returned 0 results (no 429).\n- Direct sources fetched:\n  - Google Careers page yielded ~20 job-result links, but none matched “Senior Marketing Manager (NYC)” in scope after filtering.\n  - Amazon Jobs + Apple Jobs search pages appear JS-rendered via `web_fetch`; no individual posting links were extractable this run.\n- Net-new roles appended: 0\n- Existing open roles “Last seen” updates: none (no existing open-role URLs were observed in today’s source pages/search results).\n- Metadata + Run log updated (last_run_status=ok, last_run_new_roles=0) and changes committed + pushed to GitHub (commit `8bb1591`).",
+      "lastSummary": "Run complete (2026-02-27 11:27 UTC).\n\n- Pipeline file updated + pushed to GitHub (commit: `391271d`).\n- Net-new roles appended: **0**.\n- “Last seen” refreshed to **2026-02-27** for:\n  - Amazon/AWS Exec Messaging (3111166)\n  - Amazon Customer Trust External Relations (3142127)\n- Minimal search: Brave returned **0 results** (no 429).\n- Direct sources:\n  - Google careers page parsed successfully (no in-scope new NYC Senior Marketing Manager roles found beyond already-tracked items).\n  - Amazon search.json parsed successfully (no clearly NYC in-scope net-new roles).\n  - Apple: **browser tool failed to start on VPS**, so Apple listings could not be extracted this run; error recorded in run log + frontmatter status set to `ok_with_errors`.",
       "nextRunAt": 1772481600000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 26065,
-      "lastInputTokens": 23693,
-      "lastOutputTokens": 3587
+      "lastTotalTokens": 42342,
+      "lastInputTokens": 41136,
+      "lastOutputTokens": 6393
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772190873093,
+      "lastRunAt": 1772192673103,
       "lastStatus": "ok",
-      "lastDurationMs": 63474,
+      "lastDurationMs": 85059,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update cron ran at **2026-02-27 11:14:58Z** and **skipped** because there was an active direct session:\n\n- `2026-02-27T11:14:58Z SKIP (direct session active (age=93601ms))`\n\nLast successful update was earlier today:\n\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`\n\nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772192673093,
+      "lastSummary": "This cron run **did not update** OpenClaw — it **skipped because a direct session was active**.\n\nLatest entries from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n\n- `2026-02-27T11:44:54Z SKIP (direct session active (age=797628ms))`\n\nFor context, the most recent successful auto-update earlier today was:\n\n- `2026-02-27T00:50:07Z UPDATE_OK (latest=2026.2.26)`",
+      "nextRunAt": 1772194473103,
       "model": null,
-      "lastTotalTokens": 13515,
-      "lastInputTokens": 10001,
-      "lastOutputTokens": 736
+      "lastTotalTokens": 14067,
+      "lastInputTokens": 11270,
+      "lastOutputTokens": 838
     }
   ]
 }
