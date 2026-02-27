@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772155806725,
+  "updatedAt": 1772157606690,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 6,
           "resetAt": 1772162075000
         },
         {
           "label": "Day",
-          "usedPercent": 35,
+          "usedPercent": 36,
           "resetAt": 1772497599000
         }
       ],
@@ -61,25 +61,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772154872786,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772157213458,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "You’re currently up to date.\n\n- Installed OpenClaw version: **2026.2.26**\n- Last successful auto-update: **2026-02-27T00:50:07Z** (`UPDATE_OK (latest=2026.2.26)`)\n- Latest run (around your 01:14 UTC cron notice) effectively resulted in: **NOOP (no update)** — logged at **2026-02-27T01:16:21Z**\n\nOne tweak I made just now: your log showed two `UPDATE_START` entries back-to-back earlier (00:15 and 00:45) before the eventual `UPDATE_OK`, which suggests overlapping cron invocations can race. I added a simple lockfile (`memory/openclaw-auto-update.lock`) so only one auto-update run can execute at a time; others will log `SKIP (another auto-update run is in progress)`."
+      "lastSummary": "Yes — we can do this cleanly by running **multiple Telegram bot “accounts”** (i.e., multiple BotFather bots), and then **binding each bot to a specific OpenClaw agent**. Each bot becomes its own Teleg"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal: MISSING\n\n- Mac node: online ✅\n- TARGET_DATE (Ame",
+      "activityLabel": "A cron job \"km:x-to-reader-daily\" just completed successfully.\n\nResult:\nLinks saved to Readwise Reader (feed):\n- https://t.co/NQ7UujarJx → https://rea",
       "activityChannel": "telegram",
-      "lastRunAt": 1772107646649,
+      "lastRunAt": 1772156134146,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I was able to connect to your Mac, but today’s journal entry for **2026-02-26 (NYC)** wasn’t found, so I didn’t make any changes.\n\nExpected file (missing):\n- `/Users/andreasallmaier/Documents/Brain/jo"
+      "lastSummary": "Today’s **X → Reader** run mostly worked on the Reader side, but hit **X API credit limits** for search/follow actions.\n\n**Saved to Readwise Reader (feed) (5):**\n- https://t.co/NQ7UujarJx\n- https://t."
     }
   ],
   "cronJobs": [
@@ -210,40 +210,22 @@
       "lastOutputTokens": 5292
     },
     {
-      "id": "af6fe05b-0496-48f2-882f-4925cc64a1f2",
-      "name": "km:x-to-reader-daily",
-      "schedule": "50 2 * * *",
-      "tz": "America/New_York",
-      "enabled": true,
-      "lastRunAt": 1772018836812,
-      "lastStatus": "ok",
-      "lastDurationMs": 37983,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "Links saved (5):\n- https://t.co/Bvj8ouo8XZ\n- https://t.co/t52IGtWkML\n- https://t.co/I2Pv63buIu\n- https://t.co/1FJx6CMY4t\n- https://t.co/cYioFergnR\n\nFollows (5):\n- @naval — followed\n- @mgsiegler — followed\n- @alexeheath — followed\n- @steipete — followed\n- @samsheffer — followed\n\nDraft replies (5) — for approval (not posted):\n1) To @alexeheath (post_id: 2026540691204317647)\n\"I’m with you. The 'bubble' convo is weirdly disconnected from whether teams are actually getting leverage day-to-day.\"\n\n2) To @samsheffer (post_id: 2026510289051476446)\n\"This is where the boring stuff wins: pick one metric that would falsify the claim, track it for 30 days, then adjust.\"\n\n3) To @ID_AA_Carmack (post_id: 2026506990608847124)\n\"One line I keep coming back to: “**Turn Desire Into A Written Plan** - Fix a precise money goal, name a deadline, and decide what you'll give in return before taking action.”\"\n\n4) To @steipete (post_id: 2026506862250610822)\n\"Feels like a lot of this comes down to expectations vs. actual workflow pull. Hype is loud; day-to-day usage is the signal.\"\n\n5) To @samsheffer (post_id: 2026503737863205283)\n\"Good point. Also: the UX tax is real—one extra click multiplied by 50/day turns into 'I stop using it' surprisingly fast.\"\n\nErrors:\n- None (READWISE_TOKEN present; script completed successfully).",
-      "nextRunAt": 1772178600000,
-      "model": null,
-      "lastTotalTokens": 5689,
-      "lastInputTokens": 9336,
-      "lastOutputTokens": 608
-    },
-    {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
       "name": "infraops:openclaw-auto-update",
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772154872786,
+      "lastRunAt": 1772156672807,
       "lastStatus": "ok",
-      "lastDurationMs": 116312,
+      "lastDurationMs": 29034,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "You’re currently up to date.\n\n- Installed OpenClaw version: **2026.2.26**\n- Last successful auto-update: **2026-02-27T00:50:07Z** (`UPDATE_OK (latest=2026.2.26)`)\n- Latest run (around your 01:14 UTC cron notice) effectively resulted in: **NOOP (no update)** — logged at **2026-02-27T01:16:21Z**\n\nOne tweak I made just now: your log showed two `UPDATE_START` entries back-to-back earlier (00:15 and 00:45) before the eventual `UPDATE_OK`, which suggests overlapping cron invocations can race. I added a simple lockfile (`memory/openclaw-auto-update.lock`) so only one auto-update run can execute at a time; others will log `SKIP (another auto-update run is in progress)`.",
-      "nextRunAt": 1772156672786,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now (exit code **0**), but it produced **no stdout/stderr output** in this run—so I can’t tell from logs whether it found/applied an update or simply had nothing to do.\n\nIf you want, I can tweak the script to always print a short summary (e.g., “checked version X → Y / no update available / updated + restarted gateway”).",
+      "nextRunAt": 1772158472807,
       "model": null,
-      "lastTotalTokens": 16355,
-      "lastInputTokens": 29877,
-      "lastOutputTokens": 2250
+      "lastTotalTokens": 10850,
+      "lastInputTokens": 6826,
+      "lastOutputTokens": 294
     }
   ]
 }
