@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772199007134,
+  "updatedAt": 1772200807677,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772216089000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 12,
-          "resetAt": 1772211600481
+          "resetAt": 1772211599944
         },
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798400481
+          "resetAt": 1772798399944
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772198073145,
+      "lastRunAt": 1772199873159,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` ran cleanly.\n\n- **Result:** `NOOP (no update)` (latest log entry: `2026-02-27T13:15:07Z`)\n- **Current OpenClaw:** registry latest is **2026.2.26**, and **no update is available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`)\n- **Gateway:** running нормально; RPC probe **ok**; listening on **127.0.0.1:18789**\n\nIf you want, I can also tweak the updater to print/log a bit more context per run (e.g., detected “idle” reason + current installed version) so these cron pings are more informative."
+      "lastSummary": "Cron `infraops:openclaw-auto-update` just ran `openclaw_auto_update.py` successfully and it **no-op’d** (nothing to update).\n\nLatest log entry:\n- `2026-02-27T13:45:04Z NOOP (no update)` (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772198073145,
+      "lastRunAt": 1772199873159,
       "lastStatus": "ok",
-      "lastDurationMs": 73547,
+      "lastDurationMs": 48995,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` ran cleanly.\n\n- **Result:** `NOOP (no update)` (latest log entry: `2026-02-27T13:15:07Z`)\n- **Current OpenClaw:** registry latest is **2026.2.26**, and **no update is available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`)\n- **Gateway:** running нормально; RPC probe **ok**; listening on **127.0.0.1:18789**\n\nIf you want, I can also tweak the updater to print/log a bit more context per run (e.g., detected “idle” reason + current installed version) so these cron pings are more informative.",
-      "nextRunAt": 1772199873145,
+      "lastSummary": "Cron `infraops:openclaw-auto-update` just ran `openclaw_auto_update.py` successfully and it **no-op’d** (nothing to update).\n\nLatest log entry:\n- `2026-02-27T13:45:04Z NOOP (no update)` (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
+      "nextRunAt": 1772201673159,
       "model": null,
-      "lastTotalTokens": 14428,
-      "lastInputTokens": 10758,
-      "lastOutputTokens": 686
+      "lastTotalTokens": 14333,
+      "lastInputTokens": 19744,
+      "lastOutputTokens": 535
     }
   ]
 }
