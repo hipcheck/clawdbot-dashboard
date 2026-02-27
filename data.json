@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772188206496,
+  "updatedAt": 1772190006386,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772198089000
+          "usedPercent": 3,
+          "resetAt": 1772198107000
         },
         {
           "label": "Day",
@@ -70,13 +70,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772187273065,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772189597165,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully (exit code 0). No stdout/stderr was produced by the script.\n\nPost-checks:\n- `openclaw --version`: **2026.2.26**\n- `openclaw gateway status`: **running**, RPC probe **ok**, listening on **127.0.0.1:18789** (loopback-only)"
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -159,7 +159,7 @@
       "lastError": "cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1772481600000,
-      "model": "openai-codex/gpt-4o-mini",
+      "model": "openai-codex/gpt-5.2",
       "lastTotalTokens": 135928,
       "lastInputTokens": 954689,
       "lastOutputTokens": 2381
@@ -224,17 +224,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772187273065,
+      "lastRunAt": 1772189073079,
       "lastStatus": "ok",
-      "lastDurationMs": 75136,
+      "lastDurationMs": 50478,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully (exit code 0). No stdout/stderr was produced by the script.\n\nPost-checks:\n- `openclaw --version`: **2026.2.26**\n- `openclaw gateway status`: **running**, RPC probe **ok**, listening on **127.0.0.1:18789** (loopback-only)",
-      "nextRunAt": 1772189073065,
+      "lastSummary": "I ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` manually just now.\n\n- Exit code: **0 (success)**\n- Script output: **none recorded** (it appears to run quietly when there’s nothing notable to report)\n- OpenClaw Gateway health check: **running + RPC probe OK** (`openclaw gateway status` shows the service active and responding)\n\nIf you want, I can also grab the relevant log excerpt from `/tmp/openclaw/openclaw-2026-02-27.log` to confirm whether it actually pulled/updated anything.",
+      "nextRunAt": 1772190873079,
       "model": null,
-      "lastTotalTokens": 12140,
-      "lastInputTokens": 8173,
-      "lastOutputTokens": 482
+      "lastTotalTokens": 11249,
+      "lastInputTokens": 7189,
+      "lastOutputTokens": 426
     }
   ]
 }
