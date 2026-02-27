@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772213406549,
+  "updatedAt": 1772215207027,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1772216089000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1772798399900
+          "resetAt": 1772798400256
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772212473246,
+      "lastRunAt": 1772214273260,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run completed OK.\n\n- Result: **NOOP (no update available)**  \n- Logged at: **2026-02-27T17:15:06Z** in `memory/openclaw-updates.log`\n\nMost recent successful auto-update before this was **latest=2026.2.26** (logged **2026-02-27T00:50:07Z**)."
+      "lastSummary": "Ran `openclaw_auto_update.py` just now to mirror that cron run.\n\nResult: **NOOP (no update)** — nothing to update/apply at the moment."
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772212473246,
+      "lastRunAt": 1772214273260,
       "lastStatus": "ok",
-      "lastDurationMs": 48154,
+      "lastDurationMs": 36075,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run completed OK.\n\n- Result: **NOOP (no update available)**  \n- Logged at: **2026-02-27T17:15:06Z** in `memory/openclaw-updates.log`\n\nMost recent successful auto-update before this was **latest=2026.2.26** (logged **2026-02-27T00:50:07Z**).",
-      "nextRunAt": 1772214273246,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now to mirror that cron run.\n\nResult: **NOOP (no update)** — nothing to update/apply at the moment.",
+      "nextRunAt": 1772216073260,
       "model": null,
-      "lastTotalTokens": 15531,
-      "lastInputTokens": 11684,
-      "lastOutputTokens": 476
+      "lastTotalTokens": 10791,
+      "lastInputTokens": 6322,
+      "lastOutputTokens": 183
     }
   ]
 }
