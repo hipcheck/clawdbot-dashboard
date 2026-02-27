@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772173807727,
+  "updatedAt": 1772175608106,
   "providers": [
     {
       "id": "openai-codex",
@@ -73,10 +73,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772172872920,
+      "lastRunAt": 1772174672934,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update is healthy.\n\n- **This cron run (≈06:15Z):** `NOOP (no update)` — nothing to do.\n- **Last update applied:** **2026-02-27T00:50:07Z** → `UPDATE_OK (latest=2026.2.26)`  \n  (it started at 00:15Z, re-triggered at 00:45Z, then succeeded at 00:50Z)\n\nCurrent installed OpenClaw version: **2026.2.26**  \nUpdate status now: **no registry/git update available**."
+      "lastSummary": "Auto-update run completed successfully.\n\n- `openclaw_auto_update.py` exited **0** (no stdout/stderr output).\n- `openclaw status` shows **Update: pnpm · npm latest 2026.2.26**\n- Gateway service is **running** (systemd active)."
     },
     {
       "id": "km",
@@ -224,17 +224,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772172872920,
+      "lastRunAt": 1772174672934,
       "lastStatus": "ok",
-      "lastDurationMs": 95755,
+      "lastDurationMs": 58951,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update is healthy.\n\n- **This cron run (≈06:15Z):** `NOOP (no update)` — nothing to do.\n- **Last update applied:** **2026-02-27T00:50:07Z** → `UPDATE_OK (latest=2026.2.26)`  \n  (it started at 00:15Z, re-triggered at 00:45Z, then succeeded at 00:50Z)\n\nCurrent installed OpenClaw version: **2026.2.26**  \nUpdate status now: **no registry/git update available**.",
-      "nextRunAt": 1772174672920,
+      "lastSummary": "Auto-update run completed successfully.\n\n- `openclaw_auto_update.py` exited **0** (no stdout/stderr output).\n- `openclaw status` shows **Update: pnpm · npm latest 2026.2.26**\n- Gateway service is **running** (systemd active).",
+      "nextRunAt": 1772176472934,
       "model": null,
-      "lastTotalTokens": 13531,
-      "lastInputTokens": 18152,
-      "lastOutputTokens": 600
+      "lastTotalTokens": 12399,
+      "lastInputTokens": 14917,
+      "lastOutputTokens": 388
     }
   ]
 }
