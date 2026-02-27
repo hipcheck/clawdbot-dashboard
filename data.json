@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772150408853,
+  "updatedAt": 1772152206893,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772162075000
         },
         {
           "label": "Day",
-          "usedPercent": 34,
+          "usedPercent": 35,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772149473161,
+      "lastRunAt": 1772151273176,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The auto-update cron run at **2026-02-26 23:44 UTC** was a **NOOP** (no update available).\n\n- Last successful auto-update: **2026-02-26 05:46–05:49 UTC** → updated to **OpenClaw 2026.2.25** (`UPDATE_OK`).\n- Current status: `openclaw --version` = **2026.2.25**, and `openclaw update status` reports **no registry/git update available**.\n\nIf you want, I can also tighten the log noise around the earlier “cron wake soon (-…ms)” entries (looks like older runs before the delta guard fix)."
+      "lastSummary": "Your auto-update cron fired at **00:15 UTC** and the updater **detected an available update (2026.2.26)**, but it looks like the run **never completed cleanly**.\n\nWhat I see:\n\n- `memory/openclaw-updates.log` ends with:\n  - `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n  - …and **no `UPDATE_OK` / `UPDATE_FAIL` afterwards**\n- `openclaw update status --json` currently still reports:\n  - `hasRegistryUpdate: true`\n  - `latestVersion: 2026.2.26`\n- No `openclaw update` / `pnpm` process is running now.\n\nMost likely cause: the script can exit mid-update without logging a failure if `openclaw update` hangs long enough to trigger a subprocess timeout (that exception wasn’t being caught).\n\nI patched the script to log a proper failure on timeout:\n- `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n  - `run_update()` now catches `subprocess.TimeoutExpired` and returns an `UPDATE_FAIL` detail instead of crashing silently.\n\nIf you want, I can kick it once manually now (same command the cron uses) to see if the update actually succeeds:\n- `openclaw update --yes --timeout 1200`\n\nSay “run it” and I’ll execute it and report back what happened."
     },
     {
       "id": "km",
@@ -233,17 +233,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772149473161,
+      "lastRunAt": 1772151273176,
       "lastStatus": "ok",
-      "lastDurationMs": 26393,
+      "lastDurationMs": 125500,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update cron run at **2026-02-26 23:44 UTC** was a **NOOP** (no update available).\n\n- Last successful auto-update: **2026-02-26 05:46–05:49 UTC** → updated to **OpenClaw 2026.2.25** (`UPDATE_OK`).\n- Current status: `openclaw --version` = **2026.2.25**, and `openclaw update status` reports **no registry/git update available**.\n\nIf you want, I can also tighten the log noise around the earlier “cron wake soon (-…ms)” entries (looks like older runs before the delta guard fix).",
-      "nextRunAt": 1772151273161,
+      "lastSummary": "Your auto-update cron fired at **00:15 UTC** and the updater **detected an available update (2026.2.26)**, but it looks like the run **never completed cleanly**.\n\nWhat I see:\n\n- `memory/openclaw-updates.log` ends with:\n  - `2026-02-27T00:15:03Z UPDATE_START (latest=2026.2.26)`\n  - …and **no `UPDATE_OK` / `UPDATE_FAIL` afterwards**\n- `openclaw update status --json` currently still reports:\n  - `hasRegistryUpdate: true`\n  - `latestVersion: 2026.2.26`\n- No `openclaw update` / `pnpm` process is running now.\n\nMost likely cause: the script can exit mid-update without logging a failure if `openclaw update` hangs long enough to trigger a subprocess timeout (that exception wasn’t being caught).\n\nI patched the script to log a proper failure on timeout:\n- `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n  - `run_update()` now catches `subprocess.TimeoutExpired` and returns an `UPDATE_FAIL` detail instead of crashing silently.\n\nIf you want, I can kick it once manually now (same command the cron uses) to see if the update actually succeeds:\n- `openclaw update --yes --timeout 1200`\n\nSay “run it” and I’ll execute it and report back what happened.",
+      "nextRunAt": 1772153073176,
       "model": null,
-      "lastTotalTokens": 13753,
-      "lastInputTokens": 10357,
-      "lastOutputTokens": 714
+      "lastTotalTokens": 21888,
+      "lastInputTokens": 32546,
+      "lastOutputTokens": 2149
     }
   ]
 }
