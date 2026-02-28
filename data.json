@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772308807221,
+  "updatedAt": 1772310607128,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772307873944,
+      "lastRunAt": 1772309673954,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update job ran cleanly.\n\n- Result: **NOOP (no update available)** (exit 0)\n- Last successful auto-update in the log: **2026-02-27T00:50:07Z → UPDATE_OK (latest=2026.2.26)**\n\nIf you want, I can also paste the last ~10 lines from `memory/openclaw-updates.log` for quick auditing."
+      "lastSummary": "Cron run completed successfully.\n\n- Result: **NOOP (no update)** — OpenClaw was already up to date.\n- Logged at: **2026-02-28T20:15:07Z** in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last applied updates in the log:\n  - **2026.2.26** (UPDATE_OK at 2026-02-27T00:50:07Z)\n  - **2026.2.25** (UPDATE_OK at 2026-02-26T05:49:18Z)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772307873944,
+      "lastRunAt": 1772309673954,
       "lastStatus": "ok",
-      "lastDurationMs": 51592,
+      "lastDurationMs": 52705,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update job ran cleanly.\n\n- Result: **NOOP (no update available)** (exit 0)\n- Last successful auto-update in the log: **2026-02-27T00:50:07Z → UPDATE_OK (latest=2026.2.26)**\n\nIf you want, I can also paste the last ~10 lines from `memory/openclaw-updates.log` for quick auditing.",
-      "nextRunAt": 1772309673944,
+      "lastSummary": "Cron run completed successfully.\n\n- Result: **NOOP (no update)** — OpenClaw was already up to date.\n- Logged at: **2026-02-28T20:15:07Z** in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last applied updates in the log:\n  - **2026.2.26** (UPDATE_OK at 2026-02-27T00:50:07Z)\n  - **2026.2.25** (UPDATE_OK at 2026-02-26T05:49:18Z)",
+      "nextRunAt": 1772311473954,
       "model": null,
-      "lastTotalTokens": 16711,
-      "lastInputTokens": 12910,
-      "lastOutputTokens": 643
+      "lastTotalTokens": 16733,
+      "lastInputTokens": 12914,
+      "lastOutputTokens": 589
     }
   ]
 }
