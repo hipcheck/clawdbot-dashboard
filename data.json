@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772287207638,
+  "updatedAt": 1772289007737,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
-          "resetAt": 1772288112000
+          "usedPercent": 0,
+          "resetAt": 1772306114000
         },
         {
           "label": "Day",
-          "usedPercent": 52,
+          "usedPercent": 53,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772286273765,
+      "lastRunAt": 1772288073779,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP this run — no OpenClaw update was available.\n\nLatest log entries:\n- `2026-02-28T13:45:02Z NOOP (no update)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly (code **0**).\n\nLatest entry in `memory/openclaw-updates.log` for this run window shows: **`NOOP (no update)`** (no OpenClaw update available at the moment)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772286273765,
+      "lastRunAt": 1772288073779,
       "lastStatus": "ok",
-      "lastDurationMs": 49783,
+      "lastDurationMs": 54746,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP this run — no OpenClaw update was available.\n\nLatest log entries:\n- `2026-02-28T13:45:02Z NOOP (no update)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772288073765,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly (code **0**).\n\nLatest entry in `memory/openclaw-updates.log` for this run window shows: **`NOOP (no update)`** (no OpenClaw update available at the moment).",
+      "nextRunAt": 1772289873779,
       "model": null,
-      "lastTotalTokens": 12986,
-      "lastInputTokens": 9135,
-      "lastOutputTokens": 470
+      "lastTotalTokens": 15409,
+      "lastInputTokens": 11776,
+      "lastOutputTokens": 793
     }
   ]
 }
