@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772294407633,
+  "updatedAt": 1772296207281,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772293473824,
+      "lastRunAt": 1772295273833,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update script ran successfully (exit code 0). It didn’t print any output.\n\nOpenClaw version currently: **2026.2.26**."
+      "lastSummary": "Ran `openclaw_auto_update.py` (cron c621238c…). It exited **0** and **did not apply an update** — status was **NOOP (no update)**.\n\nLatest log entry:\n- `2026-02-28T16:15:05Z NOOP (no update)` (from `memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772293473824,
+      "lastRunAt": 1772295273833,
       "lastStatus": "ok",
-      "lastDurationMs": 45021,
+      "lastDurationMs": 53407,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update script ran successfully (exit code 0). It didn’t print any output.\n\nOpenClaw version currently: **2026.2.26**.",
-      "nextRunAt": 1772295273824,
+      "lastSummary": "Ran `openclaw_auto_update.py` (cron c621238c…). It exited **0** and **did not apply an update** — status was **NOOP (no update)**.\n\nLatest log entry:\n- `2026-02-28T16:15:05Z NOOP (no update)` (from `memory/openclaw-updates.log`)",
+      "nextRunAt": 1772297073833,
       "model": null,
-      "lastTotalTokens": 10949,
-      "lastInputTokens": 7002,
-      "lastOutputTokens": 266
+      "lastTotalTokens": 13295,
+      "lastInputTokens": 9422,
+      "lastOutputTokens": 454
     }
   ]
 }
