@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772303406304,
+  "updatedAt": 1772305207359,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1772306114000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772302473890,
+      "lastRunAt": 1772304273902,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run result: **NOOP (no update available)** — nothing was installed.\n\nLatest log entry:\n- `2026-02-28T18:15:05Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "Last completed run for `infraops:openclaw-auto-update` was clean and **no-op’d**:\n\n- **Result:** `NOOP (no update available)` (nothing installed)\n- **Latest log line:** `2026-02-28T18:15:05Z NOOP (no update)`\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nBut: the scheduler currently shows this cron job as **running** even though the update script doesn’t appear to have started for the 18:44 run:\n\n- `openclaw cron list` → status: **running**\n- No `openclaw_auto_update.py` process running\n- Lock file mtime is still **18:14**, not 18:44: `/home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock`\n\nThat suggests the **cron runner/gateway got stuck marking the job as running** (rather than the script hanging).\n\nWant me to **restart the OpenClaw gateway** to clear the stuck cron state? (low risk, but it can briefly interrupt running sessions)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772302473890,
+      "lastRunAt": 1772304273902,
       "lastStatus": "ok",
-      "lastDurationMs": 47980,
+      "lastDurationMs": 240838,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run result: **NOOP (no update available)** — nothing was installed.\n\nLatest log entry:\n- `2026-02-28T18:15:05Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772304273890,
+      "lastSummary": "Last completed run for `infraops:openclaw-auto-update` was clean and **no-op’d**:\n\n- **Result:** `NOOP (no update available)` (nothing installed)\n- **Latest log line:** `2026-02-28T18:15:05Z NOOP (no update)`\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nBut: the scheduler currently shows this cron job as **running** even though the update script doesn’t appear to have started for the 18:44 run:\n\n- `openclaw cron list` → status: **running**\n- No `openclaw_auto_update.py` process running\n- Lock file mtime is still **18:14**, not 18:44: `/home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock`\n\nThat suggests the **cron runner/gateway got stuck marking the job as running** (rather than the script hanging).\n\nWant me to **restart the OpenClaw gateway** to clear the stuck cron state? (low risk, but it can briefly interrupt running sessions).",
+      "nextRunAt": 1772306073902,
       "model": null,
-      "lastTotalTokens": 13739,
-      "lastInputTokens": 10070,
-      "lastOutputTokens": 489
+      "lastTotalTokens": 19290,
+      "lastInputTokens": 31369,
+      "lastOutputTokens": 2538
     }
   ]
 }
