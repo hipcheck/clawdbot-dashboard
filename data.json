@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772278206761,
+  "updatedAt": 1772280007781,
   "providers": [
     {
       "id": "openai-codex",
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1772267400025,
-      "lastStatus": "error",
-      "lastError": "⚠️ ✉️ Message failed",
-      "lastSummary": "⚠️ ✉️ Message failed"
+      "activityKind": "chat",
+      "activityLabel": "A cron job \"healthcheck:security-preflight\" just completed successfully.\n\nResult:\nFAIL\nTop Blockers:\n*   CRITICAL: The \"readwise\" skill contains dange",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772279951191,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Just a quick interruption: my scheduled security scan has finished.\n\nIt's confirming that the command blocklist is still empty, which means the fix we were attempting earlier unfortunately didn't get "
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772277273691,
+      "lastRunAt": 1772279073706,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** (exit **0**)\n\nLog confirms the latest entry:\n- `2026-02-28T11:15:38Z NOOP (no update)`"
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now (exit code **0**) and didn’t emit any output (so no errors/warnings were reported during this run)."
     },
     {
       "id": "km",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772193000016,
+      "lastRunAt": 1772279400027,
       "lastStatus": "ok",
-      "lastDurationMs": 380292,
+      "lastDurationMs": 552827,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL\n\nTop Blockers:\n*   **CRITICAL:** The `readwise` skill contains dangerous code patterns with potential credential harvesting. It should be reviewed and, if untrusted, removed.\n*   **WARN:** Some configured models (specifically `openai-codex/gpt-4o-mini`) are below recommended tiers and are more susceptible to prompt injection and tool misuse.\n*   Unable to verify `gateway.nodes.denyCommands` entries due to missing gateway configuration file.\n*   Unable to verify trusted proxy posture due to missing gateway configuration file.\n\nRecommendations:\n*   Review and remove the `readwise` skill if it is not trusted.\n*   Upgrade to the latest, top-tier model (GPT-5+ or Claude 4.5+) for bots with tools or untrusted inboxes.\n*   Locate the gateway configuration file to verify command restrictions and trusted proxy settings.",
-      "nextRunAt": 1772279400000,
+      "lastSummary": "FAIL\nTop Blockers:\n*   CRITICAL: The \"readwise\" skill contains dangerous code patterns (possible credential harvesting). It must be reviewed and either trusted or removed.\n*   WARN: No commands are denylisted for remote execution on nodes. This increases risk if a node or the agent is compromised.\n*   WARN: A configured fallback model (gpt-4o-mini) is below the recommended security tier, increasing prompt injection risks.\n*   INFO: Gateway is exposed to all devices on the Tailnet via `gateway.tailscale.mode=\"serve\"`.\n\nConfig Patch Suggestions:\n1.  To remove the dangerous skill, run:\n    `rm -rf /home/clawd/.openclaw/workspace/skills/readwise`\n2.  To set a baseline denylist for node commands, add common destructive commands. Example:\n    `openclaw config set gateway.nodes.denyCommands '[\"rm\", \"sudo\", \"mv\", \"dd\", \"mkfs\"]'`\n3.  To improve model security, remove the weaker fallback from the agent configuration:\n    `openclaw config delete agents.list.main.model.fallbacks 'openai-codex/gpt-4o-mini'`",
+      "nextRunAt": 1772365800000,
       "model": null,
-      "lastTotalTokens": 12679,
-      "lastInputTokens": 12679,
-      "lastOutputTokens": 275
+      "lastTotalTokens": 9416,
+      "lastInputTokens": 23886,
+      "lastOutputTokens": 1807
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772277273691,
+      "lastRunAt": 1772279073706,
       "lastStatus": "ok",
-      "lastDurationMs": 70459,
+      "lastDurationMs": 33474,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** (exit **0**)\n\nLog confirms the latest entry:\n- `2026-02-28T11:15:38Z NOOP (no update)`",
-      "nextRunAt": 1772279073691,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now (exit code **0**) and didn’t emit any output (so no errors/warnings were reported during this run).",
+      "nextRunAt": 1772280873706,
       "model": null,
-      "lastTotalTokens": 13134,
-      "lastInputTokens": 10371,
-      "lastOutputTokens": 489
+      "lastTotalTokens": 10884,
+      "lastInputTokens": 6912,
+      "lastOutputTokens": 237
     }
   ]
 }
