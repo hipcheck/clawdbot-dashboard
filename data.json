@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772267406903,
+  "updatedAt": 1772269206246,
   "providers": [
     {
       "id": "openai-codex",
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "chat",
-      "activityLabel": "System: Exec denied (gateway id=914c614f-e70e-4e04-8b17-72827e4b1403, approval-timeout): openclaw channels cycle telegram --account q\n\njson\n{\n  \"times",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772240547255,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "My apologies, the tool I use to monitor command progress has failed again, so I can't see whether the command was successful. This seems to be a recurring issue with my current setup.\n\nCould you let m"
+      "activityKind": "cron",
+      "activityLabel": "healthcheck:overnight-prescan",
+      "activityChannel": null,
+      "lastRunAt": 1772267400025,
+      "lastStatus": "error",
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "⚠️ ✉️ Message failed"
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772266473631,
+      "lastRunAt": 1772268273641,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully, but it was a **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-02-28T08:15:07Z NOOP (no update)`\n\nMost recent successful update:\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly with **no update available**.\n\nLatest log entry:\n- `2026-02-28T08:45:04Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772181000026,
-      "lastStatus": "ok",
-      "lastDurationMs": 661326,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772267400000,
+      "lastRunAt": 1772267400025,
+      "lastStatus": "error",
+      "lastDurationMs": 783626,
+      "consecutiveErrors": 1,
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "⚠️ ✉️ Message failed",
+      "nextRunAt": 1772353800000,
       "model": null,
-      "lastTotalTokens": 13275,
-      "lastInputTokens": 25998,
-      "lastOutputTokens": 173
+      "lastTotalTokens": 11317,
+      "lastInputTokens": 45532,
+      "lastOutputTokens": 2680
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772266473631,
+      "lastRunAt": 1772268273641,
       "lastStatus": "ok",
-      "lastDurationMs": 49880,
+      "lastDurationMs": 48028,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully, but it was a **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-02-28T08:15:07Z NOOP (no update)`\n\nMost recent successful update:\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
-      "nextRunAt": 1772268273631,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly with **no update available**.\n\nLatest log entry:\n- `2026-02-28T08:45:04Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
+      "nextRunAt": 1772270073641,
       "model": null,
-      "lastTotalTokens": 14864,
-      "lastInputTokens": 11586,
-      "lastOutputTokens": 544
+      "lastTotalTokens": 16169,
+      "lastInputTokens": 12285,
+      "lastOutputTokens": 417
     }
   ]
 }
