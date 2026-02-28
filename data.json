@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772281807801,
+  "updatedAt": 1772283606778,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772288112000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772280873717,
+      "lastRunAt": 1772282673729,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This cron run didn’t apply an update.\n\n- Latest entry: `2026-02-28T12:14:56Z SKIP (direct session active (age=710416ms))` (and again at `12:15:26Z`).\n- Last successful auto-update in the log: `UPDATE_OK (latest=2026.2.26)` at `2026-02-27T00:50:07Z`.\n\nSo you’re already on the most recent version it found; today’s invocation skipped because a non-cron “direct” session was considered active."
+      "lastSummary": "Ran `openclaw_auto_update.py` and it **no-op’d** — **no OpenClaw update was available** at the time.\n\n- Latest log entry: `2026-02-28T12:45:47Z NOOP (no update)`\n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- `openclaw update status --json` currently reports `availability.available=false` / no registry or git update available (registry latest shown: `2026.2.26`)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772280873717,
+      "lastRunAt": 1772282673729,
       "lastStatus": "ok",
-      "lastDurationMs": 79542,
+      "lastDurationMs": 79947,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This cron run didn’t apply an update.\n\n- Latest entry: `2026-02-28T12:14:56Z SKIP (direct session active (age=710416ms))` (and again at `12:15:26Z`).\n- Last successful auto-update in the log: `UPDATE_OK (latest=2026.2.26)` at `2026-02-27T00:50:07Z`.\n\nSo you’re already on the most recent version it found; today’s invocation skipped because a non-cron “direct” session was considered active.",
-      "nextRunAt": 1772282673717,
+      "lastSummary": "Ran `openclaw_auto_update.py` and it **no-op’d** — **no OpenClaw update was available** at the time.\n\n- Latest log entry: `2026-02-28T12:45:47Z NOOP (no update)`\n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- `openclaw update status --json` currently reports `availability.available=false` / no registry or git update available (registry latest shown: `2026.2.26`).",
+      "nextRunAt": 1772284473729,
       "model": null,
-      "lastTotalTokens": 16852,
-      "lastInputTokens": 19938,
-      "lastOutputTokens": 1063
+      "lastTotalTokens": 15996,
+      "lastInputTokens": 12620,
+      "lastOutputTokens": 936
     }
   ]
 }
