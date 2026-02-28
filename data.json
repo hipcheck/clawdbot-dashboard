@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772247606949,
+  "updatedAt": 1772249406099,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772246673485,
+      "lastRunAt": 1772248473496,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Looks like that auto-update run was a no-op.\n\nI just ran the same script manually and it returned:\n\n- `NOOP (no update)`\n- exit code `0` (success)\n\nSo there was nothing new to pull/install at this time."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Exit code: **0 (success)**\n- No stdout/stderr output was produced."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772246673485,
+      "lastRunAt": 1772248473496,
       "lastStatus": "ok",
-      "lastDurationMs": 34160,
+      "lastDurationMs": 39050,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Looks like that auto-update run was a no-op.\n\nI just ran the same script manually and it returned:\n\n- `NOOP (no update)`\n- exit code `0` (success)\n\nSo there was nothing new to pull/install at this time.",
-      "nextRunAt": 1772248473485,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Exit code: **0 (success)**\n- No stdout/stderr output was produced.",
+      "nextRunAt": 1772250273496,
       "model": null,
-      "lastTotalTokens": 11151,
-      "lastInputTokens": 9024,
-      "lastOutputTokens": 340
+      "lastTotalTokens": 10841,
+      "lastInputTokens": 6793,
+      "lastOutputTokens": 221
     }
   ]
 }
