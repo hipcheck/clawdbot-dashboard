@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772262008199,
+  "updatedAt": 1772263806968,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772261073586,
+      "lastRunAt": 1772262873596,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**). No output was produced.\n\nCurrent installed versions after the run:\n- **openclaw:** `2026.2.26`\n- **node:** `v22.22.0`\n\n`openclaw status` looks normal (no errors reported)."
+      "lastSummary": "The auto-update cron ran cleanly.\n\nLatest log entry:\n- `2026-02-28T07:15:03Z NOOP (no update)`\n\nSo: **no OpenClaw update was available**, and nothing was changed on this run.\n\n(Full audit trail is in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`.)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772261073586,
+      "lastRunAt": 1772262873596,
       "lastStatus": "ok",
-      "lastDurationMs": 71287,
+      "lastDurationMs": 46555,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**). No output was produced.\n\nCurrent installed versions after the run:\n- **openclaw:** `2026.2.26`\n- **node:** `v22.22.0`\n\n`openclaw status` looks normal (no errors reported).",
-      "nextRunAt": 1772262873586,
+      "lastSummary": "The auto-update cron ran cleanly.\n\nLatest log entry:\n- `2026-02-28T07:15:03Z NOOP (no update)`\n\nSo: **no OpenClaw update was available**, and nothing was changed on this run.\n\n(Full audit trail is in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`.)",
+      "nextRunAt": 1772264673596,
       "model": null,
-      "lastTotalTokens": 11969,
-      "lastInputTokens": 8050,
-      "lastOutputTokens": 504
+      "lastTotalTokens": 16175,
+      "lastInputTokens": 12568,
+      "lastOutputTokens": 515
     }
   ]
 }
