@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772289007737,
+  "updatedAt": 1772290807981,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772306114000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772288073779,
+      "lastRunAt": 1772289873790,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly (code **0**).\n\nLatest entry in `memory/openclaw-updates.log` for this run window shows: **`NOOP (no update)`** (no OpenClaw update available at the moment)."
+      "lastSummary": "Auto-update run completed successfully.\n\n- Result: **NOOP (no update available)**\n- Logged at: **2026-02-28T14:45:06Z** in `memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772288073779,
+      "lastRunAt": 1772289873790,
       "lastStatus": "ok",
-      "lastDurationMs": 54746,
+      "lastDurationMs": 60811,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly (code **0**).\n\nLatest entry in `memory/openclaw-updates.log` for this run window shows: **`NOOP (no update)`** (no OpenClaw update available at the moment).",
-      "nextRunAt": 1772289873779,
+      "lastSummary": "Auto-update run completed successfully.\n\n- Result: **NOOP (no update available)**\n- Logged at: **2026-02-28T14:45:06Z** in `memory/openclaw-updates.log`",
+      "nextRunAt": 1772291673790,
       "model": null,
-      "lastTotalTokens": 15409,
-      "lastInputTokens": 11776,
-      "lastOutputTokens": 793
+      "lastTotalTokens": 14331,
+      "lastInputTokens": 16867,
+      "lastOutputTokens": 557
     }
   ]
 }
