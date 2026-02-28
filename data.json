@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772301607794,
+  "updatedAt": 1772303406304,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772300673870,
+      "lastRunAt": 1772302473890,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Just ran `openclaw_auto_update.py` and it **no-op’d**:\n\n- Output: `NOOP (no update)`\n- `openclaw update status --json` reports **no registry or git update available** right now (stable channel).\n- Registry latest seen: **2026.2.26**."
+      "lastSummary": "Cron run result: **NOOP (no update available)** — nothing was installed.\n\nLatest log entry:\n- `2026-02-28T18:15:05Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772300673870,
+      "lastRunAt": 1772302473890,
       "lastStatus": "ok",
-      "lastDurationMs": 54441,
+      "lastDurationMs": 47980,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Just ran `openclaw_auto_update.py` and it **no-op’d**:\n\n- Output: `NOOP (no update)`\n- `openclaw update status --json` reports **no registry or git update available** right now (stable channel).\n- Registry latest seen: **2026.2.26**.",
-      "nextRunAt": 1772302473870,
+      "lastSummary": "Cron run result: **NOOP (no update available)** — nothing was installed.\n\nLatest log entry:\n- `2026-02-28T18:15:05Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
+      "nextRunAt": 1772304273890,
       "model": null,
-      "lastTotalTokens": 14119,
-      "lastInputTokens": 10107,
-      "lastOutputTokens": 542
+      "lastTotalTokens": 13739,
+      "lastInputTokens": 10070,
+      "lastOutputTokens": 489
     }
   ]
 }
