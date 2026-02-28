@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772258407294,
+  "updatedAt": 1772260206927,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772257473565,
+      "lastRunAt": 1772259273579,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP this run — `openclaw_auto_update.py` found **no update available**.\n\nLatest log entry:\n- `2026-02-28T05:45:04Z NOOP (no update)` (Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "Ran `openclaw_auto_update.py` successfully.\n\nResult: **NOOP (no update available)** — nothing to install right now.\n\nLatest log entry:\n- `2026-02-28T06:15:08Z NOOP (no update)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772257473565,
+      "lastRunAt": 1772259273579,
       "lastStatus": "ok",
-      "lastDurationMs": 45244,
+      "lastDurationMs": 48619,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP this run — `openclaw_auto_update.py` found **no update available**.\n\nLatest log entry:\n- `2026-02-28T05:45:04Z NOOP (no update)` (Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772259273565,
+      "lastSummary": "Ran `openclaw_auto_update.py` successfully.\n\nResult: **NOOP (no update available)** — nothing to install right now.\n\nLatest log entry:\n- `2026-02-28T06:15:08Z NOOP (no update)`\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772261073579,
       "model": null,
-      "lastTotalTokens": 16096,
-      "lastInputTokens": 20171,
-      "lastOutputTokens": 438
+      "lastTotalTokens": 12976,
+      "lastInputTokens": 9104,
+      "lastOutputTokens": 426
     }
   ]
 }
