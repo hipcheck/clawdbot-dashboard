@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772272807191,
+  "updatedAt": 1772274606472,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772271873659,
+      "lastRunAt": 1772273673668,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update check ran.\n\n- Result: **NOOP (no update)**  \n- Meaning: OpenClaw is already up to date, so nothing was changed."
+      "lastSummary": "Ran `openclaw_auto_update.py` for cron `c621238c-158e-4342-90c7-9ebb9f8ab0a3`: **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-02-28T10:15:04Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772271873659,
+      "lastRunAt": 1772273673668,
       "lastStatus": "ok",
-      "lastDurationMs": 34442,
+      "lastDurationMs": 48955,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update check ran.\n\n- Result: **NOOP (no update)**  \n- Meaning: OpenClaw is already up to date, so nothing was changed.",
-      "nextRunAt": 1772273673659,
+      "lastSummary": "Ran `openclaw_auto_update.py` for cron `c621238c-158e-4342-90c7-9ebb9f8ab0a3`: **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-02-28T10:15:04Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
+      "nextRunAt": 1772275473668,
       "model": null,
-      "lastTotalTokens": 10745,
-      "lastInputTokens": 12420,
-      "lastOutputTokens": 134
+      "lastTotalTokens": 14451,
+      "lastInputTokens": 10678,
+      "lastOutputTokens": 508
     }
   ]
 }
