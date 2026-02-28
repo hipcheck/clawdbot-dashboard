@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772314207381,
+  "updatedAt": 1772316006868,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772313273982,
+      "lastRunAt": 1772315073992,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That auto-update cron run was a no-op — **no OpenClaw update was available**, so nothing was installed.\n\nYou can see the audit trail here:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nLatest entries are all `NOOP (no update)`."
+      "lastSummary": "NOOP — the auto-update script ran and found **no OpenClaw update available** (exit code **0**)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772313273982,
+      "lastRunAt": 1772315073992,
       "lastStatus": "ok",
-      "lastDurationMs": 49495,
+      "lastDurationMs": 43858,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That auto-update cron run was a no-op — **no OpenClaw update was available**, so nothing was installed.\n\nYou can see the audit trail here:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nLatest entries are all `NOOP (no update)`.",
-      "nextRunAt": 1772315073982,
+      "lastSummary": "NOOP — the auto-update script ran and found **no OpenClaw update available** (exit code **0**).",
+      "nextRunAt": 1772316873992,
       "model": null,
-      "lastTotalTokens": 13480,
-      "lastInputTokens": 9646,
-      "lastOutputTokens": 582
+      "lastTotalTokens": 12511,
+      "lastInputTokens": 8473,
+      "lastOutputTokens": 297
     }
   ]
 }
