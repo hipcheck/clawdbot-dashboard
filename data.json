@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772245807070,
+  "updatedAt": 1772247606949,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772252106000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772244873471,
+      "lastRunAt": 1772246673485,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update)** — everything is already up to date."
+      "lastSummary": "Looks like that auto-update run was a no-op.\n\nI just ran the same script manually and it returned:\n\n- `NOOP (no update)`\n- exit code `0` (success)\n\nSo there was nothing new to pull/install at this time."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772244873471,
+      "lastRunAt": 1772246673485,
       "lastStatus": "ok",
-      "lastDurationMs": 35354,
+      "lastDurationMs": 34160,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update)** — everything is already up to date.",
-      "nextRunAt": 1772246673471,
+      "lastSummary": "Looks like that auto-update run was a no-op.\n\nI just ran the same script manually and it returned:\n\n- `NOOP (no update)`\n- exit code `0` (success)\n\nSo there was nothing new to pull/install at this time.",
+      "nextRunAt": 1772248473485,
       "model": null,
-      "lastTotalTokens": 10714,
-      "lastInputTokens": 6373,
-      "lastOutputTokens": 90
+      "lastTotalTokens": 11151,
+      "lastInputTokens": 9024,
+      "lastOutputTokens": 340
     }
   ]
 }
