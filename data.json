@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772236806928,
+  "updatedAt": 1772238606794,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772252080000
+          "usedPercent": 1,
+          "resetAt": 1772252106000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772235873415,
+      "lastRunAt": 1772237673425,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run was a **no-op** — there was **no OpenClaw update available** at the time.\n\nLatest log entry:\n- `2026-02-27T23:45:05Z NOOP (no update)`\n\nYou can see the full history here:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Latest `openclaw-auto-update` run (2026-02-28 00:15:05Z) was a **NOOP** — **no update available**.\n\nRecent history from `memory/openclaw-updates.log`:\n- 2026-02-27 00:50:07Z — **UPDATE_OK** (latest=2026.2.26)\n- 2026-02-28 00:15:05Z — **NOOP (no update)**"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772235873415,
+      "lastRunAt": 1772237673425,
       "lastStatus": "ok",
-      "lastDurationMs": 51869,
+      "lastDurationMs": 48489,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run was a **no-op** — there was **no OpenClaw update available** at the time.\n\nLatest log entry:\n- `2026-02-27T23:45:05Z NOOP (no update)`\n\nYou can see the full history here:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772237673415,
+      "lastSummary": "Latest `openclaw-auto-update` run (2026-02-28 00:15:05Z) was a **NOOP** — **no update available**.\n\nRecent history from `memory/openclaw-updates.log`:\n- 2026-02-27 00:50:07Z — **UPDATE_OK** (latest=2026.2.26)\n- 2026-02-28 00:15:05Z — **NOOP (no update)**",
+      "nextRunAt": 1772239473425,
       "model": null,
-      "lastTotalTokens": 14610,
-      "lastInputTokens": 18593,
-      "lastOutputTokens": 626
+      "lastTotalTokens": 15891,
+      "lastInputTokens": 12888,
+      "lastOutputTokens": 565
     }
   ]
 }
