@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772292607045,
+  "updatedAt": 1772294407633,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772291673806,
+      "lastRunAt": 1772293473824,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: **success (exit code 0)**\n- Output: **no stdout/stderr captured** (script likely had nothing to update or logs elsewhere)\n\nIf you want, I can also run `openclaw status` and `openclaw gateway status` to confirm the currently running version/service state."
+      "lastSummary": "Auto-update script ran successfully (exit code 0). It didn’t print any output.\n\nOpenClaw version currently: **2026.2.26**."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772291673806,
+      "lastRunAt": 1772293473824,
       "lastStatus": "ok",
-      "lastDurationMs": 39046,
+      "lastDurationMs": 45021,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\n- Result: **success (exit code 0)**\n- Output: **no stdout/stderr captured** (script likely had nothing to update or logs elsewhere)\n\nIf you want, I can also run `openclaw status` and `openclaw gateway status` to confirm the currently running version/service state.",
-      "nextRunAt": 1772293473806,
+      "lastSummary": "Auto-update script ran successfully (exit code 0). It didn’t print any output.\n\nOpenClaw version currently: **2026.2.26**.",
+      "nextRunAt": 1772295273824,
       "model": null,
-      "lastTotalTokens": 10864,
-      "lastInputTokens": 6862,
-      "lastOutputTokens": 345
+      "lastTotalTokens": 10949,
+      "lastInputTokens": 7002,
+      "lastOutputTokens": 266
     }
   ]
 }
