@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772265606992,
+  "updatedAt": 1772267406903,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1772270108000
         },
         {
           "label": "Day",
-          "usedPercent": 51,
+          "usedPercent": 52,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772264673610,
+      "lastRunAt": 1772266473631,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update cron ran cleanly.\n\n- `openclaw_auto_update.py` exited **0** (no output, so likely “no changes” or a quiet success).\n- Current OpenClaw version: **2026.2.26**\n- `openclaw status` looks healthy (Gateway service running; Telegram OK).\n\nOne thing surfaced in `openclaw status`: **Security audit WARN** that a configured model is below recommended tiers (`openai-codex/gpt-4o-mini`). If you want, I can help you locate where that model is set and bump it to a GPT‑5+ tier."
+      "lastSummary": "Auto-update run completed successfully, but it was a **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-02-28T08:15:07Z NOOP (no update)`\n\nMost recent successful update:\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772264673610,
+      "lastRunAt": 1772266473631,
       "lastStatus": "ok",
-      "lastDurationMs": 60803,
+      "lastDurationMs": 49880,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron ran cleanly.\n\n- `openclaw_auto_update.py` exited **0** (no output, so likely “no changes” or a quiet success).\n- Current OpenClaw version: **2026.2.26**\n- `openclaw status` looks healthy (Gateway service running; Telegram OK).\n\nOne thing surfaced in `openclaw status`: **Security audit WARN** that a configured model is below recommended tiers (`openai-codex/gpt-4o-mini`). If you want, I can help you locate where that model is set and bump it to a GPT‑5+ tier.",
-      "nextRunAt": 1772266473610,
+      "lastSummary": "Auto-update run completed successfully, but it was a **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-02-28T08:15:07Z NOOP (no update)`\n\nMost recent successful update:\n- `2026-02-26T05:46:15Z UPDATE_START (latest=2026.2.25)`\n- `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
+      "nextRunAt": 1772268273631,
       "model": null,
-      "lastTotalTokens": 13177,
-      "lastInputTokens": 9480,
-      "lastOutputTokens": 499
+      "lastTotalTokens": 14864,
+      "lastInputTokens": 11586,
+      "lastOutputTokens": 544
     }
   ]
 }
