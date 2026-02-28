@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772310607128,
+  "updatedAt": 1772312407355,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772309673954,
+      "lastRunAt": 1772311473968,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run completed successfully.\n\n- Result: **NOOP (no update)** — OpenClaw was already up to date.\n- Logged at: **2026-02-28T20:15:07Z** in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last applied updates in the log:\n  - **2026.2.26** (UPDATE_OK at 2026-02-27T00:50:07Z)\n  - **2026.2.25** (UPDATE_OK at 2026-02-26T05:49:18Z)"
+      "lastSummary": "That cron run completed cleanly and **didn’t apply any update**.\n\nLatest entry in `memory/openclaw-updates.log`:\n- `2026-02-28T20:45:06Z NOOP (no update)`\n\nSo the auto-updater checked `openclaw update status` and found nothing new to install."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772309673954,
+      "lastRunAt": 1772311473968,
       "lastStatus": "ok",
-      "lastDurationMs": 52705,
+      "lastDurationMs": 46930,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run completed successfully.\n\n- Result: **NOOP (no update)** — OpenClaw was already up to date.\n- Logged at: **2026-02-28T20:15:07Z** in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last applied updates in the log:\n  - **2026.2.26** (UPDATE_OK at 2026-02-27T00:50:07Z)\n  - **2026.2.25** (UPDATE_OK at 2026-02-26T05:49:18Z)",
-      "nextRunAt": 1772311473954,
+      "lastSummary": "That cron run completed cleanly and **didn’t apply any update**.\n\nLatest entry in `memory/openclaw-updates.log`:\n- `2026-02-28T20:45:06Z NOOP (no update)`\n\nSo the auto-updater checked `openclaw update status` and found nothing new to install.",
+      "nextRunAt": 1772313273968,
       "model": null,
-      "lastTotalTokens": 16733,
-      "lastInputTokens": 12914,
-      "lastOutputTokens": 589
+      "lastTotalTokens": 13054,
+      "lastInputTokens": 9347,
+      "lastOutputTokens": 495
     }
   ]
 }
