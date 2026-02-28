@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772242205917,
+  "updatedAt": 1772244007111,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772241273450,
+      "lastRunAt": 1772243073461,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` twice and it exited cleanly both times (exit code `0`).\n\nI attempted to capture and show the script output (redirected to `memory/last_auto_update.log`), but the tool interface is currently returning `SKIP (direct session active ...)` for log/file reads, so I can’t display the contents from here right now.\n\nIf you want, paste the contents of:\n\n`/home/clawd/.openclaw/workspace/memory/last_auto_update.log`\n\nand I’ll sanity-check what it did (what version it detected, whether it updated OpenClaw, etc.)."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — **exit code 0 (success)**. No stdout/stderr output.\n\nAlso checked `openclaw status` — **healthy**, command exited 0."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772241273450,
+      "lastRunAt": 1772243073461,
       "lastStatus": "ok",
-      "lastDurationMs": 89052,
+      "lastDurationMs": 49723,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` twice and it exited cleanly both times (exit code `0`).\n\nI attempted to capture and show the script output (redirected to `memory/last_auto_update.log`), but the tool interface is currently returning `SKIP (direct session active ...)` for log/file reads, so I can’t display the contents from here right now.\n\nIf you want, paste the contents of:\n\n`/home/clawd/.openclaw/workspace/memory/last_auto_update.log`\n\nand I’ll sanity-check what it did (what version it detected, whether it updated OpenClaw, etc.).",
-      "nextRunAt": 1772243073450,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — **exit code 0 (success)**. No stdout/stderr output.\n\nAlso checked `openclaw status` — **healthy**, command exited 0.",
+      "nextRunAt": 1772244873461,
       "model": null,
-      "lastTotalTokens": 11601,
-      "lastInputTokens": 8374,
-      "lastOutputTokens": 942
+      "lastTotalTokens": 11680,
+      "lastInputTokens": 7836,
+      "lastOutputTokens": 348
     }
   ]
 }
