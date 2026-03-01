@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772368206665,
+  "updatedAt": 1772370007183,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772379879000
         },
         {
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "chat",
-      "activityLabel": "subagent message",
-      "activityChannel": "subagent",
-      "lastRunAt": 1772366121615,
+      "activityKind": "cron",
+      "activityLabel": "healthcheck:security-preflight",
+      "activityChannel": null,
+      "lastRunAt": 1772365800022,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<think>\nCRITICAL INSTRUCTION 1: We must avoid using `cat` inside `exec`. We successfully used `read` for the configuration file and `exec` for the OpenClaw command.\nCRITICAL INSTRUCTION 2: No more too"
+      "lastSummary": null
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772367274360,
+      "lastRunAt": 1772369074371,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The `infraops:openclaw-auto-update` run **did not update anything** — it **skipped** because a **direct session was active** at the time.\n\nLatest log entries:\n\n- `2026-03-01T12:15:00Z SKIP (direct session active (age=772105ms))`\n- (two immediate retries also skipped for the same reason)\n\nSource: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want it to be more eager, we can lower `OC_BUSY_SESSION_MS` (currently 15 minutes), but the current behavior is the “don’t update while someone’s actively chatting” safety guard."
+      "lastSummary": "Auto-update cron ran successfully (exit code 0).\n\nLatest log entry:\n- `2026-03-01T12:45:04Z NOOP (no update)` (no OpenClaw update available/applied)\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772367274360,
+      "lastRunAt": 1772369074371,
       "lastStatus": "ok",
-      "lastDurationMs": 87704,
+      "lastDurationMs": 47858,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The `infraops:openclaw-auto-update` run **did not update anything** — it **skipped** because a **direct session was active** at the time.\n\nLatest log entries:\n\n- `2026-03-01T12:15:00Z SKIP (direct session active (age=772105ms))`\n- (two immediate retries also skipped for the same reason)\n\nSource: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want it to be more eager, we can lower `OC_BUSY_SESSION_MS` (currently 15 minutes), but the current behavior is the “don’t update while someone’s actively chatting” safety guard.",
-      "nextRunAt": 1772369074360,
+      "lastSummary": "Auto-update cron ran successfully (exit code 0).\n\nLatest log entry:\n- `2026-03-01T12:45:04Z NOOP (no update)` (no OpenClaw update available/applied)\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772370874371,
       "model": null,
-      "lastTotalTokens": 14125,
-      "lastInputTokens": 12053,
-      "lastOutputTokens": 827
+      "lastTotalTokens": 16003,
+      "lastInputTokens": 12422,
+      "lastOutputTokens": 496
     }
   ]
 }
