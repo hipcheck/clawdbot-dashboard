@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772352008234,
+  "updatedAt": 1772353810861,
   "providers": [
     {
       "id": "openai-codex",
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 4,
-          "resetAt": 1772798400689
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -74,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772351074247,
+      "lastRunAt": 1772352874258,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron ran successfully. Latest entry in `memory/openclaw-updates.log`:\n\n- `2026-03-01T07:45:07Z NOOP (no update)`\n\nSo nothing was updated this run—OpenClaw was already up to date."
+      "lastSummary": "Checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`: the run at **2026-03-01T08:15:07Z** recorded **`NOOP (no update)`** — nothing to install this time."
     },
     {
       "id": "km",
@@ -225,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772351074247,
+      "lastRunAt": 1772352874258,
       "lastStatus": "ok",
-      "lastDurationMs": 48083,
+      "lastDurationMs": 46746,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron ran successfully. Latest entry in `memory/openclaw-updates.log`:\n\n- `2026-03-01T07:45:07Z NOOP (no update)`\n\nSo nothing was updated this run—OpenClaw was already up to date.",
-      "nextRunAt": 1772352874247,
+      "lastSummary": "Checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`: the run at **2026-03-01T08:15:07Z** recorded **`NOOP (no update)`** — nothing to install this time.",
+      "nextRunAt": 1772354674258,
       "model": null,
-      "lastTotalTokens": 13710,
-      "lastInputTokens": 9742,
-      "lastOutputTokens": 455
+      "lastTotalTokens": 13344,
+      "lastInputTokens": 15628,
+      "lastOutputTokens": 490
     }
   ]
 }
