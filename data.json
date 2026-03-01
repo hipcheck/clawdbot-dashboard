@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772323209523,
+  "updatedAt": 1772325009648,
   "providers": [
     {
       "id": "openai-codex",
@@ -28,8 +28,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 5,
+          "resetAt": 1772341200899
+        },
+        {
+          "label": "Week",
+          "usedPercent": 2,
+          "resetAt": 1772798399899
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -64,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772322274044,
+      "lastRunAt": 1772324074060,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` just ran successfully (exit code `0`). It didn’t print anything to stdout.\n\nI spot-checked the result:\n\n- Installed OpenClaw version: `2026.2.26` (`openclaw --version`)\n- Latest on npm: `2026.2.26` (`npm view openclaw version`)\n\nSo you were already up to date—nothing to install this run."
+      "lastSummary": "Auto-update script ran successfully (exit code 0). No stdout was produced.\n\nI also checked `openclaw status` right after:\n- OpenClaw reports **Update: npm latest 2026.2.26**\n- `openclaw status` briefly showed **Gateway unreachable (timeout)**, but a follow-up `openclaw gateway probe` confirms:\n  - **Local loopback ws://127.0.0.1:18789 → Connect OK (52ms), RPC OK**\n  - Gateway app version: **2026.2.26**\n\nSo it looks like that “unreachable” was transient. If you want, I can run `openclaw logs --follow` for ~30s to see if there are intermittent gateway timeouts."
     },
     {
       "id": "km",
@@ -215,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772322274044,
+      "lastRunAt": 1772324074060,
       "lastStatus": "ok",
-      "lastDurationMs": 53660,
+      "lastDurationMs": 107657,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` just ran successfully (exit code `0`). It didn’t print anything to stdout.\n\nI spot-checked the result:\n\n- Installed OpenClaw version: `2026.2.26` (`openclaw --version`)\n- Latest on npm: `2026.2.26` (`npm view openclaw version`)\n\nSo you were already up to date—nothing to install this run.",
-      "nextRunAt": 1772324074044,
+      "lastSummary": "Auto-update script ran successfully (exit code 0). No stdout was produced.\n\nI also checked `openclaw status` right after:\n- OpenClaw reports **Update: npm latest 2026.2.26**\n- `openclaw status` briefly showed **Gateway unreachable (timeout)**, but a follow-up `openclaw gateway probe` confirms:\n  - **Local loopback ws://127.0.0.1:18789 → Connect OK (52ms), RPC OK**\n  - Gateway app version: **2026.2.26**\n\nSo it looks like that “unreachable” was transient. If you want, I can run `openclaw logs --follow` for ~30s to see if there are intermittent gateway timeouts.",
+      "nextRunAt": 1772325874060,
       "model": null,
-      "lastTotalTokens": 11254,
-      "lastInputTokens": 8056,
-      "lastOutputTokens": 572
+      "lastTotalTokens": 12702,
+      "lastInputTokens": 9149,
+      "lastOutputTokens": 624
     }
   ]
 }
