@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772337608003,
+  "updatedAt": 1772339407296,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 7,
           "resetAt": 1772343878000
         },
         {
           "label": "Day",
-          "usedPercent": 55,
+          "usedPercent": 57,
           "resetAt": 1772497599000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 18,
-          "resetAt": 1772341200230
+          "usedPercent": 14,
+          "resetAt": 1772341200541
         },
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798400230
+          "resetAt": 1772798400541
         }
       ],
       "error": null
@@ -75,22 +75,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772336674138,
+      "lastRunAt": 1772338474150,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run looks normal.\n\nI checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`, and the invocation right after your timestamp recorded:\n\n- `2026-03-01T03:45:05Z NOOP (no update)`\n\nSo the script ran, found the system idle, checked `openclaw update status`, and determined there was **no OpenClaw update available**, then exited cleanly (exit code `0`)."
+      "lastSummary": "That auto-update cron run didn’t apply anything.\n\n- Current behavior: **SKIP** because a **direct session was active** at the time (so it avoids updating while you’re chatting/using OpenClaw).\n- Latest log entry shows: `2026-03-01T04:15:10Z SKIP (direct session active ...)`\n- Recent runs have mostly been `NOOP (no update)`, meaning **no newer OpenClaw version was available** anyway.\n- Last successful auto-update in the log: **2026-02-27T00:50:07Z → UPDATE_OK (latest=2026.2.26)**\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nNikola nightly journal — OK (Mac node online)\n\n- CURRENT_TS (America/New",
+      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n- Nikola nightly journal: OK (Mac node online)\n- CURRENT_TS (America/New",
       "activityChannel": "telegram",
-      "lastRunAt": 1772251323021,
+      "lastRunAt": 1772337683077,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Tonight’s journal comment went through successfully (Mac was online).\n\n- NYC time was **2026-02-27 23:00**, so **TARGET_DATE = 2026-02-27**.\n- I opened `/Users/andreasallmaier/Documents/Brain/journal/"
+      "lastSummary": "Tonight’s journal comment ran successfully (Mac was online).\n\n- NYC time was **2026-02-28 23:01**, so **TARGET_DATE = 2026-02-28**.\n- I opened `/Users/andreasallmaier/Documents/Brain/journal/2026-02-2"
     }
   ],
   "cronJobs": [
@@ -172,17 +172,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772251200020,
+      "lastRunAt": 1772337600014,
       "lastStatus": "ok",
-      "lastDurationMs": 123352,
+      "lastDurationMs": 83445,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal — OK (Mac node online)\n\n- CURRENT_TS (America/New_York): 2026-02-27 23:00 (computed via /usr/bin/python3 on Mac)\n- TARGET_DATE logic:\n  - Time was within 23:00:00–23:59:59 → TARGET_DATE = 2026-02-27\n- Target file: `/Users/andreasallmaier/Documents/Brain/journal/2026-02-27.md`\n  - File existed and was non-empty (had stream-of-consciousness content)\n  - `\\t* [[clawdbot]]` section already present\n  - Updated the `[[clawdbot]]` section by replacing the placeholder empty bullet with 1 new entry (plus nested bullets), including:\n    - Reflection + micro-protocol for the “ears glowing red” embarrassment moment\n    - Late-night habit friction tweak\n    - App-idea notes (retrieval practice + spaced re-test; “zero-decision” capture)\n    - Readwise quote (text included) about HRV as a feedback signal\n    - Further reading with 2 peer-reviewed DOI links (each with 1-line relevance)\n    - Nested timestamp bullet: `2026-02-27 23:01 (America/New_York)`\n- Verified by re-reading the `[[clawdbot]]` section after write; content is present and localized to that section.",
-      "nextRunAt": 1772337600000,
+      "lastSummary": "- Nikola nightly journal: OK (Mac node online)\n- CURRENT_TS (America/New_York): 2026-02-28 23:01 (from /usr/bin/python3 on Mac)\n- TARGET_DATE logic:\n  - CURRENT_TS is between 23:00:00–23:59:59 → TARGET_DATE = 2026-02-28\n- Target file:\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-02-28.md\n  - Status: found + non-empty (contains journal content beyond YAML/title)\n- [[clawdbot]] section:\n  - Already present at top-level (`\\t* [[clawdbot]]`)\n  - Added exactly ONE new entry under it (no duplicates):\n    - `\\t\\t* Nikola nightly journal — 2026-02-28`\n    - Included nested timestamp bullet using CURRENT_TS\n    - Included minimal reflections + 2 evidence/guideline links (AHA/ACC 2018 + ESC/EAS 2019)\n- Verification:\n  - Re-read the full `[[clawdbot]]` section and confirmed the new entry + timestamp + links are present.",
+      "nextRunAt": 1772424000000,
       "model": null,
-      "lastTotalTokens": 17422,
-      "lastInputTokens": 20328,
-      "lastOutputTokens": 4616
+      "lastTotalTokens": 11219,
+      "lastInputTokens": 12933,
+      "lastOutputTokens": 3649
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -208,17 +208,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772251800019,
+      "lastRunAt": 1772338200027,
       "lastStatus": "ok",
-      "lastDurationMs": 135359,
+      "lastDurationMs": 116718,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-02-27T23:10:00-05:00\n\n- Shipped/Changed\n  - Disk changes (last ~24h, excluding caches/log spam):\n    - Updated: `scripts/openclaw_auto_update.py`\n    - Updated: `unfair-advantage/setup-job-pipeline-cron.sh`\n    - Updated: `unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - Updated: `clawdbot-dashboard/data.json`\n    - Touched/updated: `memory/openclaw-updates.log`, `memory/openclaw-auto-update.lock`, `memory/last_auto_update.log`\n  - Git commits (last 24h in `/home/clawd/.openclaw/workspace`): **none**.\n\n- Worked\n  - Cron activity (last ~24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`):\n    - `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (infraops:openclaw-auto-update): **48** runs, all `ok`.\n      - Typical behavior: `NOOP` / `SKIP (direct session active)`.\n    - `03cf0eec-72cb-4012-87aa-aa0962b1a197` (NYC SMM job pipeline): **3** runs, all `ok`.\n      - Net-new roles appended: 0.\n      - Refreshed “Last seen” for some tracked roles; wrote run metadata/log.\n      - The pipeline job reports it committed+pushed changes in its own repo (e.g., `8bb1591`, `391271d`).\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` (Nikola nightly journal): `ok` (“Mac node online”).\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` (healthcheck report): `ok` run, produced a **FAIL** report (see below).\n\n- Failed/Flaky\n  - Cron `5a45f0e7-fed2-450e-91e5-e205656cc8c2` healthcheck output flagged:\n    - **CRITICAL:** `readwise` skill contains dangerous code patterns with potential credential harvesting (needs review).\n    - **WARN:** some configured models are below recommended tiers (more prompt-injection/tool-misuse risk).\n    - Multiple “unable to verify …” items due to missing gateway configuration context.\n  - Job pipeline (`03cf0eec-72cb-4012-87aa-aa0962b1a197`):\n    - One run had a Brave `web_search` 429 that stayed rate-limited after retry (recorded as partial).\n    - One run: Apple listings couldn’t be extracted because the **browser tool f…",
-      "nextRunAt": 1772338200000,
+      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-02-28T23:10:16-05:00\n\n- Shipped/Changed\n  - Git commits (last 24h in `/home/clawd/.openclaw/workspace`): **none**.\n  - Noteworthy disk changes (last ~24h; excluding caches/log spam):\n    - Updated: `clawdbot-dashboard/data.json`\n    - Touched: `memory/openclaw-auto-update.lock`\n\n- Worked\n  - Cron activity (last ~24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`):\n    - `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (infraops:openclaw-auto-update): **48** runs, all `ok`.\n      - Typical behavior: `NOOP (no update)` / `SKIP (direct session active)`.\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` (Nikola nightly journal): `ok` (Mac node online; updated the 2026-02-28 journal note on the Mac).\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` (morning proposal): `ok` — produced a proposal to implement automated daily security + update checks.\n    - `a8c1dd0d-feb9-4882-9cfb-a49526c169d7` (clawdbot:daily-ops-journal): `ok` (this run).\n\n- Failed/Flaky\n  - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` (healthcheck report): `ok` run but reported overall **FAIL**:\n    - **CRITICAL:** `readwise` skill flagged for dangerous code patterns (possible credential/env harvesting) → needs audit/confirm trust or remove.\n    - **WARN:** `gateway.nodes.denyCommands` appears effectively empty / no denylisting (higher risk on paired nodes).\n    - **WARN:** weaker fallback model (`openai-codex/gpt-4o-mini`) flagged as higher prompt-injection/tool-misuse risk.\n    - **INFO:** Gateway tailnet exposure noted (`gateway.tailscale.mode=\"serve\"`).\n  - `99b353aa-2921-4694-8da5-9074680234a2` (overnight prescan): ended `error` due to **“⚠️ ✉️ Message failed”** (notification delivery failure).\n\n- Decisions\n  - No new explicit decisions recorded in the last ~24h window.\n\n- Follow-ups\n  - Triage the healthcheck FAIL:\n    - Audit `workspace/skills/readwise` for legitimacy; remove/disable if untrusted.\n    - Set a sane baseline `gateway.nodes.denyCommands` policy for node safety.\n    - Revi…",
+      "nextRunAt": 1772424600000,
       "model": null,
-      "lastTotalTokens": 21286,
-      "lastInputTokens": 21297,
-      "lastOutputTokens": 5530
+      "lastTotalTokens": 41860,
+      "lastInputTokens": 38360,
+      "lastOutputTokens": 4340
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772336674138,
+      "lastRunAt": 1772338474150,
       "lastStatus": "ok",
-      "lastDurationMs": 43381,
+      "lastDurationMs": 55407,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run looks normal.\n\nI checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`, and the invocation right after your timestamp recorded:\n\n- `2026-03-01T03:45:05Z NOOP (no update)`\n\nSo the script ran, found the system idle, checked `openclaw update status`, and determined there was **no OpenClaw update available**, then exited cleanly (exit code `0`).",
-      "nextRunAt": 1772338474138,
+      "lastSummary": "That auto-update cron run didn’t apply anything.\n\n- Current behavior: **SKIP** because a **direct session was active** at the time (so it avoids updating while you’re chatting/using OpenClaw).\n- Latest log entry shows: `2026-03-01T04:15:10Z SKIP (direct session active ...)`\n- Recent runs have mostly been `NOOP (no update)`, meaning **no newer OpenClaw version was available** anyway.\n- Last successful auto-update in the log: **2026-02-27T00:50:07Z → UPDATE_OK (latest=2026.2.26)**\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772340274150,
       "model": null,
-      "lastTotalTokens": 13546,
-      "lastInputTokens": 9637,
-      "lastOutputTokens": 591
+      "lastTotalTokens": 18070,
+      "lastInputTokens": 14656,
+      "lastOutputTokens": 930
     }
   ]
 }
