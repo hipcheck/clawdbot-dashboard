@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772391606814,
+  "updatedAt": 1772393406952,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772390674579,
+      "lastRunAt": 1772392474592,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run was a no-op: **no OpenClaw update was available**.\n\n- Log entry: `2026-03-01T18:45:08Z NOOP (no update)`\n- You can see the full history here: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last successful auto-update in the log: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
+      "lastSummary": "Auto-update run completed successfully (exit code 0; the script produced no stdout/stderr).\n\nPost-check:\n- `openclaw --version`: **2026.2.26**\n- `openclaw status`: Gateway service **enabled + running**, Telegram **OK**, no events reported.\n\nOne note from `openclaw status` security audit:\n- **WARN**: some configured models are below recommended tiers (mentions `openai-codex/gpt-4o-mini`)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772390674579,
+      "lastRunAt": 1772392474592,
       "lastStatus": "ok",
-      "lastDurationMs": 51593,
+      "lastDurationMs": 69832,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run was a no-op: **no OpenClaw update was available**.\n\n- Log entry: `2026-03-01T18:45:08Z NOOP (no update)`\n- You can see the full history here: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last successful auto-update in the log: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
-      "nextRunAt": 1772392474579,
+      "lastSummary": "Auto-update run completed successfully (exit code 0; the script produced no stdout/stderr).\n\nPost-check:\n- `openclaw --version`: **2026.2.26**\n- `openclaw status`: Gateway service **enabled + running**, Telegram **OK**, no events reported.\n\nOne note from `openclaw status` security audit:\n- **WARN**: some configured models are below recommended tiers (mentions `openai-codex/gpt-4o-mini`).",
+      "nextRunAt": 1772394274592,
       "model": null,
-      "lastTotalTokens": 15429,
-      "lastInputTokens": 20102,
-      "lastOutputTokens": 686
+      "lastTotalTokens": 12532,
+      "lastInputTokens": 8724,
+      "lastOutputTokens": 530
     }
   ]
 }
