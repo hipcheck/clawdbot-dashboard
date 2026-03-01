@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772375407251,
+  "updatedAt": 1772377207832,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772374474415,
+      "lastRunAt": 1772376274435,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now.\n\n- Result: **exit code 0**, **no output** (script ran cleanly; typically means “nothing to do / no update applied”)\n- Current OpenClaw version on this host: **2026.2.26**\n- `openclaw status` also returned OK (no errors)"
+      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Result: **NOOP (no update available)** (no changes applied)\n- Current OpenClaw version: **2026.2.26**\n- Gateway: **running OK** (systemd user service, loopback `127.0.0.1:18789`, RPC probe ok)\n- Update audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest: `2026-03-01T14:45:06Z NOOP (no update)`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772374474415,
+      "lastRunAt": 1772376274435,
       "lastStatus": "ok",
-      "lastDurationMs": 73359,
+      "lastDurationMs": 84184,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now.\n\n- Result: **exit code 0**, **no output** (script ran cleanly; typically means “nothing to do / no update applied”)\n- Current OpenClaw version on this host: **2026.2.26**\n- `openclaw status` also returned OK (no errors)",
-      "nextRunAt": 1772376274415,
+      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Result: **NOOP (no update available)** (no changes applied)\n- Current OpenClaw version: **2026.2.26**\n- Gateway: **running OK** (systemd user service, loopback `127.0.0.1:18789`, RPC probe ok)\n- Update audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest: `2026-03-01T14:45:06Z NOOP (no update)`)",
+      "nextRunAt": 1772378074435,
       "model": null,
-      "lastTotalTokens": 11912,
-      "lastInputTokens": 8098,
-      "lastOutputTokens": 542
+      "lastTotalTokens": 15641,
+      "lastInputTokens": 11861,
+      "lastOutputTokens": 849
     }
   ]
 }
