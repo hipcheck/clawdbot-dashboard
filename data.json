@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772380807241,
+  "updatedAt": 1772382606786,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772379874462,
+      "lastRunAt": 1772381674475,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update check ran cleanly.\n\n- Latest result (2026-03-01T15:45:20Z): **NOOP (no update)** — nothing new to install.\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail shows the NOOP entry)"
+      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` manually just now — it completed successfully (exit code 0) and produced no stdout/stderr.\n\nVerification:\n- `openclaw --version` → **2026.2.26**\n- `openclaw status` → gateway service **running**, Telegram **OK**\n- Security audit summary: **0 critical · 1 warn · 2 info** (warn is that some configured models are below recommended tiers, e.g. `gpt-4o-mini` in config)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772379874462,
+      "lastRunAt": 1772381674475,
       "lastStatus": "ok",
-      "lastDurationMs": 50705,
+      "lastDurationMs": 60540,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update check ran cleanly.\n\n- Latest result (2026-03-01T15:45:20Z): **NOOP (no update)** — nothing new to install.\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail shows the NOOP entry)",
-      "nextRunAt": 1772381674462,
+      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` manually just now — it completed successfully (exit code 0) and produced no stdout/stderr.\n\nVerification:\n- `openclaw --version` → **2026.2.26**\n- `openclaw status` → gateway service **running**, Telegram **OK**\n- Security audit summary: **0 critical · 1 warn · 2 info** (warn is that some configured models are below recommended tiers, e.g. `gpt-4o-mini` in config)",
+      "nextRunAt": 1772383474475,
       "model": null,
-      "lastTotalTokens": 17891,
-      "lastInputTokens": 14109,
-      "lastOutputTokens": 697
+      "lastTotalTokens": 12457,
+      "lastInputTokens": 14978,
+      "lastOutputTokens": 469
     }
   ]
 }
