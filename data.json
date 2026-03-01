@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772350207545,
+  "updatedAt": 1772352008234,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772361880000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798400799
+          "resetAt": 1772798400689
         }
       ],
       "error": null
@@ -74,22 +74,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772349274232,
+      "lastRunAt": 1772351074247,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update script ran cleanly on my side (exit code 0) and didn’t print any output.\n\nCurrent state after the run (from `openclaw status`):\n- Channel: **stable**\n- Installed: **OpenClaw 2026.2.26**\n- Update check: **pnpm · npm latest 2026.2.26** (so you’re already up to date)\n- Gateway service: **running**\n\nOne note from the security audit:\n- **WARN:** some configured models are below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, I can help you bump any tool-enabled agents off smaller/older models."
+      "lastSummary": "Cron ran successfully. Latest entry in `memory/openclaw-updates.log`:\n\n- `2026-03-01T07:45:07Z NOOP (no update)`\n\nSo nothing was updated this run—OpenClaw was already up to date."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\n- Nikola nightly journal: OK (Mac node online)\n- CURRENT_TS (America/New",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772337683077,
+      "activityKind": "cron",
+      "activityLabel": "km:weekly-readwise-indexer",
+      "activityChannel": null,
+      "lastRunAt": 1772350200040,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Tonight’s journal comment ran successfully (Mac was online).\n\n- NYC time was **2026-02-28 23:01**, so **TARGET_DATE = 2026-02-28**.\n- I opened `/Users/andreasallmaier/Documents/Brain/journal/2026-02-2"
+      "lastSummary": "Weekly Readwise indexer ran successfully.\n\n- Highlights index:\n  - `ok: true`\n  - `total_scanned/count: 13193`\n  - Output: `/home/clawd/.openclaw/workspace-km/readwise/highlights.json`\n  - Window: `2026-03-01T07:30:04Z → 2026-03-01T07:36:25Z`\n\n- Books index:\n  - `ok: true`\n  - `total_scanned/count: 1356`\n  - Output: `/home/clawd/.openclaw/workspace-km/readwise/books.json`\n  - Window: `2026-03-01T07:36:25Z → 2026-03-01T07:36:33Z`"
     }
   ],
   "cronJobs": [
@@ -189,17 +189,17 @@
       "schedule": "30 2 * * 0",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
+      "lastRunAt": 1772350200040,
+      "lastStatus": "ok",
+      "lastDurationMs": 397160,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772350200000,
+      "lastSummary": "Weekly Readwise indexer ran successfully.\n\n- Highlights index:\n  - `ok: true`\n  - `total_scanned/count: 13193`\n  - Output: `/home/clawd/.openclaw/workspace-km/readwise/highlights.json`\n  - Window: `2026-03-01T07:30:04Z → 2026-03-01T07:36:25Z`\n\n- Books index:\n  - `ok: true`\n  - `total_scanned/count: 1356`\n  - Output: `/home/clawd/.openclaw/workspace-km/readwise/books.json`\n  - Window: `2026-03-01T07:36:25Z → 2026-03-01T07:36:33Z`",
+      "nextRunAt": 1772955000000,
       "model": null,
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 6045,
+      "lastInputTokens": 6148,
+      "lastOutputTokens": 265
     },
     {
       "id": "a8c1dd0d-feb9-4882-9cfb-a49526c169d7",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772349274232,
+      "lastRunAt": 1772351074247,
       "lastStatus": "ok",
-      "lastDurationMs": 58028,
+      "lastDurationMs": 48083,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update script ran cleanly on my side (exit code 0) and didn’t print any output.\n\nCurrent state after the run (from `openclaw status`):\n- Channel: **stable**\n- Installed: **OpenClaw 2026.2.26**\n- Update check: **pnpm · npm latest 2026.2.26** (so you’re already up to date)\n- Gateway service: **running**\n\nOne note from the security audit:\n- **WARN:** some configured models are below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, I can help you bump any tool-enabled agents off smaller/older models.",
-      "nextRunAt": 1772351074232,
+      "lastSummary": "Cron ran successfully. Latest entry in `memory/openclaw-updates.log`:\n\n- `2026-03-01T07:45:07Z NOOP (no update)`\n\nSo nothing was updated this run—OpenClaw was already up to date.",
+      "nextRunAt": 1772352874247,
       "model": null,
-      "lastTotalTokens": 12442,
-      "lastInputTokens": 8665,
-      "lastOutputTokens": 481
+      "lastTotalTokens": 13710,
+      "lastInputTokens": 9742,
+      "lastOutputTokens": 455
     }
   ]
 }
