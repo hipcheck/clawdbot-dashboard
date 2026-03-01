@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772330407209,
+  "updatedAt": 1772332206593,
   "providers": [
     {
       "id": "openai-codex",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 18,
-          "resetAt": 1772341200468
+          "resetAt": 1772341200836
         },
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798400468
+          "resetAt": 1772798400836
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772329474092,
+      "lastRunAt": 1772331274104,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply an update — it **skipped because a direct (human) session was considered active**:\n\n- `SKIP (direct session active (age=793802ms))` (from `memory/last_auto_update.log`)\n- Latest entries in `memory/openclaw-updates.log` show **NOOP / SKIP**, with the most recent being:\n  - `2026-03-01T01:15:09Z NOOP (no update)`\n  - `2026-03-01T00:44:58Z SKIP (direct session active ...)`\n\nCurrent `openclaw update status --json` reports **no update available** (registry latest seen: `2026.2.26`, but `hasRegistryUpdate=false` / `available=false`), and the gateway is healthy (`RPC probe: ok`, service running)."
+      "lastSummary": "That cron run (job `c621238c-158e-4342-90c7-9ebb9f8ab0a3`, runAt ≈ `2026-03-01 02:14 UTC`) finished **OK** but **did not apply an update**.\n\n- Result: **SKIP**\n- Reason: **direct session active** (`SKIP (direct session active (age=793802ms))`)\n- Latest updater log entries still show **NOOP / SKIP**, i.e. nothing new to install."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772329474092,
+      "lastRunAt": 1772331274104,
       "lastStatus": "ok",
-      "lastDurationMs": 50426,
+      "lastDurationMs": 66070,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply an update — it **skipped because a direct (human) session was considered active**:\n\n- `SKIP (direct session active (age=793802ms))` (from `memory/last_auto_update.log`)\n- Latest entries in `memory/openclaw-updates.log` show **NOOP / SKIP**, with the most recent being:\n  - `2026-03-01T01:15:09Z NOOP (no update)`\n  - `2026-03-01T00:44:58Z SKIP (direct session active ...)`\n\nCurrent `openclaw update status --json` reports **no update available** (registry latest seen: `2026.2.26`, but `hasRegistryUpdate=false` / `available=false`), and the gateway is healthy (`RPC probe: ok`, service running).",
-      "nextRunAt": 1772331274092,
+      "lastSummary": "That cron run (job `c621238c-158e-4342-90c7-9ebb9f8ab0a3`, runAt ≈ `2026-03-01 02:14 UTC`) finished **OK** but **did not apply an update**.\n\n- Result: **SKIP**\n- Reason: **direct session active** (`SKIP (direct session active (age=793802ms))`)\n- Latest updater log entries still show **NOOP / SKIP**, i.e. nothing new to install.",
+      "nextRunAt": 1772333074104,
       "model": null,
-      "lastTotalTokens": 17959,
-      "lastInputTokens": 13772,
-      "lastOutputTokens": 870
+      "lastTotalTokens": 15803,
+      "lastInputTokens": 12960,
+      "lastOutputTokens": 828
     }
   ]
 }
