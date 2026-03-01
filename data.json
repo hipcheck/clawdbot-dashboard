@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772397007278,
+  "updatedAt": 1772398806481,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1772397879000
+          "usedPercent": 0,
+          "resetAt": 1772415880000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772396074622,
+      "lastRunAt": 1772397874639,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update: **NOOP (no update)** — the script ran successfully and found nothing to update right now."
+      "lastSummary": "That cron is running the OpenClaw auto-updater script.\n\nRight now it looks healthy and (most likely) did a no-op:\n\n- **Auto-update log (tail):** `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show repeated: **`NOOP (no update)`** (most recent logged: `2026-03-01T20:15:11Z`).\n\n- **Update status:** `openclaw update status --json` reports **no registry/git update available** and the installed/latest is **2026.2.26**.\n\n- **Gateway:** running нормально (`openclaw gateway status` OK).\n\nIf you want the exact outcome of the **8:44 PM UTC** run, the definitive source is that log file; if it hasn’t appended yet, it should show up as one of:\n- `NOOP (no update)`\n- `SKIP (...)` (idle/busy heuristic)\n- `UPDATE_OK (...)` / `UPDATE_FAIL (...)`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772396074622,
+      "lastRunAt": 1772397874639,
       "lastStatus": "ok",
-      "lastDurationMs": 40246,
+      "lastDurationMs": 88090,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update: **NOOP (no update)** — the script ran successfully and found nothing to update right now.",
-      "nextRunAt": 1772397874622,
+      "lastSummary": "That cron is running the OpenClaw auto-updater script.\n\nRight now it looks healthy and (most likely) did a no-op:\n\n- **Auto-update log (tail):** `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show repeated: **`NOOP (no update)`** (most recent logged: `2026-03-01T20:15:11Z`).\n\n- **Update status:** `openclaw update status --json` reports **no registry/git update available** and the installed/latest is **2026.2.26**.\n\n- **Gateway:** running нормально (`openclaw gateway status` OK).\n\nIf you want the exact outcome of the **8:44 PM UTC** run, the definitive source is that log file; if it hasn’t appended yet, it should show up as one of:\n- `NOOP (no update)`\n- `SKIP (...)` (idle/busy heuristic)\n- `UPDATE_OK (...)` / `UPDATE_FAIL (...)`",
+      "nextRunAt": 1772399674639,
       "model": null,
-      "lastTotalTokens": 10748,
-      "lastInputTokens": 6407,
-      "lastOutputTokens": 130
+      "lastTotalTokens": 15334,
+      "lastInputTokens": 12098,
+      "lastOutputTokens": 1009
     }
   ]
 }
