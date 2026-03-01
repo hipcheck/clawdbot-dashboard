@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772379006257,
+  "updatedAt": 1772380807241,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
-          "resetAt": 1772379879000
+          "usedPercent": 1,
+          "resetAt": 1772397879000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772378074451,
+      "lastRunAt": 1772379874462,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run `infraops:openclaw-auto-update` just completed and it was a **NOOP (no update available)**.\n\n- Current installed OpenClaw: **2026.2.26**\n- Update status: **no registry/git update available** (latest is also 2026.2.26)\n- Log line: `2026-03-01T15:15:06Z NOOP (no update)` in `memory/openclaw-updates.log`"
+      "lastSummary": "Auto-update check ran cleanly.\n\n- Latest result (2026-03-01T15:45:20Z): **NOOP (no update)** — nothing new to install.\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail shows the NOOP entry)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772378074451,
+      "lastRunAt": 1772379874462,
       "lastStatus": "ok",
-      "lastDurationMs": 68349,
+      "lastDurationMs": 50705,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run `infraops:openclaw-auto-update` just completed and it was a **NOOP (no update available)**.\n\n- Current installed OpenClaw: **2026.2.26**\n- Update status: **no registry/git update available** (latest is also 2026.2.26)\n- Log line: `2026-03-01T15:15:06Z NOOP (no update)` in `memory/openclaw-updates.log`",
-      "nextRunAt": 1772379874451,
+      "lastSummary": "Auto-update check ran cleanly.\n\n- Latest result (2026-03-01T15:45:20Z): **NOOP (no update)** — nothing new to install.\n- Log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail shows the NOOP entry)",
+      "nextRunAt": 1772381674462,
       "model": null,
-      "lastTotalTokens": 18128,
-      "lastInputTokens": 14452,
-      "lastOutputTokens": 703
+      "lastTotalTokens": 17891,
+      "lastInputTokens": 14109,
+      "lastOutputTokens": 697
     }
   ]
 }
