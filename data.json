@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772325009648,
+  "updatedAt": 1772326809296,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1772325879000
+          "usedPercent": 0,
+          "resetAt": 1772343878000
         },
         {
           "label": "Day",
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1772341200899
+          "usedPercent": 18,
+          "resetAt": 1772341200654
         },
         {
           "label": "Week",
-          "usedPercent": 2,
-          "resetAt": 1772798399899
+          "usedPercent": 4,
+          "resetAt": 1772798400654
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772324074060,
+      "lastRunAt": 1772325874070,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update script ran successfully (exit code 0). No stdout was produced.\n\nI also checked `openclaw status` right after:\n- OpenClaw reports **Update: npm latest 2026.2.26**\n- `openclaw status` briefly showed **Gateway unreachable (timeout)**, but a follow-up `openclaw gateway probe` confirms:\n  - **Local loopback ws://127.0.0.1:18789 → Connect OK (52ms), RPC OK**\n  - Gateway app version: **2026.2.26**\n\nSo it looks like that “unreachable” was transient. If you want, I can run `openclaw logs --follow` for ~30s to see if there are intermittent gateway timeouts."
+      "lastSummary": "That cron run **didn’t update anything** — it **skipped** because a direct (human) session was active at the time.\n\nLatest log line:\n\n- `2026-03-01T00:44:58Z SKIP (direct session active (age=738214ms))`  \n  (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)\n\nSo: **no action needed**, and there was **no update applied** during that run."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772324074060,
+      "lastRunAt": 1772325874070,
       "lastStatus": "ok",
-      "lastDurationMs": 107657,
+      "lastDurationMs": 37739,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update script ran successfully (exit code 0). No stdout was produced.\n\nI also checked `openclaw status` right after:\n- OpenClaw reports **Update: npm latest 2026.2.26**\n- `openclaw status` briefly showed **Gateway unreachable (timeout)**, but a follow-up `openclaw gateway probe` confirms:\n  - **Local loopback ws://127.0.0.1:18789 → Connect OK (52ms), RPC OK**\n  - Gateway app version: **2026.2.26**\n\nSo it looks like that “unreachable” was transient. If you want, I can run `openclaw logs --follow` for ~30s to see if there are intermittent gateway timeouts.",
-      "nextRunAt": 1772325874060,
+      "lastSummary": "That cron run **didn’t update anything** — it **skipped** because a direct (human) session was active at the time.\n\nLatest log line:\n\n- `2026-03-01T00:44:58Z SKIP (direct session active (age=738214ms))`  \n  (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)\n\nSo: **no action needed**, and there was **no update applied** during that run.",
+      "nextRunAt": 1772327674070,
       "model": null,
-      "lastTotalTokens": 12702,
-      "lastInputTokens": 9149,
-      "lastOutputTokens": 624
+      "lastTotalTokens": 13637,
+      "lastInputTokens": 10475,
+      "lastOutputTokens": 448
     }
   ]
 }
