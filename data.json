@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772335806550,
+  "updatedAt": 1772337608003,
   "providers": [
     {
       "id": "openai-codex",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 18,
-          "resetAt": 1772341200776
+          "resetAt": 1772341200230
         },
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798400776
+          "resetAt": 1772798400230
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772334874125,
+      "lastRunAt": 1772336674138,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Checked the auto-update job.\n\n- The updater is running and logging to: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- As of just now, it reports: **`NOOP (no update)`** (exit code `0`) — meaning there was **no OpenClaw update available to apply**.\n- The last log entries prior to this were also mostly `NOOP`, with occasional `SKIP (direct session active ...)` when you were chatting recently.\n\nIf you want, I can paste the latest ~20 lines of the update log here."
+      "lastSummary": "That cron run looks normal.\n\nI checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`, and the invocation right after your timestamp recorded:\n\n- `2026-03-01T03:45:05Z NOOP (no update)`\n\nSo the script ran, found the system idle, checked `openclaw update status`, and determined there was **no OpenClaw update available**, then exited cleanly (exit code `0`)."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772334874125,
+      "lastRunAt": 1772336674138,
       "lastStatus": "ok",
-      "lastDurationMs": 50558,
+      "lastDurationMs": 43381,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Checked the auto-update job.\n\n- The updater is running and logging to: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- As of just now, it reports: **`NOOP (no update)`** (exit code `0`) — meaning there was **no OpenClaw update available to apply**.\n- The last log entries prior to this were also mostly `NOOP`, with occasional `SKIP (direct session active ...)` when you were chatting recently.\n\nIf you want, I can paste the latest ~20 lines of the update log here.",
-      "nextRunAt": 1772336674125,
+      "lastSummary": "That cron run looks normal.\n\nI checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`, and the invocation right after your timestamp recorded:\n\n- `2026-03-01T03:45:05Z NOOP (no update)`\n\nSo the script ran, found the system idle, checked `openclaw update status`, and determined there was **no OpenClaw update available**, then exited cleanly (exit code `0`).",
+      "nextRunAt": 1772338474138,
       "model": null,
-      "lastTotalTokens": 13981,
-      "lastInputTokens": 9687,
-      "lastOutputTokens": 698
+      "lastTotalTokens": 13546,
+      "lastInputTokens": 9637,
+      "lastOutputTokens": 591
     }
   ]
 }
