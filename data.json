@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772377207832,
+  "updatedAt": 1772379006257,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1772379879000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772376274435,
+      "lastRunAt": 1772378074451,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Result: **NOOP (no update available)** (no changes applied)\n- Current OpenClaw version: **2026.2.26**\n- Gateway: **running OK** (systemd user service, loopback `127.0.0.1:18789`, RPC probe ok)\n- Update audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest: `2026-03-01T14:45:06Z NOOP (no update)`)"
+      "lastSummary": "Cron run `infraops:openclaw-auto-update` just completed and it was a **NOOP (no update available)**.\n\n- Current installed OpenClaw: **2026.2.26**\n- Update status: **no registry/git update available** (latest is also 2026.2.26)\n- Log line: `2026-03-01T15:15:06Z NOOP (no update)` in `memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772376274435,
+      "lastRunAt": 1772378074451,
       "lastStatus": "ok",
-      "lastDurationMs": 84184,
+      "lastDurationMs": 68349,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron ran successfully.\n\n- Result: **NOOP (no update available)** (no changes applied)\n- Current OpenClaw version: **2026.2.26**\n- Gateway: **running OK** (systemd user service, loopback `127.0.0.1:18789`, RPC probe ok)\n- Update audit log: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest: `2026-03-01T14:45:06Z NOOP (no update)`)",
-      "nextRunAt": 1772378074435,
+      "lastSummary": "Cron run `infraops:openclaw-auto-update` just completed and it was a **NOOP (no update available)**.\n\n- Current installed OpenClaw: **2026.2.26**\n- Update status: **no registry/git update available** (latest is also 2026.2.26)\n- Log line: `2026-03-01T15:15:06Z NOOP (no update)` in `memory/openclaw-updates.log`",
+      "nextRunAt": 1772379874451,
       "model": null,
-      "lastTotalTokens": 15641,
-      "lastInputTokens": 11861,
-      "lastOutputTokens": 849
+      "lastTotalTokens": 18128,
+      "lastInputTokens": 14452,
+      "lastOutputTokens": 703
     }
   ]
 }
