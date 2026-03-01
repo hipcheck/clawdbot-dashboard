@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772353810861,
+  "updatedAt": 1772355607541,
   "providers": [
     {
       "id": "openai-codex",
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "chat",
-      "activityLabel": "A cron job \"healthcheck:security-preflight\" just completed successfully.\n\nResult:\nFAIL\nTop Blockers:\n*   CRITICAL: The \"readwise\" skill contains dange",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772279951191,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "Just a quick interruption: my scheduled security scan has finished.\n\nIt's confirming that the command blocklist is still empty, which means the fix we were attempting earlier unfortunately didn't get "
+      "activityKind": "cron",
+      "activityLabel": "healthcheck:overnight-prescan",
+      "activityChannel": null,
+      "lastRunAt": 1772353800029,
+      "lastStatus": "error",
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "⚠️ ✉️ Message failed"
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772352874258,
+      "lastRunAt": 1772354674271,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`: the run at **2026-03-01T08:15:07Z** recorded **`NOOP (no update)`** — nothing to install this time."
+      "lastSummary": "Auto-update run completed; nothing to do.\n\n- Result: **NOOP (no update available)**\n- Log: `memory/openclaw-updates.log` shows `2026-03-01T08:45:05Z NOOP (no update)`"
     },
     {
       "id": "km",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772267400025,
+      "lastRunAt": 1772353800029,
       "lastStatus": "error",
-      "lastDurationMs": 783626,
-      "consecutiveErrors": 1,
+      "lastDurationMs": 543911,
+      "consecutiveErrors": 2,
       "lastError": "⚠️ ✉️ Message failed",
       "lastSummary": "⚠️ ✉️ Message failed",
-      "nextRunAt": 1772353800000,
+      "nextRunAt": 1772440200000,
       "model": null,
-      "lastTotalTokens": 11317,
-      "lastInputTokens": 45532,
-      "lastOutputTokens": 2680
+      "lastTotalTokens": 10929,
+      "lastInputTokens": 31863,
+      "lastOutputTokens": 2373
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772352874258,
+      "lastRunAt": 1772354674271,
       "lastStatus": "ok",
-      "lastDurationMs": 46746,
+      "lastDurationMs": 49939,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`: the run at **2026-03-01T08:15:07Z** recorded **`NOOP (no update)`** — nothing to install this time.",
-      "nextRunAt": 1772354674258,
+      "lastSummary": "Auto-update run completed; nothing to do.\n\n- Result: **NOOP (no update available)**\n- Log: `memory/openclaw-updates.log` shows `2026-03-01T08:45:05Z NOOP (no update)`",
+      "nextRunAt": 1772356474271,
       "model": null,
-      "lastTotalTokens": 13344,
-      "lastInputTokens": 15628,
-      "lastOutputTokens": 490
+      "lastTotalTokens": 14185,
+      "lastInputTokens": 16500,
+      "lastOutputTokens": 526
     }
   ]
 }
