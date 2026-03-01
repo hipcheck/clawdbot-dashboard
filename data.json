@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772348408106,
+  "updatedAt": 1772350207545,
   "providers": [
     {
       "id": "openai-codex",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798400383
+          "resetAt": 1772798400799
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772347474219,
+      "lastRunAt": 1772349274232,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That run was a no-op — there wasn’t any OpenClaw update available.\n\nLog shows:\n- `2026-03-01T06:45:09Z NOOP (no update)`  \n  (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "Auto-update script ran cleanly on my side (exit code 0) and didn’t print any output.\n\nCurrent state after the run (from `openclaw status`):\n- Channel: **stable**\n- Installed: **OpenClaw 2026.2.26**\n- Update check: **pnpm · npm latest 2026.2.26** (so you’re already up to date)\n- Gateway service: **running**\n\nOne note from the security audit:\n- **WARN:** some configured models are below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, I can help you bump any tool-enabled agents off smaller/older models."
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772347474219,
+      "lastRunAt": 1772349274232,
       "lastStatus": "ok",
-      "lastDurationMs": 49572,
+      "lastDurationMs": 58028,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That run was a no-op — there wasn’t any OpenClaw update available.\n\nLog shows:\n- `2026-03-01T06:45:09Z NOOP (no update)`  \n  (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772349274219,
+      "lastSummary": "Auto-update script ran cleanly on my side (exit code 0) and didn’t print any output.\n\nCurrent state after the run (from `openclaw status`):\n- Channel: **stable**\n- Installed: **OpenClaw 2026.2.26**\n- Update check: **pnpm · npm latest 2026.2.26** (so you’re already up to date)\n- Gateway service: **running**\n\nOne note from the security audit:\n- **WARN:** some configured models are below recommended tiers (mentions `openai-codex/gpt-4o-mini`). If you want, I can help you bump any tool-enabled agents off smaller/older models.",
+      "nextRunAt": 1772351074232,
       "model": null,
-      "lastTotalTokens": 17295,
-      "lastInputTokens": 14076,
-      "lastOutputTokens": 556
+      "lastTotalTokens": 12442,
+      "lastInputTokens": 8665,
+      "lastOutputTokens": 481
     }
   ]
 }
