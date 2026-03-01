@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772404207515,
+  "updatedAt": 1772406006731,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772403274686,
+      "lastRunAt": 1772405074695,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully (exit code 0) and **did nothing** because there’s **no OpenClaw update available** right now.\n\nLatest log entry:\n- `2026-03-01T22:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "That cron job is the OpenClaw auto-updater (`scripts/openclaw_auto_update.py`). As of the latest info on the box:\n\n- `openclaw update status --json` shows **no update available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`).\n- The updater log confirms it’s been **NOOP (no update)** for the recent runs (last logged: `2026-03-01T22:15:07Z`).\n\nYou can audit it here any time:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772403274686,
+      "lastRunAt": 1772405074695,
       "lastStatus": "ok",
-      "lastDurationMs": 53243,
+      "lastDurationMs": 26391,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully (exit code 0) and **did nothing** because there’s **no OpenClaw update available** right now.\n\nLatest log entry:\n- `2026-03-01T22:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772405074686,
+      "lastSummary": "That cron job is the OpenClaw auto-updater (`scripts/openclaw_auto_update.py`). As of the latest info on the box:\n\n- `openclaw update status --json` shows **no update available** (`hasRegistryUpdate=false`, `hasGitUpdate=false`).\n- The updater log confirms it’s been **NOOP (no update)** for the recent runs (last logged: `2026-03-01T22:15:07Z`).\n\nYou can audit it here any time:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772406874695,
       "model": null,
-      "lastTotalTokens": 14461,
-      "lastInputTokens": 17040,
-      "lastOutputTokens": 523
+      "lastTotalTokens": 13756,
+      "lastInputTokens": 9658,
+      "lastOutputTokens": 533
     }
   ]
 }
