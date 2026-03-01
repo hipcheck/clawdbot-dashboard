@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772334008579,
+  "updatedAt": 1772335806550,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772343878000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 18,
-          "resetAt": 1772341200916
+          "resetAt": 1772341200776
         },
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798399916
+          "resetAt": 1772798400776
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772333074113,
+      "lastRunAt": 1772334874125,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now — it exited successfully (code **0**) and produced no stdout/stderr.\n\nPost-check:\n- `openclaw --version`: **2026.2.26**\n- `openclaw gateway status`: **running**, RPC probe **ok**, listening on **127.0.0.1:18789**"
+      "lastSummary": "Checked the auto-update job.\n\n- The updater is running and logging to: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- As of just now, it reports: **`NOOP (no update)`** (exit code `0`) — meaning there was **no OpenClaw update available to apply**.\n- The last log entries prior to this were also mostly `NOOP`, with occasional `SKIP (direct session active ...)` when you were chatting recently.\n\nIf you want, I can paste the latest ~20 lines of the update log here."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772333074113,
+      "lastRunAt": 1772334874125,
       "lastStatus": "ok",
-      "lastDurationMs": 76387,
+      "lastDurationMs": 50558,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now — it exited successfully (code **0**) and produced no stdout/stderr.\n\nPost-check:\n- `openclaw --version`: **2026.2.26**\n- `openclaw gateway status`: **running**, RPC probe **ok**, listening on **127.0.0.1:18789**",
-      "nextRunAt": 1772334874113,
+      "lastSummary": "Checked the auto-update job.\n\n- The updater is running and logging to: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- As of just now, it reports: **`NOOP (no update)`** (exit code `0`) — meaning there was **no OpenClaw update available to apply**.\n- The last log entries prior to this were also mostly `NOOP`, with occasional `SKIP (direct session active ...)` when you were chatting recently.\n\nIf you want, I can paste the latest ~20 lines of the update log here.",
+      "nextRunAt": 1772336674125,
       "model": null,
-      "lastTotalTokens": 12228,
-      "lastInputTokens": 8602,
-      "lastOutputTokens": 566
+      "lastTotalTokens": 13981,
+      "lastInputTokens": 9687,
+      "lastOutputTokens": 698
     }
   ]
 }
