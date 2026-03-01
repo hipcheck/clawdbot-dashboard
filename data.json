@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772339407296,
+  "updatedAt": 1772341209050,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 7,
+          "usedPercent": 8,
           "resetAt": 1772343878000
         },
         {
@@ -31,13 +31,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
-          "resetAt": 1772341200541
+          "usedPercent": 0
         },
         {
           "label": "Week",
           "usedPercent": 4,
-          "resetAt": 1772798400541
+          "resetAt": 1772798400333
         }
       ],
       "error": null
@@ -75,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772338474150,
+      "lastRunAt": 1772340274162,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That auto-update cron run didn’t apply anything.\n\n- Current behavior: **SKIP** because a **direct session was active** at the time (so it avoids updating while you’re chatting/using OpenClaw).\n- Latest log entry shows: `2026-03-01T04:15:10Z SKIP (direct session active ...)`\n- Recent runs have mostly been `NOOP (no update)`, meaning **no newer OpenClaw version was available** anyway.\n- Last successful auto-update in the log: **2026-02-27T00:50:07Z → UPDATE_OK (latest=2026.2.26)**\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Cron run logged: **NOOP (no update)** at `2026-03-01T04:45:08Z` — nothing to install this cycle."
     },
     {
       "id": "km",
@@ -226,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772338474150,
+      "lastRunAt": 1772340274162,
       "lastStatus": "ok",
-      "lastDurationMs": 55407,
+      "lastDurationMs": 44455,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That auto-update cron run didn’t apply anything.\n\n- Current behavior: **SKIP** because a **direct session was active** at the time (so it avoids updating while you’re chatting/using OpenClaw).\n- Latest log entry shows: `2026-03-01T04:15:10Z SKIP (direct session active ...)`\n- Recent runs have mostly been `NOOP (no update)`, meaning **no newer OpenClaw version was available** anyway.\n- Last successful auto-update in the log: **2026-02-27T00:50:07Z → UPDATE_OK (latest=2026.2.26)**\n\nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772340274150,
+      "lastSummary": "Cron run logged: **NOOP (no update)** at `2026-03-01T04:45:08Z` — nothing to install this cycle.",
+      "nextRunAt": 1772342074162,
       "model": null,
-      "lastTotalTokens": 18070,
-      "lastInputTokens": 14656,
-      "lastOutputTokens": 930
+      "lastTotalTokens": 13360,
+      "lastInputTokens": 10294,
+      "lastOutputTokens": 482
     }
   ]
 }
