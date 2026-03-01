@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772402407056,
+  "updatedAt": 1772404207515,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772401474671,
+      "lastRunAt": 1772403274686,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update script ran cleanly on the host:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no output)\n- OpenClaw version now reports: **2026.2.26**\n- Gateway service is **running and healthy** (RPC probe: ok), listening on **127.0.0.1:18789**\n- Current gateway log file: `/tmp/openclaw/openclaw-2026-03-01.log`"
+      "lastSummary": "Auto-update run completed successfully (exit code 0) and **did nothing** because there’s **no OpenClaw update available** right now.\n\nLatest log entry:\n- `2026-03-01T22:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772401474671,
+      "lastRunAt": 1772403274686,
       "lastStatus": "ok",
-      "lastDurationMs": 62844,
+      "lastDurationMs": 53243,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update script ran cleanly on the host:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no output)\n- OpenClaw version now reports: **2026.2.26**\n- Gateway service is **running and healthy** (RPC probe: ok), listening on **127.0.0.1:18789**\n- Current gateway log file: `/tmp/openclaw/openclaw-2026-03-01.log`",
-      "nextRunAt": 1772403274671,
+      "lastSummary": "Auto-update run completed successfully (exit code 0) and **did nothing** because there’s **no OpenClaw update available** right now.\n\nLatest log entry:\n- `2026-03-01T22:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
+      "nextRunAt": 1772405074686,
       "model": null,
-      "lastTotalTokens": 11277,
-      "lastInputTokens": 7479,
-      "lastOutputTokens": 412
+      "lastTotalTokens": 14461,
+      "lastInputTokens": 17040,
+      "lastOutputTokens": 523
     }
   ]
 }
