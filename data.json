@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772321406700,
+  "updatedAt": 1772323209523,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772320474028,
+      "lastRunAt": 1772322274044,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply an update — it was a no-op.\n\nLatest entry in `memory/openclaw-updates.log`:\n- `2026-02-28T23:15:06Z NOOP (no update)`\n\nIf you want to inspect the full history, it’s logged at:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "`openclaw_auto_update.py` just ran successfully (exit code `0`). It didn’t print anything to stdout.\n\nI spot-checked the result:\n\n- Installed OpenClaw version: `2026.2.26` (`openclaw --version`)\n- Latest on npm: `2026.2.26` (`npm view openclaw version`)\n\nSo you were already up to date—nothing to install this run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772320474028,
+      "lastRunAt": 1772322274044,
       "lastStatus": "ok",
-      "lastDurationMs": 72612,
+      "lastDurationMs": 53660,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply an update — it was a no-op.\n\nLatest entry in `memory/openclaw-updates.log`:\n- `2026-02-28T23:15:06Z NOOP (no update)`\n\nIf you want to inspect the full history, it’s logged at:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772322274028,
+      "lastSummary": "`openclaw_auto_update.py` just ran successfully (exit code `0`). It didn’t print anything to stdout.\n\nI spot-checked the result:\n\n- Installed OpenClaw version: `2026.2.26` (`openclaw --version`)\n- Latest on npm: `2026.2.26` (`npm view openclaw version`)\n\nSo you were already up to date—nothing to install this run.",
+      "nextRunAt": 1772324074044,
       "model": null,
-      "lastTotalTokens": 13957,
-      "lastInputTokens": 4298,
-      "lastOutputTokens": 671
+      "lastTotalTokens": 11254,
+      "lastInputTokens": 8056,
+      "lastOutputTokens": 572
     }
   ]
 }
