@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772398806481,
+  "updatedAt": 1772400607235,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772415880000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772397874639,
+      "lastRunAt": 1772399674654,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron is running the OpenClaw auto-updater script.\n\nRight now it looks healthy and (most likely) did a no-op:\n\n- **Auto-update log (tail):** `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show repeated: **`NOOP (no update)`** (most recent logged: `2026-03-01T20:15:11Z`).\n\n- **Update status:** `openclaw update status --json` reports **no registry/git update available** and the installed/latest is **2026.2.26**.\n\n- **Gateway:** running нормально (`openclaw gateway status` OK).\n\nIf you want the exact outcome of the **8:44 PM UTC** run, the definitive source is that log file; if it hasn’t appended yet, it should show up as one of:\n- `NOOP (no update)`\n- `SKIP (...)` (idle/busy heuristic)\n- `UPDATE_OK (...)` / `UPDATE_FAIL (...)`"
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — exited **0 (success)** and produced **no stdout/stderr**.\n\nSanity check after: `openclaw status` looks healthy:\n- **Update:** `npm latest 2026.2.26`\n- **Gateway service:** systemd **enabled + running**\n- **Channels:** Telegram **OK**\n- **Security audit:** **0 critical**, **1 warn** (“some configured models below recommended tiers”, mentions `gpt-4o-mini`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772397874639,
+      "lastRunAt": 1772399674654,
       "lastStatus": "ok",
-      "lastDurationMs": 88090,
+      "lastDurationMs": 57428,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron is running the OpenClaw auto-updater script.\n\nRight now it looks healthy and (most likely) did a no-op:\n\n- **Auto-update log (tail):** `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show repeated: **`NOOP (no update)`** (most recent logged: `2026-03-01T20:15:11Z`).\n\n- **Update status:** `openclaw update status --json` reports **no registry/git update available** and the installed/latest is **2026.2.26**.\n\n- **Gateway:** running нормально (`openclaw gateway status` OK).\n\nIf you want the exact outcome of the **8:44 PM UTC** run, the definitive source is that log file; if it hasn’t appended yet, it should show up as one of:\n- `NOOP (no update)`\n- `SKIP (...)` (idle/busy heuristic)\n- `UPDATE_OK (...)` / `UPDATE_FAIL (...)`",
-      "nextRunAt": 1772399674639,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — exited **0 (success)** and produced **no stdout/stderr**.\n\nSanity check after: `openclaw status` looks healthy:\n- **Update:** `npm latest 2026.2.26`\n- **Gateway service:** systemd **enabled + running**\n- **Channels:** Telegram **OK**\n- **Security audit:** **0 critical**, **1 warn** (“some configured models below recommended tiers”, mentions `gpt-4o-mini`)",
+      "nextRunAt": 1772401474654,
       "model": null,
-      "lastTotalTokens": 15334,
-      "lastInputTokens": 12098,
-      "lastOutputTokens": 1009
+      "lastTotalTokens": 12419,
+      "lastInputTokens": 8642,
+      "lastOutputTokens": 447
     }
   ]
 }
