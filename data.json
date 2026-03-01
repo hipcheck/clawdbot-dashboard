@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772389807630,
+  "updatedAt": 1772391606814,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1772397879000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772388874565,
+      "lastRunAt": 1772390674579,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That auto-update cron run was a no-op.\n\n- Last log entry: `2026-03-01T18:15:06Z NOOP (no update)` (`memory/openclaw-updates.log`)\n- `openclaw update status --json` currently reports `hasRegistryUpdate=false` and `hasGitUpdate=false` (no update available), with registry latest at `2026.2.26`."
+      "lastSummary": "That cron run was a no-op: **no OpenClaw update was available**.\n\n- Log entry: `2026-03-01T18:45:08Z NOOP (no update)`\n- You can see the full history here: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last successful auto-update in the log: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772388874565,
+      "lastRunAt": 1772390674579,
       "lastStatus": "ok",
-      "lastDurationMs": 53257,
+      "lastDurationMs": 51593,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That auto-update cron run was a no-op.\n\n- Last log entry: `2026-03-01T18:15:06Z NOOP (no update)` (`memory/openclaw-updates.log`)\n- `openclaw update status --json` currently reports `hasRegistryUpdate=false` and `hasGitUpdate=false` (no update available), with registry latest at `2026.2.26`.",
-      "nextRunAt": 1772390674565,
+      "lastSummary": "That cron run was a no-op: **no OpenClaw update was available**.\n\n- Log entry: `2026-03-01T18:45:08Z NOOP (no update)`\n- You can see the full history here: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- Last successful auto-update in the log: `2026-02-26T05:49:18Z UPDATE_OK (latest=2026.2.25)`",
+      "nextRunAt": 1772392474579,
       "model": null,
-      "lastTotalTokens": 14036,
-      "lastInputTokens": 10902,
-      "lastOutputTokens": 599
+      "lastTotalTokens": 15429,
+      "lastInputTokens": 20102,
+      "lastOutputTokens": 686
     }
   ]
 }
