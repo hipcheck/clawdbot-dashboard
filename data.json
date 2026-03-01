@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772400607235,
+  "updatedAt": 1772402407056,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772399674654,
+      "lastRunAt": 1772401474671,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — exited **0 (success)** and produced **no stdout/stderr**.\n\nSanity check after: `openclaw status` looks healthy:\n- **Update:** `npm latest 2026.2.26`\n- **Gateway service:** systemd **enabled + running**\n- **Channels:** Telegram **OK**\n- **Security audit:** **0 critical**, **1 warn** (“some configured models below recommended tiers”, mentions `gpt-4o-mini`)"
+      "lastSummary": "Auto-update script ran cleanly on the host:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no output)\n- OpenClaw version now reports: **2026.2.26**\n- Gateway service is **running and healthy** (RPC probe: ok), listening on **127.0.0.1:18789**\n- Current gateway log file: `/tmp/openclaw/openclaw-2026-03-01.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772399674654,
+      "lastRunAt": 1772401474671,
       "lastStatus": "ok",
-      "lastDurationMs": 57428,
+      "lastDurationMs": 62844,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — exited **0 (success)** and produced **no stdout/stderr**.\n\nSanity check after: `openclaw status` looks healthy:\n- **Update:** `npm latest 2026.2.26`\n- **Gateway service:** systemd **enabled + running**\n- **Channels:** Telegram **OK**\n- **Security audit:** **0 critical**, **1 warn** (“some configured models below recommended tiers”, mentions `gpt-4o-mini`)",
-      "nextRunAt": 1772401474654,
+      "lastSummary": "Auto-update script ran cleanly on the host:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no output)\n- OpenClaw version now reports: **2026.2.26**\n- Gateway service is **running and healthy** (RPC probe: ok), listening on **127.0.0.1:18789**\n- Current gateway log file: `/tmp/openclaw/openclaw-2026-03-01.log`",
+      "nextRunAt": 1772403274671,
       "model": null,
-      "lastTotalTokens": 12419,
-      "lastInputTokens": 8642,
-      "lastOutputTokens": 447
+      "lastTotalTokens": 11277,
+      "lastInputTokens": 7479,
+      "lastOutputTokens": 412
     }
   ]
 }
