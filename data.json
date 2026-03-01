@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772359207553,
+  "updatedAt": 1772361006911,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 3,
-          "resetAt": 1772361880000
+          "resetAt": 1772363691000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772358274294,
+      "lastRunAt": 1772360074306,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run was a **no-op** — there wasn’t an OpenClaw update available.\n\nLatest log entry:\n- `2026-03-01T09:45:03Z NOOP (no update)` (in `memory/openclaw-updates.log`)"
+      "lastSummary": "Auto-update run completed: **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-03-01T10:15:04Z NOOP (no update)`\n\n(From `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`.)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772358274294,
+      "lastRunAt": 1772360074306,
       "lastStatus": "ok",
-      "lastDurationMs": 46366,
+      "lastDurationMs": 50804,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run was a **no-op** — there wasn’t an OpenClaw update available.\n\nLatest log entry:\n- `2026-03-01T09:45:03Z NOOP (no update)` (in `memory/openclaw-updates.log`)",
-      "nextRunAt": 1772360074294,
+      "lastSummary": "Auto-update run completed: **NOOP (no update available)**.\n\nLatest log entry:\n- `2026-03-01T10:15:04Z NOOP (no update)`\n\n(From `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`.)",
+      "nextRunAt": 1772361874306,
       "model": null,
-      "lastTotalTokens": 17359,
-      "lastInputTokens": 14382,
-      "lastOutputTokens": 571
+      "lastTotalTokens": 13095,
+      "lastInputTokens": 15503,
+      "lastOutputTokens": 538
     }
   ]
 }
