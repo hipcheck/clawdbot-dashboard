@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772415006652,
+  "updatedAt": 1772416807307,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
-          "resetAt": 1772415880000
+          "usedPercent": 0,
+          "resetAt": 1772433881000
         },
         {
           "label": "Day",
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "tui message",
-      "activityChannel": "tui",
-      "lastRunAt": 1772414439773,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772415874773,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Update, with the concrete outcomes:\n\n## Brave key: installed + active\nYour Brave Search key is now wired into the **gateway systemd service** via a drop-in file, and the gateway was restarted successf"
+      "lastSummary": "The auto-update job is healthy, and there’s **no OpenClaw update available right now**.\n\n- `openclaw update status --json` reports: `hasRegistryUpdate=false`, `hasGitUpdate=false` (so it would no-op even if the box is idle).\n- The auto-update audit log is here:  \n  `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show mostly `NOOP (no update)` and occasional `SKIP (direct session active ...)`.\n\nIf you want, I can tweak the “busy session” window (`OC_BUSY_SESSION_MS`) so it’s less likely to skip when you’re not actually active."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772414074762,
+      "lastRunAt": 1772415874773,
       "lastStatus": "ok",
-      "lastDurationMs": 188955,
+      "lastDurationMs": 45589,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t apply an update — the auto-updater **skipped** because a **direct session was active** (`SKIP (direct session active ...)`).\n\nCurrent `openclaw update status --json` shows **no update available** right now (`available: false`, no registry/git update), so even if it had been idle it would’ve been a noop.",
-      "nextRunAt": 1772415874762,
+      "lastSummary": "The auto-update job is healthy, and there’s **no OpenClaw update available right now**.\n\n- `openclaw update status --json` reports: `hasRegistryUpdate=false`, `hasGitUpdate=false` (so it would no-op even if the box is idle).\n- The auto-update audit log is here:  \n  `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show mostly `NOOP (no update)` and occasional `SKIP (direct session active ...)`.\n\nIf you want, I can tweak the “busy session” window (`OC_BUSY_SESSION_MS`) so it’s less likely to skip when you’re not actually active.",
+      "nextRunAt": 1772417674773,
       "model": null,
-      "lastTotalTokens": 18554,
-      "lastInputTokens": 15046,
-      "lastOutputTokens": 935
+      "lastTotalTokens": 13811,
+      "lastInputTokens": 9437,
+      "lastOutputTokens": 688
     }
   ]
 }
