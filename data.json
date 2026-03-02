@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772465409998,
+  "updatedAt": 1772467210612,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
+          "usedPercent": 5,
           "resetAt": 1772469889000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772464473054,
+      "lastRunAt": 1772466273067,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Latest state from the auto-update logs:\n\n- **Update applied successfully:** `2026-03-02T05:20:30Z` → `UPDATE_OK (latest=2026.3.1)`\n- **After that:** repeated runs have been **NOOP (no update)** through `2026-03-02T14:45:07Z`, so your **15:14Z** run is very likely another **NOOP** as well (just not written to the log yet).\n\nOne thing I noticed earlier today:\n- Between `05:44Z` and `06:45Z` there were several **SKIP** entries due to `cron status unavailable (Expecting value...)` (i.e., `openclaw cron status --json` returned non-JSON briefly).  \n- It’s **healthy now** — `openclaw cron status --json` currently returns valid JSON again.\n\nIf you want to confirm the latest run result, check:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail it for the newest entry)"
+      "lastSummary": "Cron run completed cleanly.\n\n- Result: **NOOP (no update available)** (exit code 0)\n- Last successful auto-update (from the log): **2026.3.1 applied at 2026-03-02T05:20:30Z**\n- Note: there were a few earlier **“cron status unavailable (JSON parse error)”** skips around **05:44Z**, but `openclaw cron status --json` is returning valid JSON again now, so it looks transient."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772464473054,
+      "lastRunAt": 1772466273067,
       "lastStatus": "ok",
-      "lastDurationMs": 46331,
+      "lastDurationMs": 69448,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Latest state from the auto-update logs:\n\n- **Update applied successfully:** `2026-03-02T05:20:30Z` → `UPDATE_OK (latest=2026.3.1)`\n- **After that:** repeated runs have been **NOOP (no update)** through `2026-03-02T14:45:07Z`, so your **15:14Z** run is very likely another **NOOP** as well (just not written to the log yet).\n\nOne thing I noticed earlier today:\n- Between `05:44Z` and `06:45Z` there were several **SKIP** entries due to `cron status unavailable (Expecting value...)` (i.e., `openclaw cron status --json` returned non-JSON briefly).  \n- It’s **healthy now** — `openclaw cron status --json` currently returns valid JSON again.\n\nIf you want to confirm the latest run result, check:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (tail it for the newest entry)",
-      "nextRunAt": 1772466273054,
+      "lastSummary": "Cron run completed cleanly.\n\n- Result: **NOOP (no update available)** (exit code 0)\n- Last successful auto-update (from the log): **2026.3.1 applied at 2026-03-02T05:20:30Z**\n- Note: there were a few earlier **“cron status unavailable (JSON parse error)”** skips around **05:44Z**, but `openclaw cron status --json` is returning valid JSON again now, so it looks transient.",
+      "nextRunAt": 1772468073067,
       "model": null,
-      "lastTotalTokens": 19768,
-      "lastInputTokens": 16080,
-      "lastOutputTokens": 1012
+      "lastTotalTokens": 19114,
+      "lastInputTokens": 15509,
+      "lastOutputTokens": 694
     }
   ]
 }
