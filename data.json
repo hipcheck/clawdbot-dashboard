@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772431208093,
+  "updatedAt": 1772433007136,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
-          "resetAt": 1772435725000
+          "usedPercent": 10,
+          "resetAt": 1772433881000
         },
         {
           "label": "Day",
-          "usedPercent": 66,
+          "usedPercent": 67,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772430272784,
+      "lastRunAt": 1772432072798,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "From the auto-update log, the job already successfully applied an OpenClaw update earlier today, then later runs skipped because `openclaw cron status` returned non-JSON output:\n\n- `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)`\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n- `2026-03-02T05:44:43Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n- `2026-03-02T05:44:53Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n\nSo: **OpenClaw is updated to `2026.3.1`**, and the current cron invocation **did not update** (it skipped due to cron-status JSON parse failure).\n\nIf you want to sanity-check the underlying issue (only if it keeps happening), run:\n\n- `openclaw cron status --timeout 300000`\n- `openclaw gateway status`\n\nIf `openclaw cron status` is intermittently emitting empty/non-JSON stdout, that’s what’s triggering the skip."
+      "lastSummary": "Auto-update status from the log:\n\n- **05:15–05:20Z:** OpenClaw auto-update **was applied successfully** → `latest=2026.3.1` (`UPDATE_OK` at 05:20:30Z).\n- **After that (05:44Z and 06:14Z runs):** the job **skipped** because `openclaw cron status --timeout 300000` returned something that **wasn’t valid JSON**, so the script played it safe and logged:\n  - `SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n\nSo you’re updated, but the “cron status unavailable” thing could prevent future auto-updates if it keeps happening.\n\nIf you want, paste the output of:\n- `openclaw cron status --timeout 300000`\nand I’ll tell you why it’s not parsing / suggest a fix (either OpenClaw-side or a small hardening tweak in the script)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772430272784,
+      "lastRunAt": 1772432072798,
       "lastStatus": "ok",
-      "lastDurationMs": 53869,
+      "lastDurationMs": 42414,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "From the auto-update log, the job already successfully applied an OpenClaw update earlier today, then later runs skipped because `openclaw cron status` returned non-JSON output:\n\n- `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)`\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n- `2026-03-02T05:44:43Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n- `2026-03-02T05:44:53Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n\nSo: **OpenClaw is updated to `2026.3.1`**, and the current cron invocation **did not update** (it skipped due to cron-status JSON parse failure).\n\nIf you want to sanity-check the underlying issue (only if it keeps happening), run:\n\n- `openclaw cron status --timeout 300000`\n- `openclaw gateway status`\n\nIf `openclaw cron status` is intermittently emitting empty/non-JSON stdout, that’s what’s triggering the skip.",
-      "nextRunAt": 1772432072784,
+      "lastSummary": "Auto-update status from the log:\n\n- **05:15–05:20Z:** OpenClaw auto-update **was applied successfully** → `latest=2026.3.1` (`UPDATE_OK` at 05:20:30Z).\n- **After that (05:44Z and 06:14Z runs):** the job **skipped** because `openclaw cron status --timeout 300000` returned something that **wasn’t valid JSON**, so the script played it safe and logged:\n  - `SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n\nSo you’re updated, but the “cron status unavailable” thing could prevent future auto-updates if it keeps happening.\n\nIf you want, paste the output of:\n- `openclaw cron status --timeout 300000`\nand I’ll tell you why it’s not parsing / suggest a fix (either OpenClaw-side or a small hardening tweak in the script).",
+      "nextRunAt": 1772433872798,
       "model": null,
-      "lastTotalTokens": 18421,
-      "lastInputTokens": 14337,
-      "lastOutputTokens": 1439
+      "lastTotalTokens": 18625,
+      "lastInputTokens": 21189,
+      "lastOutputTokens": 1063
     }
   ]
 }
