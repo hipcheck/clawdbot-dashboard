@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772445609749,
+  "updatedAt": 1772447409469,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772444672912,
+      "lastRunAt": 1772446472925,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run completed (exit 0).\n\n- Result this run: **NOOP (no update available)**  \n  Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` @ `2026-03-02T09:45:09Z`\n\n- Current updater status check: `openclaw update status` reports **no git/registry update available**.\n\nNotable earlier today:\n- **Auto-update applied successfully** to `latest=2026.3.1` at `2026-03-02T05:15:08Z` → `05:20:30Z`\n- There were a few temporary skips due to `cron status` JSON parse errors around `05:44Z–06:45Z`, but it recovered afterward."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**).\n\nIt didn’t print any output this run, so there’s nothing else to report from the script logs."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772444672912,
+      "lastRunAt": 1772446472925,
       "lastStatus": "ok",
-      "lastDurationMs": 68698,
+      "lastDurationMs": 45208,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run completed (exit 0).\n\n- Result this run: **NOOP (no update available)**  \n  Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` @ `2026-03-02T09:45:09Z`\n\n- Current updater status check: `openclaw update status` reports **no git/registry update available**.\n\nNotable earlier today:\n- **Auto-update applied successfully** to `latest=2026.3.1` at `2026-03-02T05:15:08Z` → `05:20:30Z`\n- There were a few temporary skips due to `cron status` JSON parse errors around `05:44Z–06:45Z`, but it recovered afterward.",
-      "nextRunAt": 1772446472912,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code **0**).\n\nIt didn’t print any output this run, so there’s nothing else to report from the script logs.",
+      "nextRunAt": 1772448272925,
       "model": null,
-      "lastTotalTokens": 13424,
-      "lastInputTokens": 9514,
-      "lastOutputTokens": 668
+      "lastTotalTokens": 10936,
+      "lastInputTokens": 6789,
+      "lastOutputTokens": 218
     }
   ]
 }
