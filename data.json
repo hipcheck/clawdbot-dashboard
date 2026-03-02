@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772454610180,
+  "updatedAt": 1772456411777,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772453672970,
+      "lastRunAt": 1772455472983,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run completed successfully (exit code `0`).\n\nWhat it found:\n- OpenClaw version installed: `2026.3.1`\n- Update channel: `stable`\n- Registry “latestVersion”: `2026.3.1`\n- Result: **no update available** (already on latest)\n\nTwo noteworthy warnings seen during the check:\n1) **Telegram group allowlist is empty** → with `groupPolicy=\"allowlist\"`, this configuration will silently drop *all* group messages until `groupAllowFrom`/`allowFrom` is populated (for the root + each account).\n2) **Control UI connection blocked (“origin not allowed”)** from `https://openclaw-vps.tail08c45b.ts.net` → you’d need to add that origin to `gateway.controlUi.allowedOrigins` (or open the Control UI locally on the gateway host, since it’s loopback-bound)."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now — it exited **code 0** and produced **no stdout/stderr** (so: no errors, but also no visible “updated” message).\n\nChecked `openclaw status` afterward:\n- OpenClaw app version: **2026.3.1**\n- Update channel: **stable**\n- “Update” line shows: **pnpm · npm latest 2026.3.1**\n- Gateway service: **enabled + running**\n\nSo you’re already on the latest stable, and nothing needed updating on this run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772453672970,
+      "lastRunAt": 1772455472983,
       "lastStatus": "ok",
-      "lastDurationMs": 75683,
+      "lastDurationMs": 85620,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run completed successfully (exit code `0`).\n\nWhat it found:\n- OpenClaw version installed: `2026.3.1`\n- Update channel: `stable`\n- Registry “latestVersion”: `2026.3.1`\n- Result: **no update available** (already on latest)\n\nTwo noteworthy warnings seen during the check:\n1) **Telegram group allowlist is empty** → with `groupPolicy=\"allowlist\"`, this configuration will silently drop *all* group messages until `groupAllowFrom`/`allowFrom` is populated (for the root + each account).\n2) **Control UI connection blocked (“origin not allowed”)** from `https://openclaw-vps.tail08c45b.ts.net` → you’d need to add that origin to `gateway.controlUi.allowedOrigins` (or open the Control UI locally on the gateway host, since it’s loopback-bound).",
-      "nextRunAt": 1772455472970,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now — it exited **code 0** and produced **no stdout/stderr** (so: no errors, but also no visible “updated” message).\n\nChecked `openclaw status` afterward:\n- OpenClaw app version: **2026.3.1**\n- Update channel: **stable**\n- “Update” line shows: **pnpm · npm latest 2026.3.1**\n- Gateway service: **enabled + running**\n\nSo you’re already on the latest stable, and nothing needed updating on this run.",
+      "nextRunAt": 1772457272983,
       "model": null,
-      "lastTotalTokens": 23593,
-      "lastInputTokens": 19636,
-      "lastOutputTokens": 723
+      "lastTotalTokens": 12516,
+      "lastInputTokens": 8598,
+      "lastOutputTokens": 474
     }
   ]
 }
