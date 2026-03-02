@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772488810766,
+  "updatedAt": 1772490609628,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772505888000
+          "resetAt": 1772505905000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772487873233,
+      "lastRunAt": 1772489673247,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — completed successfully (exit code 0) and didn’t emit any stdout/stderr.\n\nPost-check:\n- `openclaw --version` → **2026.3.1**\n- `openclaw gateway status` → **running + RPC probe ok**\n\nOne thing flagged by `gateway status` “Doctor warnings”:\n- **Telegram groupPolicy is `allowlist` but `groupAllowFrom`/`allowFrom` is empty** (for default + accounts `geordie`, `nikola`, `q`). This means **all group messages will be silently dropped** until you add allowed sender IDs or change groupPolicy to `open`."
+      "lastSummary": "Your auto-update script is logging to:\n\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nLatest status from the log:\n\n- **UPDATE applied successfully**: `latest=2026.3.1`  \n  - `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)`  \n  - `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n- After that, it’s been mostly **NOOP (no update)** runs.\n- There was a short window where it **skipped because `openclaw cron status --json` returned invalid JSON** (`Expecting value...`) around `05:44Z–06:45Z`, and then it went back to normal (`06:46Z NOOP` and onward).\n\nI don’t yet see an entry corresponding to the **10:14 PM UTC** run you pasted (the log currently ends at `21:45Z`). If you want, paste the next line that gets appended (or I can re-check the tail in a minute) and we’ll confirm whether it was just another NOOP/skip."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772487873233,
+      "lastRunAt": 1772489673247,
       "lastStatus": "ok",
-      "lastDurationMs": 50195,
+      "lastDurationMs": 53857,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — completed successfully (exit code 0) and didn’t emit any stdout/stderr.\n\nPost-check:\n- `openclaw --version` → **2026.3.1**\n- `openclaw gateway status` → **running + RPC probe ok**\n\nOne thing flagged by `gateway status` “Doctor warnings”:\n- **Telegram groupPolicy is `allowlist` but `groupAllowFrom`/`allowFrom` is empty** (for default + accounts `geordie`, `nikola`, `q`). This means **all group messages will be silently dropped** until you add allowed sender IDs or change groupPolicy to `open`.",
-      "nextRunAt": 1772489673233,
+      "lastSummary": "Your auto-update script is logging to:\n\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nLatest status from the log:\n\n- **UPDATE applied successfully**: `latest=2026.3.1`  \n  - `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)`  \n  - `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n- After that, it’s been mostly **NOOP (no update)** runs.\n- There was a short window where it **skipped because `openclaw cron status --json` returned invalid JSON** (`Expecting value...`) around `05:44Z–06:45Z`, and then it went back to normal (`06:46Z NOOP` and onward).\n\nI don’t yet see an entry corresponding to the **10:14 PM UTC** run you pasted (the log currently ends at `21:45Z`). If you want, paste the next line that gets appended (or I can re-check the tail in a minute) and we’ll confirm whether it was just another NOOP/skip.",
+      "nextRunAt": 1772491473247,
       "model": null,
-      "lastTotalTokens": 11832,
-      "lastInputTokens": 7789,
-      "lastOutputTokens": 481
+      "lastTotalTokens": 14248,
+      "lastInputTokens": 11045,
+      "lastOutputTokens": 862
     }
   ]
 }
