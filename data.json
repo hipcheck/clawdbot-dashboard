@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772472610295,
+  "updatedAt": 1772474411416,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772471673106,
+      "lastRunAt": 1772473473123,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Ran: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0** (no stdout/stderr)\n\nSanity check after the run:\n- `openclaw status`: **OK**\n- Gateway service: **running**\n- Update line shows: **npm latest 2026.3.1**"
+      "lastSummary": "Auto-update cron ran successfully (exit code 0). The script didn’t print anything to stdout.\n\nCurrent OpenClaw version on this host: **2026.3.1**  \nGateway status: **running + RPC probe ok** on **127.0.0.1:18789**.\n\nOne thing to note from `openclaw gateway status` “Doctor warnings”:\n- Your Telegram `groupPolicy` is set to **allowlist**, but the allowlists are empty (`groupAllowFrom` / `allowFrom`), so **all group messages will be silently dropped** (for default + geordie + nikola + q accounts).\n\nIf you want, tell me whether you want group messages to be allowed broadly (“open”) or only from specific sender IDs (“allowlist”), and I’ll help you fix the config accordingly."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772471673106,
+      "lastRunAt": 1772473473123,
       "lastStatus": "ok",
-      "lastDurationMs": 62141,
+      "lastDurationMs": 56518,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Ran: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0** (no stdout/stderr)\n\nSanity check after the run:\n- `openclaw status`: **OK**\n- Gateway service: **running**\n- Update line shows: **npm latest 2026.3.1**",
-      "nextRunAt": 1772473473106,
+      "lastSummary": "Auto-update cron ran successfully (exit code 0). The script didn’t print anything to stdout.\n\nCurrent OpenClaw version on this host: **2026.3.1**  \nGateway status: **running + RPC probe ok** on **127.0.0.1:18789**.\n\nOne thing to note from `openclaw gateway status` “Doctor warnings”:\n- Your Telegram `groupPolicy` is set to **allowlist**, but the allowlists are empty (`groupAllowFrom` / `allowFrom`), so **all group messages will be silently dropped** (for default + geordie + nikola + q accounts).\n\nIf you want, tell me whether you want group messages to be allowed broadly (“open”) or only from specific sender IDs (“allowlist”), and I’ll help you fix the config accordingly.",
+      "nextRunAt": 1772475273123,
       "model": null,
-      "lastTotalTokens": 12439,
-      "lastInputTokens": 14814,
-      "lastOutputTokens": 366
+      "lastTotalTokens": 11847,
+      "lastInputTokens": 8195,
+      "lastOutputTokens": 521
     }
   ]
 }
