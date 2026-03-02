@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772416807307,
+  "updatedAt": 1772418607480,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772433881000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772415874773,
+      "lastRunAt": 1772417674786,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The auto-update job is healthy, and there’s **no OpenClaw update available right now**.\n\n- `openclaw update status --json` reports: `hasRegistryUpdate=false`, `hasGitUpdate=false` (so it would no-op even if the box is idle).\n- The auto-update audit log is here:  \n  `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show mostly `NOOP (no update)` and occasional `SKIP (direct session active ...)`.\n\nIf you want, I can tweak the “busy session” window (`OC_BUSY_SESSION_MS`) so it’s less likely to skip when you’re not actually active."
+      "lastSummary": "Checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`: the latest auto-update run recorded is:\n\n- `2026-03-02T02:15:38Z NOOP (no update)`\n\nSo nothing was updated—there simply wasn’t a new OpenClaw update available at that time."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772415874773,
+      "lastRunAt": 1772417674786,
       "lastStatus": "ok",
-      "lastDurationMs": 45589,
+      "lastDurationMs": 71930,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update job is healthy, and there’s **no OpenClaw update available right now**.\n\n- `openclaw update status --json` reports: `hasRegistryUpdate=false`, `hasGitUpdate=false` (so it would no-op even if the box is idle).\n- The auto-update audit log is here:  \n  `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`  \n  Latest entries show mostly `NOOP (no update)` and occasional `SKIP (direct session active ...)`.\n\nIf you want, I can tweak the “busy session” window (`OC_BUSY_SESSION_MS`) so it’s less likely to skip when you’re not actually active.",
-      "nextRunAt": 1772417674773,
+      "lastSummary": "Checked `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`: the latest auto-update run recorded is:\n\n- `2026-03-02T02:15:38Z NOOP (no update)`\n\nSo nothing was updated—there simply wasn’t a new OpenClaw update available at that time.",
+      "nextRunAt": 1772419474786,
       "model": null,
-      "lastTotalTokens": 13811,
-      "lastInputTokens": 9437,
-      "lastOutputTokens": 688
+      "lastTotalTokens": 14571,
+      "lastInputTokens": 11721,
+      "lastOutputTokens": 935
     }
   ]
 }
