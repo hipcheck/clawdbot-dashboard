@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772460011170,
+  "updatedAt": 1772461810128,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 4,
           "resetAt": 1772469889000
         },
         {
           "label": "Day",
-          "usedPercent": 68,
+          "usedPercent": 69,
           "resetAt": 1772497599000
         }
       ],
@@ -61,25 +61,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772459073013,
+      "activityKind": "chat",
+      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
+      "activityChannel": "tui",
+      "lastRunAt": 1772461105979,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran cleanly just now and **did not apply an update**.\n\n- Latest log entry: **2026-03-02T13:45:08Z — `NOOP (no update)`**\n- So: **no OpenClaw update was available** at runtime.\n\nSide note: earlier today there were a few skips like `cron status unavailable (Expecting value...)` (JSON parse failure), but `openclaw cron status --json` is returning valid JSON again now, so it looks transient rather than a persistent break."
+      "lastSummary": "HEARTBEAT_OK"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "A cron job \"km:nightly-journal-comment\" just completed successfully.\n\nResult:\nMac node status: **connected** (Andreas MacBook)\n\n- CURRENT_TS (America/",
+      "activityLabel": "System: Exec denied (gateway id=e65d667b-48ff-42ce-9843-027c7ddc5747, approval-timeout): bash -lc 'cd /home/clawd/.openclaw/workspace-km && git diff -",
       "activityChannel": "telegram",
-      "lastRunAt": 1772424166518,
+      "lastRunAt": 1772461327256,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Tonight’s journal comment ran successfully (Mac was connected).\n\n- NYC time was **2026-03-01 11:02 PM EST**, so **TARGET_DATE = 2026-03-01**.\n- I opened `/Users/andreasallmaier/Documents/Brain/journal"
+      "lastSummary": "Glad—that’s the exact shape I’ll stick with going forward.\n\nAlso noted on my side: the two “approval-timeout” messages were just me trying (and failing) to run a local `git diff` check after updating "
     }
   ],
   "cronJobs": [
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772459073013,
+      "lastRunAt": 1772460873027,
       "lastStatus": "ok",
-      "lastDurationMs": 70313,
+      "lastDurationMs": 57325,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran cleanly just now and **did not apply an update**.\n\n- Latest log entry: **2026-03-02T13:45:08Z — `NOOP (no update)`**\n- So: **no OpenClaw update was available** at runtime.\n\nSide note: earlier today there were a few skips like `cron status unavailable (Expecting value...)` (JSON parse failure), but `openclaw cron status --json` is returning valid JSON again now, so it looks transient rather than a persistent break.",
-      "nextRunAt": 1772460873013,
+      "lastSummary": "Ran `openclaw_auto_update.py` for cron `c621238c-158e-4342-90c7-9ebb9f8ab0a3`.\n\n- Result: **NOOP (no update available)**\n- Logged at: `2026-03-02T14:15:08Z` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772462673027,
       "model": null,
-      "lastTotalTokens": 14674,
-      "lastInputTokens": 11020,
-      "lastOutputTokens": 707
+      "lastTotalTokens": 17567,
+      "lastInputTokens": 14652,
+      "lastOutputTokens": 523
     }
   ]
 }
