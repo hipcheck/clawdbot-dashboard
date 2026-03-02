@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772422206980,
+  "updatedAt": 1772424007545,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772433881000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772421274818,
+      "lastRunAt": 1772423074832,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run result: **NOOP (no update)**.\n\nLatest log entry:\n- `2026-03-02T03:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
+      "lastSummary": "Checked the auto-update log for that run.\n\n- Result at **2026-03-02T03:45:06Z**: **NOOP (no update)**  \n- Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (last lines show it’s been no-op’ing since **00:45Z** today)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772421274818,
+      "lastRunAt": 1772423074832,
       "lastStatus": "ok",
-      "lastDurationMs": 44702,
+      "lastDurationMs": 46337,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run result: **NOOP (no update)**.\n\nLatest log entry:\n- `2026-03-02T03:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
-      "nextRunAt": 1772423074818,
+      "lastSummary": "Checked the auto-update log for that run.\n\n- Result at **2026-03-02T03:45:06Z**: **NOOP (no update)**  \n- Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (last lines show it’s been no-op’ing since **00:45Z** today)",
+      "nextRunAt": 1772424874832,
       "model": null,
-      "lastTotalTokens": 13906,
-      "lastInputTokens": 10189,
-      "lastOutputTokens": 567
+      "lastTotalTokens": 18187,
+      "lastInputTokens": 14655,
+      "lastOutputTokens": 600
     }
   ]
 }
