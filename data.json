@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772449210357,
+  "updatedAt": 1772451009759,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 67,
+          "usedPercent": 68,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772448272939,
+      "lastRunAt": 1772450072947,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully (exit code 0).\n\nPost-check:\n- `openclaw --version` → **2026.3.1**\n- `openclaw gateway status` → **running OK** (RPC probe: ok)\n\nOne thing surfaced in `openclaw gateway status` “Doctor warnings”:\n- `channels.telegram.*.groupPolicy` is set to **\"allowlist\"** but `groupAllowFrom` / `allowFrom` are empty → **all group messages will be silently dropped** for those accounts.\n\nIf that’s intentional, all good. If not, tell me which Telegram user IDs should be allowed (or whether you want `groupPolicy: \"open\"`)."
+      "lastSummary": "NOOP — this run found **no OpenClaw update available** (see `memory/openclaw-updates.log`: `2026-03-02T11:15:05Z NOOP (no update)`).\n\nFor context, the last successful auto-update was earlier today:\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772448272939,
+      "lastRunAt": 1772450072947,
       "lastStatus": "ok",
-      "lastDurationMs": 57302,
+      "lastDurationMs": 51969,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run completed successfully (exit code 0).\n\nPost-check:\n- `openclaw --version` → **2026.3.1**\n- `openclaw gateway status` → **running OK** (RPC probe: ok)\n\nOne thing surfaced in `openclaw gateway status` “Doctor warnings”:\n- `channels.telegram.*.groupPolicy` is set to **\"allowlist\"** but `groupAllowFrom` / `allowFrom` are empty → **all group messages will be silently dropped** for those accounts.\n\nIf that’s intentional, all good. If not, tell me which Telegram user IDs should be allowed (or whether you want `groupPolicy: \"open\"`).",
-      "nextRunAt": 1772450072939,
+      "lastSummary": "NOOP — this run found **no OpenClaw update available** (see `memory/openclaw-updates.log`: `2026-03-02T11:15:05Z NOOP (no update)`).\n\nFor context, the last successful auto-update was earlier today:\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`",
+      "nextRunAt": 1772451872947,
       "model": null,
-      "lastTotalTokens": 11810,
-      "lastInputTokens": 7749,
-      "lastOutputTokens": 489
+      "lastTotalTokens": 18698,
+      "lastInputTokens": 21239,
+      "lastOutputTokens": 537
     }
   ]
 }
