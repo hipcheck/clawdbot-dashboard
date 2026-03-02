@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772440207544,
+  "updatedAt": 1772442011320,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1772451889000
+          "resetAt": 1772453731000
         },
         {
           "label": "Day",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1772365800022,
+      "lastRunAt": 1772440200018,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\n- OpenClaw Gateway is running correctly.\n- The security audit found one non-critical warning regarding a weak model configuration.\n- The update check command timed out and needs manual investigation.\n- The cron subsystem is healthy.\n\nNo critical issues were detected."
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772439272865,
+      "lastRunAt": 1772441072880,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully (exit code 0).\n\nCurrent OpenClaw status:\n- Version: **2026.3.1** (stable channel)\n- Gateway service: **running** (systemd, active)\n- Update check shows: **pnpm · npm latest 2026.3.1** (so you’re up to date)"
+      "lastSummary": "This cron run was a **NOOP** — no OpenClaw update available.\n\nLatest `memory/openclaw-updates.log` entries:\n- `2026-03-02T08:45:10Z NOOP (no update)` (this run)\n- Earlier today it **did update successfully**: `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)` → `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n\nOne thing to note: between ~05:44–06:46Z there were several skips due to `cron status unavailable (Expecting value: line 1 column 1 (char 0))`, which suggests `openclaw cron status --json` intermittently returned empty/non-JSON output. If you want, I can dig into that (gateway logs / retry behavior), but it’s not blocking updates right now since the later runs are healthy."
     },
     {
       "id": "km",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772353800029,
-      "lastStatus": "error",
-      "lastDurationMs": 543911,
-      "consecutiveErrors": 2,
-      "lastError": "⚠️ ✉️ Message failed",
-      "lastSummary": "⚠️ ✉️ Message failed",
-      "nextRunAt": 1772440200000,
+      "lastRunAt": 1772440200018,
+      "lastStatus": "ok",
+      "lastDurationMs": 242938,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\n- OpenClaw Gateway is running correctly.\n- The security audit found one non-critical warning regarding a weak model configuration.\n- The update check command timed out and needs manual investigation.\n- The cron subsystem is healthy.\n\nNo critical issues were detected.",
+      "nextRunAt": 1772526600000,
       "model": null,
-      "lastTotalTokens": 10929,
-      "lastInputTokens": 31863,
-      "lastOutputTokens": 2373
+      "lastTotalTokens": 10892,
+      "lastInputTokens": 13115,
+      "lastOutputTokens": 1513
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772439272865,
+      "lastRunAt": 1772441072880,
       "lastStatus": "ok",
-      "lastDurationMs": 63692,
+      "lastDurationMs": 64805,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully (exit code 0).\n\nCurrent OpenClaw status:\n- Version: **2026.3.1** (stable channel)\n- Gateway service: **running** (systemd, active)\n- Update check shows: **pnpm · npm latest 2026.3.1** (so you’re up to date)",
-      "nextRunAt": 1772441072865,
+      "lastSummary": "This cron run was a **NOOP** — no OpenClaw update available.\n\nLatest `memory/openclaw-updates.log` entries:\n- `2026-03-02T08:45:10Z NOOP (no update)` (this run)\n- Earlier today it **did update successfully**: `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)` → `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n\nOne thing to note: between ~05:44–06:46Z there were several skips due to `cron status unavailable (Expecting value: line 1 column 1 (char 0))`, which suggests `openclaw cron status --json` intermittently returned empty/non-JSON output. If you want, I can dig into that (gateway logs / retry behavior), but it’s not blocking updates right now since the later runs are healthy.",
+      "nextRunAt": 1772442872880,
       "model": null,
-      "lastTotalTokens": 12688,
-      "lastInputTokens": 17429,
-      "lastOutputTokens": 451
+      "lastTotalTokens": 14467,
+      "lastInputTokens": 12555,
+      "lastOutputTokens": 657
     }
   ]
 }
