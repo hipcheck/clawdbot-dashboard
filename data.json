@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772452811027,
+  "updatedAt": 1772454610180,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772469889000
         },
         {
@@ -37,13 +37,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"timestamp\": \"Mon 2026-03-02 00:03 UTC\"\n}\n```\n\nHow can I approve in OpenClaw tui?",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772409853328,
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1772452800026,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NO_REPLY"
+      "lastSummary": "Proposal: Upgrade Agent Model Tiers\n\n**Impact:** High. Using stronger models will improve reasoning, reduce errors, and enhance security by making agents less susceptible to prompt injection and other risks identified in the prescan. This directly improves the quality of all subsequent builds.\n\n**Risk:** Low. This is a configuration change. We can test one agent first before rolling it out to all of them. If issues arise, the change can be easily reverted.\n\n**First 3 steps:**\n1.  List all agent configurations to identify which ones are using the `openai-codex/gpt-4o-mini` model.\n2.  Update the configuration for one key agent to a recommended model (e.g., GPT-5 family, Claude 4.5+).\n3.  Run a series of test prompts against the updated agent to verify performance and compatibility before updating the rest."
     },
     {
       "id": "infraops",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772451872959,
+      "lastRunAt": 1772453672970,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: *(none)*"
+      "lastSummary": "Cron run completed successfully (exit code `0`).\n\nWhat it found:\n- OpenClaw version installed: `2026.3.1`\n- Update channel: `stable`\n- Registry “latestVersion”: `2026.3.1`\n- Result: **no update available** (already on latest)\n\nTwo noteworthy warnings seen during the check:\n1) **Telegram group allowlist is empty** → with `groupPolicy=\"allowlist\"`, this configuration will silently drop *all* group messages until `groupAllowFrom`/`allowFrom` is populated (for the root + each account).\n2) **Control UI connection blocked (“origin not allowed”)** from `https://openclaw-vps.tail08c45b.ts.net` → you’d need to add that origin to `gateway.controlUi.allowedOrigins` (or open the Control UI locally on the gateway host, since it’s loopback-bound)."
     },
     {
       "id": "km",
@@ -89,17 +89,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772366400016,
+      "lastRunAt": 1772452800026,
       "lastStatus": "ok",
-      "lastDurationMs": 127946,
+      "lastDurationMs": 70977,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "⚠️ WARNING: Prescan data is stale (over 36 hours old).\n\n**Today's Proposal: Implement Automated Security & Update Checks**\n\nFlesh out the daily prescan to include security and package update checks. The current summary is empty in these sections, leaving a blind spot for system health.\n\n**Impact:** High. Provides a daily, automated view of the system's security posture and pending updates, allowing for proactive maintenance instead of reactive fixes. This makes the entire system more robust and trustworthy.\n\n**Risk:** Low. The work involves running read-only audit commands and adding their output to an existing summary script. No system state will be modified.\n\n**First 3 Steps:**\n1.  Read the `healthcheck` skill documentation to understand its audit capabilities.\n2.  Use `exec` to run the `healthcheck` commands for security auditing and update status checks.\n3.  Integrate the output into the script that generates the prescan summary.",
-      "nextRunAt": 1772452800000,
+      "lastSummary": "Proposal: Upgrade Agent Model Tiers\n\n**Impact:** High. Using stronger models will improve reasoning, reduce errors, and enhance security by making agents less susceptible to prompt injection and other risks identified in the prescan. This directly improves the quality of all subsequent builds.\n\n**Risk:** Low. This is a configuration change. We can test one agent first before rolling it out to all of them. If issues arise, the change can be easily reverted.\n\n**First 3 steps:**\n1.  List all agent configurations to identify which ones are using the `openai-codex/gpt-4o-mini` model.\n2.  Update the configuration for one key agent to a recommended model (e.g., GPT-5 family, Claude 4.5+).\n3.  Run a series of test prompts against the updated agent to verify performance and compatibility before updating the rest.",
+      "nextRunAt": 1772539200000,
       "model": null,
-      "lastTotalTokens": 6353,
-      "lastInputTokens": 6519,
-      "lastOutputTokens": 1262
+      "lastTotalTokens": 6427,
+      "lastInputTokens": 6580,
+      "lastOutputTokens": 1104
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772451872959,
+      "lastRunAt": 1772453672970,
       "lastStatus": "ok",
-      "lastDurationMs": 40382,
+      "lastDurationMs": 75683,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: *(none)*",
-      "nextRunAt": 1772453672959,
+      "lastSummary": "Cron run completed successfully (exit code `0`).\n\nWhat it found:\n- OpenClaw version installed: `2026.3.1`\n- Update channel: `stable`\n- Registry “latestVersion”: `2026.3.1`\n- Result: **no update available** (already on latest)\n\nTwo noteworthy warnings seen during the check:\n1) **Telegram group allowlist is empty** → with `groupPolicy=\"allowlist\"`, this configuration will silently drop *all* group messages until `groupAllowFrom`/`allowFrom` is populated (for the root + each account).\n2) **Control UI connection blocked (“origin not allowed”)** from `https://openclaw-vps.tail08c45b.ts.net` → you’d need to add that origin to `gateway.controlUi.allowedOrigins` (or open the Control UI locally on the gateway host, since it’s loopback-bound).",
+      "nextRunAt": 1772455472970,
       "model": null,
-      "lastTotalTokens": 10948,
-      "lastInputTokens": 6816,
-      "lastOutputTokens": 263
+      "lastTotalTokens": 23593,
+      "lastInputTokens": 19636,
+      "lastOutputTokens": 723
     }
   ]
 }
