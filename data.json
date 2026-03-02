@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772481611695,
+  "updatedAt": 1772483410513,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 4,
           "resetAt": 1772487889000
         },
         {
           "label": "Day",
-          "usedPercent": 70,
+          "usedPercent": 71,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772480673178,
+      "lastRunAt": 1772482473192,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found **no update available**.\n\nLatest log entry:\n- `2026-03-02T19:45:10Z NOOP (no update)`"
+      "lastSummary": "NOOP — no OpenClaw update available on this run.\n\nFrom `memory/openclaw-updates.log`:\n- `2026-03-02T20:15:07Z NOOP (no update)`"
     },
     {
       "id": "km",
@@ -143,17 +143,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772414318525,
+      "lastRunAt": 1772481600024,
       "lastStatus": "ok",
-      "lastDurationMs": 101082,
+      "lastDurationMs": 131059,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Run complete (rate-limit-safe).\n\n- **Pipeline read:** extracted/deduped existing `- Link:` URLs and their `- Last seen:` dates.\n- **Minimal search (Brave, pw, 1 query):** returned **0 results** (no 429).\n- **Direct sources:**\n  - **Google Careers (web_fetch):** parsed results; **no new in-scope NYC Senior Marketing Manager postings** found beyond what’s already tracked.\n  - **Amazon (search.json, web_fetch):** fetched successfully; **no new NYC in-scope Senior Marketing Manager postings** surfaced in the returned payload.\n  - **Apple (browser tool):** **failed** — browser couldn’t start on the VPS (Chrome/Chromium not installed; detection points to a Mac path).\n- **New roles appended:** **0**\n- **Stale audit:** no roles exceeded 30 days since last seen, so **no stale warnings added/changed**; `Last seen` values already at/near current where applicable.\n- **Metadata + run log:** updated `last_run` to `2026-03-02T01:18:00+00:00` and appended a new Run log row.  \n- **Saved + local git commit:** committed locally (no push).",
-      "nextRunAt": 1772481600000,
+      "lastSummary": "Updated `/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`:\n\n- **Net-new roles appended:** 1  \n  - Google — **Senior Partner Marketing Manager, Data Analytics, Partnerships** (preferred location includes **New York, NY**):  \n    https://www.google.com/about/careers/applications/jobs/results/83919006783677126-senior-partner-marketing-manager-data-analytics-partnerships\n\n- **Last-seen updates / stale flags:** none needed (no existing roles crossed the 30-day stale threshold; no additional tracked URLs re-appeared beyond ones already last-seen today).\n\n- **Run metadata + run log:** updated (`last_run_status=ok_with_errors`, `last_run_new_roles=1`)  \n  - Error: **Apple scrape failed** because the browser tool can’t start on the VPS (“No supported browser found”).\n\n- **Local git:** created a local commit (no push).",
+      "nextRunAt": 1772740800000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 47854,
-      "lastInputTokens": 45189,
-      "lastOutputTokens": 3094
+      "lastTotalTokens": 44179,
+      "lastInputTokens": 43001,
+      "lastOutputTokens": 4602
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772480673178,
+      "lastRunAt": 1772482473192,
       "lastStatus": "ok",
-      "lastDurationMs": 52066,
+      "lastDurationMs": 54119,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found **no update available**.\n\nLatest log entry:\n- `2026-03-02T19:45:10Z NOOP (no update)`",
-      "nextRunAt": 1772482473178,
+      "lastSummary": "NOOP — no OpenClaw update available on this run.\n\nFrom `memory/openclaw-updates.log`:\n- `2026-03-02T20:15:07Z NOOP (no update)`",
+      "nextRunAt": 1772484273192,
       "model": null,
-      "lastTotalTokens": 13330,
-      "lastInputTokens": 9363,
-      "lastOutputTokens": 423
+      "lastTotalTokens": 17718,
+      "lastInputTokens": 23930,
+      "lastOutputTokens": 491
     }
   ]
 }
