@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772458210378,
+  "updatedAt": 1772460011170,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772469889000
         },
         {
@@ -29,7 +29,7 @@
       "id": "anthropic",
       "label": "Anthropic",
       "windows": [],
-      "error": "HTTP 500: Internal server error"
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772457272998,
+      "lastRunAt": 1772459073013,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update)** — nothing to install right now (exit 0).\n\nLatest successful update in the log was **2026.3.1** at **2026-03-02T05:20:30Z**. There were a few earlier skips due to `cron status unavailable (Expecting value...)`, but it recovered afterward and has been no-op since."
+      "lastSummary": "`openclaw_auto_update.py` ran cleanly just now and **did not apply an update**.\n\n- Latest log entry: **2026-03-02T13:45:08Z — `NOOP (no update)`**\n- So: **no OpenClaw update was available** at runtime.\n\nSide note: earlier today there were a few skips like `cron status unavailable (Expecting value...)` (JSON parse failure), but `openclaw cron status --json` is returning valid JSON again now, so it looks transient rather than a persistent break."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772457272998,
+      "lastRunAt": 1772459073013,
       "lastStatus": "ok",
-      "lastDurationMs": 55398,
+      "lastDurationMs": 70313,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update)** — nothing to install right now (exit 0).\n\nLatest successful update in the log was **2026.3.1** at **2026-03-02T05:20:30Z**. There were a few earlier skips due to `cron status unavailable (Expecting value...)`, but it recovered afterward and has been no-op since.",
-      "nextRunAt": 1772459072998,
+      "lastSummary": "`openclaw_auto_update.py` ran cleanly just now and **did not apply an update**.\n\n- Latest log entry: **2026-03-02T13:45:08Z — `NOOP (no update)`**\n- So: **no OpenClaw update was available** at runtime.\n\nSide note: earlier today there were a few skips like `cron status unavailable (Expecting value...)` (JSON parse failure), but `openclaw cron status --json` is returning valid JSON again now, so it looks transient rather than a persistent break.",
+      "nextRunAt": 1772460873013,
       "model": null,
-      "lastTotalTokens": 13594,
-      "lastInputTokens": 10042,
-      "lastOutputTokens": 547
+      "lastTotalTokens": 14674,
+      "lastInputTokens": 11020,
+      "lastOutputTokens": 707
     }
   ]
 }
