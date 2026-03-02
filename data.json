@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772443809841,
+  "updatedAt": 1772445609749,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772453731000
+          "usedPercent": 2,
+          "resetAt": 1772451889000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772442872895,
+      "lastRunAt": 1772444672912,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run result (from `memory/openclaw-updates.log`):\n\n- **09:15Z:** `NOOP (no update)` — nothing to install right now.\n- Earlier today:\n  - **05:15Z:** `UPDATE_START (latest=2026.3.1)`\n  - **05:20Z:** `UPDATE_OK (latest=2026.3.1)` — the latest OpenClaw update **was applied successfully**.\n\nNote: between **05:44Z–06:45Z** there were a few skips because `openclaw cron status --json` returned non-JSON (`Expecting value...`). It resolved afterward and updates continued checking normally."
+      "lastSummary": "Cron run completed (exit 0).\n\n- Result this run: **NOOP (no update available)**  \n  Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` @ `2026-03-02T09:45:09Z`\n\n- Current updater status check: `openclaw update status` reports **no git/registry update available**.\n\nNotable earlier today:\n- **Auto-update applied successfully** to `latest=2026.3.1` at `2026-03-02T05:15:08Z` → `05:20:30Z`\n- There were a few temporary skips due to `cron status` JSON parse errors around `05:44Z–06:45Z`, but it recovered afterward."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772442872895,
+      "lastRunAt": 1772444672912,
       "lastStatus": "ok",
-      "lastDurationMs": 68207,
+      "lastDurationMs": 68698,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run result (from `memory/openclaw-updates.log`):\n\n- **09:15Z:** `NOOP (no update)` — nothing to install right now.\n- Earlier today:\n  - **05:15Z:** `UPDATE_START (latest=2026.3.1)`\n  - **05:20Z:** `UPDATE_OK (latest=2026.3.1)` — the latest OpenClaw update **was applied successfully**.\n\nNote: between **05:44Z–06:45Z** there were a few skips because `openclaw cron status --json` returned non-JSON (`Expecting value...`). It resolved afterward and updates continued checking normally.",
-      "nextRunAt": 1772444672895,
+      "lastSummary": "Cron run completed (exit 0).\n\n- Result this run: **NOOP (no update available)**  \n  Source: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` @ `2026-03-02T09:45:09Z`\n\n- Current updater status check: `openclaw update status` reports **no git/registry update available**.\n\nNotable earlier today:\n- **Auto-update applied successfully** to `latest=2026.3.1` at `2026-03-02T05:15:08Z` → `05:20:30Z`\n- There were a few temporary skips due to `cron status` JSON parse errors around `05:44Z–06:45Z`, but it recovered afterward.",
+      "nextRunAt": 1772446472912,
       "model": null,
-      "lastTotalTokens": 13453,
-      "lastInputTokens": 9515,
-      "lastOutputTokens": 570
+      "lastTotalTokens": 13424,
+      "lastInputTokens": 9514,
+      "lastOutputTokens": 668
     }
   ]
 }
