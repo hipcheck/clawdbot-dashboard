@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772420407532,
+  "updatedAt": 1772422206980,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772419474798,
+      "lastRunAt": 1772421274818,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "OpenClaw auto-update cron ran successfully.\n\n- Result: **NOOP (no update available)**\n- Latest log entry: `2026-03-02T02:45:06Z NOOP (no update)` (from `memory/openclaw-updates.log`)"
+      "lastSummary": "Cron run result: **NOOP (no update)**.\n\nLatest log entry:\n- `2026-03-02T03:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772419474798,
+      "lastRunAt": 1772421274818,
       "lastStatus": "ok",
-      "lastDurationMs": 53517,
+      "lastDurationMs": 44702,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "OpenClaw auto-update cron ran successfully.\n\n- Result: **NOOP (no update available)**\n- Latest log entry: `2026-03-02T02:45:06Z NOOP (no update)` (from `memory/openclaw-updates.log`)",
-      "nextRunAt": 1772421274798,
+      "lastSummary": "Cron run result: **NOOP (no update)**.\n\nLatest log entry:\n- `2026-03-02T03:15:07Z NOOP (no update)` (from `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`)",
+      "nextRunAt": 1772423074818,
       "model": null,
-      "lastTotalTokens": 18252,
-      "lastInputTokens": 14551,
-      "lastOutputTokens": 480
+      "lastTotalTokens": 13906,
+      "lastInputTokens": 10189,
+      "lastOutputTokens": 567
     }
   ]
 }
