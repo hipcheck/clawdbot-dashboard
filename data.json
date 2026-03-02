@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772476209458,
+  "updatedAt": 1772478010089,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772487889000
         },
         {
           "label": "Day",
-          "usedPercent": 69,
+          "usedPercent": 70,
           "resetAt": 1772497599000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772475273138,
+      "lastRunAt": 1772477073151,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw_auto_update.py ran successfully just now (exit code 0). No stdout/stderr output was produced."
+      "lastSummary": "Auto-update run result: **NOOP (no update)** — nothing to install this time.\n\nLog shows the last successful auto-update was earlier today:\n- **2026-03-02T05:20:30Z** `UPDATE_OK (latest=2026.3.1)`  \n- Then periodic runs (including **18:45Z**) have been `NOOP (no update)`.\n\nOne thing to note from the log: around **05:44–06:45Z** there were several skips due to `cron status unavailable (Expecting value: line 1 column 1)`, which suggests `openclaw cron status --json` intermittently returned non-JSON output. If you want, I can dig into that next (grab current `openclaw cron status --json` output + gateway logs) to see if it’s still happening."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772475273138,
+      "lastRunAt": 1772477073151,
       "lastStatus": "ok",
-      "lastDurationMs": 38711,
+      "lastDurationMs": 51367,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw_auto_update.py ran successfully just now (exit code 0). No stdout/stderr output was produced.",
-      "nextRunAt": 1772477073138,
+      "lastSummary": "Auto-update run result: **NOOP (no update)** — nothing to install this time.\n\nLog shows the last successful auto-update was earlier today:\n- **2026-03-02T05:20:30Z** `UPDATE_OK (latest=2026.3.1)`  \n- Then periodic runs (including **18:45Z**) have been `NOOP (no update)`.\n\nOne thing to note from the log: around **05:44–06:45Z** there were several skips due to `cron status unavailable (Expecting value: line 1 column 1)`, which suggests `openclaw cron status --json` intermittently returned non-JSON output. If you want, I can dig into that next (grab current `openclaw cron status --json` output + gateway logs) to see if it’s still happening.",
+      "nextRunAt": 1772478873151,
       "model": null,
-      "lastTotalTokens": 10946,
-      "lastInputTokens": 13091,
-      "lastOutputTokens": 186
+      "lastTotalTokens": 19000,
+      "lastInputTokens": 15127,
+      "lastOutputTokens": 713
     }
   ]
 }
