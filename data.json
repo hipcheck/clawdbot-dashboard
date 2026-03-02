@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772434806954,
+  "updatedAt": 1772436607023,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 10,
-          "resetAt": 1772435725000
+          "usedPercent": 1,
+          "resetAt": 1772451889000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772433872811,
+      "lastRunAt": 1772435672835,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\n- `openclaw --version`: **2026.3.1**\n- `openclaw status`: reports **npm latest 2026.3.1** (so you’re already current)\n- Script result: **`NOOP (no update)`** (exit 0)\n\nI also fixed the reason you were seeing `SKIP (cron status unavailable (Expecting value...))`: the script was calling `openclaw cron status` without `--json` but parsing it as JSON. It now uses:\n\n- `openclaw cron status --json --timeout 300000`\n\nSo future runs should stop falsely skipping and will only noop/skip for real “busy/cron-wake-soon” reasons."
+      "lastSummary": "Auto-update status from the log:\n\n- **2026-03-02 05:20:30Z:** update successfully applied → **latest=2026.3.1**\n- **Most recent run (07:15:29Z):** **NOOP (no update available)**\n\nThere were a few earlier skips due to `openclaw cron status --json` briefly returning non-JSON/empty output (“Expecting value…”). It’s working normally again now (cron status returns valid JSON)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772433872811,
+      "lastRunAt": 1772435672835,
       "lastStatus": "ok",
-      "lastDurationMs": 110753,
+      "lastDurationMs": 63099,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\n- `openclaw --version`: **2026.3.1**\n- `openclaw status`: reports **npm latest 2026.3.1** (so you’re already current)\n- Script result: **`NOOP (no update)`** (exit 0)\n\nI also fixed the reason you were seeing `SKIP (cron status unavailable (Expecting value...))`: the script was calling `openclaw cron status` without `--json` but parsing it as JSON. It now uses:\n\n- `openclaw cron status --json --timeout 300000`\n\nSo future runs should stop falsely skipping and will only noop/skip for real “busy/cron-wake-soon” reasons.",
-      "nextRunAt": 1772435672811,
+      "lastSummary": "Auto-update status from the log:\n\n- **2026-03-02 05:20:30Z:** update successfully applied → **latest=2026.3.1**\n- **Most recent run (07:15:29Z):** **NOOP (no update available)**\n\nThere were a few earlier skips due to `openclaw cron status --json` briefly returning non-JSON/empty output (“Expecting value…”). It’s working normally again now (cron status returns valid JSON).",
+      "nextRunAt": 1772437472835,
       "model": null,
-      "lastTotalTokens": 15278,
-      "lastInputTokens": 11726,
-      "lastOutputTokens": 1493
+      "lastTotalTokens": 14295,
+      "lastInputTokens": 22624,
+      "lastOutputTokens": 698
     }
   ]
 }
