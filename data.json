@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772487009837,
+  "updatedAt": 1772488810766,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1772487889000
+          "usedPercent": 0,
+          "resetAt": 1772505888000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772486073220,
+      "lastRunAt": 1772487873233,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\nResult: **NOOP (no update available)** — latest check at `2026-03-02T21:15:08Z` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — completed successfully (exit code 0) and didn’t emit any stdout/stderr.\n\nPost-check:\n- `openclaw --version` → **2026.3.1**\n- `openclaw gateway status` → **running + RPC probe ok**\n\nOne thing flagged by `gateway status` “Doctor warnings”:\n- **Telegram groupPolicy is `allowlist` but `groupAllowFrom`/`allowFrom` is empty** (for default + accounts `geordie`, `nikola`, `q`). This means **all group messages will be silently dropped** until you add allowed sender IDs or change groupPolicy to `open`."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772486073220,
+      "lastRunAt": 1772487873233,
       "lastStatus": "ok",
-      "lastDurationMs": 56156,
+      "lastDurationMs": 50195,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\nResult: **NOOP (no update available)** — latest check at `2026-03-02T21:15:08Z` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`.",
-      "nextRunAt": 1772487873220,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — completed successfully (exit code 0) and didn’t emit any stdout/stderr.\n\nPost-check:\n- `openclaw --version` → **2026.3.1**\n- `openclaw gateway status` → **running + RPC probe ok**\n\nOne thing flagged by `gateway status` “Doctor warnings”:\n- **Telegram groupPolicy is `allowlist` but `groupAllowFrom`/`allowFrom` is empty** (for default + accounts `geordie`, `nikola`, `q`). This means **all group messages will be silently dropped** until you add allowed sender IDs or change groupPolicy to `open`.",
+      "nextRunAt": 1772489673233,
       "model": null,
-      "lastTotalTokens": 14452,
-      "lastInputTokens": 11831,
-      "lastOutputTokens": 570
+      "lastTotalTokens": 11832,
+      "lastInputTokens": 7789,
+      "lastOutputTokens": 481
     }
   ]
 }
