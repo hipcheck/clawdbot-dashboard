@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772429411312,
+  "updatedAt": 1772431208093,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 8,
+          "usedPercent": 9,
           "resetAt": 1772435725000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772426674857,
+      "lastRunAt": 1772430272784,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` just ran, and it was a no-op — **no OpenClaw update available** right now.\n\n- Latest run in `memory/openclaw-updates.log`: `2026-03-02T04:45:06Z NOOP (no update)`\n- Last successful auto-update in the log: **2026.2.26** (applied at `2026-02-27T00:50:07Z`)\n\nSide note: I also see new untracked workspace items (`memory/2026-03-01.md` and `tmp/`) in `git status`. If you want, I can add `tmp/` to `.gitignore` (common) and/or confirm whether you want daily `memory/*.md` files tracked or kept local-only."
+      "lastSummary": "From the auto-update log, the job already successfully applied an OpenClaw update earlier today, then later runs skipped because `openclaw cron status` returned non-JSON output:\n\n- `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)`\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n- `2026-03-02T05:44:43Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n- `2026-03-02T05:44:53Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n\nSo: **OpenClaw is updated to `2026.3.1`**, and the current cron invocation **did not update** (it skipped due to cron-status JSON parse failure).\n\nIf you want to sanity-check the underlying issue (only if it keeps happening), run:\n\n- `openclaw cron status --timeout 300000`\n- `openclaw gateway status`\n\nIf `openclaw cron status` is intermittently emitting empty/non-JSON stdout, that’s what’s triggering the skip."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772426674857,
+      "lastRunAt": 1772430272784,
       "lastStatus": "ok",
-      "lastDurationMs": 58669,
+      "lastDurationMs": 53869,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron `infraops:openclaw-auto-update` just ran, and it was a no-op — **no OpenClaw update available** right now.\n\n- Latest run in `memory/openclaw-updates.log`: `2026-03-02T04:45:06Z NOOP (no update)`\n- Last successful auto-update in the log: **2026.2.26** (applied at `2026-02-27T00:50:07Z`)\n\nSide note: I also see new untracked workspace items (`memory/2026-03-01.md` and `tmp/`) in `git status`. If you want, I can add `tmp/` to `.gitignore` (common) and/or confirm whether you want daily `memory/*.md` files tracked or kept local-only.",
-      "nextRunAt": 1772430272766,
+      "lastSummary": "From the auto-update log, the job already successfully applied an OpenClaw update earlier today, then later runs skipped because `openclaw cron status` returned non-JSON output:\n\n- `2026-03-02T05:15:08Z UPDATE_START (latest=2026.3.1)`\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`\n- `2026-03-02T05:44:43Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n- `2026-03-02T05:44:53Z SKIP (cron status unavailable (Expecting value: line 1 column 1 (char 0)))`\n\nSo: **OpenClaw is updated to `2026.3.1`**, and the current cron invocation **did not update** (it skipped due to cron-status JSON parse failure).\n\nIf you want to sanity-check the underlying issue (only if it keeps happening), run:\n\n- `openclaw cron status --timeout 300000`\n- `openclaw gateway status`\n\nIf `openclaw cron status` is intermittently emitting empty/non-JSON stdout, that’s what’s triggering the skip.",
+      "nextRunAt": 1772432072784,
       "model": null,
-      "lastTotalTokens": 18437,
-      "lastInputTokens": 14686,
-      "lastOutputTokens": 896
+      "lastTotalTokens": 18421,
+      "lastInputTokens": 14337,
+      "lastOutputTokens": 1439
     }
   ]
 }
