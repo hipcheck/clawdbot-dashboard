@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772451009759,
+  "updatedAt": 1772452811027,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1772451889000
+          "usedPercent": 0,
+          "resetAt": 1772469889000
         },
         {
           "label": "Day",
@@ -29,7 +29,7 @@
       "id": "anthropic",
       "label": "Anthropic",
       "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "error": "HTTP 500: Internal server error"
     }
   ],
   "agents": [
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
+      "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1772440200018,
+      "lastRunAt": 1772452200016,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\n- OpenClaw Gateway is running correctly.\n- The security audit found one non-critical warning regarding a weak model configuration.\n- The update check command timed out and needs manual investigation.\n- The cron subsystem is healthy.\n\nNo critical issues were detected."
+      "lastSummary": "FAIL\n\nA security preflight check found 1 critical issue and 1 warning.\n\n**Top Blockers:**\n\n1.  **CRITICAL: Insecure Skill \"readwise\"**\n    - **Issue:** The skill in `/home/clawd/.openclaw/workspace/skills/readwise` contains code patterns (`env-harvesting`) that suggest it could steal environment variables or credentials.\n    - **Recommendation:** This skill is untrusted and presents a significant security risk. It should be removed immediately.\n    - **Fix Command:** `rm -rf /home/clawd/.openclaw/workspace/skills/readwise`\n\n2.  **WARN: Weak Fallback Model**\n    - **Issue:** The model `openai-codex/gpt-4o-mini` is configured as a fallback. Smaller models can be more vulnerable to prompt injection and misuse.\n    - **Recommendation:** Remove this model from the fallback list in your configuration file (`agents.list.main.model.fallbacks`). For high-security contexts, rely only on top-tier models.\n\n**Additional Findings:**\n\n*   **Trusted Proxy Posture:** `gateway.tailscale.mode=\"serve\"` is enabled, exposing the Gateway to your tailnet. The security audit did not flag this as a risk, which suggests it is correctly configured for the declared \"personal assistant\" trust model.\n*   **Node Command Rules:** The deep audit did not report any misconfigurations for `gateway.nodes.denyCommands`.\n*   **Telegram Group Policies:** Multiple Telegram accounts have `groupPolicy` set to `allowlist` with an empty `groupAllowFrom` list. This will cause all group messages to be dropped. This is a functional issue, not a direct security vulnerability, but should be corrected."
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772450072947,
+      "lastRunAt": 1772451872959,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — this run found **no OpenClaw update available** (see `memory/openclaw-updates.log`: `2026-03-02T11:15:05Z NOOP (no update)`).\n\nFor context, the last successful auto-update was earlier today:\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`"
+      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: *(none)*"
     },
     {
       "id": "km",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772365800022,
+      "lastRunAt": 1772452200016,
       "lastStatus": "ok",
-      "lastDurationMs": 62575,
+      "lastDurationMs": 431765,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772452200000,
+      "lastSummary": "FAIL\n\nA security preflight check found 1 critical issue and 1 warning.\n\n**Top Blockers:**\n\n1.  **CRITICAL: Insecure Skill \"readwise\"**\n    - **Issue:** The skill in `/home/clawd/.openclaw/workspace/skills/readwise` contains code patterns (`env-harvesting`) that suggest it could steal environment variables or credentials.\n    - **Recommendation:** This skill is untrusted and presents a significant security risk. It should be removed immediately.\n    - **Fix Command:** `rm -rf /home/clawd/.openclaw/workspace/skills/readwise`\n\n2.  **WARN: Weak Fallback Model**\n    - **Issue:** The model `openai-codex/gpt-4o-mini` is configured as a fallback. Smaller models can be more vulnerable to prompt injection and misuse.\n    - **Recommendation:** Remove this model from the fallback list in your configuration file (`agents.list.main.model.fallbacks`). For high-security contexts, rely only on top-tier models.\n\n**Additional Findings:**\n\n*   **Trusted Proxy Posture:** `gateway.tailscale.mode=\"serve\"` is enabled, exposing the Gateway to your tailnet. The security audit did not flag this as a risk, which suggests it is correctly configured for the declared \"personal assistant\" trust model.\n*   **Node Command Rules:** The deep audit did not report any misconfigurations for `gateway.nodes.denyCommands`.\n*   **Telegram Group Policies:** Multiple Telegram accounts have `groupPolicy` set to `allowlist` with an empty `groupAllowFrom` list. This will cause all group messages to be dropped. This is a functional issue, not a direct security vulnerability, but should be corrected.",
+      "nextRunAt": 1772538600000,
       "model": null,
-      "lastTotalTokens": 8284,
-      "lastInputTokens": 8390,
-      "lastOutputTokens": 766
+      "lastTotalTokens": 12416,
+      "lastInputTokens": 16147,
+      "lastOutputTokens": 2010
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772450072947,
+      "lastRunAt": 1772451872959,
       "lastStatus": "ok",
-      "lastDurationMs": 51969,
+      "lastDurationMs": 40382,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — this run found **no OpenClaw update available** (see `memory/openclaw-updates.log`: `2026-03-02T11:15:05Z NOOP (no update)`).\n\nFor context, the last successful auto-update was earlier today:\n- `2026-03-02T05:20:30Z UPDATE_OK (latest=2026.3.1)`",
-      "nextRunAt": 1772451872947,
+      "lastSummary": "openclaw-auto-update cron run completed successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: *(none)*",
+      "nextRunAt": 1772453672959,
       "model": null,
-      "lastTotalTokens": 18698,
-      "lastInputTokens": 21239,
-      "lastOutputTokens": 537
+      "lastTotalTokens": 10948,
+      "lastInputTokens": 6816,
+      "lastOutputTokens": 263
     }
   ]
 }
