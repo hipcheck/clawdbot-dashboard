@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772479810527,
+  "updatedAt": 1772481611695,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772487889000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772478873165,
+      "lastRunAt": 1772480673178,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run result: **NOOP (no update)**.\n\nFrom the auto-update log:\n- **2026-03-02T19:15:08Z** `NOOP (no update)` (this run)\n- Last successful update was earlier today:\n  - **2026-03-02T05:15:08Z** `UPDATE_START (latest=2026.3.1)`\n  - **2026-03-02T05:20:30Z** `UPDATE_OK (latest=2026.3.1)`\n\nNote: there were a few transient skips around **05:44–06:45Z** due to `cron status unavailable (Expecting value...)`, but subsequent runs returned to normal (`NOOP (no update)`), so it looks like a temporary CLI/JSON hiccup rather than an ongoing issue."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found **no update available**.\n\nLatest log entry:\n- `2026-03-02T19:45:10Z NOOP (no update)`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772478873165,
+      "lastRunAt": 1772480673178,
       "lastStatus": "ok",
-      "lastDurationMs": 52471,
+      "lastDurationMs": 52066,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run result: **NOOP (no update)**.\n\nFrom the auto-update log:\n- **2026-03-02T19:15:08Z** `NOOP (no update)` (this run)\n- Last successful update was earlier today:\n  - **2026-03-02T05:15:08Z** `UPDATE_START (latest=2026.3.1)`\n  - **2026-03-02T05:20:30Z** `UPDATE_OK (latest=2026.3.1)`\n\nNote: there were a few transient skips around **05:44–06:45Z** due to `cron status unavailable (Expecting value...)`, but subsequent runs returned to normal (`NOOP (no update)`), so it looks like a temporary CLI/JSON hiccup rather than an ongoing issue.",
-      "nextRunAt": 1772480673165,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found **no update available**.\n\nLatest log entry:\n- `2026-03-02T19:45:10Z NOOP (no update)`",
+      "nextRunAt": 1772482473178,
       "model": null,
-      "lastTotalTokens": 13999,
-      "lastInputTokens": 10025,
-      "lastOutputTokens": 661
+      "lastTotalTokens": 13330,
+      "lastInputTokens": 9363,
+      "lastOutputTokens": 423
     }
   ]
 }
