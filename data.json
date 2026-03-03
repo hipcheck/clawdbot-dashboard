@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772539207628,
+  "updatedAt": 1772541006982,
   "providers": [
     {
       "id": "openai-codex",
@@ -26,12 +26,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"timestamp\": \"Tue 2026-03-03 02:37 UTC\"\n}\n```\n\nDone?",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1772505528974,
+      "lastRunAt": 1772539505827,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NO_REPLY"
+      "lastSummary": "Configuration updated. To apply the change, the OpenClaw Gateway must be restarted.\n\nShall I restart it now?"
     },
     {
       "id": "infraops",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772538273245,
+      "lastRunAt": 1772540073255,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now.\n\n- Result: **NOOP (no update available)** (exit code 0)\n- Current OpenClaw version: **2026.3.2**\n- Latest log entries show it’s been consistently no-op’ing since the update window earlier today (last line: `2026-03-03T11:45:06Z NOOP (no update)`)."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — it completed successfully (**exit code 0**).\n\nI also re-ran it with output captured to a logfile:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update_2026-03-03T121506Z.log`\n- (and it should have updated) `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nRight now my file-read/process log tools are returning a “SKIP (direct session active …)” error, so I can’t paste the run output yet. If you want, I can try again in a minute and report what it actually updated (OpenClaw version, git pull results, service restart, etc.)."
     },
     {
       "id": "km",
@@ -77,17 +77,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772452800026,
+      "lastRunAt": 1772539200017,
       "lastStatus": "ok",
-      "lastDurationMs": 70977,
+      "lastDurationMs": 70987,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Proposal: Upgrade Agent Model Tiers\n\n**Impact:** High. Using stronger models will improve reasoning, reduce errors, and enhance security by making agents less susceptible to prompt injection and other risks identified in the prescan. This directly improves the quality of all subsequent builds.\n\n**Risk:** Low. This is a configuration change. We can test one agent first before rolling it out to all of them. If issues arise, the change can be easily reverted.\n\n**First 3 steps:**\n1.  List all agent configurations to identify which ones are using the `openai-codex/gpt-4o-mini` model.\n2.  Update the configuration for one key agent to a recommended model (e.g., GPT-5 family, Claude 4.5+).\n3.  Run a series of test prompts against the updated agent to verify performance and compatibility before updating the rest.",
-      "nextRunAt": 1772539200000,
+      "lastSummary": "Today's Proposal: Fix Silent Message Drops in Telegram Groups\n\n**Impact:** High. Bots are currently ignoring all group messages. This change will restore the ability for agents (`geordie`, `nikola`, `q`) to participate in groups, a critical function.\n\n**Risk:** Low. This is a straightforward configuration fix. The worst-case is a bot responding in an unintended group, which can be corrected by refining the allowlist.\n\n**First 3 Steps:**\n1. Read the config file at `~/.openclaw/openclaw.json`.\n2. Locate the `channels.telegram` section and its `accounts`.\n3. For each account with `groupPolicy: \"allowlist\"`, change it to `\"open\"` or add the correct group IDs to `groupAllowFrom`.",
+      "nextRunAt": 1772625600000,
       "model": null,
-      "lastTotalTokens": 6427,
-      "lastInputTokens": 6580,
-      "lastOutputTokens": 1104
+      "lastTotalTokens": 8769,
+      "lastInputTokens": 8131,
+      "lastOutputTokens": 1094
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772538273245,
+      "lastRunAt": 1772540073255,
       "lastStatus": "ok",
-      "lastDurationMs": 65654,
+      "lastDurationMs": 69276,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now.\n\n- Result: **NOOP (no update available)** (exit code 0)\n- Current OpenClaw version: **2026.3.2**\n- Latest log entries show it’s been consistently no-op’ing since the update window earlier today (last line: `2026-03-03T11:45:06Z NOOP (no update)`).",
-      "nextRunAt": 1772540073245,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — it completed successfully (**exit code 0**).\n\nI also re-ran it with output captured to a logfile:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update_2026-03-03T121506Z.log`\n- (and it should have updated) `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nRight now my file-read/process log tools are returning a “SKIP (direct session active …)” error, so I can’t paste the run output yet. If you want, I can try again in a minute and report what it actually updated (OpenClaw version, git pull results, service restart, etc.).",
+      "nextRunAt": 1772541873255,
       "model": null,
-      "lastTotalTokens": 14530,
-      "lastInputTokens": 10785,
-      "lastOutputTokens": 606
+      "lastTotalTokens": 11805,
+      "lastInputTokens": 15315,
+      "lastOutputTokens": 1072
     }
   ]
 }
