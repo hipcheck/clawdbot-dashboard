@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772497810356,
+  "updatedAt": 1772499610704,
   "providers": [
     {
       "id": "openai-codex",
@@ -13,7 +13,7 @@
         {
           "label": "Day",
           "usedPercent": 0,
-          "resetAt": 1773102611000
+          "resetAt": 1773103478000
         }
       ],
       "plan": "plus ($0.00)",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772496873300,
+      "lastRunAt": 1772498673314,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully just now.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: **none** (script was silent)"
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: **no stdout/stderr captured** (the run completed silently)\n\nIf you want, I can open the script and add a small “what happened” log line (e.g., current OpenClaw version → checked latest → updated/not updated) so these cron runs are auditable."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772496873300,
+      "lastRunAt": 1772498673314,
       "lastStatus": "ok",
-      "lastDurationMs": 41896,
+      "lastDurationMs": 47459,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully just now.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: **none** (script was silent)",
-      "nextRunAt": 1772498673300,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: **no stdout/stderr captured** (the run completed silently)\n\nIf you want, I can open the script and add a small “what happened” log line (e.g., current OpenClaw version → checked latest → updated/not updated) so these cron runs are auditable.",
+      "nextRunAt": 1772500473314,
       "model": null,
-      "lastTotalTokens": 10964,
-      "lastInputTokens": 6870,
-      "lastOutputTokens": 264
+      "lastTotalTokens": 11016,
+      "lastInputTokens": 6964,
+      "lastOutputTokens": 370
     }
   ]
 }
