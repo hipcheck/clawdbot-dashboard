@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772566207365,
+  "updatedAt": 1772568007821,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772565273598,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "NOOP (no update)"
+      "lastRunAt": 1772567073607,
+      "lastStatus": "error",
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "⚠️ ✉️ Message failed"
     },
     {
       "id": "km",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772565273598,
-      "lastStatus": "ok",
-      "lastDurationMs": 124086,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "NOOP (no update)",
-      "nextRunAt": 1772567073598,
+      "lastRunAt": 1772567073607,
+      "lastStatus": "error",
+      "lastDurationMs": 186594,
+      "consecutiveErrors": 1,
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "⚠️ ✉️ Message failed",
+      "nextRunAt": 1772568873607,
       "model": null,
-      "lastTotalTokens": 8959,
-      "lastInputTokens": 10735,
-      "lastOutputTokens": 230
+      "lastTotalTokens": 9270,
+      "lastInputTokens": 20185,
+      "lastOutputTokens": 952
     }
   ]
 }
