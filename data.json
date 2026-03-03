@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772532007434,
+  "updatedAt": 1772533806493,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772531072951,
+      "lastRunAt": 1772532872973,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code `0`).\n\nIt didn’t produce any stdout/stderr output in this run, so there’s nothing else to report from the script itself."
+      "lastSummary": "This cron run **didn’t apply an update**.\n\n- Latest run result (from `logs/openclaw_auto_update.last.log`): **`SKIP (direct session active (age=832543ms))`**\n  - i.e. it detected an active direct (human) session within the “busy” window, so it intentionally backed off.\n\nI also ran the updater manually just now and it returned: **`NOOP (no update)`** — meaning there’s currently **no OpenClaw update available** anyway."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772531072951,
+      "lastRunAt": 1772532872973,
       "lastStatus": "ok",
-      "lastDurationMs": 36529,
+      "lastDurationMs": 45361,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully (exit code `0`).\n\nIt didn’t produce any stdout/stderr output in this run, so there’s nothing else to report from the script itself.",
-      "nextRunAt": 1772532872951,
+      "lastSummary": "This cron run **didn’t apply an update**.\n\n- Latest run result (from `logs/openclaw_auto_update.last.log`): **`SKIP (direct session active (age=832543ms))`**\n  - i.e. it detected an active direct (human) session within the “busy” window, so it intentionally backed off.\n\nI also ran the updater manually just now and it returned: **`NOOP (no update)`** — meaning there’s currently **no OpenClaw update available** anyway.",
+      "nextRunAt": 1772534672973,
       "model": null,
-      "lastTotalTokens": 10943,
-      "lastInputTokens": 6810,
-      "lastOutputTokens": 201
+      "lastTotalTokens": 17666,
+      "lastInputTokens": 21373,
+      "lastOutputTokens": 885
     }
   ]
 }
