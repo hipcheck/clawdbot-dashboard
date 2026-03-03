@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772533806493,
+  "updatedAt": 1772535607943,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 8,
+          "usedPercent": 9,
           "resetAt": 1773108879000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772532872973,
+      "lastRunAt": 1772534672987,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This cron run **didn’t apply an update**.\n\n- Latest run result (from `logs/openclaw_auto_update.last.log`): **`SKIP (direct session active (age=832543ms))`**\n  - i.e. it detected an active direct (human) session within the “busy” window, so it intentionally backed off.\n\nI also ran the updater manually just now and it returned: **`NOOP (no update)`** — meaning there’s currently **no OpenClaw update available** anyway."
+      "lastSummary": "Cron run completed successfully (exit code 0).\n\n- Result: **NOOP (no update)** — nothing to apply right now.\n- `openclaw update status` shows you’re already up to date: **latestVersion = 2026.3.2**, `hasRegistryUpdate=false`, `hasGitUpdate=false`.\n- The run is logged in: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (most recent entry: `2026-03-03T10:45:00Z NOOP (no update)`)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772532872973,
+      "lastRunAt": 1772534672987,
       "lastStatus": "ok",
-      "lastDurationMs": 45361,
+      "lastDurationMs": 68246,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This cron run **didn’t apply an update**.\n\n- Latest run result (from `logs/openclaw_auto_update.last.log`): **`SKIP (direct session active (age=832543ms))`**\n  - i.e. it detected an active direct (human) session within the “busy” window, so it intentionally backed off.\n\nI also ran the updater manually just now and it returned: **`NOOP (no update)`** — meaning there’s currently **no OpenClaw update available** anyway.",
-      "nextRunAt": 1772534672973,
+      "lastSummary": "Cron run completed successfully (exit code 0).\n\n- Result: **NOOP (no update)** — nothing to apply right now.\n- `openclaw update status` shows you’re already up to date: **latestVersion = 2026.3.2**, `hasRegistryUpdate=false`, `hasGitUpdate=false`.\n- The run is logged in: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (most recent entry: `2026-03-03T10:45:00Z NOOP (no update)`).",
+      "nextRunAt": 1772536472987,
       "model": null,
-      "lastTotalTokens": 17666,
-      "lastInputTokens": 21373,
-      "lastOutputTokens": 885
+      "lastTotalTokens": 15111,
+      "lastInputTokens": 11697,
+      "lastOutputTokens": 983
     }
   ]
 }
