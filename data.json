@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772524808141,
+  "updatedAt": 1772526607354,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772540108000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772523872909,
+      "lastRunAt": 1772525672920,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — no OpenClaw update was available/applied this run."
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **did not apply an update** (NOOP).\n\nCurrent `openclaw update status --json` shows:\n- registry latest: **2026.3.2**\n- but `availability.available=false` / `hasRegistryUpdate=false` because deps status is **unknown** (`reason: \"lockfile missing\"`), so the updater won’t proceed.\n\nIf you want, I can dig into why the lockfile is missing in the OpenClaw install root and what the safest fix is (so auto-updates start working again)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772523872909,
+      "lastRunAt": 1772525672920,
       "lastStatus": "ok",
-      "lastDurationMs": 35543,
+      "lastDurationMs": 108664,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — no OpenClaw update was available/applied this run.",
-      "nextRunAt": 1772525672909,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **did not apply an update** (NOOP).\n\nCurrent `openclaw update status --json` shows:\n- registry latest: **2026.3.2**\n- but `availability.available=false` / `hasRegistryUpdate=false` because deps status is **unknown** (`reason: \"lockfile missing\"`), so the updater won’t proceed.\n\nIf you want, I can dig into why the lockfile is missing in the OpenClaw install root and what the safest fix is (so auto-updates start working again).",
+      "nextRunAt": 1772527472920,
       "model": null,
-      "lastTotalTokens": 10827,
-      "lastInputTokens": 6453,
-      "lastOutputTokens": 121
+      "lastTotalTokens": 16558,
+      "lastInputTokens": 25037,
+      "lastOutputTokens": 1142
     }
   ]
 }
