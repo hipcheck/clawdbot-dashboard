@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772499610704,
+  "updatedAt": 1772501410397,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772505905000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772498673314,
+      "lastRunAt": 1772500473328,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully just now.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: **no stdout/stderr captured** (the run completed silently)\n\nIf you want, I can open the script and add a small “what happened” log line (e.g., current OpenClaw version → checked latest → updated/not updated) so these cron runs are auditable."
+      "lastSummary": "Auto-update cron ran cleanly.\n\n- Result: **NOOP (no update available)**\n- Logged at: `2026-03-03T01:15:08Z` in `memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772498673314,
+      "lastRunAt": 1772500473328,
       "lastStatus": "ok",
-      "lastDurationMs": 47459,
+      "lastDurationMs": 56726,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully just now.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: exit code **0**\n- Output: **no stdout/stderr captured** (the run completed silently)\n\nIf you want, I can open the script and add a small “what happened” log line (e.g., current OpenClaw version → checked latest → updated/not updated) so these cron runs are auditable.",
-      "nextRunAt": 1772500473314,
+      "lastSummary": "Auto-update cron ran cleanly.\n\n- Result: **NOOP (no update available)**\n- Logged at: `2026-03-03T01:15:08Z` in `memory/openclaw-updates.log`",
+      "nextRunAt": 1772502273328,
       "model": null,
-      "lastTotalTokens": 11016,
-      "lastInputTokens": 6964,
-      "lastOutputTokens": 370
+      "lastTotalTokens": 14445,
+      "lastInputTokens": 10673,
+      "lastOutputTokens": 512
     }
   ]
 }
