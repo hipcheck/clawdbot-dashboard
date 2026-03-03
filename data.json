@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772508607354,
+  "updatedAt": 1772510408366,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 20,
+          "usedPercent": 21,
           "resetAt": 1772522079000
         },
         {
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "tui message",
-      "activityChannel": "tui",
-      "lastRunAt": 1772508369645,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772509472796,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited successfully (`code 0`).\n\nI also set it up to write a run log to:\n`/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nMy tool interface is currently refusing to return file/command output (“SKIP (direct session active)”), so I can’t show you the log contents from here. If you paste that log (or if you want, tell me to retry reading it in a few minutes), I’ll summarize exactly what it updated/changed."
     },
     {
       "id": "km",
@@ -143,17 +143,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772507194909,
+      "lastRunAt": 1772508457341,
       "lastStatus": "ok",
-      "lastDurationMs": 87935,
+      "lastDurationMs": 242590,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Run complete (2026-03-03).\n\n- **Net-new roles added:** 0\n- **Search:** 1 Brave query (`pw`, 10) → **0 results**\n- **Direct sources checked:**\n  - **Google Careers (HTML fetch):** parsed results page; no net-new NYC senior-scope roles found\n  - **Amazon Jobs (JSON):** fetched and parsed; no net-new NYC senior-scope roles found\n  - **Apple Jobs (browser):** page loaded successfully; **0 results** for this query/location\n- **Pipeline updates made:**\n  - Updated frontmatter `last_run` + `last_run_status` + `last_run_new_roles`\n  - Appended a new **Run log** row\n- **Local git:** created a local commit (`cron: pipeline run 2026-03-03`). No push.",
+      "lastSummary": "Run complete (2026-03-03).\n\n- **Net-new roles added:** 0\n- **Minimal search (Brave, pw):** 0 results\n- **Direct sources:**\n  - **Google Careers:** fetched successfully; no net-new in-scope NYC Senior Marketing Manager roles found\n  - **Amazon search.json:** fetched successfully; no net-new in-scope NYC Senior Marketing Manager roles found (confirmed existing tracked URLs still present)\n  - **Apple Jobs (browser, 3 searches):** all returned **“no results”** for NYC\n- **Pipeline file updated:** frontmatter `last_run` set to `2026-03-03T03:27:00+00:00` and **one new Run log row appended**.",
       "nextRunAt": 1772740800000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 70193,
-      "lastInputTokens": 59883,
-      "lastOutputTokens": 2803
+      "lastTotalTokens": 57655,
+      "lastInputTokens": 57323,
+      "lastOutputTokens": 9966
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772507672781,
+      "lastRunAt": 1772509472796,
       "lastStatus": "ok",
-      "lastDurationMs": 61585,
+      "lastDurationMs": 96338,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can see the cron trigger, but I’m currently unable to retrieve the script’s stdout/stderr from that run (tooling is returning “SKIP (direct session active)”), so I can’t confirm what it actually did.\n\nPlease paste the cron job’s captured output (or the last ~100 lines of the log file if you’re logging it), and I’ll interpret it and tell you whether the update succeeded / what changed.",
-      "nextRunAt": 1772509472781,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited successfully (`code 0`).\n\nI also set it up to write a run log to:\n`/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nMy tool interface is currently refusing to return file/command output (“SKIP (direct session active)”), so I can’t show you the log contents from here. If you paste that log (or if you want, tell me to retry reading it in a few minutes), I’ll summarize exactly what it updated/changed.",
+      "nextRunAt": 1772511272796,
       "model": null,
-      "lastTotalTokens": 11213,
-      "lastInputTokens": 7314,
-      "lastOutputTokens": 538
+      "lastTotalTokens": 11859,
+      "lastInputTokens": 9577,
+      "lastOutputTokens": 991
     }
   ]
 }
