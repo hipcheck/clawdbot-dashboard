@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772542807536,
+  "updatedAt": 1772544607242,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772541873400,
+      "lastRunAt": 1772543673424,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This cron run ended up as a **NOOP** — no update was available.\n\n- Log: `2026-03-03T12:45:06Z NOOP (no update)` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- `openclaw update status` shows **latest is 2026.3.2** and **availability.available=false** (already up to date)\n- Gateway is running and RPC probe is **ok** (`openclaw gateway status`)\n\nNote: the log shows an `UPDATE_START (latest=2026.3.2)` at `04:45Z` but I don’t see the corresponding `UPDATE_OK/FAIL` line afterward; however, since the install is now on 2026.3.2 and update status reports no available update, it looks like the update did land successfully."
+      "lastSummary": "No OpenClaw updates were available. Everything is up to date."
     },
     {
       "id": "km",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772541873400,
+      "lastRunAt": 1772543673424,
       "lastStatus": "ok",
-      "lastDurationMs": 69018,
+      "lastDurationMs": 123872,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This cron run ended up as a **NOOP** — no update was available.\n\n- Log: `2026-03-03T12:45:06Z NOOP (no update)` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- `openclaw update status` shows **latest is 2026.3.2** and **availability.available=false** (already up to date)\n- Gateway is running and RPC probe is **ok** (`openclaw gateway status`)\n\nNote: the log shows an `UPDATE_START (latest=2026.3.2)` at `04:45Z` but I don’t see the corresponding `UPDATE_OK/FAIL` line afterward; however, since the install is now on 2026.3.2 and update status reports no available update, it looks like the update did land successfully.",
-      "nextRunAt": 1772543673400,
+      "lastSummary": "No OpenClaw updates were available. Everything is up to date.",
+      "nextRunAt": 1772545473424,
       "model": null,
-      "lastTotalTokens": 14582,
-      "lastInputTokens": 11206,
-      "lastOutputTokens": 936
+      "lastTotalTokens": 8894,
+      "lastInputTokens": 10691,
+      "lastOutputTokens": 199
     }
   ]
 }
