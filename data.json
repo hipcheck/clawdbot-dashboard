@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772569807122,
+  "updatedAt": 1772571607712,
   "providers": [
     {
       "id": "openai-codex",
@@ -26,12 +26,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"timestamp\": \"Tue 2026-03-03 20:38 UTC\"\n}\n```\n\nYes",
       "activityChannel": "telegram",
-      "lastRunAt": 1772539505827,
+      "lastRunAt": 1772570364796,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Configuration updated. To apply the change, the OpenClaw Gateway must be restarted.\n\nShall I restart it now?"
+      "lastSummary": "NO_REPLY"
     },
     {
       "id": "infraops",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772568873616,
+      "lastRunAt": 1772570673636,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I've run the auto-update script. No new updates were found."
+      "lastSummary": "The OpenClaw auto-update script ran successfully and completed its execution."
     },
     {
       "id": "km",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772568873616,
+      "lastRunAt": 1772570673636,
       "lastStatus": "ok",
-      "lastDurationMs": 124062,
+      "lastDurationMs": 353143,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I've run the auto-update script. No new updates were found.",
-      "nextRunAt": 1772570673616,
+      "lastSummary": "The OpenClaw auto-update script ran successfully and completed its execution.",
+      "nextRunAt": 1772572473636,
       "model": null,
-      "lastTotalTokens": 8928,
-      "lastInputTokens": 10704,
-      "lastOutputTokens": 224
+      "lastTotalTokens": 9609,
+      "lastInputTokens": 15043,
+      "lastOutputTokens": 814
     }
   ]
 }
