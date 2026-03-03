@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772541006982,
+  "updatedAt": 1772542807536,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772540073255,
+      "lastRunAt": 1772541873400,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — it completed successfully (**exit code 0**).\n\nI also re-ran it with output captured to a logfile:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update_2026-03-03T121506Z.log`\n- (and it should have updated) `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nRight now my file-read/process log tools are returning a “SKIP (direct session active …)” error, so I can’t paste the run output yet. If you want, I can try again in a minute and report what it actually updated (OpenClaw version, git pull results, service restart, etc.)."
+      "lastSummary": "This cron run ended up as a **NOOP** — no update was available.\n\n- Log: `2026-03-03T12:45:06Z NOOP (no update)` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- `openclaw update status` shows **latest is 2026.3.2** and **availability.available=false** (already up to date)\n- Gateway is running and RPC probe is **ok** (`openclaw gateway status`)\n\nNote: the log shows an `UPDATE_START (latest=2026.3.2)` at `04:45Z` but I don’t see the corresponding `UPDATE_OK/FAIL` line afterward; however, since the install is now on 2026.3.2 and update status reports no available update, it looks like the update did land successfully."
     },
     {
       "id": "km",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772540073255,
+      "lastRunAt": 1772541873400,
       "lastStatus": "ok",
-      "lastDurationMs": 69276,
+      "lastDurationMs": 69018,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` — it completed successfully (**exit code 0**).\n\nI also re-ran it with output captured to a logfile:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update_2026-03-03T121506Z.log`\n- (and it should have updated) `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nRight now my file-read/process log tools are returning a “SKIP (direct session active …)” error, so I can’t paste the run output yet. If you want, I can try again in a minute and report what it actually updated (OpenClaw version, git pull results, service restart, etc.).",
-      "nextRunAt": 1772541873255,
+      "lastSummary": "This cron run ended up as a **NOOP** — no update was available.\n\n- Log: `2026-03-03T12:45:06Z NOOP (no update)` in `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n- `openclaw update status` shows **latest is 2026.3.2** and **availability.available=false** (already up to date)\n- Gateway is running and RPC probe is **ok** (`openclaw gateway status`)\n\nNote: the log shows an `UPDATE_START (latest=2026.3.2)` at `04:45Z` but I don’t see the corresponding `UPDATE_OK/FAIL` line afterward; however, since the install is now on 2026.3.2 and update status reports no available update, it looks like the update did land successfully.",
+      "nextRunAt": 1772543673400,
       "model": null,
-      "lastTotalTokens": 11805,
-      "lastInputTokens": 15315,
-      "lastOutputTokens": 1072
+      "lastTotalTokens": 14582,
+      "lastInputTokens": 11206,
+      "lastOutputTokens": 936
     }
   ]
 }
