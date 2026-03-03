@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772562607498,
+  "updatedAt": 1772564408492,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772561673579,
+      "lastRunAt": 1772563473588,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The OpenClaw auto-update check is complete. No updates were needed."
+      "lastSummary": "The OpenClaw auto-update script ran successfully. No updates were available."
     },
     {
       "id": "km",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772561673579,
+      "lastRunAt": 1772563473588,
       "lastStatus": "ok",
-      "lastDurationMs": 125033,
+      "lastDurationMs": 124005,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The OpenClaw auto-update check is complete. No updates were needed.",
-      "nextRunAt": 1772563473579,
+      "lastSummary": "The OpenClaw auto-update script ran successfully. No updates were available.",
+      "nextRunAt": 1772565273588,
       "model": null,
-      "lastTotalTokens": 8917,
-      "lastInputTokens": 10695,
-      "lastOutputTokens": 235
+      "lastTotalTokens": 8895,
+      "lastInputTokens": 18546,
+      "lastOutputTokens": 195
     }
   ]
 }
