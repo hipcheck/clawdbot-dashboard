@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772517608420,
+  "updatedAt": 1772519406588,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772516672849,
+      "lastRunAt": 1772518472869,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran the cron job:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no stdout/stderr captured)\n\nI also checked the gateway:\n\n- `openclaw gateway status` → **running**, RPC probe **ok**, listening on **127.0.0.1:18789**\n\nOne thing flagged by Doctor warnings:\n- Your Telegram `groupPolicy` is **allowlist** but `groupAllowFrom`/`allowFrom` is empty (for default + several accounts), so **all group messages will be silently dropped** until you add allowed sender IDs or switch `groupPolicy` to `open`."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now (exit code `0`). No output was produced by the script in this run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772516672849,
+      "lastRunAt": 1772518472869,
       "lastStatus": "ok",
-      "lastDurationMs": 47529,
+      "lastDurationMs": 41155,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran the cron job:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no stdout/stderr captured)\n\nI also checked the gateway:\n\n- `openclaw gateway status` → **running**, RPC probe **ok**, listening on **127.0.0.1:18789**\n\nOne thing flagged by Doctor warnings:\n- Your Telegram `groupPolicy` is **allowlist** but `groupAllowFrom`/`allowFrom` is empty (for default + several accounts), so **all group messages will be silently dropped** until you add allowed sender IDs or switch `groupPolicy` to `open`.",
-      "nextRunAt": 1772518472849,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully just now (exit code `0`). No output was produced by the script in this run.",
+      "nextRunAt": 1772520272869,
       "model": null,
-      "lastTotalTokens": 11807,
-      "lastInputTokens": 7728,
-      "lastOutputTokens": 444
+      "lastTotalTokens": 10935,
+      "lastInputTokens": 6794,
+      "lastOutputTokens": 190
     }
   ]
 }
