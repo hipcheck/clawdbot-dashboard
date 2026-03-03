@@ -1,23 +1,11 @@
 {
-  "updatedAt": 1772535607943,
+  "updatedAt": 1772537407277,
   "providers": [
     {
       "id": "openai-codex",
       "label": "OpenAI Codex",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 2,
-          "resetAt": 1772540108000
-        },
-        {
-          "label": "Day",
-          "usedPercent": 9,
-          "resetAt": 1773108879000
-        }
-      ],
-      "plan": "plus ($0.00)",
-      "error": null
+      "windows": [],
+      "error": "Token expired"
     },
     {
       "id": "gemini",
@@ -64,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772534672987,
+      "lastRunAt": 1772536473231,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron run completed successfully (exit code 0).\n\n- Result: **NOOP (no update)** — nothing to apply right now.\n- `openclaw update status` shows you’re already up to date: **latestVersion = 2026.3.2**, `hasRegistryUpdate=false`, `hasGitUpdate=false`.\n- The run is logged in: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (most recent entry: `2026-03-03T10:45:00Z NOOP (no update)`)."
+      "lastSummary": "Ran `openclaw_auto_update.py`.\n\nResult: **NOOP (no update available)** — nothing to install right now.\n\nLog entry confirms:\n`2026-03-03T11:15:05Z NOOP (no update)` in `memory/openclaw-updates.log`."
     },
     {
       "id": "km",
@@ -215,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772534672987,
+      "lastRunAt": 1772536473231,
       "lastStatus": "ok",
-      "lastDurationMs": 68246,
+      "lastDurationMs": 49377,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run completed successfully (exit code 0).\n\n- Result: **NOOP (no update)** — nothing to apply right now.\n- `openclaw update status` shows you’re already up to date: **latestVersion = 2026.3.2**, `hasRegistryUpdate=false`, `hasGitUpdate=false`.\n- The run is logged in: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (most recent entry: `2026-03-03T10:45:00Z NOOP (no update)`).",
-      "nextRunAt": 1772536472987,
+      "lastSummary": "Ran `openclaw_auto_update.py`.\n\nResult: **NOOP (no update available)** — nothing to install right now.\n\nLog entry confirms:\n`2026-03-03T11:15:05Z NOOP (no update)` in `memory/openclaw-updates.log`.",
+      "nextRunAt": 1772538273231,
       "model": null,
-      "lastTotalTokens": 15111,
-      "lastInputTokens": 11697,
-      "lastOutputTokens": 983
+      "lastTotalTokens": 14468,
+      "lastInputTokens": 10710,
+      "lastOutputTokens": 545
     }
   ]
 }
