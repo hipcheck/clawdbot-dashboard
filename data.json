@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772506810573,
+  "updatedAt": 1772508607354,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
+          "usedPercent": 20,
           "resetAt": 1772522079000
         },
         {
           "label": "Day",
-          "usedPercent": 2,
+          "usedPercent": 6,
           "resetAt": 1773108879000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "chat",
       "activityLabel": "tui message",
       "activityChannel": "tui",
-      "lastRunAt": 1772506813558,
+      "lastRunAt": 1772508369645,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Chromium **is installed** now (`/usr/bin/chromium-browser`), but the **Apple part of the job still failed**.\n\nI ran the job **03cf0eec-72cb-4012-87aa-aa0962b1a197** manually. Latest run summary shows:"
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -143,17 +143,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772506502087,
+      "lastRunAt": 1772507194909,
       "lastStatus": "ok",
-      "lastDurationMs": 253036,
+      "lastDurationMs": 87935,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Run complete (2026-03-03).\n\n- **Net-new roles appended:** 0\n- **Updated `Last seen` → 2026-03-03** for:\n  - Google: https://www.google.com/about/careers/applications/jobs/results/83919006783677126-senior-partner-marketing-manager-data-analytics-partnerships\n  - Google: https://www.google.com/about/careers/applications/jobs/results/122835876177683142-product-marketing-manager-global-apps-marketing\n  - Amazon: https://www.amazon.jobs/en/jobs/3111166/senior-marketing-manager-executive-messaging-global-executive-marketing\n  - Amazon: https://www.amazon.jobs/en/jobs/3142127/senior-marketing-manager-content-seo-customer-trust-external-relations\n- **Stale audit:** no roles crossed the **>30 days** threshold, so no stale warnings added/updated.\n- **Errors / limitations (recorded in run log + frontmatter `ok_with_errors`):**\n  - Apple scrape failed because the **browser control service is unreachable on the VPS** (tool timeout).\n  - The single Brave `web_search` query returned **0 results** (no 429).\n\nPrimary file updated on disk:\n`/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`",
+      "lastSummary": "Run complete (2026-03-03).\n\n- **Net-new roles added:** 0\n- **Search:** 1 Brave query (`pw`, 10) → **0 results**\n- **Direct sources checked:**\n  - **Google Careers (HTML fetch):** parsed results page; no net-new NYC senior-scope roles found\n  - **Amazon Jobs (JSON):** fetched and parsed; no net-new NYC senior-scope roles found\n  - **Apple Jobs (browser):** page loaded successfully; **0 results** for this query/location\n- **Pipeline updates made:**\n  - Updated frontmatter `last_run` + `last_run_status` + `last_run_new_roles`\n  - Appended a new **Run log** row\n- **Local git:** created a local commit (`cron: pipeline run 2026-03-03`). No push.",
       "nextRunAt": 1772740800000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 51449,
-      "lastInputTokens": 49357,
-      "lastOutputTokens": 10660
+      "lastTotalTokens": 70193,
+      "lastInputTokens": 59883,
+      "lastOutputTokens": 2803
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772504073357,
+      "lastRunAt": 1772507672781,
       "lastStatus": "ok",
-      "lastDurationMs": 89054,
+      "lastDurationMs": 61585,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update available)**.\n\n- Latest log entry: `2026-03-03T02:15:49Z NOOP (no update)`  \n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nSo nothing was installed/changed on that run.",
-      "nextRunAt": 1772507672766,
+      "lastSummary": "I can see the cron trigger, but I’m currently unable to retrieve the script’s stdout/stderr from that run (tooling is returning “SKIP (direct session active)”), so I can’t confirm what it actually did.\n\nPlease paste the cron job’s captured output (or the last ~100 lines of the log file if you’re logging it), and I’ll interpret it and tell you whether the update succeeded / what changed.",
+      "nextRunAt": 1772509472781,
       "model": null,
-      "lastTotalTokens": 13832,
-      "lastInputTokens": 11438,
-      "lastOutputTokens": 827
+      "lastTotalTokens": 11213,
+      "lastInputTokens": 7314,
+      "lastOutputTokens": 538
     }
   ]
 }
