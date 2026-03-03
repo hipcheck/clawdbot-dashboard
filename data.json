@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772510408366,
+  "updatedAt": 1772512207565,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 21,
+          "usedPercent": 25,
           "resetAt": 1772522079000
         },
         {
           "label": "Day",
-          "usedPercent": 6,
+          "usedPercent": 7,
           "resetAt": 1773108879000
         }
       ],
@@ -64,22 +64,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772509472796,
+      "lastRunAt": 1772511272807,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited successfully (`code 0`).\n\nI also set it up to write a run log to:\n`/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nMy tool interface is currently refusing to return file/command output (“SKIP (direct session active)”), so I can’t show you the log contents from here. If you paste that log (or if you want, tell me to retry reading it in a few minutes), I’ll summarize exactly what it updated/changed."
+      "lastSummary": "This cron run **did not apply an update** — it **skipped** because OpenClaw considered the system “busy”:\n\n- Result: `SKIP (direct session active (age=832543ms))`\n- Exit code: `0` (noop/skip)\n\nIf you want the longer audit trail, it’s written to:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nThe “last run” one-liner is:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "System: Exec denied (gateway id=e65d667b-48ff-42ce-9843-027c7ddc5747, approval-timeout): bash -lc 'cd /home/clawd/.openclaw/workspace-km && git diff -",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772461327256,
+      "activityKind": "cron",
+      "activityLabel": "km:nightly-journal-comment",
+      "activityChannel": null,
+      "lastRunAt": 1772510400017,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Glad—that’s the exact shape I’ll stick with going forward.\n\nAlso noted on my side: the two “approval-timeout” messages were just me trying (and failing) to run a local `git diff` check after updating "
+      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBook).\n- CURRENT_TS (America/New_York): 2026-03-02T23:03:55-05:00\n- TARGET_DATE logic result: 2026-03-02 (run occurred within 23:00–23:59 NYC window → “today”)\n\nFile operation (via /usr/bin/python3 on Mac):\n- Target file: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-02.md`\n- File existed and was non-empty → proceeded.\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the placeholder empty bullet under `[[clawdbot]]` with one new entry (and nested timestamp + notes + Readwise quote + 2-link “Further reading” block).\n- Verified by re-reading the `[[clawdbot]]` section; content is present."
     }
   ],
   "cronJobs": [
@@ -161,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772424000018,
+      "lastRunAt": 1772510400017,
       "lastStatus": "ok",
-      "lastDurationMs": 166680,
+      "lastDurationMs": 272351,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Mac node status: **connected** (Andreas MacBook)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): **2026-03-01 11:02 PM EST**\n- TARGET_DATE logic result: **2026-03-01** (because local time was within 23:00:00–23:59:59)\n- Target file: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-01.md**\n  - File existed and was non-empty → proceeded\n  - Found existing section header: `\\t* [[clawdbot]]`\n  - Replaced the placeholder empty bullet under `[[clawdbot]]` with **one new bullet entry** (indent `\\t\\t* ...`)\n    - Included nested timestamp bullet (indent `\\t\\t\\t* Timestamp: 2026-03-01 11:02 PM EST`)\n    - Included a Readwise highlight quote (text-only, no share link), attributed to **“Longevity 101 … (The Peter Attia Drive)”**\n    - Included “Further reading” with **4 links** (all peer-reviewed / consensus / PMC) and 1-line relevance each\n  - Verified by re-reading/printing the updated `[[clawdbot]]` section after write (content present)\n\nNo other parts of the journal entry were modified beyond the `[[clawdbot]]` section.",
-      "nextRunAt": 1772510400000,
+      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBook).\n- CURRENT_TS (America/New_York): 2026-03-02T23:03:55-05:00\n- TARGET_DATE logic result: 2026-03-02 (run occurred within 23:00–23:59 NYC window → “today”)\n\nFile operation (via /usr/bin/python3 on Mac):\n- Target file: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-02.md`\n- File existed and was non-empty → proceeded.\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the placeholder empty bullet under `[[clawdbot]]` with one new entry (and nested timestamp + notes + Readwise quote + 2-link “Further reading” block).\n- Verified by re-reading the `[[clawdbot]]` section; content is present.",
+      "nextRunAt": 1772596800000,
       "model": null,
-      "lastTotalTokens": 21145,
-      "lastInputTokens": 32572,
-      "lastOutputTokens": 6457
+      "lastTotalTokens": 30842,
+      "lastInputTokens": 36578,
+      "lastOutputTokens": 10686
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -197,17 +197,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772424600017,
+      "lastRunAt": 1772511000022,
       "lastStatus": "ok",
-      "lastDurationMs": 106267,
+      "lastDurationMs": 174926,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-03-02T04:10:15+00:00  \n(Local date: America/New_York = **2026-03-01**)\n\n- Shipped/Changed\n  - Git (workspace) commits in last 24h:\n    - f006e15 Docs: add REPOS.md to document nested standalone repos\n    - 072ec21 Fix: vendor readwise skill into repo (no symlink to .agents)\n    - 471052c Housekeeping: gitignore + commit workspace scaffolding\n  - Noteworthy disk changes (last ~24h):\n    - Updated: `clawdbot-dashboard/data.json`\n    - Updated: `memory/openclaw-updates.log` + `memory/openclaw_auto_update_last.log`; touched: `memory/openclaw-auto-update.lock`\n    - Updated: `unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - Added/updated: `REPOS.md`, `.gitignore`, `.openclaw/workspace-state.json`\n    - Workspace-KM: Readwise indexes refreshed (`readwise/highlights.json`, `readwise/books.json` + meta)\n\n- Worked\n  - Cron activity (last 24h, from `/home/clawd/.openclaw/cron/runs/*.jsonl`):\n    - `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (infraops:openclaw-auto-update): **48 runs**, all `ok`; typical result `NOOP/SKIP` (no update applied).\n    - `ec4c4adb-b20a-456c-ba9b-230db18dd23a` (weekly Readwise indexer): `ok`; scanned highlights=**13193** and books=**1356**; wrote `workspace-km/readwise/{highlights,books}.json`.\n    - `03cf0eec-72cb-4012-87aa-aa0962b1a197` (NYC SMM job pipeline): **2 `ok` runs**; **0** net-new roles; last-seen refreshed for a few existing roles; committed+pushed upstream in its own repo (one run also noted a local-only commit).\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` (Nikola nightly journal on Mac): `ok`; Mac node connected; updated `/Users/.../journal/2026-03-01.md` (localized to `[[clawdbot]]` section).\n\n- Failed/Flaky\n  - `99b353aa-2921-4694-8da5-9074680234a2` (healthcheck:overnight-prescan): `error` **“⚠️ ✉️ Message failed”** (delivery failure).\n  - `461680fe-9815-4dc5-8a0a-5898316619f8` (morning proposal): `ok` but warned **prescan data stale** (>36h).\n  - `5a45f0e7-fed2-450e-91e5-e205656c…",
-      "nextRunAt": 1772511000000,
+      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-03-02T23:10:28-0500  \n(Local date: America/New_York = **2026-03-02**)\n\n- Shipped/Changed\n  - Git (workspace) commits in last 24h: **none**.\n  - Noteworthy disk changes (last ~24h; excluding caches/log spam):\n    - Updated: `scripts/openclaw_auto_update.py`\n    - Updated: `unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - Updated/touched: `memory/openclaw-updates.log`, `memory/openclaw-auto-update.lock`\n    - Updated: `clawdbot-dashboard/data.json`\n    - Workspace-KM updated: `SOUL.md`, `AGENTS.md`\n\n- Worked\n  - Cron activity (last 24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`):\n    - `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (infraops:openclaw-auto-update): **46 runs**, all `ok`.\n    - `03cf0eec-72cb-4012-87aa-aa0962b1a197` (NYC SMM job pipeline): **4 runs**, all `ok`.\n      - Latest run: **0** net-new roles; updated pipeline `last_run`; appended a run-log row.\n    - `99b353aa-2921-4694-8da5-9074680234a2` (healthcheck:overnight-prescan): **1 run**, `ok` (report written to `/tmp/openclaw_prescan_summary.md`).\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` (healthcheck report): **1 run**, `ok` (but report outcome = **FAIL**; see below).\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` (morning proposal): **1 run**, `ok` (proposal: upgrade agent model tiers).\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` (Nikola nightly journal on Mac): **1 run**, `ok` (Mac node connected; wrote an entry to Andreas’s Mac journal file—no content reviewed here).\n\n- Failed/Flaky\n  - Healthcheck report (`5a45f0e7-fed2-450e-91e5-e205656cc8c2`) flagged overall **FAIL** despite `status=ok`:\n    - **CRITICAL:** `skills/readwise` flagged for potentially insecure “env-harvesting” patterns (needs audit/confirm trust or remove).\n    - **WARN:** weak fallback model (`openai-codex/gpt-4o-mini`) configured (suggested to remove from fallbacks).\n    - Functional note: Telegram group policy allowlist may be configured in a way that drops group messages…",
+      "nextRunAt": 1772597400000,
       "model": null,
-      "lastTotalTokens": 44020,
-      "lastInputTokens": 39091,
-      "lastOutputTokens": 4450
+      "lastTotalTokens": 27863,
+      "lastInputTokens": 24705,
+      "lastOutputTokens": 6833
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772509472796,
+      "lastRunAt": 1772511272807,
       "lastStatus": "ok",
-      "lastDurationMs": 96338,
+      "lastDurationMs": 41529,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited successfully (`code 0`).\n\nI also set it up to write a run log to:\n`/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`\n\nMy tool interface is currently refusing to return file/command output (“SKIP (direct session active)”), so I can’t show you the log contents from here. If you paste that log (or if you want, tell me to retry reading it in a few minutes), I’ll summarize exactly what it updated/changed.",
-      "nextRunAt": 1772511272796,
+      "lastSummary": "This cron run **did not apply an update** — it **skipped** because OpenClaw considered the system “busy”:\n\n- Result: `SKIP (direct session active (age=832543ms))`\n- Exit code: `0` (noop/skip)\n\nIf you want the longer audit trail, it’s written to:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nThe “last run” one-liner is:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`",
+      "nextRunAt": 1772513072807,
       "model": null,
-      "lastTotalTokens": 11859,
-      "lastInputTokens": 9577,
-      "lastOutputTokens": 991
+      "lastTotalTokens": 12943,
+      "lastInputTokens": 10075,
+      "lastOutputTokens": 581
     }
   ]
 }
