@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772515806761,
+  "updatedAt": 1772517608420,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772514872838,
+      "lastRunAt": 1772516672849,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update)** at **2026-03-03T05:15:04Z**.  \nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nCurrent state:\n- `openclaw --version` → **2026.3.2**\n- `openclaw update status --json` → **no update available** (already up to date)\n\nNotable earlier log entries (FYI):\n- **04:45Z** `UPDATE_START (latest=2026.3.2)` — and the system is now on 2026.3.2.\n- **02:44Z** a skip because `openclaw cron status` failed with `gateway closed (1006 abnormal closure)` (looks transient)."
+      "lastSummary": "Ran the cron job:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no stdout/stderr captured)\n\nI also checked the gateway:\n\n- `openclaw gateway status` → **running**, RPC probe **ok**, listening on **127.0.0.1:18789**\n\nOne thing flagged by Doctor warnings:\n- Your Telegram `groupPolicy` is **allowlist** but `groupAllowFrom`/`allowFrom` is empty (for default + several accounts), so **all group messages will be silently dropped** until you add allowed sender IDs or switch `groupPolicy` to `open`."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772514872838,
+      "lastRunAt": 1772516672849,
       "lastStatus": "ok",
-      "lastDurationMs": 65908,
+      "lastDurationMs": 47529,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update)** at **2026-03-03T05:15:04Z**.  \nLog: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nCurrent state:\n- `openclaw --version` → **2026.3.2**\n- `openclaw update status --json` → **no update available** (already up to date)\n\nNotable earlier log entries (FYI):\n- **04:45Z** `UPDATE_START (latest=2026.3.2)` — and the system is now on 2026.3.2.\n- **02:44Z** a skip because `openclaw cron status` failed with `gateway closed (1006 abnormal closure)` (looks transient).",
-      "nextRunAt": 1772516672838,
+      "lastSummary": "Ran the cron job:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **exit code 0** (no stdout/stderr captured)\n\nI also checked the gateway:\n\n- `openclaw gateway status` → **running**, RPC probe **ok**, listening on **127.0.0.1:18789**\n\nOne thing flagged by Doctor warnings:\n- Your Telegram `groupPolicy` is **allowlist** but `groupAllowFrom`/`allowFrom` is empty (for default + several accounts), so **all group messages will be silently dropped** until you add allowed sender IDs or switch `groupPolicy` to `open`.",
+      "nextRunAt": 1772518472849,
       "model": null,
-      "lastTotalTokens": 13679,
-      "lastInputTokens": 10036,
-      "lastOutputTokens": 785
+      "lastTotalTokens": 11807,
+      "lastInputTokens": 7728,
+      "lastOutputTokens": 444
     }
   ]
 }
