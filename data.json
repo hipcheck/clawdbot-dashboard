@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772512207565,
+  "updatedAt": 1772514009916,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 7,
+          "usedPercent": 8,
           "resetAt": 1773108879000
         }
       ],
@@ -29,7 +29,7 @@
       "id": "anthropic",
       "label": "Anthropic",
       "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "error": "HTTP 500: Internal server error"
     }
   ],
   "agents": [
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772511272807,
+      "lastRunAt": 1772513072820,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This cron run **did not apply an update** — it **skipped** because OpenClaw considered the system “busy”:\n\n- Result: `SKIP (direct session active (age=832543ms))`\n- Exit code: `0` (noop/skip)\n\nIf you want the longer audit trail, it’s written to:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nThe “last run” one-liner is:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`"
+      "lastSummary": "NOOP (no update)\n\nThe auto-update check ran and found no OpenClaw update available, so it didn’t do anything (exit code 0).  \nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772511272807,
+      "lastRunAt": 1772513072820,
       "lastStatus": "ok",
-      "lastDurationMs": 41529,
+      "lastDurationMs": 360859,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This cron run **did not apply an update** — it **skipped** because OpenClaw considered the system “busy”:\n\n- Result: `SKIP (direct session active (age=832543ms))`\n- Exit code: `0` (noop/skip)\n\nIf you want the longer audit trail, it’s written to:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nThe “last run” one-liner is:\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`",
-      "nextRunAt": 1772513072807,
+      "lastSummary": "NOOP (no update)\n\nThe auto-update check ran and found no OpenClaw update available, so it didn’t do anything (exit code 0).  \nLog file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
+      "nextRunAt": 1772514872820,
       "model": null,
-      "lastTotalTokens": 12943,
-      "lastInputTokens": 10075,
-      "lastOutputTokens": 581
+      "lastTotalTokens": 13058,
+      "lastInputTokens": 10271,
+      "lastOutputTokens": 674
     }
   ]
 }
