@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772526607354,
+  "updatedAt": 1772528408547,
   "providers": [
     {
       "id": "openai-codex",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1772452200016,
+      "lastRunAt": 1772526600021,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL\n\nA security preflight check found 1 critical issue and 1 warning.\n\n**Top Blockers:**\n\n1.  **CRITICAL: Insecure Skill \"readwise\"**\n    - **Issue:** The skill in `/home/clawd/.openclaw/workspace/skills/readwise` contains code patterns (`env-harvesting`) that suggest it could steal environment variables or credentials.\n    - **Recommendation:** This skill is untrusted and presents a significant security risk. It should be removed immediately.\n    - **Fix Command:** `rm -rf /home/clawd/.openclaw/workspace/skills/readwise`\n\n2.  **WARN: Weak Fallback Model**\n    - **Issue:** The model `openai-codex/gpt-4o-mini` is configured as a fallback. Smaller models can be more vulnerable to prompt injection and misuse.\n    - **Recommendation:** Remove this model from the fallback list in your configuration file (`agents.list.main.model.fallbacks`). For high-security contexts, rely only on top-tier models.\n\n**Additional Findings:**\n\n*   **Trusted Proxy Posture:** `gateway.tailscale.mode=\"serve\"` is enabled, exposing the Gateway to your tailnet. The security audit did not flag this as a risk, which suggests it is correctly configured for the declared \"personal assistant\" trust model.\n*   **Node Command Rules:** The deep audit did not report any misconfigurations for `gateway.nodes.denyCommands`.\n*   **Telegram Group Policies:** Multiple Telegram accounts have `groupPolicy` set to `allowlist` with an empty `groupAllowFrom` list. This will cause all group messages to be dropped. This is a functional issue, not a direct security vulnerability, but should be corrected."
+      "lastSummary": "The nightly prescan is complete. I have generated a fresh report and saved it to `/tmp/openclaw_prescan_summary.md`."
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772525672920,
+      "lastRunAt": 1772527472930,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **did not apply an update** (NOOP).\n\nCurrent `openclaw update status --json` shows:\n- registry latest: **2026.3.2**\n- but `availability.available=false` / `hasRegistryUpdate=false` because deps status is **unknown** (`reason: \"lockfile missing\"`), so the updater won’t proceed.\n\nIf you want, I can dig into why the lockfile is missing in the OpenClaw install root and what the safest fix is (so auto-updates start working again)."
+      "lastSummary": "I can see the auto-update cron created/updated this file:\n\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log` (timestamp: Mar 3 03:45, size: 44 bytes)\n\nBut right now my file/command tools are refusing to run (“SKIP (direct session active …)”), so I can’t open that log to tell you whether it updated anything.\n\nIf you paste the contents of:\n\n```bash\ncat /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log\n```\n\n…I’ll interpret it and tell you what happened.\n\nOne thing I *did* notice from the gateway service logs I can see: there were repeated “gateway already running / port 18789 in use” start attempts on Feb 11. If the updater script tries to restart the gateway while it’s already supervised/running, we should adjust it to do a clean stop/start (or skip restart) to avoid those collisions."
     },
     {
       "id": "km",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772440200018,
+      "lastRunAt": 1772526600021,
       "lastStatus": "ok",
-      "lastDurationMs": 242938,
+      "lastDurationMs": 123780,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\n- OpenClaw Gateway is running correctly.\n- The security audit found one non-critical warning regarding a weak model configuration.\n- The update check command timed out and needs manual investigation.\n- The cron subsystem is healthy.\n\nNo critical issues were detected.",
-      "nextRunAt": 1772526600000,
+      "lastSummary": "The nightly prescan is complete. I have generated a fresh report and saved it to `/tmp/openclaw_prescan_summary.md`.",
+      "nextRunAt": 1772613000000,
       "model": null,
-      "lastTotalTokens": 10892,
-      "lastInputTokens": 13115,
-      "lastOutputTokens": 1513
+      "lastTotalTokens": 12706,
+      "lastInputTokens": 13577,
+      "lastOutputTokens": 4477
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772525672920,
+      "lastRunAt": 1772527472930,
       "lastStatus": "ok",
-      "lastDurationMs": 108664,
+      "lastDurationMs": 60218,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now — it exited cleanly and **did not apply an update** (NOOP).\n\nCurrent `openclaw update status --json` shows:\n- registry latest: **2026.3.2**\n- but `availability.available=false` / `hasRegistryUpdate=false` because deps status is **unknown** (`reason: \"lockfile missing\"`), so the updater won’t proceed.\n\nIf you want, I can dig into why the lockfile is missing in the OpenClaw install root and what the safest fix is (so auto-updates start working again).",
-      "nextRunAt": 1772527472920,
+      "lastSummary": "I can see the auto-update cron created/updated this file:\n\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log` (timestamp: Mar 3 03:45, size: 44 bytes)\n\nBut right now my file/command tools are refusing to run (“SKIP (direct session active …)”), so I can’t open that log to tell you whether it updated anything.\n\nIf you paste the contents of:\n\n```bash\ncat /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log\n```\n\n…I’ll interpret it and tell you what happened.\n\nOne thing I *did* notice from the gateway service logs I can see: there were repeated “gateway already running / port 18789 in use” start attempts on Feb 11. If the updater script tries to restart the gateway while it’s already supervised/running, we should adjust it to do a clean stop/start (or skip restart) to avoid those collisions.",
+      "nextRunAt": 1772529272930,
       "model": null,
-      "lastTotalTokens": 16558,
-      "lastInputTokens": 25037,
-      "lastOutputTokens": 1142
+      "lastTotalTokens": 13960,
+      "lastInputTokens": 10017,
+      "lastOutputTokens": 868
     }
   ]
 }
