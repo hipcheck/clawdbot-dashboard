@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772645407671,
+  "updatedAt": 1772647207998,
   "providers": [
     {
       "id": "openai-codex",
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772731807000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772731807000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -72,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
-      "activityChannel": "tui",
-      "lastRunAt": 1772645172359,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772646272794,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Yes, I'm here. I'm still waiting for you to provide the contents of the crontab file so I can help you manually run the `nightly-journal-comment` job."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -226,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772644472781,
+      "lastRunAt": 1772646272794,
       "lastStatus": "ok",
-      "lastDurationMs": 5319,
+      "lastDurationMs": 4774,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron trigger line (it ran `openclaw_auto_update.py`), but not the script’s stdout/stderr or whether it actually updated anything.\n\nIf you paste the last ~50 lines of that cron job’s output (or wherever you log it), I can tell you:\n- what version you were on → what you updated to\n- whether it restarted the gateway cleanly\n- and if anything failed (pip/npm/git conflicts, permission issues, etc.)\n\nIf you want, I can also suggest a quick tweak so the cron always posts a short “result summary” (updated/no-op/failed + reason) instead of just the command line.",
-      "nextRunAt": 1772646272781,
+      "lastSummary": null,
+      "nextRunAt": 1772648072794,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 205
+      "lastOutputTokens": 67
     }
   ]
 }
