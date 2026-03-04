@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772584206863,
+  "updatedAt": 1772586008120,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,8 +10,19 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1772672408000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1772672408000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
@@ -49,13 +60,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772583273717,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772585559147,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "No OpenClaw updates were available. Everything is up to date."
+      "lastSummary": null
     },
     {
       "id": "km",
