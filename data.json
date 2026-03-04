@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772661607938,
+  "updatedAt": 1772663406570,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772660672908,
+      "lastRunAt": 1772662472922,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute that command from here (no shell/exec tool in this chat), so I don’t know whether the auto-update succeeded.\n\nIf you want me to interpret the run, paste the script output/logs (stdout+stderr). If you don’t currently capture them, update the cron to log, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen send me the last ~100 lines."
+      "lastSummary": "Noted — the **openclaw-auto-update** cron just triggered and ran:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you want me to sanity-check what it did (updated version, restart, failures), paste the script output/log snippet from that run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772660672908,
+      "lastRunAt": 1772662472922,
       "lastStatus": "ok",
-      "lastDurationMs": 6572,
+      "lastDurationMs": 5302,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute that command from here (no shell/exec tool in this chat), so I don’t know whether the auto-update succeeded.\n\nIf you want me to interpret the run, paste the script output/logs (stdout+stderr). If you don’t currently capture them, update the cron to log, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen send me the last ~100 lines.",
-      "nextRunAt": 1772662472908,
+      "lastSummary": "Noted — the **openclaw-auto-update** cron just triggered and ran:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you want me to sanity-check what it did (updated version, restart, failures), paste the script output/log snippet from that run.",
+      "nextRunAt": 1772664272922,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 241
+      "lastOutputTokens": 189
     }
   ]
 }
