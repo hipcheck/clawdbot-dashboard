@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772620207489,
+  "updatedAt": 1772622008097,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,8 +10,19 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1772708408000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1772708408000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
@@ -49,22 +60,22 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772619728259,
+      "activityKind": "chat",
+      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
+      "activityChannel": "tui",
+      "lastRunAt": 1772621985999,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The openclaw auto-update script has finished running successfully."
+      "lastSummary": "I cannot directly \"do it\" because I need the origin of the `openclaw-tui` to add it to the `allowedOrigins` list in the gateway configuration file. I also need the location of the configuration file. "
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"timestamp\": \"Wed 2026-03-04 10:12 UTC\",\n  \"has_reply_context\": true\n}\n```\n\nReplied message (untrusted, for context):\n```json\n{\n  \"sender_lab",
+      "activityLabel": "json\n{\n  \"message_id\": \"26\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 10:56 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772619196720,
+      "lastRunAt": 1772621778810,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "**Mac Node accessible**\n\nThe Mac *is* connected and responding to commands.\n\nThe original error \"Nodes: Andreas MacBook failed\" was vague, and I should have checked more carefully before asking the us"
@@ -203,17 +214,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772619728259,
+      "lastRunAt": 1772621528274,
       "lastStatus": "ok",
-      "lastDurationMs": 114523,
+      "lastDurationMs": 218735,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The openclaw auto-update script has finished running successfully.",
-      "nextRunAt": 1772621528259,
+      "lastSummary": "The script last performed an update on `2026-03-03T04:45:05Z`, but it was a NOOP. Before that, an update was successfully installed on `2026-03-02T05:20:30Z`.\n\nThe current run at `2026-03-04 — 10:52 AM (UTC)` is likely running into the same condition as the last log entry in the `openclaw-updates.log`: `SKIP (direct session active (age=489245ms))`. This means a direct session (likely Andreas) has been active for a while, so the auto-update is skipping the update.\n\nNo action is needed, as the script is functioning as designed.\n\nHEARTBEAT_OK",
+      "nextRunAt": 1772623328274,
       "model": null,
-      "lastTotalTokens": 8957,
-      "lastInputTokens": 26622,
-      "lastOutputTokens": 168
+      "lastTotalTokens": 22285,
+      "lastInputTokens": 51316,
+      "lastOutputTokens": 595
     }
   ]
 }
