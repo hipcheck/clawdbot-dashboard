@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772654408349,
+  "updatedAt": 1772656207675,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772653472856,
+      "lastRunAt": 1772655272870,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron trigger, but it only shows the command line — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to verify what happened, paste either:\n- the cron job’s captured output (stdout/stderr), or\n- the last ~50–100 lines of whatever log file `openclaw_auto_update.py` writes to (if it writes one).\n\nAlso tell me what you expect it to do (e.g., `pip` update, `git pull`, `openclaw` upgrade), and I’ll sanity-check the behavior and any failure modes."
+      "lastSummary": "I can’t actually run `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (this chat instance only has messaging/session tools, no shell/exec).\n\nIf you want, run it on the OpenClaw host and paste the output:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf it’s meant to run unattended via cron, also paste the cron’s stderr/stdout (or the relevant log file path), and I’ll help you diagnose why it’s surfacing here instead of just silently updating."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772653472856,
+      "lastRunAt": 1772655272870,
       "lastStatus": "ok",
-      "lastDurationMs": 7093,
+      "lastDurationMs": 6178,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron trigger, but it only shows the command line — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to verify what happened, paste either:\n- the cron job’s captured output (stdout/stderr), or\n- the last ~50–100 lines of whatever log file `openclaw_auto_update.py` writes to (if it writes one).\n\nAlso tell me what you expect it to do (e.g., `pip` update, `git pull`, `openclaw` upgrade), and I’ll sanity-check the behavior and any failure modes.",
-      "nextRunAt": 1772655272856,
+      "lastSummary": "I can’t actually run `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (this chat instance only has messaging/session tools, no shell/exec).\n\nIf you want, run it on the OpenClaw host and paste the output:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf it’s meant to run unattended via cron, also paste the cron’s stderr/stdout (or the relevant log file path), and I’ll help you diagnose why it’s surfacing here instead of just silently updating.",
+      "nextRunAt": 1772657072870,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 229
+      "lastOutputTokens": 208
     }
   ]
 }
