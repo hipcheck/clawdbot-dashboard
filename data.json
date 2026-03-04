@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772632807388,
+  "updatedAt": 1772634607801,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,19 +10,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772719207000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772719207000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -60,13 +49,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
-      "activityChannel": "tui",
-      "lastRunAt": 1772632760901,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772634170536,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Given that `sessions_list` doesn't show the Discord session and I can't find any obvious config files, the connection to Discord may be established in a way that's not directly managed by the main Ope"
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -214,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772630570516,
+      "lastRunAt": 1772634170536,
       "lastStatus": "ok",
-      "lastDurationMs": 183928,
+      "lastDurationMs": 63891,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "[[cron:c621238c-158e-4342-90c7-9ebb9f8ab0a3 infraops:openclaw-auto-update] The auto-update script ran, but there was nothing to update.",
-      "nextRunAt": 1772632370516,
+      "lastSummary": null,
+      "nextRunAt": 1772635970536,
       "model": null,
-      "lastTotalTokens": 9250,
-      "lastInputTokens": 11882,
-      "lastOutputTokens": 372
+      "lastTotalTokens": 8939,
+      "lastInputTokens": 10145,
+      "lastOutputTokens": 124
     }
   ]
 }
