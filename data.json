@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772586008120,
+  "updatedAt": 1772587806547,
   "providers": [
     {
       "id": "openai-codex",
@@ -14,12 +14,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1772672408000
+          "resetAt": 1772674206000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1772672408000
+          "resetAt": 1772674206000
         }
       ],
       "error": null
@@ -214,13 +214,13 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772583273717,
-      "lastStatus": "ok",
-      "lastDurationMs": 123290,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "No OpenClaw updates were available. Everything is up to date.",
-      "nextRunAt": 1772585073717,
+      "lastRunAt": 1772585073734,
+      "lastStatus": "error",
+      "lastDurationMs": 1800027,
+      "consecutiveErrors": 1,
+      "lastError": "cron: job execution timed out",
+      "lastSummary": null,
+      "nextRunAt": 1772588672766,
       "model": null,
       "lastTotalTokens": 8890,
       "lastInputTokens": 10680,
