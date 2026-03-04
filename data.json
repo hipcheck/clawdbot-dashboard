@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772665208717,
+  "updatedAt": 1772667007101,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772664272938,
+      "lastRunAt": 1772666072950,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Looks like the cron job fired, but I’m only seeing the command + timestamp — not the script’s stdout/stderr or exit status.\n\nTo tell whether the auto-update actually succeeded (or why it failed), I need one of these:\n\n1) The cron log output for that run (stdout/stderr), or  \n2) Where this cron task writes its logs (file path), or  \n3) The exit code / any “Traceback” text.\n\nIf you paste the last ~50–100 lines of the cron output (or point me to the log file path), I’ll interpret it and tell you exactly what happened + what to fix (if anything)."
+      "lastSummary": "I see the cron fired, but this message doesn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update actually succeeded or failed.\n\nTo diagnose quickly, please paste one of the following:\n\n1) The last ~50 lines of the cron run output (stdout/stderr), or  \n2) If the script writes a log file, the last ~100 lines of that log (and the path).\n\nIf you’re running this via system cron (not OpenClaw’s internal scheduler), also paste the relevant crontab line so I can see where output is being redirected (e.g., `>> ... 2>&1`)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772664272938,
+      "lastRunAt": 1772666072950,
       "lastStatus": "ok",
-      "lastDurationMs": 8430,
+      "lastDurationMs": 7320,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Looks like the cron job fired, but I’m only seeing the command + timestamp — not the script’s stdout/stderr or exit status.\n\nTo tell whether the auto-update actually succeeded (or why it failed), I need one of these:\n\n1) The cron log output for that run (stdout/stderr), or  \n2) Where this cron task writes its logs (file path), or  \n3) The exit code / any “Traceback” text.\n\nIf you paste the last ~50–100 lines of the cron output (or point me to the log file path), I’ll interpret it and tell you exactly what happened + what to fix (if anything).",
-      "nextRunAt": 1772666072938,
+      "lastSummary": "I see the cron fired, but this message doesn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update actually succeeded or failed.\n\nTo diagnose quickly, please paste one of the following:\n\n1) The last ~50 lines of the cron run output (stdout/stderr), or  \n2) If the script writes a log file, the last ~100 lines of that log (and the path).\n\nIf you’re running this via system cron (not OpenClaw’s internal scheduler), also paste the relevant crontab line so I can see where output is being redirected (e.g., `>> ... 2>&1`).",
+      "nextRunAt": 1772667872950,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 221
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 254
     }
   ]
 }
