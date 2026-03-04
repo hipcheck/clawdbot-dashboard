@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772600408318,
+  "updatedAt": 1772602207390,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,19 +10,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772686808000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772686808000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -63,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772598128122,
+      "lastRunAt": 1772601728146,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP (no update)"
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -214,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772598128122,
+      "lastRunAt": 1772601728146,
       "lastStatus": "ok",
-      "lastDurationMs": 175222,
+      "lastDurationMs": 63697,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP (no update)",
-      "nextRunAt": 1772599928122,
+      "lastSummary": null,
+      "nextRunAt": 1772603528146,
       "model": null,
-      "lastTotalTokens": 8919,
-      "lastInputTokens": 2872,
-      "lastOutputTokens": 167
+      "lastTotalTokens": 8805,
+      "lastInputTokens": 17489,
+      "lastOutputTokens": 135
     }
   ]
 }
