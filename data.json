@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772623807203,
+  "updatedAt": 1772625608281,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,19 +10,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772710207000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772710207000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -48,13 +37,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1772613000013,
+      "activityKind": "chat",
+      "activityLabel": "subagent message",
+      "activityChannel": "subagent",
+      "lastRunAt": 1772625049000,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\nThe report includes:\n- **Critical security issues** regarding open group policies.\n- A healthy OpenClaw gateway status.\n- A timeout issue with the `openclaw update` check.\n- A healthy cron subsystem status."
+      "lastSummary": null
     },
     {
       "id": "main",
@@ -63,7 +52,7 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772623328290,
+      "lastRunAt": 1772625170469,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": null
@@ -124,17 +113,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772538600014,
+      "lastRunAt": 1772625000009,
       "lastStatus": "ok",
-      "lastDurationMs": 374902,
+      "lastDurationMs": 168135,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL\n\nSecurity preflight check failed. Immediate action is required.\n\n**Top Blockers:**\n\n1.  **CRITICAL: Potential Credential Harvesting in Skill:**\n    *   The skill \"readwise\" located at `/home/clawd/.openclaw/workspace/skills/readwise` contains dangerous code patterns that could leak sensitive environment variables over the network.\n    *   **Recommendation:** This skill should be considered compromised. Remove it immediately by deleting the directory.\n\n2.  **INCOMPLETE AUDIT: Configuration File Not Found:**\n    *   The `openclaw.yaml` configuration file could not be located in standard paths (`~/.openclaw/config.yaml`, `~/.config/openclaw/config.yaml`, `/etc/openclaw/config.yaml`).\n    *   This prevented verification of node command restrictions (`gateway.nodes.denyCommands`) and a full analysis of the trusted proxy posture. The system is in a partially un-auditable state.\n\n**Configuration Patch Suggestions:**\n\n*   **Remove Vulnerable Skill:**\n    *   Run the following command to remove the compromised \"readwise\" skill:\n    *   `rm -rf /home/clawd/.openclaw/workspace/skills/readwise`\n\n*   **Harden Model Fallback:**\n    *   The model `openai-codex/gpt-4o-mini` is used as a fallback and is below the recommended security tier.\n    *   **Suggestion:** In your configuration file, replace `gpt-4o-mini` with a stronger model like `gpt-5.3-codex` or `gemini-3-pro-preview` to reduce the risk of prompt injection and tool misuse.\n\n*   **Fix Telegram Group Policies:**\n    *   Multiple Telegram accounts are configured with a group `allowlist` policy but have no users in the list, effectively blocking all group messages.\n    *   **Suggestion:** For each affected account (`default`, `geordie`, `nikola`, `q`), add authorized user/group IDs to the `groupAllowFrom` list or set `groupPolicy: \"open\"` if the bot is intended to be public.\n\n*   **Verify Network Posture:**\n    *   The audit indicates `gateway.tailscale.mode=\"serve\"` is active. Confirm that the gateway is *only* listeni…",
-      "nextRunAt": 1772625000000,
+      "lastSummary": null,
+      "nextRunAt": 1772711400000,
       "model": null,
-      "lastTotalTokens": 9730,
-      "lastInputTokens": 12090,
-      "lastOutputTokens": 2134
+      "lastTotalTokens": 8400,
+      "lastInputTokens": 16428,
+      "lastOutputTokens": 361
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -214,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772623328290,
+      "lastRunAt": 1772625170469,
       "lastStatus": "ok",
-      "lastDurationMs": 108150,
+      "lastDurationMs": 124639,
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": null,
-      "nextRunAt": 1772625128290,
+      "nextRunAt": 1772626970469,
       "model": null,
-      "lastTotalTokens": 10810,
-      "lastInputTokens": 19718,
-      "lastOutputTokens": 132
+      "lastTotalTokens": 9100,
+      "lastInputTokens": 10377,
+      "lastOutputTokens": 310
     }
   ]
 }
