@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772631007619,
+  "updatedAt": 1772632807388,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,8 +10,19 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1772719207000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1772719207000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
@@ -26,36 +37,36 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"33\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 12:37 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityLabel": "json\n{\n  \"message_id\": \"34\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 13:51 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772627824650,
+      "lastRunAt": 1772632339447,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<think>\nThe user is asking if they can approve the request from their Mac terminal.\n\nThe approval mechanism is tied to the OpenClaw gateway and the chat interface. It's not a standard CLI prompt that "
+      "lastSummary": "NO_REPLY"
     },
     {
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"43\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 13:53 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772628661363,
+      "lastRunAt": 1772632760352,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Gateway restart initiated. It may take a minute to come back online.\n\nServer-side security measures are now complete. The Web UI is fully secured and only accessible via your private Tailscale network"
+      "lastSummary": "Thank you. I have received the information from the server.\n\nThe correct URL for the Web UI is now:\n\n`http://100.115.20.30:7860`\n\nPlease make sure your MacBook is connected to your Tailscale network. "
     },
     {
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772630570516,
+      "activityKind": "chat",
+      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
+      "activityChannel": "tui",
+      "lastRunAt": 1772632760901,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[cron:c621238c-158e-4342-90c7-9ebb9f8ab0a3 infraops:openclaw-auto-update] The auto-update script ran, but there was nothing to update."
+      "lastSummary": "Given that `sessions_list` doesn't show the Discord session and I can't find any obvious config files, the connection to Discord may be established in a way that's not directly managed by the main Ope"
     },
     {
       "id": "km",
