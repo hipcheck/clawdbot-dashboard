@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772659807021,
+  "updatedAt": 1772661607938,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,13 +7,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
-          "resetAt": 1772661825000
+          "usedPercent": 0,
+          "resetAt": 1772678679000
         },
         {
           "label": "Day",
-          "usedPercent": 9,
-          "resetAt": 1773108879000
+          "usedPercent": 0,
+          "resetAt": 1773265479000
         }
       ],
       "plan": "plus ($0.00)",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772658872895,
+      "lastRunAt": 1772660672908,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron *trigger* message — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to validate what happened, paste one of these:\n\n1) The cron’s captured output (stdout/stderr), if your cron runner logs it anywhere  \n2) The last ~50 lines of whatever log file you redirect the job to (if you have `>> ... 2>&1`)  \n3) If it’s a systemd timer/service, the last lines from `journalctl` for that unit\n\nIf you tell me how this cron is configured to log (file path or unit name), I’ll tell you the exact command to pull the relevant lines."
+      "lastSummary": "I can’t actually execute that command from here (no shell/exec tool in this chat), so I don’t know whether the auto-update succeeded.\n\nIf you want me to interpret the run, paste the script output/logs (stdout+stderr). If you don’t currently capture them, update the cron to log, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen send me the last ~100 lines."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772658872895,
+      "lastRunAt": 1772660672908,
       "lastStatus": "ok",
-      "lastDurationMs": 6693,
+      "lastDurationMs": 6572,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron *trigger* message — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to validate what happened, paste one of these:\n\n1) The cron’s captured output (stdout/stderr), if your cron runner logs it anywhere  \n2) The last ~50 lines of whatever log file you redirect the job to (if you have `>> ... 2>&1`)  \n3) If it’s a systemd timer/service, the last lines from `journalctl` for that unit\n\nIf you tell me how this cron is configured to log (file path or unit name), I’ll tell you the exact command to pull the relevant lines.",
-      "nextRunAt": 1772660672895,
+      "lastSummary": "I can’t actually execute that command from here (no shell/exec tool in this chat), so I don’t know whether the auto-update succeeded.\n\nIf you want me to interpret the run, paste the script output/logs (stdout+stderr). If you don’t currently capture them, update the cron to log, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen send me the last ~100 lines.",
+      "nextRunAt": 1772662472908,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 249
+      "lastOutputTokens": 241
     }
   ]
 }
