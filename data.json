@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772587806547,
+  "updatedAt": 1772589608257,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,19 +10,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1772674206000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1772674206000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -60,13 +49,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772585559147,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772588672777,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Okay, the auto-update script ran and found no new updates to apply. Everything is current."
     },
     {
       "id": "km",
@@ -214,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772585073734,
-      "lastStatus": "error",
-      "lastDurationMs": 1800027,
-      "consecutiveErrors": 1,
-      "lastError": "cron: job execution timed out",
-      "lastSummary": null,
-      "nextRunAt": 1772588672766,
+      "lastRunAt": 1772588672777,
+      "lastStatus": "ok",
+      "lastDurationMs": 123487,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Okay, the auto-update script ran and found no new updates to apply. Everything is current.",
+      "nextRunAt": 1772590472777,
       "model": null,
-      "lastTotalTokens": 8890,
-      "lastInputTokens": 10680,
-      "lastOutputTokens": 177
+      "lastTotalTokens": 8933,
+      "lastInputTokens": 10693,
+      "lastOutputTokens": 194
     }
   ]
 }
