@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772625608281,
+  "updatedAt": 1772627407212,
   "providers": [
     {
       "id": "openai-codex",
@@ -25,25 +25,25 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"timestamp\": \"Wed 2026-03-04 00:23 UTC\"\n}\n```\n\nStatus?",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772583839467,
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1772625600021,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The configuration change is complete, but the required gateway restart was not approved and the request timed out.\n\nThe fix is therefore not yet active.\n\nShall I send the restart request again?"
+      "lastSummary": null
     },
     {
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "chat",
-      "activityLabel": "subagent message",
-      "activityChannel": "subagent",
-      "lastRunAt": 1772625049000,
+      "activityLabel": "json\n{\n  \"message_id\": \"29\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 12:23 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772627174554,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I understand. I am taking action on both requests immediately.\n\n**1. Cutting Access**\n\nI have killed the persistent Discord session (`agent:main:discord:thread:12345`) that the request came from. This"
     },
     {
       "id": "main",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772625170469,
+      "lastRunAt": 1772626970486,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "The OpenClaw auto-update script ran successfully. It determined that no action was needed because an active session was detected, so it exited cleanly. This is the intended behavior to prevent updates from interrupting ongoing work."
     },
     {
       "id": "km",
@@ -77,17 +77,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772539200017,
+      "lastRunAt": 1772625600021,
       "lastStatus": "ok",
-      "lastDurationMs": 70987,
+      "lastDurationMs": 57879,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Today's Proposal: Fix Silent Message Drops in Telegram Groups\n\n**Impact:** High. Bots are currently ignoring all group messages. This change will restore the ability for agents (`geordie`, `nikola`, `q`) to participate in groups, a critical function.\n\n**Risk:** Low. This is a straightforward configuration fix. The worst-case is a bot responding in an unintended group, which can be corrected by refining the allowlist.\n\n**First 3 Steps:**\n1. Read the config file at `~/.openclaw/openclaw.json`.\n2. Locate the `channels.telegram` section and its `accounts`.\n3. For each account with `groupPolicy: \"allowlist\"`, change it to `\"open\"` or add the correct group IDs to `groupAllowFrom`.",
-      "nextRunAt": 1772625600000,
+      "lastSummary": null,
+      "nextRunAt": 1772712000000,
       "model": null,
-      "lastTotalTokens": 8769,
-      "lastInputTokens": 8131,
-      "lastOutputTokens": 1094
+      "lastTotalTokens": 6713,
+      "lastInputTokens": 7077,
+      "lastOutputTokens": 800
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772625170469,
+      "lastRunAt": 1772626970486,
       "lastStatus": "ok",
-      "lastDurationMs": 124639,
+      "lastDurationMs": 245896,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772626970469,
+      "lastSummary": "The OpenClaw auto-update script ran successfully. It determined that no action was needed because an active session was detected, so it exited cleanly. This is the intended behavior to prevent updates from interrupting ongoing work.",
+      "nextRunAt": 1772628770486,
       "model": null,
-      "lastTotalTokens": 9100,
-      "lastInputTokens": 10377,
-      "lastOutputTokens": 310
+      "lastTotalTokens": 11109,
+      "lastInputTokens": 29010,
+      "lastOutputTokens": 562
     }
   ]
 }
