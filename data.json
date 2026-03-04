@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772640007790,
+  "updatedAt": 1772641808133,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,8 +10,19 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1772728208000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1772728208000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
@@ -38,24 +49,24 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"43\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 13:53 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityLabel": "json\n{\n  \"message_id\": \"49\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 16:29 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772632760352,
+      "lastRunAt": 1772641770677,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Thank you. I have received the information from the server.\n\nThe correct URL for the Web UI is now:\n\n`http://100.115.20.30:7860`\n\nPlease make sure your MacBook is connected to your Tailscale network. "
+      "lastSummary": "The firewall rule has been updated on the server.\n\nCould you please try the `ping` command again in your MacBook's Terminal?\n\n```\nping 100.115.20.30\n```\n\nYou should now see successful replies instead "
     },
     {
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772639570585,
+      "activityKind": "chat",
+      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
+      "activityChannel": "tui",
+      "lastRunAt": 1772641735102,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "To grant me the necessary permissions, I would need `sudo` access. There are a few ways to accomplish this, but the safest and most common is to add the current user (the one OpenClaw is running as) t"
     },
     {
       "id": "km",
@@ -203,17 +214,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772639570585,
+      "lastRunAt": 1772641370595,
       "lastStatus": "ok",
-      "lastDurationMs": 64281,
+      "lastDurationMs": 193524,
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": null,
-      "nextRunAt": 1772641370585,
+      "nextRunAt": 1772643170595,
       "model": null,
-      "lastTotalTokens": 9009,
-      "lastInputTokens": 10172,
-      "lastOutputTokens": 149
+      "lastTotalTokens": 8942,
+      "lastInputTokens": 17751,
+      "lastOutputTokens": 127
     }
   ]
 }
