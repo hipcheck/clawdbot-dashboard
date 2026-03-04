@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772618407919,
+  "updatedAt": 1772620207489,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,22 +52,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772617928243,
+      "lastRunAt": 1772619728259,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The OpenClaw auto-update script ran, but there were no new updates to apply."
+      "lastSummary": "The openclaw auto-update script has finished running successfully."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
-      "activityChannel": null,
-      "lastRunAt": 1772596800015,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"timestamp\": \"Wed 2026-03-04 10:12 UTC\",\n  \"has_reply_context\": true\n}\n```\n\nReplied message (untrusted, for context):\n```json\n{\n  \"sender_lab",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772619196720,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The journal file does not exist.\n\nNikola nightly journal: journal file /Users/andreasallmaier/Documents/PKH/journal/2026-03-03.md missing."
+      "lastSummary": "**Mac Node accessible**\n\nThe Mac *is* connected and responding to commands.\n\nThe original error \"Nodes: Andreas MacBook failed\" was vague, and I should have checked more carefully before asking the us"
     }
   ],
   "cronJobs": [
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772617928243,
+      "lastRunAt": 1772619728259,
       "lastStatus": "ok",
-      "lastDurationMs": 122848,
+      "lastDurationMs": 114523,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The OpenClaw auto-update script ran, but there were no new updates to apply.",
-      "nextRunAt": 1772619728243,
+      "lastSummary": "The openclaw auto-update script has finished running successfully.",
+      "nextRunAt": 1772621528259,
       "model": null,
-      "lastTotalTokens": 8908,
-      "lastInputTokens": 10675,
-      "lastOutputTokens": 178
+      "lastTotalTokens": 8957,
+      "lastInputTokens": 26622,
+      "lastOutputTokens": 168
     }
   ]
 }
