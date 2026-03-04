@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772596807566,
+  "updatedAt": 1772598607294,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772595872817,
+      "lastRunAt": 1772598128122,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "HEARTBEAT_OK"
+      "lastSummary": "NOOP (no update)"
     },
     {
       "id": "km",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "km:nightly-journal-comment",
       "activityChannel": null,
-      "lastRunAt": 1772510400017,
+      "lastRunAt": 1772596800015,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBook).\n- CURRENT_TS (America/New_York): 2026-03-02T23:03:55-05:00\n- TARGET_DATE logic result: 2026-03-02 (run occurred within 23:00–23:59 NYC window → “today”)\n\nFile operation (via /usr/bin/python3 on Mac):\n- Target file: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-02.md`\n- File existed and was non-empty → proceeded.\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the placeholder empty bullet under `[[clawdbot]]` with one new entry (and nested timestamp + notes + Readwise quote + 2-link “Further reading” block).\n- Verified by re-reading the `[[clawdbot]]` section; content is present."
+      "lastSummary": "The journal file does not exist.\n\nNikola nightly journal: journal file /Users/andreasallmaier/Documents/PKH/journal/2026-03-03.md missing."
     }
   ],
   "cronJobs": [
@@ -149,17 +149,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772510400017,
+      "lastRunAt": 1772596800015,
       "lastStatus": "ok",
-      "lastDurationMs": 272351,
+      "lastDurationMs": 422146,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: connected (Andreas MacBook).\n- CURRENT_TS (America/New_York): 2026-03-02T23:03:55-05:00\n- TARGET_DATE logic result: 2026-03-02 (run occurred within 23:00–23:59 NYC window → “today”)\n\nFile operation (via /usr/bin/python3 on Mac):\n- Target file: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-02.md`\n- File existed and was non-empty → proceeded.\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the placeholder empty bullet under `[[clawdbot]]` with one new entry (and nested timestamp + notes + Readwise quote + 2-link “Further reading” block).\n- Verified by re-reading the `[[clawdbot]]` section; content is present.",
-      "nextRunAt": 1772596800000,
+      "lastSummary": "The journal file does not exist.\n\nNikola nightly journal: journal file /Users/andreasallmaier/Documents/PKH/journal/2026-03-03.md missing.",
+      "nextRunAt": 1772683200000,
       "model": null,
-      "lastTotalTokens": 30842,
-      "lastInputTokens": 36578,
-      "lastOutputTokens": 10686
+      "lastTotalTokens": 7175,
+      "lastInputTokens": 50431,
+      "lastOutputTokens": 1017
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -185,17 +185,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772511000022,
+      "lastRunAt": 1772597400014,
       "lastStatus": "ok",
-      "lastDurationMs": 174926,
+      "lastDurationMs": 725964,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-03-02T23:10:28-0500  \n(Local date: America/New_York = **2026-03-02**)\n\n- Shipped/Changed\n  - Git (workspace) commits in last 24h: **none**.\n  - Noteworthy disk changes (last ~24h; excluding caches/log spam):\n    - Updated: `scripts/openclaw_auto_update.py`\n    - Updated: `unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - Updated/touched: `memory/openclaw-updates.log`, `memory/openclaw-auto-update.lock`\n    - Updated: `clawdbot-dashboard/data.json`\n    - Workspace-KM updated: `SOUL.md`, `AGENTS.md`\n\n- Worked\n  - Cron activity (last 24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`):\n    - `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (infraops:openclaw-auto-update): **46 runs**, all `ok`.\n    - `03cf0eec-72cb-4012-87aa-aa0962b1a197` (NYC SMM job pipeline): **4 runs**, all `ok`.\n      - Latest run: **0** net-new roles; updated pipeline `last_run`; appended a run-log row.\n    - `99b353aa-2921-4694-8da5-9074680234a2` (healthcheck:overnight-prescan): **1 run**, `ok` (report written to `/tmp/openclaw_prescan_summary.md`).\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` (healthcheck report): **1 run**, `ok` (but report outcome = **FAIL**; see below).\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` (morning proposal): **1 run**, `ok` (proposal: upgrade agent model tiers).\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` (Nikola nightly journal on Mac): **1 run**, `ok` (Mac node connected; wrote an entry to Andreas’s Mac journal file—no content reviewed here).\n\n- Failed/Flaky\n  - Healthcheck report (`5a45f0e7-fed2-450e-91e5-e205656cc8c2`) flagged overall **FAIL** despite `status=ok`:\n    - **CRITICAL:** `skills/readwise` flagged for potentially insecure “env-harvesting” patterns (needs audit/confirm trust or remove).\n    - **WARN:** weak fallback model (`openai-codex/gpt-4o-mini`) configured (suggested to remove from fallbacks).\n    - Functional note: Telegram group policy allowlist may be configured in a way that drops group messages…",
-      "nextRunAt": 1772597400000,
+      "lastSummary": "## Clawdbot Daily Ops Journal for 2026-03-03\n\n### Shipped / Changed\n- **Git:** No commits were pushed to the workspace repository in the last 24 hours.\n- **Files:** `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json` was modified.\n\n### Worked\n- **Cron: Auto-Update (`c621238c...`):** The OpenClaw auto-update job ran throughout the day. Most runs were a `NOOP` as the system was already up-to-date. Some runs were skipped due to an active user session.\n- **Cron: Prescan (`99b353aa...`):** The nightly prescan completed successfully and saved its report.\n- **Cron: Config Proposal (`461680fe...`):** A job proposed a configuration change to fix silent message drops in Telegram groups by adjusting the `groupPolicy`.\n\n### Failed / Flaky\n- **CRITICAL - Cron: Security Scan (`5a45f0e7...`):** The security preflight check failed with critical findings.\n    - It identified a **credential harvesting vulnerability** in the `readwise` skill (`/home/clawd/.openclaw/workspace/skills/readwise`).\n    - It also flagged multiple configuration risks: `openclaw.yaml` not found, a weak fallback AI model, and misconfigured Telegram group allowlists.\n- **Cron: Nightly Journal (`c915b0d5...`):** The job failed because the target journal file was missing.\n- **Cron: Auto-Update (`c621238c...`):** At least one run timed out and another failed to deliver its notification message.\n\n### Decisions\n- A proactive configuration change was proposed to fix the Telegram group message policy.\n\n### Follow-ups\n- **URGENT:** The vulnerable `readwise` skill should be immediately removed or remediated.\n- Review and address the other configuration warnings from the security scan (config file path, fallback model, Telegram policies).\n- Investigate the root cause of the missing file for the nightly journal cron job.",
+      "nextRunAt": 1772683800000,
       "model": null,
-      "lastTotalTokens": 27863,
-      "lastInputTokens": 24705,
-      "lastOutputTokens": 6833
+      "lastTotalTokens": 23277,
+      "lastInputTokens": 33153,
+      "lastOutputTokens": 5270
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772595872817,
+      "lastRunAt": 1772598128122,
       "lastStatus": "ok",
-      "lastDurationMs": 183246,
+      "lastDurationMs": 175222,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "HEARTBEAT_OK",
-      "nextRunAt": 1772597672817,
+      "lastSummary": "NOOP (no update)",
+      "nextRunAt": 1772599928122,
       "model": null,
-      "lastTotalTokens": 9043,
-      "lastInputTokens": 19708,
-      "lastOutputTokens": 267
+      "lastTotalTokens": 8919,
+      "lastInputTokens": 2872,
+      "lastOutputTokens": 167
     }
   ]
 }
