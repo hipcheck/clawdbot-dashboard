@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772650807849,
+  "updatedAt": 1772652608002,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772649872830,
+      "lastRunAt": 1772651672847,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That line looks like the **cron trigger**, not the script’s **result**. To tell whether the auto-update succeeded/failed, I need the script output (stdout/stderr) or whatever log file it writes.\n\nTwo quick ways to grab it:\n\n1) **Check cron’s last run output**\n- If your cron is set up to email output: check your local mail (`mail` / `mailx`) for the cron message.\n- If it’s system cron logging to syslog/journal, try (on the VPS):\n  - `journalctl -u cron --since \"10 minutes ago\" | tail -200`\n  - or `grep -i openclaw_auto_update /var/log/syslog | tail -200`\n\n2) **Run it once manually to see errors immediately**\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nPaste the output here and I’ll tell you exactly what happened (and what to change if it’s failing)."
+      "lastSummary": "Got it — that cron job just fired.\n\nTo tell whether the auto-update actually succeeded (vs. ran and failed silently), I need its stdout/stderr or whatever log file the script writes. Quick checks:\n\n1) **Cron logs (fastest)**\n- On Ubuntu/Debian, try: `/var/log/syslog` (look for `CRON` + `openclaw_auto_update.py`)\n- On systems with systemd journald: `journalctl -u cron` or `journalctl | grep CRON`\n\n2) **Does the script write its own log?**\n- Common places: `~/.openclaw/workspace/logs/` or alongside the script in `scripts/`\n- If you paste the last ~30 lines of any log it produced, I’ll interpret it.\n\n3) **If you can paste output here**\n- The last 50–200 lines from the cron run (or a screenshot) is enough to confirm: updated version, restart performed, any errors.\n\nIf you tell me where cron sends mail/output on your setup (or paste the cron entry for `infraops:openclaw-auto-update`), I can point you to the exact location."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772649872830,
+      "lastRunAt": 1772651672847,
       "lastStatus": "ok",
-      "lastDurationMs": 9284,
+      "lastDurationMs": 8051,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That line looks like the **cron trigger**, not the script’s **result**. To tell whether the auto-update succeeded/failed, I need the script output (stdout/stderr) or whatever log file it writes.\n\nTwo quick ways to grab it:\n\n1) **Check cron’s last run output**\n- If your cron is set up to email output: check your local mail (`mail` / `mailx`) for the cron message.\n- If it’s system cron logging to syslog/journal, try (on the VPS):\n  - `journalctl -u cron --since \"10 minutes ago\" | tail -200`\n  - or `grep -i openclaw_auto_update /var/log/syslog | tail -200`\n\n2) **Run it once manually to see errors immediately**\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nPaste the output here and I’ll tell you exactly what happened (and what to change if it’s failing).",
-      "nextRunAt": 1772651672830,
+      "lastSummary": "Got it — that cron job just fired.\n\nTo tell whether the auto-update actually succeeded (vs. ran and failed silently), I need its stdout/stderr or whatever log file the script writes. Quick checks:\n\n1) **Cron logs (fastest)**\n- On Ubuntu/Debian, try: `/var/log/syslog` (look for `CRON` + `openclaw_auto_update.py`)\n- On systems with systemd journald: `journalctl -u cron` or `journalctl | grep CRON`\n\n2) **Does the script write its own log?**\n- Common places: `~/.openclaw/workspace/logs/` or alongside the script in `scripts/`\n- If you paste the last ~30 lines of any log it produced, I’ll interpret it.\n\n3) **If you can paste output here**\n- The last 50–200 lines from the cron run (or a screenshot) is enough to confirm: updated version, restart performed, any errors.\n\nIf you tell me where cron sends mail/output on your setup (or paste the cron entry for `infraops:openclaw-auto-update`), I can point you to the exact location.",
+      "nextRunAt": 1772653472847,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 312
+      "lastOutputTokens": 368
     }
   ]
 }
