@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772658007669,
+  "updatedAt": 1772659807021,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772661825000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772657072883,
+      "lastRunAt": 1772658872895,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Did the cron job print any output (success/error), or was that the entire message?\n\nIf you paste the stdout/stderr from `openclaw_auto_update.py` (or point me to where it writes logs), I can tell you whether the auto-update actually ran, what it updated, and if anything needs intervention."
+      "lastSummary": "I only see the cron *trigger* message — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to validate what happened, paste one of these:\n\n1) The cron’s captured output (stdout/stderr), if your cron runner logs it anywhere  \n2) The last ~50 lines of whatever log file you redirect the job to (if you have `>> ... 2>&1`)  \n3) If it’s a systemd timer/service, the last lines from `journalctl` for that unit\n\nIf you tell me how this cron is configured to log (file path or unit name), I’ll tell you the exact command to pull the relevant lines."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772657072883,
+      "lastRunAt": 1772658872895,
       "lastStatus": "ok",
-      "lastDurationMs": 5154,
+      "lastDurationMs": 6693,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Did the cron job print any output (success/error), or was that the entire message?\n\nIf you paste the stdout/stderr from `openclaw_auto_update.py` (or point me to where it writes logs), I can tell you whether the auto-update actually ran, what it updated, and if anything needs intervention.",
-      "nextRunAt": 1772658872883,
+      "lastSummary": "I only see the cron *trigger* message — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to validate what happened, paste one of these:\n\n1) The cron’s captured output (stdout/stderr), if your cron runner logs it anywhere  \n2) The last ~50 lines of whatever log file you redirect the job to (if you have `>> ... 2>&1`)  \n3) If it’s a systemd timer/service, the last lines from `journalctl` for that unit\n\nIf you tell me how this cron is configured to log (file path or unit name), I’ll tell you the exact command to pull the relevant lines.",
+      "nextRunAt": 1772660672895,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 164
+      "lastOutputTokens": 249
     }
   ]
 }
