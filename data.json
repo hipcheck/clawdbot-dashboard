@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772652608002,
+  "updatedAt": 1772654408349,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772651672847,
+      "lastRunAt": 1772653472856,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Got it — that cron job just fired.\n\nTo tell whether the auto-update actually succeeded (vs. ran and failed silently), I need its stdout/stderr or whatever log file the script writes. Quick checks:\n\n1) **Cron logs (fastest)**\n- On Ubuntu/Debian, try: `/var/log/syslog` (look for `CRON` + `openclaw_auto_update.py`)\n- On systems with systemd journald: `journalctl -u cron` or `journalctl | grep CRON`\n\n2) **Does the script write its own log?**\n- Common places: `~/.openclaw/workspace/logs/` or alongside the script in `scripts/`\n- If you paste the last ~30 lines of any log it produced, I’ll interpret it.\n\n3) **If you can paste output here**\n- The last 50–200 lines from the cron run (or a screenshot) is enough to confirm: updated version, restart performed, any errors.\n\nIf you tell me where cron sends mail/output on your setup (or paste the cron entry for `infraops:openclaw-auto-update`), I can point you to the exact location."
+      "lastSummary": "I see the cron trigger, but it only shows the command line — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to verify what happened, paste either:\n- the cron job’s captured output (stdout/stderr), or\n- the last ~50–100 lines of whatever log file `openclaw_auto_update.py` writes to (if it writes one).\n\nAlso tell me what you expect it to do (e.g., `pip` update, `git pull`, `openclaw` upgrade), and I’ll sanity-check the behavior and any failure modes."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772651672847,
+      "lastRunAt": 1772653472856,
       "lastStatus": "ok",
-      "lastDurationMs": 8051,
+      "lastDurationMs": 7093,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Got it — that cron job just fired.\n\nTo tell whether the auto-update actually succeeded (vs. ran and failed silently), I need its stdout/stderr or whatever log file the script writes. Quick checks:\n\n1) **Cron logs (fastest)**\n- On Ubuntu/Debian, try: `/var/log/syslog` (look for `CRON` + `openclaw_auto_update.py`)\n- On systems with systemd journald: `journalctl -u cron` or `journalctl | grep CRON`\n\n2) **Does the script write its own log?**\n- Common places: `~/.openclaw/workspace/logs/` or alongside the script in `scripts/`\n- If you paste the last ~30 lines of any log it produced, I’ll interpret it.\n\n3) **If you can paste output here**\n- The last 50–200 lines from the cron run (or a screenshot) is enough to confirm: updated version, restart performed, any errors.\n\nIf you tell me where cron sends mail/output on your setup (or paste the cron entry for `infraops:openclaw-auto-update`), I can point you to the exact location.",
-      "nextRunAt": 1772653472847,
+      "lastSummary": "I see the cron trigger, but it only shows the command line — not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to verify what happened, paste either:\n- the cron job’s captured output (stdout/stderr), or\n- the last ~50–100 lines of whatever log file `openclaw_auto_update.py` writes to (if it writes one).\n\nAlso tell me what you expect it to do (e.g., `pip` update, `git pull`, `openclaw` upgrade), and I’ll sanity-check the behavior and any failure modes.",
+      "nextRunAt": 1772655272856,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 368
+      "lastOutputTokens": 229
     }
   ]
 }
