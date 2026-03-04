@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772613008159,
+  "updatedAt": 1772614810836,
   "providers": [
     {
       "id": "openai-codex",
@@ -38,12 +38,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1772538600014,
+      "lastRunAt": 1772613000013,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL\n\nSecurity preflight check failed. Immediate action is required.\n\n**Top Blockers:**\n\n1.  **CRITICAL: Potential Credential Harvesting in Skill:**\n    *   The skill \"readwise\" located at `/home/clawd/.openclaw/workspace/skills/readwise` contains dangerous code patterns that could leak sensitive environment variables over the network.\n    *   **Recommendation:** This skill should be considered compromised. Remove it immediately by deleting the directory.\n\n2.  **INCOMPLETE AUDIT: Configuration File Not Found:**\n    *   The `openclaw.yaml` configuration file could not be located in standard paths (`~/.openclaw/config.yaml`, `~/.config/openclaw/config.yaml`, `/etc/openclaw/config.yaml`).\n    *   This prevented verification of node command restrictions (`gateway.nodes.denyCommands`) and a full analysis of the trusted proxy posture. The system is in a partially un-auditable state.\n\n**Configuration Patch Suggestions:**\n\n*   **Remove Vulnerable Skill:**\n    *   Run the following command to remove the compromised \"readwise\" skill:\n    *   `rm -rf /home/clawd/.openclaw/workspace/skills/readwise`\n\n*   **Harden Model Fallback:**\n    *   The model `openai-codex/gpt-4o-mini` is used as a fallback and is below the recommended security tier.\n    *   **Suggestion:** In your configuration file, replace `gpt-4o-mini` with a stronger model like `gpt-5.3-codex` or `gemini-3-pro-preview` to reduce the risk of prompt injection and tool misuse.\n\n*   **Fix Telegram Group Policies:**\n    *   Multiple Telegram accounts are configured with a group `allowlist` policy but have no users in the list, effectively blocking all group messages.\n    *   **Suggestion:** For each affected account (`default`, `geordie`, `nikola`, `q`), add authorized user/group IDs to the `groupAllowFrom` list or set `groupPolicy: \"open\"` if the bot is intended to be public.\n\n*   **Verify Network Posture:**\n    *   The audit indicates `gateway.tailscale.mode=\"serve\"` is active. Confirm that the gateway is *only* listeni…"
+      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\nThe report includes:\n- **Critical security issues** regarding open group policies.\n- A healthy OpenClaw gateway status.\n- A timeout issue with the `openclaw update` check.\n- A healthy cron subsystem status."
     },
     {
       "id": "main",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772612528211,
+      "lastRunAt": 1772614328219,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The OpenClaw auto-update script ran, but there were no updates to apply."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -95,17 +95,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772526600021,
+      "lastRunAt": 1772613000013,
       "lastStatus": "ok",
-      "lastDurationMs": 123780,
+      "lastDurationMs": 311785,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The nightly prescan is complete. I have generated a fresh report and saved it to `/tmp/openclaw_prescan_summary.md`.",
-      "nextRunAt": 1772613000000,
+      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\nThe report includes:\n- **Critical security issues** regarding open group policies.\n- A healthy OpenClaw gateway status.\n- A timeout issue with the `openclaw update` check.\n- A healthy cron subsystem status.",
+      "nextRunAt": 1772699400000,
       "model": null,
-      "lastTotalTokens": 12706,
-      "lastInputTokens": 13577,
-      "lastOutputTokens": 4477
+      "lastTotalTokens": 10954,
+      "lastInputTokens": 13219,
+      "lastOutputTokens": 1276
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -203,17 +203,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772612528211,
+      "lastRunAt": 1772614328219,
       "lastStatus": "ok",
-      "lastDurationMs": 124010,
+      "lastDurationMs": 123792,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The OpenClaw auto-update script ran, but there were no updates to apply.",
-      "nextRunAt": 1772614328211,
+      "lastSummary": null,
+      "nextRunAt": 1772616128219,
       "model": null,
-      "lastTotalTokens": 8916,
-      "lastInputTokens": 10696,
-      "lastOutputTokens": 202
+      "lastTotalTokens": 8996,
+      "lastInputTokens": 10733,
+      "lastOutputTokens": 190
     }
   ]
 }
