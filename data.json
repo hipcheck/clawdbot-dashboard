@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772701208343,
+  "updatedAt": 1772703007109,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772700273190,
+      "lastRunAt": 1772702073205,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute that cron command from here (I only see the cron trigger text, not the script output).\n\nTo tell whether the auto-update succeeded/failed, I need the job’s stdout/stderr. Quick options:\n\n1) **Run it once manually and paste output:**\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\n2) **If it’s managed by systemd timers/cron, grab logs** (pick what matches your setup):\n- systemd timer/service:\n```bash\nsystemctl status openclaw-auto-update --no-pager\njournalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager\n```\n- classic cron (common locations):\n```bash\ngrep -i cron /var/log/syslog | tail -n 200\n```\n\nPaste the output and I’ll interpret it (and suggest fixes if it failed)."
+      "lastSummary": "I’m only seeing the cron *invocation* line — not the script’s stdout/stderr — so I can’t tell whether the auto-update succeeded, found no updates, or failed.\n\nTo make these cron pings actionable, can you share one of the following?\n\n1) The cron job’s captured output (if your scheduler stores it), **or**  \n2) The last ~50 lines of whatever log file `openclaw_auto_update.py` writes to (if any), **or**  \n3) Re-run it once manually and paste the terminal output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, paste your cron definition for `infraops:openclaw-auto-update` and I’ll suggest a small change to always include stdout/stderr (and exit code) in these Telegram messages."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772700273190,
+      "lastRunAt": 1772702073205,
       "lastStatus": "ok",
-      "lastDurationMs": 7163,
+      "lastDurationMs": 7554,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute that cron command from here (I only see the cron trigger text, not the script output).\n\nTo tell whether the auto-update succeeded/failed, I need the job’s stdout/stderr. Quick options:\n\n1) **Run it once manually and paste output:**\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\n2) **If it’s managed by systemd timers/cron, grab logs** (pick what matches your setup):\n- systemd timer/service:\n```bash\nsystemctl status openclaw-auto-update --no-pager\njournalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager\n```\n- classic cron (common locations):\n```bash\ngrep -i cron /var/log/syslog | tail -n 200\n```\n\nPaste the output and I’ll interpret it (and suggest fixes if it failed).",
-      "nextRunAt": 1772702073190,
+      "lastSummary": "I’m only seeing the cron *invocation* line — not the script’s stdout/stderr — so I can’t tell whether the auto-update succeeded, found no updates, or failed.\n\nTo make these cron pings actionable, can you share one of the following?\n\n1) The cron job’s captured output (if your scheduler stores it), **or**  \n2) The last ~50 lines of whatever log file `openclaw_auto_update.py` writes to (if any), **or**  \n3) Re-run it once manually and paste the terminal output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, paste your cron definition for `infraops:openclaw-auto-update` and I’ll suggest a small change to always include stdout/stderr (and exit code) in these Telegram messages.",
+      "nextRunAt": 1772703873205,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 273
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 278
     }
   ]
 }
