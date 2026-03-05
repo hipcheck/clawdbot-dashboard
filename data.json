@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772730007321,
+  "updatedAt": 1772731807314,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772729073401,
+      "lastRunAt": 1772730873415,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I only see the cron “Run:” line here — no stdout/stderr from `openclaw_auto_update.py`, so I can’t tell whether it succeeded, did nothing (already up to date), or failed silently.\n\nIf you want this to be self-reporting, do one of these:\n\n1) **Paste the last run output**\n- Whatever your cron runner captured for stdout/stderr for job `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (often there’s a “logs” view or a file).\n\n2) **Force logging for the job (recommended)**\nUpdate the cron command to something like:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n(And ensure `.../logs/` exists.)\n\n3) **Quick manual status check after it runs**\nRun (wherever you normally run OpenClaw commands):\n```bash\nopenclaw gateway status\nopenclaw status\n```\n\nIf you paste the last ~50 lines of the auto-update log (or whatever your scheduler captured), I’ll tell you exactly what happened and whether anything needs fixing."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772729073401,
+      "lastRunAt": 1772730873415,
       "lastStatus": "ok",
-      "lastDurationMs": 5025,
+      "lastDurationMs": 9165,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772730873401,
+      "lastSummary": "I only see the cron “Run:” line here — no stdout/stderr from `openclaw_auto_update.py`, so I can’t tell whether it succeeded, did nothing (already up to date), or failed silently.\n\nIf you want this to be self-reporting, do one of these:\n\n1) **Paste the last run output**\n- Whatever your cron runner captured for stdout/stderr for job `c621238c-158e-4342-90c7-9ebb9f8ab0a3` (often there’s a “logs” view or a file).\n\n2) **Force logging for the job (recommended)**\nUpdate the cron command to something like:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n(And ensure `.../logs/` exists.)\n\n3) **Quick manual status check after it runs**\nRun (wherever you normally run OpenClaw commands):\n```bash\nopenclaw gateway status\nopenclaw status\n```\n\nIf you paste the last ~50 lines of the auto-update log (or whatever your scheduler captured), I’ll tell you exactly what happened and whether anything needs fixing.",
+      "nextRunAt": 1772732673415,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 51
+      "lastOutputTokens": 330
     }
   ]
 }
