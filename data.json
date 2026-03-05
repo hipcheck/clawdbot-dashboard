@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772685006674,
+  "updatedAt": 1772686807836,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772684073078,
+      "lastRunAt": 1772685873090,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t execute that script directly from this chat (no shell/`bash` tool available here), but we can still sanity-check whether the cron run actually succeeded.\n\nIf `openclaw_auto_update.py` logs anywhere, the quickest checks are:\n\n1) **Cron logs (systemd / syslog)**\n- `journalctl -u cron --since \"10 min ago\" --no-pager | tail -200`\n- or on some distros: `grep CRON /var/log/syslog | tail -200`\n\n2) **Script-specific logging**\n- Check whether the script writes to a logfile under `/home/clawd/.openclaw/workspace/` (common patterns: `logs/`, `tmp/`, or alongside the script).\n- If you have the cron entry, ensure it redirects stdout/stderr, e.g. `...openclaw_auto_update.py >> ...log 2>&1`\n\n3) **Confirm what changed**\n- If the updater touches the OpenClaw install or workspace repo: `git -C /home/clawd/.openclaw/workspace status` and `git log -n 5 --oneline`\n\nIf you paste either (a) the cron entry line, or (b) the last ~50 lines of the relevant log output, I’ll tell you whether the run looks healthy and what to fix (permissions, venv/python path, network, etc.) if not."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772684073078,
+      "lastRunAt": 1772685873090,
       "lastStatus": "ok",
-      "lastDurationMs": 8874,
+      "lastDurationMs": 5952,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t execute that script directly from this chat (no shell/`bash` tool available here), but we can still sanity-check whether the cron run actually succeeded.\n\nIf `openclaw_auto_update.py` logs anywhere, the quickest checks are:\n\n1) **Cron logs (systemd / syslog)**\n- `journalctl -u cron --since \"10 min ago\" --no-pager | tail -200`\n- or on some distros: `grep CRON /var/log/syslog | tail -200`\n\n2) **Script-specific logging**\n- Check whether the script writes to a logfile under `/home/clawd/.openclaw/workspace/` (common patterns: `logs/`, `tmp/`, or alongside the script).\n- If you have the cron entry, ensure it redirects stdout/stderr, e.g. `...openclaw_auto_update.py >> ...log 2>&1`\n\n3) **Confirm what changed**\n- If the updater touches the OpenClaw install or workspace repo: `git -C /home/clawd/.openclaw/workspace status` and `git log -n 5 --oneline`\n\nIf you paste either (a) the cron entry line, or (b) the last ~50 lines of the relevant log output, I’ll tell you whether the run looks healthy and what to fix (permissions, venv/python path, network, etc.) if not.",
-      "nextRunAt": 1772685873078,
+      "lastSummary": null,
+      "nextRunAt": 1772687673090,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 390
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 68
     }
   ]
 }
