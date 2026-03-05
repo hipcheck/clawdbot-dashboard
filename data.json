@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772737208227,
+  "updatedAt": 1772739008294,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772750682000
+          "usedPercent": 0,
+          "resetAt": 1772754283000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772736273462,
+      "lastRunAt": 1772738073477,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron trigger and the command, but there’s no stdout/stderr or exit status included—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nIf you want, paste one of these and I’ll interpret it:\n\n1) The cron job’s captured output (whatever your scheduler emails/logs), including any traceback.  \n2) The last ~100 lines of the script’s own log file (if it writes one).  \n3) If it doesn’t log yet: the relevant cron/service logs around **2026-03-05 18:44 UTC**.\n\nQuick improvement (so future runs are self-diagnosing): ensure the cron entry redirects output, e.g.\n- `...openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nand have the script print:\n- current OpenClaw version\n- target/latest version (if it checks)\n- actions taken (updated / skipped)\n- final “OK” + exit code on success."
+      "lastSummary": "I see the cron fired (job `infraops:openclaw-auto-update`) and invoked:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this message doesn’t include the script’s stdout/stderr or exit status, so I can’t tell if the update succeeded.\n\nIf you paste the last ~50–200 lines of the cron output/log for that run (anything it printed after the command), I’ll interpret it and tell you exactly what happened.\n\nIn the meantime, the fastest sanity checks (on the box running OpenClaw) are:\n\n1) **Check OpenClaw is healthy**\n- `openclaw status`\n- `openclaw gateway status`\n\n2) **Confirm the installed version changed (if the script updates the package)**\n- `openclaw --version` (or whatever the script reports as “current/new version”)\n\n3) **If something broke after update**\n- `openclaw gateway restart`\n- then re-check `openclaw status`\n\nSend me the script output and I’ll confirm success vs partial failure and what to fix next."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772736273462,
+      "lastRunAt": 1772738073477,
       "lastStatus": "ok",
-      "lastDurationMs": 9086,
+      "lastDurationMs": 8321,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron trigger and the command, but there’s no stdout/stderr or exit status included—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nIf you want, paste one of these and I’ll interpret it:\n\n1) The cron job’s captured output (whatever your scheduler emails/logs), including any traceback.  \n2) The last ~100 lines of the script’s own log file (if it writes one).  \n3) If it doesn’t log yet: the relevant cron/service logs around **2026-03-05 18:44 UTC**.\n\nQuick improvement (so future runs are self-diagnosing): ensure the cron entry redirects output, e.g.\n- `...openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nand have the script print:\n- current OpenClaw version\n- target/latest version (if it checks)\n- actions taken (updated / skipped)\n- final “OK” + exit code on success.",
-      "nextRunAt": 1772738073462,
+      "lastSummary": "I see the cron fired (job `infraops:openclaw-auto-update`) and invoked:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this message doesn’t include the script’s stdout/stderr or exit status, so I can’t tell if the update succeeded.\n\nIf you paste the last ~50–200 lines of the cron output/log for that run (anything it printed after the command), I’ll interpret it and tell you exactly what happened.\n\nIn the meantime, the fastest sanity checks (on the box running OpenClaw) are:\n\n1) **Check OpenClaw is healthy**\n- `openclaw status`\n- `openclaw gateway status`\n\n2) **Confirm the installed version changed (if the script updates the package)**\n- `openclaw --version` (or whatever the script reports as “current/new version”)\n\n3) **If something broke after update**\n- `openclaw gateway restart`\n- then re-check `openclaw status`\n\nSend me the script output and I’ll confirm success vs partial failure and what to fix next.",
+      "nextRunAt": 1772739873477,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 322
+      "lastOutputTokens": 320
     }
   ]
 }
