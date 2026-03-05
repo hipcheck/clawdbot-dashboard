@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772676008058,
+  "updatedAt": 1772677807583,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772675073018,
+      "lastRunAt": 1772676873029,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or whether it succeeded.\n\nCan you paste the job output (or point me at where it logs), and I’ll tell you if the auto-update actually did anything or hit an error. If it currently doesn’t log, the quickest fix is to have the cron redirect output to a file (stdout+stderr) so we can audit each run."
+      "lastSummary": "I only see the cron trigger line, not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to verify what happened, paste the job’s output/log excerpt (or tell me where it writes logs, e.g. a file path or `journalctl` unit). If you’d rather make this self-reporting, we can update the cron/script to send a short “updated / no update / failed + error” message back to Telegram on each run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772675073018,
+      "lastRunAt": 1772676873029,
       "lastStatus": "ok",
-      "lastDurationMs": 8518,
+      "lastDurationMs": 8076,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or whether it succeeded.\n\nCan you paste the job output (or point me at where it logs), and I’ll tell you if the auto-update actually did anything or hit an error. If it currently doesn’t log, the quickest fix is to have the cron redirect output to a file (stdout+stderr) so we can audit each run.",
-      "nextRunAt": 1772676873018,
+      "lastSummary": "I only see the cron trigger line, not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to verify what happened, paste the job’s output/log excerpt (or tell me where it writes logs, e.g. a file path or `journalctl` unit). If you’d rather make this self-reporting, we can update the cron/script to send a short “updated / no update / failed + error” message back to Telegram on each run.",
+      "nextRunAt": 1772678673029,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 275
+      "lastOutputTokens": 187
     }
   ]
 }
