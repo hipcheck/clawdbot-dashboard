@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772724607193,
+  "updatedAt": 1772726407679,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772723673353,
+      "lastRunAt": 1772725473362,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Do you have the script’s stdout/stderr (or a log snippet) from that cron run?\n\nIf you want to self-check quickly on the box, these usually confirm whether the auto-update actually did anything:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -n \"openclaw_auto_update.py\" /var/log/syslog | tail -n 50`\n  - or `sudo journalctl -u cron --since \"20 minutes ago\" | tail -n 200`\n\n- **If the script writes its own log** (common patterns):\n  - `ls -lt /home/clawd/.openclaw/workspace/scripts | head`\n  - `find /home/clawd/.openclaw/workspace -maxdepth 2 -type f -iname \"*update*log*\" -o -iname \"*auto*update*\" | head`\n\n- **Verify OpenClaw version/state after the run:**\n  - `openclaw --version`\n  - `openclaw gateway status`\n\nPaste whatever output you see and I’ll tell you if it succeeded, no-op’d (already up to date), or failed and why."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772723673353,
+      "lastRunAt": 1772725473362,
       "lastStatus": "ok",
-      "lastDurationMs": 10384,
+      "lastDurationMs": 4540,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Do you have the script’s stdout/stderr (or a log snippet) from that cron run?\n\nIf you want to self-check quickly on the box, these usually confirm whether the auto-update actually did anything:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -n \"openclaw_auto_update.py\" /var/log/syslog | tail -n 50`\n  - or `sudo journalctl -u cron --since \"20 minutes ago\" | tail -n 200`\n\n- **If the script writes its own log** (common patterns):\n  - `ls -lt /home/clawd/.openclaw/workspace/scripts | head`\n  - `find /home/clawd/.openclaw/workspace -maxdepth 2 -type f -iname \"*update*log*\" -o -iname \"*auto*update*\" | head`\n\n- **Verify OpenClaw version/state after the run:**\n  - `openclaw --version`\n  - `openclaw gateway status`\n\nPaste whatever output you see and I’ll tell you if it succeeded, no-op’d (already up to date), or failed and why.",
-      "nextRunAt": 1772725473353,
+      "lastSummary": null,
+      "nextRunAt": 1772727273362,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 293
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 105
     }
   ]
 }
