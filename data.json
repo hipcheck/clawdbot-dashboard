@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772728206920,
+  "updatedAt": 1772730007321,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772727273379,
+      "lastRunAt": 1772729073401,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t see the actual stdout/stderr from that cron run from here — this is just the trigger line.\n\nTo confirm whether `openclaw_auto_update.py` succeeded (or why it failed), please paste one of these:\n\n1) The cron job’s captured output (if you’re already logging it), or  \n2) The relevant system logs, e.g.:\n- `journalctl -u cron --since \"2026-03-05 16:00:00\" --until \"2026-03-05 16:30:00\"`  \n- or your `/var/log/syslog` lines around 16:14 UTC\n\nIf you want, I can also help you modify the cron entry so it always logs to a file, e.g.:\n`...openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`"
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772727273379,
+      "lastRunAt": 1772729073401,
       "lastStatus": "ok",
-      "lastDurationMs": 8561,
+      "lastDurationMs": 5025,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t see the actual stdout/stderr from that cron run from here — this is just the trigger line.\n\nTo confirm whether `openclaw_auto_update.py` succeeded (or why it failed), please paste one of these:\n\n1) The cron job’s captured output (if you’re already logging it), or  \n2) The relevant system logs, e.g.:\n- `journalctl -u cron --since \"2026-03-05 16:00:00\" --until \"2026-03-05 16:30:00\"`  \n- or your `/var/log/syslog` lines around 16:14 UTC\n\nIf you want, I can also help you modify the cron entry so it always logs to a file, e.g.:\n`...openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`",
-      "nextRunAt": 1772729073379,
+      "lastSummary": null,
+      "nextRunAt": 1772730873401,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 272
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 51
     }
   ]
 }
