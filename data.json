@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772719207950,
+  "updatedAt": 1772721006692,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772718273317,
+      "lastRunAt": 1772720073332,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I see the cron fired, but I’m not seeing the script’s stdout/stderr output here—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the cron job output/log snippet for that run (or tell me where this cron writes logs)? Once I have that, I can verify what happened and suggest any fixes if it errored."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772718273317,
+      "lastRunAt": 1772720073332,
       "lastStatus": "ok",
-      "lastDurationMs": 5585,
+      "lastDurationMs": 8036,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772720073317,
+      "lastSummary": "I see the cron fired, but I’m not seeing the script’s stdout/stderr output here—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the cron job output/log snippet for that run (or tell me where this cron writes logs)? Once I have that, I can verify what happened and suggest any fixes if it errored.",
+      "nextRunAt": 1772721873332,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 117
+      "lastOutputTokens": 127
     }
   ]
 }
