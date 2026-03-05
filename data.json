@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772739008294,
+  "updatedAt": 1772740807735,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772754283000
+          "usedPercent": 1,
+          "resetAt": 1772750682000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772738073477,
+      "lastRunAt": 1772739873489,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron fired (job `infraops:openclaw-auto-update`) and invoked:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this message doesn’t include the script’s stdout/stderr or exit status, so I can’t tell if the update succeeded.\n\nIf you paste the last ~50–200 lines of the cron output/log for that run (anything it printed after the command), I’ll interpret it and tell you exactly what happened.\n\nIn the meantime, the fastest sanity checks (on the box running OpenClaw) are:\n\n1) **Check OpenClaw is healthy**\n- `openclaw status`\n- `openclaw gateway status`\n\n2) **Confirm the installed version changed (if the script updates the package)**\n- `openclaw --version` (or whatever the script reports as “current/new version”)\n\n3) **If something broke after update**\n- `openclaw gateway restart`\n- then re-check `openclaw status`\n\nSend me the script output and I’ll confirm success vs partial failure and what to fix next."
+      "lastSummary": "Got it — this is just the cron trigger line. I don’t see the script’s stdout/stderr here, so I can’t tell whether the auto-update succeeded, found updates, or hit an error.\n\nIf you paste the last ~50–200 lines of output from that cron run (or the relevant log file path if you have one), I’ll interpret it and tell you what to fix.\n\nIf you want a quick self-check in the meantime, run:\n\n- `openclaw gateway status`\n- (optional) `openclaw gateway restart` if the update changed dependencies and the gateway didn’t reload cleanly\n\nAlso: does your cron capture logs anywhere (e.g., `>> /var/log/openclaw-auto-update.log 2>&1`)? If yes, tell me the path and I’ll guide you on what to look for."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772738073477,
+      "lastRunAt": 1772739873489,
       "lastStatus": "ok",
-      "lastDurationMs": 8321,
+      "lastDurationMs": 6914,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron fired (job `infraops:openclaw-auto-update`) and invoked:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this message doesn’t include the script’s stdout/stderr or exit status, so I can’t tell if the update succeeded.\n\nIf you paste the last ~50–200 lines of the cron output/log for that run (anything it printed after the command), I’ll interpret it and tell you exactly what happened.\n\nIn the meantime, the fastest sanity checks (on the box running OpenClaw) are:\n\n1) **Check OpenClaw is healthy**\n- `openclaw status`\n- `openclaw gateway status`\n\n2) **Confirm the installed version changed (if the script updates the package)**\n- `openclaw --version` (or whatever the script reports as “current/new version”)\n\n3) **If something broke after update**\n- `openclaw gateway restart`\n- then re-check `openclaw status`\n\nSend me the script output and I’ll confirm success vs partial failure and what to fix next.",
-      "nextRunAt": 1772739873477,
+      "lastSummary": "Got it — this is just the cron trigger line. I don’t see the script’s stdout/stderr here, so I can’t tell whether the auto-update succeeded, found updates, or hit an error.\n\nIf you paste the last ~50–200 lines of output from that cron run (or the relevant log file path if you have one), I’ll interpret it and tell you what to fix.\n\nIf you want a quick self-check in the meantime, run:\n\n- `openclaw gateway status`\n- (optional) `openclaw gateway restart` if the update changed dependencies and the gateway didn’t reload cleanly\n\nAlso: does your cron capture logs anywhere (e.g., `>> /var/log/openclaw-auto-update.log 2>&1`)? If yes, tell me the path and I’ll guide you on what to look for.",
+      "nextRunAt": 1772741673489,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 320
+      "lastOutputTokens": 238
     }
   ]
 }
