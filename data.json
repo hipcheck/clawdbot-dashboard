@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772733607836,
+  "updatedAt": 1772735407196,
   "providers": [
     {
       "id": "openai-codex",
@@ -37,13 +37,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "cron",
-      "activityLabel": "feature-builder:morning-proposal",
-      "activityChannel": null,
-      "lastRunAt": 1772712000040,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"38\",\n  \"reply_to_id\": \"35\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Thu 2026-03-05 18:29 UTC\",\n  \"has_",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772735394157,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "WARNING: prescan stale/missing (could not verify `/tmp/openclaw_prescan_summary.md`; age unknown).\n\nSend to: Telegram (Andreas)\n\nProposed build (one high-leverage improvement):\nJob Lead Scoring + Auto-Brief Generator for your NYC Senior Marketing Manager pipeline.\n\nImpact:\nAutomatically ranks new roles by fit (title/seniority/location/comp/keywords) and generates a 5-line “apply brief” (why-fit, resume focus, outreach angle), cutting triage time and increasing high-quality applications per day.\n\nRisk:\nMedium — scoring weights may be off initially and could down-rank good opportunities until tuned.\n\nFirst 3 steps:\n1) Define a v1 scoring schema (weighted fields + hard filters) in a single config file.\n2) Build a parser that ingests new job posts and outputs score + reason codes + apply brief.\n3) Integrate output into your existing Obsidian/GitHub pipeline with a “Top 5 Today” view for quick action."
+      "lastSummary": "[[reply_to_current]] Perfect — locking this in.\n\nI’ll execute that exact build as v1 with sane defaults:\n\n1) **`scoring.config.json`**  \n- Hard filters: title contains “Senior Marketing Manager” (or c"
     },
     {
       "id": "infraops",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772732673430,
+      "lastRunAt": 1772734473443,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded or failed.\n\nPaste the last ~50–100 lines of the cron/job log (or the script output), and I’ll verify what happened and suggest fixes if needed."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772732673430,
+      "lastRunAt": 1772734473443,
       "lastStatus": "ok",
-      "lastDurationMs": 8305,
+      "lastDurationMs": 6691,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded or failed.\n\nPaste the last ~50–100 lines of the cron/job log (or the script output), and I’ll verify what happened and suggest fixes if needed.",
-      "nextRunAt": 1772734473430,
+      "lastSummary": null,
+      "nextRunAt": 1772736273443,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 136
+      "lastOutputTokens": 105
     }
   ]
 }
