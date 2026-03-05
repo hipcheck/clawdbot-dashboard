@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772679608156,
+  "updatedAt": 1772681406807,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772678673040,
+      "lastRunAt": 1772680473054,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute that command from here (no shell/exec tool in this chat), so I can’t confirm whether the update succeeded.\n\nIf this is a cron *run notification* (not the script’s own output), the next step is to capture and report stdout/stderr from the job. Two quick ways:\n\n1) **Cron redirect (recommended)**\n- Update the cron entry to:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **If it already logs somewhere**\n- Paste the last ~100 lines of the log here, or paste whatever cron emailed/posted right after this line.\n\nAlso: do you want this job to *notify only on changes/failures*? If yes, I can suggest a simple pattern so you don’t get spammed every run."
+      "lastSummary": "I can’t execute that command directly from this chat (no shell/exec tool exposed here), but I can help you verify and interpret the run.\n\nIf this cron already executed the script, please paste the script’s stdout/stderr (or point me to the log file path if you have one configured).\n\nIf it did *not* execute and this is just a “run now” notification, run:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nThen share the output.  \n\nIf you want, also paste the relevant crontab entry for `infraops:openclaw-auto-update` so I can confirm it’s actually running and logging correctly."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772678673040,
+      "lastRunAt": 1772680473054,
       "lastStatus": "ok",
-      "lastDurationMs": 7909,
+      "lastDurationMs": 5691,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute that command from here (no shell/exec tool in this chat), so I can’t confirm whether the update succeeded.\n\nIf this is a cron *run notification* (not the script’s own output), the next step is to capture and report stdout/stderr from the job. Two quick ways:\n\n1) **Cron redirect (recommended)**\n- Update the cron entry to:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **If it already logs somewhere**\n- Paste the last ~100 lines of the log here, or paste whatever cron emailed/posted right after this line.\n\nAlso: do you want this job to *notify only on changes/failures*? If yes, I can suggest a simple pattern so you don’t get spammed every run.",
-      "nextRunAt": 1772680473040,
+      "lastSummary": "I can’t execute that command directly from this chat (no shell/exec tool exposed here), but I can help you verify and interpret the run.\n\nIf this cron already executed the script, please paste the script’s stdout/stderr (or point me to the log file path if you have one configured).\n\nIf it did *not* execute and this is just a “run now” notification, run:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nThen share the output.  \n\nIf you want, also paste the relevant crontab entry for `infraops:openclaw-auto-update` so I can confirm it’s actually running and logging correctly.",
+      "nextRunAt": 1772682273054,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 280
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 226
     }
   ]
 }
