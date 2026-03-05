@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772670607557,
+  "updatedAt": 1772672407967,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772669672975,
+      "lastRunAt": 1772671472990,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron trigger line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nIf you want, paste the last ~50 lines of the cron job log (or the script output). Typical quick checks:\n\n- Check the cron log for that job (where your cron runner writes stdout/stderr).\n- Or run it manually once to see output:\n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you tell me where this cron runner stores logs (file path), I’ll tell you the exact command to extract the relevant lines."
+      "lastSummary": "I only see the cron **invocation** (it ran `openclaw_auto_update.py`) but not the script’s stdout/stderr or exit status.\n\nIf you paste the cron output (or point me to where it logs), I can tell you whether it actually updated anything or failed.\n\nIf you want this to be self-reporting going forward, best practice is to have the cron capture logs + alert on non‑zero exit, e.g.:\n\n- append output to a log file: `...openclaw_auto_update.py >> /var/log/openclaw-auto-update.log 2>&1`\n- and/or only notify when it fails: `...openclaw_auto_update.py >> ... 2>&1 || echo \"auto-update failed\" ...`\n\nTell me how your cron is configured (the exact cron command), and I’ll suggest the cleanest logging/notification setup for your environment."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772669672975,
+      "lastRunAt": 1772671472990,
       "lastStatus": "ok",
-      "lastDurationMs": 6176,
+      "lastDurationMs": 8349,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron trigger line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nIf you want, paste the last ~50 lines of the cron job log (or the script output). Typical quick checks:\n\n- Check the cron log for that job (where your cron runner writes stdout/stderr).\n- Or run it manually once to see output:\n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you tell me where this cron runner stores logs (file path), I’ll tell you the exact command to extract the relevant lines.",
-      "nextRunAt": 1772671472975,
+      "lastSummary": "I only see the cron **invocation** (it ran `openclaw_auto_update.py`) but not the script’s stdout/stderr or exit status.\n\nIf you paste the cron output (or point me to where it logs), I can tell you whether it actually updated anything or failed.\n\nIf you want this to be self-reporting going forward, best practice is to have the cron capture logs + alert on non‑zero exit, e.g.:\n\n- append output to a log file: `...openclaw_auto_update.py >> /var/log/openclaw-auto-update.log 2>&1`\n- and/or only notify when it fails: `...openclaw_auto_update.py >> ... 2>&1 || echo \"auto-update failed\" ...`\n\nTell me how your cron is configured (the exact cron command), and I’ll suggest the cleanest logging/notification setup for your environment.",
+      "nextRunAt": 1772673272990,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 199
+      "lastOutputTokens": 364
     }
   ]
 }
