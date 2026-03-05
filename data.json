@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772694007611,
+  "updatedAt": 1772695807924,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772693073140,
+      "lastRunAt": 1772694873150,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t execute that script directly from this chat, but I can help you verify whether the cron run succeeded and what it changed.\n\n**On the VPS, please paste the output of one of these (whichever you have):**\n\n1) If the script logs to a file (common patterns):\n```bash\nls -lt /home/clawd/.openclaw/workspace/scripts | head\nls -lt /home/clawd/.openclaw/workspace/logs 2>/dev/null | head\njournalctl --user -n 200 --no-pager | tail -n 80\n```\n\n2) Quick health/status after an auto-update:\n```bash\nopenclaw gateway status\nopenclaw status 2>/dev/null || true\n```\n\n**What I’ll check once you paste output:**\n- whether packages updated / git pulled\n- whether the gateway was restarted (and cleanly)\n- whether any config migrations or dependency issues occurred\n- if there’s a failure, the exact line to fix (permissions, venv, network, etc.)\n\nIf you already know where `openclaw_auto_update.py` writes logs (stdout, file, or journald), tell me and I’ll narrow it to one command."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772693073140,
+      "lastRunAt": 1772694873150,
       "lastStatus": "ok",
-      "lastDurationMs": 8504,
+      "lastDurationMs": 6744,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t execute that script directly from this chat, but I can help you verify whether the cron run succeeded and what it changed.\n\n**On the VPS, please paste the output of one of these (whichever you have):**\n\n1) If the script logs to a file (common patterns):\n```bash\nls -lt /home/clawd/.openclaw/workspace/scripts | head\nls -lt /home/clawd/.openclaw/workspace/logs 2>/dev/null | head\njournalctl --user -n 200 --no-pager | tail -n 80\n```\n\n2) Quick health/status after an auto-update:\n```bash\nopenclaw gateway status\nopenclaw status 2>/dev/null || true\n```\n\n**What I’ll check once you paste output:**\n- whether packages updated / git pulled\n- whether the gateway was restarted (and cleanly)\n- whether any config migrations or dependency issues occurred\n- if there’s a failure, the exact line to fix (permissions, venv, network, etc.)\n\nIf you already know where `openclaw_auto_update.py` writes logs (stdout, file, or journald), tell me and I’ll narrow it to one command.",
-      "nextRunAt": 1772694873140,
+      "lastSummary": null,
+      "nextRunAt": 1772696673150,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 322
+      "lastOutputTokens": 81
     }
   ]
 }
