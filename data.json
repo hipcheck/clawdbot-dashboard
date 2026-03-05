@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772692208503,
+  "updatedAt": 1772694007611,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772691273126,
+      "lastRunAt": 1772693073140,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That line looks like the **cron trigger header**, not the script’s result.\n\nTo tell whether `openclaw_auto_update.py` actually succeeded, I need one of:\n- the cron job’s stdout/stderr output,\n- its exit code,\n- or wherever it logs (a log file path).\n\nIf you want, paste:\n1) the next few lines after that header (if any), and  \n2) the cron definition for `infraops:openclaw-auto-update` (the exact command it runs, including any `>> logfile 2>&1` redirection).\n\nIf there’s currently **no output**, the best next step is to update the cron to capture logs, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py \\\n  >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen we can inspect the log on the next run (or run it once manually) and confirm whether it updated anything."
+      "lastSummary": "I can’t execute that script directly from this chat, but I can help you verify whether the cron run succeeded and what it changed.\n\n**On the VPS, please paste the output of one of these (whichever you have):**\n\n1) If the script logs to a file (common patterns):\n```bash\nls -lt /home/clawd/.openclaw/workspace/scripts | head\nls -lt /home/clawd/.openclaw/workspace/logs 2>/dev/null | head\njournalctl --user -n 200 --no-pager | tail -n 80\n```\n\n2) Quick health/status after an auto-update:\n```bash\nopenclaw gateway status\nopenclaw status 2>/dev/null || true\n```\n\n**What I’ll check once you paste output:**\n- whether packages updated / git pulled\n- whether the gateway was restarted (and cleanly)\n- whether any config migrations or dependency issues occurred\n- if there’s a failure, the exact line to fix (permissions, venv, network, etc.)\n\nIf you already know where `openclaw_auto_update.py` writes logs (stdout, file, or journald), tell me and I’ll narrow it to one command."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772691273126,
+      "lastRunAt": 1772693073140,
       "lastStatus": "ok",
-      "lastDurationMs": 7257,
+      "lastDurationMs": 8504,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That line looks like the **cron trigger header**, not the script’s result.\n\nTo tell whether `openclaw_auto_update.py` actually succeeded, I need one of:\n- the cron job’s stdout/stderr output,\n- its exit code,\n- or wherever it logs (a log file path).\n\nIf you want, paste:\n1) the next few lines after that header (if any), and  \n2) the cron definition for `infraops:openclaw-auto-update` (the exact command it runs, including any `>> logfile 2>&1` redirection).\n\nIf there’s currently **no output**, the best next step is to update the cron to capture logs, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py \\\n  >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen we can inspect the log on the next run (or run it once manually) and confirm whether it updated anything.",
-      "nextRunAt": 1772693073126,
+      "lastSummary": "I can’t execute that script directly from this chat, but I can help you verify whether the cron run succeeded and what it changed.\n\n**On the VPS, please paste the output of one of these (whichever you have):**\n\n1) If the script logs to a file (common patterns):\n```bash\nls -lt /home/clawd/.openclaw/workspace/scripts | head\nls -lt /home/clawd/.openclaw/workspace/logs 2>/dev/null | head\njournalctl --user -n 200 --no-pager | tail -n 80\n```\n\n2) Quick health/status after an auto-update:\n```bash\nopenclaw gateway status\nopenclaw status 2>/dev/null || true\n```\n\n**What I’ll check once you paste output:**\n- whether packages updated / git pulled\n- whether the gateway was restarted (and cleanly)\n- whether any config migrations or dependency issues occurred\n- if there’s a failure, the exact line to fix (permissions, venv, network, etc.)\n\nIf you already know where `openclaw_auto_update.py` writes logs (stdout, file, or journald), tell me and I’ll narrow it to one command.",
+      "nextRunAt": 1772694873140,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 308
+      "lastOutputTokens": 322
     }
   ]
 }
