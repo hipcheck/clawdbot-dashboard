@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772686807836,
+  "updatedAt": 1772688606738,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772685873090,
+      "lastRunAt": 1772687673103,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I see the cron trigger, but there’s no stdout/stderr attached here—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the cron job output (or the last ~50 lines of the log file it writes to)? If it doesn’t currently log anywhere, tell me how this cron is configured (where it sends output), and I’ll suggest a one-line change to capture it (e.g., append `>> …/openclaw-auto-update.log 2>&1`)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772685873090,
+      "lastRunAt": 1772687673103,
       "lastStatus": "ok",
-      "lastDurationMs": 5952,
+      "lastDurationMs": 7604,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772687673090,
+      "lastSummary": "I see the cron trigger, but there’s no stdout/stderr attached here—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the cron job output (or the last ~50 lines of the log file it writes to)? If it doesn’t currently log anywhere, tell me how this cron is configured (where it sends output), and I’ll suggest a one-line change to capture it (e.g., append `>> …/openclaw-auto-update.log 2>&1`).",
+      "nextRunAt": 1772689473103,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 68
+      "lastOutputTokens": 187
     }
   ]
 }
