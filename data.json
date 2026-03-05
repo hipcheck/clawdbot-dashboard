@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772704807792,
+  "updatedAt": 1772706607004,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772714680000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772703873215,
+      "lastRunAt": 1772705673224,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron “Run:” line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nCan you paste the cron job output (anything after that line), or tell me where this cron writes logs?\n\nIf you’re not sure, quick checks:\n\n- Check your cron mail / captured output for that job (depends how you scheduled it).\n- If you configured logging in the cron entry, look for something like:\n  - `/var/log/syslog` (Debian/Ubuntu often logs cron there)\n  - `journalctl -u cron` (systemd cron service, if applicable)\n- If the script itself logs, it’s likely in a file under:\n  - `/home/clawd/.openclaw/workspace/scripts/` or a `logs/` subfolder (depending on how you wrote it)\n\nPaste the output and I’ll interpret it + suggest the next fix if it errored."
+      "lastSummary": "I see the cron *started* the run, but it didn’t include the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded or failed from this message alone.\n\nTo make these cron pings actionable, can you either:\n\n1) Paste the last ~30–50 lines of whatever log this job writes to (or tell me the log path), **or**\n2) Update the cron to include output (stdout+stderr), e.g. redirect to a log file:\n- `python3 .../openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nIf you tell me how this cron is configured (where it’s defined) or where the script logs, I’ll help you wire it so future runs report: “updated from X→Y / no update / failed + reason.”"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772703873215,
+      "lastRunAt": 1772705673224,
       "lastStatus": "ok",
-      "lastDurationMs": 8837,
+      "lastDurationMs": 6866,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron “Run:” line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nCan you paste the cron job output (anything after that line), or tell me where this cron writes logs?\n\nIf you’re not sure, quick checks:\n\n- Check your cron mail / captured output for that job (depends how you scheduled it).\n- If you configured logging in the cron entry, look for something like:\n  - `/var/log/syslog` (Debian/Ubuntu often logs cron there)\n  - `journalctl -u cron` (systemd cron service, if applicable)\n- If the script itself logs, it’s likely in a file under:\n  - `/home/clawd/.openclaw/workspace/scripts/` or a `logs/` subfolder (depending on how you wrote it)\n\nPaste the output and I’ll interpret it + suggest the next fix if it errored.",
-      "nextRunAt": 1772705673215,
+      "lastSummary": "I see the cron *started* the run, but it didn’t include the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded or failed from this message alone.\n\nTo make these cron pings actionable, can you either:\n\n1) Paste the last ~30–50 lines of whatever log this job writes to (or tell me the log path), **or**\n2) Update the cron to include output (stdout+stderr), e.g. redirect to a log file:\n- `python3 .../openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nIf you tell me how this cron is configured (where it’s defined) or where the script logs, I’ll help you wire it so future runs report: “updated from X→Y / no update / failed + reason.”",
+      "nextRunAt": 1772707473224,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 7387,
-      "lastOutputTokens": 262
+      "lastOutputTokens": 259
     }
   ]
 }
