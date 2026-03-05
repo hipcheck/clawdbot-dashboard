@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772751606701,
+  "updatedAt": 1772753406797,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772769607000
+          "resetAt": 1772770480000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772750673562,
+      "lastRunAt": 1772752473574,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Did the cron job print any output (success / “already up to date” / errors)?\n\nIf you paste the last ~30–50 lines of its stdout/stderr (or wherever this cron logs), I can tell you whether the update actually applied and if anything needs fixing."
+      "lastSummary": "I can see the cron trigger, but I’m not getting the script’s stdout/stderr here—so I can’t tell whether `openclaw_auto_update.py` succeeded, found an update, or failed.\n\nTo verify what happened, can you paste either:\n\n1) The cron output (stdout/stderr) that followed this line, **or**\n2) The relevant logs (whichever you have enabled), e.g.:\n- `journalctl --user -u openclaw-gateway -n 200 --no-pager`\n- and/or whatever file your cron is redirecting to (if you set `>> /path/to/log 2>&1`)\n\nIf you haven’t configured cron to capture output yet, the quickest fix is to update the cron entry to append `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1` so next runs are debuggable."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772750673562,
+      "lastRunAt": 1772752473574,
       "lastStatus": "ok",
-      "lastDurationMs": 6539,
+      "lastDurationMs": 6439,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Did the cron job print any output (success / “already up to date” / errors)?\n\nIf you paste the last ~30–50 lines of its stdout/stderr (or wherever this cron logs), I can tell you whether the update actually applied and if anything needs fixing.",
-      "nextRunAt": 1772752473562,
+      "lastSummary": "I can see the cron trigger, but I’m not getting the script’s stdout/stderr here—so I can’t tell whether `openclaw_auto_update.py` succeeded, found an update, or failed.\n\nTo verify what happened, can you paste either:\n\n1) The cron output (stdout/stderr) that followed this line, **or**\n2) The relevant logs (whichever you have enabled), e.g.:\n- `journalctl --user -u openclaw-gateway -n 200 --no-pager`\n- and/or whatever file your cron is redirecting to (if you set `>> /path/to/log 2>&1`)\n\nIf you haven’t configured cron to capture output yet, the quickest fix is to update the cron entry to append `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1` so next runs are debuggable.",
+      "nextRunAt": 1772754273574,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 144
+      "lastOutputTokens": 297
     }
   ]
 }
