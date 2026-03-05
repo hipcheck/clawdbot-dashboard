@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772672407967,
+  "updatedAt": 1772674207581,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772671472990,
+      "lastRunAt": 1772673273005,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron **invocation** (it ran `openclaw_auto_update.py`) but not the script’s stdout/stderr or exit status.\n\nIf you paste the cron output (or point me to where it logs), I can tell you whether it actually updated anything or failed.\n\nIf you want this to be self-reporting going forward, best practice is to have the cron capture logs + alert on non‑zero exit, e.g.:\n\n- append output to a log file: `...openclaw_auto_update.py >> /var/log/openclaw-auto-update.log 2>&1`\n- and/or only notify when it fails: `...openclaw_auto_update.py >> ... 2>&1 || echo \"auto-update failed\" ...`\n\nTell me how your cron is configured (the exact cron command), and I’ll suggest the cleanest logging/notification setup for your environment."
+      "lastSummary": "I only see the cron *invocation* (what it tried to run), not the script’s stdout/stderr or whether it succeeded.\n\nTo tell what happened, I need one of these:\n\n1) The cron job’s captured output (how you have cron set up):\n- If this runs via system cron: check `/var/log/syslog` (or journald) around `01:14 UTC` for that job.\n- If it runs via a wrapper: paste whatever log file it writes to.\n\n2) Run it once manually and paste the output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf you want this to be self-reporting going forward, the simplest pattern is to have the cron redirect logs, e.g.:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nPaste the last ~50 lines of that log (or the manual run output) and I’ll interpret whether an update happened, what changed, and if anything needs fixing."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772671472990,
+      "lastRunAt": 1772673273005,
       "lastStatus": "ok",
-      "lastDurationMs": 8349,
+      "lastDurationMs": 9470,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron **invocation** (it ran `openclaw_auto_update.py`) but not the script’s stdout/stderr or exit status.\n\nIf you paste the cron output (or point me to where it logs), I can tell you whether it actually updated anything or failed.\n\nIf you want this to be self-reporting going forward, best practice is to have the cron capture logs + alert on non‑zero exit, e.g.:\n\n- append output to a log file: `...openclaw_auto_update.py >> /var/log/openclaw-auto-update.log 2>&1`\n- and/or only notify when it fails: `...openclaw_auto_update.py >> ... 2>&1 || echo \"auto-update failed\" ...`\n\nTell me how your cron is configured (the exact cron command), and I’ll suggest the cleanest logging/notification setup for your environment.",
-      "nextRunAt": 1772673272990,
+      "lastSummary": "I only see the cron *invocation* (what it tried to run), not the script’s stdout/stderr or whether it succeeded.\n\nTo tell what happened, I need one of these:\n\n1) The cron job’s captured output (how you have cron set up):\n- If this runs via system cron: check `/var/log/syslog` (or journald) around `01:14 UTC` for that job.\n- If it runs via a wrapper: paste whatever log file it writes to.\n\n2) Run it once manually and paste the output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf you want this to be self-reporting going forward, the simplest pattern is to have the cron redirect logs, e.g.:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nPaste the last ~50 lines of that log (or the manual run output) and I’ll interpret whether an update happened, what changed, and if anything needs fixing.",
+      "nextRunAt": 1772675073005,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 364
+      "lastOutputTokens": 363
     }
   ]
 }
