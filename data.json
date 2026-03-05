@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772735407196,
+  "updatedAt": 1772737208227,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772750682000
         },
         {
@@ -38,12 +38,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"38\",\n  \"reply_to_id\": \"35\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Thu 2026-03-05 18:29 UTC\",\n  \"has_",
+      "activityLabel": "json\n{\n  \"message_id\": \"42\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Thu 2026-03-05 18:32 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772735394157,
+      "lastRunAt": 1772735552682,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Perfect — locking this in.\n\nI’ll execute that exact build as v1 with sane defaults:\n\n1) **`scoring.config.json`**  \n- Hard filters: title contains “Senior Marketing Manager” (or c"
+      "lastSummary": "[[reply_to_current]] Perfect. Updating v1 accordingly:\n\n## Changes requested\n1) **Output destination:** Obsidian only (no GitHub output).  \n2) **Company mix:** include Meta + explicitly increase high-"
     },
     {
       "id": "infraops",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772734473443,
+      "lastRunAt": 1772736273462,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I see the cron trigger and the command, but there’s no stdout/stderr or exit status included—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nIf you want, paste one of these and I’ll interpret it:\n\n1) The cron job’s captured output (whatever your scheduler emails/logs), including any traceback.  \n2) The last ~100 lines of the script’s own log file (if it writes one).  \n3) If it doesn’t log yet: the relevant cron/service logs around **2026-03-05 18:44 UTC**.\n\nQuick improvement (so future runs are self-diagnosing): ensure the cron entry redirects output, e.g.\n- `...openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nand have the script print:\n- current OpenClaw version\n- target/latest version (if it checks)\n- actions taken (updated / skipped)\n- final “OK” + exit code on success."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772734473443,
+      "lastRunAt": 1772736273462,
       "lastStatus": "ok",
-      "lastDurationMs": 6691,
+      "lastDurationMs": 9086,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772736273443,
+      "lastSummary": "I see the cron trigger and the command, but there’s no stdout/stderr or exit status included—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nIf you want, paste one of these and I’ll interpret it:\n\n1) The cron job’s captured output (whatever your scheduler emails/logs), including any traceback.  \n2) The last ~100 lines of the script’s own log file (if it writes one).  \n3) If it doesn’t log yet: the relevant cron/service logs around **2026-03-05 18:44 UTC**.\n\nQuick improvement (so future runs are self-diagnosing): ensure the cron entry redirects output, e.g.\n- `...openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nand have the script print:\n- current OpenClaw version\n- target/latest version (if it checks)\n- actions taken (updated / skipped)\n- final “OK” + exit code on success.",
+      "nextRunAt": 1772738073462,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 105
+      "lastOutputTokens": 322
     }
   ]
 }
