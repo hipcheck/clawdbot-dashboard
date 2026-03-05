@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772713806981,
+  "updatedAt": 1772715607204,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1772714680000
+          "usedPercent": 0,
+          "resetAt": 1772732682000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772712873275,
+      "lastRunAt": 1772714673288,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or whether it succeeded.\n\nTo diagnose, please paste one of these:\n\n1) The cron job output (what it printed after `Run:`), or  \n2) The last ~100 lines from wherever this job logs (often syslog or a dedicated file).\n\nIf you tell me how cron is configured for this job (does it email output, redirect to a log file, or rely on syslog?), I’ll point you to the exact command to grab the right snippet."
+      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you share the last ~50–100 lines of the cron job output (or wherever you log `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`), especially any lines mentioning:\n- “updated”, “already up to date”, “pip”, “git”, “restart”, or “error/traceback”\n\nIf you don’t currently capture output, the quickest fix is to redirect it in the cron command, e.g.:\n`python3 …/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n(then I can help interpret it next run)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772712873275,
+      "lastRunAt": 1772714673288,
       "lastStatus": "ok",
-      "lastDurationMs": 6327,
+      "lastDurationMs": 7165,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or whether it succeeded.\n\nTo diagnose, please paste one of these:\n\n1) The cron job output (what it printed after `Run:`), or  \n2) The last ~100 lines from wherever this job logs (often syslog or a dedicated file).\n\nIf you tell me how cron is configured for this job (does it email output, redirect to a log file, or rely on syslog?), I’ll point you to the exact command to grab the right snippet.",
-      "nextRunAt": 1772714673275,
+      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you share the last ~50–100 lines of the cron job output (or wherever you log `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`), especially any lines mentioning:\n- “updated”, “already up to date”, “pip”, “git”, “restart”, or “error/traceback”\n\nIf you don’t currently capture output, the quickest fix is to redirect it in the cron command, e.g.:\n`python3 …/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n(then I can help interpret it next run).",
+      "nextRunAt": 1772716473288,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 209
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 257
     }
   ]
 }
