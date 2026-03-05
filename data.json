@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772699407513,
+  "updatedAt": 1772701208343,
   "providers": [
     {
       "id": "openai-codex",
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"80\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-04 18:33 UTC\"\n}\n```\n\nSender (untrusted metada",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772649223838,
+      "activityKind": "cron",
+      "activityLabel": "healthcheck:overnight-prescan",
+      "activityChannel": null,
+      "lastRunAt": 1772699400025,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ah, that explains everything! No apologies needed whatsoever. This is a classic, and frankly, quite funny case of mistaken identity. I'm just glad we've solved the mystery.\n\nYou are absolutely right. "
+      "lastSummary": "PRESCAN_GENERATED_AT=2026-03-05T08:32:00Z\n\n## CRITICAL\n\n- **Nightly Prescan Failed:** The task could not be completed.\n- **Reason:** The necessary `bash` tool for executing shell commands is not available in the current runtime environment for this cron job.\n- **Impact:** No security, gateway, update, or cron health checks were performed. The system status is unknown.\n- **Action Required:** A human operator must investigate the OpenClaw agent's execution policy for this cron job (`healthcheck:overnight-prescan`) and ensure the `bash` tool (or an equivalent for command execution and file I/O) is enabled."
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772698473176,
+      "lastRunAt": 1772700273190,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron fired and attempted to run:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this message doesn’t include the script’s stdout/stderr or whether it succeeded.\n\nCan you paste either:\n- the cron job’s captured output (stdout/stderr), or\n- wherever the script logs (e.g., a logfile path it writes to)\n\n…and I’ll tell you what happened / what changed (and what to fix if it failed)."
+      "lastSummary": "I can’t actually execute that cron command from here (I only see the cron trigger text, not the script output).\n\nTo tell whether the auto-update succeeded/failed, I need the job’s stdout/stderr. Quick options:\n\n1) **Run it once manually and paste output:**\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\n2) **If it’s managed by systemd timers/cron, grab logs** (pick what matches your setup):\n- systemd timer/service:\n```bash\nsystemctl status openclaw-auto-update --no-pager\njournalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager\n```\n- classic cron (common locations):\n```bash\ngrep -i cron /var/log/syslog | tail -n 200\n```\n\nPaste the output and I’ll interpret it (and suggest fixes if it failed)."
     },
     {
       "id": "km",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772613000013,
+      "lastRunAt": 1772699400025,
       "lastStatus": "ok",
-      "lastDurationMs": 311785,
+      "lastDurationMs": 185960,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I have completed the nightly prescan and generated the report at `/tmp/openclaw_prescan_summary.md`.\n\nThe report includes:\n- **Critical security issues** regarding open group policies.\n- A healthy OpenClaw gateway status.\n- A timeout issue with the `openclaw update` check.\n- A healthy cron subsystem status.",
-      "nextRunAt": 1772699400000,
+      "lastSummary": "PRESCAN_GENERATED_AT=2026-03-05T08:32:00Z\n\n## CRITICAL\n\n- **Nightly Prescan Failed:** The task could not be completed.\n- **Reason:** The necessary `bash` tool for executing shell commands is not available in the current runtime environment for this cron job.\n- **Impact:** No security, gateway, update, or cron health checks were performed. The system status is unknown.\n- **Action Required:** A human operator must investigate the OpenClaw agent's execution policy for this cron job (`healthcheck:overnight-prescan`) and ensure the `bash` tool (or an equivalent for command execution and file I/O) is enabled.",
+      "nextRunAt": 1772785800000,
       "model": null,
-      "lastTotalTokens": 10954,
-      "lastInputTokens": 13219,
-      "lastOutputTokens": 1276
+      "lastTotalTokens": 9354,
+      "lastInputTokens": 18010,
+      "lastOutputTokens": 6584
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772698473176,
+      "lastRunAt": 1772700273190,
       "lastStatus": "ok",
-      "lastDurationMs": 9549,
+      "lastDurationMs": 7163,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron fired and attempted to run:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this message doesn’t include the script’s stdout/stderr or whether it succeeded.\n\nCan you paste either:\n- the cron job’s captured output (stdout/stderr), or\n- wherever the script logs (e.g., a logfile path it writes to)\n\n…and I’ll tell you what happened / what changed (and what to fix if it failed).",
-      "nextRunAt": 1772700273176,
+      "lastSummary": "I can’t actually execute that cron command from here (I only see the cron trigger text, not the script output).\n\nTo tell whether the auto-update succeeded/failed, I need the job’s stdout/stderr. Quick options:\n\n1) **Run it once manually and paste output:**\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\n2) **If it’s managed by systemd timers/cron, grab logs** (pick what matches your setup):\n- systemd timer/service:\n```bash\nsystemctl status openclaw-auto-update --no-pager\njournalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager\n```\n- classic cron (common locations):\n```bash\ngrep -i cron /var/log/syslog | tail -n 200\n```\n\nPaste the output and I’ll interpret it (and suggest fixes if it failed).",
+      "nextRunAt": 1772702073190,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 271
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 273
     }
   ]
 }
