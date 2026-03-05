@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772717407075,
+  "updatedAt": 1772719207950,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772716473305,
+      "lastRunAt": 1772718273317,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t see what `openclaw_auto_update.py` actually did from this cron “Run:” notice alone (it doesn’t include stdout/stderr or an exit code).\n\nIf you want, paste either:\n\n1) The cron job output (stdout/stderr) from wherever you log it, or  \n2) Run this and paste the output:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py --verbose\necho \"exit=$?\"\n```\n\nAlso, if you tell me how this cron is configured (does it email output, log to a file, or discard output?), I can suggest the cleanest way to capture failures + a short summary message on success."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772716473305,
+      "lastRunAt": 1772718273317,
       "lastStatus": "ok",
-      "lastDurationMs": 5923,
+      "lastDurationMs": 5585,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t see what `openclaw_auto_update.py` actually did from this cron “Run:” notice alone (it doesn’t include stdout/stderr or an exit code).\n\nIf you want, paste either:\n\n1) The cron job output (stdout/stderr) from wherever you log it, or  \n2) Run this and paste the output:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py --verbose\necho \"exit=$?\"\n```\n\nAlso, if you tell me how this cron is configured (does it email output, log to a file, or discard output?), I can suggest the cleanest way to capture failures + a short summary message on success.",
-      "nextRunAt": 1772718273305,
+      "lastSummary": null,
+      "nextRunAt": 1772720073317,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 246
+      "lastOutputTokens": 117
     }
   ]
 }
