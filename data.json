@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772690407853,
+  "updatedAt": 1772692208503,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772689473116,
+      "lastRunAt": 1772691273126,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "That line looks like the **cron trigger header**, not the script’s result.\n\nTo tell whether `openclaw_auto_update.py` actually succeeded, I need one of:\n- the cron job’s stdout/stderr output,\n- its exit code,\n- or wherever it logs (a log file path).\n\nIf you want, paste:\n1) the next few lines after that header (if any), and  \n2) the cron definition for `infraops:openclaw-auto-update` (the exact command it runs, including any `>> logfile 2>&1` redirection).\n\nIf there’s currently **no output**, the best next step is to update the cron to capture logs, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py \\\n  >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen we can inspect the log on the next run (or run it once manually) and confirm whether it updated anything."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772689473116,
+      "lastRunAt": 1772691273126,
       "lastStatus": "ok",
-      "lastDurationMs": 5824,
+      "lastDurationMs": 7257,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772691273116,
+      "lastSummary": "That line looks like the **cron trigger header**, not the script’s result.\n\nTo tell whether `openclaw_auto_update.py` actually succeeded, I need one of:\n- the cron job’s stdout/stderr output,\n- its exit code,\n- or wherever it logs (a log file path).\n\nIf you want, paste:\n1) the next few lines after that header (if any), and  \n2) the cron definition for `infraops:openclaw-auto-update` (the exact command it runs, including any `>> logfile 2>&1` redirection).\n\nIf there’s currently **no output**, the best next step is to update the cron to capture logs, e.g.:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py \\\n  >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1\n```\n\nThen we can inspect the log on the next run (or run it once manually) and confirm whether it updated anything.",
+      "nextRunAt": 1772693073126,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 75
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 308
     }
   ]
 }
