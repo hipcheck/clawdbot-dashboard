@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772712011803,
+  "updatedAt": 1772713806981,
   "providers": [
     {
       "id": "openai-codex",
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
-      "activityChannel": "tui",
-      "lastRunAt": 1772711630125,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772712873275,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Good. Next, let’s confirm the two critical fixes are actually in place (Telegram lockdown + Control UI origin).\n\nRun:\n\n```bash\njq '.gateway.controlUi.allowedOrigins, .channels.telegram.groupPolicy, .c"
+      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or whether it succeeded.\n\nTo diagnose, please paste one of these:\n\n1) The cron job output (what it printed after `Run:`), or  \n2) The last ~100 lines from wherever this job logs (often syslog or a dedicated file).\n\nIf you tell me how cron is configured for this job (does it email output, redirect to a log file, or rely on syslog?), I’ll point you to the exact command to grab the right snippet."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772711073265,
+      "lastRunAt": 1772712873275,
       "lastStatus": "ok",
-      "lastDurationMs": 7509,
+      "lastDurationMs": 6327,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Did the cron job print any output (stdout/stderr) after that line?\n\nIf you paste the rest of the run output, I can tell you whether it:\n- found an update,\n- applied it successfully,\n- or failed (and why).\n\nIf you don’t have the output handy, tell me where this cron writes logs (or paste your cron definition), and I’ll guide you to the right file to check (e.g., syslog/journal, or a log file path configured in the cron wrapper).",
-      "nextRunAt": 1772712873265,
+      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or whether it succeeded.\n\nTo diagnose, please paste one of these:\n\n1) The cron job output (what it printed after `Run:`), or  \n2) The last ~100 lines from wherever this job logs (often syslog or a dedicated file).\n\nIf you tell me how cron is configured for this job (does it email output, redirect to a log file, or rely on syslog?), I’ll point you to the exact command to grab the right snippet.",
+      "nextRunAt": 1772714673275,
       "model": null,
-      "lastTotalTokens": 7271,
-      "lastInputTokens": 5863,
-      "lastOutputTokens": 173
+      "lastTotalTokens": 7387,
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 209
     }
   ]
 }
