@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772695807924,
+  "updatedAt": 1772697607588,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772696681000
+          "usedPercent": 0,
+          "resetAt": 1772714680000
         },
         {
           "label": "Day",
@@ -64,7 +64,7 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772694873150,
+      "lastRunAt": 1772696673164,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": null
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772694873150,
+      "lastRunAt": 1772696673164,
       "lastStatus": "ok",
-      "lastDurationMs": 6744,
+      "lastDurationMs": 7013,
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": null,
-      "nextRunAt": 1772696673150,
+      "nextRunAt": 1772698473164,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 81
+      "lastOutputTokens": 150
     }
   ]
 }
