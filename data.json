@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772703007109,
+  "updatedAt": 1772704807792,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772702073205,
+      "lastRunAt": 1772703873215,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *invocation* line — not the script’s stdout/stderr — so I can’t tell whether the auto-update succeeded, found no updates, or failed.\n\nTo make these cron pings actionable, can you share one of the following?\n\n1) The cron job’s captured output (if your scheduler stores it), **or**  \n2) The last ~50 lines of whatever log file `openclaw_auto_update.py` writes to (if any), **or**  \n3) Re-run it once manually and paste the terminal output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, paste your cron definition for `infraops:openclaw-auto-update` and I’ll suggest a small change to always include stdout/stderr (and exit code) in these Telegram messages."
+      "lastSummary": "I only see the cron “Run:” line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nCan you paste the cron job output (anything after that line), or tell me where this cron writes logs?\n\nIf you’re not sure, quick checks:\n\n- Check your cron mail / captured output for that job (depends how you scheduled it).\n- If you configured logging in the cron entry, look for something like:\n  - `/var/log/syslog` (Debian/Ubuntu often logs cron there)\n  - `journalctl -u cron` (systemd cron service, if applicable)\n- If the script itself logs, it’s likely in a file under:\n  - `/home/clawd/.openclaw/workspace/scripts/` or a `logs/` subfolder (depending on how you wrote it)\n\nPaste the output and I’ll interpret it + suggest the next fix if it errored."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772702073205,
+      "lastRunAt": 1772703873215,
       "lastStatus": "ok",
-      "lastDurationMs": 7554,
+      "lastDurationMs": 8837,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *invocation* line — not the script’s stdout/stderr — so I can’t tell whether the auto-update succeeded, found no updates, or failed.\n\nTo make these cron pings actionable, can you share one of the following?\n\n1) The cron job’s captured output (if your scheduler stores it), **or**  \n2) The last ~50 lines of whatever log file `openclaw_auto_update.py` writes to (if any), **or**  \n3) Re-run it once manually and paste the terminal output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, paste your cron definition for `infraops:openclaw-auto-update` and I’ll suggest a small change to always include stdout/stderr (and exit code) in these Telegram messages.",
-      "nextRunAt": 1772703873205,
+      "lastSummary": "I only see the cron “Run:” line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nCan you paste the cron job output (anything after that line), or tell me where this cron writes logs?\n\nIf you’re not sure, quick checks:\n\n- Check your cron mail / captured output for that job (depends how you scheduled it).\n- If you configured logging in the cron entry, look for something like:\n  - `/var/log/syslog` (Debian/Ubuntu often logs cron there)\n  - `journalctl -u cron` (systemd cron service, if applicable)\n- If the script itself logs, it’s likely in a file under:\n  - `/home/clawd/.openclaw/workspace/scripts/` or a `logs/` subfolder (depending on how you wrote it)\n\nPaste the output and I’ll interpret it + suggest the next fix if it errored.",
+      "nextRunAt": 1772705673215,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 7387,
-      "lastOutputTokens": 278
+      "lastOutputTokens": 262
     }
   ]
 }
