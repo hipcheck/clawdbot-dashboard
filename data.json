@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772722808054,
+  "updatedAt": 1772724607193,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772732682000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772721873340,
+      "lastRunAt": 1772723673353,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron “Run:” line here—no stdout/stderr from `openclaw_auto_update.py`, so I can’t tell whether it succeeded, found updates, or failed.\n\nIf you want, paste the last ~50 lines of its output (or wherever cron is logging it), and I’ll interpret it and suggest fixes if anything looks off.\n\nIf you’re not currently capturing logs for that job, it’s worth updating the cron entry to pipe output somewhere (and ideally only alert on non-zero exit), e.g.:\n- log file: `...openclaw_auto_update.py >> /var/log/openclaw_auto_update.log 2>&1`\n- or mail/telegram notification on failure only"
+      "lastSummary": "Do you have the script’s stdout/stderr (or a log snippet) from that cron run?\n\nIf you want to self-check quickly on the box, these usually confirm whether the auto-update actually did anything:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -n \"openclaw_auto_update.py\" /var/log/syslog | tail -n 50`\n  - or `sudo journalctl -u cron --since \"20 minutes ago\" | tail -n 200`\n\n- **If the script writes its own log** (common patterns):\n  - `ls -lt /home/clawd/.openclaw/workspace/scripts | head`\n  - `find /home/clawd/.openclaw/workspace -maxdepth 2 -type f -iname \"*update*log*\" -o -iname \"*auto*update*\" | head`\n\n- **Verify OpenClaw version/state after the run:**\n  - `openclaw --version`\n  - `openclaw gateway status`\n\nPaste whatever output you see and I’ll tell you if it succeeded, no-op’d (already up to date), or failed and why."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772721873340,
+      "lastRunAt": 1772723673353,
       "lastStatus": "ok",
-      "lastDurationMs": 7203,
+      "lastDurationMs": 10384,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron “Run:” line here—no stdout/stderr from `openclaw_auto_update.py`, so I can’t tell whether it succeeded, found updates, or failed.\n\nIf you want, paste the last ~50 lines of its output (or wherever cron is logging it), and I’ll interpret it and suggest fixes if anything looks off.\n\nIf you’re not currently capturing logs for that job, it’s worth updating the cron entry to pipe output somewhere (and ideally only alert on non-zero exit), e.g.:\n- log file: `...openclaw_auto_update.py >> /var/log/openclaw_auto_update.log 2>&1`\n- or mail/telegram notification on failure only",
-      "nextRunAt": 1772723673340,
+      "lastSummary": "Do you have the script’s stdout/stderr (or a log snippet) from that cron run?\n\nIf you want to self-check quickly on the box, these usually confirm whether the auto-update actually did anything:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -n \"openclaw_auto_update.py\" /var/log/syslog | tail -n 50`\n  - or `sudo journalctl -u cron --since \"20 minutes ago\" | tail -n 200`\n\n- **If the script writes its own log** (common patterns):\n  - `ls -lt /home/clawd/.openclaw/workspace/scripts | head`\n  - `find /home/clawd/.openclaw/workspace -maxdepth 2 -type f -iname \"*update*log*\" -o -iname \"*auto*update*\" | head`\n\n- **Verify OpenClaw version/state after the run:**\n  - `openclaw --version`\n  - `openclaw gateway status`\n\nPaste whatever output you see and I’ll tell you if it succeeded, no-op’d (already up to date), or failed and why.",
+      "nextRunAt": 1772725473353,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 235
+      "lastOutputTokens": 293
     }
   ]
 }
