@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772721006692,
+  "updatedAt": 1772722808054,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772720073332,
+      "lastRunAt": 1772721873340,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron fired, but I’m not seeing the script’s stdout/stderr output here—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the cron job output/log snippet for that run (or tell me where this cron writes logs)? Once I have that, I can verify what happened and suggest any fixes if it errored."
+      "lastSummary": "I only see the cron “Run:” line here—no stdout/stderr from `openclaw_auto_update.py`, so I can’t tell whether it succeeded, found updates, or failed.\n\nIf you want, paste the last ~50 lines of its output (or wherever cron is logging it), and I’ll interpret it and suggest fixes if anything looks off.\n\nIf you’re not currently capturing logs for that job, it’s worth updating the cron entry to pipe output somewhere (and ideally only alert on non-zero exit), e.g.:\n- log file: `...openclaw_auto_update.py >> /var/log/openclaw_auto_update.log 2>&1`\n- or mail/telegram notification on failure only"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772720073332,
+      "lastRunAt": 1772721873340,
       "lastStatus": "ok",
-      "lastDurationMs": 8036,
+      "lastDurationMs": 7203,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron fired, but I’m not seeing the script’s stdout/stderr output here—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the cron job output/log snippet for that run (or tell me where this cron writes logs)? Once I have that, I can verify what happened and suggest any fixes if it errored.",
-      "nextRunAt": 1772721873332,
+      "lastSummary": "I only see the cron “Run:” line here—no stdout/stderr from `openclaw_auto_update.py`, so I can’t tell whether it succeeded, found updates, or failed.\n\nIf you want, paste the last ~50 lines of its output (or wherever cron is logging it), and I’ll interpret it and suggest fixes if anything looks off.\n\nIf you’re not currently capturing logs for that job, it’s worth updating the cron entry to pipe output somewhere (and ideally only alert on non-zero exit), e.g.:\n- log file: `...openclaw_auto_update.py >> /var/log/openclaw_auto_update.log 2>&1`\n- or mail/telegram notification on failure only",
+      "nextRunAt": 1772723673340,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 127
+      "lastOutputTokens": 235
     }
   ]
 }
