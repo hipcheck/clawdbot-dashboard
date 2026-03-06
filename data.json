@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772764206750,
+  "updatedAt": 1772766007044,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772763273648,
+      "lastRunAt": 1772765073667,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can see the cron trigger, but I’m not seeing any stdout/stderr from the script run—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nTo confirm what happened, can you paste one of these:\n\n1) The cron job’s captured output (stdout/stderr) for this run (often emailed or logged by your cron runner), or  \n2) Any log file that `openclaw_auto_update.py` writes to (if it has one), or  \n3) The last ~50 lines of your system cron logs around **02:14 UTC** (e.g., `/var/log/syslog` on Ubuntu).\n\nIf you tell me how this cron is configured (classic `crontab`, systemd timer, GitHub Actions, etc.), I’ll point you to the exact place it’s logging."
+      "lastSummary": "That cron message is just the trigger line (“Run: …”) — it doesn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nTo make these notifications actionable, could you paste the next lines from the cron output (anything after that “Run:” line), especially any lines containing **“error”**, **“traceback”**, **“updated”**, or a **version**?\n\nIf you don’t have output because cron is currently discarding it, the fix is to ensure stdout/stderr get captured, e.g. run it like:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n(or configure your cron runner to always include stdout/stderr in the message).\n\nSend me either the log snippet or the log file content and I’ll interpret what happened."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772763273648,
+      "lastRunAt": 1772765073667,
       "lastStatus": "ok",
-      "lastDurationMs": 9073,
+      "lastDurationMs": 7305,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can see the cron trigger, but I’m not seeing any stdout/stderr from the script run—so I can’t tell whether the auto-update succeeded, did nothing (already up to date), or failed.\n\nTo confirm what happened, can you paste one of these:\n\n1) The cron job’s captured output (stdout/stderr) for this run (often emailed or logged by your cron runner), or  \n2) Any log file that `openclaw_auto_update.py` writes to (if it has one), or  \n3) The last ~50 lines of your system cron logs around **02:14 UTC** (e.g., `/var/log/syslog` on Ubuntu).\n\nIf you tell me how this cron is configured (classic `crontab`, systemd timer, GitHub Actions, etc.), I’ll point you to the exact place it’s logging.",
-      "nextRunAt": 1772765073648,
+      "lastSummary": "That cron message is just the trigger line (“Run: …”) — it doesn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nTo make these notifications actionable, could you paste the next lines from the cron output (anything after that “Run:” line), especially any lines containing **“error”**, **“traceback”**, **“updated”**, or a **version**?\n\nIf you don’t have output because cron is currently discarding it, the fix is to ensure stdout/stderr get captured, e.g. run it like:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n(or configure your cron runner to always include stdout/stderr in the message).\n\nSend me either the log snippet or the log file content and I’ll interpret what happened.",
+      "nextRunAt": 1772766873667,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 262
+      "lastOutputTokens": 286
     }
   ]
 }
