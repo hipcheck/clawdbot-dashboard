@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772778607083,
+  "updatedAt": 1772780408418,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772788479000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772777673744,
+      "lastRunAt": 1772779473754,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Did the auto-update script print any output (success / “no updates” / error)? This cron ping only shows what *was run*, not whether it *worked*.\n\nIf you paste the last ~30 lines of the cron output (or point me to where `openclaw_auto_update.py` logs), I can tell you whether:\n- OpenClaw was actually updated,\n- anything failed (pip/npm/git),\n- and whether the gateway/service restart (if any) succeeded."
+      "lastSummary": "I got the cron trigger, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update **actually succeeded**, did nothing (“already up to date”), or hit an error.\n\nIf you want this to be self-reporting, the simplest fix is to have the cron job capture and send the last N lines of output. Two good options:\n\n1) **Log to a file (recommended)**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log 2>&1`\n- Then have cron also send/tail:\n  - `tail -n 50 /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log`\n\n2) **Make the Python script print a clear summary**\n- At the end, print something like:\n  - current installed version\n  - latest available version\n  - whether an update was applied\n  - restart required? (yes/no)\n  - any errors\n\nIf you paste the last ~50 lines of whatever output/log you currently have for this run, I’ll tell you whether it updated cleanly and what to change so future runs come through with a one-line “OK/UPDATED/FAILED” status."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772777673744,
+      "lastRunAt": 1772779473754,
       "lastStatus": "ok",
-      "lastDurationMs": 5942,
+      "lastDurationMs": 9176,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Did the auto-update script print any output (success / “no updates” / error)? This cron ping only shows what *was run*, not whether it *worked*.\n\nIf you paste the last ~30 lines of the cron output (or point me to where `openclaw_auto_update.py` logs), I can tell you whether:\n- OpenClaw was actually updated,\n- anything failed (pip/npm/git),\n- and whether the gateway/service restart (if any) succeeded.",
-      "nextRunAt": 1772779473744,
+      "lastSummary": "I got the cron trigger, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update **actually succeeded**, did nothing (“already up to date”), or hit an error.\n\nIf you want this to be self-reporting, the simplest fix is to have the cron job capture and send the last N lines of output. Two good options:\n\n1) **Log to a file (recommended)**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log 2>&1`\n- Then have cron also send/tail:\n  - `tail -n 50 /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log`\n\n2) **Make the Python script print a clear summary**\n- At the end, print something like:\n  - current installed version\n  - latest available version\n  - whether an update was applied\n  - restart required? (yes/no)\n  - any errors\n\nIf you paste the last ~50 lines of whatever output/log you currently have for this run, I’ll tell you whether it updated cleanly and what to change so future runs come through with a one-line “OK/UPDATED/FAILED” status.",
+      "nextRunAt": 1772781273754,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 227
+      "lastOutputTokens": 401
     }
   ]
 }
