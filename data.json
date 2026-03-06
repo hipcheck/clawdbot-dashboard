@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772802007026,
+  "updatedAt": 1772803806908,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1773265479000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772801073865,
+      "lastRunAt": 1772802873875,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded.\n\nIf you want me to verify what happened, paste either:\n- the rest of the cron output (success/failure + any traceback), or\n- the relevant log snippet (wherever this cron job writes), or\n- run it once manually and paste output:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nAlso helpful: confirm whether this cron is expected to *actually* apply updates (restart gateway, etc.) or just *check* and report."
+      "lastSummary": "I got the cron trigger, but I can’t see the script’s stdout/stderr from here.\n\nTo confirm whether the auto-update succeeded, can you paste the output of the cron run (whatever followed that line)?\n\nIf you don’t have the output handy, these are the usual places to check on the host:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -i openclaw-auto-update /var/log/syslog | tail -n 50`\n- **Systemd timer/service logs (if this cron is backed by systemd):**\n  - `sudo journalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager`\n- **If your script writes its own log file:** tell me the path (or paste the last ~100 lines).\n\nOnce you paste the log snippet, I’ll tell you whether it updated OpenClaw, what version it landed on, and whether anything needs fixing."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772801073865,
+      "lastRunAt": 1772802873875,
       "lastStatus": "ok",
-      "lastDurationMs": 6626,
+      "lastDurationMs": 6904,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded.\n\nIf you want me to verify what happened, paste either:\n- the rest of the cron output (success/failure + any traceback), or\n- the relevant log snippet (wherever this cron job writes), or\n- run it once manually and paste output:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nAlso helpful: confirm whether this cron is expected to *actually* apply updates (restart gateway, etc.) or just *check* and report.",
-      "nextRunAt": 1772802873865,
+      "lastSummary": "I got the cron trigger, but I can’t see the script’s stdout/stderr from here.\n\nTo confirm whether the auto-update succeeded, can you paste the output of the cron run (whatever followed that line)?\n\nIf you don’t have the output handy, these are the usual places to check on the host:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -i openclaw-auto-update /var/log/syslog | tail -n 50`\n- **Systemd timer/service logs (if this cron is backed by systemd):**\n  - `sudo journalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager`\n- **If your script writes its own log file:** tell me the path (or paste the last ~100 lines).\n\nOnce you paste the log snippet, I’ll tell you whether it updated OpenClaw, what version it landed on, and whether anything needs fixing.",
+      "nextRunAt": 1772804673875,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 7387,
-      "lastOutputTokens": 227
+      "lastOutputTokens": 261
     }
   ]
 }
