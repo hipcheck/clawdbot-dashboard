@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772793005951,
+  "updatedAt": 1772794807995,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1772806480000
         },
         {
@@ -61,25 +61,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772792073822,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"220\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-06 10:58 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772794729065,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Your cron just announced it *started* the auto-update script, but it didn’t include the result (success/failure, what changed, etc.). Right now I can’t tell whether anything actually updated.\n\nIf you want this to be self-reporting, update that cron to capture stdout/stderr and send it somewhere. Two good options:\n\n1) **Log to a file (simple + reliable)**\n- Run the script like:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n- Then if something breaks, you have history.\n\n2) **Log + “only alert on failure”**\n- Same as above, but have the script exit non-zero on failure and have cron email/notify only when exit code != 0 (depends on how your cron runner is configured).\n\nIf you paste the last ~50 lines of the script output (or the log, once you add it), I can tell you exactly what it did and whether anything needs follow-up."
+      "lastSummary": "A few different things can cause “I can’t run stuff / I’m less autonomous” on Telegram, and the fix depends on *where* the restriction happened:\n\n1) **Telegram-side permissions (bot can’t see messages"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
-      "activityChannel": null,
-      "lastRunAt": 1772769600057,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"49\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-06 10:55 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772794565448,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: ERROR (Mac node offline)"
+      "lastSummary": "What do you want me to “check” on the Mac node (connectivity, journal file existence, today’s entry contents, Readwise index freshness, etc.)?\n\nRight now, in this chat session I only have the **messag"
     }
   ],
   "cronJobs": [
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772792073822,
+      "lastRunAt": 1772793873831,
       "lastStatus": "ok",
-      "lastDurationMs": 7470,
+      "lastDurationMs": 4620,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Your cron just announced it *started* the auto-update script, but it didn’t include the result (success/failure, what changed, etc.). Right now I can’t tell whether anything actually updated.\n\nIf you want this to be self-reporting, update that cron to capture stdout/stderr and send it somewhere. Two good options:\n\n1) **Log to a file (simple + reliable)**\n- Run the script like:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n- Then if something breaks, you have history.\n\n2) **Log + “only alert on failure”**\n- Same as above, but have the script exit non-zero on failure and have cron email/notify only when exit code != 0 (depends on how your cron runner is configured).\n\nIf you paste the last ~50 lines of the script output (or the log, once you add it), I can tell you exactly what it did and whether anything needs follow-up.",
-      "nextRunAt": 1772793873822,
+      "lastSummary": null,
+      "nextRunAt": 1772795673831,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 299
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 127
     }
   ]
 }
