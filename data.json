@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772829007195,
+  "updatedAt": 1772830808952,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772842482000
+          "resetAt": 1772842481000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772828074059,
+      "lastRunAt": 1772829874069,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron notification looks like it just *triggered* the auto-update script (`openclaw_auto_update.py`). It doesn’t include the script’s output, so I can’t tell from this message alone whether it updated anything or hit an error.\n\nIf you want to verify it ran cleanly, the quickest checks are:\n\n1) **See what version you’re on now**\n- `openclaw --version`\n\n2) **Confirm the gateway is healthy**\n- `openclaw gateway status`\n\n3) **If something seems off, restart the gateway**\n- `openclaw gateway restart`\n\nIf you paste the script output/logs from that cron run (or tell me where it writes logs), I can interpret it and tell you whether the update actually applied or if anything needs fixing."
+      "lastSummary": "I can’t actually execute that script from here (no shell/exec access in this chat), and the cron notification didn’t include the script’s stdout/stderr.\n\nTo tell whether the auto-update succeeded, I need one of these:\n\n1) Paste the cron output/log for that run (stdout + any traceback), **or**\n2) Run these on the host and paste results:\n- `tail -n 200 /var/log/syslog | grep -i openclaw-auto-update`\n- If it’s a systemd timer/service:  \n  - `systemctl status openclaw-auto-update`  \n  - `journalctl -u openclaw-auto-update --since \"2 hours ago\" -n 200`\n\nIf you paste the script output here, I’ll interpret it and tell you exactly what happened (updated / already up-to-date / failed and why) and what to fix."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772828074059,
+      "lastRunAt": 1772829874069,
       "lastStatus": "ok",
-      "lastDurationMs": 7168,
+      "lastDurationMs": 6580,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron notification looks like it just *triggered* the auto-update script (`openclaw_auto_update.py`). It doesn’t include the script’s output, so I can’t tell from this message alone whether it updated anything or hit an error.\n\nIf you want to verify it ran cleanly, the quickest checks are:\n\n1) **See what version you’re on now**\n- `openclaw --version`\n\n2) **Confirm the gateway is healthy**\n- `openclaw gateway status`\n\n3) **If something seems off, restart the gateway**\n- `openclaw gateway restart`\n\nIf you paste the script output/logs from that cron run (or tell me where it writes logs), I can interpret it and tell you whether the update actually applied or if anything needs fixing.",
-      "nextRunAt": 1772829874059,
+      "lastSummary": "I can’t actually execute that script from here (no shell/exec access in this chat), and the cron notification didn’t include the script’s stdout/stderr.\n\nTo tell whether the auto-update succeeded, I need one of these:\n\n1) Paste the cron output/log for that run (stdout + any traceback), **or**\n2) Run these on the host and paste results:\n- `tail -n 200 /var/log/syslog | grep -i openclaw-auto-update`\n- If it’s a systemd timer/service:  \n  - `systemctl status openclaw-auto-update`  \n  - `journalctl -u openclaw-auto-update --since \"2 hours ago\" -n 200`\n\nIf you paste the script output here, I’ll interpret it and tell you exactly what happened (updated / already up-to-date / failed and why) and what to fix.",
+      "nextRunAt": 1772831674069,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 292
+      "lastOutputTokens": 245
     }
   ]
 }
