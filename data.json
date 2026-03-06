@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772798406979,
+  "updatedAt": 1772800206465,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772812565000
+          "usedPercent": 2,
+          "resetAt": 1772806480000
         },
         {
           "label": "Day",
@@ -37,13 +37,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"44\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Thu 2026-03-05 20:18 UTC\"\n}\n```\n\nSender (untrusted metada",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772741904430,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "[[reply_to_current]] Yes — I can, but in this chat runtime I don’t currently have file-write access to your Obsidian vault directly.\n\nFastest path: send me the exact vault path (and target folder), an"
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1772798400052,
+      "lastStatus": "error",
+      "lastError": "Channel is required (no configured channels detected). Set delivery.channel explicitly or use a main session with a previous channel.",
+      "lastSummary": "WARNING: prescan missing/stale (could not verify `/tmp/openclaw_prescan_summary.md`), proceeding anyway.\n\nSend to: Telegram (Andreas)\n\nProposed improvement (one): Build a “Job Lead Scorer + Auto-Queue” stage in your NYC Senior Marketing Manager pipeline (ingest postings → score fit → push top leads to Obsidian/GitHub queue automatically).\n\nImpact:\n- Cuts manual triage time by ~60–80%.\n- Surfaces best-fit roles first, increasing application quality/speed.\n- Makes the pipeline daily-usable instead of backlog-heavy.\n\nRisk:\n- Bad scoring weights could hide good roles early.\n- Source formatting drift (job boards) can break parsers.\n- Over-automation may reduce human judgment if no review gate.\n\nFirst 3 steps:\n1) Define a simple v1 scoring rubric (title match, location match, seniority, required skills, compensation signal) with weights in a config file.\n2) Implement scorer + dedupe pass on current scraped leads, outputting ranked JSON/Markdown with score breakdown per role.\n3) Add an “auto-queue top N” action (e.g., top 10/day) that writes to Obsidian + commits to GitHub, with a manual override list."
     },
     {
       "id": "infraops",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772797473848,
+      "lastRunAt": 1772799273856,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "I can’t actually execute that cron job from here (no shell/exec tool in this chat), but I can tell you how to confirm whether it ran + what it did.\n\n**Quick checks (on the host):**\n1. **Cron logs**\n   - Debian/Ubuntu:\n     - `grep -i openclaw_auto_update /var/log/syslog | tail -n 50`\n     - or (systemd journal): `journalctl -t CRON --since \"30 min ago\" | grep -i openclaw_auto_update`\n2. **Script output logs (if you configured any)**\n   - Check whether `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` writes to a file (common patterns: `logs/`, `memory/`, or `/var/log/`).\n3. **Did OpenClaw/Gateway restart or change version?**\n   - `openclaw gateway status`\n   - `openclaw status` (if it prints version/build info in your setup)\n\nIf you paste the last ~50 lines of the cron/journal output (or whatever log file the script writes), I’ll interpret it and tell you whether the update succeeded and if anything needs fixing."
     },
     {
       "id": "km",
@@ -89,17 +89,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772712000040,
-      "lastStatus": "ok",
-      "lastDurationMs": 13158,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "WARNING: prescan stale/missing (could not verify `/tmp/openclaw_prescan_summary.md`; age unknown).\n\nSend to: Telegram (Andreas)\n\nProposed build (one high-leverage improvement):\nJob Lead Scoring + Auto-Brief Generator for your NYC Senior Marketing Manager pipeline.\n\nImpact:\nAutomatically ranks new roles by fit (title/seniority/location/comp/keywords) and generates a 5-line “apply brief” (why-fit, resume focus, outreach angle), cutting triage time and increasing high-quality applications per day.\n\nRisk:\nMedium — scoring weights may be off initially and could down-rank good opportunities until tuned.\n\nFirst 3 steps:\n1) Define a v1 scoring schema (weighted fields + hard filters) in a single config file.\n2) Build a parser that ingests new job posts and outputs score + reason codes + apply brief.\n3) Integrate output into your existing Obsidian/GitHub pipeline with a “Top 5 Today” view for quick action.",
-      "nextRunAt": 1772798400000,
+      "lastRunAt": 1772798400052,
+      "lastStatus": "error",
+      "lastDurationMs": 16033,
+      "consecutiveErrors": 1,
+      "lastError": "Channel is required (no configured channels detected). Set delivery.channel explicitly or use a main session with a previous channel.",
+      "lastSummary": "WARNING: prescan missing/stale (could not verify `/tmp/openclaw_prescan_summary.md`), proceeding anyway.\n\nSend to: Telegram (Andreas)\n\nProposed improvement (one): Build a “Job Lead Scorer + Auto-Queue” stage in your NYC Senior Marketing Manager pipeline (ingest postings → score fit → push top leads to Obsidian/GitHub queue automatically).\n\nImpact:\n- Cuts manual triage time by ~60–80%.\n- Surfaces best-fit roles first, increasing application quality/speed.\n- Makes the pipeline daily-usable instead of backlog-heavy.\n\nRisk:\n- Bad scoring weights could hide good roles early.\n- Source formatting drift (job boards) can break parsers.\n- Over-automation may reduce human judgment if no review gate.\n\nFirst 3 steps:\n1) Define a simple v1 scoring rubric (title match, location match, seniority, required skills, compensation signal) with weights in a config file.\n2) Implement scorer + dedupe pass on current scraped leads, outputting ranked JSON/Markdown with score breakdown per role.\n3) Add an “auto-queue top N” action (e.g., top 10/day) that writes to Obsidian + commits to GitHub, with a manual override list.",
+      "nextRunAt": 1772884800000,
       "model": null,
-      "lastTotalTokens": 4781,
-      "lastInputTokens": 4781,
-      "lastOutputTokens": 658
+      "lastTotalTokens": 4637,
+      "lastInputTokens": 4637,
+      "lastOutputTokens": 718
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772797473848,
+      "lastRunAt": 1772799273856,
       "lastStatus": "ok",
-      "lastDurationMs": 4291,
+      "lastDurationMs": 7349,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1772799273848,
+      "lastSummary": "I can’t actually execute that cron job from here (no shell/exec tool in this chat), but I can tell you how to confirm whether it ran + what it did.\n\n**Quick checks (on the host):**\n1. **Cron logs**\n   - Debian/Ubuntu:\n     - `grep -i openclaw_auto_update /var/log/syslog | tail -n 50`\n     - or (systemd journal): `journalctl -t CRON --since \"30 min ago\" | grep -i openclaw_auto_update`\n2. **Script output logs (if you configured any)**\n   - Check whether `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` writes to a file (common patterns: `logs/`, `memory/`, or `/var/log/`).\n3. **Did OpenClaw/Gateway restart or change version?**\n   - `openclaw gateway status`\n   - `openclaw status` (if it prints version/build info in your setup)\n\nIf you paste the last ~50 lines of the cron/journal output (or whatever log file the script writes), I’ll interpret it and tell you whether the update succeeded and if anything needs fixing.",
+      "nextRunAt": 1772801073856,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 130
+      "lastOutputTokens": 352
     }
   ]
 }
