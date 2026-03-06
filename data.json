@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772782206668,
+  "updatedAt": 1772784007152,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772781273764,
+      "lastRunAt": 1772783073774,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *trigger* (that it ran `openclaw_auto_update.py`), not the script’s stdout/stderr or whether it succeeded.\n\nTo tell you what happened, I need the run output. Can you paste either:\n\n1) The cron log lines for that run (stdout/stderr), or  \n2) Wherever your cron redirects output (e.g., a logfile path), or  \n3) The last ~100 lines from your system journal for the cron service/user.\n\nIf you tell me how this cron is configured (crontab line or systemd timer), I can tell you exactly where to look."
+      "lastSummary": "I’m only seeing the cron *trigger* line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed yet.\n\nTo confirm what happened, can you paste one of these:\n\n1) The cron job’s output (stdout/stderr) if your scheduler captures it, **or**  \n2) Any log file this script writes (path), **or**  \n3) Run it once manually and paste the terminal output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you tell me how this cron runner stores logs on your setup (systemd journal, cron mail, a logfile path, etc.), I’ll point you to the exact command to fetch the last run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772781273764,
+      "lastRunAt": 1772783073774,
       "lastStatus": "ok",
-      "lastDurationMs": 7174,
+      "lastDurationMs": 6241,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *trigger* (that it ran `openclaw_auto_update.py`), not the script’s stdout/stderr or whether it succeeded.\n\nTo tell you what happened, I need the run output. Can you paste either:\n\n1) The cron log lines for that run (stdout/stderr), or  \n2) Wherever your cron redirects output (e.g., a logfile path), or  \n3) The last ~100 lines from your system journal for the cron service/user.\n\nIf you tell me how this cron is configured (crontab line or systemd timer), I can tell you exactly where to look.",
-      "nextRunAt": 1772783073764,
+      "lastSummary": "I’m only seeing the cron *trigger* line, not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed yet.\n\nTo confirm what happened, can you paste one of these:\n\n1) The cron job’s output (stdout/stderr) if your scheduler captures it, **or**  \n2) Any log file this script writes (path), **or**  \n3) Run it once manually and paste the terminal output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you tell me how this cron runner stores logs on your setup (systemd journal, cron mail, a logfile path, etc.), I’ll point you to the exact command to fetch the last run.",
+      "nextRunAt": 1772784873774,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 234
+      "lastOutputTokens": 248
     }
   ]
 }
