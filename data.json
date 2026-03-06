@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772757006780,
+  "updatedAt": 1772758807217,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772770480000
+          "resetAt": 1772774081000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772756073599,
+      "lastRunAt": 1772757873610,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line here, not the script’s stdout/stderr or whether it succeeded.\n\nTo tell if the auto-update actually worked (or failed), can you paste the job’s output (the lines after this), or tell me where this cron writes logs (e.g., a file path)?\n\nIf you don’t have output handy, the two most useful things to check are:\n- the cron daemon logs for that run (to see exit code / traceback)\n- any log file the script writes (often under `/home/clawd/.openclaw/workspace/` or `/var/log/`)"
+      "lastSummary": "I only see the cron *trigger* here (“Run: python3 …/openclaw_auto_update.py”), not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to summarize what happened (updated? restarted gateway? errors?), paste one of these:\n\n1) The cron job’s captured output (stdout/stderr), or  \n2) Any log file the script writes to (path), or  \n3) The relevant system logs for that run (e.g., from your cron/syslog/journal).\n\nAlso: does `openclaw_auto_update.py` print a final status line (like “UPDATED / NOOP / FAILED”)? If yes, paste just that section and I’ll interpret it."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772756073599,
+      "lastRunAt": 1772757873610,
       "lastStatus": "ok",
-      "lastDurationMs": 7935,
+      "lastDurationMs": 5351,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron “Run:” line here, not the script’s stdout/stderr or whether it succeeded.\n\nTo tell if the auto-update actually worked (or failed), can you paste the job’s output (the lines after this), or tell me where this cron writes logs (e.g., a file path)?\n\nIf you don’t have output handy, the two most useful things to check are:\n- the cron daemon logs for that run (to see exit code / traceback)\n- any log file the script writes (often under `/home/clawd/.openclaw/workspace/` or `/var/log/`)",
-      "nextRunAt": 1772757873599,
+      "lastSummary": "I only see the cron *trigger* here (“Run: python3 …/openclaw_auto_update.py”), not the script’s stdout/stderr or whether it succeeded.\n\nIf you want me to summarize what happened (updated? restarted gateway? errors?), paste one of these:\n\n1) The cron job’s captured output (stdout/stderr), or  \n2) Any log file the script writes to (path), or  \n3) The relevant system logs for that run (e.g., from your cron/syslog/journal).\n\nAlso: does `openclaw_auto_update.py` print a final status line (like “UPDATED / NOOP / FAILED”)? If yes, paste just that section and I’ll interpret it.",
+      "nextRunAt": 1772759673610,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 296
+      "lastOutputTokens": 223
     }
   ]
 }
