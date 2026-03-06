@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772809207892,
+  "updatedAt": 1772811007019,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772808273923,
+      "lastRunAt": 1772810073937,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron trigger line, not the script’s stdout/stderr or result.\n\nTo tell whether the auto-update actually did anything (updated OpenClaw, restarted gateway, failed, etc.), I need one of these:\n\n1) Paste the cron job’s output (stdout/stderr) if it’s shown anywhere, or  \n2) Tell me where this script logs (file path), and paste the latest lines, or  \n3) If you want, modify the cron to capture output, e.g.:\n- `python3 .../openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nIf you paste the last ~50 lines of output/log, I’ll interpret it and tell you whether the update succeeded and what changed."
+      "lastSummary": "I see the cron fired and executed:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\n…but this message doesn’t include the script’s stdout/stderr, so I can’t tell whether it actually updated anything or hit an error.\n\nIf you want, paste the last ~50–200 lines of whatever log this cron writes to (or the cron email output). If it **doesn’t** currently log anywhere, I’d strongly recommend updating the cron entry to capture output, e.g.:\n\n- **append to a log file**\n  - `python3 .../openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nAlso helpful: tell me whether you expect it to (a) `git pull` OpenClaw, (b) update npm/global packages, (c) restart the gateway, etc.—then I can tell you what “success” should look like and what to verify after a run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772808273923,
+      "lastRunAt": 1772810073937,
       "lastStatus": "ok",
-      "lastDurationMs": 6809,
+      "lastDurationMs": 8643,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron trigger line, not the script’s stdout/stderr or result.\n\nTo tell whether the auto-update actually did anything (updated OpenClaw, restarted gateway, failed, etc.), I need one of these:\n\n1) Paste the cron job’s output (stdout/stderr) if it’s shown anywhere, or  \n2) Tell me where this script logs (file path), and paste the latest lines, or  \n3) If you want, modify the cron to capture output, e.g.:\n- `python3 .../openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nIf you paste the last ~50 lines of output/log, I’ll interpret it and tell you whether the update succeeded and what changed.",
-      "nextRunAt": 1772810073923,
+      "lastSummary": "I see the cron fired and executed:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\n…but this message doesn’t include the script’s stdout/stderr, so I can’t tell whether it actually updated anything or hit an error.\n\nIf you want, paste the last ~50–200 lines of whatever log this cron writes to (or the cron email output). If it **doesn’t** currently log anywhere, I’d strongly recommend updating the cron entry to capture output, e.g.:\n\n- **append to a log file**\n  - `python3 .../openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nAlso helpful: tell me whether you expect it to (a) `git pull` OpenClaw, (b) update npm/global packages, (c) restart the gateway, etc.—then I can tell you what “success” should look like and what to verify after a run.",
+      "nextRunAt": 1772811873937,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 273
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 301
     }
   ]
 }
