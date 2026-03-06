@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772800206465,
+  "updatedAt": 1772802007026,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772799273856,
+      "lastRunAt": 1772801073865,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute that cron job from here (no shell/exec tool in this chat), but I can tell you how to confirm whether it ran + what it did.\n\n**Quick checks (on the host):**\n1. **Cron logs**\n   - Debian/Ubuntu:\n     - `grep -i openclaw_auto_update /var/log/syslog | tail -n 50`\n     - or (systemd journal): `journalctl -t CRON --since \"30 min ago\" | grep -i openclaw_auto_update`\n2. **Script output logs (if you configured any)**\n   - Check whether `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` writes to a file (common patterns: `logs/`, `memory/`, or `/var/log/`).\n3. **Did OpenClaw/Gateway restart or change version?**\n   - `openclaw gateway status`\n   - `openclaw status` (if it prints version/build info in your setup)\n\nIf you paste the last ~50 lines of the cron/journal output (or whatever log file the script writes), I’ll interpret it and tell you whether the update succeeded and if anything needs fixing."
+      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded.\n\nIf you want me to verify what happened, paste either:\n- the rest of the cron output (success/failure + any traceback), or\n- the relevant log snippet (wherever this cron job writes), or\n- run it once manually and paste output:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nAlso helpful: confirm whether this cron is expected to *actually* apply updates (restart gateway, etc.) or just *check* and report."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772799273856,
+      "lastRunAt": 1772801073865,
       "lastStatus": "ok",
-      "lastDurationMs": 7349,
+      "lastDurationMs": 6626,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute that cron job from here (no shell/exec tool in this chat), but I can tell you how to confirm whether it ran + what it did.\n\n**Quick checks (on the host):**\n1. **Cron logs**\n   - Debian/Ubuntu:\n     - `grep -i openclaw_auto_update /var/log/syslog | tail -n 50`\n     - or (systemd journal): `journalctl -t CRON --since \"30 min ago\" | grep -i openclaw_auto_update`\n2. **Script output logs (if you configured any)**\n   - Check whether `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` writes to a file (common patterns: `logs/`, `memory/`, or `/var/log/`).\n3. **Did OpenClaw/Gateway restart or change version?**\n   - `openclaw gateway status`\n   - `openclaw status` (if it prints version/build info in your setup)\n\nIf you paste the last ~50 lines of the cron/journal output (or whatever log file the script writes), I’ll interpret it and tell you whether the update succeeded and if anything needs fixing.",
-      "nextRunAt": 1772801073856,
+      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded.\n\nIf you want me to verify what happened, paste either:\n- the rest of the cron output (success/failure + any traceback), or\n- the relevant log snippet (wherever this cron job writes), or\n- run it once manually and paste output:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nAlso helpful: confirm whether this cron is expected to *actually* apply updates (restart gateway, etc.) or just *check* and report.",
+      "nextRunAt": 1772802873865,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 352
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 227
     }
   ]
 }
