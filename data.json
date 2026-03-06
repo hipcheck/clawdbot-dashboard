@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772821807581,
+  "updatedAt": 1772823607603,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772820874015,
+      "lastRunAt": 1772822674028,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Do you want me to interpret the result of that cron run?\n\nRight now you’ve only pasted the trigger line (what ran + timestamp), not the script’s stdout/stderr or whether it succeeded.\n\nIf you paste either of these, I can tell you exactly what happened:\n\n1) The cron job’s captured output (the lines after that header), or  \n2) The last ~100 lines of the script log (wherever you’re redirecting it), or  \n3) Run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf you *just* want a quick “did it update?” check, tell me where OpenClaw is installed from (git repo? pip? npm?) and I’ll give you the precise command to confirm the currently installed version and last update time."
+      "lastSummary": "I see the cron fired, but you only pasted the command invocation—not the script’s stdout/stderr or exit status—so I can’t tell whether the update succeeded or failed.\n\nCan you paste the cron log output for that run (stdout/stderr), or tell me:\n- exit code (0 vs non-zero)\n- whether it actually updated OpenClaw (old version → new version)\n- any errors/warnings printed by `openclaw_auto_update.py`"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772820874015,
+      "lastRunAt": 1772822674028,
       "lastStatus": "ok",
-      "lastDurationMs": 6387,
+      "lastDurationMs": 7471,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Do you want me to interpret the result of that cron run?\n\nRight now you’ve only pasted the trigger line (what ran + timestamp), not the script’s stdout/stderr or whether it succeeded.\n\nIf you paste either of these, I can tell you exactly what happened:\n\n1) The cron job’s captured output (the lines after that header), or  \n2) The last ~100 lines of the script log (wherever you’re redirecting it), or  \n3) Run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf you *just* want a quick “did it update?” check, tell me where OpenClaw is installed from (git repo? pip? npm?) and I’ll give you the precise command to confirm the currently installed version and last update time.",
-      "nextRunAt": 1772822674015,
+      "lastSummary": "I see the cron fired, but you only pasted the command invocation—not the script’s stdout/stderr or exit status—so I can’t tell whether the update succeeded or failed.\n\nCan you paste the cron log output for that run (stdout/stderr), or tell me:\n- exit code (0 vs non-zero)\n- whether it actually updated OpenClaw (old version → new version)\n- any errors/warnings printed by `openclaw_auto_update.py`",
+      "nextRunAt": 1772824474028,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 255
+      "lastOutputTokens": 171
     }
   ]
 }
