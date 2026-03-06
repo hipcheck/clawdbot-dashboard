@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772803806908,
+  "updatedAt": 1772805608269,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772802873875,
+      "lastRunAt": 1772804673893,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I got the cron trigger, but I can’t see the script’s stdout/stderr from here.\n\nTo confirm whether the auto-update succeeded, can you paste the output of the cron run (whatever followed that line)?\n\nIf you don’t have the output handy, these are the usual places to check on the host:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -i openclaw-auto-update /var/log/syslog | tail -n 50`\n- **Systemd timer/service logs (if this cron is backed by systemd):**\n  - `sudo journalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager`\n- **If your script writes its own log file:** tell me the path (or paste the last ~100 lines).\n\nOnce you paste the log snippet, I’ll tell you whether it updated OpenClaw, what version it landed on, and whether anything needs fixing."
+      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr or result (success/failure + what it updated).\n\nCan you paste the job output (or tell me where it logs)? Common places to check:\n\n- systemd journal for the cron runner (if applicable)\n- a logfile next to the script (e.g. `.../scripts/openclaw_auto_update.log`)\n- any “last run” file the script writes (sometimes under `workspace/scripts/` or `workspace/memory/`)\n\nIf you paste the last ~50–100 lines of output, I’ll tell you exactly what happened (updated / no-op / error) and what to do next."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772802873875,
+      "lastRunAt": 1772804673893,
       "lastStatus": "ok",
-      "lastDurationMs": 6904,
+      "lastDurationMs": 7069,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I got the cron trigger, but I can’t see the script’s stdout/stderr from here.\n\nTo confirm whether the auto-update succeeded, can you paste the output of the cron run (whatever followed that line)?\n\nIf you don’t have the output handy, these are the usual places to check on the host:\n\n- **Cron logs (Ubuntu/Debian):**\n  - `sudo grep -i openclaw-auto-update /var/log/syslog | tail -n 50`\n- **Systemd timer/service logs (if this cron is backed by systemd):**\n  - `sudo journalctl -u openclaw-auto-update --since \"2 hours ago\" --no-pager`\n- **If your script writes its own log file:** tell me the path (or paste the last ~100 lines).\n\nOnce you paste the log snippet, I’ll tell you whether it updated OpenClaw, what version it landed on, and whether anything needs fixing.",
-      "nextRunAt": 1772804673875,
+      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr or result (success/failure + what it updated).\n\nCan you paste the job output (or tell me where it logs)? Common places to check:\n\n- systemd journal for the cron runner (if applicable)\n- a logfile next to the script (e.g. `.../scripts/openclaw_auto_update.log`)\n- any “last run” file the script writes (sometimes under `workspace/scripts/` or `workspace/memory/`)\n\nIf you paste the last ~50–100 lines of output, I’ll tell you exactly what happened (updated / no-op / error) and what to do next.",
+      "nextRunAt": 1772806473893,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 261
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 217
     }
   ]
 }
