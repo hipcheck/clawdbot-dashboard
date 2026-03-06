@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772830808952,
+  "updatedAt": 1772832607856,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772829874069,
+      "lastRunAt": 1772831674082,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute that script from here (no shell/exec access in this chat), and the cron notification didn’t include the script’s stdout/stderr.\n\nTo tell whether the auto-update succeeded, I need one of these:\n\n1) Paste the cron output/log for that run (stdout + any traceback), **or**\n2) Run these on the host and paste results:\n- `tail -n 200 /var/log/syslog | grep -i openclaw-auto-update`\n- If it’s a systemd timer/service:  \n  - `systemctl status openclaw-auto-update`  \n  - `journalctl -u openclaw-auto-update --since \"2 hours ago\" -n 200`\n\nIf you paste the script output here, I’ll interpret it and tell you exactly what happened (updated / already up-to-date / failed and why) and what to fix."
+      "lastSummary": "I see the cron triggered the auto-update script, but I don’t see the script’s stdout/stderr (success/failure details) in that message.\n\nIf you paste the output (or point me to where it logs), I can tell you exactly what happened and whether anything needs fixing.\n\nQuick places to check:\n- Your cron runner’s captured logs (often whatever service runs cron / OpenClaw scheduler output)\n- If the script writes its own log file: search for something like `openclaw_auto_update.log` under `/home/clawd/.openclaw/workspace/` or `/var/log/`\n\nIf you can, send:\n1) the full cron output (stdout + stderr), and  \n2) whether it actually updated anything (version before/after, if shown)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772829874069,
+      "lastRunAt": 1772831674082,
       "lastStatus": "ok",
-      "lastDurationMs": 6580,
+      "lastDurationMs": 10329,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute that script from here (no shell/exec access in this chat), and the cron notification didn’t include the script’s stdout/stderr.\n\nTo tell whether the auto-update succeeded, I need one of these:\n\n1) Paste the cron output/log for that run (stdout + any traceback), **or**\n2) Run these on the host and paste results:\n- `tail -n 200 /var/log/syslog | grep -i openclaw-auto-update`\n- If it’s a systemd timer/service:  \n  - `systemctl status openclaw-auto-update`  \n  - `journalctl -u openclaw-auto-update --since \"2 hours ago\" -n 200`\n\nIf you paste the script output here, I’ll interpret it and tell you exactly what happened (updated / already up-to-date / failed and why) and what to fix.",
-      "nextRunAt": 1772831674069,
+      "lastSummary": "I see the cron triggered the auto-update script, but I don’t see the script’s stdout/stderr (success/failure details) in that message.\n\nIf you paste the output (or point me to where it logs), I can tell you exactly what happened and whether anything needs fixing.\n\nQuick places to check:\n- Your cron runner’s captured logs (often whatever service runs cron / OpenClaw scheduler output)\n- If the script writes its own log file: search for something like `openclaw_auto_update.log` under `/home/clawd/.openclaw/workspace/` or `/var/log/`\n\nIf you can, send:\n1) the full cron output (stdout + stderr), and  \n2) whether it actually updated anything (version before/after, if shown).",
+      "nextRunAt": 1772833474082,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 245
+      "lastInputTokens": 91,
+      "lastOutputTokens": 226
     }
   ]
 }
