@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772816407852,
+  "updatedAt": 1772818206921,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1772824480000
+          "resetAt": 1772824481000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772815473974,
+      "lastRunAt": 1772817273986,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *trigger* message, not the script’s output.\n\nTo confirm whether the auto-update succeeded (or why it failed), please paste the last ~50 lines of the cron log for that job (or the stdout/stderr output you got from cron). If you don’t have a dedicated log file, the quickest is to check wherever your system routes cron output (often syslog/journal) and grab the entries around **2026-03-06 16:44 UTC**.\n\nIf you tell me:\n- whether this is running under **cron** or **systemd timer**, and\n- where you currently capture logs for cron jobs,\n\nI’ll point you to the exact command/path to pull the right output."
+      "lastSummary": "I only see the cron trigger line (“Run: python3 …/openclaw_auto_update.py”) but not the script’s stdout/stderr or exit status.\n\nCan you paste the cron output (or wherever it logs—e.g., journalctl/syslog or the cron email), especially:\n- whether it exited 0 / non‑zero\n- any “updated/failed” lines\n- any pip/npm/git messages\n\nWith that I can tell if the auto-update actually succeeded or if it needs a fix (lockfile, permissions, venv drift, etc.)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772815473974,
+      "lastRunAt": 1772817273986,
       "lastStatus": "ok",
-      "lastDurationMs": 5997,
+      "lastDurationMs": 5544,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *trigger* message, not the script’s output.\n\nTo confirm whether the auto-update succeeded (or why it failed), please paste the last ~50 lines of the cron log for that job (or the stdout/stderr output you got from cron). If you don’t have a dedicated log file, the quickest is to check wherever your system routes cron output (often syslog/journal) and grab the entries around **2026-03-06 16:44 UTC**.\n\nIf you tell me:\n- whether this is running under **cron** or **systemd timer**, and\n- where you currently capture logs for cron jobs,\n\nI’ll point you to the exact command/path to pull the right output.",
-      "nextRunAt": 1772817273974,
+      "lastSummary": "I only see the cron trigger line (“Run: python3 …/openclaw_auto_update.py”) but not the script’s stdout/stderr or exit status.\n\nCan you paste the cron output (or wherever it logs—e.g., journalctl/syslog or the cron email), especially:\n- whether it exited 0 / non‑zero\n- any “updated/failed” lines\n- any pip/npm/git messages\n\nWith that I can tell if the auto-update actually succeeded or if it needs a fix (lockfile, permissions, venv drift, etc.).",
+      "nextRunAt": 1772819073986,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 216
+      "lastOutputTokens": 215
     }
   ]
 }
