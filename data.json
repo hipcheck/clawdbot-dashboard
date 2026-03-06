@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772766007044,
+  "updatedAt": 1772767806948,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772765073667,
+      "lastRunAt": 1772766873679,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron message is just the trigger line (“Run: …”) — it doesn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nTo make these notifications actionable, could you paste the next lines from the cron output (anything after that “Run:” line), especially any lines containing **“error”**, **“traceback”**, **“updated”**, or a **version**?\n\nIf you don’t have output because cron is currently discarding it, the fix is to ensure stdout/stderr get captured, e.g. run it like:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n(or configure your cron runner to always include stdout/stderr in the message).\n\nSend me either the log snippet or the log file content and I’ll interpret what happened."
+      "lastSummary": "I only see the cron trigger line here (no stdout/stderr from the script), so I can’t tell whether the auto-update succeeded, did nothing, or errored.\n\nIf you want, I can:\n1) check what version OpenClaw is currently on, and  \n2) inspect the last run logs/output for `openclaw_auto_update.py` (and fix it if it’s failing).\n\nTell me which you prefer (or paste the script output/log snippet if you have it)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772765073667,
+      "lastRunAt": 1772766873679,
       "lastStatus": "ok",
-      "lastDurationMs": 7305,
+      "lastDurationMs": 6614,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron message is just the trigger line (“Run: …”) — it doesn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nTo make these notifications actionable, could you paste the next lines from the cron output (anything after that “Run:” line), especially any lines containing **“error”**, **“traceback”**, **“updated”**, or a **version**?\n\nIf you don’t have output because cron is currently discarding it, the fix is to ensure stdout/stderr get captured, e.g. run it like:\n\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n(or configure your cron runner to always include stdout/stderr in the message).\n\nSend me either the log snippet or the log file content and I’ll interpret what happened.",
-      "nextRunAt": 1772766873667,
+      "lastSummary": "I only see the cron trigger line here (no stdout/stderr from the script), so I can’t tell whether the auto-update succeeded, did nothing, or errored.\n\nIf you want, I can:\n1) check what version OpenClaw is currently on, and  \n2) inspect the last run logs/output for `openclaw_auto_update.py` (and fix it if it’s failing).\n\nTell me which you prefer (or paste the script output/log snippet if you have it).",
+      "nextRunAt": 1772768673679,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 286
+      "lastOutputTokens": 184
     }
   ]
 }
