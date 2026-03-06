@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772838008200,
+  "updatedAt": 1772839807066,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772837074117,
+      "lastRunAt": 1772838874159,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron fired and executed:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this notification doesn’t include the script’s stdout/stderr or exit status, so I can’t tell whether the update succeeded, did nothing (“already up to date”), or failed.\n\nCan you paste the cron job’s captured output (or tell me where this cron writes logs—e.g., syslog/journalctl, a specific logfile, or emailed output)? If you share that, I’ll interpret it and suggest next steps."
+      "lastSummary": "I got the cron “Run” notification, but it doesn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the last ~50 lines of the cron log for that job (or wherever you’re redirecting output)? Common places to check:\n\n- `/var/log/syslog` (Debian/Ubuntu cron output often lands here)\n- `/var/log/cron` (some distros)\n- Your cron entry’s explicit redirect target (e.g. `>> /home/clawd/.openclaw/logs/auto-update.log 2>&1`)\n\nIf you tell me how the cron is configured (the exact crontab line), I’ll point you to the exact file/command to grab the relevant output."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772837074117,
+      "lastRunAt": 1772838874159,
       "lastStatus": "ok",
-      "lastDurationMs": 8009,
+      "lastDurationMs": 6667,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron fired and executed:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut this notification doesn’t include the script’s stdout/stderr or exit status, so I can’t tell whether the update succeeded, did nothing (“already up to date”), or failed.\n\nCan you paste the cron job’s captured output (or tell me where this cron writes logs—e.g., syslog/journalctl, a specific logfile, or emailed output)? If you share that, I’ll interpret it and suggest next steps.",
-      "nextRunAt": 1772838874117,
+      "lastSummary": "I got the cron “Run” notification, but it doesn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the last ~50 lines of the cron log for that job (or wherever you’re redirecting output)? Common places to check:\n\n- `/var/log/syslog` (Debian/Ubuntu cron output often lands here)\n- `/var/log/cron` (some distros)\n- Your cron entry’s explicit redirect target (e.g. `>> /home/clawd/.openclaw/logs/auto-update.log 2>&1`)\n\nIf you tell me how the cron is configured (the exact crontab line), I’ll point you to the exact file/command to grab the relevant output.",
+      "nextRunAt": 1772840674159,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 230
+      "lastInputTokens": 91,
+      "lastOutputTokens": 225
     }
   ]
 }
