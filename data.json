@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772780408418,
+  "updatedAt": 1772782206668,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772779473754,
+      "lastRunAt": 1772781273764,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I got the cron trigger, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update **actually succeeded**, did nothing (“already up to date”), or hit an error.\n\nIf you want this to be self-reporting, the simplest fix is to have the cron job capture and send the last N lines of output. Two good options:\n\n1) **Log to a file (recommended)**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log 2>&1`\n- Then have cron also send/tail:\n  - `tail -n 50 /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log`\n\n2) **Make the Python script print a clear summary**\n- At the end, print something like:\n  - current installed version\n  - latest available version\n  - whether an update was applied\n  - restart required? (yes/no)\n  - any errors\n\nIf you paste the last ~50 lines of whatever output/log you currently have for this run, I’ll tell you whether it updated cleanly and what to change so future runs come through with a one-line “OK/UPDATED/FAILED” status."
+      "lastSummary": "I’m only seeing the cron *trigger* (that it ran `openclaw_auto_update.py`), not the script’s stdout/stderr or whether it succeeded.\n\nTo tell you what happened, I need the run output. Can you paste either:\n\n1) The cron log lines for that run (stdout/stderr), or  \n2) Wherever your cron redirects output (e.g., a logfile path), or  \n3) The last ~100 lines from your system journal for the cron service/user.\n\nIf you tell me how this cron is configured (crontab line or systemd timer), I can tell you exactly where to look."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772779473754,
+      "lastRunAt": 1772781273764,
       "lastStatus": "ok",
-      "lastDurationMs": 9176,
+      "lastDurationMs": 7174,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I got the cron trigger, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update **actually succeeded**, did nothing (“already up to date”), or hit an error.\n\nIf you want this to be self-reporting, the simplest fix is to have the cron job capture and send the last N lines of output. Two good options:\n\n1) **Log to a file (recommended)**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log 2>&1`\n- Then have cron also send/tail:\n  - `tail -n 50 /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log`\n\n2) **Make the Python script print a clear summary**\n- At the end, print something like:\n  - current installed version\n  - latest available version\n  - whether an update was applied\n  - restart required? (yes/no)\n  - any errors\n\nIf you paste the last ~50 lines of whatever output/log you currently have for this run, I’ll tell you whether it updated cleanly and what to change so future runs come through with a one-line “OK/UPDATED/FAILED” status.",
-      "nextRunAt": 1772781273754,
+      "lastSummary": "I’m only seeing the cron *trigger* (that it ran `openclaw_auto_update.py`), not the script’s stdout/stderr or whether it succeeded.\n\nTo tell you what happened, I need the run output. Can you paste either:\n\n1) The cron log lines for that run (stdout/stderr), or  \n2) Wherever your cron redirects output (e.g., a logfile path), or  \n3) The last ~100 lines from your system journal for the cron service/user.\n\nIf you tell me how this cron is configured (crontab line or systemd timer), I can tell you exactly where to look.",
+      "nextRunAt": 1772783073764,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 401
+      "lastOutputTokens": 234
     }
   ]
 }
