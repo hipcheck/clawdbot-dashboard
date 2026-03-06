@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772776807279,
+  "updatedAt": 1772778607083,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772775873727,
+      "lastRunAt": 1772777673744,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t see the stdout/stderr from that cron run from here (this message is just the trigger/notification).\n\nIf you want, paste the last ~50 lines of the cron/job log and I’ll tell you whether the update succeeded and what changed. Typical places to grab it from:\n\n- systemd timer/service (if that’s how it’s scheduled):  \n  `journalctl -u infraops:openclaw-auto-update --since \"2 hours ago\" --no-pager`\n- or whatever cron wrapper you’re using: the log file path it writes to (often under `/var/log/` or your workspace).\n\nAlso helpful: did it actually update OpenClaw, restart the gateway, and report the before/after versions? If the script prints that, paste it."
+      "lastSummary": "Did the auto-update script print any output (success / “no updates” / error)? This cron ping only shows what *was run*, not whether it *worked*.\n\nIf you paste the last ~30 lines of the cron output (or point me to where `openclaw_auto_update.py` logs), I can tell you whether:\n- OpenClaw was actually updated,\n- anything failed (pip/npm/git),\n- and whether the gateway/service restart (if any) succeeded."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772775873727,
+      "lastRunAt": 1772777673744,
       "lastStatus": "ok",
-      "lastDurationMs": 5590,
+      "lastDurationMs": 5942,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t see the stdout/stderr from that cron run from here (this message is just the trigger/notification).\n\nIf you want, paste the last ~50 lines of the cron/job log and I’ll tell you whether the update succeeded and what changed. Typical places to grab it from:\n\n- systemd timer/service (if that’s how it’s scheduled):  \n  `journalctl -u infraops:openclaw-auto-update --since \"2 hours ago\" --no-pager`\n- or whatever cron wrapper you’re using: the log file path it writes to (often under `/var/log/` or your workspace).\n\nAlso helpful: did it actually update OpenClaw, restart the gateway, and report the before/after versions? If the script prints that, paste it.",
-      "nextRunAt": 1772777673727,
+      "lastSummary": "Did the auto-update script print any output (success / “no updates” / error)? This cron ping only shows what *was run*, not whether it *worked*.\n\nIf you paste the last ~30 lines of the cron output (or point me to where `openclaw_auto_update.py` logs), I can tell you whether:\n- OpenClaw was actually updated,\n- anything failed (pip/npm/git),\n- and whether the gateway/service restart (if any) succeeded.",
+      "nextRunAt": 1772779473744,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 235
+      "lastOutputTokens": 227
     }
   ]
 }
