@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772771406840,
+  "updatedAt": 1772773207328,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772770473699,
+      "lastRunAt": 1772772273709,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (I don’t have a command-execution tool in this chat), so I can’t see whether the auto-update succeeded or failed.\n\nTo confirm what happened, please paste one of the following:\n\n1) The cron job’s stdout/stderr (whatever your scheduler captured), **or**  \n2) The last ~200 lines of the log file if the script writes one, **or**  \n3) Run it manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf you tell me where this script logs (or paste the script header), I’ll tell you exactly what to grep for to verify: current OpenClaw version before/after, whether `pip/npm` steps ran, and whether any restart was attempted."
+      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded.\n\nIf you paste the last ~50 lines of the cron output (or the log file it writes), I’ll interpret it and tell you what happened.\n\nIf you want this to be self-reporting going forward, the script/cron should either:\n- redirect output to a log (and include the exit code), e.g. `...openclaw_auto_update.py >> /var/log/openclaw-auto-update.log 2>&1`, or\n- send a short “OK / FAILED + version” message to Telegram on completion."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772770473699,
+      "lastRunAt": 1772772273709,
       "lastStatus": "ok",
-      "lastDurationMs": 6227,
+      "lastDurationMs": 7173,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (I don’t have a command-execution tool in this chat), so I can’t see whether the auto-update succeeded or failed.\n\nTo confirm what happened, please paste one of the following:\n\n1) The cron job’s stdout/stderr (whatever your scheduler captured), **or**  \n2) The last ~200 lines of the log file if the script writes one, **or**  \n3) Run it manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf you tell me where this script logs (or paste the script header), I’ll tell you exactly what to grep for to verify: current OpenClaw version before/after, whether `pip/npm` steps ran, and whether any restart was attempted.",
-      "nextRunAt": 1772772273699,
+      "lastSummary": "I’m only seeing the cron “Run:” line, not the script’s stdout/stderr or exit status—so I can’t tell whether the auto-update succeeded.\n\nIf you paste the last ~50 lines of the cron output (or the log file it writes), I’ll interpret it and tell you what happened.\n\nIf you want this to be self-reporting going forward, the script/cron should either:\n- redirect output to a log (and include the exit code), e.g. `...openclaw_auto_update.py >> /var/log/openclaw-auto-update.log 2>&1`, or\n- send a short “OK / FAILED + version” message to Telegram on completion.",
+      "nextRunAt": 1772774073709,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 276
+      "lastInputTokens": 7387,
+      "lastOutputTokens": 233
     }
   ]
 }
