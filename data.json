@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772839807066,
+  "updatedAt": 1772841608414,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772838874159,
+      "lastRunAt": 1772840674167,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I got the cron “Run” notification, but it doesn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the last ~50 lines of the cron log for that job (or wherever you’re redirecting output)? Common places to check:\n\n- `/var/log/syslog` (Debian/Ubuntu cron output often lands here)\n- `/var/log/cron` (some distros)\n- Your cron entry’s explicit redirect target (e.g. `>> /home/clawd/.openclaw/logs/auto-update.log 2>&1`)\n\nIf you tell me how the cron is configured (the exact crontab line), I’ll point you to the exact file/command to grab the relevant output."
+      "lastSummary": "Did the cron job print any output (success/failure, updated version, restart status), or is this just the “started” notification?\n\nIf you paste the last ~30–50 lines of the cron log/output for that run, I can tell you whether it:\n- detected a new OpenClaw version,\n- pulled/installed it,\n- restarted the gateway cleanly,\n- or failed partway (and where).\n\nIf you don’t have a log handy: what’s the expected behavior of `openclaw_auto_update.py`—does it post a summary message on success, or is silence considered “OK”?"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772838874159,
+      "lastRunAt": 1772840674167,
       "lastStatus": "ok",
-      "lastDurationMs": 6667,
+      "lastDurationMs": 5633,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I got the cron “Run” notification, but it doesn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or failed.\n\nCan you paste the last ~50 lines of the cron log for that job (or wherever you’re redirecting output)? Common places to check:\n\n- `/var/log/syslog` (Debian/Ubuntu cron output often lands here)\n- `/var/log/cron` (some distros)\n- Your cron entry’s explicit redirect target (e.g. `>> /home/clawd/.openclaw/logs/auto-update.log 2>&1`)\n\nIf you tell me how the cron is configured (the exact crontab line), I’ll point you to the exact file/command to grab the relevant output.",
-      "nextRunAt": 1772840674159,
+      "lastSummary": "Did the cron job print any output (success/failure, updated version, restart status), or is this just the “started” notification?\n\nIf you paste the last ~30–50 lines of the cron log/output for that run, I can tell you whether it:\n- detected a new OpenClaw version,\n- pulled/installed it,\n- restarted the gateway cleanly,\n- or failed partway (and where).\n\nIf you don’t have a log handy: what’s the expected behavior of `openclaw_auto_update.py`—does it post a summary message on success, or is silence considered “OK”?",
+      "nextRunAt": 1772842474167,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 91,
-      "lastOutputTokens": 225
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 207
     }
   ]
 }
