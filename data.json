@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772922613391,
+  "updatedAt": 1772924415836,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 42,
-          "resetAt": 1772932479000
+          "usedPercent": 73,
+          "resetAt": 1772925282000
         },
         {
           "label": "Day",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 5,
-          "resetAt": 1773507599845
+          "resetAt": 1773507600263
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772921675194,
+      "lastRunAt": 1772923475205,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron run **didn’t apply an update** — it skipped because OpenClaw considers the system “busy” while there’s an active **direct session** (i.e., you’re chatting with me right now).\n\nThe auto-updater’s logic is explicit about this:\n\n- “busy” if any direct session has `age < 15 min` (`OC_BUSY_SESSION_MS`, default 900,000ms)\n- “busy” if the next cron wake is soon (`OC_CRON_BUFFER_MS`, default 20 min)\n\nSo the expected outcome for a cron fired during an active chat is:\n\n- `SKIP (direct session active (age=...ms))`\n\nYou can confirm the audit trail here:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want to force it **right now**, run manually after you’re done chatting (or from SSH) with:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, tell me whether you prefer:\n1) “never update while I’m chatting” (current behavior), or  \n2) “ok to update even during chat if an update is available” — and I’ll adjust the thresholds/heuristics accordingly."
+      "lastSummary": "No updates available right now — `openclaw_auto_update.py` ran and returned **NOOP (no update)**."
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772921675194,
+      "lastRunAt": 1772923475205,
       "lastStatus": "ok",
-      "lastDurationMs": 112838,
+      "lastDurationMs": 69816,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run **didn’t apply an update** — it skipped because OpenClaw considers the system “busy” while there’s an active **direct session** (i.e., you’re chatting with me right now).\n\nThe auto-updater’s logic is explicit about this:\n\n- “busy” if any direct session has `age < 15 min` (`OC_BUSY_SESSION_MS`, default 900,000ms)\n- “busy” if the next cron wake is soon (`OC_CRON_BUFFER_MS`, default 20 min)\n\nSo the expected outcome for a cron fired during an active chat is:\n\n- `SKIP (direct session active (age=...ms))`\n\nYou can confirm the audit trail here:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want to force it **right now**, run manually after you’re done chatting (or from SSH) with:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, tell me whether you prefer:\n1) “never update while I’m chatting” (current behavior), or  \n2) “ok to update even during chat if an update is available” — and I’ll adjust the thresholds/heuristics accordingly.",
-      "nextRunAt": 1772923475194,
+      "lastSummary": "No updates available right now — `openclaw_auto_update.py` ran and returned **NOOP (no update)**.",
+      "nextRunAt": 1772925275205,
       "model": null,
-      "lastTotalTokens": 11684,
-      "lastInputTokens": 12812,
-      "lastOutputTokens": 901
+      "lastTotalTokens": 8486,
+      "lastInputTokens": 8551,
+      "lastOutputTokens": 106
     }
   ]
 }
