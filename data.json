@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772859607721,
+  "updatedAt": 1772861406880,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
-          "resetAt": 1772860481000
+          "usedPercent": 0,
+          "resetAt": 1772879408000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772858674290,
+      "lastRunAt": 1772860474302,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron fired and ran:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut the notification doesn’t include the script’s stdout/stderr or exit status, so I can’t tell whether it succeeded or failed from this alone.\n\nIf you want me to sanity-check it, paste either:\n- the cron job’s captured output (stdout/stderr), or\n- wherever you’re logging it (e.g., a logfile path + last ~100 lines), or\n- the script’s own “last run” summary if it writes one anywhere.\n\nIf it *isn’t* currently logging, I’d recommend updating the cron entry to append output to a logfile and/or print a clear “OK/UPDATED/NOOP/FAILED” line at the end so these alerts are actionable."
+      "lastSummary": "Noted—cron `infraops:openclaw-auto-update` just triggered `openclaw_auto_update.py` (05:14 UTC).\n\nIf you want me to confirm whether it *actually* updated anything or failed, paste the cron stdout/stderr (or the last ~50 lines of whatever log file this job writes to), and I’ll interpret it + suggest next steps."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772858674290,
+      "lastRunAt": 1772860474302,
       "lastStatus": "ok",
-      "lastDurationMs": 7136,
+      "lastDurationMs": 5754,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron fired and ran:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nBut the notification doesn’t include the script’s stdout/stderr or exit status, so I can’t tell whether it succeeded or failed from this alone.\n\nIf you want me to sanity-check it, paste either:\n- the cron job’s captured output (stdout/stderr), or\n- wherever you’re logging it (e.g., a logfile path + last ~100 lines), or\n- the script’s own “last run” summary if it writes one anywhere.\n\nIf it *isn’t* currently logging, I’d recommend updating the cron entry to append output to a logfile and/or print a clear “OK/UPDATED/NOOP/FAILED” line at the end so these alerts are actionable.",
-      "nextRunAt": 1772860474290,
+      "lastSummary": "Noted—cron `infraops:openclaw-auto-update` just triggered `openclaw_auto_update.py` (05:14 UTC).\n\nIf you want me to confirm whether it *actually* updated anything or failed, paste the cron stdout/stderr (or the last ~50 lines of whatever log file this job writes to), and I’ll interpret it + suggest next steps.",
+      "nextRunAt": 1772862274302,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 91,
-      "lastOutputTokens": 285
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 185
     }
   ]
 }
