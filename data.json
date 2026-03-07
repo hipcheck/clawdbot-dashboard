@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772879406739,
+  "updatedAt": 1772881207902,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772896480000
+          "resetAt": 1772899208000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772878474421,
+      "lastRunAt": 1772880274432,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` directly from here (no shell tool in this chat), but I can help you verify it ran and interpret/fix anything it reports.\n\nIf you paste the cron’s stdout/stderr (or the last ~100 lines of the log file it writes to), I’ll review it and tell you:\n\n- whether an update actually happened,\n- what version changed (if any),\n- whether a restart was performed/needed,\n- and any remediation steps if it failed.\n\nIf you don’t already have a log handy, run this on the host and paste the output:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho \"-----\"\nopenclaw gateway status || true\nopenclaw status || true\n```"
+      "lastSummary": "I can’t see the stdout/stderr from that cron run from here—this message is just the trigger metadata.\n\nIf you want me to diagnose whether the auto-update succeeded, paste the last ~50–200 lines of the cron/job output (or wherever you’re logging it).\n\nIf you *don’t* currently capture logs, the quickest fix is to have the cron redirect output to a file, e.g.:\n\n- append `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nThen send me the tail of that log after the next run."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772878474421,
+      "lastRunAt": 1772880274432,
       "lastStatus": "ok",
-      "lastDurationMs": 5782,
+      "lastDurationMs": 4739,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` directly from here (no shell tool in this chat), but I can help you verify it ran and interpret/fix anything it reports.\n\nIf you paste the cron’s stdout/stderr (or the last ~100 lines of the log file it writes to), I’ll review it and tell you:\n\n- whether an update actually happened,\n- what version changed (if any),\n- whether a restart was performed/needed,\n- and any remediation steps if it failed.\n\nIf you don’t already have a log handy, run this on the host and paste the output:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho \"-----\"\nopenclaw gateway status || true\nopenclaw status || true\n```",
-      "nextRunAt": 1772880274421,
+      "lastSummary": "I can’t see the stdout/stderr from that cron run from here—this message is just the trigger metadata.\n\nIf you want me to diagnose whether the auto-update succeeded, paste the last ~50–200 lines of the cron/job output (or wherever you’re logging it).\n\nIf you *don’t* currently capture logs, the quickest fix is to have the cron redirect output to a file, e.g.:\n\n- append `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\nThen send me the tail of that log after the next run.",
+      "nextRunAt": 1772882074432,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 235
+      "lastInputTokens": 91,
+      "lastOutputTokens": 193
     }
   ]
 }
