@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772924415836,
+  "updatedAt": 1772926211644,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,13 +7,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 73,
-          "resetAt": 1772925282000
+          "usedPercent": 0,
+          "resetAt": 1772944213000
         },
         {
           "label": "Day",
-          "usedPercent": 29,
-          "resetAt": 1773265479000
+          "usedPercent": 0,
+          "resetAt": 1773531013000
         }
       ],
       "plan": "plus ($0.00)",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 5,
-          "resetAt": 1773507600263
+          "resetAt": 1773507600080
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772923475205,
+      "lastRunAt": 1772925275291,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "No updates available right now — `openclaw_auto_update.py` ran and returned **NOOP (no update)**."
+      "lastSummary": "Checked the auto-update run:\n\n- As of **2026-03-07T23:15:50Z**, the script reports **`NOOP (no update)`** — i.e., **no OpenClaw update was available to apply**.\n- Logged in: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (last line now shows that NOOP).\n\nIf you expected an update tonight, the next thing to check is `openclaw update status --json` to confirm what the updater sees as “latest.”"
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772923475205,
+      "lastRunAt": 1772925275291,
       "lastStatus": "ok",
-      "lastDurationMs": 69816,
+      "lastDurationMs": 84924,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "No updates available right now — `openclaw_auto_update.py` ran and returned **NOOP (no update)**.",
-      "nextRunAt": 1772925275205,
+      "lastSummary": "Checked the auto-update run:\n\n- As of **2026-03-07T23:15:50Z**, the script reports **`NOOP (no update)`** — i.e., **no OpenClaw update was available to apply**.\n- Logged in: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (last line now shows that NOOP).\n\nIf you expected an update tonight, the next thing to check is `openclaw update status --json` to confirm what the updater sees as “latest.”",
+      "nextRunAt": 1772927075291,
       "model": null,
-      "lastTotalTokens": 8486,
-      "lastInputTokens": 8551,
-      "lastOutputTokens": 106
+      "lastTotalTokens": 11560,
+      "lastInputTokens": 12534,
+      "lastOutputTokens": 796
     }
   ]
 }
