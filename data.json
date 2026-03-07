@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772902810602,
+  "updatedAt": 1772904615872,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 3,
           "resetAt": 1772919881000
         },
         {
           "label": "Day",
-          "usedPercent": 5,
+          "usedPercent": 6,
           "resetAt": 1773265479000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772902797500,
+      "lastRunAt": 1772904574511,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That error usually means one of these is true:\n\n1) You’re **not running the command as the same user that owns the user-systemd instance** (often you’re root via `sudo`, while the gateway service is u"
+      "lastSummary": "Perfect: **gateway RPC is healthy again** (`RPC: ok`). With the node host also running, this should fix the “no filesystem/CLI tooling” issue in Telegram.\n\nNow do the final confirmation:\n\n```bash\nexpo"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772901874550,
+      "lastRunAt": 1772903674561,
       "lastStatus": "ok",
-      "lastDurationMs": 7421,
+      "lastDurationMs": 6013,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron invocation + timestamp, not the script’s result.\n\nIf you paste the job’s stdout/stderr (or point me to wherever `openclaw_auto_update.py` logs), I can tell you whether it actually:\n- found an update,\n- pulled/installed it successfully,\n- restarted the gateway cleanly,\n- or hit an error (permissions, git state, pip deps, etc.).\n\nIf you want, also tell me how this cron is configured to capture output (e.g., redirected to a log file, syslog, or emailed).",
-      "nextRunAt": 1772903674550,
+      "lastSummary": "I’m only seeing the cron *invocation*, not the script’s output/result.\n\nTo confirm whether the auto-update actually succeeded (or failed), can you paste the stdout/stderr from that cron run (or point me to where this job logs)?\n\nQuick self-check on the VPS (if you’re at a shell):\n- Check cron logs (common): `journalctl -u cron --since \"10 min ago\"` (or `grep CRON /var/log/syslog | tail -n 50`)\n- Run the script manually once to see output:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you paste the output here, I’ll tell you exactly what happened and what to change (e.g., permissions, git auth, pip deps, restart needed, etc.).",
+      "nextRunAt": 1772905474561,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 227
+      "lastInputTokens": 91,
+      "lastOutputTokens": 286
     }
   ]
 }
