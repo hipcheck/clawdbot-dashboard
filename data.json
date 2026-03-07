@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772917219135,
+  "updatedAt": 1772919015965,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 61,
-          "resetAt": 1772919881000
+          "usedPercent": 30,
+          "resetAt": 1772932479000
         },
         {
           "label": "Day",
-          "usedPercent": 24,
+          "usedPercent": 25,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 36,
-          "resetAt": 1772920800672
+          "usedPercent": 43,
+          "resetAt": 1772920800358
         },
         {
           "label": "Week",
-          "usedPercent": 4,
-          "resetAt": 1773507600672
+          "usedPercent": 5,
+          "resetAt": 1773507600358
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"197\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 21:00 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"219\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 21:27 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1772917210038,
+      "lastRunAt": 1772918846792,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Saved here:\n\n- `cgm-meal-align/out/meal_glucose_metrics.csv`\n- `cgm-meal-align/out/food_response_summary.csv`\n- `cgm-meal-align/out/ingredient_contribution_summary.csv`\n- `cgm-mea"
+      "lastSummary": "[[reply_to_current]] Yes — a few additional flags stood out:\n\n- **Prolon fasting bar (Mar 3, 2:34 PM)**  \n  Very large single-item response: **Δ +102 mg/dL** (highest in this slice).\n\n- **High-carb di"
     },
     {
       "id": "infraops",
@@ -75,7 +75,7 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772917047090,
+      "lastRunAt": 1772918299511,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772916274813,
+      "lastRunAt": 1772918074830,
       "lastStatus": "ok",
-      "lastDurationMs": 59045,
+      "lastDurationMs": 64953,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t update anything — it **skipped because a direct (human) session was active**:\n\n- `SKIP (direct session active (age=414848ms))` at `2026-03-07T20:45:20Z` (logged in `memory/openclaw-updates.log`)\n\nSo nothing’s wrong; it’s working as designed to avoid updating while you’re chatting/active. If you want to force an update anyway, tell me and I’ll run `openclaw update --yes` explicitly.",
-      "nextRunAt": 1772918074813,
+      "lastSummary": "That auto-update run **skipped** because a direct chat session was active.\n\nLatest log entry:\n- `2026-03-07T21:15:23Z SKIP (direct session active (age=278903ms))`\n\nSo **no update was applied** this time. If you want it to update even while you’re chatting, we can lower `OC_BUSY_SESSION_MS` (currently 15 min) or change the heuristic.",
+      "nextRunAt": 1772919874830,
       "model": null,
-      "lastTotalTokens": 11267,
-      "lastInputTokens": 11896,
-      "lastOutputTokens": 401
+      "lastTotalTokens": 10948,
+      "lastInputTokens": 11102,
+      "lastOutputTokens": 463
     }
   ]
 }
