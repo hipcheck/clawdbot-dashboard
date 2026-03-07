@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772906417311,
+  "updatedAt": 1772908216643,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
+          "usedPercent": 9,
           "resetAt": 1772919881000
         },
         {
           "label": "Day",
-          "usedPercent": 6,
+          "usedPercent": 8,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1772920800784
+          "usedPercent": 17,
+          "resetAt": 1772920800043
         },
         {
           "label": "Week",
-          "usedPercent": 0,
-          "resetAt": 1773507600784
+          "usedPercent": 2,
+          "resetAt": 1773507600043
         }
       ],
       "error": null
@@ -73,12 +73,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"256\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 17:59 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772906396978,
+      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
+      "activityChannel": "tui",
+      "lastRunAt": 1772907750514,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] I can’t directly read that path from here — this session doesn’t have filesystem/CLI read access, so I can’t open `/home/clawd/.openclaw/cron/runs/*.jsonl` myself.\n\nWorkarounds (p"
+      "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772905474603,
+      "lastRunAt": 1772907274624,
       "lastStatus": "ok",
-      "lastDurationMs": 9540,
+      "lastDurationMs": 87318,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t see what that script actually did from this cron “Run:” line alone (success/failure/output isn’t included).\n\nIf you paste the cron’s stdout/stderr (or wherever you log it), I can tell you whether it updated anything and if there were warnings.\n\nIf you *don’t* currently capture output, two quick improvements for this cron job:\n\n1) **Append logs to a file**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Have the script emit a short “result line”**\n- e.g., “Updated from X → Y” / “No updates available” / “Failed: …”\nso your cron notification includes the outcome.\n\nIf you tell me how this cron is configured (where it runs / how it reports), I’ll suggest the cleanest way to surface the result automatically.",
-      "nextRunAt": 1772907274603,
+      "lastSummary": "The auto-update run **did not apply an update** this time — it **skipped** because a direct (human) session was considered active:\n\n- Result: `SKIP (direct session active (age=39907ms))`\n- Exit code: `0` (noop/skip)\n\nIt’s logged here now:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest line: `2026-03-07T18:15:52Z ...`).",
+      "nextRunAt": 1772909074624,
       "model": null,
-      "lastTotalTokens": 7387,
-      "lastInputTokens": 5979,
-      "lastOutputTokens": 338
+      "lastTotalTokens": 15532,
+      "lastInputTokens": 16061,
+      "lastOutputTokens": 678
     }
   ]
 }
