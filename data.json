@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772847008231,
+  "updatedAt": 1772848807539,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772846074205,
+      "lastRunAt": 1772847874217,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t actually execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (I only have the messaging/session tools in this chat), so I can’t confirm whether that cron run succeeded.\n\nIf you want this cron to be self-reporting in Telegram, the most reliable setup is:\n\n1) **Log stdout+stderr to a file**\n- In the cron command, append something like:\n  - `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Send a short success/failure summary to Telegram**\n- Have the script (or a wrapper) emit a one-line status + last few log lines on failure.\n\nIf you paste either:\n- the last ~50 lines of the script’s output, or\n- the `openclaw_auto_update.py` contents (or the relevant parts),\nI’ll help you make it produce a clean “updated / already up-to-date / failed” message and keep the noise low."
+      "lastSummary": "I see the cron trigger fired, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nIf you want, I can help you make this cron self-report next time by logging + notifying on errors. Two quick options:\n\n1) **Log to a file**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Only alert on failure**\n- Wrap it so non-zero exit pages you (or sends a Telegram message).\n\nTell me which you prefer, and where you want logs to live (workspace `logs/` is fine), and paste any existing log output if you already have it."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772846074205,
+      "lastRunAt": 1772847874217,
       "lastStatus": "ok",
-      "lastDurationMs": 7430,
+      "lastDurationMs": 8069,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t actually execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (I only have the messaging/session tools in this chat), so I can’t confirm whether that cron run succeeded.\n\nIf you want this cron to be self-reporting in Telegram, the most reliable setup is:\n\n1) **Log stdout+stderr to a file**\n- In the cron command, append something like:\n  - `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Send a short success/failure summary to Telegram**\n- Have the script (or a wrapper) emit a one-line status + last few log lines on failure.\n\nIf you paste either:\n- the last ~50 lines of the script’s output, or\n- the `openclaw_auto_update.py` contents (or the relevant parts),\nI’ll help you make it produce a clean “updated / already up-to-date / failed” message and keep the noise low.",
-      "nextRunAt": 1772847874205,
+      "lastSummary": "I see the cron trigger fired, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nIf you want, I can help you make this cron self-report next time by logging + notifying on errors. Two quick options:\n\n1) **Log to a file**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Only alert on failure**\n- Wrap it so non-zero exit pages you (or sends a Telegram message).\n\nTell me which you prefer, and where you want logs to live (workspace `logs/` is fine), and paste any existing log output if you already have it.",
+      "nextRunAt": 1772849674217,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 338
+      "lastOutputTokens": 339
     }
   ]
 }
