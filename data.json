@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772848807539,
+  "updatedAt": 1772850607329,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772847874217,
+      "lastRunAt": 1772849674229,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I see the cron trigger fired, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nIf you want, I can help you make this cron self-report next time by logging + notifying on errors. Two quick options:\n\n1) **Log to a file**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Only alert on failure**\n- Wrap it so non-zero exit pages you (or sends a Telegram message).\n\nTell me which you prefer, and where you want logs to live (workspace `logs/` is fine), and paste any existing log output if you already have it."
+      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded or failed.\n\nTo make this actionable next run, have the cron capture logs, e.g. run it like:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log 2>&1\n```\n\n(or wherever you prefer logs to live)\n\nIf you paste the last ~50 lines of whatever log/output you have for this run, I’ll interpret it and tell you exactly what happened (updated / no-op / error, and what to fix)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772847874217,
+      "lastRunAt": 1772849674229,
       "lastStatus": "ok",
-      "lastDurationMs": 8069,
+      "lastDurationMs": 5979,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I see the cron trigger fired, but it didn’t include the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded, did nothing, or failed.\n\nIf you want, I can help you make this cron self-report next time by logging + notifying on errors. Two quick options:\n\n1) **Log to a file**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Only alert on failure**\n- Wrap it so non-zero exit pages you (or sends a Telegram message).\n\nTell me which you prefer, and where you want logs to live (workspace `logs/` is fine), and paste any existing log output if you already have it.",
-      "nextRunAt": 1772849674217,
+      "lastSummary": "I see the cron trigger, but it didn’t include the script’s stdout/stderr, so I can’t tell whether the auto-update succeeded or failed.\n\nTo make this actionable next run, have the cron capture logs, e.g. run it like:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw-auto-update.log 2>&1\n```\n\n(or wherever you prefer logs to live)\n\nIf you paste the last ~50 lines of whatever log/output you have for this run, I’ll interpret it and tell you exactly what happened (updated / no-op / error, and what to fix).",
+      "nextRunAt": 1772851474229,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 339
+      "lastOutputTokens": 229
     }
   ]
 }
