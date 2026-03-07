@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772845208472,
+  "updatedAt": 1772847008231,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772844274192,
+      "lastRunAt": 1772846074205,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron header, not the script’s output.\n\nCan you paste the **stdout/stderr** from that cron run (or a screenshot), especially any lines mentioning:\n- “update available”\n- “pulling…”\n- “pip/uv install…”\n- “error/traceback”\n\nIf you don’t have the captured output, the fastest next step is to check where cron is logging for this job and paste the last ~100 lines around 12:44 AM UTC. Common places:\n- `/var/log/syslog` (Debian/Ubuntu)\n- `/var/log/cron` (some distros)\n- `journalctl -u cron --since \"2026-03-07 00:40:00\" --until \"2026-03-07 00:50:00\"` (systemd)\n\nAlso: did you configure this cron to **email output** or redirect to a file (e.g., `>> .../openclaw_auto_update.log 2>&1`)? If yes, tell me the path and paste the tail of that log."
+      "lastSummary": "I can’t actually execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (I only have the messaging/session tools in this chat), so I can’t confirm whether that cron run succeeded.\n\nIf you want this cron to be self-reporting in Telegram, the most reliable setup is:\n\n1) **Log stdout+stderr to a file**\n- In the cron command, append something like:\n  - `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Send a short success/failure summary to Telegram**\n- Have the script (or a wrapper) emit a one-line status + last few log lines on failure.\n\nIf you paste either:\n- the last ~50 lines of the script’s output, or\n- the `openclaw_auto_update.py` contents (or the relevant parts),\nI’ll help you make it produce a clean “updated / already up-to-date / failed” message and keep the noise low."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772844274192,
+      "lastRunAt": 1772846074205,
       "lastStatus": "ok",
-      "lastDurationMs": 7972,
+      "lastDurationMs": 7430,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron header, not the script’s output.\n\nCan you paste the **stdout/stderr** from that cron run (or a screenshot), especially any lines mentioning:\n- “update available”\n- “pulling…”\n- “pip/uv install…”\n- “error/traceback”\n\nIf you don’t have the captured output, the fastest next step is to check where cron is logging for this job and paste the last ~100 lines around 12:44 AM UTC. Common places:\n- `/var/log/syslog` (Debian/Ubuntu)\n- `/var/log/cron` (some distros)\n- `journalctl -u cron --since \"2026-03-07 00:40:00\" --until \"2026-03-07 00:50:00\"` (systemd)\n\nAlso: did you configure this cron to **email output** or redirect to a file (e.g., `>> .../openclaw_auto_update.log 2>&1`)? If yes, tell me the path and paste the tail of that log.",
-      "nextRunAt": 1772846074192,
+      "lastSummary": "I can’t actually execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from here (I only have the messaging/session tools in this chat), so I can’t confirm whether that cron run succeeded.\n\nIf you want this cron to be self-reporting in Telegram, the most reliable setup is:\n\n1) **Log stdout+stderr to a file**\n- In the cron command, append something like:\n  - `>> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Send a short success/failure summary to Telegram**\n- Have the script (or a wrapper) emit a one-line status + last few log lines on failure.\n\nIf you paste either:\n- the last ~50 lines of the script’s output, or\n- the `openclaw_auto_update.py` contents (or the relevant parts),\nI’ll help you make it produce a clean “updated / already up-to-date / failed” message and keep the noise low.",
+      "nextRunAt": 1772847874205,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 294
+      "lastOutputTokens": 338
     }
   ]
 }
