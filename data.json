@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772901007632,
+  "updatedAt": 1772902810602,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772914479000
+          "usedPercent": 1,
+          "resetAt": 1772919881000
         },
         {
           "label": "Day",
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772900074536,
+      "activityKind": "chat",
+      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
+      "activityChannel": "tui",
+      "lastRunAt": 1772902797500,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Got it — this looks like a cron trigger notification for:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nI don’t see any stdout/stderr or success/failure status in what came through. If you want me to validate whether it actually updated anything (or troubleshoot failures), paste one of these:\n\n1) The cron job’s captured output (stdout/stderr), if cron is configured to email/log it  \n2) The script’s own log output (if it writes to a file)  \n3) The last ~50 lines from your cron/syslog for that job (wherever your system logs cron runs)\n\nIf you tell me how you’re running cron (system cron, cron.d, systemd timer, etc.), I can tell you the exact command to pull the relevant logs."
+      "lastSummary": "That error usually means one of these is true:\n\n1) You’re **not running the command as the same user that owns the user-systemd instance** (often you’re root via `sudo`, while the gateway service is u"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772900074536,
+      "lastRunAt": 1772901874550,
       "lastStatus": "ok",
-      "lastDurationMs": 5678,
+      "lastDurationMs": 7421,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Got it — this looks like a cron trigger notification for:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nI don’t see any stdout/stderr or success/failure status in what came through. If you want me to validate whether it actually updated anything (or troubleshoot failures), paste one of these:\n\n1) The cron job’s captured output (stdout/stderr), if cron is configured to email/log it  \n2) The script’s own log output (if it writes to a file)  \n3) The last ~50 lines from your cron/syslog for that job (wherever your system logs cron runs)\n\nIf you tell me how you’re running cron (system cron, cron.d, systemd timer, etc.), I can tell you the exact command to pull the relevant logs.",
-      "nextRunAt": 1772901874536,
+      "lastSummary": "I’m only seeing the cron invocation + timestamp, not the script’s result.\n\nIf you paste the job’s stdout/stderr (or point me to wherever `openclaw_auto_update.py` logs), I can tell you whether it actually:\n- found an update,\n- pulled/installed it successfully,\n- restarted the gateway cleanly,\n- or hit an error (permissions, git state, pip deps, etc.).\n\nIf you want, also tell me how this cron is configured to capture output (e.g., redirected to a log file, syslog, or emailed).",
+      "nextRunAt": 1772903674550,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 233
+      "lastOutputTokens": 227
     }
   ]
 }
