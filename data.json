@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772886607755,
+  "updatedAt": 1772888408379,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772900081000
+          "usedPercent": 1,
+          "resetAt": 1772896480000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772885674461,
+      "lastRunAt": 1772887474470,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can see the cron trigger, but I don’t have an execution tool in this chat to actually run `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` or view its stdout/stderr.\n\nIf you want me to diagnose the update run, paste one of these:\n\n1) The cron job output (stdout/stderr) from whatever scheduler is running it, or  \n2) Any log file that `openclaw_auto_update.py` writes (path + last ~100 lines), or  \n3) Run it manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf this message is just the cron “started” notification and you don’t need anything else, tell me whether it completed successfully (or share the failure output)."
+      "lastSummary": "I can’t run that script from here directly (no shell/exec tool in this chat), so I need the run output to tell whether the auto-update actually did anything.\n\nPlease paste one of these:\n\n1) The cron job stdout/stderr for that run (whatever your cron logs captured), **or**\n2) The last ~100 lines of the script’s own log file (if it writes one), **or**\n3) Run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want a quick “did it update?” check meanwhile, paste the output of:\n```bash\nopenclaw --version\nopenclaw gateway status\n```\n\nOnce I see the output, I’ll tell you:\n- whether an update was found/applied,\n- whether the gateway was restarted cleanly,\n- and what (if anything) needs fixing."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772885674461,
+      "lastRunAt": 1772887474470,
       "lastStatus": "ok",
-      "lastDurationMs": 7154,
+      "lastDurationMs": 6710,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can see the cron trigger, but I don’t have an execution tool in this chat to actually run `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` or view its stdout/stderr.\n\nIf you want me to diagnose the update run, paste one of these:\n\n1) The cron job output (stdout/stderr) from whatever scheduler is running it, or  \n2) Any log file that `openclaw_auto_update.py` writes (path + last ~100 lines), or  \n3) Run it manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho $?\n```\n\nIf this message is just the cron “started” notification and you don’t need anything else, tell me whether it completed successfully (or share the failure output).",
-      "nextRunAt": 1772887474461,
+      "lastSummary": "I can’t run that script from here directly (no shell/exec tool in this chat), so I need the run output to tell whether the auto-update actually did anything.\n\nPlease paste one of these:\n\n1) The cron job stdout/stderr for that run (whatever your cron logs captured), **or**\n2) The last ~100 lines of the script’s own log file (if it writes one), **or**\n3) Run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want a quick “did it update?” check meanwhile, paste the output of:\n```bash\nopenclaw --version\nopenclaw gateway status\n```\n\nOnce I see the output, I’ll tell you:\n- whether an update was found/applied,\n- whether the gateway was restarted cleanly,\n- and what (if anything) needs fixing.",
+      "nextRunAt": 1772889274470,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 7387,
-      "lastOutputTokens": 257
+      "lastOutputTokens": 256
     }
   ]
 }
