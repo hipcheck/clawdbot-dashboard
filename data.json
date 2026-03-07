@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772904615872,
+  "updatedAt": 1772906417311,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1772919881000
         },
         {
@@ -28,8 +28,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 5,
+          "resetAt": 1772920800784
+        },
+        {
+          "label": "Week",
+          "usedPercent": 0,
+          "resetAt": 1773507600784
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -62,12 +73,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
-      "activityChannel": "tui",
-      "lastRunAt": 1772904574511,
+      "activityLabel": "json\n{\n  \"message_id\": \"256\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 17:59 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772906396978,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Perfect: **gateway RPC is healthy again** (`RPC: ok`). With the node host also running, this should fix the “no filesystem/CLI tooling” issue in Telegram.\n\nNow do the final confirmation:\n\n```bash\nexpo"
+      "lastSummary": "[[reply_to_current]] I can’t directly read that path from here — this session doesn’t have filesystem/CLI read access, so I can’t open `/home/clawd/.openclaw/cron/runs/*.jsonl` myself.\n\nWorkarounds (p"
     },
     {
       "id": "km",
@@ -215,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772903674561,
+      "lastRunAt": 1772905474603,
       "lastStatus": "ok",
-      "lastDurationMs": 6013,
+      "lastDurationMs": 9540,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I’m only seeing the cron *invocation*, not the script’s output/result.\n\nTo confirm whether the auto-update actually succeeded (or failed), can you paste the stdout/stderr from that cron run (or point me to where this job logs)?\n\nQuick self-check on the VPS (if you’re at a shell):\n- Check cron logs (common): `journalctl -u cron --since \"10 min ago\"` (or `grep CRON /var/log/syslog | tail -n 50`)\n- Run the script manually once to see output:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you paste the output here, I’ll tell you exactly what happened and what to change (e.g., permissions, git auth, pip deps, restart needed, etc.).",
-      "nextRunAt": 1772905474561,
+      "lastSummary": "I can’t see what that script actually did from this cron “Run:” line alone (success/failure/output isn’t included).\n\nIf you paste the cron’s stdout/stderr (or wherever you log it), I can tell you whether it updated anything and if there were warnings.\n\nIf you *don’t* currently capture output, two quick improvements for this cron job:\n\n1) **Append logs to a file**\n- Run command as:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n2) **Have the script emit a short “result line”**\n- e.g., “Updated from X → Y” / “No updates available” / “Failed: …”\nso your cron notification includes the outcome.\n\nIf you tell me how this cron is configured (where it runs / how it reports), I’ll suggest the cleanest way to surface the result automatically.",
+      "nextRunAt": 1772907274603,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 91,
-      "lastOutputTokens": 286
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 338
     }
   ]
 }
