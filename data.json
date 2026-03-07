@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772888408379,
+  "updatedAt": 1772890206866,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1772896480000
+          "resetAt": 1772900081000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772887474470,
+      "lastRunAt": 1772889274483,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t run that script from here directly (no shell/exec tool in this chat), so I need the run output to tell whether the auto-update actually did anything.\n\nPlease paste one of these:\n\n1) The cron job stdout/stderr for that run (whatever your cron logs captured), **or**\n2) The last ~100 lines of the script’s own log file (if it writes one), **or**\n3) Run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want a quick “did it update?” check meanwhile, paste the output of:\n```bash\nopenclaw --version\nopenclaw gateway status\n```\n\nOnce I see the output, I’ll tell you:\n- whether an update was found/applied,\n- whether the gateway was restarted cleanly,\n- and what (if anything) needs fixing."
+      "lastSummary": "I don’t see the script’s stdout/stderr (only that the cron fired). To tell whether the auto-update actually did anything (or failed), I need one of these:\n\n1) **Paste the cron job output** (stdout/stderr) if your cron runner captures it.\n\n2) Or check whatever log the script writes to and paste the last ~50 lines.\n\nIf you want, I can also help you make this cron self-report cleanly. Two good options:\n\n- **Have cron capture output to a log** (example):\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n- **Make the script print a short final summary** every run (e.g., “already up-to-date”, “updated from X→Y”, “restart required”, or the exact error).\n\nSend me whichever output you have and I’ll interpret it / suggest the next fix."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772887474470,
+      "lastRunAt": 1772889274483,
       "lastStatus": "ok",
-      "lastDurationMs": 6710,
+      "lastDurationMs": 7286,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t run that script from here directly (no shell/exec tool in this chat), so I need the run output to tell whether the auto-update actually did anything.\n\nPlease paste one of these:\n\n1) The cron job stdout/stderr for that run (whatever your cron logs captured), **or**\n2) The last ~100 lines of the script’s own log file (if it writes one), **or**\n3) Run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want a quick “did it update?” check meanwhile, paste the output of:\n```bash\nopenclaw --version\nopenclaw gateway status\n```\n\nOnce I see the output, I’ll tell you:\n- whether an update was found/applied,\n- whether the gateway was restarted cleanly,\n- and what (if anything) needs fixing.",
-      "nextRunAt": 1772889274470,
+      "lastSummary": "I don’t see the script’s stdout/stderr (only that the cron fired). To tell whether the auto-update actually did anything (or failed), I need one of these:\n\n1) **Paste the cron job output** (stdout/stderr) if your cron runner captures it.\n\n2) Or check whatever log the script writes to and paste the last ~50 lines.\n\nIf you want, I can also help you make this cron self-report cleanly. Two good options:\n\n- **Have cron capture output to a log** (example):\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n- **Make the script print a short final summary** every run (e.g., “already up-to-date”, “updated from X→Y”, “restart required”, or the exact error).\n\nSend me whichever output you have and I’ll interpret it / suggest the next fix.",
+      "nextRunAt": 1772891074483,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 256
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 282
     }
   ]
 }
