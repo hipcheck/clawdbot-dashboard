@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772892008453,
+  "updatedAt": 1772893807445,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1772900081000
+          "resetAt": 1772896480000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772891074492,
+      "lastRunAt": 1772892874498,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I only see the cron trigger line here—not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or what it changed.\n\nTo confirm what happened, can you paste either:\n\n1) The cron job’s captured output (whatever your cron runner logs for that job), or  \n2) The contents of any log file the script writes (common patterns: `logs/openclaw_auto_update.log`, `scripts/logs/...`, or a path printed by the script).\n\nQuick way to get useful diagnostics on the next run (if you control the cron definition):\n- change it to:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py --verbose`\n  - and append `2>&1` so stderr is captured too.\n\nIf you paste the script (or tell me where it logs), I’ll point you to the exact place to look for: version before/after, whether the gateway was restarted, and any failures."
+      "lastSummary": "Got it — that’s the cron trigger firing for `infraops:openclaw-auto-update`.\n\nTo tell whether it actually updated anything (or failed), I need the script’s stdout/stderr or whatever log file it writes to. Can you paste the cron output (or point me to the log path if you configured one)?\n\nIf you ran this via system cron, the output is often emailed to the local user or redirected in the crontab entry (e.g., `... >> /var/log/openclaw-auto-update.log 2>&1`)."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772891074492,
+      "lastRunAt": 1772892874498,
       "lastStatus": "ok",
-      "lastDurationMs": 10076,
+      "lastDurationMs": 8075,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I only see the cron trigger line here—not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or what it changed.\n\nTo confirm what happened, can you paste either:\n\n1) The cron job’s captured output (whatever your cron runner logs for that job), or  \n2) The contents of any log file the script writes (common patterns: `logs/openclaw_auto_update.log`, `scripts/logs/...`, or a path printed by the script).\n\nQuick way to get useful diagnostics on the next run (if you control the cron definition):\n- change it to:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py --verbose`\n  - and append `2>&1` so stderr is captured too.\n\nIf you paste the script (or tell me where it logs), I’ll point you to the exact place to look for: version before/after, whether the gateway was restarted, and any failures.",
-      "nextRunAt": 1772892874492,
+      "lastSummary": "Got it — that’s the cron trigger firing for `infraops:openclaw-auto-update`.\n\nTo tell whether it actually updated anything (or failed), I need the script’s stdout/stderr or whatever log file it writes to. Can you paste the cron output (or point me to the log path if you configured one)?\n\nIf you ran this via system cron, the output is often emailed to the local user or redirected in the crontab entry (e.g., `... >> /var/log/openclaw-auto-update.log 2>&1`).",
+      "nextRunAt": 1772894674498,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 300
+      "lastOutputTokens": 204
     }
   ]
 }
