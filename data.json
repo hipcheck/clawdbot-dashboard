@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772920818110,
+  "updatedAt": 1772922613391,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1772937938000
+          "usedPercent": 42,
+          "resetAt": 1772932479000
         },
         {
           "label": "Day",
-          "usedPercent": 26,
+          "usedPercent": 29,
           "resetAt": 1773265479000
         }
       ],
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 5,
-          "resetAt": 1773507600572
+          "resetAt": 1773507599845
         }
       ],
       "error": null
@@ -48,12 +48,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"237\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 21:44 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"271\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 22:21 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1772919847637,
+      "lastRunAt": 1772922121624,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Resent ✅  \nPlease approve: **5fac20ba**\n\nI’ll post the cron contents right away once it clears."
+      "lastSummary": "[[reply_to_current]] Great — here’s a **full rewritten `setup-job-pipeline-cron.sh`** for **project Unfair Advantage**.\n\nIt includes:\n- correct Obsidian path\n- Obsidian-only outputs\n- AAGM cap + non-A"
     },
     {
       "id": "infraops",
@@ -71,13 +71,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
-      "activityChannel": "tui",
-      "lastRunAt": 1772919969770,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1772921675194,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
+      "lastSummary": "That cron run **didn’t apply an update** — it skipped because OpenClaw considers the system “busy” while there’s an active **direct session** (i.e., you’re chatting with me right now).\n\nThe auto-updater’s logic is explicit about this:\n\n- “busy” if any direct session has `age < 15 min` (`OC_BUSY_SESSION_MS`, default 900,000ms)\n- “busy” if the next cron wake is soon (`OC_CRON_BUFFER_MS`, default 20 min)\n\nSo the expected outcome for a cron fired during an active chat is:\n\n- `SKIP (direct session active (age=...ms))`\n\nYou can confirm the audit trail here:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want to force it **right now**, run manually after you’re done chatting (or from SSH) with:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, tell me whether you prefer:\n1) “never update while I’m chatting” (current behavior), or  \n2) “ok to update even during chat if an update is available” — and I’ll adjust the thresholds/heuristics accordingly."
     },
     {
       "id": "km",
@@ -225,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772919875184,
+      "lastRunAt": 1772921675194,
       "lastStatus": "ok",
-      "lastDurationMs": 63712,
+      "lastDurationMs": 112838,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I tried to run `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`, but OpenClaw refused to execute it right now:\n\n- `SKIP (direct session active ...)`\n\nSo this cron “run” notification didn’t actually perform the update in this moment (at least not via this agent invocation).\n\nIf you want to force it now, tell me and I’ll run it as soon as the runtime allows—or you can run it manually on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you’d rather, I can also check what the script *would* update (dry-run / status) if it supports that—paste the script’s `--help` output or the file contents and I’ll wire it up.",
-      "nextRunAt": 1772921675184,
+      "lastSummary": "That cron run **didn’t apply an update** — it skipped because OpenClaw considers the system “busy” while there’s an active **direct session** (i.e., you’re chatting with me right now).\n\nThe auto-updater’s logic is explicit about this:\n\n- “busy” if any direct session has `age < 15 min` (`OC_BUSY_SESSION_MS`, default 900,000ms)\n- “busy” if the next cron wake is soon (`OC_CRON_BUFFER_MS`, default 20 min)\n\nSo the expected outcome for a cron fired during an active chat is:\n\n- `SKIP (direct session active (age=...ms))`\n\nYou can confirm the audit trail here:\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want to force it **right now**, run manually after you’re done chatting (or from SSH) with:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, tell me whether you prefer:\n1) “never update while I’m chatting” (current behavior), or  \n2) “ok to update even during chat if an update is available” — and I’ll adjust the thresholds/heuristics accordingly.",
+      "nextRunAt": 1772923475194,
       "model": null,
-      "lastTotalTokens": 8506,
-      "lastInputTokens": 379,
-      "lastOutputTokens": 336
+      "lastTotalTokens": 11684,
+      "lastInputTokens": 12812,
+      "lastOutputTokens": 901
     }
   ]
 }
