@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772919015965,
+  "updatedAt": 1772920818110,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 30,
-          "resetAt": 1772932479000
+          "usedPercent": 0,
+          "resetAt": 1772937938000
         },
         {
           "label": "Day",
-          "usedPercent": 25,
+          "usedPercent": 26,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 43,
-          "resetAt": 1772920800358
+          "usedPercent": 0
         },
         {
           "label": "Week",
           "usedPercent": 5,
-          "resetAt": 1773507600358
+          "resetAt": 1773507600572
         }
       ],
       "error": null
@@ -49,12 +48,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"219\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 21:27 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"237\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 21:44 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1772918846792,
+      "lastRunAt": 1772919847637,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Yes — a few additional flags stood out:\n\n- **Prolon fasting bar (Mar 3, 2:34 PM)**  \n  Very large single-item response: **Δ +102 mg/dL** (highest in this slice).\n\n- **High-carb di"
+      "lastSummary": "[[reply_to_current]] Resent ✅  \nPlease approve: **5fac20ba**\n\nI’ll post the cron contents right away once it clears."
     },
     {
       "id": "infraops",
@@ -75,7 +74,7 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772918299511,
+      "lastRunAt": 1772919969770,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
@@ -226,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772918074830,
+      "lastRunAt": 1772919875184,
       "lastStatus": "ok",
-      "lastDurationMs": 64953,
+      "lastDurationMs": 63712,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That auto-update run **skipped** because a direct chat session was active.\n\nLatest log entry:\n- `2026-03-07T21:15:23Z SKIP (direct session active (age=278903ms))`\n\nSo **no update was applied** this time. If you want it to update even while you’re chatting, we can lower `OC_BUSY_SESSION_MS` (currently 15 min) or change the heuristic.",
-      "nextRunAt": 1772919874830,
+      "lastSummary": "I tried to run `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`, but OpenClaw refused to execute it right now:\n\n- `SKIP (direct session active ...)`\n\nSo this cron “run” notification didn’t actually perform the update in this moment (at least not via this agent invocation).\n\nIf you want to force it now, tell me and I’ll run it as soon as the runtime allows—or you can run it manually on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you’d rather, I can also check what the script *would* update (dry-run / status) if it supports that—paste the script’s `--help` output or the file contents and I’ll wire it up.",
+      "nextRunAt": 1772921675184,
       "model": null,
-      "lastTotalTokens": 10948,
-      "lastInputTokens": 11102,
-      "lastOutputTokens": 463
+      "lastTotalTokens": 8506,
+      "lastInputTokens": 379,
+      "lastOutputTokens": 336
     }
   ]
 }
