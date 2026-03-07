@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772868607208,
+  "updatedAt": 1772870409259,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772880282000
+          "resetAt": 1772878479000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772867674345,
+      "lastRunAt": 1772869474355,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That cron entry is just the scheduler telling you it kicked off:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nTo know whether the update actually succeeded (or if anything changed), I need the script’s output/logs.\n\nIf your cron is configured to email/stdout capture, paste the last ~50–100 lines of output. If not, tell me how you’re running cron logging on this box (e.g., syslog/journald, or a dedicated logfile path), and I’ll tell you exactly what to grab."
+      "lastSummary": "I can’t execute that script directly from here (no shell/exec access), but this cron notice is essentially telling you it *attempted* to run:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nTo confirm whether it succeeded, run one of these on the host and paste the output:\n\n1) If you have cron logging enabled (Debian/Ubuntu):\n- `grep -i openclaw-auto-update /var/log/syslog | tail -n 200`\n\n2) If the script writes its own log (common pattern), check for recent log files:\n- `ls -lah /home/clawd/.openclaw/workspace/scripts/ | grep -i log`\n- `find /home/clawd/.openclaw/workspace -maxdepth 3 -type f -iname \"*update*.log\" -o -iname \"*auto_update*.log\" | tail -n 50`\n\n3) Run it manually to see stdout/stderr:\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you paste the last ~100 lines of output/logs, I’ll tell you whether the update actually happened and what (if anything) needs fixing."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772867674345,
+      "lastRunAt": 1772869474355,
       "lastStatus": "ok",
-      "lastDurationMs": 6803,
+      "lastDurationMs": 10245,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron entry is just the scheduler telling you it kicked off:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nTo know whether the update actually succeeded (or if anything changed), I need the script’s output/logs.\n\nIf your cron is configured to email/stdout capture, paste the last ~50–100 lines of output. If not, tell me how you’re running cron logging on this box (e.g., syslog/journald, or a dedicated logfile path), and I’ll tell you exactly what to grab.",
-      "nextRunAt": 1772869474345,
+      "lastSummary": "I can’t execute that script directly from here (no shell/exec access), but this cron notice is essentially telling you it *attempted* to run:\n\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nTo confirm whether it succeeded, run one of these on the host and paste the output:\n\n1) If you have cron logging enabled (Debian/Ubuntu):\n- `grep -i openclaw-auto-update /var/log/syslog | tail -n 200`\n\n2) If the script writes its own log (common pattern), check for recent log files:\n- `ls -lah /home/clawd/.openclaw/workspace/scripts/ | grep -i log`\n- `find /home/clawd/.openclaw/workspace -maxdepth 3 -type f -iname \"*update*.log\" -o -iname \"*auto_update*.log\" | tail -n 50`\n\n3) Run it manually to see stdout/stderr:\n- `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nIf you paste the last ~100 lines of output/logs, I’ll tell you whether the update actually happened and what (if anything) needs fixing.",
+      "nextRunAt": 1772871274355,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 91,
-      "lastOutputTokens": 220
+      "lastOutputTokens": 356
     }
   ]
 }
