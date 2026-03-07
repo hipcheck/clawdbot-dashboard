@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772861406880,
+  "updatedAt": 1772863208688,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772879408000
+          "resetAt": 1772880282000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772860474302,
+      "lastRunAt": 1772862274311,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Noted—cron `infraops:openclaw-auto-update` just triggered `openclaw_auto_update.py` (05:14 UTC).\n\nIf you want me to confirm whether it *actually* updated anything or failed, paste the cron stdout/stderr (or the last ~50 lines of whatever log file this job writes to), and I’ll interpret it + suggest next steps."
+      "lastSummary": "I can’t actually execute that cron job from here (no shell/exec access in this chat), but I can help you verify what happened and interpret/fix failures.\n\nTo check whether `openclaw_auto_update.py` succeeded, grab one of these and paste it here:\n\n1) **Cron log output** (common places):\n- `/var/log/syslog` (Debian/Ubuntu): look for `CRON` lines containing `openclaw_auto_update.py`\n- or any dedicated log your cron setup writes to (often you’ll see `>> /path/to/log 2>&1` in the crontab)\n\n2) **Your crontab entry** (so we can see where stdout/stderr goes):\n- `crontab -l`\n\nIf you want a quick “did it run” check right now, run:\n- `grep -R \"openclaw_auto_update.py\" /var/log/syslog | tail -n 50`\n\nAlso: if the script is supposed to update OpenClaw itself, paste the last ~50 lines of its log (or stdout). Then I can tell you whether it updated cleanly, whether a restart is needed, and what changed."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772860474302,
+      "lastRunAt": 1772862274311,
       "lastStatus": "ok",
-      "lastDurationMs": 5754,
+      "lastDurationMs": 8554,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Noted—cron `infraops:openclaw-auto-update` just triggered `openclaw_auto_update.py` (05:14 UTC).\n\nIf you want me to confirm whether it *actually* updated anything or failed, paste the cron stdout/stderr (or the last ~50 lines of whatever log file this job writes to), and I’ll interpret it + suggest next steps.",
-      "nextRunAt": 1772862274302,
+      "lastSummary": "I can’t actually execute that cron job from here (no shell/exec access in this chat), but I can help you verify what happened and interpret/fix failures.\n\nTo check whether `openclaw_auto_update.py` succeeded, grab one of these and paste it here:\n\n1) **Cron log output** (common places):\n- `/var/log/syslog` (Debian/Ubuntu): look for `CRON` lines containing `openclaw_auto_update.py`\n- or any dedicated log your cron setup writes to (often you’ll see `>> /path/to/log 2>&1` in the crontab)\n\n2) **Your crontab entry** (so we can see where stdout/stderr goes):\n- `crontab -l`\n\nIf you want a quick “did it run” check right now, run:\n- `grep -R \"openclaw_auto_update.py\" /var/log/syslog | tail -n 50`\n\nAlso: if the script is supposed to update OpenClaw itself, paste the last ~50 lines of its log (or stdout). Then I can tell you whether it updated cleanly, whether a restart is needed, and what changed.",
+      "nextRunAt": 1772864074311,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 185
+      "lastOutputTokens": 328
     }
   ]
 }
