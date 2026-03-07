@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772908216643,
+  "updatedAt": 1772910014500,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
+          "usedPercent": 14,
           "resetAt": 1772919881000
         },
         {
           "label": "Day",
-          "usedPercent": 8,
+          "usedPercent": 9,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 17,
-          "resetAt": 1772920800043
+          "usedPercent": 18,
+          "resetAt": 1772920800025
         },
         {
           "label": "Week",
           "usedPercent": 2,
-          "resetAt": 1773507600043
+          "resetAt": 1773507600025
         }
       ],
       "error": null
@@ -48,13 +48,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "cron",
-      "activityLabel": "feature-builder:morning-proposal",
-      "activityChannel": null,
-      "lastRunAt": 1772884800010,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"62\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 18:52 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772909580014,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "WARNING: prescan stale/missing (could not verify `/tmp/openclaw_prescan_summary.md` timestamp).\n\nSend to: Telegram (Andreas)\n\n**One high-leverage improvement to build today:**\nBuild an **automated job-fit scoring + ranking layer** in your NYC Senior Marketing Manager pipeline (before Obsidian/GitHub write).\n\n**Impact:**\nCuts manual triage time and surfaces best-fit roles first, so you apply faster to higher-quality opportunities with less cognitive load.\n\n**Risk:**\nBad weighting could hide good roles (false negatives) if scoring is too strict early on.\n\n**First 3 steps:**\n1. Define a v1 scoring rubric (e.g., title match, NYC/hybrid fit, seniority, salary signal, required skills overlap).\n2. Implement scorer in the pipeline and attach `fit_score` + `why` to each job record.\n3. Add a daily “Top 10 ranked roles” output in Obsidian (with links + rationale) and keep all lower-scored roles in a separate backlog section."
+      "lastSummary": "[[reply_to_current]] Done — I’ll **include supplements** in the analysis.\n\nAs soon as the pending run is approved (id **289adba9**), I’ll execute with supplements included and send you the results."
     },
     {
       "id": "infraops",
@@ -75,7 +75,7 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772907750514,
+      "lastRunAt": 1772909680857,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772907274624,
+      "lastRunAt": 1772909074669,
       "lastStatus": "ok",
-      "lastDurationMs": 87318,
+      "lastDurationMs": 61582,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update run **did not apply an update** this time — it **skipped** because a direct (human) session was considered active:\n\n- Result: `SKIP (direct session active (age=39907ms))`\n- Exit code: `0` (noop/skip)\n\nIt’s logged here now:\n`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log` (latest line: `2026-03-07T18:15:52Z ...`).",
-      "nextRunAt": 1772909074624,
+      "lastSummary": "That cron run didn’t update anything — it **skipped because a direct chat session was active** at the time.\n\nLog tail (`memory/openclaw-updates.log`) shows:\n- `2026-03-07T18:45:23Z SKIP (direct session active (age=39265ms))`\n\nSo: no update attempt was made, and nothing changed. If you want it to update even while we’re chatting, we can lower/disable the “busy session” threshold (`OC_BUSY_SESSION_MS`) for the cron env, but the current behavior is the safe default.",
+      "nextRunAt": 1772910874669,
       "model": null,
-      "lastTotalTokens": 15532,
-      "lastInputTokens": 16061,
-      "lastOutputTokens": 678
+      "lastTotalTokens": 10954,
+      "lastInputTokens": 11203,
+      "lastOutputTokens": 504
     }
   ]
 }
