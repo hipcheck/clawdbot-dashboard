@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772911816703,
+  "updatedAt": 1772913618588,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 25,
+          "usedPercent": 29,
           "resetAt": 1772919881000
         },
         {
           "label": "Day",
-          "usedPercent": 13,
+          "usedPercent": 14,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 20,
-          "resetAt": 1772920800114
+          "usedPercent": 23,
+          "resetAt": 1772920800014
         },
         {
           "label": "Week",
           "usedPercent": 3,
-          "resetAt": 1773507600114
+          "resetAt": 1773507600014
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"96\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 19:16 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityLabel": "json\n{\n  \"message_id\": \"108\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 20:00 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1772910979005,
+      "lastRunAt": 1772913601061,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] I will — and I found the hard blocker:\n\n`sudo` on this host needs an interactive password, so I can’t install the missing package from my side.\n\nPlease run this once on the host:\n"
+      "lastSummary": "[[reply_to_current]] Sent again ✅\n\nPlease approve request: **877cc630**  \nAs soon as it’s approved, I’ll run and send you the results immediately."
     },
     {
       "id": "infraops",
@@ -75,7 +75,7 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772910966142,
+      "lastRunAt": 1772913554875,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772910874690,
+      "lastRunAt": 1772912674712,
       "lastStatus": "ok",
-      "lastDurationMs": 123046,
+      "lastDurationMs": 71913,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron fired, but I can’t actually execute the command from here right now — `exec` is being blocked with:\n\n`SKIP (direct session active ...)`\n\nSo nothing was updated yet.\n\nIf you want to run the update *now*, run this on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nThen paste the output and I’ll sanity-check what it changed (versions, service restart, failures, etc.).\n\nIf you’d rather, I can try again once you’re not actively in the direct session (the block should clear when the session is idle).",
-      "nextRunAt": 1772912674690,
+      "lastSummary": "Auto-update cron ran cleanly — **no update was available** (`NOOP (no update)`).\n\nCurrent OpenClaw version on the box: **2026.3.2**.",
+      "nextRunAt": 1772914474712,
       "model": null,
-      "lastTotalTokens": 8622,
-      "lastInputTokens": 8736,
-      "lastOutputTokens": 379
+      "lastTotalTokens": 8867,
+      "lastInputTokens": 882,
+      "lastOutputTokens": 354
     }
   ]
 }
