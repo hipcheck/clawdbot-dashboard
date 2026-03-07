@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772910014500,
+  "updatedAt": 1772911816703,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
+          "usedPercent": 25,
           "resetAt": 1772919881000
         },
         {
           "label": "Day",
-          "usedPercent": 9,
+          "usedPercent": 13,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 18,
-          "resetAt": 1772920800025
+          "usedPercent": 20,
+          "resetAt": 1772920800114
         },
         {
           "label": "Week",
-          "usedPercent": 2,
-          "resetAt": 1773507600025
+          "usedPercent": 3,
+          "resetAt": 1773507600114
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"62\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 18:52 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityLabel": "json\n{\n  \"message_id\": \"96\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 19:16 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772909580014,
+      "lastRunAt": 1772910979005,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Done — I’ll **include supplements** in the analysis.\n\nAs soon as the pending run is approved (id **289adba9**), I’ll execute with supplements included and send you the results."
+      "lastSummary": "[[reply_to_current]] I will — and I found the hard blocker:\n\n`sudo` on this host needs an interactive password, so I can’t install the missing package from my side.\n\nPlease run this once on the host:\n"
     },
     {
       "id": "infraops",
@@ -75,7 +75,7 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772909680857,
+      "lastRunAt": 1772910966142,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772909074669,
+      "lastRunAt": 1772910874690,
       "lastStatus": "ok",
-      "lastDurationMs": 61582,
+      "lastDurationMs": 123046,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t update anything — it **skipped because a direct chat session was active** at the time.\n\nLog tail (`memory/openclaw-updates.log`) shows:\n- `2026-03-07T18:45:23Z SKIP (direct session active (age=39265ms))`\n\nSo: no update attempt was made, and nothing changed. If you want it to update even while we’re chatting, we can lower/disable the “busy session” threshold (`OC_BUSY_SESSION_MS`) for the cron env, but the current behavior is the safe default.",
-      "nextRunAt": 1772910874669,
+      "lastSummary": "That cron fired, but I can’t actually execute the command from here right now — `exec` is being blocked with:\n\n`SKIP (direct session active ...)`\n\nSo nothing was updated yet.\n\nIf you want to run the update *now*, run this on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nThen paste the output and I’ll sanity-check what it changed (versions, service restart, failures, etc.).\n\nIf you’d rather, I can try again once you’re not actively in the direct session (the block should clear when the session is idle).",
+      "nextRunAt": 1772912674690,
       "model": null,
-      "lastTotalTokens": 10954,
-      "lastInputTokens": 11203,
-      "lastOutputTokens": 504
+      "lastTotalTokens": 8622,
+      "lastInputTokens": 8736,
+      "lastOutputTokens": 379
     }
   ]
 }
