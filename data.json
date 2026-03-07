@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772893807445,
+  "updatedAt": 1772895608191,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1772896480000
+          "resetAt": 1772900081000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772892874498,
+      "lastRunAt": 1772894674508,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Got it — that’s the cron trigger firing for `infraops:openclaw-auto-update`.\n\nTo tell whether it actually updated anything (or failed), I need the script’s stdout/stderr or whatever log file it writes to. Can you paste the cron output (or point me to the log path if you configured one)?\n\nIf you ran this via system cron, the output is often emailed to the local user or redirected in the crontab entry (e.g., `... >> /var/log/openclaw-auto-update.log 2>&1`)."
+      "lastSummary": "Got it — that’s the scheduled `openclaw-auto-update` cron firing.\n\nI can’t see the script’s stdout/stderr from here. To confirm whether it actually updated anything (or failed), please paste either:\n\n1) The cron output (stdout/stderr) for that run, or  \n2) The last ~100 lines of the script’s log (wherever `openclaw_auto_update.py` writes it), or  \n3) If you don’t have logs: run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho \"exit=$?\"\n```\n\nIf you want a quick “did it change?” check, also paste:\n```bash\nopenclaw --version || openclaw version\nopenclaw gateway status\n```"
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772892874498,
+      "lastRunAt": 1772894674508,
       "lastStatus": "ok",
-      "lastDurationMs": 8075,
+      "lastDurationMs": 6431,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Got it — that’s the cron trigger firing for `infraops:openclaw-auto-update`.\n\nTo tell whether it actually updated anything (or failed), I need the script’s stdout/stderr or whatever log file it writes to. Can you paste the cron output (or point me to the log path if you configured one)?\n\nIf you ran this via system cron, the output is often emailed to the local user or redirected in the crontab entry (e.g., `... >> /var/log/openclaw-auto-update.log 2>&1`).",
-      "nextRunAt": 1772894674498,
+      "lastSummary": "Got it — that’s the scheduled `openclaw-auto-update` cron firing.\n\nI can’t see the script’s stdout/stderr from here. To confirm whether it actually updated anything (or failed), please paste either:\n\n1) The cron output (stdout/stderr) for that run, or  \n2) The last ~100 lines of the script’s log (wherever `openclaw_auto_update.py` writes it), or  \n3) If you don’t have logs: run it once manually and paste output:\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\necho \"exit=$?\"\n```\n\nIf you want a quick “did it change?” check, also paste:\n```bash\nopenclaw --version || openclaw version\nopenclaw gateway status\n```",
+      "nextRunAt": 1772896474508,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 204
+      "lastOutputTokens": 279
     }
   ]
 }
