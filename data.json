@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772913618588,
+  "updatedAt": 1772915412719,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 29,
+          "usedPercent": 46,
           "resetAt": 1772919881000
         },
         {
           "label": "Day",
-          "usedPercent": 14,
+          "usedPercent": 19,
           "resetAt": 1773265479000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 23,
-          "resetAt": 1772920800014
+          "usedPercent": 34,
+          "resetAt": 1772920800139
         },
         {
           "label": "Week",
-          "usedPercent": 3,
-          "resetAt": 1773507600014
+          "usedPercent": 4,
+          "resetAt": 1773507600139
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"108\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 20:00 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"152\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 20:29 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1772913601061,
+      "lastRunAt": 1772915407819,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Sent again ✅\n\nPlease approve request: **877cc630**  \nAs soon as it’s approved, I’ll run and send you the results immediately."
+      "lastSummary": "[[reply_to_current]] Sent again ✅  \nPlease approve: **aa11834a**\n\nI’ll send you an automatic update right after it clears."
     },
     {
       "id": "infraops",
@@ -75,7 +75,7 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1772913554875,
+      "lastRunAt": 1772915246039,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I can’t safely reconstruct your *entire* `~/.openclaw/openclaw.json` from what you pasted (it includes a lot of stuff you didn’t show: the rest of Telegram accounts, other channel config, tokens, etc."
@@ -84,13 +84,13 @@
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
-      "activityChannel": null,
-      "lastRunAt": 1772856000015,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"52\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 20:11 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityChannel": "telegram",
+      "lastRunAt": 1772914309739,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: ERROR (Mac node offline)"
+      "lastSummary": "[[reply_to_current]] Yes — the **“Andreas MacBook”** node is paired and **currently connected** (darwin, v2026.3.2)."
     }
   ],
   "cronJobs": [
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772912674712,
+      "lastRunAt": 1772914474731,
       "lastStatus": "ok",
-      "lastDurationMs": 71913,
+      "lastDurationMs": 64379,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron ran cleanly — **no update was available** (`NOOP (no update)`).\n\nCurrent OpenClaw version on the box: **2026.3.2**.",
-      "nextRunAt": 1772914474712,
+      "lastSummary": "The auto-update cron fired, but **no update was applied**.\n\n- The script **skipped** because a **direct session was active**: `SKIP (direct session active (age=95403ms))` (logged at `2026-03-07T20:15:23Z`).\n- The most recent non-skip result right before that was: `NOOP (no update)` at `2026-03-07T19:45:34Z` — meaning it checked and **there wasn’t an OpenClaw update available** at that time.\n\nIf you want, I can run a manual check now (`openclaw update status`) and report what it says.",
+      "nextRunAt": 1772916274731,
       "model": null,
-      "lastTotalTokens": 8867,
-      "lastInputTokens": 882,
-      "lastOutputTokens": 354
+      "lastTotalTokens": 10948,
+      "lastInputTokens": 2961,
+      "lastOutputTokens": 530
     }
   ]
 }
