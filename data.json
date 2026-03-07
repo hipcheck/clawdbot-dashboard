@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772890206866,
+  "updatedAt": 1772892008453,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772889274483,
+      "lastRunAt": 1772891074492,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I don’t see the script’s stdout/stderr (only that the cron fired). To tell whether the auto-update actually did anything (or failed), I need one of these:\n\n1) **Paste the cron job output** (stdout/stderr) if your cron runner captures it.\n\n2) Or check whatever log the script writes to and paste the last ~50 lines.\n\nIf you want, I can also help you make this cron self-report cleanly. Two good options:\n\n- **Have cron capture output to a log** (example):\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n- **Make the script print a short final summary** every run (e.g., “already up-to-date”, “updated from X→Y”, “restart required”, or the exact error).\n\nSend me whichever output you have and I’ll interpret it / suggest the next fix."
+      "lastSummary": "I only see the cron trigger line here—not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or what it changed.\n\nTo confirm what happened, can you paste either:\n\n1) The cron job’s captured output (whatever your cron runner logs for that job), or  \n2) The contents of any log file the script writes (common patterns: `logs/openclaw_auto_update.log`, `scripts/logs/...`, or a path printed by the script).\n\nQuick way to get useful diagnostics on the next run (if you control the cron definition):\n- change it to:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py --verbose`\n  - and append `2>&1` so stderr is captured too.\n\nIf you paste the script (or tell me where it logs), I’ll point you to the exact place to look for: version before/after, whether the gateway was restarted, and any failures."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772889274483,
+      "lastRunAt": 1772891074492,
       "lastStatus": "ok",
-      "lastDurationMs": 7286,
+      "lastDurationMs": 10076,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I don’t see the script’s stdout/stderr (only that the cron fired). To tell whether the auto-update actually did anything (or failed), I need one of these:\n\n1) **Paste the cron job output** (stdout/stderr) if your cron runner captures it.\n\n2) Or check whatever log the script writes to and paste the last ~50 lines.\n\nIf you want, I can also help you make this cron self-report cleanly. Two good options:\n\n- **Have cron capture output to a log** (example):\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py >> /home/clawd/.openclaw/workspace/logs/openclaw_auto_update.log 2>&1`\n\n- **Make the script print a short final summary** every run (e.g., “already up-to-date”, “updated from X→Y”, “restart required”, or the exact error).\n\nSend me whichever output you have and I’ll interpret it / suggest the next fix.",
-      "nextRunAt": 1772891074483,
+      "lastSummary": "I only see the cron trigger line here—not the script’s stdout/stderr—so I can’t tell whether the auto-update succeeded or what it changed.\n\nTo confirm what happened, can you paste either:\n\n1) The cron job’s captured output (whatever your cron runner logs for that job), or  \n2) The contents of any log file the script writes (common patterns: `logs/openclaw_auto_update.log`, `scripts/logs/...`, or a path printed by the script).\n\nQuick way to get useful diagnostics on the next run (if you control the cron definition):\n- change it to:\n  - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py --verbose`\n  - and append `2>&1` so stderr is captured too.\n\nIf you paste the script (or tell me where it logs), I’ll point you to the exact place to look for: version before/after, whether the gateway was restarted, and any failures.",
+      "nextRunAt": 1772892874492,
       "model": null,
       "lastTotalTokens": 7387,
       "lastInputTokens": 5979,
-      "lastOutputTokens": 282
+      "lastOutputTokens": 300
     }
   ]
 }
