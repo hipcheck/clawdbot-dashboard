@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772843407547,
+  "updatedAt": 1772845208472,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772842474180,
+      "lastRunAt": 1772844274192,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I can’t execute `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` directly from this chat, but I can help you interpret/fix whatever it did.\n\nPlease paste the script’s stdout/stderr (or wherever it logs). In the meantime, the quickest way to see if anything changed/broke is:\n\n1) Check OpenClaw + gateway status\n```bash\nopenclaw status\nopenclaw gateway status\n```\n\n2) If the update touched the running service, restart gateway (only if status looks wedged)\n```bash\nopenclaw gateway restart\n```\n\n3) Verify version/info (if your script updates packages)\n```bash\nopenclaw --version\npython3 -c \"import openclaw; print(openclaw.__version__)\" 2>/dev/null || true\n```\n\nIf you tell me:\n- where the script logs (file path), or paste the last ~100 lines,\n- and whether you want “auto-update” to be **safe/stable** (pin versions) vs **latest**,\n\n…I’ll help you tighten the updater (lockfiles, rollback, healthcheck after update, and only restart gateway when needed)."
+      "lastSummary": "I only see the cron header, not the script’s output.\n\nCan you paste the **stdout/stderr** from that cron run (or a screenshot), especially any lines mentioning:\n- “update available”\n- “pulling…”\n- “pip/uv install…”\n- “error/traceback”\n\nIf you don’t have the captured output, the fastest next step is to check where cron is logging for this job and paste the last ~100 lines around 12:44 AM UTC. Common places:\n- `/var/log/syslog` (Debian/Ubuntu)\n- `/var/log/cron` (some distros)\n- `journalctl -u cron --since \"2026-03-07 00:40:00\" --until \"2026-03-07 00:50:00\"` (systemd)\n\nAlso: did you configure this cron to **email output** or redirect to a file (e.g., `>> .../openclaw_auto_update.log 2>&1`)? If yes, tell me the path and paste the tail of that log."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772842474180,
+      "lastRunAt": 1772844274192,
       "lastStatus": "ok",
-      "lastDurationMs": 7334,
+      "lastDurationMs": 7972,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I can’t execute `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` directly from this chat, but I can help you interpret/fix whatever it did.\n\nPlease paste the script’s stdout/stderr (or wherever it logs). In the meantime, the quickest way to see if anything changed/broke is:\n\n1) Check OpenClaw + gateway status\n```bash\nopenclaw status\nopenclaw gateway status\n```\n\n2) If the update touched the running service, restart gateway (only if status looks wedged)\n```bash\nopenclaw gateway restart\n```\n\n3) Verify version/info (if your script updates packages)\n```bash\nopenclaw --version\npython3 -c \"import openclaw; print(openclaw.__version__)\" 2>/dev/null || true\n```\n\nIf you tell me:\n- where the script logs (file path), or paste the last ~100 lines,\n- and whether you want “auto-update” to be **safe/stable** (pin versions) vs **latest**,\n\n…I’ll help you tighten the updater (lockfiles, rollback, healthcheck after update, and only restart gateway when needed).",
-      "nextRunAt": 1772844274180,
+      "lastSummary": "I only see the cron header, not the script’s output.\n\nCan you paste the **stdout/stderr** from that cron run (or a screenshot), especially any lines mentioning:\n- “update available”\n- “pulling…”\n- “pip/uv install…”\n- “error/traceback”\n\nIf you don’t have the captured output, the fastest next step is to check where cron is logging for this job and paste the last ~100 lines around 12:44 AM UTC. Common places:\n- `/var/log/syslog` (Debian/Ubuntu)\n- `/var/log/cron` (some distros)\n- `journalctl -u cron --since \"2026-03-07 00:40:00\" --until \"2026-03-07 00:50:00\"` (systemd)\n\nAlso: did you configure this cron to **email output** or redirect to a file (e.g., `>> .../openclaw_auto_update.log 2>&1`)? If yes, tell me the path and paste the tail of that log.",
+      "nextRunAt": 1772846074192,
       "model": null,
       "lastTotalTokens": 7387,
-      "lastInputTokens": 7387,
-      "lastOutputTokens": 312
+      "lastInputTokens": 5979,
+      "lastOutputTokens": 294
     }
   ]
 }
