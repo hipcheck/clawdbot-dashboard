@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772949614908,
+  "updatedAt": 1772951414839,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1772963082000
+          "resetAt": 1772963081000
         },
         {
           "label": "Day",
@@ -221,7 +221,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1772950475765,
+      "nextRunAt": 1772952272766,
       "model": null,
       "lastTotalTokens": 8526,
       "lastInputTokens": 399,
