@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772944213224,
+  "updatedAt": 1772946015807,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 4,
-          "resetAt": 1772945082000
+          "usedPercent": 0,
+          "resetAt": 1772963081000
         },
         {
           "label": "Day",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772943275687,
+      "lastRunAt": 1772945075713,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That run no-op’d on purpose.\n\n`openclaw_auto_update.py` checks whether the system looks “idle” before updating, and it **skips if there’s an active direct session** (non-cron/heartbeat) newer than ~15 minutes. Your cron output shows exactly that:\n\n- `SKIP (direct session active (age=...ms))`\n\nSo: no update was attempted, and nothing changed.\n\nIf you want to confirm what happened (or see prior runs), check the log:\n\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want to force an update right now (ignoring the “idle” heuristic), run:\n\n- `openclaw update --yes`\n\nIf you want the auto-updater to be less conservative, you can raise the threshold via env var `OC_BUSY_SESSION_MS` (currently defaults to 15 min)."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772943275687,
+      "lastRunAt": 1772945075713,
       "lastStatus": "ok",
-      "lastDurationMs": 56802,
+      "lastDurationMs": 67342,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That run no-op’d on purpose.\n\n`openclaw_auto_update.py` checks whether the system looks “idle” before updating, and it **skips if there’s an active direct session** (non-cron/heartbeat) newer than ~15 minutes. Your cron output shows exactly that:\n\n- `SKIP (direct session active (age=...ms))`\n\nSo: no update was attempted, and nothing changed.\n\nIf you want to confirm what happened (or see prior runs), check the log:\n\n- `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you want to force an update right now (ignoring the “idle” heuristic), run:\n\n- `openclaw update --yes`\n\nIf you want the auto-updater to be less conservative, you can raise the threshold via env var `OC_BUSY_SESSION_MS` (currently defaults to 15 min).",
-      "nextRunAt": 1772945075687,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1772946875713,
       "model": null,
-      "lastTotalTokens": 10216,
-      "lastInputTokens": 10325,
-      "lastOutputTokens": 465
+      "lastTotalTokens": 8487,
+      "lastInputTokens": 8552,
+      "lastOutputTokens": 109
     }
   ]
 }
