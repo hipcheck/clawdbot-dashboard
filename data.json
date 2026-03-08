@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772978415338,
+  "updatedAt": 1772980210567,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772977473334,
+      "lastRunAt": 1772979273410,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I tried to run the cron command, but `exec` is being blocked right now with:\n\n`SKIP (direct session active ...)`\n\nSo I can’t execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from inside this active Telegram session at the moment.\n\nIf you want to run it immediately, run this on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, I can also help adjust the cron/automation so it runs in an isolated/background context that isn’t skipped when a direct chat session is active—tell me where this cron is defined (or paste the cron config / the script header) and I’ll patch it."
+      "lastSummary": "Auto-update check ran: **NOOP (no update)** — OpenClaw is already up to date, so nothing changed."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772977473334,
+      "lastRunAt": 1772979273410,
       "lastStatus": "ok",
-      "lastDurationMs": 100161,
+      "lastDurationMs": 65199,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "I tried to run the cron command, but `exec` is being blocked right now with:\n\n`SKIP (direct session active ...)`\n\nSo I can’t execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from inside this active Telegram session at the moment.\n\nIf you want to run it immediately, run this on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, I can also help adjust the cron/automation so it runs in an isolated/background context that isn’t skipped when a direct chat session is active—tell me where this cron is defined (or paste the cron config / the script header) and I’ll patch it.",
-      "nextRunAt": 1772979273334,
+      "lastSummary": "Auto-update check ran: **NOOP (no update)** — OpenClaw is already up to date, so nothing changed.",
+      "nextRunAt": 1772981073410,
       "model": null,
-      "lastTotalTokens": 8834,
-      "lastInputTokens": 9142,
-      "lastOutputTokens": 461
+      "lastTotalTokens": 8721,
+      "lastInputTokens": 8759,
+      "lastOutputTokens": 113
     }
   ]
 }
