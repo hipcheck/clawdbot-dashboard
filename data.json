@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773000012765,
+  "updatedAt": 1773002632365,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 6,
-          "resetAt": 1773000880000
+          "usedPercent": 0,
+          "resetAt": 1773020633000
         },
         {
           "label": "Day",
-          "usedPercent": 5,
+          "usedPercent": 6,
           "resetAt": 1773531882000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 29,
-          "resetAt": 1773014400210
+          "usedPercent": 36,
+          "resetAt": 1773014400571
         },
         {
           "label": "Week",
-          "usedPercent": 8,
-          "resetAt": 1773507600210
+          "usedPercent": 9,
+          "resetAt": 1773507600571
         }
       ],
       "error": null
@@ -48,13 +48,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"358\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-08 19:14 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1772997287014,
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1772967630334,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Understood. I’ll take full ownership from here and keep you out of the loop.\n\nOne hard constraint: this environment is currently enforcing per-command approvals on VPS exec, and I"
+      "lastSummary": "WARNING: prescan stale (generated 2026-03-04T08:30:04Z, age ≈ 98h 30m at 2026-03-08 11:00 UTC).\n\n**One high-leverage improvement to build today:**\nBuild a **“Secure Channel Baseline” auto-remediation job** that enforces `groupPolicy=allowlist` and strips elevated/runtime/filesystem tools from any open group config.\n\n- **Impact:** Removes both current critical security findings in one move, dramatically reduces prompt-injection blast radius, and prevents drift by enforcing policy automatically.\n- **Risk:** Misconfigured allowlist could temporarily block legitimate automation in some groups.\n- **First 3 steps:**\n1. Define a baseline policy file (allowed groups + allowed tools per group) and back up current config.\n2. Implement a script that audits current channel/group settings, applies safe defaults, and outputs a diff + rollback file.\n3. Wire it into daily cron with alerting on any drift or failed remediation.\n\nDestination: send this proposal to **Telegram** (Andreas / current ops chat)."
     },
     {
       "id": "infraops",
