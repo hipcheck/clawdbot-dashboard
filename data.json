@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772980210567,
+  "updatedAt": 1772982014178,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 7,
-          "resetAt": 1772981131000
+          "usedPercent": 0,
+          "resetAt": 1773000014000
         },
         {
           "label": "Day",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1773531882000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772979273410,
+      "lastRunAt": 1772981073515,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update check ran: **NOOP (no update)** — OpenClaw is already up to date, so nothing changed."
+      "lastSummary": "Auto-update looks healthy.\n\n- Current OpenClaw version: **2026.3.7** (`openclaw --version`)\n- Update status now: **no update available** (`openclaw update status --json`)\n- Recent auto-update log: mostly `NOOP (no update)`, with one `UPDATE_START (latest=2026.3.7)` earlier today — consistent with the system already being on **2026.3.7**.\n\nNo action needed."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772979273410,
+      "lastRunAt": 1772981073515,
       "lastStatus": "ok",
-      "lastDurationMs": 65199,
+      "lastDurationMs": 45382,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update check ran: **NOOP (no update)** — OpenClaw is already up to date, so nothing changed.",
-      "nextRunAt": 1772981073410,
+      "lastSummary": "Auto-update looks healthy.\n\n- Current OpenClaw version: **2026.3.7** (`openclaw --version`)\n- Update status now: **no update available** (`openclaw update status --json`)\n- Recent auto-update log: mostly `NOOP (no update)`, with one `UPDATE_START (latest=2026.3.7)` earlier today — consistent with the system already being on **2026.3.7**.\n\nNo action needed.",
+      "nextRunAt": 1772982873515,
       "model": null,
-      "lastTotalTokens": 8721,
-      "lastInputTokens": 8759,
-      "lastOutputTokens": 113
+      "lastTotalTokens": 11464,
+      "lastInputTokens": 11789,
+      "lastOutputTokens": 737
     }
   ]
 }
