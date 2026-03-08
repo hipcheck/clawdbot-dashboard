@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772969412055,
+  "updatedAt": 1772971214538,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772968473105,
+      "lastRunAt": 1772970273166,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "This cron run **skipped** the auto-update because a direct chat session was active:\n\n- `SKIP (direct session active (age=729125ms))` @ `2026-03-08T11:15:17Z` (from `memory/openclaw-updates.log`)\n\nSeparately: an update to **OpenClaw 2026.3.7** was already applied earlier today (OpenClaw currently reports `openclaw --version` → `2026.3.7`, and `openclaw update status` shows no update available).\n\nI also patched `scripts/openclaw_auto_update.py` to make logging more reliable going forward:\n- logging now appends to the log file (avoids read/modify/write races)\n- any unexpected exception during the update is caught and logged as `UPDATE_FAIL`"
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772968473105,
+      "lastRunAt": 1772970273166,
       "lastStatus": "ok",
-      "lastDurationMs": 115678,
+      "lastDurationMs": 63014,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "This cron run **skipped** the auto-update because a direct chat session was active:\n\n- `SKIP (direct session active (age=729125ms))` @ `2026-03-08T11:15:17Z` (from `memory/openclaw-updates.log`)\n\nSeparately: an update to **OpenClaw 2026.3.7** was already applied earlier today (OpenClaw currently reports `openclaw --version` → `2026.3.7`, and `openclaw update status` shows no update available).\n\nI also patched `scripts/openclaw_auto_update.py` to make logging more reliable going forward:\n- logging now appends to the log file (avoids read/modify/write races)\n- any unexpected exception during the update is caught and logged as `UPDATE_FAIL`",
-      "nextRunAt": 1772970273105,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1772972073166,
       "model": null,
-      "lastTotalTokens": 13871,
-      "lastInputTokens": 6898,
-      "lastOutputTokens": 1975
+      "lastTotalTokens": 8716,
+      "lastInputTokens": 306,
+      "lastOutputTokens": 109
     }
   ]
 }
