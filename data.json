@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772940613555,
+  "updatedAt": 1772942412021,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773531882000
         }
       ],
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1772939675629,
+      "activityKind": "chat",
+      "activityLabel": "tui message",
+      "activityChannel": "tui",
+      "lastRunAt": 1772942411746,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\n- Result: **NOOP (no update)** (exit `0`)\n- Log entry recorded: `2026-03-08T03:15:50Z NOOP (no update)`\n- `openclaw update status --json` also shows **no registry/git update available** at the moment."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772939675629,
+      "lastRunAt": 1772941475680,
       "lastStatus": "ok",
-      "lastDurationMs": 79049,
+      "lastDurationMs": 54269,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\n- Result: **NOOP (no update)** (exit `0`)\n- Log entry recorded: `2026-03-08T03:15:50Z NOOP (no update)`\n- `openclaw update status --json` also shows **no registry/git update available** at the moment.",
-      "nextRunAt": 1772941475629,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing needed updating right now.",
+      "nextRunAt": 1772943275680,
       "model": null,
-      "lastTotalTokens": 12292,
-      "lastInputTokens": 13178,
-      "lastOutputTokens": 636
+      "lastTotalTokens": 8512,
+      "lastInputTokens": 8577,
+      "lastOutputTokens": 134
     }
   ]
 }
