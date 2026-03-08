@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772938814715,
+  "updatedAt": 1772940613555,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1772945082000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772937875603,
+      "lastRunAt": 1772939675629,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The `openclaw-auto-update` cron run at ~02:45 UTC completed and **did nothing** because there was **no OpenClaw update available**:\n\n- Result: `NOOP (no update)`\n- Logged at: `2026-03-08T02:45:36Z`\n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`"
+      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\n- Result: **NOOP (no update)** (exit `0`)\n- Log entry recorded: `2026-03-08T03:15:50Z NOOP (no update)`\n- `openclaw update status --json` also shows **no registry/git update available** at the moment."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772937875603,
+      "lastRunAt": 1772939675629,
       "lastStatus": "ok",
-      "lastDurationMs": 70981,
+      "lastDurationMs": 79049,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The `openclaw-auto-update` cron run at ~02:45 UTC completed and **did nothing** because there was **no OpenClaw update available**:\n\n- Result: `NOOP (no update)`\n- Logged at: `2026-03-08T02:45:36Z`\n- Log file: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`",
-      "nextRunAt": 1772939675603,
+      "lastSummary": "Ran `openclaw_auto_update.py` just now.\n\n- Result: **NOOP (no update)** (exit `0`)\n- Log entry recorded: `2026-03-08T03:15:50Z NOOP (no update)`\n- `openclaw update status --json` also shows **no registry/git update available** at the moment.",
+      "nextRunAt": 1772941475629,
       "model": null,
-      "lastTotalTokens": 11025,
-      "lastInputTokens": 19634,
-      "lastOutputTokens": 397
+      "lastTotalTokens": 12292,
+      "lastInputTokens": 13178,
+      "lastOutputTokens": 636
     }
   ]
 }
