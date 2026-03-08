@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772967614996,
+  "updatedAt": 1772969412055,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 3,
           "resetAt": 1772981131000
         },
         {
@@ -38,24 +38,24 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"271\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-07 22:21 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Keep internal details private.\n\nsource: cron\nsession_key: a",
       "activityChannel": "telegram",
-      "lastRunAt": 1772922121624,
+      "lastRunAt": 1772967665109,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Great — here’s a **full rewritten `setup-job-pipeline-cron.sh`** for **project Unfair Advantage**.\n\nIt includes:\n- correct Obsidian path\n- Obsidian-only outputs\n- AAGM cap + non-A"
+      "lastSummary": "[[reply_to_current]] Quick morning proposal for today:\n\n**Highest-leverage build:**  \nCreate a **Secure Channel Baseline auto-remediation job** that:\n- enforces `groupPolicy=allowlist`\n- removes eleva"
     },
     {
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "chat",
-      "activityLabel": "OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Keep internal details private.\n\nsource: cron\nsession_key: a",
+      "activityLabel": "json\n{\n  \"message_id\": \"84\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-08 11:02 UTC\"\n}\n```\n\nSender (untrusted metada",
       "activityChannel": "telegram",
-      "lastRunAt": 1772967566193,
+      "lastRunAt": 1772967786123,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I've completed the periodic security and configuration audit. I found one critical issue that should be addressed immediately, one warning, and a couple of configuration gaps. On a positive note, the "
+      "lastSummary": "Understood. I have made a permanent note in my memory to never flag the `readwise` skill in future audits.\n\nTo be sure I take the correct actions on the other items, could you please clarify which of "
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772966673050,
+      "lastRunAt": 1772968473105,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "This cron run **skipped** the auto-update because a direct chat session was active:\n\n- `SKIP (direct session active (age=729125ms))` @ `2026-03-08T11:15:17Z` (from `memory/openclaw-updates.log`)\n\nSeparately: an update to **OpenClaw 2026.3.7** was already applied earlier today (OpenClaw currently reports `openclaw --version` → `2026.3.7`, and `openclaw update status` shows no update available).\n\nI also patched `scripts/openclaw_auto_update.py` to make logging more reliable going forward:\n- logging now appends to the log file (avoids read/modify/write races)\n- any unexpected exception during the update is caught and logged as `UPDATE_FAIL`"
     },
     {
       "id": "km",
@@ -89,17 +89,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772884800010,
+      "lastRunAt": 1772967630334,
       "lastStatus": "ok",
-      "lastDurationMs": 17270,
+      "lastDurationMs": 35252,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "WARNING: prescan stale/missing (could not verify `/tmp/openclaw_prescan_summary.md` timestamp).\n\nSend to: Telegram (Andreas)\n\n**One high-leverage improvement to build today:**\nBuild an **automated job-fit scoring + ranking layer** in your NYC Senior Marketing Manager pipeline (before Obsidian/GitHub write).\n\n**Impact:**\nCuts manual triage time and surfaces best-fit roles first, so you apply faster to higher-quality opportunities with less cognitive load.\n\n**Risk:**\nBad weighting could hide good roles (false negatives) if scoring is too strict early on.\n\n**First 3 steps:**\n1. Define a v1 scoring rubric (e.g., title match, NYC/hybrid fit, seniority, salary signal, required skills overlap).\n2. Implement scorer in the pipeline and attach `fit_score` + `why` to each job record.\n3. Add a daily “Top 10 ranked roles” output in Obsidian (with links + rationale) and keep all lower-scored roles in a separate backlog section.",
-      "nextRunAt": 1772967600000,
+      "lastSummary": "WARNING: prescan stale (generated 2026-03-04T08:30:04Z, age ≈ 98h 30m at 2026-03-08 11:00 UTC).\n\n**One high-leverage improvement to build today:**\nBuild a **“Secure Channel Baseline” auto-remediation job** that enforces `groupPolicy=allowlist` and strips elevated/runtime/filesystem tools from any open group config.\n\n- **Impact:** Removes both current critical security findings in one move, dramatically reduces prompt-injection blast radius, and prevents drift by enforcing policy automatically.\n- **Risk:** Misconfigured allowlist could temporarily block legitimate automation in some groups.\n- **First 3 steps:**\n1. Define a baseline policy file (allowed groups + allowed tools per group) and back up current config.\n2. Implement a script that audits current channel/group settings, applies safe defaults, and outputs a diff + rollback file.\n3. Wire it into daily cron with alerting on any drift or failed remediation.\n\nDestination: send this proposal to **Telegram** (Andreas / current ops chat).",
+      "nextRunAt": 1773054000000,
       "model": null,
-      "lastTotalTokens": 4781,
-      "lastInputTokens": 4781,
-      "lastOutputTokens": 697
+      "lastTotalTokens": 6645,
+      "lastInputTokens": 6638,
+      "lastOutputTokens": 687
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772884200021,
+      "lastRunAt": 1772967000057,
       "lastStatus": "ok",
-      "lastDurationMs": 128767,
+      "lastDurationMs": 627752,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL\n\n- **Top Blocker:** The security audit could not be performed due to a lack of necessary permissions or tools in the execution environment. The agent was unable to run shell commands (like `openclaw security audit`) or read from the filesystem.\n\n- **Immediate Concern:** The `healthcheck:security-preflight` cron job is currently ineffective. No security validation is occurring.\n\n- **Suggestion:**\n  1.  Grant the `infraops` agent the necessary permissions to execute shell commands (e.g., via an `exec` or `shell` tool).\n  2.  Ensure the agent has read access to the OpenClaw configuration files to verify settings like `gateway.nodes.denyCommands`.\n  3.  Review the agent's capabilities to ensure it can fulfill the requirements of the `healthcheck` skill.",
-      "nextRunAt": 1772967000000,
+      "lastSummary": "FAIL\n\n- **Blocker 1 (Critical): Untrusted Skill with Potential Credential Harvesting**\n    - The `readwise` skill located at `/home/clawd/.openclaw/workspace/.agents/skills/readwise` contains code patterns (`env-harvesting`) that suggest it could be reading environment variables and sending them over the network. This is a high-risk vector for credential theft.\n    - **Fix:** Unless this skill is fully trusted and audited, it should be removed immediately.\n        - `rm -rf /home/clawd/.openclaw/workspace/.agents/skills/readwise`\n\n- **Blocker 2 (Warn): Weak Fallback Model Configured**\n    - The configuration allows falling back to `openai-codex/gpt-4o-mini`, which has a higher risk of prompt injection and tool misuse compared to current-generation models.\n    - **Fix:** Remove the weak model from the fallback list to ensure only high-capability models are used for agent tasks.\n        - `openclaw config unset agents.list.main.model.fallbacks[?(@=='openai-codex/gpt-4o-mini')]`\n\n- **Configuration Gap: Empty Node Command Denylist**\n    - The `gateway.nodes.denyCommands` list is empty, meaning no commands are explicitly forbidden from being run by connected nodes. This reduces defense-in-depth.\n    - **Suggestion:** Populate this list with command IDs for high-risk operations that should never be delegated to a node.\n        - `openclaw config set gateway.nodes.denyCommands '[\"system:reboot\", \"system:shutdown\", \"openclaw:reset\"]'`\n\n- **Configuration Gap: Misconfigured Telegram Group Policy**\n    - Multiple Telegram accounts have `groupPolicy` set to `allowlist` but the corresponding `groupAllowFrom` list is empty. This causes all group messages to be dropped silently.\n    - **Fix:** For each relevant account, either add trusted user/group IDs to the allowlist or change the policy to `open`.\n        - `openclaw config set channels.telegram.groupPolicy open`\n        - `openclaw config set channels.telegram.accounts.default.groupPolicy open` (repeat for other accounts as n…",
+      "nextRunAt": 1773053400000,
       "model": null,
-      "lastTotalTokens": 6877,
-      "lastInputTokens": 9842,
-      "lastOutputTokens": 1777
+      "lastTotalTokens": 12292,
+      "lastInputTokens": 33596,
+      "lastOutputTokens": 1919
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772966673050,
+      "lastRunAt": 1772968473105,
       "lastStatus": "ok",
-      "lastDurationMs": 58798,
+      "lastDurationMs": 115678,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1772968473050,
+      "lastSummary": "This cron run **skipped** the auto-update because a direct chat session was active:\n\n- `SKIP (direct session active (age=729125ms))` @ `2026-03-08T11:15:17Z` (from `memory/openclaw-updates.log`)\n\nSeparately: an update to **OpenClaw 2026.3.7** was already applied earlier today (OpenClaw currently reports `openclaw --version` → `2026.3.7`, and `openclaw update status` shows no update available).\n\nI also patched `scripts/openclaw_auto_update.py` to make logging more reliable going forward:\n- logging now appends to the log file (avoids read/modify/write races)\n- any unexpected exception during the update is caught and logged as `UPDATE_FAIL`",
+      "nextRunAt": 1772970273105,
       "model": null,
-      "lastTotalTokens": 8732,
-      "lastInputTokens": 322,
-      "lastOutputTokens": 125
+      "lastTotalTokens": 13871,
+      "lastInputTokens": 6898,
+      "lastOutputTokens": 1975
     }
   ]
 }
