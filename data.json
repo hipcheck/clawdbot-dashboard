@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772996415364,
+  "updatedAt": 1772998208355,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
+          "usedPercent": 6,
           "resetAt": 1773000880000
         },
         {
@@ -28,8 +28,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 18,
+          "resetAt": 1773014400633
+        },
+        {
+          "label": "Week",
+          "usedPercent": 7,
+          "resetAt": 1773507600633
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -38,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"328\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-08 18:59 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"358\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-08 19:14 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1772996376703,
+      "lastRunAt": 1772997287014,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Great question. To let me run this fully on my own, set up these 4 things:\n\n1) **Stable Mac node connection**\n- Keep OpenClaw app + gateway running\n- Ensure `openclaw gateway stat"
+      "lastSummary": "[[reply_to_current]] Understood. I’ll take full ownership from here and keep you out of the loop.\n\nOne hard constraint: this environment is currently enforcing per-command approvals on VPS exec, and I"
     },
     {
       "id": "infraops",
