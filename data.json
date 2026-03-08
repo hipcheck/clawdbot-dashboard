@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772987412489,
+  "updatedAt": 1772989212667,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773000880000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772986473819,
+      "lastRunAt": 1772988273901,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update check ran cleanly.\n\nResult: **NOOP (no update available / nothing to do)**."
+      "lastSummary": "Auto-update cron ran successfully just now.\n\nResult: **NOOP (no update available / nothing to do)**."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772986473819,
+      "lastRunAt": 1772988273901,
       "lastStatus": "ok",
-      "lastDurationMs": 59660,
+      "lastDurationMs": 58269,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update check ran cleanly.\n\nResult: **NOOP (no update available / nothing to do)**.",
-      "nextRunAt": 1772988273819,
+      "lastSummary": "Auto-update cron ran successfully just now.\n\nResult: **NOOP (no update available / nothing to do)**.",
+      "nextRunAt": 1772990073901,
       "model": null,
-      "lastTotalTokens": 8741,
-      "lastInputTokens": 8779,
-      "lastOutputTokens": 129
+      "lastTotalTokens": 8885,
+      "lastInputTokens": 8923,
+      "lastOutputTokens": 203
     }
   ]
 }
