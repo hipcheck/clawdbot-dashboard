@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772964013408,
+  "updatedAt": 1772965810805,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,7 +12,7 @@
         },
         {
           "label": "Day",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1773531882000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772963073025,
+      "lastRunAt": 1772964873038,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update cron ran cleanly.\n\n- `openclaw_auto_update.py` result: **`NOOP (no update)`** (nothing to upgrade right now)\n- Current OpenClaw version on this box: **2026.3.7**\n- Gateway service: **running нормально** (RPC probe OK, listening on `127.0.0.1:18789`)\n\nOne thing to flag from `openclaw gateway status` “Doctor warnings”:\n- **Telegram `groupPolicy` is set to `allowlist` but `groupAllowFrom` is empty** (for default + several accounts), which means **all group messages will be silently dropped** unless you add allowed sender IDs or switch groupPolicy to `open`.\n\nIf that’s intentional (you don’t want the bot responding in any groups), we can ignore it. If not, tell me which Telegram group(s)/accounts you want enabled and I’ll help you set the allowlist correctly."
+      "lastSummary": "openclaw-auto-update result: **NOOP (no update available / nothing to do)**.\n\nIf you want, I can also wire this cron to only notify you on non-NOOP outcomes (updated / failed), so these stay quiet when everything’s already up to date."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772963073025,
+      "lastRunAt": 1772964873038,
       "lastStatus": "ok",
-      "lastDurationMs": 81550,
+      "lastDurationMs": 60857,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron ran cleanly.\n\n- `openclaw_auto_update.py` result: **`NOOP (no update)`** (nothing to upgrade right now)\n- Current OpenClaw version on this box: **2026.3.7**\n- Gateway service: **running нормально** (RPC probe OK, listening on `127.0.0.1:18789`)\n\nOne thing to flag from `openclaw gateway status` “Doctor warnings”:\n- **Telegram `groupPolicy` is set to `allowlist` but `groupAllowFrom` is empty** (for default + several accounts), which means **all group messages will be silently dropped** unless you add allowed sender IDs or switch groupPolicy to `open`.\n\nIf that’s intentional (you don’t want the bot responding in any groups), we can ignore it. If not, tell me which Telegram group(s)/accounts you want enabled and I’ll help you set the allowlist correctly.",
-      "nextRunAt": 1772964873025,
+      "lastSummary": "openclaw-auto-update result: **NOOP (no update available / nothing to do)**.\n\nIf you want, I can also wire this cron to only notify you on non-NOOP outcomes (updated / failed), so these stay quiet when everything’s already up to date.",
+      "nextRunAt": 1772966673038,
       "model": null,
-      "lastTotalTokens": 9751,
-      "lastInputTokens": 9846,
-      "lastOutputTokens": 498
+      "lastTotalTokens": 8748,
+      "lastInputTokens": 8786,
+      "lastOutputTokens": 171
     }
   ]
 }
