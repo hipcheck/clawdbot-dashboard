@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1772976611999,
+  "updatedAt": 1772978415338,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 6,
+          "usedPercent": 7,
           "resetAt": 1772981131000
         },
         {
@@ -64,22 +64,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1772975673270,
+      "lastRunAt": 1772977473334,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "I tried to run the cron command, but `exec` is being blocked right now with:\n\n`SKIP (direct session active ...)`\n\nSo I can’t execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from inside this active Telegram session at the moment.\n\nIf you want to run it immediately, run this on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, I can also help adjust the cron/automation so it runs in an isolated/background context that isn’t skipped when a direct chat session is active—tell me where this cron is defined (or paste the cron config / the script header) and I’ll patch it."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"66\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-08 12:57 UTC\"\n}\n```\n\nSender (untrusted metada",
+      "activityLabel": "System: FILE=\"/Users/andreas/Documents/PKH/journal/2026-03-07.md\"\nSystem: echo \"### File timestamps\"\nSystem: ls -la \"$FILE\" || true\nSystem: stat -f \"m",
       "activityChannel": "telegram",
-      "lastRunAt": 1772974810943,
+      "lastRunAt": 1772977461112,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The Mac didn’t run the diagnostic because the execution request **timed out waiting for approval again**.\n\nTo make this work, we need you to **approve the prompt on the Mac within ~a few seconds** aft"
+      "lastSummary": "I can do that, but running the local Readwise search script from this environment currently requires an execution approval on my side:\n\n- The command to search your local Readwise index is pending as "
     }
   ],
   "cronJobs": [
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1772975673270,
+      "lastRunAt": 1772977473334,
       "lastStatus": "ok",
-      "lastDurationMs": 57299,
+      "lastDurationMs": 100161,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1772977473270,
+      "lastSummary": "I tried to run the cron command, but `exec` is being blocked right now with:\n\n`SKIP (direct session active ...)`\n\nSo I can’t execute `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` from inside this active Telegram session at the moment.\n\nIf you want to run it immediately, run this on the host:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nIf you want, I can also help adjust the cron/automation so it runs in an isolated/background context that isn’t skipped when a direct chat session is active—tell me where this cron is defined (or paste the cron config / the script header) and I’ll patch it.",
+      "nextRunAt": 1772979273334,
       "model": null,
-      "lastTotalTokens": 8721,
-      "lastInputTokens": 8759,
-      "lastOutputTokens": 107
+      "lastTotalTokens": 8834,
+      "lastInputTokens": 9142,
+      "lastOutputTokens": 461
     }
   ]
 }
