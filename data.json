@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773095410161,
+  "updatedAt": 1773097214161,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773112025000
         },
         {
@@ -31,13 +31,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 25,
-          "resetAt": 1773097200373
+          "usedPercent": 0
         },
         {
           "label": "Week",
           "usedPercent": 12,
-          "resetAt": 1773507600373
+          "resetAt": 1773507600550
         }
       ],
       "error": null
@@ -75,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773094473284,
+      "lastRunAt": 1773096273339,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Your OpenClaw config is currently invalid, so the auto-update cron run was skipped.\n\nError:\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- Config file: `~/.openclaw/openclaw.json`\n- Suggested fix from OpenClaw: `openclaw doctor --fix`\n\nIf you want, I can run the fix and then re-run the update script."
+      "lastSummary": "Your auto-update cron **did not run** because OpenClaw’s config is currently **invalid**.\n\n**Root cause (blocking):**\n- OpenClaw is failing validation with:\n  `plugin manifest not found: .../extensions/google-antigravity-auth/openclaw.plugin.json`\n- That directory exists, but it only has an `index.ts` (no `openclaw.plugin.json`), so OpenClaw refuses to start/serve `openclaw cron status`, and your `openclaw_auto_update.py` script bails out with:\n  `SKIP (cron status unavailable ...)`\n\n**What I tried:**\n- Ran `openclaw doctor --fix` — it **did not** resolve the missing manifest, and OpenClaw still exits with config validation failure.\n\n**What needs to happen next (to unblock cron + updates):**\n- Remove/disable the broken `google-antigravity-auth` plugin entry (or reinstall OpenClaw/extensions so that plugin ships a proper manifest).\n\nIf you want, I can do the safe fix automatically: **edit `~/.openclaw/openclaw.json` to remove/disable the `google-antigravity-auth` plugin** (or disable all nonessential plugins), then re-run:\n- `openclaw cron status --json`\n- and then re-run the auto-update script to confirm it works.\n\nTell me which you prefer:\n1) **Disable/remove only `google-antigravity-auth`**, or  \n2) **Reinstall OpenClaw globally** (cleaner, but more invasive)."
     },
     {
       "id": "km",
@@ -226,17 +225,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773094473284,
+      "lastRunAt": 1773096273339,
       "lastStatus": "ok",
-      "lastDurationMs": 18419,
+      "lastDurationMs": 90098,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Your OpenClaw config is currently invalid, so the auto-update cron run was skipped.\n\nError:\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- Config file: `~/.openclaw/openclaw.json`\n- Suggested fix from OpenClaw: `openclaw doctor --fix`\n\nIf you want, I can run the fix and then re-run the update script.",
-      "nextRunAt": 1773096273284,
+      "lastSummary": "Your auto-update cron **did not run** because OpenClaw’s config is currently **invalid**.\n\n**Root cause (blocking):**\n- OpenClaw is failing validation with:\n  `plugin manifest not found: .../extensions/google-antigravity-auth/openclaw.plugin.json`\n- That directory exists, but it only has an `index.ts` (no `openclaw.plugin.json`), so OpenClaw refuses to start/serve `openclaw cron status`, and your `openclaw_auto_update.py` script bails out with:\n  `SKIP (cron status unavailable ...)`\n\n**What I tried:**\n- Ran `openclaw doctor --fix` — it **did not** resolve the missing manifest, and OpenClaw still exits with config validation failure.\n\n**What needs to happen next (to unblock cron + updates):**\n- Remove/disable the broken `google-antigravity-auth` plugin entry (or reinstall OpenClaw/extensions so that plugin ships a proper manifest).\n\nIf you want, I can do the safe fix automatically: **edit `~/.openclaw/openclaw.json` to remove/disable the `google-antigravity-auth` plugin** (or disable all nonessential plugins), then re-run:\n- `openclaw cron status --json`\n- and then re-run the auto-update script to confirm it works.\n\nTell me which you prefer:\n1) **Disable/remove only `google-antigravity-auth`**, or  \n2) **Reinstall OpenClaw globally** (cleaner, but more invasive).",
+      "nextRunAt": 1773098073339,
       "model": null,
-      "lastTotalTokens": 8818,
-      "lastInputTokens": 536,
-      "lastOutputTokens": 144
+      "lastTotalTokens": 13988,
+      "lastInputTokens": 15945,
+      "lastOutputTokens": 694
     }
   ]
 }
