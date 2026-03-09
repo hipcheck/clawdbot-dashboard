@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773025215231,
+  "updatedAt": 1773027012890,
   "providers": [
     {
       "id": "openai-codex",
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 9,
-          "resetAt": 1773507600609
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
