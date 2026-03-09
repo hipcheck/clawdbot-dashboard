@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773093615134,
+  "updatedAt": 1773095410161,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 8,
-          "resetAt": 1773094026000
+          "usedPercent": 0,
+          "resetAt": 1773112025000
         },
         {
           "label": "Day",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 25,
-          "resetAt": 1773097200528
+          "resetAt": 1773097200373
         },
         {
           "label": "Week",
           "usedPercent": 12,
-          "resetAt": 1773507600528
+          "resetAt": 1773507600373
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773092673243,
+      "lastRunAt": 1773094473284,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "The auto-update cron can’t run because **OpenClaw won’t start with the current config**.\n\nError:\n- `Invalid config at ~/.openclaw/openclaw.json`\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n\nSo `openclaw cron status` fails, and your `openclaw_auto_update.py` run gets skipped as a consequence.\n\nIf you want me to fix it, tell me whether you still want that `google-antigravity-auth` plugin enabled. Quick options:\n1) **Disable/remove the plugin entry** from `~/.openclaw/openclaw.json` (fastest, safest if you don’t need it)\n2) **Reinstall/repair the plugin** (if you do need it)\n3) Run the suggested: `openclaw doctor --fix` (may modify config/install pieces)\n\nSay “fix it” + which option you prefer, and I’ll proceed."
+      "lastSummary": "Your OpenClaw config is currently invalid, so the auto-update cron run was skipped.\n\nError:\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- Config file: `~/.openclaw/openclaw.json`\n- Suggested fix from OpenClaw: `openclaw doctor --fix`\n\nIf you want, I can run the fix and then re-run the update script."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773092673243,
+      "lastRunAt": 1773094473284,
       "lastStatus": "ok",
-      "lastDurationMs": 24725,
+      "lastDurationMs": 18419,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update cron can’t run because **OpenClaw won’t start with the current config**.\n\nError:\n- `Invalid config at ~/.openclaw/openclaw.json`\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n\nSo `openclaw cron status` fails, and your `openclaw_auto_update.py` run gets skipped as a consequence.\n\nIf you want me to fix it, tell me whether you still want that `google-antigravity-auth` plugin enabled. Quick options:\n1) **Disable/remove the plugin entry** from `~/.openclaw/openclaw.json` (fastest, safest if you don’t need it)\n2) **Reinstall/repair the plugin** (if you do need it)\n3) Run the suggested: `openclaw doctor --fix` (may modify config/install pieces)\n\nSay “fix it” + which option you prefer, and I’ll proceed.",
-      "nextRunAt": 1773094473243,
+      "lastSummary": "Your OpenClaw config is currently invalid, so the auto-update cron run was skipped.\n\nError:\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- Config file: `~/.openclaw/openclaw.json`\n- Suggested fix from OpenClaw: `openclaw doctor --fix`\n\nIf you want, I can run the fix and then re-run the update script.",
+      "nextRunAt": 1773096273284,
       "model": null,
       "lastTotalTokens": 8818,
-      "lastInputTokens": 8984,
-      "lastOutputTokens": 255
+      "lastInputTokens": 536,
+      "lastOutputTokens": 144
     }
   ]
 }
