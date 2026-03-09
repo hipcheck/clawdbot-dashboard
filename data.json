@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773088212562,
+  "updatedAt": 1773090011563,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 6,
+          "usedPercent": 7,
           "resetAt": 1773094026000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 25,
-          "resetAt": 1773097199917
+          "resetAt": 1773097199964
         },
         {
           "label": "Week",
           "usedPercent": 12,
-          "resetAt": 1773507599917
+          "resetAt": 1773507599964
         }
       ],
       "error": null
@@ -72,13 +72,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"344\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Mon 2026-03-09 20:29 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773088180426,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1773089072926,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "[[reply_to_current]] Yes.\n\nI wrote a new entry into:\n`/Users/andreasallmaier/Documents/Brain/journal/2026-03-08.md`\n\nIt’s under the `* [[clawdbot]]` section and starts with:\n`Nikola nightly journal — "
+      "lastSummary": "The auto-update cron can’t run right now because **OpenClaw’s config is invalid**.\n\n**Root cause**\n- Config validation fails with:\n  `plugins: plugin manifest not found: .../extensions/google-antigravity-auth/openclaw.plugin.json`\n- That extension folder exists, but it **doesn’t contain** `openclaw.plugin.json` (so it’s a removed/legacy plugin ID that’s still being referenced somewhere at startup).\n\n**What I tried**\n- Ran the cron’s command (`openclaw_auto_update.py`) → it fails immediately because `openclaw cron status` can’t run with an invalid config.\n- Ran `openclaw doctor --fix` → it reports the same missing plugin manifest and can’t repair it automatically.\n- Edited `~/.openclaw/openclaw.json` to remove `google-gemini-cli-auth` from `plugins.entries` (now only `telegram` is there). **The error persists**, and the JSON itself contains **no** reference to `google-antigravity-auth` (I confirmed via search).\n\n**Current status**\n- `openclaw config validate` still fails.\n- `openclaw gateway restart` aborts due to invalid config.\n- So: **cron + gateway operations that require config validation are blocked** until this is fixed.\n\nIf you want, I can proceed by hunting down where `google-antigravity-auth` is being injected from (likely another config file, env var, or a secondary config overlay), but I’ll need to inspect OpenClaw’s effective config resolution on this host."
     },
     {
       "id": "km",
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773087272865,
+      "lastRunAt": 1773089072926,
       "lastStatus": "ok",
-      "lastDurationMs": 23759,
+      "lastDurationMs": 261823,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Cron run didn’t execute because OpenClaw’s config is currently invalid.\n\nError:\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- File flagged: `~/.openclaw/openclaw.json`\n- Suggested by OpenClaw: `openclaw doctor --fix`\n\nIf you want, I can run `openclaw doctor --fix` next and then retry the auto-update script.",
-      "nextRunAt": 1773089072865,
+      "lastSummary": "The auto-update cron can’t run right now because **OpenClaw’s config is invalid**.\n\n**Root cause**\n- Config validation fails with:\n  `plugins: plugin manifest not found: .../extensions/google-antigravity-auth/openclaw.plugin.json`\n- That extension folder exists, but it **doesn’t contain** `openclaw.plugin.json` (so it’s a removed/legacy plugin ID that’s still being referenced somewhere at startup).\n\n**What I tried**\n- Ran the cron’s command (`openclaw_auto_update.py`) → it fails immediately because `openclaw cron status` can’t run with an invalid config.\n- Ran `openclaw doctor --fix` → it reports the same missing plugin manifest and can’t repair it automatically.\n- Edited `~/.openclaw/openclaw.json` to remove `google-gemini-cli-auth` from `plugins.entries` (now only `telegram` is there). **The error persists**, and the JSON itself contains **no** reference to `google-antigravity-auth` (I confirmed via search).\n\n**Current status**\n- `openclaw config validate` still fails.\n- `openclaw gateway restart` aborts due to invalid config.\n- So: **cron + gateway operations that require config validation are blocked** until this is fixed.\n\nIf you want, I can proceed by hunting down where `google-antigravity-auth` is being injected from (likely another config file, env var, or a secondary config overlay), but I’ll need to inspect OpenClaw’s effective config resolution on this host.",
+      "nextRunAt": 1773090872926,
       "model": null,
-      "lastTotalTokens": 8818,
-      "lastInputTokens": 8984,
-      "lastOutputTokens": 147
+      "lastTotalTokens": 17985,
+      "lastInputTokens": 17411,
+      "lastOutputTokens": 1547
     }
   ]
 }
