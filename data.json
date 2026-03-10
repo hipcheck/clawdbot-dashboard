@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773133214728,
+  "updatedAt": 1773135016588,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
-          "resetAt": 1773133434000
+          "usedPercent": 0,
+          "resetAt": 1773151626000
         },
         {
           "label": "Day",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773720234000
         }
       ],
@@ -28,8 +28,19 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 11,
+          "resetAt": 1773151200011
+        },
+        {
+          "label": "Week",
+          "usedPercent": 16,
+          "resetAt": 1773507600011
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -49,13 +60,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1773127800035,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773134896925,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nightly prescan complete. The summary report has been saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were found."
+      "lastSummary": null
     },
     {
       "id": "main",
@@ -64,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773132274824,
+      "lastRunAt": 1773134074865,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now — result:\n\n- **NOOP (no update)**\n\nNothing to update/applied this run."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available)."
     },
     {
       "id": "km",
@@ -80,6 +91,18 @@
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "Mac node status: **connected** (Andreas MacBook online).\n\n- CURRENT_TS (America/New_York): **2026-03-09 23:00:19 EDT**\n- TARGET_DATE logic result (23:00–23:59 window ⇒ today): **2026-03-09**\n- Target file: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md**\n  - Status: **found (not empty)**\n  - `\\t* [[clawdbot]]` section: **present**\n  - Action taken: **added 1 new bullet entry** under `[[clawdbot]]` (no duplicates), including a nested timestamp bullet.\n  - Verification: re-read preview confirms the inserted content is present and localized to the `[[clawdbot]]` section.\n\nNotes:\n- Included “Further reading” with **2 specific links**, each with relevance + executive summary (peer-reviewed/clinical).\n- Could not add alcohol/CGM evidence links tonight due to a **Brave Search 429 rate-limit** during lookup; left a note in the entry offering to add sources later."
+    },
+    {
+      "id": "research",
+      "name": "research",
+      "emoji": "🤖",
+      "activityKind": null,
+      "activityLabel": null,
+      "activityChannel": null,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastError": null,
+      "lastSummary": null
     }
   ],
   "cronJobs": [
@@ -96,7 +119,7 @@
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1773140400000,
-      "model": null,
+      "model": "google-gemini-cli/gemini-2.5-pro",
       "lastTotalTokens": 6645,
       "lastInputTokens": 6638,
       "lastOutputTokens": 687
@@ -215,17 +238,35 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773132274824,
+      "lastRunAt": 1773134074865,
       "lastStatus": "ok",
-      "lastDurationMs": 73686,
+      "lastDurationMs": 73543,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now — result:\n\n- **NOOP (no update)**\n\nNothing to update/applied this run.",
-      "nextRunAt": 1773134074824,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available).",
+      "nextRunAt": 1773135874865,
       "model": null,
-      "lastTotalTokens": 8226,
-      "lastInputTokens": 8229,
-      "lastOutputTokens": 215
+      "lastTotalTokens": 8161,
+      "lastInputTokens": 8292,
+      "lastOutputTokens": 97
+    },
+    {
+      "id": "e3918934-ca54-44dd-964e-d27888a9946a",
+      "name": "research:daily-signal",
+      "schedule": "0 5,14 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1773165600000,
+      "model": "google-gemini-cli/gemini-2.0-flash",
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
     }
   ]
 }
