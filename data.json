@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773108017583,
+  "updatedAt": 1773109816624,
   "providers": [
     {
       "id": "openai-codex",
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
-          "resetAt": 1773122400165
+          "usedPercent": 17,
+          "resetAt": 1773122400012
         },
         {
           "label": "Week",
-          "usedPercent": 13,
-          "resetAt": 1773507600165
+          "usedPercent": 14,
+          "resetAt": 1773507600012
         }
       ],
       "error": null
@@ -48,13 +48,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"427\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Tue 2026-03-10 01:46 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773107390230,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "<execute_thought>\nThe user corrected my assumption. They are not referring to the job pipeline cron job, but to the `feature-builder:morning-proposal` job, which is one of my own core directives. The "
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1773108879411,
+      "lastStatus": "error",
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null
     },
     {
       "id": "infraops",
@@ -73,9 +73,9 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "clawdbot:daily-ops-journal",
+      "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773107271084,
+      "lastRunAt": 1773108874067,
       "lastStatus": "error",
       "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
       "lastSummary": null
@@ -100,10 +100,10 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773107272094,
+      "lastRunAt": 1773108879411,
       "lastStatus": "error",
-      "lastDurationMs": 213,
-      "consecutiveErrors": 1,
+      "lastDurationMs": 181,
+      "consecutiveErrors": 3,
       "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
       "lastSummary": null,
       "nextRunAt": 1773140400000,
@@ -226,13 +226,13 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773107073994,
-      "lastStatus": "ok",
-      "lastDurationMs": 61998,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "This cron run was skipped because a direct (interactive) session is currently active:\n\n- **SKIP**: direct session active (age ≈ 542s)\n\nIf you want, I can run the updater now manually—just tell me “run it now” (or wait until you’re not actively chatting and the next cron tick should execute normally).",
-      "nextRunAt": 1773108873994,
+      "lastRunAt": 1773108874067,
+      "lastStatus": "error",
+      "lastDurationMs": 22,
+      "consecutiveErrors": 1,
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null,
+      "nextRunAt": 1773110674067,
       "model": null,
       "lastTotalTokens": 8686,
       "lastInputTokens": 8852,
