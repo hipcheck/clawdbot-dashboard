@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773136818430,
+  "updatedAt": 1773138613748,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773151626000
         },
         {
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
-          "resetAt": 1773151200439
+          "usedPercent": 15,
+          "resetAt": 1773151200086
         },
         {
           "label": "Week",
           "usedPercent": 16,
-          "resetAt": 1773507600439
+          "resetAt": 1773507600086
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773135874911,
+      "lastRunAt": 1773137675106,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update cron fired, but the updater **skipped** because a direct session was active:\n\n- Ran: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `SKIP (direct session active ...)`\n\nLogged this in `memory/2026-03-10.md`."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found nothing to update (no changes applied)."
     },
     {
       "id": "km",
@@ -99,7 +99,7 @@
       "activityKind": "cron",
       "activityLabel": "research:daily-signal",
       "activityChannel": null,
-      "lastRunAt": 1773136330692,
+      "lastRunAt": 1773137457989,
       "lastStatus": "error",
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773135874911,
+      "lastRunAt": 1773137675106,
       "lastStatus": "ok",
-      "lastDurationMs": 74342,
+      "lastDurationMs": 230255,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update cron fired, but the updater **skipped** because a direct session was active:\n\n- Ran: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `SKIP (direct session active ...)`\n\nLogged this in `memory/2026-03-10.md`.",
-      "nextRunAt": 1773137674911,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found nothing to update (no changes applied).",
+      "nextRunAt": 1773139475106,
       "model": null,
-      "lastTotalTokens": 8508,
-      "lastInputTokens": 8651,
-      "lastOutputTokens": 341
+      "lastTotalTokens": 8005,
+      "lastInputTokens": 8100,
+      "lastOutputTokens": 104
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -256,10 +256,10 @@
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773136330692,
+      "lastRunAt": 1773137457989,
       "lastStatus": "error",
-      "lastDurationMs": 300713,
-      "consecutiveErrors": 2,
+      "lastDurationMs": 300065,
+      "consecutiveErrors": 3,
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1773165600000,
