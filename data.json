@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773147615535,
+  "updatedAt": 1773149415929,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1773151626000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 38,
-          "resetAt": 1773151199826
+          "resetAt": 1773151200506
         },
         {
           "label": "Week",
           "usedPercent": 19,
-          "resetAt": 1773507599826
+          "resetAt": 1773507600506
         }
       ],
       "error": null
@@ -72,25 +72,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1773146675315,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773148579477,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` and it **no-op’d**: **no OpenClaw update available**.\n\nEvidence:\n- `openclaw_auto_update.py --dry-run` returned: `NOOP (no update)`\n- Update audit log tail (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`) shows repeated `NOOP (no update)` through **2026-03-10T12:45:46Z**.\n\nLast successful auto-update in the log was **2026-02-27** (`UPDATE_OK latest=2026.2.26`)."
+      "lastSummary": null
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
-      "activityChannel": null,
-      "lastRunAt": 1773111600034,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"118\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Tue 2026-03-10 13:25 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773149185207,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Mac node status: **connected** (Andreas MacBook online).\n\n- CURRENT_TS (America/New_York): **2026-03-09 23:00:19 EDT**\n- TARGET_DATE logic result (23:00–23:59 window ⇒ today): **2026-03-09**\n- Target file: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md**\n  - Status: **found (not empty)**\n  - `\\t* [[clawdbot]]` section: **present**\n  - Action taken: **added 1 new bullet entry** under `[[clawdbot]]` (no duplicates), including a nested timestamp bullet.\n  - Verification: re-read preview confirms the inserted content is present and localized to the `[[clawdbot]]` section.\n\nNotes:\n- Included “Further reading” with **2 specific links**, each with relevance + executive summary (peer-reviewed/clinical).\n- Could not add alcohol/CGM evidence links tonight due to a **Brave Search 429 rate-limit** during lookup; left a note in the entry offering to add sources later."
+      "lastSummary": "You can’t (and shouldn’t) make me bypass approvals from *inside the chat*. The “approval required” gates are enforced by the **OpenClaw Gateway / node runtime**, not by me—so the only way is to **chan"
     },
     {
       "id": "research",
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773146675315,
+      "lastRunAt": 1773148475377,
       "lastStatus": "ok",
-      "lastDurationMs": 84531,
+      "lastDurationMs": 112857,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` and it **no-op’d**: **no OpenClaw update available**.\n\nEvidence:\n- `openclaw_auto_update.py --dry-run` returned: `NOOP (no update)`\n- Update audit log tail (`/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`) shows repeated `NOOP (no update)` through **2026-03-10T12:45:46Z**.\n\nLast successful auto-update in the log was **2026-02-27** (`UPDATE_OK latest=2026.2.26`).",
-      "nextRunAt": 1773148475315,
+      "lastSummary": "I can’t execute this cron job right now: the `exec` tool is returning\n\n`SKIP (direct session active …)`\n\nSo the auto-update script didn’t run.\n\nIf you want to run it manually, execute:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nOr tell me when you’re done chatting and I’ll rerun it immediately (once the “direct session active” gate clears).",
+      "nextRunAt": 1773150275377,
       "model": null,
-      "lastTotalTokens": 15098,
-      "lastInputTokens": 15120,
-      "lastOutputTokens": 720
+      "lastTotalTokens": 8122,
+      "lastInputTokens": 8285,
+      "lastOutputTokens": 346
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
