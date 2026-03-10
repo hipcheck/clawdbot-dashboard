@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773174613043,
+  "updatedAt": 1773176414328,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773173676439,
+      "lastRunAt": 1773175476482,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Latest `openclaw_auto_update.py` result: **NOOP (no update available)**.\n\n- Log shows the most recent run at **2026-03-10T20:16:05Z**: `NOOP (no update)`\n- The update log is at: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you expected an update around **20:14Z**, there’s no corresponding log line for that exact minute (next recorded entry is 20:16:05Z)."
+      "lastSummary": "openclaw-auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `NOOP (no update)`\n\nLogged to `memory/2026-03-10.md` (20:44 UTC entry)."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773173676439,
+      "lastRunAt": 1773175476482,
       "lastStatus": "ok",
-      "lastDurationMs": 96405,
+      "lastDurationMs": 84216,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Latest `openclaw_auto_update.py` result: **NOOP (no update available)**.\n\n- Log shows the most recent run at **2026-03-10T20:16:05Z**: `NOOP (no update)`\n- The update log is at: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you expected an update around **20:14Z**, there’s no corresponding log line for that exact minute (next recorded entry is 20:16:05Z).",
-      "nextRunAt": 1773175476439,
+      "lastSummary": "openclaw-auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `NOOP (no update)`\n\nLogged to `memory/2026-03-10.md` (20:44 UTC entry).",
+      "nextRunAt": 1773177276482,
       "model": null,
-      "lastTotalTokens": 10850,
-      "lastInputTokens": 13210,
-      "lastOutputTokens": 663
+      "lastTotalTokens": 8452,
+      "lastInputTokens": 9209,
+      "lastOutputTokens": 472
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
