@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773135016588,
+  "updatedAt": 1773136818430,
   "providers": [
     {
       "id": "openai-codex",
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 11,
-          "resetAt": 1773151200011
+          "usedPercent": 12,
+          "resetAt": 1773151200439
         },
         {
           "label": "Week",
           "usedPercent": 16,
-          "resetAt": 1773507600011
+          "resetAt": 1773507600439
         }
       ],
       "error": null
@@ -61,12 +61,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"105\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Tue 2026-03-10 09:52 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773134896925,
+      "lastRunAt": 1773136381436,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Okay, proceeding with Option 1.\n\nI will now patch the cron job scripts as a short-term fix. I will scan the cron directory, identify all jobs that use the `web_search` tool, and automatically insert a"
     },
     {
       "id": "main",
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773134074865,
+      "lastRunAt": 1773135874911,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available)."
+      "lastSummary": "Auto-update cron fired, but the updater **skipped** because a direct session was active:\n\n- Ran: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `SKIP (direct session active ...)`\n\nLogged this in `memory/2026-03-10.md`."
     },
     {
       "id": "km",
@@ -96,12 +96,12 @@
       "id": "research",
       "name": "research",
       "emoji": "🤖",
-      "activityKind": null,
-      "activityLabel": null,
+      "activityKind": "cron",
+      "activityLabel": "research:daily-signal",
       "activityChannel": null,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastError": null,
+      "lastRunAt": 1773136330692,
+      "lastStatus": "error",
+      "lastError": "Error: cron: job execution timed out",
       "lastSummary": null
     }
   ],
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773134074865,
+      "lastRunAt": 1773135874911,
       "lastStatus": "ok",
-      "lastDurationMs": 73543,
+      "lastDurationMs": 74342,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available).",
-      "nextRunAt": 1773135874865,
+      "lastSummary": "Auto-update cron fired, but the updater **skipped** because a direct session was active:\n\n- Ran: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `SKIP (direct session active ...)`\n\nLogged this in `memory/2026-03-10.md`.",
+      "nextRunAt": 1773137674911,
       "model": null,
-      "lastTotalTokens": 8161,
-      "lastInputTokens": 8292,
-      "lastOutputTokens": 97
+      "lastTotalTokens": 8508,
+      "lastInputTokens": 8651,
+      "lastOutputTokens": 341
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -256,11 +256,11 @@
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "consecutiveErrors": 0,
-      "lastError": null,
+      "lastRunAt": 1773136330692,
+      "lastStatus": "error",
+      "lastDurationMs": 300713,
+      "consecutiveErrors": 2,
+      "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1773165600000,
       "model": "google-gemini-cli/gemini-2.0-flash",
