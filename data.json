@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773127813905,
+  "updatedAt": 1773129614791,
   "providers": [
     {
       "id": "openai-codex",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773107271611,
-      "lastStatus": "error",
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
-      "lastSummary": null
+      "lastRunAt": 1773127800035,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Nightly prescan complete. The summary report has been saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were found."
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773126874700,
+      "lastRunAt": 1773128674736,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "`openclaw-auto-update` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773084943911,
+      "lastRunAt": 1773127800035,
       "lastStatus": "ok",
-      "lastDurationMs": 605404,
+      "lastDurationMs": 123436,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The nightly prescan is complete and the summary report has been generated at `/tmp/openclaw_prescan_summary.md`.",
-      "nextRunAt": 1773127800000,
+      "lastSummary": "Nightly prescan complete. The summary report has been saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were found.",
+      "nextRunAt": 1773214200000,
       "model": null,
-      "lastTotalTokens": 10891,
-      "lastInputTokens": 15347,
-      "lastOutputTokens": 944
+      "lastTotalTokens": 9105,
+      "lastInputTokens": 18074,
+      "lastOutputTokens": 1605
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -215,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773126874700,
+      "lastRunAt": 1773128674736,
       "lastStatus": "ok",
-      "lastDurationMs": 66955,
+      "lastDurationMs": 68944,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773128674700,
+      "lastSummary": "`openclaw-auto-update` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773130474736,
       "model": null,
-      "lastTotalTokens": 8168,
-      "lastInputTokens": 8299,
-      "lastOutputTokens": 108
+      "lastTotalTokens": 8161,
+      "lastInputTokens": 8292,
+      "lastOutputTokens": 100
     }
   ]
 }
