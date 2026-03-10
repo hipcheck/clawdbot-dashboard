@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773140418788,
+  "updatedAt": 1773142212128,
   "providers": [
     {
       "id": "openai-codex",
@@ -26,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1773226819000
+          "resetAt": 1773228612000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1773226819000
+          "resetAt": 1773228612000
         }
       ],
       "error": null
@@ -42,13 +42,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 17,
-          "resetAt": 1773151200270
+          "usedPercent": 35,
+          "resetAt": 1773151200508
         },
         {
           "label": "Week",
-          "usedPercent": 16,
-          "resetAt": 1773507600270
+          "usedPercent": 18,
+          "resetAt": 1773507600508
         }
       ],
       "error": null
@@ -62,10 +62,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773110560027,
-      "lastStatus": "error",
-      "lastError": "Error: cron: job execution timed out",
-      "lastSummary": null
+      "lastRunAt": 1773140876416,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "## 🔨 Today's Build\n\n**Proactive `openclaw` Maintenance Bot**\n\n**Signal:** ⚠️ research cache stale/missing — proposal based on general context only. The daily system prescan from 2026-03-10T07:30Z shows an available `openclaw` update and a fixable Telegram configuration warning.\n\n**Why Andreas:** This directly improves the stability and function of the `openclaw` setup he is actively tuning.\n\n**Impact:** A daily, automated health check that flags issues without manual intervention, saving time and preventing configuration drift.\n**Risk:** The script might misinterpret a new warning or error, leading to a confusing report.\n**Effort:** 2 hours.\n\n**First 3 steps:**\n1. Create a new bash script `~/.openclaw/scripts/daily_health_check.sh`.\n2. Add commands to the script: `openclaw system updates --check`, `openclaw system audit`, and `openclaw gateway status`.\n3. Format the output from these commands into a clean, human-readable summary.\n\n**Done looks like:** A cron job exists that runs the script daily and sends a health summary to Andreas via Telegram."
     },
     {
       "id": "infraops",
@@ -86,10 +86,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773139475125,
+      "lastRunAt": 1773141275164,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update."
     },
     {
       "id": "km",
@@ -110,7 +110,7 @@
       "activityKind": "cron",
       "activityLabel": "research:daily-signal",
       "activityChannel": null,
-      "lastRunAt": 1773137457989,
+      "lastRunAt": 1773141381944,
       "lastStatus": "error",
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null
@@ -123,17 +123,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773110560027,
-      "lastStatus": "error",
-      "lastDurationMs": 900069,
-      "consecutiveErrors": 4,
-      "lastError": "Error: cron: job execution timed out",
-      "lastSummary": null,
-      "nextRunAt": 1773140400000,
+      "lastRunAt": 1773140876416,
+      "lastStatus": "ok",
+      "lastDurationMs": 206297,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "## 🔨 Today's Build\n\n**Proactive `openclaw` Maintenance Bot**\n\n**Signal:** ⚠️ research cache stale/missing — proposal based on general context only. The daily system prescan from 2026-03-10T07:30Z shows an available `openclaw` update and a fixable Telegram configuration warning.\n\n**Why Andreas:** This directly improves the stability and function of the `openclaw` setup he is actively tuning.\n\n**Impact:** A daily, automated health check that flags issues without manual intervention, saving time and preventing configuration drift.\n**Risk:** The script might misinterpret a new warning or error, leading to a confusing report.\n**Effort:** 2 hours.\n\n**First 3 steps:**\n1. Create a new bash script `~/.openclaw/scripts/daily_health_check.sh`.\n2. Add commands to the script: `openclaw system updates --check`, `openclaw system audit`, and `openclaw gateway status`.\n3. Format the output from these commands into a clean, human-readable summary.\n\n**Done looks like:** A cron job exists that runs the script daily and sends a health summary to Andreas via Telegram.",
+      "nextRunAt": 1773226800000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 6645,
-      "lastInputTokens": 6638,
-      "lastOutputTokens": 687
+      "lastTotalTokens": 6353,
+      "lastInputTokens": 9279,
+      "lastOutputTokens": 2543
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -249,17 +249,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773139475125,
+      "lastRunAt": 1773141275164,
       "lastStatus": "ok",
-      "lastDurationMs": 71311,
+      "lastDurationMs": 592295,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773141275125,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update.",
+      "nextRunAt": 1773143075164,
       "model": null,
-      "lastTotalTokens": 8020,
-      "lastInputTokens": 8115,
-      "lastOutputTokens": 124
+      "lastTotalTokens": 8008,
+      "lastInputTokens": 8103,
+      "lastOutputTokens": 104
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -267,10 +267,10 @@
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773137457989,
+      "lastRunAt": 1773141381944,
       "lastStatus": "error",
-      "lastDurationMs": 300065,
-      "consecutiveErrors": 3,
+      "lastDurationMs": 300047,
+      "consecutiveErrors": 5,
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1773165600000,
