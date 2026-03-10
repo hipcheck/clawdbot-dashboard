@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773111615439,
+  "updatedAt": 1773113413445,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1773112025000
+          "usedPercent": 2,
+          "resetAt": 1773130024000
         },
         {
           "label": "Day",
-          "usedPercent": 10,
+          "usedPercent": 11,
           "resetAt": 1773531882000
         }
       ],
@@ -28,19 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 24,
-          "resetAt": 1773122399850
-        },
-        {
-          "label": "Week",
-          "usedPercent": 14,
-          "resetAt": 1773507599850
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -75,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773110674355,
+      "lastRunAt": 1773112474368,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **NOOP (no update)**.\n\nNothing to update right now."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available)."
     },
     {
       "id": "km",
@@ -87,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:nightly-journal-comment",
       "activityChannel": null,
-      "lastRunAt": 1773107270624,
-      "lastStatus": "error",
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
-      "lastSummary": null
+      "lastRunAt": 1773111600034,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Mac node status: **connected** (Andreas MacBook online).\n\n- CURRENT_TS (America/New_York): **2026-03-09 23:00:19 EDT**\n- TARGET_DATE logic result (23:00–23:59 window ⇒ today): **2026-03-09**\n- Target file: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md**\n  - Status: **found (not empty)**\n  - `\\t* [[clawdbot]]` section: **present**\n  - Action taken: **added 1 new bullet entry** under `[[clawdbot]]` (no duplicates), including a nested timestamp bullet.\n  - Verification: re-read preview confirms the inserted content is present and localized to the `[[clawdbot]]` section.\n\nNotes:\n- Included “Further reading” with **2 specific links**, each with relevance + executive summary (peer-reviewed/clinical).\n- Could not add alcohol/CGM evidence links tonight due to a **Brave Search 429 rate-limit** during lookup; left a note in the entry offering to add sources later."
     }
   ],
   "cronJobs": [
@@ -172,17 +161,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773107270624,
-      "lastStatus": "error",
-      "lastDurationMs": 460,
-      "consecutiveErrors": 1,
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
-      "lastSummary": null,
-      "nextRunAt": 1773111600000,
+      "lastRunAt": 1773111600034,
+      "lastStatus": "ok",
+      "lastDurationMs": 99505,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Mac node status: **connected** (Andreas MacBook online).\n\n- CURRENT_TS (America/New_York): **2026-03-09 23:00:19 EDT**\n- TARGET_DATE logic result (23:00–23:59 window ⇒ today): **2026-03-09**\n- Target file: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md**\n  - Status: **found (not empty)**\n  - `\\t* [[clawdbot]]` section: **present**\n  - Action taken: **added 1 new bullet entry** under `[[clawdbot]]` (no duplicates), including a nested timestamp bullet.\n  - Verification: re-read preview confirms the inserted content is present and localized to the `[[clawdbot]]` section.\n\nNotes:\n- Included “Further reading” with **2 specific links**, each with relevance + executive summary (peer-reviewed/clinical).\n- Could not add alcohol/CGM evidence links tonight due to a **Brave Search 429 rate-limit** during lookup; left a note in the entry offering to add sources later.",
+      "nextRunAt": 1773198000000,
       "model": null,
-      "lastTotalTokens": 11701,
-      "lastInputTokens": 13642,
-      "lastOutputTokens": 3352
+      "lastTotalTokens": 16020,
+      "lastInputTokens": 17473,
+      "lastOutputTokens": 4403
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -208,17 +197,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773107271084,
-      "lastStatus": "error",
-      "lastDurationMs": 527,
-      "consecutiveErrors": 1,
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
-      "lastSummary": null,
-      "nextRunAt": 1773112200000,
+      "lastRunAt": 1773112200025,
+      "lastStatus": "ok",
+      "lastDurationMs": 128783,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-03-10T03:10:11Z  \n(Today in America/New_York: **2026-03-09**)\n\n- Shipped / Changed\n  - **NYC Senior Marketing Manager Pipeline** (`03cf0eec…`) updated on disk:\n    - `workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - (run summary indicated 1 net-new role added; file mtime updated)\n  - **km:weekly-readwise-indexer** (`ec4c4adb…`) refreshed:\n    - `workspace-km/readwise/highlights.json` (+ `highlights.meta.json`)\n    - `workspace-km/readwise/books.json` (+ `books.meta.json`)\n  - **km:nightly-journal-comment** (`c915b0d5…`) succeeded on Andreas’s Mac:\n    - Added/updated **1 bullet** under `[[clawdbot]]` in `/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md`\n\n- Worked\n  - **healthcheck:overnight-prescan** (`99b353aa…`) completed and wrote: `/tmp/openclaw_prescan_summary.md`\n  - **Auto-update cron** (`c621238c…`) ran repeatedly and mostly NOOP’d:\n    - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → “NOOP (no update)”\n  - Git changes (workspace): **no commits in the last 24h** (`git log --since='24 hours ago'` returned nothing)\n\n- Failed / Flaky\n  - Several cron jobs failed with **Missing workspace template: AGENTS.md** at:\n    `/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md`\n    - **clawdbot:daily-ops-journal** (`a8c1dd0d…`) → error\n    - **healthcheck:security-preflight** (`5a45f0e7…`) → error\n    - **km:nightly-journal-comment** (`c915b0d5…`) had one error run (later succeeded)\n    - **Auto-update cron** (`c621238c…`) had one error run (later succeeded)\n    - **feature-builder:morning-proposal** (`461680fe…`) had template-related errors during retries\n  - **feature-builder:morning-proposal** (`461680fe…`) ultimately failed with **timeout** (`Error: cron: job execution timed out`, 900s)\n\n- Decisions\n  - None recorded.\n\n- Follow-ups\n  - Fix/restore the missing template path (`docs/reference/templates/AGENTS.md`) in the installed…",
+      "nextRunAt": 1773198600000,
       "model": null,
-      "lastTotalTokens": 20793,
-      "lastInputTokens": 21382,
-      "lastOutputTokens": 5834
+      "lastTotalTokens": 39836,
+      "lastInputTokens": 42669,
+      "lastOutputTokens": 4417
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -226,17 +215,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773110674355,
+      "lastRunAt": 1773112474368,
       "lastStatus": "ok",
-      "lastDurationMs": 872012,
+      "lastDurationMs": 58076,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **NOOP (no update)**.\n\nNothing to update right now.",
-      "nextRunAt": 1773112474355,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available).",
+      "nextRunAt": 1773114274368,
       "model": null,
-      "lastTotalTokens": 8173,
-      "lastInputTokens": 8304,
-      "lastOutputTokens": 123
+      "lastTotalTokens": 8172,
+      "lastInputTokens": 8303,
+      "lastOutputTokens": 108
     }
   ]
 }
