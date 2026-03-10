@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773142212128,
+  "updatedAt": 1773144017872,
   "providers": [
     {
       "id": "openai-codex",
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1773228612000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1773228612000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -42,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 35,
-          "resetAt": 1773151200508
+          "usedPercent": 38,
+          "resetAt": 1773151200107
         },
         {
           "label": "Week",
-          "usedPercent": 18,
-          "resetAt": 1773507600508
+          "usedPercent": 19,
+          "resetAt": 1773507600107
         }
       ],
       "error": null
@@ -86,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773141275164,
+      "lastRunAt": 1773143075246,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update."
+      "lastSummary": "openclaw-auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `NOOP (no update)`\n\nLogged to `memory/2026-03-10.md` (11:44 UTC)."
     },
     {
       "id": "km",
@@ -249,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773141275164,
+      "lastRunAt": 1773143075246,
       "lastStatus": "ok",
-      "lastDurationMs": 592295,
+      "lastDurationMs": 79733,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update.",
-      "nextRunAt": 1773143075164,
+      "lastSummary": "openclaw-auto-update cron run completed.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: `NOOP (no update)`\n\nLogged to `memory/2026-03-10.md` (11:44 UTC).",
+      "nextRunAt": 1773144875246,
       "model": null,
-      "lastTotalTokens": 8008,
-      "lastInputTokens": 8103,
-      "lastOutputTokens": 104
+      "lastTotalTokens": 8394,
+      "lastInputTokens": 8929,
+      "lastOutputTokens": 449
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
