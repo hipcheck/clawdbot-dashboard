@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773172815939,
+  "updatedAt": 1773174613043,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773187629000
         },
         {
           "label": "Day",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1773720234000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773171876381,
+      "lastRunAt": 1773173676439,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — no update available/needed.\n\nRan:\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`"
+      "lastSummary": "Latest `openclaw_auto_update.py` result: **NOOP (no update available)**.\n\n- Log shows the most recent run at **2026-03-10T20:16:05Z**: `NOOP (no update)`\n- The update log is at: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you expected an update around **20:14Z**, there’s no corresponding log line for that exact minute (next recorded entry is 20:16:05Z)."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773171876381,
+      "lastRunAt": 1773173676439,
       "lastStatus": "ok",
-      "lastDurationMs": 80988,
+      "lastDurationMs": 96405,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — no update available/needed.\n\nRan:\n`python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`",
-      "nextRunAt": 1773173676381,
+      "lastSummary": "Latest `openclaw_auto_update.py` result: **NOOP (no update available)**.\n\n- Log shows the most recent run at **2026-03-10T20:16:05Z**: `NOOP (no update)`\n- The update log is at: `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`\n\nIf you expected an update around **20:14Z**, there’s no corresponding log line for that exact minute (next recorded entry is 20:16:05Z).",
+      "nextRunAt": 1773175476439,
       "model": null,
-      "lastTotalTokens": 7992,
-      "lastInputTokens": 8087,
-      "lastOutputTokens": 101
+      "lastTotalTokens": 10850,
+      "lastInputTokens": 13210,
+      "lastOutputTokens": 663
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
