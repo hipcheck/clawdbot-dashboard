@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773158415128,
+  "updatedAt": 1773160216254,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 2,
           "resetAt": 1773169627000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 19,
-          "resetAt": 1773507600619
+          "resetAt": 1773507600706
         }
       ],
       "error": null
@@ -74,22 +74,22 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773157475801,
+      "lastRunAt": 1773159275964,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — no OpenClaw update was available/applied this run."
+      "lastSummary": "It no-op’d (actually **skipped**) because the system wasn’t considered idle.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n\n- `2026-03-10T16:15:30Z SKIP (direct session active (age=190200ms))`\n\nSo **no OpenClaw update was applied** on that cron run; it detected an active direct chat session and bailed safely. If you want it to update during your chats, we can lower/disable the “busy session” threshold via `OC_BUSY_SESSION_MS`, but current behavior is doing what it’s designed to do."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"118\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Tue 2026-03-10 13:25 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "System: BOOK_IDS=587041 OUT=/home/clawd/.openclaw/workspace-km/tmp/first20hours.highlights.jsonl COUNT=28\n\njson\n{\n  \"message_id\": \"141\",\n  \"sender_id\"",
       "activityChannel": "telegram",
-      "lastRunAt": 1773149185207,
+      "lastRunAt": 1773159138297,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "You can’t (and shouldn’t) make me bypass approvals from *inside the chat*. The “approval required” gates are enforced by the **OpenClaw Gateway / node runtime**, not by me—so the only way is to **chan"
+      "lastSummary": "## Readwise highlights summary — *The First 20 Hours* (Josh Kaufman)\n\n### The central promise (and its boundary)\n- You don’t need “10,000 hours” to get *usefully good*: “World-class mastery may take t"
     },
     {
       "id": "research",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773157475801,
+      "lastRunAt": 1773159275964,
       "lastStatus": "ok",
-      "lastDurationMs": 69215,
+      "lastDurationMs": 131780,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — no OpenClaw update was available/applied this run.",
-      "nextRunAt": 1773159275801,
+      "lastSummary": "It no-op’d (actually **skipped**) because the system wasn’t considered idle.\n\nFrom `/home/clawd/.openclaw/workspace/memory/openclaw-updates.log`:\n\n- `2026-03-10T16:15:30Z SKIP (direct session active (age=190200ms))`\n\nSo **no OpenClaw update was applied** on that cron run; it detected an active direct chat session and bailed safely. If you want it to update during your chats, we can lower/disable the “busy session” threshold via `OC_BUSY_SESSION_MS`, but current behavior is doing what it’s designed to do.",
+      "nextRunAt": 1773161075964,
       "model": null,
-      "lastTotalTokens": 8002,
-      "lastInputTokens": 8097,
-      "lastOutputTokens": 112
+      "lastTotalTokens": 10410,
+      "lastInputTokens": 10968,
+      "lastOutputTokens": 596
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
