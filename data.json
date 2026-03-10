@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773180013371,
+  "updatedAt": 1773181812970,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773179076575,
+      "lastRunAt": 1773180876624,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update available)**.\n\nI re-ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now and it exited **0**, and the log now includes:\n\n- `2026-03-10T21:46:07Z NOOP (no update)`"
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773179076575,
+      "lastRunAt": 1773180876624,
       "lastStatus": "ok",
-      "lastDurationMs": 103915,
+      "lastDurationMs": 67924,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Auto-update run result: **NOOP (no update available)**.\n\nI re-ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` just now and it exited **0**, and the log now includes:\n\n- `2026-03-10T21:46:07Z NOOP (no update)`",
-      "nextRunAt": 1773180876575,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773182676624,
       "model": null,
-      "lastTotalTokens": 15146,
-      "lastInputTokens": 31329,
-      "lastOutputTokens": 682
+      "lastTotalTokens": 8002,
+      "lastInputTokens": 8097,
+      "lastOutputTokens": 117
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
