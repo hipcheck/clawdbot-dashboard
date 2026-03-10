@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773167413295,
+  "updatedAt": 1773169215834,
   "providers": [
     {
       "id": "openai-codex",
@@ -13,7 +13,7 @@
         {
           "label": "Day",
           "usedPercent": 2,
-          "resetAt": 1773720234000
+          "resetAt": 1773720235000
         }
       ],
       "plan": "plus ($0.00)",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773166476217,
-      "lastStatus": "error",
-      "lastError": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}",
-      "lastSummary": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}"
+      "lastRunAt": 1773168276264,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found no updates to apply."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773166476217,
-      "lastStatus": "error",
-      "lastDurationMs": 160291,
-      "consecutiveErrors": 1,
-      "lastError": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}",
-      "lastSummary": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}",
-      "nextRunAt": 1773168276217,
+      "lastRunAt": 1773168276264,
+      "lastStatus": "ok",
+      "lastDurationMs": 71095,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found no updates to apply.",
+      "nextRunAt": 1773170076264,
       "model": null,
-      "lastTotalTokens": 49042,
-      "lastInputTokens": 11922,
-      "lastOutputTokens": 566
+      "lastTotalTokens": 8013,
+      "lastInputTokens": 8108,
+      "lastOutputTokens": 110
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
