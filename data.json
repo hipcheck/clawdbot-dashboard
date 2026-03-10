@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773151216678,
+  "updatedAt": 1773153014250,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
-          "resetAt": 1773151626000
+          "usedPercent": 0,
+          "resetAt": 1773169627000
         },
         {
           "label": "Day",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1773720234000
         }
       ],
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 19,
-          "resetAt": 1773507600142
+          "resetAt": 1773507600754
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773150275545,
+      "lastRunAt": 1773152075569,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Your `openclaw-auto-update` cron ran. According to the auto-update log, it **didn’t apply any update** today—recent runs are mostly:\n\n- **NOOP (no update)**, or\n- **SKIP (direct session active)** (including around `13:15–13:16Z`, i.e. right before/around this run)\n\nI also ran `openclaw doctor` and it reports a few issues worth cleaning up:\n\n- **Plugins: 3 errors** (device-pair, phone-control, talk-voice) — these extensions won’t load correctly right now.\n- **Telegram group policy warnings**: groupPolicy is `allowlist` but allowlists are empty → *all group messages will be silently dropped* (may be intentional).\n- Minor **session store hygiene** warnings (missing transcripts / orphan transcript).\n- It suggests: **`openclaw doctor --fix`**.\n\nIf you want, I can run `openclaw doctor --fix` next. It will modify local config/state to apply the recommended fixes—tell me “go ahead” and I’ll do it."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update."
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773150275545,
+      "lastRunAt": 1773152075569,
       "lastStatus": "ok",
-      "lastDurationMs": 115524,
+      "lastDurationMs": 74476,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Your `openclaw-auto-update` cron ran. According to the auto-update log, it **didn’t apply any update** today—recent runs are mostly:\n\n- **NOOP (no update)**, or\n- **SKIP (direct session active)** (including around `13:15–13:16Z`, i.e. right before/around this run)\n\nI also ran `openclaw doctor` and it reports a few issues worth cleaning up:\n\n- **Plugins: 3 errors** (device-pair, phone-control, talk-voice) — these extensions won’t load correctly right now.\n- **Telegram group policy warnings**: groupPolicy is `allowlist` but allowlists are empty → *all group messages will be silently dropped* (may be intentional).\n- Minor **session store hygiene** warnings (missing transcripts / orphan transcript).\n- It suggests: **`openclaw doctor --fix`**.\n\nIf you want, I can run `openclaw doctor --fix` next. It will modify local config/state to apply the recommended fixes—tell me “go ahead” and I’ll do it.",
-      "nextRunAt": 1773152075545,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update.",
+      "nextRunAt": 1773153875569,
       "model": null,
-      "lastTotalTokens": 13766,
-      "lastInputTokens": 14614,
-      "lastOutputTokens": 1341
+      "lastTotalTokens": 8009,
+      "lastInputTokens": 424,
+      "lastOutputTokens": 105
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
