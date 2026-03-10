@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773106214738,
+  "updatedAt": 1773108017583,
   "providers": [
     {
       "id": "openai-codex",
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 8,
-          "resetAt": 1773122400182
+          "usedPercent": 12,
+          "resetAt": 1773122400165
         },
         {
           "label": "Week",
           "usedPercent": 13,
-          "resetAt": 1773507600182
+          "resetAt": 1773507600165
         }
       ],
       "error": null
@@ -49,48 +49,48 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"423\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Tue 2026-03-10 00:00 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"427\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Tue 2026-03-10 01:46 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773100853511,
+      "lastRunAt": 1773107390230,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<execute_thought>\nThe user wants me to \"add the new sources we discussed\". I don't have the context of that discussion.\n\n1.  **Identify the most likely context.** My last major action was investigatin"
+      "lastSummary": "<execute_thought>\nThe user corrected my assumption. They are not referring to the job pipeline cron job, but to the `feature-builder:morning-proposal` job, which is one of my own core directives. The "
     },
     {
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
+      "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1773084943911,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "The nightly prescan is complete and the summary report has been generated at `/tmp/openclaw_prescan_summary.md`."
+      "lastRunAt": 1773107271611,
+      "lastStatus": "error",
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null
     },
     {
       "id": "main",
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
+      "activityLabel": "clawdbot:daily-ops-journal",
       "activityChannel": null,
-      "lastRunAt": 1773105273840,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "Your auto-update cron didn’t actually run because **OpenClaw’s config is currently invalid**, so the wrapper call to `openclaw cron status` failed first.\n\nError:\n\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- Config file: `~/.openclaw/openclaw.json`\n- Suggested by OpenClaw: `openclaw doctor --fix`\n\nWhat to do next (pick one):\n\n1) **Recommended:** run\n```bash\nopenclaw doctor --fix\n```\nThis should repair/remove the broken plugin reference.\n\n2) If you want the quickest manual fix: edit `~/.openclaw/openclaw.json` and remove the plugin entry referencing `google-antigravity-auth` (or fix the path if it’s supposed to exist).\n\nIf you want, paste your `~/.openclaw/openclaw.json` `plugins` section and I’ll tell you the exact line(s) to remove/change."
+      "lastRunAt": 1773107271084,
+      "lastStatus": "error",
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"76\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Mon 2026-03-09 20:05 UTC\"\n}\n```\n\nSender (untrusted metada",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773086743664,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "I can, but checking cron on the VPS requires an exec approval in this environment.\n\n- Pending: **Approval required (id e481cca5)** to run the VPS cron/timer diagnostics (crontab, `/etc/cron.*`, system"
+      "activityKind": "cron",
+      "activityLabel": "km:nightly-journal-comment",
+      "activityChannel": null,
+      "lastRunAt": 1773107270624,
+      "lastStatus": "error",
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null
     }
   ],
   "cronJobs": [
@@ -100,12 +100,12 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772967630334,
-      "lastStatus": "ok",
-      "lastDurationMs": 35252,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "WARNING: prescan stale (generated 2026-03-04T08:30:04Z, age ≈ 98h 30m at 2026-03-08 11:00 UTC).\n\n**One high-leverage improvement to build today:**\nBuild a **“Secure Channel Baseline” auto-remediation job** that enforces `groupPolicy=allowlist` and strips elevated/runtime/filesystem tools from any open group config.\n\n- **Impact:** Removes both current critical security findings in one move, dramatically reduces prompt-injection blast radius, and prevents drift by enforcing policy automatically.\n- **Risk:** Misconfigured allowlist could temporarily block legitimate automation in some groups.\n- **First 3 steps:**\n1. Define a baseline policy file (allowed groups + allowed tools per group) and back up current config.\n2. Implement a script that audits current channel/group settings, applies safe defaults, and outputs a diff + rollback file.\n3. Wire it into daily cron with alerting on any drift or failed remediation.\n\nDestination: send this proposal to **Telegram** (Andreas / current ops chat).",
+      "lastRunAt": 1773107272094,
+      "lastStatus": "error",
+      "lastDurationMs": 213,
+      "consecutiveErrors": 1,
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null,
       "nextRunAt": 1773140400000,
       "model": null,
       "lastTotalTokens": 6645,
@@ -136,12 +136,12 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772967000057,
-      "lastStatus": "ok",
-      "lastDurationMs": 627752,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "FAIL\n\n- **Blocker 1 (Critical): Untrusted Skill with Potential Credential Harvesting**\n    - The `readwise` skill located at `/home/clawd/.openclaw/workspace/.agents/skills/readwise` contains code patterns (`env-harvesting`) that suggest it could be reading environment variables and sending them over the network. This is a high-risk vector for credential theft.\n    - **Fix:** Unless this skill is fully trusted and audited, it should be removed immediately.\n        - `rm -rf /home/clawd/.openclaw/workspace/.agents/skills/readwise`\n\n- **Blocker 2 (Warn): Weak Fallback Model Configured**\n    - The configuration allows falling back to `openai-codex/gpt-4o-mini`, which has a higher risk of prompt injection and tool misuse compared to current-generation models.\n    - **Fix:** Remove the weak model from the fallback list to ensure only high-capability models are used for agent tasks.\n        - `openclaw config unset agents.list.main.model.fallbacks[?(@=='openai-codex/gpt-4o-mini')]`\n\n- **Configuration Gap: Empty Node Command Denylist**\n    - The `gateway.nodes.denyCommands` list is empty, meaning no commands are explicitly forbidden from being run by connected nodes. This reduces defense-in-depth.\n    - **Suggestion:** Populate this list with command IDs for high-risk operations that should never be delegated to a node.\n        - `openclaw config set gateway.nodes.denyCommands '[\"system:reboot\", \"system:shutdown\", \"openclaw:reset\"]'`\n\n- **Configuration Gap: Misconfigured Telegram Group Policy**\n    - Multiple Telegram accounts have `groupPolicy` set to `allowlist` but the corresponding `groupAllowFrom` list is empty. This causes all group messages to be dropped silently.\n    - **Fix:** For each relevant account, either add trusted user/group IDs to the allowlist or change the policy to `open`.\n        - `openclaw config set channels.telegram.groupPolicy open`\n        - `openclaw config set channels.telegram.accounts.default.groupPolicy open` (repeat for other accounts as n…",
+      "lastRunAt": 1773107271611,
+      "lastStatus": "error",
+      "lastDurationMs": 483,
+      "consecutiveErrors": 1,
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null,
       "nextRunAt": 1773139800000,
       "model": null,
       "lastTotalTokens": 12292,
@@ -172,12 +172,12 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772942400036,
-      "lastStatus": "ok",
-      "lastDurationMs": 84792,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "Mac node check: OK (Andreas MacBook connected)\n\nCURRENT_TS (America/New_York): 2026-03-07T23:00:10-05:00  \nTARGET_DATE logic: CURRENT_TS is between 23:00:00–23:59:59 ⇒ TARGET_DATE = 2026-03-07\n\nTarget file: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-07.md`  \n- Status: found (non-empty)  \n- `\\t* [[clawdbot]]` section: already present  \n- Change made (minimal, localized): replaced the empty placeholder bullet under `[[clawdbot]]` with **one** new bullet entry + nested timestamp + structured reflection/action prompts.\n\nVerification: re-read confirms the new content is present under the `[[clawdbot]]` section and the surrounding sections remain unchanged.",
+      "lastRunAt": 1773107270624,
+      "lastStatus": "error",
+      "lastDurationMs": 460,
+      "consecutiveErrors": 1,
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null,
       "nextRunAt": 1773111600000,
       "model": null,
       "lastTotalTokens": 11701,
@@ -208,12 +208,12 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1772943000043,
-      "lastStatus": "ok",
-      "lastDurationMs": 142840,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "Today (America/New_York): 2026-03-07\n\n## Clawdbot Daily Ops Journal\n- Timestamp (UTC): 2026-03-08T04:10:07Z\n- Window: last ~24h ending 2026-03-08T04:10:07Z (derived from cron run logs + filesystem + git)\n\n- Shipped/Changed\n  - No new git commits in /home/clawd/.openclaw/workspace in the last 24h.\n  - Cron-driven file updates:\n    - /home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json (updated)\n    - /home/clawd/.openclaw/workspace/memory/openclaw-updates.log (updated)\n    - /home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock (touched)\n\n- Worked\n  - Cron runs (last 24h):\n    - healthcheck:overnight-prescan: OK (generated /tmp/openclaw_prescan_summary.md; PRESCAN_GENERATED_AT=2026-03-07T08:32:00Z)\n    - feature-builder:morning-proposal: OK, but warned prescan stale/missing when read step ran\n    - infraops:openclaw-auto-update: OK (48 runs); openclaw_auto_update.py reported successful execution\n    - km:nightly-journal-comment: OK; Mac node check OK (Andreas MacBook connected)\n\n- Failed/Flaky\n  - healthcheck:security-preflight: job execution status OK, but report output was FAIL:\n    - Top blocker: agent environment lacked permissions/tools to run required shell commands (e.g., `openclaw security audit`) and verify config.\n    - Net effect: daily security preflight validation is currently not being performed.\n\n- Decisions\n  - None recorded in source logs beyond the security-preflight recommendation to grant infraops execution + read capabilities.\n\n- Follow-ups\n  - Fix/repair the healthcheck:security-preflight job environment so it can actually run:\n    - ensure exec/shell tooling is available to that isolated agent turn\n    - ensure read access to OpenClaw config so it can verify denyCommands + proxy posture\n  - Investigate why feature-builder couldn’t verify the prescan timestamp (should be present in /tmp/openclaw_prescan_summary.md).",
+      "lastRunAt": 1773107271084,
+      "lastStatus": "error",
+      "lastDurationMs": 527,
+      "consecutiveErrors": 1,
+      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastSummary": null,
       "nextRunAt": 1773112200000,
       "model": null,
       "lastTotalTokens": 20793,
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773105273840,
+      "lastRunAt": 1773107073994,
       "lastStatus": "ok",
-      "lastDurationMs": 57153,
+      "lastDurationMs": 61998,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Your auto-update cron didn’t actually run because **OpenClaw’s config is currently invalid**, so the wrapper call to `openclaw cron status` failed first.\n\nError:\n\n- Missing plugin manifest:\n  `/home/clawd/.npm-global/lib/node_modules/openclaw/extensions/google-antigravity-auth/openclaw.plugin.json`\n- Config file: `~/.openclaw/openclaw.json`\n- Suggested by OpenClaw: `openclaw doctor --fix`\n\nWhat to do next (pick one):\n\n1) **Recommended:** run\n```bash\nopenclaw doctor --fix\n```\nThis should repair/remove the broken plugin reference.\n\n2) If you want the quickest manual fix: edit `~/.openclaw/openclaw.json` and remove the plugin entry referencing `google-antigravity-auth` (or fix the path if it’s supposed to exist).\n\nIf you want, paste your `~/.openclaw/openclaw.json` `plugins` section and I’ll tell you the exact line(s) to remove/change.",
-      "nextRunAt": 1773107073840,
+      "lastSummary": "This cron run was skipped because a direct (interactive) session is currently active:\n\n- **SKIP**: direct session active (age ≈ 542s)\n\nIf you want, I can run the updater now manually—just tell me “run it now” (or wait until you’re not actively chatting and the next cron tick should execute normally).",
+      "nextRunAt": 1773108873994,
       "model": null,
-      "lastTotalTokens": 8818,
-      "lastInputTokens": 8984,
-      "lastOutputTokens": 260
+      "lastTotalTokens": 8686,
+      "lastInputTokens": 8852,
+      "lastOutputTokens": 116
     }
   ]
 }
