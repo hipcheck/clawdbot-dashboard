@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773165617831,
+  "updatedAt": 1773167413295,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1773169627000
         },
         {
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773164676183,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastRunAt": 1773166476217,
+      "lastStatus": "error",
+      "lastError": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}",
+      "lastSummary": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}"
     },
     {
       "id": "km",
@@ -88,10 +88,10 @@
       "activityKind": "cron",
       "activityLabel": "research:daily-signal",
       "activityChannel": null,
-      "lastRunAt": 1773141381944,
-      "lastStatus": "error",
-      "lastError": "Error: cron: job execution timed out",
-      "lastSummary": null
+      "lastRunAt": 1773165600140,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "I have completed the task and written the result to /home/clawd/.openclaw/workspace-feature-builder/tmp/daily-research.md. Due to search failures, the \"Top Signals\" section notes that no significant signals were found, and the \"Why These Matter for Andreas\" section explains this outcome."
     }
   ],
   "cronJobs": [
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773164676183,
-      "lastStatus": "ok",
-      "lastDurationMs": 70459,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773166476183,
+      "lastRunAt": 1773166476217,
+      "lastStatus": "error",
+      "lastDurationMs": 160291,
+      "consecutiveErrors": 1,
+      "lastError": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}",
+      "lastSummary": "Codex error: {\"type\":\"error\",\"error\":{\"type\":\"server_error\",\"code\":\"server_error\",\"message\":\"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID 1390e3f9-938d-40a9-a960-d9f472bb93d0 in your message.\",\"param\":null},\"sequence_number\":2}",
+      "nextRunAt": 1773168276217,
       "model": null,
-      "lastTotalTokens": 8031,
-      "lastInputTokens": 8126,
-      "lastOutputTokens": 135
+      "lastTotalTokens": 49042,
+      "lastInputTokens": 11922,
+      "lastOutputTokens": 566
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -245,17 +245,17 @@
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773141381944,
-      "lastStatus": "error",
-      "lastDurationMs": 300047,
-      "consecutiveErrors": 5,
-      "lastError": "Error: cron: job execution timed out",
-      "lastSummary": null,
-      "nextRunAt": 1773165600000,
+      "lastRunAt": 1773165600140,
+      "lastStatus": "ok",
+      "lastDurationMs": 63047,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "I have completed the task and written the result to /home/clawd/.openclaw/workspace-feature-builder/tmp/daily-research.md. Due to search failures, the \"Top Signals\" section notes that no significant signals were found, and the \"Why These Matter for Andreas\" section explains this outcome.",
+      "nextRunAt": 1773219600000,
       "model": "google-gemini-cli/gemini-2.0-flash",
-      "lastTotalTokens": null,
-      "lastInputTokens": null,
-      "lastOutputTokens": null
+      "lastTotalTokens": 8795,
+      "lastInputTokens": 17444,
+      "lastOutputTokens": 231
     }
   ]
 }
