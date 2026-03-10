@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773109816624,
+  "updatedAt": 1773111615439,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1773112025000
         },
         {
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 17,
-          "resetAt": 1773122400012
+          "usedPercent": 24,
+          "resetAt": 1773122399850
         },
         {
           "label": "Week",
           "usedPercent": 14,
-          "resetAt": 1773507600012
+          "resetAt": 1773507599850
         }
       ],
       "error": null
@@ -51,9 +51,9 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773108879411,
+      "lastRunAt": 1773110560027,
       "lastStatus": "error",
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastError": "Error: cron: job execution timed out",
       "lastSummary": null
     },
     {
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773108874067,
-      "lastStatus": "error",
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
-      "lastSummary": null
+      "lastRunAt": 1773110674355,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **NOOP (no update)**.\n\nNothing to update right now."
     },
     {
       "id": "km",
@@ -100,11 +100,11 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773108879411,
+      "lastRunAt": 1773110560027,
       "lastStatus": "error",
-      "lastDurationMs": 181,
-      "consecutiveErrors": 3,
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
+      "lastDurationMs": 900069,
+      "consecutiveErrors": 4,
+      "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1773140400000,
       "model": null,
@@ -226,17 +226,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773108874067,
-      "lastStatus": "error",
-      "lastDurationMs": 22,
-      "consecutiveErrors": 1,
-      "lastError": "Error: Missing workspace template: AGENTS.md (/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md). Ensure docs/reference/templates are packaged.",
-      "lastSummary": null,
-      "nextRunAt": 1773110674067,
+      "lastRunAt": 1773110674355,
+      "lastStatus": "ok",
+      "lastDurationMs": 872012,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → **NOOP (no update)**.\n\nNothing to update right now.",
+      "nextRunAt": 1773112474355,
       "model": null,
-      "lastTotalTokens": 8686,
-      "lastInputTokens": 8852,
-      "lastOutputTokens": 116
+      "lastTotalTokens": 8173,
+      "lastInputTokens": 8304,
+      "lastOutputTokens": 123
     }
   ]
 }
