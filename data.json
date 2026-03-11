@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773266414832,
+  "updatedAt": 1773268209747,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773281229000
         },
         {
           "label": "Day",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1773852278000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773265474874,
+      "lastRunAt": 1773267274893,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — the script ran successfully and found nothing to update."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — everything is already up to date, so no changes were made."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773265474874,
+      "lastRunAt": 1773267274893,
       "lastStatus": "ok",
-      "lastDurationMs": 70114,
+      "lastDurationMs": 69994,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — the script ran successfully and found nothing to update.",
-      "nextRunAt": 1773267274874,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — everything is already up to date, so no changes were made.",
+      "nextRunAt": 1773269074893,
       "model": null,
-      "lastTotalTokens": 8219,
-      "lastInputTokens": 16344,
-      "lastOutputTokens": 117
+      "lastTotalTokens": 8232,
+      "lastInputTokens": 8293,
+      "lastOutputTokens": 132
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
