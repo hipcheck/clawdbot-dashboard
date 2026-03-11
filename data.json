@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773226814141,
+  "updatedAt": 1773228611993,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1773227225000
+          "usedPercent": 1,
+          "resetAt": 1773245227000
         },
         {
           "label": "Day",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1773814085000
         }
       ],
@@ -37,13 +37,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"479\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:05 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773194761140,
+      "activityKind": "cron",
+      "activityLabel": "feature-builder:morning-proposal",
+      "activityChannel": null,
+      "lastRunAt": 1773226800021,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<final>\n```\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - channels.telegram.groupPolicy"
+      "lastSummary": "## 🔨 Today's Build\n\n**Automate the Daily Prescan & Research Caches**\n\n**Signal:** This morning proposal job relies on `/tmp/openclaw_prescan_summary.md` and `tmp/daily-research.md`, but their generation isn't automated, risking stale data.\n\n**Why Andreas:** This improves the core automation of the OpenClaw system you're actively building, making all dependent agents (like me) more reliable.\n\n**Impact:** I will provide better, more timely daily proposals, and the system will have a daily health check, catching issues like the `groupPolicy` warning from this morning's prescan.\n**Risk:** The new cron jobs could fail silently. Mitigation: The jobs should write a timestamp to a log file on completion.\n**Effort:** < 1 hour.\n\n**First 3 steps:**\n1. Create a new cron file `~/.openclaw/cron/system-prescan.yaml` to run the prescan script daily at 6 AM UTC and output to `/tmp/openclaw_prescan_summary.md`.\n2. Create a new cron file `~/.openclaw/cron/daily-research.yaml` to run the research script daily at 5 AM UTC and output to `~/.openclaw/workspace-feature-builder/tmp/daily-research.md`.\n3. Run `openclaw cron reload` to load the new jobs, then `openclaw cron list` to verify they are scheduled.\n\n**Done looks like:** Two new cron jobs are successfully scheduled and will automatically refresh the prescan and research caches every morning."
     },
     {
       "id": "infraops",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773225874020,
+      "lastRunAt": 1773227674065,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (already up to date)."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — everything is already up to date, so no changes were made."
     },
     {
       "id": "km",
@@ -101,17 +101,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773140876416,
+      "lastRunAt": 1773226800021,
       "lastStatus": "ok",
-      "lastDurationMs": 206297,
+      "lastDurationMs": 261197,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## 🔨 Today's Build\n\n**Proactive `openclaw` Maintenance Bot**\n\n**Signal:** ⚠️ research cache stale/missing — proposal based on general context only. The daily system prescan from 2026-03-10T07:30Z shows an available `openclaw` update and a fixable Telegram configuration warning.\n\n**Why Andreas:** This directly improves the stability and function of the `openclaw` setup he is actively tuning.\n\n**Impact:** A daily, automated health check that flags issues without manual intervention, saving time and preventing configuration drift.\n**Risk:** The script might misinterpret a new warning or error, leading to a confusing report.\n**Effort:** 2 hours.\n\n**First 3 steps:**\n1. Create a new bash script `~/.openclaw/scripts/daily_health_check.sh`.\n2. Add commands to the script: `openclaw system updates --check`, `openclaw system audit`, and `openclaw gateway status`.\n3. Format the output from these commands into a clean, human-readable summary.\n\n**Done looks like:** A cron job exists that runs the script daily and sends a health summary to Andreas via Telegram.",
-      "nextRunAt": 1773226800000,
+      "lastSummary": "## 🔨 Today's Build\n\n**Automate the Daily Prescan & Research Caches**\n\n**Signal:** This morning proposal job relies on `/tmp/openclaw_prescan_summary.md` and `tmp/daily-research.md`, but their generation isn't automated, risking stale data.\n\n**Why Andreas:** This improves the core automation of the OpenClaw system you're actively building, making all dependent agents (like me) more reliable.\n\n**Impact:** I will provide better, more timely daily proposals, and the system will have a daily health check, catching issues like the `groupPolicy` warning from this morning's prescan.\n**Risk:** The new cron jobs could fail silently. Mitigation: The jobs should write a timestamp to a log file on completion.\n**Effort:** < 1 hour.\n\n**First 3 steps:**\n1. Create a new cron file `~/.openclaw/cron/system-prescan.yaml` to run the prescan script daily at 6 AM UTC and output to `/tmp/openclaw_prescan_summary.md`.\n2. Create a new cron file `~/.openclaw/cron/daily-research.yaml` to run the research script daily at 5 AM UTC and output to `~/.openclaw/workspace-feature-builder/tmp/daily-research.md`.\n3. Run `openclaw cron reload` to load the new jobs, then `openclaw cron list` to verify they are scheduled.\n\n**Done looks like:** Two new cron jobs are successfully scheduled and will automatically refresh the prescan and research caches every morning.",
+      "nextRunAt": 1773313200000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 6353,
-      "lastInputTokens": 9279,
-      "lastOutputTokens": 2543
+      "lastTotalTokens": 6675,
+      "lastInputTokens": 8741,
+      "lastOutputTokens": 2599
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773225874020,
+      "lastRunAt": 1773227674065,
       "lastStatus": "ok",
-      "lastDurationMs": 65493,
+      "lastDurationMs": 70880,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (already up to date).",
-      "nextRunAt": 1773227674020,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — everything is already up to date, so no changes were made.",
+      "nextRunAt": 1773229474065,
       "model": null,
-      "lastTotalTokens": 8236,
-      "lastInputTokens": 8297,
-      "lastOutputTokens": 115
+      "lastTotalTokens": 8221,
+      "lastInputTokens": 8282,
+      "lastOutputTokens": 110
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
