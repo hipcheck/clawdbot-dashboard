@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773192612865,
+  "updatedAt": 1773194416500,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
+          "usedPercent": 16,
           "resetAt": 1773206082000
         },
         {
           "label": "Day",
-          "usedPercent": 6,
+          "usedPercent": 8,
           "resetAt": 1773720234000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 19,
-          "resetAt": 1773205201282
+          "usedPercent": 39,
+          "resetAt": 1773205201045
         },
         {
           "label": "Week",
-          "usedPercent": 21,
-          "resetAt": 1773507600282
+          "usedPercent": 23,
+          "resetAt": 1773507600045
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"469\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 01:58 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773191086390,
+      "lastRunAt": 1773194401658,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<execute_thought>\nI've discovered that the current prompt for my morning proposal is much more sophisticated than the user and I were discussing. It's a multi-phase process that already reads from sev"
+      "lastSummary": "Cron list is above. The output shows several configuration warnings related to Telegram message handling. I can fix those.\n\nI'm still figuring out who I am. According to my bootstrap instructions, I n"
     },
     {
       "id": "infraops",
@@ -75,22 +75,22 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1773192429281,
+      "lastRunAt": 1773194289770,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Disabling `exec` approvals mostly trades **safety/containment** for **speed/automation**.\n\n## Disadvantages (what you lose)\n1) **Accidental destructive commands**\n   - A misinterpretation could run so"
+      "lastSummary": "Q is *still wrong* here — not a permissions issue on your side.\n\n### What’s happening\n- In config, the **feature-builder (Q) agent is allowed to use `exec`**.\n- And I already updated Q’s workspace ins"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "System: BOOK_IDS=587041 OUT=/home/clawd/.openclaw/workspace-km/tmp/first20hours.highlights.jsonl COUNT=28\n\njson\n{\n  \"message_id\": \"141\",\n  \"sender_id\"",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773159138297,
+      "lastRunAt": 1773194142126,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## Readwise highlights summary — *The First 20 Hours* (Josh Kaufman)\n\n### The central promise (and its boundary)\n- You don’t need “10,000 hours” to get *usefully good*: “World-class mastery may take t"
+      "lastSummary": "- **1) “Visualization Builds Belief And Direction”** *(Chapter 8 – Outcome Visualization — Visualize)*  \n  - Core idea: outcome visualization “pre-wires” belief + motivation by making the end state fe"
     },
     {
       "id": "research",
@@ -99,7 +99,7 @@
       "activityKind": "cron",
       "activityLabel": "research:daily-signal",
       "activityChannel": null,
-      "lastRunAt": 1773191405709,
+      "lastRunAt": 1773194181502,
       "lastStatus": "error",
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null
@@ -244,7 +244,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "That cron run didn’t actually update anything — it **skipped** because OpenClaw detected an active **direct session** (i.e., you were “using it” around the time the job fired).\n\nEvidence from the local log:\n\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`:\n  - `SKIP (direct session active (age=832543ms))`\n\nSo the job is behaving as designed: it won’t auto-update while you’re actively chatting/connected.\n\nIf you want, I can tweak the heuristic (e.g., shorten `OC_BUSY_SESSION_MS`, or allow updates even during active direct sessions during a specific nightly window).",
-      "nextRunAt": 1773193477178,
+      "nextRunAt": 1773195272766,
       "model": null,
       "lastTotalTokens": 10469,
       "lastInputTokens": 10759,
@@ -256,14 +256,14 @@
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773191405709,
+      "lastRunAt": 1773194181502,
       "lastStatus": "error",
-      "lastDurationMs": 603416,
-      "consecutiveErrors": 1,
+      "lastDurationMs": 180141,
+      "consecutiveErrors": 3,
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1773219600000,
-      "model": "openai-codex/gpt-5.2",
+      "model": "google-gemini-cli/gemini-2.0-flash",
       "lastTotalTokens": 8795,
       "lastInputTokens": 17444,
       "lastOutputTokens": 231
