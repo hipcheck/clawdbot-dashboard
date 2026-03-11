@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773244813587,
+  "updatedAt": 1773246610744,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 2,
-          "resetAt": 1773245227000
+          "usedPercent": 0,
+          "resetAt": 1773263227000
         },
         {
           "label": "Day",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 9,
-          "resetAt": 1773252000940
+          "resetAt": 1773252001147
         },
         {
           "label": "Week",
           "usedPercent": 25,
-          "resetAt": 1773507599940
+          "resetAt": 1773507600147
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773243874434,
+      "lastRunAt": 1773245674474,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw-auto-update` ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **NOOP (no update)** — everything already up to date, so no changes were made."
+      "lastSummary": "`openclaw-auto-update` ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **NOOP (no update)** — everything is already up to date."
     },
     {
       "id": "km",
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773243874434,
+      "lastRunAt": 1773245674474,
       "lastStatus": "ok",
-      "lastDurationMs": 71488,
+      "lastDurationMs": 67662,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw-auto-update` ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **NOOP (no update)** — everything already up to date, so no changes were made.",
-      "nextRunAt": 1773245674434,
+      "lastSummary": "`openclaw-auto-update` ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **NOOP (no update)** — everything is already up to date.",
+      "nextRunAt": 1773247474474,
       "model": null,
-      "lastTotalTokens": 8239,
-      "lastInputTokens": 8300,
-      "lastOutputTokens": 164
+      "lastTotalTokens": 8226,
+      "lastInputTokens": 8287,
+      "lastOutputTokens": 133
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
