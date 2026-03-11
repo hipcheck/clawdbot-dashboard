@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773205214464,
+  "updatedAt": 1773207013107,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 27,
-          "resetAt": 1773206082000
+          "usedPercent": 0,
+          "resetAt": 1773224140000
         },
         {
           "label": "Day",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1773507599962
+          "resetAt": 1773507600525
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773204273157,
+      "lastRunAt": 1773206073357,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no new version available / no changes applied)."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available/applied)."
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773204273157,
+      "lastRunAt": 1773206073357,
       "lastStatus": "ok",
-      "lastDurationMs": 66671,
+      "lastDurationMs": 67101,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no new version available / no changes applied).",
-      "nextRunAt": 1773206073157,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no changes available/applied).",
+      "nextRunAt": 1773207873357,
       "model": null,
-      "lastTotalTokens": 8215,
-      "lastInputTokens": 8276,
-      "lastOutputTokens": 98
+      "lastTotalTokens": 8220,
+      "lastInputTokens": 8281,
+      "lastOutputTokens": 100
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
