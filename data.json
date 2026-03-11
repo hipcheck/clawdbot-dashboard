@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773190817423,
+  "updatedAt": 1773192612865,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 9,
           "resetAt": 1773206082000
         },
         {
           "label": "Day",
-          "usedPercent": 3,
+          "usedPercent": 6,
           "resetAt": 1773720234000
         }
       ],
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1773277217000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1773277217000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -42,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1773205200838
+          "usedPercent": 19,
+          "resetAt": 1773205201282
         },
         {
           "label": "Week",
-          "usedPercent": 19,
-          "resetAt": 1773507599838
+          "usedPercent": 21,
+          "resetAt": 1773507600282
         }
       ],
       "error": null
@@ -59,13 +48,13 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "cron",
-      "activityLabel": "feature-builder:morning-proposal",
-      "activityChannel": null,
-      "lastRunAt": 1773140876416,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773191086390,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## 🔨 Today's Build\n\n**Proactive `openclaw` Maintenance Bot**\n\n**Signal:** ⚠️ research cache stale/missing — proposal based on general context only. The daily system prescan from 2026-03-10T07:30Z shows an available `openclaw` update and a fixable Telegram configuration warning.\n\n**Why Andreas:** This directly improves the stability and function of the `openclaw` setup he is actively tuning.\n\n**Impact:** A daily, automated health check that flags issues without manual intervention, saving time and preventing configuration drift.\n**Risk:** The script might misinterpret a new warning or error, leading to a confusing report.\n**Effort:** 2 hours.\n\n**First 3 steps:**\n1. Create a new bash script `~/.openclaw/scripts/daily_health_check.sh`.\n2. Add commands to the script: `openclaw system updates --check`, `openclaw system audit`, and `openclaw gateway status`.\n3. Format the output from these commands into a clean, human-readable summary.\n\n**Done looks like:** A cron job exists that runs the script daily and sends a health summary to Andreas via Telegram."
+      "lastSummary": "<execute_thought>\nI've discovered that the current prompt for my morning proposal is much more sophisticated than the user and I were discussing. It's a multi-phase process that already reads from sev"
     },
     {
       "id": "infraops",
@@ -86,10 +75,10 @@
       "activityKind": "chat",
       "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
       "activityChannel": "tui",
-      "lastRunAt": 1773190749806,
+      "lastRunAt": 1773192429281,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "That log line means OpenClaw found a plugin package called `talk-voice`, but it doesn’t expose the lifecycle hooks OpenClaw expects (`register` / `activate`). So OpenClaw can’t load it as a real plugi"
+      "lastSummary": "Disabling `exec` approvals mostly trades **safety/containment** for **speed/automation**.\n\n## Disadvantages (what you lose)\n1) **Accidental destructive commands**\n   - A misinterpretation could run so"
     },
     {
       "id": "km",
@@ -110,10 +99,10 @@
       "activityKind": "cron",
       "activityLabel": "research:daily-signal",
       "activityChannel": null,
-      "lastRunAt": 1773165600140,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "I have completed the task and written the result to /home/clawd/.openclaw/workspace-feature-builder/tmp/daily-research.md. Due to search failures, the \"Top Signals\" section notes that no significant signals were found, and the \"Why These Matter for Andreas\" section explains this outcome."
+      "lastRunAt": 1773191405709,
+      "lastStatus": "error",
+      "lastError": "Error: cron: job execution timed out",
+      "lastSummary": null
     }
   ],
   "cronJobs": [
@@ -249,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773189876976,
+      "lastRunAt": 1773191677178,
       "lastStatus": "ok",
-      "lastDurationMs": 69501,
+      "lastDurationMs": 559745,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no update available / no action taken).",
-      "nextRunAt": 1773191676976,
+      "lastSummary": "That cron run didn’t actually update anything — it **skipped** because OpenClaw detected an active **direct session** (i.e., you were “using it” around the time the job fired).\n\nEvidence from the local log:\n\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`:\n  - `SKIP (direct session active (age=832543ms))`\n\nSo the job is behaving as designed: it won’t auto-update while you’re actively chatting/connected.\n\nIf you want, I can tweak the heuristic (e.g., shorten `OC_BUSY_SESSION_MS`, or allow updates even during active direct sessions during a specific nightly window).",
+      "nextRunAt": 1773193477178,
       "model": null,
-      "lastTotalTokens": 8004,
-      "lastInputTokens": 8099,
-      "lastOutputTokens": 108
+      "lastTotalTokens": 10469,
+      "lastInputTokens": 10759,
+      "lastOutputTokens": 609
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -267,14 +256,14 @@
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773165600140,
-      "lastStatus": "ok",
-      "lastDurationMs": 63047,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "I have completed the task and written the result to /home/clawd/.openclaw/workspace-feature-builder/tmp/daily-research.md. Due to search failures, the \"Top Signals\" section notes that no significant signals were found, and the \"Why These Matter for Andreas\" section explains this outcome.",
+      "lastRunAt": 1773191405709,
+      "lastStatus": "error",
+      "lastDurationMs": 603416,
+      "consecutiveErrors": 1,
+      "lastError": "Error: cron: job execution timed out",
+      "lastSummary": null,
       "nextRunAt": 1773219600000,
-      "model": "google-gemini-cli/gemini-2.0-flash",
+      "model": "openai-codex/gpt-5.2",
       "lastTotalTokens": 8795,
       "lastInputTokens": 17444,
       "lastOutputTokens": 231
