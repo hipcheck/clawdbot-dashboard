@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773221411184,
+  "updatedAt": 1773223212862,
   "providers": [
     {
       "id": "openai-codex",
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773220564157,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1773222273961,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Yep — that daily “flag” is coming from the **Telegram allowlist warnings** (the ones you saw under the “Doctor warnings” block), not from Readwise.\n\nI’ve now **whitelisted you for the geordie bot (and"
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — everything is already up to date, so nothing changed."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773220473925,
+      "lastRunAt": 1773222273961,
       "lastStatus": "ok",
-      "lastDurationMs": 71761,
+      "lastDurationMs": 70943,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron tried to run `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`, but on this OpenClaw host the execution was **skipped** because a **direct interactive session is active**:\n\n- `SKIP (direct session active ...)`\n\nSo no update actually ran at 09:14 UTC.\n\nIf you want to run it right now, tell me and I’ll re-run it once we’re not in the “direct session active” skip window (or you can run it manually in a shell).",
-      "nextRunAt": 1773222273925,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — everything is already up to date, so nothing changed.",
+      "nextRunAt": 1773224073961,
       "model": null,
-      "lastTotalTokens": 8247,
-      "lastInputTokens": 8308,
-      "lastOutputTokens": 323
+      "lastTotalTokens": 8220,
+      "lastInputTokens": 8281,
+      "lastOutputTokens": 118
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
