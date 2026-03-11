@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773194416500,
+  "updatedAt": 1773196214917,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 16,
+          "usedPercent": 20,
           "resetAt": 1773206082000
         },
         {
           "label": "Day",
-          "usedPercent": 8,
+          "usedPercent": 9,
           "resetAt": 1773720234000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 39,
-          "resetAt": 1773205201045
+          "usedPercent": 47,
+          "resetAt": 1773205201278
         },
         {
           "label": "Week",
-          "usedPercent": 23,
-          "resetAt": 1773507600045
+          "usedPercent": 24,
+          "resetAt": 1773507600278
         }
       ],
       "error": null
@@ -49,12 +49,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"469\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 01:58 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"479\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:05 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773194401658,
+      "lastRunAt": 1773194761140,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Cron list is above. The output shows several configuration warnings related to Telegram message handling. I can fix those.\n\nI'm still figuring out who I am. According to my bootstrap instructions, I n"
+      "lastSummary": "<final>\n```\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - channels.telegram.groupPolicy"
     },
     {
       "id": "infraops",
@@ -73,12 +73,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
-      "activityChannel": "tui",
-      "lastRunAt": 1773194289770,
+      "activityLabel": "json\n{\n  \"message_id\": \"377\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:28 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773196144532,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Q is *still wrong* here — not a permissions issue on your side.\n\n### What’s happening\n- In config, the **feature-builder (Q) agent is allowed to use `exec`**.\n- And I already updated Q’s workspace ins"
+      "lastSummary": "Hey Andreas — what do you want to tackle right now?"
     },
     {
       "id": "km",
@@ -238,31 +238,31 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773191677178,
+      "lastRunAt": 1773195272803,
       "lastStatus": "ok",
-      "lastDurationMs": 559745,
+      "lastDurationMs": 77729,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "That cron run didn’t actually update anything — it **skipped** because OpenClaw detected an active **direct session** (i.e., you were “using it” around the time the job fired).\n\nEvidence from the local log:\n\n- `/home/clawd/.openclaw/workspace/logs/openclaw_auto_update.last.log`:\n  - `SKIP (direct session active (age=832543ms))`\n\nSo the job is behaving as designed: it won’t auto-update while you’re actively chatting/connected.\n\nIf you want, I can tweak the heuristic (e.g., shorten `OC_BUSY_SESSION_MS`, or allow updates even during active direct sessions during a specific nightly window).",
-      "nextRunAt": 1773195272766,
+      "lastSummary": "The cron trigger came in, but the actual run was **skipped** on this host because a **direct session is active** (the tool returned: `SKIP (direct session active ...)`). So `openclaw_auto_update.py` did **not** execute.\n\nIf you want to run it anyway right now, you can run it manually from a shell:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nOr tell me “run it now” and I’ll try again once the session-lock condition allows it.",
+      "nextRunAt": 1773197072803,
       "model": null,
-      "lastTotalTokens": 10469,
-      "lastInputTokens": 10759,
-      "lastOutputTokens": 609
+      "lastTotalTokens": 8181,
+      "lastInputTokens": 8312,
+      "lastOutputTokens": 391
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
       "name": "research:daily-signal",
       "schedule": "0 5,14 * * *",
       "tz": "America/New_York",
-      "enabled": true,
+      "enabled": false,
       "lastRunAt": 1773194181502,
       "lastStatus": "error",
       "lastDurationMs": 180141,
       "consecutiveErrors": 3,
       "lastError": "Error: cron: job execution timed out",
       "lastSummary": null,
-      "nextRunAt": 1773219600000,
+      "nextRunAt": null,
       "model": "google-gemini-cli/gemini-2.0-flash",
       "lastTotalTokens": 8795,
       "lastInputTokens": 17444,
