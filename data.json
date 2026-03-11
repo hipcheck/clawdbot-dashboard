@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773198018370,
+  "updatedAt": 1773199813308,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 24,
+          "usedPercent": 26,
           "resetAt": 1773206082000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 47,
-          "resetAt": 1773205200773
+          "resetAt": 1773205200674
         },
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1773507600773
+          "resetAt": 1773507600674
         }
       ],
       "error": null
@@ -72,25 +72,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "---\nQueued #1\njson\n{\n  \"message_id\": \"401\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:46 UTC\"\n}\n```\n\nSender (u",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773197530794,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1773198872896,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I’m here.\n\nYes: the **Obsidian files are already created on your Mac**, and the **Sunday cron job is created**.\n\nTwo quick notes:\n\n- I set it for **Sunday 9:00 AM NYC time**.\n- The cron job currently "
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing needed updating this run."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"153\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:49 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773197351717,
+      "activityKind": "cron",
+      "activityLabel": "km:nightly-journal-comment",
+      "activityChannel": null,
+      "lastRunAt": 1773198000144,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Glad it hit the mark. Want me to turn those 5 into a single “do this this week” protocol (e.g., 5-minute daily structure + one conditioned music track + one outreach target)?"
+      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-10T23:00:18-04:00 (EDT)\n- TARGET_DATE logic result: 2026-03-10 (within 23:00–23:59 window → today)\n\nFile:\n- Updated: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-10.md`\n- Status: file existed and was non-empty\n\nEdits (kept localized to the `\\t* [[clawdbot]]` section):\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the empty placeholder bullet under it with ONE entry:\n  - “Nikola nightly synthesis — daughter-first calm + performance-review reframe + leadership carry-forward”\n  - Included nested timestamp bullet (`2026-03-10 23:02:10 EDT (NYC)`)\n  - Included structured reflections, small experiments, a quoted Readwise highlight text, and “Further reading” with 2 concrete links + relevance + 1-paragraph exec summaries.\n\nVerification:\n- Re-read the `[[clawdbot]]` section and confirmed the new content is present immediately before `\\t* [[tracking]] ✅`."
     },
     {
       "id": "research",
@@ -184,17 +184,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773111600034,
+      "lastRunAt": 1773198000144,
       "lastStatus": "ok",
-      "lastDurationMs": 99505,
+      "lastDurationMs": 137442,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Mac node status: **connected** (Andreas MacBook online).\n\n- CURRENT_TS (America/New_York): **2026-03-09 23:00:19 EDT**\n- TARGET_DATE logic result (23:00–23:59 window ⇒ today): **2026-03-09**\n- Target file: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md**\n  - Status: **found (not empty)**\n  - `\\t* [[clawdbot]]` section: **present**\n  - Action taken: **added 1 new bullet entry** under `[[clawdbot]]` (no duplicates), including a nested timestamp bullet.\n  - Verification: re-read preview confirms the inserted content is present and localized to the `[[clawdbot]]` section.\n\nNotes:\n- Included “Further reading” with **2 specific links**, each with relevance + executive summary (peer-reviewed/clinical).\n- Could not add alcohol/CGM evidence links tonight due to a **Brave Search 429 rate-limit** during lookup; left a note in the entry offering to add sources later.",
-      "nextRunAt": 1773198000000,
+      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-10T23:00:18-04:00 (EDT)\n- TARGET_DATE logic result: 2026-03-10 (within 23:00–23:59 window → today)\n\nFile:\n- Updated: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-10.md`\n- Status: file existed and was non-empty\n\nEdits (kept localized to the `\\t* [[clawdbot]]` section):\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the empty placeholder bullet under it with ONE entry:\n  - “Nikola nightly synthesis — daughter-first calm + performance-review reframe + leadership carry-forward”\n  - Included nested timestamp bullet (`2026-03-10 23:02:10 EDT (NYC)`)\n  - Included structured reflections, small experiments, a quoted Readwise highlight text, and “Further reading” with 2 concrete links + relevance + 1-paragraph exec summaries.\n\nVerification:\n- Re-read the `[[clawdbot]]` section and confirmed the new content is present immediately before `\\t* [[tracking]] ✅`.",
+      "nextRunAt": 1773284400000,
       "model": null,
-      "lastTotalTokens": 16020,
-      "lastInputTokens": 17473,
-      "lastOutputTokens": 4403
+      "lastTotalTokens": 19652,
+      "lastInputTokens": 32320,
+      "lastOutputTokens": 4595
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -220,17 +220,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773112200025,
+      "lastRunAt": 1773198600125,
       "lastStatus": "ok",
-      "lastDurationMs": 128783,
+      "lastDurationMs": 99680,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n2026-03-10T03:10:11Z  \n(Today in America/New_York: **2026-03-09**)\n\n- Shipped / Changed\n  - **NYC Senior Marketing Manager Pipeline** (`03cf0eec…`) updated on disk:\n    - `workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - (run summary indicated 1 net-new role added; file mtime updated)\n  - **km:weekly-readwise-indexer** (`ec4c4adb…`) refreshed:\n    - `workspace-km/readwise/highlights.json` (+ `highlights.meta.json`)\n    - `workspace-km/readwise/books.json` (+ `books.meta.json`)\n  - **km:nightly-journal-comment** (`c915b0d5…`) succeeded on Andreas’s Mac:\n    - Added/updated **1 bullet** under `[[clawdbot]]` in `/Users/andreasallmaier/Documents/Brain/journal/2026-03-09.md`\n\n- Worked\n  - **healthcheck:overnight-prescan** (`99b353aa…`) completed and wrote: `/tmp/openclaw_prescan_summary.md`\n  - **Auto-update cron** (`c621238c…`) ran repeatedly and mostly NOOP’d:\n    - `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` → “NOOP (no update)”\n  - Git changes (workspace): **no commits in the last 24h** (`git log --since='24 hours ago'` returned nothing)\n\n- Failed / Flaky\n  - Several cron jobs failed with **Missing workspace template: AGENTS.md** at:\n    `/home/clawd/.npm-global/lib/node_modules/openclaw/docs/reference/templates/AGENTS.md`\n    - **clawdbot:daily-ops-journal** (`a8c1dd0d…`) → error\n    - **healthcheck:security-preflight** (`5a45f0e7…`) → error\n    - **km:nightly-journal-comment** (`c915b0d5…`) had one error run (later succeeded)\n    - **Auto-update cron** (`c621238c…`) had one error run (later succeeded)\n    - **feature-builder:morning-proposal** (`461680fe…`) had template-related errors during retries\n  - **feature-builder:morning-proposal** (`461680fe…`) ultimately failed with **timeout** (`Error: cron: job execution timed out`, 900s)\n\n- Decisions\n  - None recorded.\n\n- Follow-ups\n  - Fix/restore the missing template path (`docs/reference/templates/AGENTS.md`) in the installed…",
-      "nextRunAt": 1773198600000,
+      "lastSummary": "Today (America/New_York): **2026-03-10**\n\n## Clawdbot Daily Ops Journal\n2026-03-11T03:10:00Z\n\n- Shipped / Changed\n  - Workspace edits (uncommitted): `SOUL.md`, `USER.md`, `MEMORY.md`, `scripts/openclaw_auto_update.py`.\n  - New/untracked additions in workspace: `ONBOARDING.md`, `SESSION-STATE.md`, `.learnings/`, multiple `memory/2026-03-0*.md` files, `memory/working-buffer.md`.\n  - Skill workspace changes under `.agents/skills/proactive-agent/` (skill docs/assets/scripts updated on disk).\n  - `clawdbot-dashboard/data.json` updated.\n  - Recent modified files on disk (last 24h, notable): `clawdbot-dashboard/data.json`, `SOUL.md`, `USER.md`, `ONBOARDING.md`, `SESSION-STATE.md`, `.learnings/ERRORS.md`, plus multiple `.agents/skills/proactive-agent/*` files.\n\n- Worked\n  - Cron: `healthcheck:overnight-prescan` finished OK; report saved to `/tmp/openclaw_prescan_summary.md` (no critical issues found).\n  - Cron: `healthcheck:security-preflight` finished with a FAIL report (despite `status: ok`): flagged **CRITICAL** issues including an “insecure skill 'readwise'” detection (see run summary in cron logs).\n  - Cron: `feature-builder:morning-proposal` generated a proactive maintenance proposal; noted research cache stale/missing.\n  - Cron: `infraops:openclaw-auto-update` ran repeatedly; most recent runs were blocked with `SKIP (direct session active ...)`.\n  - Cron: `km:nightly-journal-comment` completed OK on the Mac node; updated Andreas’s Brain journal file `/Users/andreasallmaier/Documents/Brain/journal/2026-03-10.md`.\n\n- Failed / Flaky\n  - Cron: `research:daily-signal` had repeated failures; latest event ended `status: error` with `Error: cron: job execution timed out`.\n\n- Decisions\n  - None explicitly logged in cron/git today.\n\n- Follow-ups\n  - Investigate why `healthcheck:security-preflight` is flagging the `skills/readwise` skill as insecure (and why those files appear deleted in git status).\n  - Fix/adjust `research:daily-signal` timeouts (increase timeout, reduce scop…",
+      "nextRunAt": 1773285000000,
       "model": null,
-      "lastTotalTokens": 39836,
-      "lastInputTokens": 42669,
-      "lastOutputTokens": 4417
+      "lastTotalTokens": 15981,
+      "lastInputTokens": 21604,
+      "lastOutputTokens": 4252
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773197072862,
+      "lastRunAt": 1773198872896,
       "lastStatus": "ok",
-      "lastDurationMs": 142129,
+      "lastDurationMs": 64996,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The auto-update script **did not run** from here: the `exec` tool returned\n\n`SKIP (direct session active ...)`\n\nOpenClaw is intentionally refusing to execute the cron command while an interactive (direct) session is active.\n\nIf you want to run it anyway right now, you can either:\n- run it manually in a shell:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- or re-trigger the cron when no direct session is active (e.g., after this chat goes idle).",
-      "nextRunAt": 1773198872862,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing needed updating this run.",
+      "nextRunAt": 1773200672896,
       "model": null,
-      "lastTotalTokens": 8353,
-      "lastInputTokens": 8459,
-      "lastOutputTokens": 335
+      "lastTotalTokens": 8222,
+      "lastInputTokens": 5851,
+      "lastOutputTokens": 115
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
