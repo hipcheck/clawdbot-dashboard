@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773246610744,
+  "updatedAt": 1773248414339,
   "providers": [
     {
       "id": "openai-codex",
@@ -12,8 +12,8 @@
         },
         {
           "label": "Day",
-          "usedPercent": 2,
-          "resetAt": 1773814085000
+          "usedPercent": 0,
+          "resetAt": 1773852279000
         }
       ],
       "plan": "plus ($0.00)",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 9,
-          "resetAt": 1773252001147
+          "resetAt": 1773252000761
         },
         {
           "label": "Week",
           "usedPercent": 25,
-          "resetAt": 1773507600147
+          "resetAt": 1773507600761
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773245674474,
+      "lastRunAt": 1773247474528,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw-auto-update` ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **NOOP (no update)** — everything is already up to date."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773245674474,
+      "lastRunAt": 1773247474528,
       "lastStatus": "ok",
-      "lastDurationMs": 67662,
+      "lastDurationMs": 70254,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw-auto-update` ran successfully.\n\n- Command: `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- Result: **NOOP (no update)** — everything is already up to date.",
-      "nextRunAt": 1773247474474,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773249274528,
       "model": null,
-      "lastTotalTokens": 8226,
-      "lastInputTokens": 8287,
-      "lastOutputTokens": 133
+      "lastTotalTokens": 8231,
+      "lastInputTokens": 8292,
+      "lastOutputTokens": 113
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
