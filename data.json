@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773262812819,
+  "updatedAt": 1773264612605,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,8 +7,8 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1773263227000
+          "usedPercent": 0,
+          "resetAt": 1773281229000
         },
         {
           "label": "Day",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 25,
-          "resetAt": 1773507600245
+          "resetAt": 1773507599987
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773261874827,
+      "lastRunAt": 1773263674847,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773261874827,
+      "lastRunAt": 1773263674847,
       "lastStatus": "ok",
-      "lastDurationMs": 66874,
+      "lastDurationMs": 70143,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "openclaw-auto-update ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773263674827,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773265474847,
       "model": null,
-      "lastTotalTokens": 8225,
-      "lastInputTokens": 8286,
-      "lastOutputTokens": 104
+      "lastTotalTokens": 8224,
+      "lastInputTokens": 8285,
+      "lastOutputTokens": 106
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
