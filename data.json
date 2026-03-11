@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773252016479,
+  "updatedAt": 1773253814574,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 3,
           "resetAt": 1773263227000
         },
         {
           "label": "Day",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773852278000
         }
       ],
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 25,
-          "resetAt": 1773507599979
+          "resetAt": 1773507599999
         }
       ],
       "error": null
@@ -71,13 +71,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1773251074574,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"432\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 18:23 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773253786661,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "Hi — yep, I’m here.\n\nQuick status: the only thing blocking me is the **gateway restart** to apply the geordie/Telegram allowlist fix.\n\nIf you reply **“approved”**, I’ll run `openclaw gateway restart` "
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773251074574,
+      "lastRunAt": 1773252874591,
       "lastStatus": "ok",
-      "lastDurationMs": 71035,
+      "lastDurationMs": 70699,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773252874574,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773254674591,
       "model": null,
-      "lastTotalTokens": 8227,
-      "lastInputTokens": 8288,
-      "lastOutputTokens": 120
+      "lastTotalTokens": 8222,
+      "lastInputTokens": 8283,
+      "lastOutputTokens": 115
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
