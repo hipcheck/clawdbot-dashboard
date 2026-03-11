@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773228611993,
+  "updatedAt": 1773230414010,
   "providers": [
     {
       "id": "openai-codex",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773227674065,
+      "lastRunAt": 1773229474081,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — everything is already up to date, so no changes were made."
+      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now (already up to date / no newer release detected)."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773227674065,
+      "lastRunAt": 1773229474081,
       "lastStatus": "ok",
-      "lastDurationMs": 70880,
+      "lastDurationMs": 68193,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — everything is already up to date, so no changes were made.",
-      "nextRunAt": 1773229474065,
+      "lastSummary": "Ran `/home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now (already up to date / no newer release detected).",
+      "nextRunAt": 1773231274081,
       "model": null,
-      "lastTotalTokens": 8221,
-      "lastInputTokens": 8282,
-      "lastOutputTokens": 110
+      "lastTotalTokens": 8291,
+      "lastInputTokens": 8480,
+      "lastOutputTokens": 191
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
