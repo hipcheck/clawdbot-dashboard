@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773208812949,
+  "updatedAt": 1773210612080,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,12 +8,12 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1773226813000
+          "resetAt": 1773227225000
         },
         {
           "label": "Day",
           "usedPercent": 0,
-          "resetAt": 1773813673000
+          "resetAt": 1773814085000
         }
       ],
       "plan": "plus ($0.00)",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1773507600269
+          "resetAt": 1773507600492
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773207873523,
+      "lastRunAt": 1773209673601,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP (no update)\n\nLogged to `memory/2026-03-11.md`:\n- 05:44 UTC: cron `infraops:openclaw-auto-update` ran `scripts/openclaw_auto_update.py`; result `NOOP (no update)`."
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — everything already up to date."
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773207873523,
+      "lastRunAt": 1773209673601,
       "lastStatus": "ok",
-      "lastDurationMs": 92044,
+      "lastDurationMs": 66118,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP (no update)\n\nLogged to `memory/2026-03-11.md`:\n- 05:44 UTC: cron `infraops:openclaw-auto-update` ran `scripts/openclaw_auto_update.py`; result `NOOP (no update)`.",
-      "nextRunAt": 1773209673523,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — everything already up to date.",
+      "nextRunAt": 1773211473601,
       "model": null,
-      "lastTotalTokens": 9186,
-      "lastInputTokens": 9652,
-      "lastOutputTokens": 365
+      "lastTotalTokens": 8227,
+      "lastInputTokens": 352,
+      "lastOutputTokens": 120
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
