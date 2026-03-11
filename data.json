@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773214213117,
+  "updatedAt": 1773216017916,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773227225000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1773507600542
+          "resetAt": 1773507600288
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773213273840,
+      "lastRunAt": 1773215073857,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (already up to date)."
+      "lastSummary": "NOOP — no update available / nothing to do."
     },
     {
       "id": "km",
@@ -135,7 +135,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Nightly prescan complete. The summary report has been saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were found.",
-      "nextRunAt": 1773214200000,
+      "nextRunAt": 1773300600000,
       "model": null,
       "lastTotalTokens": 9105,
       "lastInputTokens": 18074,
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773213273840,
+      "lastRunAt": 1773215073857,
       "lastStatus": "ok",
-      "lastDurationMs": 72757,
+      "lastDurationMs": 79972,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (already up to date).",
-      "nextRunAt": 1773215073840,
+      "lastSummary": "NOOP — no update available / nothing to do.",
+      "nextRunAt": 1773216873857,
       "model": null,
-      "lastTotalTokens": 8233,
-      "lastInputTokens": 8294,
-      "lastOutputTokens": 112
+      "lastTotalTokens": 8214,
+      "lastInputTokens": 8275,
+      "lastOutputTokens": 80
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
