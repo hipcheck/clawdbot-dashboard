@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773196214917,
+  "updatedAt": 1773198018370,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 20,
+          "usedPercent": 24,
           "resetAt": 1773206082000
         },
         {
           "label": "Day",
-          "usedPercent": 9,
+          "usedPercent": 11,
           "resetAt": 1773720234000
         }
       ],
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 47,
-          "resetAt": 1773205201278
+          "resetAt": 1773205200773
         },
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1773507600278
+          "resetAt": 1773507600773
         }
       ],
       "error": null
@@ -73,24 +73,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"377\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:28 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "---\nQueued #1\njson\n{\n  \"message_id\": \"401\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:46 UTC\"\n}\n```\n\nSender (u",
       "activityChannel": "telegram",
-      "lastRunAt": 1773196144532,
+      "lastRunAt": 1773197530794,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Hey Andreas — what do you want to tackle right now?"
+      "lastSummary": "I’m here.\n\nYes: the **Obsidian files are already created on your Mac**, and the **Sunday cron job is created**.\n\nTwo quick notes:\n\n- I set it for **Sunday 9:00 AM NYC time**.\n- The cron job currently "
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"153\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 02:49 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773194142126,
+      "lastRunAt": 1773197351717,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- **1) “Visualization Builds Belief And Direction”** *(Chapter 8 – Outcome Visualization — Visualize)*  \n  - Core idea: outcome visualization “pre-wires” belief + motivation by making the end state fe"
+      "lastSummary": "Glad it hit the mark. Want me to turn those 5 into a single “do this this week” protocol (e.g., 5-minute daily structure + one conditioned music track + one outreach target)?"
     },
     {
       "id": "research",
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773195272803,
+      "lastRunAt": 1773197072862,
       "lastStatus": "ok",
-      "lastDurationMs": 77729,
+      "lastDurationMs": 142129,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "The cron trigger came in, but the actual run was **skipped** on this host because a **direct session is active** (the tool returned: `SKIP (direct session active ...)`). So `openclaw_auto_update.py` did **not** execute.\n\nIf you want to run it anyway right now, you can run it manually from a shell:\n\n```bash\npython3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py\n```\n\nOr tell me “run it now” and I’ll try again once the session-lock condition allows it.",
-      "nextRunAt": 1773197072803,
+      "lastSummary": "The auto-update script **did not run** from here: the `exec` tool returned\n\n`SKIP (direct session active ...)`\n\nOpenClaw is intentionally refusing to execute the cron command while an interactive (direct) session is active.\n\nIf you want to run it anyway right now, you can either:\n- run it manually in a shell:  \n  `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n- or re-trigger the cron when no direct session is active (e.g., after this chat goes idle).",
+      "nextRunAt": 1773198872862,
       "model": null,
-      "lastTotalTokens": 8181,
-      "lastInputTokens": 8312,
-      "lastOutputTokens": 391
+      "lastTotalTokens": 8353,
+      "lastInputTokens": 8459,
+      "lastOutputTokens": 335
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -267,6 +267,24 @@
       "lastTotalTokens": 8795,
       "lastInputTokens": 17444,
       "lastOutputTokens": 231
+    },
+    {
+      "id": "26a9bae7-31b9-46e1-bf1b-7fcc27755335",
+      "name": "weekly-review-note",
+      "schedule": "0 9 * * 0",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1773579600000,
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
     }
   ]
 }
