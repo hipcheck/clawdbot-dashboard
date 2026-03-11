@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773248414339,
+  "updatedAt": 1773250214123,
   "providers": [
     {
       "id": "openai-codex",
@@ -13,7 +13,7 @@
         {
           "label": "Day",
           "usedPercent": 0,
-          "resetAt": 1773852279000
+          "resetAt": 1773852278000
         }
       ],
       "plan": "plus ($0.00)",
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 9,
-          "resetAt": 1773252000761
+          "resetAt": 1773252000572
         },
         {
           "label": "Week",
           "usedPercent": 25,
-          "resetAt": 1773507600761
+          "resetAt": 1773507600572
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773247474528,
+      "lastRunAt": 1773249274562,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -238,17 +238,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773247474528,
+      "lastRunAt": 1773249274562,
       "lastStatus": "ok",
-      "lastDurationMs": 70254,
+      "lastDurationMs": 65305,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773249274528,
+      "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773251074562,
       "model": null,
-      "lastTotalTokens": 8231,
-      "lastInputTokens": 8292,
-      "lastOutputTokens": 113
+      "lastTotalTokens": 8223,
+      "lastInputTokens": 8284,
+      "lastOutputTokens": 99
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
