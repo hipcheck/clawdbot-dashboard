@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773225014395,
+  "updatedAt": 1773226814141,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1773139800151,
+      "lastRunAt": 1773226200070,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL: Security preflight check discovered critical vulnerabilities and configuration errors.\n\nTop blockers and remediation steps:\n\n1.  **CRITICAL: Insecure skill \"readwise\" detected.**\n    -   **Issue:** The skill contains code patterns associated with credential harvesting (`env-harvesting`). An agent using this skill could potentially exfiltrate sensitive data.\n    -   **Fix:** Disable or remove the skill immediately.\n        ```bash\n        openclaw config set skills.entries.readwise.enabled false\n        ```\n\n2.  **CRITICAL: Telegram group messages are being dropped.**\n    -   **Issue:** Multiple Telegram accounts have `groupPolicy` set to `allowlist` but the allowlist itself is empty. This prevents the bot from processing any group messages.\n    -   **Fix:** For each affected account, either add trusted user IDs to the allowlist or open the policy. To open the policy for the default account:\n        ```bash\n        openclaw config set channels.telegram.accounts.default.groupPolicy open\n        ```\n        (Repeat for other accounts like `geordie`, `nikola`, `q` if they should be open).\n\n3.  **WARN: Weak model configured in fallback chain.**\n    -   **Issue:** The `main` agent uses `openai-codex/gpt-4o-mini` as a fallback model, which is not recommended for agents with elevated privileges.\n    -   **Fix:** Remove the weaker model from the fallback list.\n        ```bash\n        openclaw config set agents.list.main.model.fallbacks '[\"google-gemini-cli/gemini-2.5-pro\", \"google-gemini-cli/gemini-2.0-flash\", \"openai-codex/gpt-5.3-codex\"]'\n        ```\n\n4.  **INFO: Node command execution is unrestricted.**\n    -   **Issue:** The `gateway.nodes.denyCommands` list is empty, placing no restrictions on commands that can be executed on paired nodes (like the MacBook or iPhone).\n    -   **Fix:** Add common destructive commands to the deny list as a baseline safeguard.\n        ```bash\n        openclaw config set gateway.nodes.denyCommands '[\"rm\", \"sudo\", \"mv\", \"dd\"]'\n        …"
+      "lastSummary": "FAIL\n\nTop blockers:\n1.  **Critical Skill Vulnerability:** The `readwise` skill contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is a critical risk and the skill should be disabled immediately until it can be audited or removed.\n2.  **Missing Node Command Blocklist:** The gateway does not have a `denyCommands` list. This is a missed hardening opportunity to prevent nodes from running potentially dangerous commands like `sudo`, `rm -rf`, or `shutdown`.\n3.  **Weak Fallback Model:** The `main` agent uses `gpt-4o-mini` as a fallback model, which is below the recommended security tier and more susceptible to misuse.\n\nConfig patch suggestions:\n\n1.  **Disable the vulnerable skill:** In `openclaw.json`, under `skills.entries.readwise`, set `\"enabled\": false`.\n\n    ```json\n    \"skills\": {\n      \"entries\": {\n        \"readwise\": {\n          \"enabled\": false,\n          ...\n        }\n      }\n    }\n    ```\n\n2.  **Add a gateway-level node command blocklist:** In `openclaw.json`, populate the `gateway.nodes.denyCommands` array.\n\n    ```json\n    \"gateway\": {\n      ...\n      \"nodes\": {\n        \"denyCommands\": [\n          \"sudo\",\n          \"rm\",\n          \"shutdown\",\n          \"reboot\",\n          \"kill\",\n          \"pkill\"\n        ]\n      }\n    }\n    ```\n\n3.  **Remove the weak fallback model:** In `openclaw.json`, for the `main` agent, remove `\"openai-codex/gpt-4o-mini\"` from the `model.fallbacks` array.\n\n    ```json\n    \"agents\": {\n      ...\n      \"list\": [\n        {\n          \"id\": \"main\",\n          \"model\": {\n            \"primary\": \"openai-codex/gpt-5.2\",\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n          },\n          ...\n        }\n      ]\n    }\n    ```"
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773224074004,
+      "lastRunAt": 1773225874020,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found nothing to update (no update available / already up to date)."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (already up to date)."
     },
     {
       "id": "km",
@@ -137,17 +137,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773139800151,
+      "lastRunAt": 1773226200070,
       "lastStatus": "ok",
-      "lastDurationMs": 135131,
+      "lastDurationMs": 138612,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL: Security preflight check discovered critical vulnerabilities and configuration errors.\n\nTop blockers and remediation steps:\n\n1.  **CRITICAL: Insecure skill \"readwise\" detected.**\n    -   **Issue:** The skill contains code patterns associated with credential harvesting (`env-harvesting`). An agent using this skill could potentially exfiltrate sensitive data.\n    -   **Fix:** Disable or remove the skill immediately.\n        ```bash\n        openclaw config set skills.entries.readwise.enabled false\n        ```\n\n2.  **CRITICAL: Telegram group messages are being dropped.**\n    -   **Issue:** Multiple Telegram accounts have `groupPolicy` set to `allowlist` but the allowlist itself is empty. This prevents the bot from processing any group messages.\n    -   **Fix:** For each affected account, either add trusted user IDs to the allowlist or open the policy. To open the policy for the default account:\n        ```bash\n        openclaw config set channels.telegram.accounts.default.groupPolicy open\n        ```\n        (Repeat for other accounts like `geordie`, `nikola`, `q` if they should be open).\n\n3.  **WARN: Weak model configured in fallback chain.**\n    -   **Issue:** The `main` agent uses `openai-codex/gpt-4o-mini` as a fallback model, which is not recommended for agents with elevated privileges.\n    -   **Fix:** Remove the weaker model from the fallback list.\n        ```bash\n        openclaw config set agents.list.main.model.fallbacks '[\"google-gemini-cli/gemini-2.5-pro\", \"google-gemini-cli/gemini-2.0-flash\", \"openai-codex/gpt-5.3-codex\"]'\n        ```\n\n4.  **INFO: Node command execution is unrestricted.**\n    -   **Issue:** The `gateway.nodes.denyCommands` list is empty, placing no restrictions on commands that can be executed on paired nodes (like the MacBook or iPhone).\n    -   **Fix:** Add common destructive commands to the deny list as a baseline safeguard.\n        ```bash\n        openclaw config set gateway.nodes.denyCommands '[\"rm\", \"sudo\", \"mv\", \"dd\"]'\n        …",
-      "nextRunAt": 1773226200000,
+      "lastSummary": "FAIL\n\nTop blockers:\n1.  **Critical Skill Vulnerability:** The `readwise` skill contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is a critical risk and the skill should be disabled immediately until it can be audited or removed.\n2.  **Missing Node Command Blocklist:** The gateway does not have a `denyCommands` list. This is a missed hardening opportunity to prevent nodes from running potentially dangerous commands like `sudo`, `rm -rf`, or `shutdown`.\n3.  **Weak Fallback Model:** The `main` agent uses `gpt-4o-mini` as a fallback model, which is below the recommended security tier and more susceptible to misuse.\n\nConfig patch suggestions:\n\n1.  **Disable the vulnerable skill:** In `openclaw.json`, under `skills.entries.readwise`, set `\"enabled\": false`.\n\n    ```json\n    \"skills\": {\n      \"entries\": {\n        \"readwise\": {\n          \"enabled\": false,\n          ...\n        }\n      }\n    }\n    ```\n\n2.  **Add a gateway-level node command blocklist:** In `openclaw.json`, populate the `gateway.nodes.denyCommands` array.\n\n    ```json\n    \"gateway\": {\n      ...\n      \"nodes\": {\n        \"denyCommands\": [\n          \"sudo\",\n          \"rm\",\n          \"shutdown\",\n          \"reboot\",\n          \"kill\",\n          \"pkill\"\n        ]\n      }\n    }\n    ```\n\n3.  **Remove the weak fallback model:** In `openclaw.json`, for the `main` agent, remove `\"openai-codex/gpt-4o-mini\"` from the `model.fallbacks` array.\n\n    ```json\n    \"agents\": {\n      ...\n      \"list\": [\n        {\n          \"id\": \"main\",\n          \"model\": {\n            \"primary\": \"openai-codex/gpt-5.2\",\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n          },\n          ...\n        }\n      ]\n    }\n    ```",
+      "nextRunAt": 1773312600000,
       "model": null,
-      "lastTotalTokens": 10537,
-      "lastInputTokens": 10650,
-      "lastOutputTokens": 2037
+      "lastTotalTokens": 10303,
+      "lastInputTokens": 11531,
+      "lastOutputTokens": 1796
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773224074004,
+      "lastRunAt": 1773225874020,
       "lastStatus": "ok",
-      "lastDurationMs": 70640,
+      "lastDurationMs": 65493,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran and found nothing to update (no update available / already up to date).",
-      "nextRunAt": 1773225874004,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (already up to date).",
+      "nextRunAt": 1773227674020,
       "model": null,
-      "lastTotalTokens": 8264,
-      "lastInputTokens": 8325,
-      "lastOutputTokens": 146
+      "lastTotalTokens": 8236,
+      "lastInputTokens": 8297,
+      "lastOutputTokens": 115
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
