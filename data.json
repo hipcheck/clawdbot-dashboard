@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773189012268,
+  "updatedAt": 1773190817423,
   "providers": [
     {
       "id": "openai-codex",
@@ -22,14 +22,36 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1773277217000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1773277217000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 5,
+          "resetAt": 1773205200838
+        },
+        {
+          "label": "Week",
+          "usedPercent": 19,
+          "resetAt": 1773507599838
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -61,13 +83,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1773188076946,
+      "activityKind": "chat",
+      "activityLabel": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-tui (gateway-client)\",\n  \"id\": \"gateway-client\",\n  \"name\": \"openclaw-tui\",\n  \"username\": \"",
+      "activityChannel": "tui",
+      "lastRunAt": 1773190749806,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "That log line means OpenClaw found a plugin package called `talk-voice`, but it doesn’t expose the lifecycle hooks OpenClaw expects (`register` / `activate`). So OpenClaw can’t load it as a real plugi"
     },
     {
       "id": "km",
@@ -227,17 +249,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773188076946,
+      "lastRunAt": 1773189876976,
       "lastStatus": "ok",
-      "lastDurationMs": 72366,
+      "lastDurationMs": 69501,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773189876946,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no update available / no action taken).",
+      "nextRunAt": 1773191676976,
       "model": null,
-      "lastTotalTokens": 8028,
-      "lastInputTokens": 8123,
-      "lastOutputTokens": 132
+      "lastTotalTokens": 8004,
+      "lastInputTokens": 8099,
+      "lastOutputTokens": 108
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
