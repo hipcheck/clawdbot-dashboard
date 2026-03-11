@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773264612605,
+  "updatedAt": 1773266414832,
   "providers": [
     {
       "id": "openai-codex",
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 25,
-          "resetAt": 1773507599987
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -74,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773263674847,
+      "lastRunAt": 1773265474874,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — the script ran successfully and found nothing to update."
     },
     {
       "id": "km",
@@ -237,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773263674847,
+      "lastRunAt": 1773265474874,
       "lastStatus": "ok",
-      "lastDurationMs": 70143,
+      "lastDurationMs": 70114,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773265474847,
+      "lastSummary": "openclaw-auto-update result: **NOOP (no update)** — the script ran successfully and found nothing to update.",
+      "nextRunAt": 1773267274874,
       "model": null,
-      "lastTotalTokens": 8224,
-      "lastInputTokens": 8285,
-      "lastOutputTokens": 106
+      "lastTotalTokens": 8219,
+      "lastInputTokens": 16344,
+      "lastOutputTokens": 117
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
