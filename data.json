@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773219614714,
+  "updatedAt": 1773221411184,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 4,
           "resetAt": 1773227225000
         },
         {
           "label": "Day",
-          "usedPercent": 0,
+          "usedPercent": 1,
           "resetAt": 1773814085000
         }
       ],
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 24,
-          "resetAt": 1773507600174
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -71,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1773218673885,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773220564157,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no update available / nothing changed)."
+      "lastSummary": "Yep — that daily “flag” is coming from the **Telegram allowlist warnings** (the ones you saw under the “Doctor warnings” block), not from Readwise.\n\nI’ve now **whitelisted you for the geordie bot (and"
     },
     {
       "id": "km",
@@ -237,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773218673885,
+      "lastRunAt": 1773220473925,
       "lastStatus": "ok",
-      "lastDurationMs": 64507,
+      "lastDurationMs": 71761,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no update available / nothing changed).",
-      "nextRunAt": 1773220473885,
+      "lastSummary": "That cron tried to run `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`, but on this OpenClaw host the execution was **skipped** because a **direct interactive session is active**:\n\n- `SKIP (direct session active ...)`\n\nSo no update actually ran at 09:14 UTC.\n\nIf you want to run it right now, tell me and I’ll re-run it once we’re not in the “direct session active” skip window (or you can run it manually in a shell).",
+      "nextRunAt": 1773222273925,
       "model": null,
-      "lastTotalTokens": 8223,
-      "lastInputTokens": 8284,
-      "lastOutputTokens": 104
+      "lastTotalTokens": 8247,
+      "lastInputTokens": 8308,
+      "lastOutputTokens": 323
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
