@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773253814574,
+  "updatedAt": 1773255615623,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
+          "usedPercent": 4,
           "resetAt": 1773263227000
         },
         {
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 25,
-          "resetAt": 1773507599999
+          "resetAt": 1773507599857
         }
       ],
       "error": null
@@ -72,12 +72,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"432\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-11 18:23 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773253786661,
+      "lastRunAt": 1773254846397,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Hi — yep, I’m here.\n\nQuick status: the only thing blocking me is the **gateway restart** to apply the geordie/Telegram allowlist fix.\n\nIf you reply **“approved”**, I’ll run `openclaw gateway restart` "
+      "lastSummary": "Yes — it worked.\n\nEven though the restart command reported a `SIGTERM` on my side (that can happen because the restart briefly kills the process that’s running the command), the gateway is now:\n\n- **R"
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773252874591,
+      "lastRunAt": 1773254674636,
       "lastStatus": "ok",
-      "lastDurationMs": 70699,
+      "lastDurationMs": 70436,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773254674591,
+      "lastSummary": "SKIP — the auto-update run detected an active **direct session** (age ≈ **2950ms**), so it intentionally didn’t attempt an update.\n\nLog tail confirms it:\n- `2026-03-11T18:45:35Z SKIP (direct session active (age=2950ms))`\n\nMost prior runs today were `NOOP (no update)`, so there likely wasn’t anything to apply anyway.",
+      "nextRunAt": 1773256474636,
       "model": null,
-      "lastTotalTokens": 8222,
-      "lastInputTokens": 8283,
-      "lastOutputTokens": 115
+      "lastTotalTokens": 10497,
+      "lastInputTokens": 10622,
+      "lastOutputTokens": 428
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
