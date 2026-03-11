@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773217811548,
+  "updatedAt": 1773219614714,
   "providers": [
     {
       "id": "openai-codex",
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 24,
-          "resetAt": 1773507599963
+          "resetAt": 1773507600174
         }
       ],
       "error": null
@@ -74,10 +74,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773216873868,
+      "lastRunAt": 1773218673885,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "`infraops:openclaw-auto-update` ran `scripts/openclaw_auto_update.py` at **08:14 UTC**.\n\nResult: **NOOP (no update)**\n\nLogged to: `/home/clawd/.openclaw/workspace/memory/2026-03-11.md`"
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no update available / nothing changed)."
     },
     {
       "id": "km",
@@ -237,17 +237,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773216873868,
+      "lastRunAt": 1773218673885,
       "lastStatus": "ok",
-      "lastDurationMs": 86992,
+      "lastDurationMs": 64507,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`infraops:openclaw-auto-update` ran `scripts/openclaw_auto_update.py` at **08:14 UTC**.\n\nResult: **NOOP (no update)**\n\nLogged to: `/home/clawd/.openclaw/workspace/memory/2026-03-11.md`",
-      "nextRunAt": 1773218673868,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update (no update available / nothing changed).",
+      "nextRunAt": 1773220473885,
       "model": null,
-      "lastTotalTokens": 9319,
-      "lastInputTokens": 10050,
-      "lastOutputTokens": 523
+      "lastTotalTokens": 8223,
+      "lastInputTokens": 8284,
+      "lastOutputTokens": 104
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
