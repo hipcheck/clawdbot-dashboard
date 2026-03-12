@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773300609610,
+  "updatedAt": 1773302413757,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773292944449,
+      "lastRunAt": 1773300600044,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done. The prescan summary has been generated and saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were detected."
+      "lastSummary": "PRESCAN_GENERATED_AT=2026-03-12T07:30:13Z\n\n## OpenClaw Gateway Status\nService: systemd (enabled)\nFile logs: /tmp/openclaw/openclaw-2026-03-12.log\nCommand: /usr/bin/node /home/clawd/.npm-global/lib/node_modules/openclaw/dist/entry.js gateway --port 18789\nService file: ~/.config/systemd/user/openclaw-gateway.service\nService env: OPENCLAW_GATEWAY_PORT=18789\n\nConfig (cli): ~/.openclaw/openclaw.json\nConfig (service): ~/.openclaw/openclaw.json\n\nGateway: bind=loopback (127.0.0.1), port=18789 (service args)\nProbe target: ws://127.0.0.1:18789\nDashboard: http://127.0.0.1:18789/\nProbe note: Loopback-only gateway; only local clients can connect.\n\nRuntime: running (pid 2300119, state active, sub running, last exit 0, reason 0)\nRPC probe: ok\n\nListening: 127.0.0.1:18789\nOther gateway-like services detected (best effort):\n- openclaw-node.service (user, unit: /home/clawd/.config/systemd/user/openclaw-node.service)\nCleanup hint: systemctl --user disable --now openclaw-gateway.service\nCleanup hint: rm ~/.config/systemd/user/openclaw-gateway.service\n\nRecommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).\nIf you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).\n\nTroubles: run openclaw status\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\n## OpenClaw Security Audit\nOpenClaw security audit\nSummary: 0 critical · 1 warn · 2 info\nRun deeper: openclaw security audit --deep\n\nWARN\nmodels.weak_tier Some configured models are below recommended tiers\n  Smaller/older models are generally more susceptible to prompt injection and tool misuse.\n- openai-codex/gpt-4o-mini (Below GPT-5 family) @ agents.list.main.model.fallbacks\n  Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\n\nINFO\nsummary.attack_surface Attack surface summa…"
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773299672924,
+      "lastRunAt": 1773301472957,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update."
     },
     {
       "id": "km",
@@ -119,17 +119,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773292944449,
+      "lastRunAt": 1773300600044,
       "lastStatus": "ok",
-      "lastDurationMs": 319727,
+      "lastDurationMs": 130521,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Done. The prescan summary has been generated and saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were detected.",
-      "nextRunAt": 1773300600000,
+      "lastSummary": "PRESCAN_GENERATED_AT=2026-03-12T07:30:13Z\n\n## OpenClaw Gateway Status\nService: systemd (enabled)\nFile logs: /tmp/openclaw/openclaw-2026-03-12.log\nCommand: /usr/bin/node /home/clawd/.npm-global/lib/node_modules/openclaw/dist/entry.js gateway --port 18789\nService file: ~/.config/systemd/user/openclaw-gateway.service\nService env: OPENCLAW_GATEWAY_PORT=18789\n\nConfig (cli): ~/.openclaw/openclaw.json\nConfig (service): ~/.openclaw/openclaw.json\n\nGateway: bind=loopback (127.0.0.1), port=18789 (service args)\nProbe target: ws://127.0.0.1:18789\nDashboard: http://127.0.0.1:18789/\nProbe note: Loopback-only gateway; only local clients can connect.\n\nRuntime: running (pid 2300119, state active, sub running, last exit 0, reason 0)\nRPC probe: ok\n\nListening: 127.0.0.1:18789\nOther gateway-like services detected (best effort):\n- openclaw-node.service (user, unit: /home/clawd/.config/systemd/user/openclaw-node.service)\nCleanup hint: systemctl --user disable --now openclaw-gateway.service\nCleanup hint: rm ~/.config/systemd/user/openclaw-gateway.service\n\nRecommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).\nIf you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).\n\nTroubles: run openclaw status\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\n## OpenClaw Security Audit\nOpenClaw security audit\nSummary: 0 critical · 1 warn · 2 info\nRun deeper: openclaw security audit --deep\n\nWARN\nmodels.weak_tier Some configured models are below recommended tiers\n  Smaller/older models are generally more susceptible to prompt injection and tool misuse.\n- openai-codex/gpt-4o-mini (Below GPT-5 family) @ agents.list.main.model.fallbacks\n  Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\n\nINFO\nsummary.attack_surface Attack surface summa…",
+      "nextRunAt": 1773387000000,
       "model": null,
-      "lastTotalTokens": 9940,
-      "lastInputTokens": 11870,
-      "lastOutputTokens": 4789
+      "lastTotalTokens": 8440,
+      "lastInputTokens": 9183,
+      "lastOutputTokens": 2381
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773299672924,
+      "lastRunAt": 1773301472957,
       "lastStatus": "ok",
-      "lastDurationMs": 70212,
+      "lastDurationMs": 72363,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773301472924,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found nothing to update.",
+      "nextRunAt": 1773303272957,
       "model": null,
-      "lastTotalTokens": 8330,
-      "lastInputTokens": 8374,
-      "lastOutputTokens": 112
+      "lastTotalTokens": 8339,
+      "lastInputTokens": 8383,
+      "lastOutputTokens": 102
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
