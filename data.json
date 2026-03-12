@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773313210686,
+  "updatedAt": 1773315012682,
   "providers": [
     {
       "id": "openai-codex",
@@ -40,10 +40,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773226800021,
+      "lastRunAt": 1773313200052,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## 🔨 Today's Build\n\n**Automate the Daily Prescan & Research Caches**\n\n**Signal:** This morning proposal job relies on `/tmp/openclaw_prescan_summary.md` and `tmp/daily-research.md`, but their generation isn't automated, risking stale data.\n\n**Why Andreas:** This improves the core automation of the OpenClaw system you're actively building, making all dependent agents (like me) more reliable.\n\n**Impact:** I will provide better, more timely daily proposals, and the system will have a daily health check, catching issues like the `groupPolicy` warning from this morning's prescan.\n**Risk:** The new cron jobs could fail silently. Mitigation: The jobs should write a timestamp to a log file on completion.\n**Effort:** < 1 hour.\n\n**First 3 steps:**\n1. Create a new cron file `~/.openclaw/cron/system-prescan.yaml` to run the prescan script daily at 6 AM UTC and output to `/tmp/openclaw_prescan_summary.md`.\n2. Create a new cron file `~/.openclaw/cron/daily-research.yaml` to run the research script daily at 5 AM UTC and output to `~/.openclaw/workspace-feature-builder/tmp/daily-research.md`.\n3. Run `openclaw cron reload` to load the new jobs, then `openclaw cron list` to verify they are scheduled.\n\n**Done looks like:** Two new cron jobs are successfully scheduled and will automatically refresh the prescan and research caches every morning."
+      "lastSummary": "## 🔨 Today's Build\n\n**Job Application Keyword Analyzer**\n\n**Signal:** General context; direct support for your active search for a Senior Marketing Manager role in NYC.\n\n**Why Andreas:** This directly weaponizes your automation skills to improve the quality and relevance of your job applications.\n\n**Impact:** Higher callback rate by tailoring your resume to the specific language of each role you apply for.\n**Risk:** The LLM might occasionally hallucinate keywords or provide generic, unhelpful advice.\n**Effort:** 2-3 hours to v1.\n\n**First 3 steps:**\n1. Create a file for your base resume text, like `~/resume.txt`.\n2. Create a script that accepts a job description URL as an argument.\n3. The script will use `web_fetch` to get the job description text, `read` to load your resume, and then call an LLM to compare them and output missing keywords.\n\n**Done looks like:** A command-line script that takes a URL and outputs a concise list of keywords and skills from the job description that are missing from your resume."
     },
     {
       "id": "infraops",
@@ -64,7 +64,7 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773312273163,
+      "lastRunAt": 1773314073174,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
@@ -101,17 +101,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773226800021,
+      "lastRunAt": 1773313200052,
       "lastStatus": "ok",
-      "lastDurationMs": 261197,
+      "lastDurationMs": 318123,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## 🔨 Today's Build\n\n**Automate the Daily Prescan & Research Caches**\n\n**Signal:** This morning proposal job relies on `/tmp/openclaw_prescan_summary.md` and `tmp/daily-research.md`, but their generation isn't automated, risking stale data.\n\n**Why Andreas:** This improves the core automation of the OpenClaw system you're actively building, making all dependent agents (like me) more reliable.\n\n**Impact:** I will provide better, more timely daily proposals, and the system will have a daily health check, catching issues like the `groupPolicy` warning from this morning's prescan.\n**Risk:** The new cron jobs could fail silently. Mitigation: The jobs should write a timestamp to a log file on completion.\n**Effort:** < 1 hour.\n\n**First 3 steps:**\n1. Create a new cron file `~/.openclaw/cron/system-prescan.yaml` to run the prescan script daily at 6 AM UTC and output to `/tmp/openclaw_prescan_summary.md`.\n2. Create a new cron file `~/.openclaw/cron/daily-research.yaml` to run the research script daily at 5 AM UTC and output to `~/.openclaw/workspace-feature-builder/tmp/daily-research.md`.\n3. Run `openclaw cron reload` to load the new jobs, then `openclaw cron list` to verify they are scheduled.\n\n**Done looks like:** Two new cron jobs are successfully scheduled and will automatically refresh the prescan and research caches every morning.",
-      "nextRunAt": 1773313200000,
+      "lastSummary": "## 🔨 Today's Build\n\n**Job Application Keyword Analyzer**\n\n**Signal:** General context; direct support for your active search for a Senior Marketing Manager role in NYC.\n\n**Why Andreas:** This directly weaponizes your automation skills to improve the quality and relevance of your job applications.\n\n**Impact:** Higher callback rate by tailoring your resume to the specific language of each role you apply for.\n**Risk:** The LLM might occasionally hallucinate keywords or provide generic, unhelpful advice.\n**Effort:** 2-3 hours to v1.\n\n**First 3 steps:**\n1. Create a file for your base resume text, like `~/resume.txt`.\n2. Create a script that accepts a job description URL as an argument.\n3. The script will use `web_fetch` to get the job description text, `read` to load your resume, and then call an LLM to compare them and output missing keywords.\n\n**Done looks like:** A command-line script that takes a URL and outputs a concise list of keywords and skills from the job description that are missing from your resume.",
+      "nextRunAt": 1773399600000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 6675,
-      "lastInputTokens": 8741,
-      "lastOutputTokens": 2599
+      "lastTotalTokens": 7555,
+      "lastInputTokens": 6750,
+      "lastOutputTokens": 2312
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773312273163,
+      "lastRunAt": 1773314073174,
       "lastStatus": "ok",
-      "lastDurationMs": 62116,
+      "lastDurationMs": 67020,
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773314073163,
+      "nextRunAt": 1773315873174,
       "model": null,
-      "lastTotalTokens": 8327,
-      "lastInputTokens": 8499,
-      "lastOutputTokens": 98
+      "lastTotalTokens": 8335,
+      "lastInputTokens": 8379,
+      "lastOutputTokens": 106
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
