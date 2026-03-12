@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773291612894,
+  "updatedAt": 1773293414996,
   "providers": [
     {
       "id": "openai-codex",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773226200070,
+      "lastRunAt": 1773292944449,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL\n\nTop blockers:\n1.  **Critical Skill Vulnerability:** The `readwise` skill contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is a critical risk and the skill should be disabled immediately until it can be audited or removed.\n2.  **Missing Node Command Blocklist:** The gateway does not have a `denyCommands` list. This is a missed hardening opportunity to prevent nodes from running potentially dangerous commands like `sudo`, `rm -rf`, or `shutdown`.\n3.  **Weak Fallback Model:** The `main` agent uses `gpt-4o-mini` as a fallback model, which is below the recommended security tier and more susceptible to misuse.\n\nConfig patch suggestions:\n\n1.  **Disable the vulnerable skill:** In `openclaw.json`, under `skills.entries.readwise`, set `\"enabled\": false`.\n\n    ```json\n    \"skills\": {\n      \"entries\": {\n        \"readwise\": {\n          \"enabled\": false,\n          ...\n        }\n      }\n    }\n    ```\n\n2.  **Add a gateway-level node command blocklist:** In `openclaw.json`, populate the `gateway.nodes.denyCommands` array.\n\n    ```json\n    \"gateway\": {\n      ...\n      \"nodes\": {\n        \"denyCommands\": [\n          \"sudo\",\n          \"rm\",\n          \"shutdown\",\n          \"reboot\",\n          \"kill\",\n          \"pkill\"\n        ]\n      }\n    }\n    ```\n\n3.  **Remove the weak fallback model:** In `openclaw.json`, for the `main` agent, remove `\"openai-codex/gpt-4o-mini\"` from the `model.fallbacks` array.\n\n    ```json\n    \"agents\": {\n      ...\n      \"list\": [\n        {\n          \"id\": \"main\",\n          \"model\": {\n            \"primary\": \"openai-codex/gpt-5.2\",\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n          },\n          ...\n        }\n      ]\n    }\n    ```"
+      "lastSummary": "Done. The prescan summary has been generated and saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were detected."
     },
     {
       "id": "main",
@@ -119,17 +119,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773127800035,
+      "lastRunAt": 1773292944449,
       "lastStatus": "ok",
-      "lastDurationMs": 123436,
+      "lastDurationMs": 319727,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nightly prescan complete. The summary report has been saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were found.",
+      "lastSummary": "Done. The prescan summary has been generated and saved to `/tmp/openclaw_prescan_summary.md`. No critical issues were detected.",
       "nextRunAt": 1773300600000,
       "model": null,
-      "lastTotalTokens": 9105,
-      "lastInputTokens": 18074,
-      "lastOutputTokens": 1605
+      "lastTotalTokens": 9940,
+      "lastInputTokens": 11870,
+      "lastOutputTokens": 4789
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -233,7 +233,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "`infraops:openclaw-auto-update` ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` at **04:44 UTC** → **NOOP (no update)**.\n\nLogged to `memory/2026-03-12.md`.",
-      "nextRunAt": 1773292475429,
+      "nextRunAt": 1773294272766,
       "model": null,
       "lastTotalTokens": 8673,
       "lastInputTokens": 9490,
