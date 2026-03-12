@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773284413878,
+  "updatedAt": 1773286212617,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 4,
           "resetAt": 1773299227000
         },
         {
           "label": "Day",
-          "usedPercent": 2,
+          "usedPercent": 3,
           "resetAt": 1773852278000
         }
       ],
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773283475317,
+      "lastRunAt": 1773285275348,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` (cron `infraops:openclaw-auto-update`) at **2026-03-12 02:44 UTC** → **NOOP (no update)**.\n\nLogged to `memory/2026-03-12.md`."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:nightly-journal-comment",
       "activityChannel": null,
-      "lastRunAt": 1773198000144,
+      "lastRunAt": 1773284400049,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-10T23:00:18-04:00 (EDT)\n- TARGET_DATE logic result: 2026-03-10 (within 23:00–23:59 window → today)\n\nFile:\n- Updated: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-10.md`\n- Status: file existed and was non-empty\n\nEdits (kept localized to the `\\t* [[clawdbot]]` section):\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the empty placeholder bullet under it with ONE entry:\n  - “Nikola nightly synthesis — daughter-first calm + performance-review reframe + leadership carry-forward”\n  - Included nested timestamp bullet (`2026-03-10 23:02:10 EDT (NYC)`)\n  - Included structured reflections, small experiments, a quoted Readwise highlight text, and “Further reading” with 2 concrete links + relevance + 1-paragraph exec summaries.\n\nVerification:\n- Re-read the `[[clawdbot]]` section and confirmed the new content is present immediately before `\\t* [[tracking]] ✅`."
+      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: online (Andreas MacBook connected)\n- CURRENT_TS (America/New_York via /usr/bin/python3): 2026-03-11 23:00:26 EDT\n- TARGET_DATE logic result: 2026-03-11 (within 23:00–23:59 window)\n\nFile:\n- Target: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-11.md`\n- Result: updated under existing `\\t* [[clawdbot]]` section (kept changes localized)\n- Action: replaced the placeholder empty bullet with one entry:\n  - `Nikola nightly synthesis [nikola-nightly]`\n  - Included nested timestamp bullet: `2026-03-11 23:03:50 EDT`\n  - Included: patterns noticed, 7-day experiments, one Readwise highlight quote (The Align Method), and “Further reading” with 2 evidence-leaning PMC links (each with 1-line relevance)\n\nVerification:\n- Re-read the `[[clawdbot]]` section + tail; confirmed the new content is present and correctly indented."
     },
     {
       "id": "research",
@@ -173,17 +173,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773198000144,
+      "lastRunAt": 1773284400049,
       "lastStatus": "ok",
-      "lastDurationMs": 137442,
+      "lastDurationMs": 238467,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-10T23:00:18-04:00 (EDT)\n- TARGET_DATE logic result: 2026-03-10 (within 23:00–23:59 window → today)\n\nFile:\n- Updated: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-10.md`\n- Status: file existed and was non-empty\n\nEdits (kept localized to the `\\t* [[clawdbot]]` section):\n- Found existing `\\t* [[clawdbot]]` section.\n- Replaced the empty placeholder bullet under it with ONE entry:\n  - “Nikola nightly synthesis — daughter-first calm + performance-review reframe + leadership carry-forward”\n  - Included nested timestamp bullet (`2026-03-10 23:02:10 EDT (NYC)`)\n  - Included structured reflections, small experiments, a quoted Readwise highlight text, and “Further reading” with 2 concrete links + relevance + 1-paragraph exec summaries.\n\nVerification:\n- Re-read the `[[clawdbot]]` section and confirmed the new content is present immediately before `\\t* [[tracking]] ✅`.",
-      "nextRunAt": 1773284400000,
+      "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: online (Andreas MacBook connected)\n- CURRENT_TS (America/New_York via /usr/bin/python3): 2026-03-11 23:00:26 EDT\n- TARGET_DATE logic result: 2026-03-11 (within 23:00–23:59 window)\n\nFile:\n- Target: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-11.md`\n- Result: updated under existing `\\t* [[clawdbot]]` section (kept changes localized)\n- Action: replaced the placeholder empty bullet with one entry:\n  - `Nikola nightly synthesis [nikola-nightly]`\n  - Included nested timestamp bullet: `2026-03-11 23:03:50 EDT`\n  - Included: patterns noticed, 7-day experiments, one Readwise highlight quote (The Align Method), and “Further reading” with 2 evidence-leaning PMC links (each with 1-line relevance)\n\nVerification:\n- Re-read the `[[clawdbot]]` section + tail; confirmed the new content is present and correctly indented.",
+      "nextRunAt": 1773370800000,
       "model": null,
-      "lastTotalTokens": 19652,
-      "lastInputTokens": 32320,
-      "lastOutputTokens": 4595
+      "lastTotalTokens": 29998,
+      "lastInputTokens": 32881,
+      "lastOutputTokens": 10795
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -209,17 +209,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773198600125,
+      "lastRunAt": 1773285000033,
       "lastStatus": "ok",
-      "lastDurationMs": 99680,
+      "lastDurationMs": 97663,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Today (America/New_York): **2026-03-10**\n\n## Clawdbot Daily Ops Journal\n2026-03-11T03:10:00Z\n\n- Shipped / Changed\n  - Workspace edits (uncommitted): `SOUL.md`, `USER.md`, `MEMORY.md`, `scripts/openclaw_auto_update.py`.\n  - New/untracked additions in workspace: `ONBOARDING.md`, `SESSION-STATE.md`, `.learnings/`, multiple `memory/2026-03-0*.md` files, `memory/working-buffer.md`.\n  - Skill workspace changes under `.agents/skills/proactive-agent/` (skill docs/assets/scripts updated on disk).\n  - `clawdbot-dashboard/data.json` updated.\n  - Recent modified files on disk (last 24h, notable): `clawdbot-dashboard/data.json`, `SOUL.md`, `USER.md`, `ONBOARDING.md`, `SESSION-STATE.md`, `.learnings/ERRORS.md`, plus multiple `.agents/skills/proactive-agent/*` files.\n\n- Worked\n  - Cron: `healthcheck:overnight-prescan` finished OK; report saved to `/tmp/openclaw_prescan_summary.md` (no critical issues found).\n  - Cron: `healthcheck:security-preflight` finished with a FAIL report (despite `status: ok`): flagged **CRITICAL** issues including an “insecure skill 'readwise'” detection (see run summary in cron logs).\n  - Cron: `feature-builder:morning-proposal` generated a proactive maintenance proposal; noted research cache stale/missing.\n  - Cron: `infraops:openclaw-auto-update` ran repeatedly; most recent runs were blocked with `SKIP (direct session active ...)`.\n  - Cron: `km:nightly-journal-comment` completed OK on the Mac node; updated Andreas’s Brain journal file `/Users/andreasallmaier/Documents/Brain/journal/2026-03-10.md`.\n\n- Failed / Flaky\n  - Cron: `research:daily-signal` had repeated failures; latest event ended `status: error` with `Error: cron: job execution timed out`.\n\n- Decisions\n  - None explicitly logged in cron/git today.\n\n- Follow-ups\n  - Investigate why `healthcheck:security-preflight` is flagging the `skills/readwise` skill as insecure (and why those files appear deleted in git status).\n  - Fix/adjust `research:daily-signal` timeouts (increase timeout, reduce scop…",
-      "nextRunAt": 1773285000000,
+      "lastSummary": "Today (America/New_York): **2026-03-11**\n\n## Clawdbot Daily Ops Journal\n2026-03-12T03:10:56Z\n\n- Shipped/Changed\n  - Git commits (last 24h in `/home/clawd/.openclaw/workspace`): **none**.\n  - Workspace has uncommitted changes (per `git status`):\n    - Modified: `MEMORY.md`, `SOUL.md`, `USER.md`, `scripts/openclaw_auto_update.py`.\n    - Deleted (tracked): `skills/readwise/*` (SKILL.md + references + scripts).\n    - New/untracked: `ONBOARDING.md`, `SESSION-STATE.md`, `.learnings/`, `logs/`, `tmp/`, and multiple `memory/2026-03-0*.md` files.\n  - Noteworthy recently modified files on disk (last 24h; excluding caches/log spam):\n    - `clawdbot-dashboard/data.json`\n    - `memory/2026-03-12.md`\n    - `memory/openclaw-auto-update.lock`\n    - `.learnings/ERRORS.md`\n    - `MEMORY.md`\n    - `memory/2026-03-11.md`\n  - Workspace-KM: no noteworthy file modifications detected in the last 24h.\n\n- Worked\n  - Cron activity (last 24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`, filtered by `ts`): **52** events.\n  - `infraops:openclaw-auto-update` (`c621238c-158e-4342-90c7-9ebb9f8ab0a3`): **48/48 ok**.\n    - Mostly `NOOP (no update)`; a few runs intentionally `SKIP` due to “direct session active”.\n  - `healthcheck:security-preflight` (`5a45f0e7-fed2-450e-91e5-e205656cc8c2`): job `status=ok`, but report outcome **FAIL** with critical findings:\n    - flagged the `readwise` skill for suspected credential/env harvesting patterns (recommended disable until audited),\n    - noted missing `gateway.nodes.denyCommands` hardening,\n    - noted weak fallback model (`gpt-4o-mini`) as below recommended security tier.\n  - `feature-builder:morning-proposal` (`461680fe-9815-4dc5-8a0a-5898316619f8`): `ok`; proposal to automate generation of `/tmp/openclaw_prescan_summary.md` and daily research cache to avoid stale data.\n  - `km:nightly-journal-comment` (`c915b0d5-5160-45e8-8c57-a60d742a4640`): `ok`; Mac node online and journal comment successfully updated on Andreas MacBook (localized under `[[clawdbo…",
+      "nextRunAt": 1773371400000,
       "model": null,
-      "lastTotalTokens": 15981,
-      "lastInputTokens": 21604,
-      "lastOutputTokens": 4252
+      "lastTotalTokens": 33941,
+      "lastInputTokens": 36612,
+      "lastOutputTokens": 4612
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773283475317,
+      "lastRunAt": 1773285275348,
       "lastStatus": "ok",
-      "lastDurationMs": 81643,
+      "lastDurationMs": 63510,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py` (cron `infraops:openclaw-auto-update`) at **2026-03-12 02:44 UTC** → **NOOP (no update)**.\n\nLogged to `memory/2026-03-12.md`.",
-      "nextRunAt": 1773285275317,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773287075348,
       "model": null,
-      "lastTotalTokens": 8574,
-      "lastInputTokens": 9086,
-      "lastOutputTokens": 414
+      "lastTotalTokens": 8246,
+      "lastInputTokens": 371,
+      "lastOutputTokens": 183
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
