@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773311412776,
+  "updatedAt": 1773313210686,
   "providers": [
     {
       "id": "openai-codex",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
+      "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1773300600044,
+      "lastRunAt": 1773312600028,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "PRESCAN_GENERATED_AT=2026-03-12T07:30:13Z\n\n## OpenClaw Gateway Status\nService: systemd (enabled)\nFile logs: /tmp/openclaw/openclaw-2026-03-12.log\nCommand: /usr/bin/node /home/clawd/.npm-global/lib/node_modules/openclaw/dist/entry.js gateway --port 18789\nService file: ~/.config/systemd/user/openclaw-gateway.service\nService env: OPENCLAW_GATEWAY_PORT=18789\n\nConfig (cli): ~/.openclaw/openclaw.json\nConfig (service): ~/.openclaw/openclaw.json\n\nGateway: bind=loopback (127.0.0.1), port=18789 (service args)\nProbe target: ws://127.0.0.1:18789\nDashboard: http://127.0.0.1:18789/\nProbe note: Loopback-only gateway; only local clients can connect.\n\nRuntime: running (pid 2300119, state active, sub running, last exit 0, reason 0)\nRPC probe: ok\n\nListening: 127.0.0.1:18789\nOther gateway-like services detected (best effort):\n- openclaw-node.service (user, unit: /home/clawd/.config/systemd/user/openclaw-node.service)\nCleanup hint: systemctl --user disable --now openclaw-gateway.service\nCleanup hint: rm ~/.config/systemd/user/openclaw-gateway.service\n\nRecommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).\nIf you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).\n\nTroubles: run openclaw status\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\n## OpenClaw Security Audit\nOpenClaw security audit\nSummary: 0 critical · 1 warn · 2 info\nRun deeper: openclaw security audit --deep\n\nWARN\nmodels.weak_tier Some configured models are below recommended tiers\n  Smaller/older models are generally more susceptible to prompt injection and tool misuse.\n- openai-codex/gpt-4o-mini (Below GPT-5 family) @ agents.list.main.model.fallbacks\n  Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\n\nINFO\nsummary.attack_surface Attack surface summa…"
+      "lastSummary": "FAIL: Security preflight check failed with 1 critical vulnerability and 1 warning.\n\nTop Blockers:\n1.  **CRITICAL: Insecure Skill Enabled.** The `readwise` skill contains code flagged for potential credential harvesting (`env-harvesting`) and is currently enabled. This poses a significant security risk.\n2.  **WARN: Weak Fallback Model.** The `main` agent's configuration includes `openai-codex/gpt-4o-mini` as a fallback model, which is below the recommended tier and more susceptible to misuse.\n\nConfiguration Patch Suggestions:\n\n1.  **Disable the vulnerable skill immediately.** This prevents the potentially malicious code from running.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, change `skills.entries.readwise.enabled` from `true` to `false`.\n\n2.  **Remove the weak fallback model.** This improves the security posture of the main agent.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, find the agent with `id: \"main\"` and remove `\"openai-codex/gpt-4o-mini\"` from its `model.fallbacks` array.\n\nOther Notes:\n- **Trusted Proxy:** Your gateway's trusted proxy and Tailscale Serve posture are correctly configured for a secure \"local\" deployment.\n- **Node Command Denylist:** The `gateway.nodes.denyCommands` list is currently empty. While not a failure, consider adding specific, high-risk command IDs to this list to harden node security."
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "cron",
       "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773310473134,
+      "lastRunAt": 1773312273163,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found no update to apply."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -137,17 +137,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773226200070,
+      "lastRunAt": 1773312600028,
       "lastStatus": "ok",
-      "lastDurationMs": 138612,
+      "lastDurationMs": 132804,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL\n\nTop blockers:\n1.  **Critical Skill Vulnerability:** The `readwise` skill contains code patterns flagged for potential credential harvesting (`env-harvesting`). This is a critical risk and the skill should be disabled immediately until it can be audited or removed.\n2.  **Missing Node Command Blocklist:** The gateway does not have a `denyCommands` list. This is a missed hardening opportunity to prevent nodes from running potentially dangerous commands like `sudo`, `rm -rf`, or `shutdown`.\n3.  **Weak Fallback Model:** The `main` agent uses `gpt-4o-mini` as a fallback model, which is below the recommended security tier and more susceptible to misuse.\n\nConfig patch suggestions:\n\n1.  **Disable the vulnerable skill:** In `openclaw.json`, under `skills.entries.readwise`, set `\"enabled\": false`.\n\n    ```json\n    \"skills\": {\n      \"entries\": {\n        \"readwise\": {\n          \"enabled\": false,\n          ...\n        }\n      }\n    }\n    ```\n\n2.  **Add a gateway-level node command blocklist:** In `openclaw.json`, populate the `gateway.nodes.denyCommands` array.\n\n    ```json\n    \"gateway\": {\n      ...\n      \"nodes\": {\n        \"denyCommands\": [\n          \"sudo\",\n          \"rm\",\n          \"shutdown\",\n          \"reboot\",\n          \"kill\",\n          \"pkill\"\n        ]\n      }\n    }\n    ```\n\n3.  **Remove the weak fallback model:** In `openclaw.json`, for the `main` agent, remove `\"openai-codex/gpt-4o-mini\"` from the `model.fallbacks` array.\n\n    ```json\n    \"agents\": {\n      ...\n      \"list\": [\n        {\n          \"id\": \"main\",\n          \"model\": {\n            \"primary\": \"openai-codex/gpt-5.2\",\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n          },\n          ...\n        }\n      ]\n    }\n    ```",
-      "nextRunAt": 1773312600000,
+      "lastSummary": "FAIL: Security preflight check failed with 1 critical vulnerability and 1 warning.\n\nTop Blockers:\n1.  **CRITICAL: Insecure Skill Enabled.** The `readwise` skill contains code flagged for potential credential harvesting (`env-harvesting`) and is currently enabled. This poses a significant security risk.\n2.  **WARN: Weak Fallback Model.** The `main` agent's configuration includes `openai-codex/gpt-4o-mini` as a fallback model, which is below the recommended tier and more susceptible to misuse.\n\nConfiguration Patch Suggestions:\n\n1.  **Disable the vulnerable skill immediately.** This prevents the potentially malicious code from running.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, change `skills.entries.readwise.enabled` from `true` to `false`.\n\n2.  **Remove the weak fallback model.** This improves the security posture of the main agent.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, find the agent with `id: \"main\"` and remove `\"openai-codex/gpt-4o-mini\"` from its `model.fallbacks` array.\n\nOther Notes:\n- **Trusted Proxy:** Your gateway's trusted proxy and Tailscale Serve posture are correctly configured for a secure \"local\" deployment.\n- **Node Command Denylist:** The `gateway.nodes.denyCommands` list is currently empty. While not a failure, consider adding specific, high-risk command IDs to this list to harden node security.",
+      "nextRunAt": 1773399000000,
       "model": null,
-      "lastTotalTokens": 10303,
-      "lastInputTokens": 11531,
-      "lastOutputTokens": 1796
+      "lastTotalTokens": 10579,
+      "lastInputTokens": 10489,
+      "lastOutputTokens": 1558
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -227,17 +227,17 @@
       "schedule": "(unknown)",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773310473134,
+      "lastRunAt": 1773312273163,
       "lastStatus": "ok",
-      "lastDurationMs": 71518,
+      "lastDurationMs": 62116,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found no update to apply.",
-      "nextRunAt": 1773312273134,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773314073163,
       "model": null,
-      "lastTotalTokens": 8343,
-      "lastInputTokens": 8387,
-      "lastOutputTokens": 107
+      "lastTotalTokens": 8327,
+      "lastInputTokens": 8499,
+      "lastOutputTokens": 98
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
