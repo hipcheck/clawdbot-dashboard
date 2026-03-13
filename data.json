@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773412212660,
+  "updatedAt": 1773414009929,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1773430213000
+          "usedPercent": 17,
+          "resetAt": 1773430408000
         },
         {
           "label": "Day",
-          "usedPercent": 19,
+          "usedPercent": 25,
           "resetAt": 1773852278000
         }
       ],
@@ -40,7 +40,7 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773400865341,
+      "lastRunAt": 1773412550260,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "<final>Yes. Here is today's build suggestion:\n\n**Automate your NYC job search.**\n\nI can build a script that runs daily to:\n1.  Search major job boards for \"Senior Marketing Manager\" roles in \"New York"
@@ -52,7 +52,7 @@
       "activityKind": "chat",
       "activityLabel": "json\n{\n  \"message_id\": \"111\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 09:37 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773394681033,
+      "lastRunAt": 1773412624572,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "I'd be happy to, but I'm not showing any pending approval requests from our conversation.\n\nOur last task was successfully completed on Tuesday when I patched the cron job scripts. There are no outstan"
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"475\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 09:39 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773394779248,
+      "lastRunAt": 1773413471757,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "You’re welcome.\n\nNext time that security report comes in, if it *still* mentions Readwise, forward it to me — then we’ll know it’s coming from a different scanner/job and I’ll patch that one too."
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -76,7 +76,7 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773394542641,
+      "lastRunAt": 1773412842983,
       "lastStatus": "ok",
       "lastError": null,
       "lastSummary": "It didn’t run because the **cron subsystem was broken last night**: the gateway couldn’t parse the cron jobs store file, so it never woke up to execute any scheduled jobs.\n\nConcretely, `/home/clawd/.o"
