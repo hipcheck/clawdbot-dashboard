@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773504011440,
+  "updatedAt": 1773505811302,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 8,
           "resetAt": 1773511626000
         },
         {
           "label": "Day",
-          "usedPercent": 28,
+          "usedPercent": 30,
           "resetAt": 1773852278000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 21,
-          "resetAt": 1773518400710
+          "usedPercent": 40,
+          "resetAt": 1773518400696
         },
         {
           "label": "Week",
-          "usedPercent": 33,
-          "resetAt": 1773507600711
+          "usedPercent": 35,
+          "resetAt": 1773507600696
         }
       ],
       "error": null
@@ -73,24 +73,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"503\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 22:00 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "json\n{\n  \"message_id\": \"508\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-14 10:10 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773456841028,
+      "lastRunAt": 1773505671911,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Hi — I’m here.\n\nWhat’s the move: fix another OpenClaw annoyance, or switch gears to something personal-effectiveness / job search?"
+      "lastSummary": "Hey Andreas — I’m here.\n\nDo you want to:\n1) build the **career page watchdog** (so you get alerts when target companies post roles), or  \n2) do a quick **weekly review** in Obsidian / set up the next "
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"220\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 19:15 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773456743474,
+      "lastRunAt": 1773505747541,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Hi Andreas — I’m here. Want to sanity-check that tonight’s 11pm journal run will fire (and that reminders/formatting rules apply), or is there something else you want to work on?"
+      "lastSummary": null
     },
     {
       "id": "research",
