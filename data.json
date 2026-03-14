@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773455409949,
+  "updatedAt": 1773457213418,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
-          "resetAt": 1773468427000
+          "usedPercent": 7,
+          "resetAt": 1773468426000
         },
         {
           "label": "Day",
-          "usedPercent": 25,
+          "usedPercent": 27,
           "resetAt": 1773852278000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 27,
-          "resetAt": 1773468000238
+          "usedPercent": 36,
+          "resetAt": 1773468000847
         },
         {
           "label": "Week",
-          "usedPercent": 30,
-          "resetAt": 1773507600238
+          "usedPercent": 31,
+          "resetAt": 1773507599847
         }
       ],
       "error": null
@@ -73,24 +73,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"503\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 22:00 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773413471757,
+      "lastRunAt": 1773456841028,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Hi — I’m here.\n\nWhat’s the move: fix another OpenClaw annoyance, or switch gears to something personal-effectiveness / job search?"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"220\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 19:15 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773412842983,
+      "lastRunAt": 1773456743474,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "It didn’t run because the **cron subsystem was broken last night**: the gateway couldn’t parse the cron jobs store file, so it never woke up to execute any scheduled jobs.\n\nConcretely, `/home/clawd/.o"
+      "lastSummary": "Hi Andreas — I’m here. Want to sanity-check that tonight’s 11pm journal run will fire (and that reminders/formatting rules apply), or is there something else you want to work on?"
     },
     {
       "id": "research",
