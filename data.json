@@ -1,23 +1,11 @@
 {
-  "updatedAt": 1773505811302,
+  "updatedAt": 1773507608673,
   "providers": [
     {
       "id": "openai-codex",
       "label": "OpenAI Codex",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 8,
-          "resetAt": 1773511626000
-        },
-        {
-          "label": "Day",
-          "usedPercent": 30,
-          "resetAt": 1773852278000
-        }
-      ],
-      "plan": "plus ($0.00)",
-      "error": null
+      "windows": [],
+      "error": "Token expired"
     },
     {
       "id": "gemini",
@@ -31,13 +19,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 40,
-          "resetAt": 1773518400696
+          "usedPercent": 44,
+          "resetAt": 1773518400938
         },
         {
           "label": "Week",
-          "usedPercent": 35,
-          "resetAt": 1773507600696
+          "usedPercent": 0
         }
       ],
       "error": null
@@ -51,10 +38,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773456800032,
+      "lastRunAt": 1773505638078,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**Job Board Change Tracker (as an RSS Feed)**\n\n**Signal:** High engagement on a Show HN post for a tool that converts webpage changes into an RSS feed (Source: Hacker News, 2026-03-11).\n\n**Why Andreas:** Directly automates a painful part of his active job search, turning manual checking into a passive, structured data feed.\n\n**Impact:** Save 15-20 minutes of manual site checking per day and get instant notifications on new or removed roles from target companies.\n**Risk:** Target sites might use frameworks (like React) that make simple `web_fetch` scraping difficult, requiring a browser-based tool.\n**Effort:** 4-6 hours for a v1.\n\n**First 3 steps:**\n1. Create a `job_targets.json` file listing 3-5 target company career page URLs.\n2. Write a script (`check_jobs.sh`) that iterates the list, fetches each URL, and stores a hash of the content in a state file.\n3. On hash mismatch, diff the content to identify new/removed job links and append the change to a `jobs.xml` RSS feed file.\n\n**Done looks like:** A cron job runs every hour, updating a static RSS feed file on the VPS that can be subscribed to in any RSS reader."
+      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**[Title]** \"Watch That Page\" Job Tracker\n\n**Signal:** A tool that watches webpages for changes and creates an RSS feed was on the front page of Hacker News this week, showing strong interest in simple, effective web monitoring. (Source: HN Show, 2026-03-11)\n\n**Why Andreas:** This directly supports his active Senior Marketing Manager job search in NYC by automating the monitoring of target company career pages that lack RSS or email alerts.\n\n**Impact:** Never miss a new job posting on a target company's site, getting applications in faster without the manual, repetitive work of checking pages daily.\n**Risk:** The primary risk is that a target site uses a dynamic, client-rendered frontend that makes simple `curl` and `diff` comparisons ineffective.\n**Effort:** 2-3 hours for a v1.\n\n**First 3 steps:**\n1. Create a `targets.txt` file with URLs of 3-5 company career pages to monitor.\n2. Write a bash script that loops through the file, downloads the content of each URL, and stores it. On subsequent runs, it should `diff` the new content against the old.\n3. If a change is detected, the script will send a notification via an existing `openclaw` channel (e.g., Telegram).\n\n**Done looks like:** A cron job runs a script every hour that automatically reports new job postings or changes from a list of target company websites."
     },
     {
       "id": "infraops",
@@ -72,13 +59,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"508\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sat 2026-03-14 10:10 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773505671911,
+      "activityKind": "cron",
+      "activityLabel": "NYC Senior Marketing Manager Pipeline",
+      "activityChannel": null,
+      "lastRunAt": 1773505731933,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Hey Andreas — I’m here.\n\nDo you want to:\n1) build the **career page watchdog** (so you get alerts when target companies post roles), or  \n2) do a quick **weekly review** in Obsidian / set up the next "
+      "lastSummary": "Pipeline updated in `/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`.\n\n- **New roles found/appended:** 0\n- **Last-seen updates:** updated **Amazon — Senior Marketing Manager, Inbound GTM, Partner, Amazon Ads** to **2026-03-14** (it appeared in today’s Amazon `search.json` results).\n- **Stale-role flags (>30 days, not seen today):** none triggered (your oldest “Last seen” in the tracked section is 2026-02-22, which is <30 days from today).\n- **Search/source notes:** Brave query returned **0 results**; Google careers page yielded job links but nothing net-new in-scope; Apple pages remain **JS-rendered** and `web_fetch` only returns the footer on this VPS setup, so no Apple detail URLs could be extracted today.\n- **Metadata + run log:** frontmatter updated (updated/last_run/status/new_roles) and a new **Run log** row appended."
     },
     {
       "id": "km",
@@ -87,10 +74,10 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773505747541,
+      "lastRunAt": 1773505983910,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Done — both actions are complete.\n\n1) Manual run for **2026-03-13**\n- I updated this file on your Mac (in place):  \n  `/Users/andreasallmaier/Documents/Brain/journal/2026-03-13.md`\n- The `[[clawdbot]]"
     },
     {
       "id": "research",
@@ -112,17 +99,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773456800032,
+      "lastRunAt": 1773505638078,
       "lastStatus": "ok",
-      "lastDurationMs": 428473,
+      "lastDurationMs": 93855,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**Job Board Change Tracker (as an RSS Feed)**\n\n**Signal:** High engagement on a Show HN post for a tool that converts webpage changes into an RSS feed (Source: Hacker News, 2026-03-11).\n\n**Why Andreas:** Directly automates a painful part of his active job search, turning manual checking into a passive, structured data feed.\n\n**Impact:** Save 15-20 minutes of manual site checking per day and get instant notifications on new or removed roles from target companies.\n**Risk:** Target sites might use frameworks (like React) that make simple `web_fetch` scraping difficult, requiring a browser-based tool.\n**Effort:** 4-6 hours for a v1.\n\n**First 3 steps:**\n1. Create a `job_targets.json` file listing 3-5 target company career page URLs.\n2. Write a script (`check_jobs.sh`) that iterates the list, fetches each URL, and stores a hash of the content in a state file.\n3. On hash mismatch, diff the content to identify new/removed job links and append the change to a `jobs.xml` RSS feed file.\n\n**Done looks like:** A cron job runs every hour, updating a static RSS feed file on the VPS that can be subscribed to in any RSS reader.",
-      "nextRunAt": 1773486000000,
+      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**[Title]** \"Watch That Page\" Job Tracker\n\n**Signal:** A tool that watches webpages for changes and creates an RSS feed was on the front page of Hacker News this week, showing strong interest in simple, effective web monitoring. (Source: HN Show, 2026-03-11)\n\n**Why Andreas:** This directly supports his active Senior Marketing Manager job search in NYC by automating the monitoring of target company career pages that lack RSS or email alerts.\n\n**Impact:** Never miss a new job posting on a target company's site, getting applications in faster without the manual, repetitive work of checking pages daily.\n**Risk:** The primary risk is that a target site uses a dynamic, client-rendered frontend that makes simple `curl` and `diff` comparisons ineffective.\n**Effort:** 2-3 hours for a v1.\n\n**First 3 steps:**\n1. Create a `targets.txt` file with URLs of 3-5 company career pages to monitor.\n2. Write a bash script that loops through the file, downloads the content of each URL, and stores it. On subsequent runs, it should `diff` the new content against the old.\n3. If a change is detected, the script will send a notification via an existing `openclaw` channel (e.g., Telegram).\n\n**Done looks like:** A cron job runs a script every hour that automatically reports new job postings or changes from a list of target company websites.",
+      "nextRunAt": 1773572400000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 16964,
-      "lastInputTokens": 21044,
-      "lastOutputTokens": 4736
+      "lastTotalTokens": 7581,
+      "lastInputTokens": 12787,
+      "lastOutputTokens": 2315
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -136,7 +123,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "PRESCAN_GENERATED_AT=2026-03-12T07:30:13Z\n\n## OpenClaw Gateway Status\nService: systemd (enabled)\nFile logs: /tmp/openclaw/openclaw-2026-03-12.log\nCommand: /usr/bin/node /home/clawd/.npm-global/lib/node_modules/openclaw/dist/entry.js gateway --port 18789\nService file: ~/.config/systemd/user/openclaw-gateway.service\nService env: OPENCLAW_GATEWAY_PORT=18789\n\nConfig (cli): ~/.openclaw/openclaw.json\nConfig (service): ~/.openclaw/openclaw.json\n\nGateway: bind=loopback (127.0.0.1), port=18789 (service args)\nProbe target: ws://127.0.0.1:18789\nDashboard: http://127.0.0.1:18789/\nProbe note: Loopback-only gateway; only local clients can connect.\n\nRuntime: running (pid 2300119, state active, sub running, last exit 0, reason 0)\nRPC probe: ok\n\nListening: 127.0.0.1:18789\nOther gateway-like services detected (best effort):\n- openclaw-node.service (user, unit: /home/clawd/.config/systemd/user/openclaw-node.service)\nCleanup hint: systemctl --user disable --now openclaw-gateway.service\nCleanup hint: rm ~/.config/systemd/user/openclaw-gateway.service\n\nRecommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).\nIf you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).\n\nTroubles: run openclaw status\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\n## OpenClaw Security Audit\nOpenClaw security audit\nSummary: 0 critical · 1 warn · 2 info\nRun deeper: openclaw security audit --deep\n\nWARN\nmodels.weak_tier Some configured models are below recommended tiers\n  Smaller/older models are generally more susceptible to prompt injection and tool misuse.\n- openai-codex/gpt-4o-mini (Below GPT-5 family) @ agents.list.main.model.fallbacks\n  Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\n\nINFO\nsummary.attack_surface Attack surface summa…",
-      "nextRunAt": 1773473400000,
+      "nextRunAt": 1773559800000,
       "model": null,
       "lastTotalTokens": 8440,
       "lastInputTokens": 9183,
@@ -154,7 +141,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "FAIL: Security preflight check failed with 1 critical vulnerability and 1 warning.\n\nTop Blockers:\n1.  **CRITICAL: Insecure Skill Enabled.** The `readwise` skill contains code flagged for potential credential harvesting (`env-harvesting`) and is currently enabled. This poses a significant security risk.\n2.  **WARN: Weak Fallback Model.** The `main` agent's configuration includes `openai-codex/gpt-4o-mini` as a fallback model, which is below the recommended tier and more susceptible to misuse.\n\nConfiguration Patch Suggestions:\n\n1.  **Disable the vulnerable skill immediately.** This prevents the potentially malicious code from running.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, change `skills.entries.readwise.enabled` from `true` to `false`.\n\n2.  **Remove the weak fallback model.** This improves the security posture of the main agent.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, find the agent with `id: \"main\"` and remove `\"openai-codex/gpt-4o-mini\"` from its `model.fallbacks` array.\n\nOther Notes:\n- **Trusted Proxy:** Your gateway's trusted proxy and Tailscale Serve posture are correctly configured for a secure \"local\" deployment.\n- **Node Command Denylist:** The `gateway.nodes.denyCommands` list is currently empty. While not a failure, consider adding specific, high-risk command IDs to this list to harden node security.",
-      "nextRunAt": 1773485400000,
+      "nextRunAt": 1773571800000,
       "model": null,
       "lastTotalTokens": 10579,
       "lastInputTokens": 10489,
@@ -166,17 +153,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": null,
       "enabled": true,
-      "lastRunAt": 1773086400101,
+      "lastRunAt": 1773505731933,
       "lastStatus": "ok",
-      "lastDurationMs": 101245,
+      "lastDurationMs": 149773,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Pipeline updated on disk.\n\n- **Net-new roles added (1):**\n  - Amazon — **Senior Marketing Manager, Inbound GTM, Partner, Amazon Ads** (NYC)  \n    https://www.amazon.jobs/en/jobs/3198484/senior-marketing-manager-inbound-gtm-partner-amazon-ads\n\n- **Last-seen updates (set to 2026-03-09):**\n  - Google — Senior Partner Marketing Manager, Data Analytics, Partnerships (839190…)\n  - Google — Product Marketing Manager, Global Apps Marketing (122835…)\n  - Amazon — Senior Marketing Manager, Executive Messaging (3111166)\n  - Amazon — Senior Marketing Manager, Content & SEO (3142127)\n\n- **Stale audit:** no stale warnings added/removed (the oldest “Last seen” dates are ~15 days old).\n\n- **Apple step:** skipped this run because the required browser-based extraction isn’t available on the VPS (no supported Chrome/Chromium), consistent with prior runs.\n\nFrontmatter + Run log were updated:\n- `updated: 2026-03-09`\n- `last_run: 2026-03-09T20:00:00+00:00`\n- `last_run_status: ok`\n- `last_run_new_roles: 1`",
+      "lastSummary": "Pipeline updated in `/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`.\n\n- **New roles found/appended:** 0\n- **Last-seen updates:** updated **Amazon — Senior Marketing Manager, Inbound GTM, Partner, Amazon Ads** to **2026-03-14** (it appeared in today’s Amazon `search.json` results).\n- **Stale-role flags (>30 days, not seen today):** none triggered (your oldest “Last seen” in the tracked section is 2026-02-22, which is <30 days from today).\n- **Search/source notes:** Brave query returned **0 results**; Google careers page yielded job links but nothing net-new in-scope; Apple pages remain **JS-rendered** and `web_fetch` only returns the footer on this VPS setup, so no Apple detail URLs could be extracted today.\n- **Metadata + run log:** frontmatter updated (updated/last_run/status/new_roles) and a new **Run log** row appended.",
       "nextRunAt": 1773691200000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 53467,
-      "lastInputTokens": 58386,
-      "lastOutputTokens": 3123
+      "lastTotalTokens": 43134,
+      "lastInputTokens": 43754,
+      "lastOutputTokens": 6103
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
@@ -190,7 +177,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Nikola nightly journal: OK\n\n- Mac node status: online (Andreas MacBook connected)\n- CURRENT_TS (America/New_York via /usr/bin/python3): 2026-03-11 23:00:26 EDT\n- TARGET_DATE logic result: 2026-03-11 (within 23:00–23:59 window)\n\nFile:\n- Target: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-11.md`\n- Result: updated under existing `\\t* [[clawdbot]]` section (kept changes localized)\n- Action: replaced the placeholder empty bullet with one entry:\n  - `Nikola nightly synthesis [nikola-nightly]`\n  - Included nested timestamp bullet: `2026-03-11 23:03:50 EDT`\n  - Included: patterns noticed, 7-day experiments, one Readwise highlight quote (The Align Method), and “Further reading” with 2 evidence-leaning PMC links (each with 1-line relevance)\n\nVerification:\n- Re-read the `[[clawdbot]]` section + tail; confirmed the new content is present and correctly indented.",
-      "nextRunAt": 1773457200000,
+      "nextRunAt": 1773543600000,
       "model": null,
       "lastTotalTokens": 29998,
       "lastInputTokens": 32881,
@@ -226,7 +213,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Today (America/New_York): **2026-03-11**\n\n## Clawdbot Daily Ops Journal\n2026-03-12T03:10:56Z\n\n- Shipped/Changed\n  - Git commits (last 24h in `/home/clawd/.openclaw/workspace`): **none**.\n  - Workspace has uncommitted changes (per `git status`):\n    - Modified: `MEMORY.md`, `SOUL.md`, `USER.md`, `scripts/openclaw_auto_update.py`.\n    - Deleted (tracked): `skills/readwise/*` (SKILL.md + references + scripts).\n    - New/untracked: `ONBOARDING.md`, `SESSION-STATE.md`, `.learnings/`, `logs/`, `tmp/`, and multiple `memory/2026-03-0*.md` files.\n  - Noteworthy recently modified files on disk (last 24h; excluding caches/log spam):\n    - `clawdbot-dashboard/data.json`\n    - `memory/2026-03-12.md`\n    - `memory/openclaw-auto-update.lock`\n    - `.learnings/ERRORS.md`\n    - `MEMORY.md`\n    - `memory/2026-03-11.md`\n  - Workspace-KM: no noteworthy file modifications detected in the last 24h.\n\n- Worked\n  - Cron activity (last 24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`, filtered by `ts`): **52** events.\n  - `infraops:openclaw-auto-update` (`c621238c-158e-4342-90c7-9ebb9f8ab0a3`): **48/48 ok**.\n    - Mostly `NOOP (no update)`; a few runs intentionally `SKIP` due to “direct session active”.\n  - `healthcheck:security-preflight` (`5a45f0e7-fed2-450e-91e5-e205656cc8c2`): job `status=ok`, but report outcome **FAIL** with critical findings:\n    - flagged the `readwise` skill for suspected credential/env harvesting patterns (recommended disable until audited),\n    - noted missing `gateway.nodes.denyCommands` hardening,\n    - noted weak fallback model (`gpt-4o-mini`) as below recommended security tier.\n  - `feature-builder:morning-proposal` (`461680fe-9815-4dc5-8a0a-5898316619f8`): `ok`; proposal to automate generation of `/tmp/openclaw_prescan_summary.md` and daily research cache to avoid stale data.\n  - `km:nightly-journal-comment` (`c915b0d5-5160-45e8-8c57-a60d742a4640`): `ok`; Mac node online and journal comment successfully updated on Andreas MacBook (localized under `[[clawdbo…",
-      "nextRunAt": 1773457800000,
+      "nextRunAt": 1773544200000,
       "model": null,
       "lastTotalTokens": 33941,
       "lastInputTokens": 36612,
@@ -244,7 +231,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773459900000,
+      "nextRunAt": 1773546300000,
       "model": null,
       "lastTotalTokens": 8340,
       "lastInputTokens": 8384,
