@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773457213418,
+  "updatedAt": 1773459007988,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 7,
+          "usedPercent": 8,
           "resetAt": 1773468426000
         },
         {
@@ -32,12 +32,12 @@
         {
           "label": "5h",
           "usedPercent": 36,
-          "resetAt": 1773468000847
+          "resetAt": 1773468000205
         },
         {
           "label": "Week",
           "usedPercent": 31,
-          "resetAt": 1773507599847
+          "resetAt": 1773507600205
         }
       ],
       "error": null
@@ -51,10 +51,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773413666229,
+      "lastRunAt": 1773456800032,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## 🔨 Today's Build\n\n**Career Page Watchdog Skill**\n\n**Signal:** A trending Show HN project for turning webpage changes into RSS feeds (Source: daily-research.md, 2026-03-13) shows strong interest in website monitoring.\n\n**Why Andreas:** This directly automates the most tedious part of his active NYC job search: repeatedly checking company career pages for new roles.\n\n**Impact:** Get immediate notifications when a target company posts a relevant marketing role, giving him a first-mover advantage in applying.\n**Risk:** Target sites might use JavaScript-heavy frameworks that make simple `web_fetch` diffing unreliable.\n**Effort:** 3-4 hours for a v1.\n\n**First 3 steps:**\n1. Create a new skill directory `~/.openclaw/skills/job-watchdog/`.\n2. Implement a basic `web_fetch` and file-based caching mechanism to store the \"last seen\" version of a few target career pages.\n3. Add a `diff` command comparison between the cached version and the fresh version, and use `message.send` to notify on changes.\n\n**Done looks like:** A cron-triggered skill runs hourly, checks 3-5 career pages, and sends a Telegram message if any of them have changed."
+      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**Job Board Change Tracker (as an RSS Feed)**\n\n**Signal:** High engagement on a Show HN post for a tool that converts webpage changes into an RSS feed (Source: Hacker News, 2026-03-11).\n\n**Why Andreas:** Directly automates a painful part of his active job search, turning manual checking into a passive, structured data feed.\n\n**Impact:** Save 15-20 minutes of manual site checking per day and get instant notifications on new or removed roles from target companies.\n**Risk:** Target sites might use frameworks (like React) that make simple `web_fetch` scraping difficult, requiring a browser-based tool.\n**Effort:** 4-6 hours for a v1.\n\n**First 3 steps:**\n1. Create a `job_targets.json` file listing 3-5 target company career page URLs.\n2. Write a script (`check_jobs.sh`) that iterates the list, fetches each URL, and stores a hash of the content in a state file.\n3. On hash mismatch, diff the content to identify new/removed job links and append the change to a `jobs.xml` RSS feed file.\n\n**Done looks like:** A cron job runs every hour, updating a static RSS feed file on the VPS that can be subscribed to in any RSS reader."
     },
     {
       "id": "infraops",
@@ -112,17 +112,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773413666229,
+      "lastRunAt": 1773456800032,
       "lastStatus": "ok",
-      "lastDurationMs": 513690,
+      "lastDurationMs": 428473,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## 🔨 Today's Build\n\n**Career Page Watchdog Skill**\n\n**Signal:** A trending Show HN project for turning webpage changes into RSS feeds (Source: daily-research.md, 2026-03-13) shows strong interest in website monitoring.\n\n**Why Andreas:** This directly automates the most tedious part of his active NYC job search: repeatedly checking company career pages for new roles.\n\n**Impact:** Get immediate notifications when a target company posts a relevant marketing role, giving him a first-mover advantage in applying.\n**Risk:** Target sites might use JavaScript-heavy frameworks that make simple `web_fetch` diffing unreliable.\n**Effort:** 3-4 hours for a v1.\n\n**First 3 steps:**\n1. Create a new skill directory `~/.openclaw/skills/job-watchdog/`.\n2. Implement a basic `web_fetch` and file-based caching mechanism to store the \"last seen\" version of a few target career pages.\n3. Add a `diff` command comparison between the cached version and the fresh version, and use `message.send` to notify on changes.\n\n**Done looks like:** A cron-triggered skill runs hourly, checks 3-5 career pages, and sends a Telegram message if any of them have changed.",
+      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**Job Board Change Tracker (as an RSS Feed)**\n\n**Signal:** High engagement on a Show HN post for a tool that converts webpage changes into an RSS feed (Source: Hacker News, 2026-03-11).\n\n**Why Andreas:** Directly automates a painful part of his active job search, turning manual checking into a passive, structured data feed.\n\n**Impact:** Save 15-20 minutes of manual site checking per day and get instant notifications on new or removed roles from target companies.\n**Risk:** Target sites might use frameworks (like React) that make simple `web_fetch` scraping difficult, requiring a browser-based tool.\n**Effort:** 4-6 hours for a v1.\n\n**First 3 steps:**\n1. Create a `job_targets.json` file listing 3-5 target company career page URLs.\n2. Write a script (`check_jobs.sh`) that iterates the list, fetches each URL, and stores a hash of the content in a state file.\n3. On hash mismatch, diff the content to identify new/removed job links and append the change to a `jobs.xml` RSS feed file.\n\n**Done looks like:** A cron job runs every hour, updating a static RSS feed file on the VPS that can be subscribed to in any RSS reader.",
       "nextRunAt": 1773486000000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 18388,
-      "lastInputTokens": 36136,
-      "lastOutputTokens": 4523
+      "lastTotalTokens": 16964,
+      "lastInputTokens": 21044,
+      "lastOutputTokens": 4736
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
