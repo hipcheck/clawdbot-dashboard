@@ -1,11 +1,23 @@
 {
-  "updatedAt": 1773604809212,
+  "updatedAt": 1773606615434,
   "providers": [
     {
       "id": "openai-codex",
       "label": "OpenAI Codex",
-      "windows": [],
-      "error": "Token expired"
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 20,
+          "resetAt": 1773619627000
+        },
+        {
+          "label": "Day",
+          "usedPercent": 38,
+          "resetAt": 1773852278000
+        }
+      ],
+      "plan": "plus ($0.00)",
+      "error": null
     },
     {
       "id": "gemini",
@@ -14,12 +26,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1773691209000
+          "resetAt": 1773693015000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1773691209000
+          "resetAt": 1773693015000
         }
       ],
       "error": null
@@ -30,13 +42,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
-          "resetAt": 1773619200447
+          "usedPercent": 19,
+          "resetAt": 1773619200935
         },
         {
           "label": "Week",
-          "usedPercent": 1,
-          "resetAt": 1774206000447
+          "usedPercent": 2,
+          "resetAt": 1774206000935
         }
       ],
       "error": null
@@ -71,25 +83,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773604061491,
+      "activityKind": "cron",
+      "activityLabel": "NYC Senior Marketing Manager Pipeline",
+      "activityChannel": null,
+      "lastRunAt": 1773606253116,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 1 new role(s)\nZocdoc — Senior Manager, Provider Website\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse), Brave (Lever), Brave (Big-tech list), Google Careers, Amazon Jobs (search.json), BuiltInNYC\n❌ Errors: Brave 429 on Lever query; Brave 429 on Big-tech query; Brave 429 on Apple query\nCurrent time: Sunday, March 15th, 2026 — 8:24 PM (UTC) / 2026-03-15 20:24 UTC"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"230\",\n  \"reply_to_id\": \"229\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-15 19:43 UTC\",\n  \"ha",
+      "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773603803263,
+      "lastRunAt": 1773606101373,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — both actions are complete.\n\n1) Manual run for **2026-03-13**\n- I updated this file on your Mac (in place):  \n  `/Users/andreasallmaier/Documents/Brain/journal/2026-03-13.md`\n- The `[[clawdbot]]"
+      "lastSummary": "Done — both parts.\n\n### A) Cron updated (no more “Quick prompts”, ever)\nI updated the **km:nightly-journal-comment** job instructions so the `[[clawdbot]]` entry:\n\n- **must be a real synthesis** (expl"
     },
     {
       "id": "research",
@@ -163,19 +175,19 @@
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
       "name": "NYC Senior Marketing Manager Pipeline",
       "schedule": "0 20 * * 1,4",
-      "tz": null,
+      "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773505731933,
+      "lastRunAt": 1773606253116,
       "lastStatus": "ok",
-      "lastDurationMs": 149773,
+      "lastDurationMs": 134856,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Pipeline updated in `/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`.\n\n- **New roles found/appended:** 0\n- **Last-seen updates:** updated **Amazon — Senior Marketing Manager, Inbound GTM, Partner, Amazon Ads** to **2026-03-14** (it appeared in today’s Amazon `search.json` results).\n- **Stale-role flags (>30 days, not seen today):** none triggered (your oldest “Last seen” in the tracked section is 2026-02-22, which is <30 days from today).\n- **Search/source notes:** Brave query returned **0 results**; Google careers page yielded job links but nothing net-new in-scope; Apple pages remain **JS-rendered** and `web_fetch` only returns the footer on this VPS setup, so no Apple detail URLs could be extracted today.\n- **Metadata + run log:** frontmatter updated (updated/last_run/status/new_roles) and a new **Run log** row appended.",
-      "nextRunAt": 1773691200000,
+      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 1 new role(s)\nZocdoc — Senior Manager, Provider Website\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse), Brave (Lever), Brave (Big-tech list), Google Careers, Amazon Jobs (search.json), BuiltInNYC\n❌ Errors: Brave 429 on Lever query; Brave 429 on Big-tech query; Brave 429 on Apple query\nCurrent time: Sunday, March 15th, 2026 — 8:24 PM (UTC) / 2026-03-15 20:24 UTC",
+      "nextRunAt": 1773705600000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 43134,
-      "lastInputTokens": 43754,
-      "lastOutputTokens": 6103
+      "lastTotalTokens": 77712,
+      "lastInputTokens": 94134,
+      "lastOutputTokens": 5431
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
