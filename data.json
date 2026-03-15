@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773570606969,
+  "updatedAt": 1773572407386,
   "providers": [
     {
       "id": "openai-codex",
@@ -38,12 +38,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
+      "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1773559800017,
+      "lastRunAt": 1773571800014,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Report written. Task done."
+      "lastSummary": "FAIL: Security preflight check discovered 3 issues.\n\n1.  **Gateway Unreachable for Audits**: The security audit could not run a deep probe (`gateway.probe_failed`). This is because the CLI is not authenticated to the gateway daemon, resulting in `missing scope: operator.read`. A full security assessment cannot be completed until this is resolved.\n    *   **Fix**: Export the gateway auth token before running sensitive commands. Run `export OPENCLAW_GATEWAY_TOKEN=$(cat ~/.openclaw/openclaw.json | jq -r .gateway.auth.token)` in your shell before running `openclaw security audit`.\n\n2.  **Empty Node Command Denylist**: The `gateway.nodes.denyCommands` list in `~/.openclaw/openclaw.json` is empty. This means no commands are explicitly blocked from being run on paired nodes (like the MacBook), which removes a layer of defense.\n    *   **Config Patch**: Add common destructive commands to the denylist.\n        ```json\n        {\n          \"path\": \"~/.openclaw/openclaw.json\",\n          \"old_string\": \"\\\"denyCommands\\\": []\",\n          \"new_string\": \"\\\"denyCommands\\\": [\\n    \\\"rm\\\",\\n    \\\"mv\\\",\\n    \\\"sudo\\\",\\n    \\\"reboot\\\",\\n    \\\"shutdown\\\"\\n  ]\"\n        }\n        ```\n\n3.  **Weak Fallback Model**: The `main` agent's configuration includes `openai-codex/gpt-4o-mini` as a fallback model. Weaker models can be more susceptible to prompt injection and tool misuse.\n    *   **Config Patch**: Remove the weak model from the `main` agent's fallback list.\n        ```json\n        {\n          \"path\": \"~/.openclaw/openclaw.json\",\n          \"old_string\": \"\\\"openai-codex/gpt-4o-mini\\\",\",\n          \"new_string\": \"\"\n        }\n        ```"
     },
     {
       "id": "main",
@@ -125,17 +125,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773312600028,
+      "lastRunAt": 1773571800014,
       "lastStatus": "ok",
-      "lastDurationMs": 132804,
+      "lastDurationMs": 193266,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL: Security preflight check failed with 1 critical vulnerability and 1 warning.\n\nTop Blockers:\n1.  **CRITICAL: Insecure Skill Enabled.** The `readwise` skill contains code flagged for potential credential harvesting (`env-harvesting`) and is currently enabled. This poses a significant security risk.\n2.  **WARN: Weak Fallback Model.** The `main` agent's configuration includes `openai-codex/gpt-4o-mini` as a fallback model, which is below the recommended tier and more susceptible to misuse.\n\nConfiguration Patch Suggestions:\n\n1.  **Disable the vulnerable skill immediately.** This prevents the potentially malicious code from running.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, change `skills.entries.readwise.enabled` from `true` to `false`.\n\n2.  **Remove the weak fallback model.** This improves the security posture of the main agent.\n    - **Action:** In `/home/clawd/.openclaw/openclaw.json`, find the agent with `id: \"main\"` and remove `\"openai-codex/gpt-4o-mini\"` from its `model.fallbacks` array.\n\nOther Notes:\n- **Trusted Proxy:** Your gateway's trusted proxy and Tailscale Serve posture are correctly configured for a secure \"local\" deployment.\n- **Node Command Denylist:** The `gateway.nodes.denyCommands` list is currently empty. While not a failure, consider adding specific, high-risk command IDs to this list to harden node security.",
-      "nextRunAt": 1773571800000,
+      "lastSummary": "FAIL: Security preflight check discovered 3 issues.\n\n1.  **Gateway Unreachable for Audits**: The security audit could not run a deep probe (`gateway.probe_failed`). This is because the CLI is not authenticated to the gateway daemon, resulting in `missing scope: operator.read`. A full security assessment cannot be completed until this is resolved.\n    *   **Fix**: Export the gateway auth token before running sensitive commands. Run `export OPENCLAW_GATEWAY_TOKEN=$(cat ~/.openclaw/openclaw.json | jq -r .gateway.auth.token)` in your shell before running `openclaw security audit`.\n\n2.  **Empty Node Command Denylist**: The `gateway.nodes.denyCommands` list in `~/.openclaw/openclaw.json` is empty. This means no commands are explicitly blocked from being run on paired nodes (like the MacBook), which removes a layer of defense.\n    *   **Config Patch**: Add common destructive commands to the denylist.\n        ```json\n        {\n          \"path\": \"~/.openclaw/openclaw.json\",\n          \"old_string\": \"\\\"denyCommands\\\": []\",\n          \"new_string\": \"\\\"denyCommands\\\": [\\n    \\\"rm\\\",\\n    \\\"mv\\\",\\n    \\\"sudo\\\",\\n    \\\"reboot\\\",\\n    \\\"shutdown\\\"\\n  ]\"\n        }\n        ```\n\n3.  **Weak Fallback Model**: The `main` agent's configuration includes `openai-codex/gpt-4o-mini` as a fallback model. Weaker models can be more susceptible to prompt injection and tool misuse.\n    *   **Config Patch**: Remove the weak model from the `main` agent's fallback list.\n        ```json\n        {\n          \"path\": \"~/.openclaw/openclaw.json\",\n          \"old_string\": \"\\\"openai-codex/gpt-4o-mini\\\",\",\n          \"new_string\": \"\"\n        }\n        ```",
+      "nextRunAt": 1773658200000,
       "model": null,
-      "lastTotalTokens": 10579,
-      "lastInputTokens": 10489,
-      "lastOutputTokens": 1558
+      "lastTotalTokens": 12184,
+      "lastInputTokens": 20634,
+      "lastOutputTokens": 2288
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
