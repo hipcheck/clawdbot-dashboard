@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773545407883,
+  "updatedAt": 1773547206975,
   "providers": [
     {
       "id": "openai-codex",
@@ -50,12 +50,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "clawdbot:daily-ops-journal",
+      "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773544200015,
+      "lastRunAt": 1773546300019,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-14T23:10:00-04:00\n\n- Shipped/Changed\n  - Job search pipeline auto-update ran and updated:\n    - `/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - Notes from run: Brave query returned 0 results; Google careers yielded links but nothing net-new in-scope; Apple pages still JS-rendered so `web_fetch` only returns footer.\n  - Dashboard data refreshed:\n    - `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json`\n\n- Worked\n  - Cron activity (last 24h, filtered by ts)\n    - `agent:feature-builder` (jobId: 461680fe-9815-4dc5-8a0a-5898316619f8) — OK, delivered\n      - Output: “Watch That Page” job-tracker concept (career-page monitoring + diff + Telegram notify).\n    - `agent:main` (jobId: 03cf0eec-72cb-4012-87aa-aa0962b1a197) — OK, not delivered\n      - Output: Updated Marketing Manager job pipeline note; 0 new roles appended; updated “last seen” for one Amazon role.\n    - `agent:km` (jobId: c915b0d5-5160-45e8-8c57-a60d742a4640) — OK, delivered\n      - Output: Nikola nightly journal formatting normalization + [[clawdbot]] section entry; reminders injection found none for 2026-03-14.\n\n- Failed/Flaky\n  - Apple career pages remain effectively non-scrapable via current VPS `web_fetch` (JS-rendered → footer-only extraction), blocking detailed Apple pipeline ingestion.\n\n- Decisions\n  - None explicitly logged in chat context beyond automated job outputs.\n\n- Follow-ups\n  - If Apple roles matter, add a fallback ingestion path (e.g., official JSON endpoints if available, a headless browser runner, or run scraping on a node with a real browser).\n  - Consider turning the “Watch That Page” concept into a small script + hourly cron to monitor target company careers pages and notify on changes."
+      "lastSummary": "`openclaw_auto_update.py` ran successfully this time → **NOOP (no update)** (nothing to upgrade).\n\nEarlier failure was due to a transient **gateway closed (1000)** connection error, but `openclaw gateway status` now shows the gateway is **running** and the **RPC probe is ok**.\n\nOne small maintenance note from `openclaw gateway status`: your systemd service config is flagged as “out of date/non-standard” (RestartSec mismatch). If you want, I can run:\n\n- `openclaw doctor` (read-only), or\n- `openclaw doctor --repair` (makes changes)\n\nTell me which you prefer."
     },
     {
       "id": "km",
@@ -215,17 +215,17 @@
       "schedule": "45 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773319473250,
+      "lastRunAt": 1773546300019,
       "lastStatus": "ok",
-      "lastDurationMs": 59373,
+      "lastDurationMs": 94427,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`\n\nResult: **NOOP (no update)** — nothing to update right now.",
-      "nextRunAt": 1773546300000,
+      "lastSummary": "`openclaw_auto_update.py` ran successfully this time → **NOOP (no update)** (nothing to upgrade).\n\nEarlier failure was due to a transient **gateway closed (1000)** connection error, but `openclaw gateway status` now shows the gateway is **running** and the **RPC probe is ok**.\n\nOne small maintenance note from `openclaw gateway status`: your systemd service config is flagged as “out of date/non-standard” (RestartSec mismatch). If you want, I can run:\n\n- `openclaw doctor` (read-only), or\n- `openclaw doctor --repair` (makes changes)\n\nTell me which you prefer.",
+      "nextRunAt": 1773632700000,
       "model": null,
-      "lastTotalTokens": 8340,
-      "lastInputTokens": 8384,
-      "lastOutputTokens": 122
+      "lastTotalTokens": 9084,
+      "lastInputTokens": 9648,
+      "lastOutputTokens": 440
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
