@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773559808704,
+  "updatedAt": 1773561606996,
   "providers": [
     {
       "id": "openai-codex",
@@ -37,13 +37,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"111\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 09:37 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773412624572,
+      "activityKind": "cron",
+      "activityLabel": "healthcheck:overnight-prescan",
+      "activityChannel": null,
+      "lastRunAt": 1773559800017,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I'd be happy to, but I'm not showing any pending approval requests from our conversation.\n\nOur last task was successfully completed on Tuesday when I patched the cron job scripts. There are no outstan"
+      "lastSummary": "Report written. Task done."
     },
     {
       "id": "main",
@@ -107,17 +107,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773300600044,
+      "lastRunAt": 1773559800017,
       "lastStatus": "ok",
-      "lastDurationMs": 130521,
+      "lastDurationMs": 423540,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "PRESCAN_GENERATED_AT=2026-03-12T07:30:13Z\n\n## OpenClaw Gateway Status\nService: systemd (enabled)\nFile logs: /tmp/openclaw/openclaw-2026-03-12.log\nCommand: /usr/bin/node /home/clawd/.npm-global/lib/node_modules/openclaw/dist/entry.js gateway --port 18789\nService file: ~/.config/systemd/user/openclaw-gateway.service\nService env: OPENCLAW_GATEWAY_PORT=18789\n\nConfig (cli): ~/.openclaw/openclaw.json\nConfig (service): ~/.openclaw/openclaw.json\n\nGateway: bind=loopback (127.0.0.1), port=18789 (service args)\nProbe target: ws://127.0.0.1:18789\nDashboard: http://127.0.0.1:18789/\nProbe note: Loopback-only gateway; only local clients can connect.\n\nRuntime: running (pid 2300119, state active, sub running, last exit 0, reason 0)\nRPC probe: ok\n\nListening: 127.0.0.1:18789\nOther gateway-like services detected (best effort):\n- openclaw-node.service (user, unit: /home/clawd/.config/systemd/user/openclaw-node.service)\nCleanup hint: systemctl --user disable --now openclaw-gateway.service\nCleanup hint: rm ~/.config/systemd/user/openclaw-gateway.service\n\nRecommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).\nIf you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).\n\nTroubles: run openclaw status\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\n## OpenClaw Security Audit\nOpenClaw security audit\nSummary: 0 critical · 1 warn · 2 info\nRun deeper: openclaw security audit --deep\n\nWARN\nmodels.weak_tier Some configured models are below recommended tiers\n  Smaller/older models are generally more susceptible to prompt injection and tool misuse.\n- openai-codex/gpt-4o-mini (Below GPT-5 family) @ agents.list.main.model.fallbacks\n  Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\n\nINFO\nsummary.attack_surface Attack surface summa…",
-      "nextRunAt": 1773559800000,
+      "lastSummary": "Report written. Task done.",
+      "nextRunAt": 1773646200000,
       "model": null,
-      "lastTotalTokens": 8440,
-      "lastInputTokens": 9183,
-      "lastOutputTokens": 2381
+      "lastTotalTokens": 17202,
+      "lastInputTokens": 35295,
+      "lastOutputTokens": 2100
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
