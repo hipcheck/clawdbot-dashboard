@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773606615434,
+  "updatedAt": 1773608407978,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 20,
+          "usedPercent": 24,
           "resetAt": 1773619627000
         },
         {
           "label": "Day",
-          "usedPercent": 38,
+          "usedPercent": 39,
           "resetAt": 1773852278000
         }
       ],
@@ -22,19 +22,8 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [
-        {
-          "label": "Flash",
-          "usedPercent": 0,
-          "resetAt": 1773693015000
-        },
-        {
-          "label": "Pro",
-          "usedPercent": 0,
-          "resetAt": 1773693015000
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401"
     },
     {
       "id": "anthropic",
@@ -42,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 19,
-          "resetAt": 1773619200935
+          "usedPercent": 27,
+          "resetAt": 1773619201261
         },
         {
           "label": "Week",
-          "usedPercent": 2,
-          "resetAt": 1774206000935
+          "usedPercent": 3,
+          "resetAt": 1774206001261
         }
       ],
       "error": null
@@ -86,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "NYC Senior Marketing Manager Pipeline",
       "activityChannel": null,
-      "lastRunAt": 1773606253116,
+      "lastRunAt": 1773607199393,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 1 new role(s)\nZocdoc — Senior Manager, Provider Website\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse), Brave (Lever), Brave (Big-tech list), Google Careers, Amazon Jobs (search.json), BuiltInNYC\n❌ Errors: Brave 429 on Lever query; Brave 429 on Big-tech query; Brave 429 on Apple query\nCurrent time: Sunday, March 15th, 2026 — 8:24 PM (UTC) / 2026-03-15 20:24 UTC"
+      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave web_search (Greenhouse/Lever/Company set + Apple), Google Careers, Amazon Jobs (search.json), BuiltInNYC\n❌ Errors: Brave 429 rate-limit on Query B (lever.co), Query C (target companies), and Apple query\nCurrent time: Sunday, March 15th, 2026 — 8:39 PM (UTC) / 2026-03-15 20:39 UTC"
     },
     {
       "id": "km",
@@ -177,17 +166,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773606253116,
+      "lastRunAt": 1773607199393,
       "lastStatus": "ok",
-      "lastDurationMs": 134856,
+      "lastDurationMs": 99966,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 1 new role(s)\nZocdoc — Senior Manager, Provider Website\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse), Brave (Lever), Brave (Big-tech list), Google Careers, Amazon Jobs (search.json), BuiltInNYC\n❌ Errors: Brave 429 on Lever query; Brave 429 on Big-tech query; Brave 429 on Apple query\nCurrent time: Sunday, March 15th, 2026 — 8:24 PM (UTC) / 2026-03-15 20:24 UTC",
+      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave web_search (Greenhouse/Lever/Company set + Apple), Google Careers, Amazon Jobs (search.json), BuiltInNYC\n❌ Errors: Brave 429 rate-limit on Query B (lever.co), Query C (target companies), and Apple query\nCurrent time: Sunday, March 15th, 2026 — 8:39 PM (UTC) / 2026-03-15 20:39 UTC",
       "nextRunAt": 1773705600000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 77712,
-      "lastInputTokens": 94134,
-      "lastOutputTokens": 5431
+      "lastTotalTokens": 73249,
+      "lastInputTokens": 91104,
+      "lastOutputTokens": 3928
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
