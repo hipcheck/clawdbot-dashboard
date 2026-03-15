@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773603006521,
+  "updatedAt": 1773604809212,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,14 +10,36 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1773691209000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1773691209000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [],
-      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
+      "windows": [
+        {
+          "label": "5h",
+          "usedPercent": 5,
+          "resetAt": 1773619200447
+        },
+        {
+          "label": "Week",
+          "usedPercent": 1,
+          "resetAt": 1774206000447
+        }
+      ],
+      "error": null
     }
   ],
   "agents": [
@@ -49,25 +71,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "weekly-review-note",
-      "activityChannel": null,
-      "lastRunAt": 1773579600017,
-      "lastStatus": "error",
-      "lastError": "cron: job execution timed out",
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773604061491,
+      "lastStatus": "ok",
+      "lastError": null,
       "lastSummary": null
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:weekly-readwise-indexer",
-      "activityChannel": null,
-      "lastRunAt": 1773556200051,
-      "lastStatus": "error",
-      "lastError": "Error: All models failed (2): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | google-gemini-cli/gemini-2.0-flash: Cloud Code Assist API error (404): Requested entity was not found. (model_not_found)",
-      "lastSummary": null
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"230\",\n  \"reply_to_id\": \"229\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Sun 2026-03-15 19:43 UTC\",\n  \"ha",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773603803263,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Done — both actions are complete.\n\n1) Manual run for **2026-03-13**\n- I updated this file on your Mac (in place):  \n  `/Users/andreasallmaier/Documents/Brain/journal/2026-03-13.md`\n- The `[[clawdbot]]"
     },
     {
       "id": "research",
