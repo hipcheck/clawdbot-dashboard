@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773577807243,
+  "updatedAt": 1773579607976,
   "providers": [
     {
       "id": "openai-codex",
@@ -10,8 +10,19 @@
     {
       "id": "gemini",
       "label": "Gemini",
-      "windows": [],
-      "error": "HTTP 401"
+      "windows": [
+        {
+          "label": "Flash",
+          "usedPercent": 0,
+          "resetAt": 1773666008000
+        },
+        {
+          "label": "Pro",
+          "usedPercent": 0,
+          "resetAt": 1773666008000
+        }
+      ],
+      "error": null
     },
     {
       "id": "anthropic",
