@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773613808943,
+  "updatedAt": 1773615607664,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 44,
+          "usedPercent": 49,
           "resetAt": 1773619627000
         },
         {
           "label": "Day",
-          "usedPercent": 45,
+          "usedPercent": 47,
           "resetAt": 1773852278000
         }
       ],
@@ -31,13 +31,13 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 42,
-          "resetAt": 1773619201178
+          "usedPercent": 44,
+          "resetAt": 1773619200940
         },
         {
           "label": "Week",
           "usedPercent": 5,
-          "resetAt": 1774206001179
+          "resetAt": 1774206000940
         }
       ],
       "error": null
@@ -75,10 +75,10 @@
       "activityKind": "cron",
       "activityLabel": "NYC Senior Marketing Manager Pipeline",
       "activityChannel": null,
-      "lastRunAt": 1773613647811,
+      "lastRunAt": 1773614227078,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse, Lever, BigCo query), Google Careers, Amazon Jobs (search.json), Apple Jobs (Brave), BuiltInNYC\n❌ Errors: none\nCurrent time: Sunday, March 15th, 2026 — 10:27 PM (UTC) / 2026-03-15 22:27 UTC"
+      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Greenhouse (site:greenhouse.io), Lever (site:lever.co), Workday (site:myworkdayjobs.com), Ashby (site:boards.ashbyhq.com), BigCo keyword sweep, Google Careers, Amazon jobs JSON, Apple (Brave search), BuiltInNYC\n❌ Errors: none\nCurrent time: Sunday, March 15th, 2026 — 10:37 PM (UTC) / 2026-03-15 22:37 UTC"
     },
     {
       "id": "km",
@@ -166,17 +166,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773613647811,
+      "lastRunAt": 1773614227078,
       "lastStatus": "ok",
-      "lastDurationMs": 161329,
+      "lastDurationMs": 185286,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse, Lever, BigCo query), Google Careers, Amazon Jobs (search.json), Apple Jobs (Brave), BuiltInNYC\n❌ Errors: none\nCurrent time: Sunday, March 15th, 2026 — 10:27 PM (UTC) / 2026-03-15 22:27 UTC",
+      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Greenhouse (site:greenhouse.io), Lever (site:lever.co), Workday (site:myworkdayjobs.com), Ashby (site:boards.ashbyhq.com), BigCo keyword sweep, Google Careers, Amazon jobs JSON, Apple (Brave search), BuiltInNYC\n❌ Errors: none\nCurrent time: Sunday, March 15th, 2026 — 10:37 PM (UTC) / 2026-03-15 22:37 UTC",
       "nextRunAt": 1773705600000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 32625,
-      "lastInputTokens": 70871,
-      "lastOutputTokens": 4375
+      "lastTotalTokens": 81500,
+      "lastInputTokens": 187759,
+      "lastOutputTokens": 5057
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
