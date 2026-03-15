@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773579607976,
+  "updatedAt": 1773581407231,
   "providers": [
     {
       "id": "openai-codex",
@@ -14,12 +14,12 @@
         {
           "label": "Flash",
           "usedPercent": 0,
-          "resetAt": 1773666008000
+          "resetAt": 1773667807000
         },
         {
           "label": "Pro",
           "usedPercent": 0,
-          "resetAt": 1773666008000
+          "resetAt": 1773667807000
         }
       ],
       "error": null
@@ -61,12 +61,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
+      "activityLabel": "weekly-review-note",
       "activityChannel": null,
-      "lastRunAt": 1773546300019,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully this time → **NOOP (no update)** (nothing to upgrade).\n\nEarlier failure was due to a transient **gateway closed (1000)** connection error, but `openclaw gateway status` now shows the gateway is **running** and the **RPC probe is ok**.\n\nOne small maintenance note from `openclaw gateway status`: your systemd service config is flagged as “out of date/non-standard” (RestartSec mismatch). If you want, I can run:\n\n- `openclaw doctor` (read-only), or\n- `openclaw doctor --repair` (makes changes)\n\nTell me which you prefer."
+      "lastRunAt": 1773579600017,
+      "lastStatus": "error",
+      "lastError": "cron: job execution timed out",
+      "lastSummary": null
     },
     {
       "id": "km",
@@ -262,13 +262,13 @@
       "schedule": "0 9 * * 0",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "consecutiveErrors": 0,
-      "lastError": null,
+      "lastRunAt": 1773579600017,
+      "lastStatus": "error",
+      "lastDurationMs": 120025,
+      "consecutiveErrors": 1,
+      "lastError": "cron: job execution timed out",
       "lastSummary": null,
-      "nextRunAt": 1773579600000,
+      "nextRunAt": 1774184400000,
       "model": null,
       "lastTotalTokens": null,
       "lastInputTokens": null,
