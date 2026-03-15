@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773556207348,
+  "updatedAt": 1773558007464,
   "providers": [
     {
       "id": "openai-codex",
@@ -62,12 +62,12 @@
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
+      "activityLabel": "km:weekly-readwise-indexer",
       "activityChannel": null,
-      "lastRunAt": 1773543600022,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "Nikola nightly journal — OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-14 23:00 (EDT)\n- TARGET_DATE logic result: **2026-03-14**\n- Target file:\n  - `/Users/andreasallmaier/Documents/Brain/journal/2026-03-14.md`\n\nActions taken\n- Formatting normalization (whole note, before comment):\n  - Applied: tabs → 2 spaces, `*`/`+` → `-`, tightened blank lines inside list blocks, stream-of-consciousness catch-all nesting rules, and list-context image embed normalization (where applicable).\n  - YAML frontmatter and code fences left untouched.\n  - File was non-empty → formatting pass **was written** back. (CHANGED_FORMAT=1)\n\n- Reminders injection (from `/home/clawd/.openclaw/workspace-km/REMINDERS.md` on VPS):\n  - No active reminders matched date **2026-03-14** → no “Reminders” subsection added.\n\n- [[clawdbot]] section update:\n  - Located the dedicated `- [[clawdbot]]` section in the journal outline.\n  - Inserted/updated a single entry under it:\n    - `- Nikola nightly journal`\n      - `- Timestamp (NYC): 2026-03-14 23:00`\n      - `- Quick prompts …`\n  - Verified by re-reading the `[[clawdbot]]` section snippet after write.\n\nFurther reading / Readwise\n- No further-reading links added (skipped to avoid low-quality suggestions under the evidence requirement).\n- No Readwise highlights were included in this run (none were pulled for relevance here)."
+      "lastRunAt": 1773556200051,
+      "lastStatus": "error",
+      "lastError": "Error: All models failed (2): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | google-gemini-cli/gemini-2.0-flash: Cloud Code Assist API error (404): Requested entity was not found. (model_not_found)",
+      "lastSummary": null
     },
     {
       "id": "research",
@@ -179,13 +179,13 @@
       "schedule": "30 2 * * 0",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773085549315,
-      "lastStatus": "ok",
-      "lastDurationMs": 595908,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "Weekly Readwise indexer ran successfully.\n\n- Highlights indexed: 13,362 → `/home/clawd/.openclaw/workspace-km/readwise/highlights.json`\n- Books indexed: 1,368 → `/home/clawd/.openclaw/workspace-km/readwise/books.json`\n- Output directory: `/home/clawd/.openclaw/workspace-km/readwise`\n- Completed at: 2026-03-09 19:55:41 UTC",
-      "nextRunAt": 1773556200000,
+      "lastRunAt": 1773556200051,
+      "lastStatus": "error",
+      "lastDurationMs": 8949,
+      "consecutiveErrors": 1,
+      "lastError": "Error: All models failed (2): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | google-gemini-cli/gemini-2.0-flash: Cloud Code Assist API error (404): Requested entity was not found. (model_not_found)",
+      "lastSummary": null,
+      "nextRunAt": 1774161000000,
       "model": null,
       "lastTotalTokens": 6213,
       "lastInputTokens": 6284,
