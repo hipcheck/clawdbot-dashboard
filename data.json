@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773572407386,
+  "updatedAt": 1773574206373,
   "providers": [
     {
       "id": "openai-codex",
@@ -28,10 +28,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773505638078,
+      "lastRunAt": 1773572400021,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**[Title]** \"Watch That Page\" Job Tracker\n\n**Signal:** A tool that watches webpages for changes and creates an RSS feed was on the front page of Hacker News this week, showing strong interest in simple, effective web monitoring. (Source: HN Show, 2026-03-11)\n\n**Why Andreas:** This directly supports his active Senior Marketing Manager job search in NYC by automating the monitoring of target company career pages that lack RSS or email alerts.\n\n**Impact:** Never miss a new job posting on a target company's site, getting applications in faster without the manual, repetitive work of checking pages daily.\n**Risk:** The primary risk is that a target site uses a dynamic, client-rendered frontend that makes simple `curl` and `diff` comparisons ineffective.\n**Effort:** 2-3 hours for a v1.\n\n**First 3 steps:**\n1. Create a `targets.txt` file with URLs of 3-5 company career pages to monitor.\n2. Write a bash script that loops through the file, downloads the content of each URL, and stores it. On subsequent runs, it should `diff` the new content against the old.\n3. If a change is detected, the script will send a notification via an existing `openclaw` channel (e.g., Telegram).\n\n**Done looks like:** A cron job runs a script every hour that automatically reports new job postings or changes from a list of target company websites."
+      "lastSummary": "## 🔨 Today's Build\n\n**Fix the Failing Cron Jobs**\n\n**Signal:** `openclaw_prescan_summary.md` (2026-03-15) shows two key cron jobs are failing (`km:weekly-readwise-indexer` and `research:daily-signal`), directly impacting the system's knowledge and research capabilities.\n\n**Why Andreas:** This directly improves the personal automation platform he relies on, ensuring the tools he's already built are actually working.\n\n**Impact:** The Readwise indexer will run again, keeping his knowledge base current. The daily research signal will be re-enabled, feeding this very proposal process with fresh data.\n**Risk:** The root cause for the `research:daily-signal` timeouts might be complex, potentially requiring more than a simple fix.\n**Effort:** 2-3 hours.\n\n**First 3 steps:**\n1.  Run `openclaw cron logs km:weekly-readwise-indexer` to inspect the model access error and fix the model reference or auth issue.\n2.  Run `openclaw cron logs research:daily-signal` to identify the cause of the timeout.\n3.  Manually trigger both jobs (`openclaw cron run <job_name>`) to confirm the fixes are working before re-enabling them.\n\n**Done looks like:** Both `km:weekly-readwise-indexer` and `research:daily-signal` are marked as `ok` in the next `openclaw cron list` output."
     },
     {
       "id": "infraops",
@@ -89,17 +89,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773505638078,
+      "lastRunAt": 1773572400021,
       "lastStatus": "ok",
-      "lastDurationMs": 93855,
+      "lastDurationMs": 136097,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "⚠️ prescan stale/missing\n## 🔨 Today's Build\n\n**[Title]** \"Watch That Page\" Job Tracker\n\n**Signal:** A tool that watches webpages for changes and creates an RSS feed was on the front page of Hacker News this week, showing strong interest in simple, effective web monitoring. (Source: HN Show, 2026-03-11)\n\n**Why Andreas:** This directly supports his active Senior Marketing Manager job search in NYC by automating the monitoring of target company career pages that lack RSS or email alerts.\n\n**Impact:** Never miss a new job posting on a target company's site, getting applications in faster without the manual, repetitive work of checking pages daily.\n**Risk:** The primary risk is that a target site uses a dynamic, client-rendered frontend that makes simple `curl` and `diff` comparisons ineffective.\n**Effort:** 2-3 hours for a v1.\n\n**First 3 steps:**\n1. Create a `targets.txt` file with URLs of 3-5 company career pages to monitor.\n2. Write a bash script that loops through the file, downloads the content of each URL, and stores it. On subsequent runs, it should `diff` the new content against the old.\n3. If a change is detected, the script will send a notification via an existing `openclaw` channel (e.g., Telegram).\n\n**Done looks like:** A cron job runs a script every hour that automatically reports new job postings or changes from a list of target company websites.",
-      "nextRunAt": 1773572400000,
+      "lastSummary": "## 🔨 Today's Build\n\n**Fix the Failing Cron Jobs**\n\n**Signal:** `openclaw_prescan_summary.md` (2026-03-15) shows two key cron jobs are failing (`km:weekly-readwise-indexer` and `research:daily-signal`), directly impacting the system's knowledge and research capabilities.\n\n**Why Andreas:** This directly improves the personal automation platform he relies on, ensuring the tools he's already built are actually working.\n\n**Impact:** The Readwise indexer will run again, keeping his knowledge base current. The daily research signal will be re-enabled, feeding this very proposal process with fresh data.\n**Risk:** The root cause for the `research:daily-signal` timeouts might be complex, potentially requiring more than a simple fix.\n**Effort:** 2-3 hours.\n\n**First 3 steps:**\n1.  Run `openclaw cron logs km:weekly-readwise-indexer` to inspect the model access error and fix the model reference or auth issue.\n2.  Run `openclaw cron logs research:daily-signal` to identify the cause of the timeout.\n3.  Manually trigger both jobs (`openclaw cron run <job_name>`) to confirm the fixes are working before re-enabling them.\n\n**Done looks like:** Both `km:weekly-readwise-indexer` and `research:daily-signal` are marked as `ok` in the next `openclaw cron list` output.",
+      "nextRunAt": 1773658800000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 7581,
-      "lastInputTokens": 12787,
-      "lastOutputTokens": 2315
+      "lastTotalTokens": 8094,
+      "lastInputTokens": 19282,
+      "lastOutputTokens": 2269
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
