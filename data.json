@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773671407430,
+  "updatedAt": 1773673207128,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 3,
           "resetAt": 1773677226000
         },
         {
           "label": "Day",
-          "usedPercent": 48,
+          "usedPercent": 49,
           "resetAt": 1773852278000
         }
       ],
@@ -73,13 +73,13 @@
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:morning-triage-extractor",
-      "activityChannel": null,
-      "lastRunAt": 1773658339225,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"238\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Mon 2026-03-16 14:35 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773671757954,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Triage extractor: OK\n\n- Date (America/New_York “yesterday”): **2026-03-15**\n- Mac node: **Andreas MacBook connected**\n- Journal read: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-15.md** (found)\n- Extractor output:\n  - journal_items extracted: **32**\n  - readwise highlights extracted: **0**\n- After LLM review (filtered for non-trivial / non-logistics / de-dup):\n  - **12 items kept** (journal: 12, readwise: 0)\n  - suggested_bucket counts: **task=5, protocol=4, null=3**\n- Wrote queue:\n  - **/home/clawd/.openclaw/workspace-km/triage/queue.json** (overwritten)\n- Cleanup:\n  - deleted **/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md**\n\nOpen **http://openclaw-vps:8765** to review the triage queue."
+      "lastSummary": "A good accountability goal has 3 properties: **specific behavior**, **high leverage for your life**, and **easy to verify daily**. Based on your journal themes (energy stability, “calm productivity,” "
     },
     {
       "id": "research",
