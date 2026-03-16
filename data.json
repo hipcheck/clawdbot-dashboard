@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773630007386,
+  "updatedAt": 1773631808824,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 2,
           "resetAt": 1773640807000
         },
         {
           "label": "Day",
-          "usedPercent": 47,
+          "usedPercent": 48,
           "resetAt": 1773852278000
         }
       ],
@@ -36,7 +36,7 @@
         {
           "label": "Week",
           "usedPercent": 7,
-          "resetAt": 1774206000661
+          "resetAt": 1774206001056
         }
       ],
       "error": null
@@ -71,25 +71,25 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
-      "activityChannel": "tui",
-      "lastRunAt": 1773618166363,
+      "activityKind": "cron",
+      "activityLabel": "clawdbot:daily-ops-journal",
+      "activityChannel": null,
+      "lastRunAt": 1773630600016,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "HEARTBEAT_OK"
+      "lastSummary": "## Clawdbot Daily Ops Journal\n- Timestamp: 2026-03-16T03:10:00Z (America/New_York: 2026-03-15T23:10:00-04:00)\n- Shipped/Changed\n  - No git commits recorded in /home/clawd/.openclaw/workspace in the last 24h.\n  - Recent on-disk edits suggest ongoing work in workspace-km triage tooling:\n    - workspace-km/triage/server.py\n    - workspace-km/triage/index.html\n    - workspace-km/triage/extractor.py\n    - workspace-km/triage/writeback.py\n    - workspace-km/triage/queue.json\n  - Updated: workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md\n  - Updated: workspace/clawdbot-dashboard/data.json\n- Worked\n  - No cron run records found for the last 24h in /home/clawd/.openclaw/cron/runs/*.jsonl (CRON_ROWS=0). If cron jobs ran, they did not write run logs to that directory.\n- Failed/Flaky\n  - Potential telemetry gap: expected cron run JSONL entries missing for the last 24h.\n- Decisions\n  - None explicitly captured in available logs.\n- Follow-ups\n  - Verify the cron runner/logging path is correct and that cron jobs are writing to /home/clawd/.openclaw/cron/runs/*.jsonl.\n  - If the workspace-km triage changes are intentional and stable, consider committing them (and adding a brief changelog note).\n  - If clawdbot-dashboard/data.json is generated, consider excluding it from “noteworthy changes” reporting or documenting its source."
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773606101373,
+      "activityKind": "cron",
+      "activityLabel": "km:nightly-journal-comment",
+      "activityChannel": null,
+      "lastRunAt": 1773630000032,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — both parts.\n\n### A) Cron updated (no more “Quick prompts”, ever)\nI updated the **km:nightly-journal-comment** job instructions so the `[[clawdbot]]` entry:\n\n- **must be a real synthesis** (expl"
+      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-15 23:00:19 EDT-0400  \n- TARGET_DATE (rule: 12:00–23:59 => today): 2026-03-15  \n- Target file: /Users/andreasallmaier/Documents/Brain/journal/2026-03-15.md\n  - Formatting normalization (step 4): APPLIED (tabs→2 spaces, */+→-, tightened list blanks; YAML + code fences preserved)\n  - Reminders for 2026-03-15 (from REMINDERS.md): none matched (omitted)\n  - [[clawdbot]] section: found and updated with exactly one entry for 2026-03-15 (includes Timestamp / Patterns / Experiments / Further reading (2 links) / Readwise quote)\n  - Verified by re-reading the [[clawdbot]] section + file tail: entry is present and correctly nested under `- [[clawdbot]]`"
     },
     {
       "id": "research",
@@ -183,17 +183,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773543600022,
+      "lastRunAt": 1773630000032,
       "lastStatus": "ok",
-      "lastDurationMs": 192371,
+      "lastDurationMs": 157409,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal — OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-14 23:00 (EDT)\n- TARGET_DATE logic result: **2026-03-14**\n- Target file:\n  - `/Users/andreasallmaier/Documents/Brain/journal/2026-03-14.md`\n\nActions taken\n- Formatting normalization (whole note, before comment):\n  - Applied: tabs → 2 spaces, `*`/`+` → `-`, tightened blank lines inside list blocks, stream-of-consciousness catch-all nesting rules, and list-context image embed normalization (where applicable).\n  - YAML frontmatter and code fences left untouched.\n  - File was non-empty → formatting pass **was written** back. (CHANGED_FORMAT=1)\n\n- Reminders injection (from `/home/clawd/.openclaw/workspace-km/REMINDERS.md` on VPS):\n  - No active reminders matched date **2026-03-14** → no “Reminders” subsection added.\n\n- [[clawdbot]] section update:\n  - Located the dedicated `- [[clawdbot]]` section in the journal outline.\n  - Inserted/updated a single entry under it:\n    - `- Nikola nightly journal`\n      - `- Timestamp (NYC): 2026-03-14 23:00`\n      - `- Quick prompts …`\n  - Verified by re-reading the `[[clawdbot]]` section snippet after write.\n\nFurther reading / Readwise\n- No further-reading links added (skipped to avoid low-quality suggestions under the evidence requirement).\n- No Readwise highlights were included in this run (none were pulled for relevance here).",
-      "nextRunAt": 1773630000000,
+      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-15 23:00:19 EDT-0400  \n- TARGET_DATE (rule: 12:00–23:59 => today): 2026-03-15  \n- Target file: /Users/andreasallmaier/Documents/Brain/journal/2026-03-15.md\n  - Formatting normalization (step 4): APPLIED (tabs→2 spaces, */+→-, tightened list blanks; YAML + code fences preserved)\n  - Reminders for 2026-03-15 (from REMINDERS.md): none matched (omitted)\n  - [[clawdbot]] section: found and updated with exactly one entry for 2026-03-15 (includes Timestamp / Patterns / Experiments / Further reading (2 links) / Readwise quote)\n  - Verified by re-reading the [[clawdbot]] section + file tail: entry is present and correctly nested under `- [[clawdbot]]`",
+      "nextRunAt": 1773716400000,
       "model": null,
-      "lastTotalTokens": 17240,
-      "lastInputTokens": 20167,
-      "lastOutputTokens": 9050
+      "lastTotalTokens": 18988,
+      "lastInputTokens": 19793,
+      "lastOutputTokens": 7634
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -219,17 +219,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773544200015,
+      "lastRunAt": 1773630600016,
       "lastStatus": "ok",
-      "lastDurationMs": 78513,
+      "lastDurationMs": 48779,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-14T23:10:00-04:00\n\n- Shipped/Changed\n  - Job search pipeline auto-update ran and updated:\n    - `/home/clawd/.openclaw/workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md`\n    - Notes from run: Brave query returned 0 results; Google careers yielded links but nothing net-new in-scope; Apple pages still JS-rendered so `web_fetch` only returns footer.\n  - Dashboard data refreshed:\n    - `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json`\n\n- Worked\n  - Cron activity (last 24h, filtered by ts)\n    - `agent:feature-builder` (jobId: 461680fe-9815-4dc5-8a0a-5898316619f8) — OK, delivered\n      - Output: “Watch That Page” job-tracker concept (career-page monitoring + diff + Telegram notify).\n    - `agent:main` (jobId: 03cf0eec-72cb-4012-87aa-aa0962b1a197) — OK, not delivered\n      - Output: Updated Marketing Manager job pipeline note; 0 new roles appended; updated “last seen” for one Amazon role.\n    - `agent:km` (jobId: c915b0d5-5160-45e8-8c57-a60d742a4640) — OK, delivered\n      - Output: Nikola nightly journal formatting normalization + [[clawdbot]] section entry; reminders injection found none for 2026-03-14.\n\n- Failed/Flaky\n  - Apple career pages remain effectively non-scrapable via current VPS `web_fetch` (JS-rendered → footer-only extraction), blocking detailed Apple pipeline ingestion.\n\n- Decisions\n  - None explicitly logged in chat context beyond automated job outputs.\n\n- Follow-ups\n  - If Apple roles matter, add a fallback ingestion path (e.g., official JSON endpoints if available, a headless browser runner, or run scraping on a node with a real browser).\n  - Consider turning the “Watch That Page” concept into a small script + hourly cron to monitor target company careers pages and notify on changes.",
-      "nextRunAt": 1773630600000,
+      "lastSummary": "## Clawdbot Daily Ops Journal\n- Timestamp: 2026-03-16T03:10:00Z (America/New_York: 2026-03-15T23:10:00-04:00)\n- Shipped/Changed\n  - No git commits recorded in /home/clawd/.openclaw/workspace in the last 24h.\n  - Recent on-disk edits suggest ongoing work in workspace-km triage tooling:\n    - workspace-km/triage/server.py\n    - workspace-km/triage/index.html\n    - workspace-km/triage/extractor.py\n    - workspace-km/triage/writeback.py\n    - workspace-km/triage/queue.json\n  - Updated: workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md\n  - Updated: workspace/clawdbot-dashboard/data.json\n- Worked\n  - No cron run records found for the last 24h in /home/clawd/.openclaw/cron/runs/*.jsonl (CRON_ROWS=0). If cron jobs ran, they did not write run logs to that directory.\n- Failed/Flaky\n  - Potential telemetry gap: expected cron run JSONL entries missing for the last 24h.\n- Decisions\n  - None explicitly captured in available logs.\n- Follow-ups\n  - Verify the cron runner/logging path is correct and that cron jobs are writing to /home/clawd/.openclaw/cron/runs/*.jsonl.\n  - If the workspace-km triage changes are intentional and stable, consider committing them (and adding a brief changelog note).\n  - If clawdbot-dashboard/data.json is generated, consider excluding it from “noteworthy changes” reporting or documenting its source.",
+      "nextRunAt": 1773717000000,
       "model": null,
-      "lastTotalTokens": 14017,
-      "lastInputTokens": 17344,
-      "lastOutputTokens": 3185
+      "lastTotalTokens": 11085,
+      "lastInputTokens": 12135,
+      "lastOutputTokens": 2378
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
