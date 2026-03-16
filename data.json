@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773617406566,
+  "updatedAt": 1773619208873,
   "providers": [
     {
       "id": "openai-codex",
@@ -31,13 +31,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 44,
-          "resetAt": 1773619200848
+          "usedPercent": 0
         },
         {
           "label": "Week",
-          "usedPercent": 5,
-          "resetAt": 1774206000848
+          "usedPercent": 7,
+          "resetAt": 1774206001130
         }
       ],
       "error": null
@@ -72,13 +71,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "NYC Senior Marketing Manager Pipeline",
-      "activityChannel": null,
-      "lastRunAt": 1773614227078,
+      "activityKind": "chat",
+      "activityLabel": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention,",
+      "activityChannel": "tui",
+      "lastRunAt": 1773618166363,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Greenhouse (site:greenhouse.io), Lever (site:lever.co), Workday (site:myworkdayjobs.com), Ashby (site:boards.ashbyhq.com), BigCo keyword sweep, Google Careers, Amazon jobs JSON, Apple (Brave search), BuiltInNYC\n❌ Errors: none\nCurrent time: Sunday, March 15th, 2026 — 10:37 PM (UTC) / 2026-03-15 22:37 UTC"
+      "lastSummary": "HEARTBEAT_OK"
     },
     {
       "id": "km",
@@ -281,6 +280,24 @@
       "lastError": "cron: job execution timed out",
       "lastSummary": null,
       "nextRunAt": 1774184400000,
+      "model": null,
+      "lastTotalTokens": null,
+      "lastInputTokens": null,
+      "lastOutputTokens": null
+    },
+    {
+      "id": "a0f40418-7c03-4c36-876f-f0a2504da4bc",
+      "name": "km:morning-triage-extractor",
+      "schedule": "50 6 * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": null,
+      "nextRunAt": 1773658200000,
       "model": null,
       "lastTotalTokens": null,
       "lastInputTokens": null,
