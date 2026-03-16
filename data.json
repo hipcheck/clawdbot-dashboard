@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773631808824,
+  "updatedAt": 1773633609190,
   "providers": [
     {
       "id": "openai-codex",
@@ -28,18 +28,8 @@
     {
       "id": "anthropic",
       "label": "Anthropic",
-      "windows": [
-        {
-          "label": "5h",
-          "usedPercent": 0
-        },
-        {
-          "label": "Week",
-          "usedPercent": 7,
-          "resetAt": 1774206001056
-        }
-      ],
-      "error": null
+      "windows": [],
+      "error": "HTTP 401: OAuth token has expired. Please obtain a new token or refresh your existing token."
     }
   ],
   "agents": [
@@ -72,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "clawdbot:daily-ops-journal",
+      "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773630600016,
+      "lastRunAt": 1773632700013,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n- Timestamp: 2026-03-16T03:10:00Z (America/New_York: 2026-03-15T23:10:00-04:00)\n- Shipped/Changed\n  - No git commits recorded in /home/clawd/.openclaw/workspace in the last 24h.\n  - Recent on-disk edits suggest ongoing work in workspace-km triage tooling:\n    - workspace-km/triage/server.py\n    - workspace-km/triage/index.html\n    - workspace-km/triage/extractor.py\n    - workspace-km/triage/writeback.py\n    - workspace-km/triage/queue.json\n  - Updated: workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md\n  - Updated: workspace/clawdbot-dashboard/data.json\n- Worked\n  - No cron run records found for the last 24h in /home/clawd/.openclaw/cron/runs/*.jsonl (CRON_ROWS=0). If cron jobs ran, they did not write run logs to that directory.\n- Failed/Flaky\n  - Potential telemetry gap: expected cron run JSONL entries missing for the last 24h.\n- Decisions\n  - None explicitly captured in available logs.\n- Follow-ups\n  - Verify the cron runner/logging path is correct and that cron jobs are writing to /home/clawd/.openclaw/cron/runs/*.jsonl.\n  - If the workspace-km triage changes are intentional and stable, consider committing them (and adding a brief changelog note).\n  - If clawdbot-dashboard/data.json is generated, consider excluding it from “noteworthy changes” reporting or documenting its source."
+      "lastSummary": "Ran `openclaw_auto_update.py`.\n\n- First attempt logged: **SKIP** because `openclaw cron status` failed with a transient `gateway closed (1000)` connection error.\n- Second attempt succeeded and returned: **NOOP (no update)** — meaning OpenClaw is already up to date, so nothing was installed.\n\nLog entries (latest):\n- `2026-03-16T03:46:04Z SKIP (cron status unavailable … gateway closed …)`\n- `2026-03-16T03:47:26Z NOOP (no update)`\n\nAlso: `openclaw gateway status` currently shows the gateway **running** and the RPC probe is **ok**."
     },
     {
       "id": "km",
@@ -237,17 +227,17 @@
       "schedule": "45 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773546300019,
+      "lastRunAt": 1773632700013,
       "lastStatus": "ok",
-      "lastDurationMs": 94427,
+      "lastDurationMs": 159206,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "`openclaw_auto_update.py` ran successfully this time → **NOOP (no update)** (nothing to upgrade).\n\nEarlier failure was due to a transient **gateway closed (1000)** connection error, but `openclaw gateway status` now shows the gateway is **running** and the **RPC probe is ok**.\n\nOne small maintenance note from `openclaw gateway status`: your systemd service config is flagged as “out of date/non-standard” (RestartSec mismatch). If you want, I can run:\n\n- `openclaw doctor` (read-only), or\n- `openclaw doctor --repair` (makes changes)\n\nTell me which you prefer.",
-      "nextRunAt": 1773632700000,
+      "lastSummary": "Ran `openclaw_auto_update.py`.\n\n- First attempt logged: **SKIP** because `openclaw cron status` failed with a transient `gateway closed (1000)` connection error.\n- Second attempt succeeded and returned: **NOOP (no update)** — meaning OpenClaw is already up to date, so nothing was installed.\n\nLog entries (latest):\n- `2026-03-16T03:46:04Z SKIP (cron status unavailable … gateway closed …)`\n- `2026-03-16T03:47:26Z NOOP (no update)`\n\nAlso: `openclaw gateway status` currently shows the gateway **running** and the RPC probe is **ok**.",
+      "nextRunAt": 1773719100000,
       "model": null,
-      "lastTotalTokens": 9084,
-      "lastInputTokens": 9648,
-      "lastOutputTokens": 440
+      "lastTotalTokens": 11984,
+      "lastInputTokens": 13250,
+      "lastOutputTokens": 1540
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
