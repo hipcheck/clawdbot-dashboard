@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773705609447,
+  "updatedAt": 1773707407165,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 6,
           "resetAt": 1773713226000
         },
         {
           "label": "Day",
-          "usedPercent": 50,
+          "usedPercent": 51,
           "resetAt": 1773852278000
         }
       ],
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
+      "activityLabel": "NYC Senior Marketing Manager Pipeline",
       "activityChannel": null,
-      "lastRunAt": 1773632700013,
+      "lastRunAt": 1773705600025,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py`.\n\n- First attempt logged: **SKIP** because `openclaw cron status` failed with a transient `gateway closed (1000)` connection error.\n- Second attempt succeeded and returned: **NOOP (no update)** — meaning OpenClaw is already up to date, so nothing was installed.\n\nLog entries (latest):\n- `2026-03-16T03:46:04Z SKIP (cron status unavailable … gateway closed …)`\n- `2026-03-16T03:47:26Z NOOP (no update)`\n\nAlso: `openclaw gateway status` currently shows the gateway **running** and the RPC probe is **ok**."
+      "lastSummary": "**Job Pipeline — 2026-03-17**\n🆕 1 new role(s):\nNavan — Senior Performance Marketing Manager (Part-time/Hourly)\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse/Lever/Workday/Ashby + big-co list), Google Careers (web_fetch), Amazon Jobs JSON (curl), Apple (Brave search), BuiltInNYC (web_fetch)\n❌ Errors: none\nCurrent time: Tuesday, March 17th, 2026 — 12:00 AM (UTC) / 2026-03-17 00:00 UTC"
     },
     {
       "id": "km",
@@ -155,17 +155,17 @@
       "schedule": "0 20 * * 1,4",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773614227078,
+      "lastRunAt": 1773705600025,
       "lastStatus": "ok",
-      "lastDurationMs": 185286,
+      "lastDurationMs": 291532,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-15**\n🆕 0 new role(s)\n🔄 4 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Greenhouse (site:greenhouse.io), Lever (site:lever.co), Workday (site:myworkdayjobs.com), Ashby (site:boards.ashbyhq.com), BigCo keyword sweep, Google Careers, Amazon jobs JSON, Apple (Brave search), BuiltInNYC\n❌ Errors: none\nCurrent time: Sunday, March 15th, 2026 — 10:37 PM (UTC) / 2026-03-15 22:37 UTC",
-      "nextRunAt": 1773705600000,
+      "lastSummary": "**Job Pipeline — 2026-03-17**\n🆕 1 new role(s):\nNavan — Senior Performance Marketing Manager (Part-time/Hourly)\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse/Lever/Workday/Ashby + big-co list), Google Careers (web_fetch), Amazon Jobs JSON (curl), Apple (Brave search), BuiltInNYC (web_fetch)\n❌ Errors: none\nCurrent time: Tuesday, March 17th, 2026 — 12:00 AM (UTC) / 2026-03-17 00:00 UTC",
+      "nextRunAt": 1773964800000,
       "model": "openai-codex/gpt-5.2",
-      "lastTotalTokens": 81500,
-      "lastInputTokens": 187759,
-      "lastOutputTokens": 5057
+      "lastTotalTokens": 84104,
+      "lastInputTokens": 175127,
+      "lastOutputTokens": 6975
     },
     {
       "id": "c915b0d5-5160-45e8-8c57-a60d742a4640",
