@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773718207222,
+  "updatedAt": 1773720007498,
   "providers": [
     {
       "id": "openai-codex",
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773658200052,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "FAIL: Security preflight check failed. Top blockers are listed below.\n\n- **Blocker 1: Incomplete Audit due to Gateway Auth**\n  The `security audit --deep` command could not fully inspect the gateway configuration because the current gateway `auth.mode: \"token\"` does not support the required `operator.read` scope. This prevents a complete assessment of the gateway's security posture.\n\n- **Blocker 2: Weak Model in Fallback Chain**\n  The `main` agent's configuration includes `openai-codex/gpt-4o-mini` in its model fallback list. This model is considered below the recommended tier for agents with enabled tools, increasing the risk of undesirable behavior.\n\n- **Blocker 3: No Denied Commands for Nodes**\n  The `gateway.nodes.denyCommands` list is empty. This means there is no blocklist preventing potentially dangerous commands from being run on connected nodes via the gateway. Best practice is to populate this with the command IDs of any known-dangerous operations.\n\n**Configuration Patch Suggestions:**\n\n1.  **[Recommended] Remove Weak Model:**\n    To remove the weak fallback model from the `main` agent's configuration, apply the following change to `~/.openclaw/openclaw.json`:\n    Find the block:\n    ```json\n    \"fallbacks\": [\n      \"google-gemini-cli/gemini-2.5-pro\",\n      \"google-gemini-cli/gemini-2.0-flash\",\n      \"openai-codex/gpt-4o-mini\",\n      \"openai-codex/gpt-5.3-codex\"\n    ]\n    ```\n    And change it to:\n    ```json\n    \"fallbacks\": [\n      \"google-gemini-cli/gemini-2.5-pro\",\n      \"google-gemini-cli/gemini-2.0-flash\",\n      \"openai-codex/gpt-5.3-codex\"\n    ]\n    ```\n\n2.  **[Consider] Update Gateway Auth:**\n    To enable full security scanning, consider changing the gateway authentication mode from `token` to a mode that supports scoped tokens, such as `jwt`. This is a more involved change and would require reconfiguring clients to use the new authentication method.\n\n3.  **[Action Required] Populate Node Command Denylist:**\n    Review commands that could be execu…"
+      "lastRunAt": 1773719185232,
+      "lastStatus": "error",
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "I messed up. I need a target for the `message` tool, and the cron job didn't provide one. I was supposed to write a report, which I did. My"
     },
     {
       "id": "main",
@@ -119,17 +119,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773559800017,
-      "lastStatus": "ok",
-      "lastDurationMs": 423540,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "Report written. Task done.",
+      "lastRunAt": 1773719185232,
+      "lastStatus": "error",
+      "lastDurationMs": 432834,
+      "consecutiveErrors": 1,
+      "lastError": "⚠️ ✉️ Message failed",
+      "lastSummary": "I messed up. I need a target for the `message` tool, and the cron job didn't provide one. I was supposed to write a report, which I did. My",
       "nextRunAt": 1773732600000,
       "model": null,
-      "lastTotalTokens": 17202,
-      "lastInputTokens": 35295,
-      "lastOutputTokens": 2100
+      "lastTotalTokens": 8747,
+      "lastInputTokens": 39648,
+      "lastOutputTokens": 1598
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -233,7 +233,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Ran `openclaw_auto_update.py`.\n\n- First attempt logged: **SKIP** because `openclaw cron status` failed with a transient `gateway closed (1000)` connection error.\n- Second attempt succeeded and returned: **NOOP (no update)** — meaning OpenClaw is already up to date, so nothing was installed.\n\nLog entries (latest):\n- `2026-03-16T03:46:04Z SKIP (cron status unavailable … gateway closed …)`\n- `2026-03-16T03:47:26Z NOOP (no update)`\n\nAlso: `openclaw gateway status` currently shows the gateway **running** and the RPC probe is **ok**.",
-      "nextRunAt": 1773719100000,
+      "nextRunAt": 1773805500000,
       "model": null,
       "lastTotalTokens": 11984,
       "lastInputTokens": 13250,
