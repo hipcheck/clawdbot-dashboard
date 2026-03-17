@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773784808247,
+  "updatedAt": 1773786607221,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,7 +8,7 @@
         {
           "label": "5h",
           "usedPercent": 0,
-          "resetAt": 1773785224000
+          "resetAt": 1773803224000
         },
         {
           "label": "Day",
