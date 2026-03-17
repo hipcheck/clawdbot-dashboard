@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773743406693,
+  "updatedAt": 1773745206703,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1773749227000
         },
         {
           "label": "Day",
-          "usedPercent": 52,
+          "usedPercent": 53,
           "resetAt": 1773852278000
         }
       ],
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
+      "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1773732600018,
+      "lastRunAt": 1773744600015,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`. I've summarized the gateway status, security audit, update status, and cron health. No critical issues were found."
+      "lastSummary": "FAIL: Security preflight check discovered critical issues.\n\nTop blockers preventing a PASS status:\n\n*   **Gateway Probe Failed**: The deep security audit could not complete its checks because it was missing the `operator.read` scope. This is a critical failure as it prevents a full assessment.\n    *   **Remediation**: Run `openclaw status --all` to debug gateway connectivity and authentication issues, then re-run the security audit.\n\n*   **Weak Model in Fallback Chain**: The `main` agent configuration includes `openai-codex/gpt-4o-mini` as a fallback model. Weaker models can be more susceptible to prompt injection and misuse.\n    *   **Remediation**: Remove the weak model from the configuration.\n    *   **Suggested Patch**:\n        ```json\n        {\n          \"agents\": {\n            \"list\": [\n              {\n                \"id\": \"main\",\n                \"model\": {\n                  \"fallbacks\": [\n                    \"google-gemini-cli/gemini-2.5-pro\",\n                    \"google-gemini-cli/gemini-2.0-flash\",\n                    \"openai-codex/gpt-5.3-codex\"\n                  ]\n                }\n              }\n            ]\n          }\n        }\n        ```\n\n*   **Node Command Denylist is Empty**: The `gateway.nodes.denyCommands` array is currently empty. While not a failure, it is recommended to explicitly deny high-risk commands on remote nodes (e.g., shutdown, reboot) as a defense-in-depth measure."
     },
     {
       "id": "main",
@@ -74,12 +74,12 @@
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
+      "activityLabel": "km:morning-triage-extractor",
       "activityChannel": null,
-      "lastRunAt": 1773716400031,
+      "lastRunAt": 1773744733059,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Nightly journal task (Nikola) — SUCCESS\n\n- Preconditions\n  - Mac node “Andreas MacBook” connected: YES\n\n- Time computation (via /usr/bin/python3 on Mac; America/New_York)\n  - CURRENT_TS (NYC): 2026-03-16 23:00:13 EDT\n  - TARGET_DATE (rule: before noon ⇒ yesterday): 2026-03-16\n\n- Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md\n  - File present and non-empty: YES\n\n- Step 4 — Formatting normalization (python3-only file ops)\n  - Applied:\n    - Tabs → spaces\n    - List markers normalized to “-”\n    - Tightened blank lines inside list blocks\n    - Ensured content after [[stream of consciousness]] is properly nested as list items\n  - Wrote changes back: YES\n\n- Step 4.5 — Reminders injection\n  - Source checked: /home/clawd/.openclaw/workspace-km/REMINDERS.md\n  - Active reminders matching 2026-03-16: NONE (so no Reminders subsection added)\n\n- Step 5 — [[clawdbot]] comment\n  - Located existing section: “- [[clawdbot]]”\n  - Added exactly one entry for TARGET_DATE under [[clawdbot]] (and verified by re-read):\n    - Date entry: 2026-03-16\n    - Included required subsections:\n      - Timestamp (NYC): 2026-03-16 23:00:13 EDT\n      - Patterns / what I notice\n      - Experiments (next 7 days)\n    - Included optional sections used:\n      - Readwise (with quoted highlight text + book/podcast title; no share links)\n      - Further reading (2 evidence-forward links with relevance)"
+      "lastSummary": "Triage extractor: OK\n\n- Date (yesterday, America/New_York): **2026-03-16**\n- Journal file (Mac): **found** (`/Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md`)\n- Extractor output:\n  - journal_items: 59\n  - highlights: 0\n- Queue built:\n  - kept items written to queue: **10**\n  - output: `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n- Cleanup: deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen the review PWA: **http://openclaw-vps:8765**"
     },
     {
       "id": "research",
@@ -137,17 +137,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773658200052,
+      "lastRunAt": 1773744600015,
       "lastStatus": "ok",
-      "lastDurationMs": 139173,
+      "lastDurationMs": 133044,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL: Security preflight check failed. Top blockers are listed below.\n\n- **Blocker 1: Incomplete Audit due to Gateway Auth**\n  The `security audit --deep` command could not fully inspect the gateway configuration because the current gateway `auth.mode: \"token\"` does not support the required `operator.read` scope. This prevents a complete assessment of the gateway's security posture.\n\n- **Blocker 2: Weak Model in Fallback Chain**\n  The `main` agent's configuration includes `openai-codex/gpt-4o-mini` in its model fallback list. This model is considered below the recommended tier for agents with enabled tools, increasing the risk of undesirable behavior.\n\n- **Blocker 3: No Denied Commands for Nodes**\n  The `gateway.nodes.denyCommands` list is empty. This means there is no blocklist preventing potentially dangerous commands from being run on connected nodes via the gateway. Best practice is to populate this with the command IDs of any known-dangerous operations.\n\n**Configuration Patch Suggestions:**\n\n1.  **[Recommended] Remove Weak Model:**\n    To remove the weak fallback model from the `main` agent's configuration, apply the following change to `~/.openclaw/openclaw.json`:\n    Find the block:\n    ```json\n    \"fallbacks\": [\n      \"google-gemini-cli/gemini-2.5-pro\",\n      \"google-gemini-cli/gemini-2.0-flash\",\n      \"openai-codex/gpt-4o-mini\",\n      \"openai-codex/gpt-5.3-codex\"\n    ]\n    ```\n    And change it to:\n    ```json\n    \"fallbacks\": [\n      \"google-gemini-cli/gemini-2.5-pro\",\n      \"google-gemini-cli/gemini-2.0-flash\",\n      \"openai-codex/gpt-5.3-codex\"\n    ]\n    ```\n\n2.  **[Consider] Update Gateway Auth:**\n    To enable full security scanning, consider changing the gateway authentication mode from `token` to a mode that supports scoped tokens, such as `jwt`. This is a more involved change and would require reconfiguring clients to use the new authentication method.\n\n3.  **[Action Required] Populate Node Command Denylist:**\n    Review commands that could be execu…",
-      "nextRunAt": 1773744600000,
+      "lastSummary": "FAIL: Security preflight check discovered critical issues.\n\nTop blockers preventing a PASS status:\n\n*   **Gateway Probe Failed**: The deep security audit could not complete its checks because it was missing the `operator.read` scope. This is a critical failure as it prevents a full assessment.\n    *   **Remediation**: Run `openclaw status --all` to debug gateway connectivity and authentication issues, then re-run the security audit.\n\n*   **Weak Model in Fallback Chain**: The `main` agent configuration includes `openai-codex/gpt-4o-mini` as a fallback model. Weaker models can be more susceptible to prompt injection and misuse.\n    *   **Remediation**: Remove the weak model from the configuration.\n    *   **Suggested Patch**:\n        ```json\n        {\n          \"agents\": {\n            \"list\": [\n              {\n                \"id\": \"main\",\n                \"model\": {\n                  \"fallbacks\": [\n                    \"google-gemini-cli/gemini-2.5-pro\",\n                    \"google-gemini-cli/gemini-2.0-flash\",\n                    \"openai-codex/gpt-5.3-codex\"\n                  ]\n                }\n              }\n            ]\n          }\n        }\n        ```\n\n*   **Node Command Denylist is Empty**: The `gateway.nodes.denyCommands` array is currently empty. While not a failure, it is recommended to explicitly deny high-risk commands on remote nodes (e.g., shutdown, reboot) as a defense-in-depth measure.",
+      "nextRunAt": 1773831000000,
       "model": null,
-      "lastTotalTokens": 10693,
-      "lastInputTokens": 23910,
-      "lastOutputTokens": 2315
+      "lastTotalTokens": 10595,
+      "lastInputTokens": 18314,
+      "lastOutputTokens": 1632
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -281,17 +281,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773658339225,
+      "lastRunAt": 1773744733059,
       "lastStatus": "ok",
-      "lastDurationMs": 78275,
+      "lastDurationMs": 90259,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Triage extractor: OK\n\n- Date (America/New_York “yesterday”): **2026-03-15**\n- Mac node: **Andreas MacBook connected**\n- Journal read: **/Users/andreasallmaier/Documents/Brain/journal/2026-03-15.md** (found)\n- Extractor output:\n  - journal_items extracted: **32**\n  - readwise highlights extracted: **0**\n- After LLM review (filtered for non-trivial / non-logistics / de-dup):\n  - **12 items kept** (journal: 12, readwise: 0)\n  - suggested_bucket counts: **task=5, protocol=4, null=3**\n- Wrote queue:\n  - **/home/clawd/.openclaw/workspace-km/triage/queue.json** (overwritten)\n- Cleanup:\n  - deleted **/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md**\n\nOpen **http://openclaw-vps:8765** to review the triage queue.",
-      "nextRunAt": 1773744600000,
+      "lastSummary": "Triage extractor: OK\n\n- Date (yesterday, America/New_York): **2026-03-16**\n- Journal file (Mac): **found** (`/Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md`)\n- Extractor output:\n  - journal_items: 59\n  - highlights: 0\n- Queue built:\n  - kept items written to queue: **10**\n  - output: `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n- Cleanup: deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen the review PWA: **http://openclaw-vps:8765**",
+      "nextRunAt": 1773831000000,
       "model": null,
-      "lastTotalTokens": 14938,
-      "lastInputTokens": 16682,
-      "lastOutputTokens": 3455
+      "lastTotalTokens": 17269,
+      "lastInputTokens": 20337,
+      "lastOutputTokens": 4020
     }
   ]
 }
