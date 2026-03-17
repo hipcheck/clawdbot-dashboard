@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773716407363,
+  "updatedAt": 1773718207222,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 3,
           "resetAt": 1773731227000
         },
         {
           "label": "Day",
-          "usedPercent": 51,
+          "usedPercent": 52,
           "resetAt": 1773852278000
         }
       ],
@@ -62,24 +62,24 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "NYC Senior Marketing Manager Pipeline",
+      "activityLabel": "clawdbot:daily-ops-journal",
       "activityChannel": null,
-      "lastRunAt": 1773705600025,
+      "lastRunAt": 1773717000020,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "**Job Pipeline — 2026-03-17**\n🆕 1 new role(s):\nNavan — Senior Performance Marketing Manager (Part-time/Hourly)\n🔄 2 existing role(s) confirmed active\n⚠️ 0 role(s) flagged as potentially stale\n📋 Sources checked: Brave (Greenhouse/Lever/Workday/Ashby + big-co list), Google Careers (web_fetch), Amazon Jobs JSON (curl), Apple (Brave search), BuiltInNYC (web_fetch)\n❌ Errors: none\nCurrent time: Tuesday, March 17th, 2026 — 12:00 AM (UTC) / 2026-03-17 00:00 UTC"
+      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-16T23:10:09-04:00\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Auto-generated artifacts refreshed:\n    - `workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md` (job pipeline refresh)\n    - `workspace/clawdbot-dashboard/data.json`\n  - KM triage queue updated (overwritten):\n    - `workspace-km/triage/queue.json`\n\n- Worked\n  - Cron activity (last ~24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `clawdbot:daily-ops-journal` (jobId: a8c1dd0d-feb9-4882-9cfb-a49526c169d7) — OK (delivered)\n      - Wrote a previous daily ops journal entry; also flagged a possible cron telemetry gap at that time.\n    - `clawdbot:auto-update` (jobId: c621238c-158e-4342-90c7-9ebb9f8ab0a3) — OK (not delivered)\n      - 1st attempt: SKIP due to transient gateway WS close (1000) while running `openclaw cron status`.\n      - 2nd attempt: NOOP (already up to date). Gateway status later OK.\n    - `infraops:security-preflight` (jobId: 5a45f0e7-fed2-450e-91e5-e205656cc8c2) — OK (delivered)\n      - Reported blockers: incomplete deep audit due to gateway auth/scope limitations, weak fallback model listed (`openai-codex/gpt-4o-mini`), and empty `gateway.nodes.denyCommands`.\n    - `km:triage-extractor` (jobId: a0f40418-7c03-4c36-876f-f0a2504da4bc) — OK (delivered)\n      - Parsed Mac journal for **2026-03-15**, kept 12 non-trivial items, wrote `workspace-km/triage/queue.json`, removed `workspace-km/triage/journal-tmp.md`.\n    - `feature-builder:daily-build` (jobId: 461680fe-9815-4dc5-8a0a-5898316619f8) — OK (not delivered)\n      - Ran successfully; no delivered summary logged in the run record.\n    - `clawdbot:job-pipeline` (jobId: 03cf0eec-72cb-4012-87aa-aa0962b1a197) — OK (delivered)\n      - Found 1 new role: Navan — Senior Performance Marketing Manager (Part-time/Hourly).\n    - `km:nikola-nightly-journal` (jobId: c915b0d5-5160-45e8-8c57-a60d742a4640) — OK (delivered)\n     …"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"238\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Mon 2026-03-16 14:35 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773671757954,
+      "activityKind": "cron",
+      "activityLabel": "km:nightly-journal-comment",
+      "activityChannel": null,
+      "lastRunAt": 1773716400031,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "A good accountability goal has 3 properties: **specific behavior**, **high leverage for your life**, and **easy to verify daily**. Based on your journal themes (energy stability, “calm productivity,” "
+      "lastSummary": "Nightly journal task (Nikola) — SUCCESS\n\n- Preconditions\n  - Mac node “Andreas MacBook” connected: YES\n\n- Time computation (via /usr/bin/python3 on Mac; America/New_York)\n  - CURRENT_TS (NYC): 2026-03-16 23:00:13 EDT\n  - TARGET_DATE (rule: before noon ⇒ yesterday): 2026-03-16\n\n- Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md\n  - File present and non-empty: YES\n\n- Step 4 — Formatting normalization (python3-only file ops)\n  - Applied:\n    - Tabs → spaces\n    - List markers normalized to “-”\n    - Tightened blank lines inside list blocks\n    - Ensured content after [[stream of consciousness]] is properly nested as list items\n  - Wrote changes back: YES\n\n- Step 4.5 — Reminders injection\n  - Source checked: /home/clawd/.openclaw/workspace-km/REMINDERS.md\n  - Active reminders matching 2026-03-16: NONE (so no Reminders subsection added)\n\n- Step 5 — [[clawdbot]] comment\n  - Located existing section: “- [[clawdbot]]”\n  - Added exactly one entry for TARGET_DATE under [[clawdbot]] (and verified by re-read):\n    - Date entry: 2026-03-16\n    - Included required subsections:\n      - Timestamp (NYC): 2026-03-16 23:00:13 EDT\n      - Patterns / what I notice\n      - Experiments (next 7 days)\n    - Included optional sections used:\n      - Readwise (with quoted highlight text + book/podcast title; no share links)\n      - Further reading (2 evidence-forward links with relevance)"
     },
     {
       "id": "research",
@@ -173,17 +173,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773630000032,
+      "lastRunAt": 1773716400031,
       "lastStatus": "ok",
-      "lastDurationMs": 157409,
+      "lastDurationMs": 199113,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Nikola nightly journal: OK (Mac node online)\n\n- CURRENT_TS (America/New_York, via /usr/bin/python3 on Mac): 2026-03-15 23:00:19 EDT-0400  \n- TARGET_DATE (rule: 12:00–23:59 => today): 2026-03-15  \n- Target file: /Users/andreasallmaier/Documents/Brain/journal/2026-03-15.md\n  - Formatting normalization (step 4): APPLIED (tabs→2 spaces, */+→-, tightened list blanks; YAML + code fences preserved)\n  - Reminders for 2026-03-15 (from REMINDERS.md): none matched (omitted)\n  - [[clawdbot]] section: found and updated with exactly one entry for 2026-03-15 (includes Timestamp / Patterns / Experiments / Further reading (2 links) / Readwise quote)\n  - Verified by re-reading the [[clawdbot]] section + file tail: entry is present and correctly nested under `- [[clawdbot]]`",
-      "nextRunAt": 1773716400000,
+      "lastSummary": "Nightly journal task (Nikola) — SUCCESS\n\n- Preconditions\n  - Mac node “Andreas MacBook” connected: YES\n\n- Time computation (via /usr/bin/python3 on Mac; America/New_York)\n  - CURRENT_TS (NYC): 2026-03-16 23:00:13 EDT\n  - TARGET_DATE (rule: before noon ⇒ yesterday): 2026-03-16\n\n- Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md\n  - File present and non-empty: YES\n\n- Step 4 — Formatting normalization (python3-only file ops)\n  - Applied:\n    - Tabs → spaces\n    - List markers normalized to “-”\n    - Tightened blank lines inside list blocks\n    - Ensured content after [[stream of consciousness]] is properly nested as list items\n  - Wrote changes back: YES\n\n- Step 4.5 — Reminders injection\n  - Source checked: /home/clawd/.openclaw/workspace-km/REMINDERS.md\n  - Active reminders matching 2026-03-16: NONE (so no Reminders subsection added)\n\n- Step 5 — [[clawdbot]] comment\n  - Located existing section: “- [[clawdbot]]”\n  - Added exactly one entry for TARGET_DATE under [[clawdbot]] (and verified by re-read):\n    - Date entry: 2026-03-16\n    - Included required subsections:\n      - Timestamp (NYC): 2026-03-16 23:00:13 EDT\n      - Patterns / what I notice\n      - Experiments (next 7 days)\n    - Included optional sections used:\n      - Readwise (with quoted highlight text + book/podcast title; no share links)\n      - Further reading (2 evidence-forward links with relevance)",
+      "nextRunAt": 1773802800000,
       "model": null,
-      "lastTotalTokens": 18988,
-      "lastInputTokens": 19793,
-      "lastOutputTokens": 7634
+      "lastTotalTokens": 25292,
+      "lastInputTokens": 26962,
+      "lastOutputTokens": 9203
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -209,17 +209,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773630600016,
+      "lastRunAt": 1773717000020,
       "lastStatus": "ok",
-      "lastDurationMs": 48779,
+      "lastDurationMs": 99059,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n- Timestamp: 2026-03-16T03:10:00Z (America/New_York: 2026-03-15T23:10:00-04:00)\n- Shipped/Changed\n  - No git commits recorded in /home/clawd/.openclaw/workspace in the last 24h.\n  - Recent on-disk edits suggest ongoing work in workspace-km triage tooling:\n    - workspace-km/triage/server.py\n    - workspace-km/triage/index.html\n    - workspace-km/triage/extractor.py\n    - workspace-km/triage/writeback.py\n    - workspace-km/triage/queue.json\n  - Updated: workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md\n  - Updated: workspace/clawdbot-dashboard/data.json\n- Worked\n  - No cron run records found for the last 24h in /home/clawd/.openclaw/cron/runs/*.jsonl (CRON_ROWS=0). If cron jobs ran, they did not write run logs to that directory.\n- Failed/Flaky\n  - Potential telemetry gap: expected cron run JSONL entries missing for the last 24h.\n- Decisions\n  - None explicitly captured in available logs.\n- Follow-ups\n  - Verify the cron runner/logging path is correct and that cron jobs are writing to /home/clawd/.openclaw/cron/runs/*.jsonl.\n  - If the workspace-km triage changes are intentional and stable, consider committing them (and adding a brief changelog note).\n  - If clawdbot-dashboard/data.json is generated, consider excluding it from “noteworthy changes” reporting or documenting its source.",
-      "nextRunAt": 1773717000000,
+      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-16T23:10:09-04:00\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Auto-generated artifacts refreshed:\n    - `workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md` (job pipeline refresh)\n    - `workspace/clawdbot-dashboard/data.json`\n  - KM triage queue updated (overwritten):\n    - `workspace-km/triage/queue.json`\n\n- Worked\n  - Cron activity (last ~24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `clawdbot:daily-ops-journal` (jobId: a8c1dd0d-feb9-4882-9cfb-a49526c169d7) — OK (delivered)\n      - Wrote a previous daily ops journal entry; also flagged a possible cron telemetry gap at that time.\n    - `clawdbot:auto-update` (jobId: c621238c-158e-4342-90c7-9ebb9f8ab0a3) — OK (not delivered)\n      - 1st attempt: SKIP due to transient gateway WS close (1000) while running `openclaw cron status`.\n      - 2nd attempt: NOOP (already up to date). Gateway status later OK.\n    - `infraops:security-preflight` (jobId: 5a45f0e7-fed2-450e-91e5-e205656cc8c2) — OK (delivered)\n      - Reported blockers: incomplete deep audit due to gateway auth/scope limitations, weak fallback model listed (`openai-codex/gpt-4o-mini`), and empty `gateway.nodes.denyCommands`.\n    - `km:triage-extractor` (jobId: a0f40418-7c03-4c36-876f-f0a2504da4bc) — OK (delivered)\n      - Parsed Mac journal for **2026-03-15**, kept 12 non-trivial items, wrote `workspace-km/triage/queue.json`, removed `workspace-km/triage/journal-tmp.md`.\n    - `feature-builder:daily-build` (jobId: 461680fe-9815-4dc5-8a0a-5898316619f8) — OK (not delivered)\n      - Ran successfully; no delivered summary logged in the run record.\n    - `clawdbot:job-pipeline` (jobId: 03cf0eec-72cb-4012-87aa-aa0962b1a197) — OK (delivered)\n      - Found 1 new role: Navan — Senior Performance Marketing Manager (Part-time/Hourly).\n    - `km:nikola-nightly-journal` (jobId: c915b0d5-5160-45e8-8c57-a60d742a4640) — OK (delivered)\n     …",
+      "nextRunAt": 1773803400000,
       "model": null,
-      "lastTotalTokens": 11085,
-      "lastInputTokens": 12135,
-      "lastOutputTokens": 2378
+      "lastTotalTokens": 24803,
+      "lastInputTokens": 27956,
+      "lastOutputTokens": 4346
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
