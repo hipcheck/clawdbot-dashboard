@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773745206703,
+  "updatedAt": 1773747006620,
   "providers": [
     {
       "id": "openai-codex",
@@ -40,10 +40,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773658800022,
+      "lastRunAt": 1773745200061,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "⚠️ feature-builder: prior run appears stuck; needs cron state reset"
     },
     {
       "id": "infraops",
@@ -101,17 +101,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773658800022,
+      "lastRunAt": 1773745200061,
       "lastStatus": "ok",
-      "lastDurationMs": 314878,
+      "lastDurationMs": 136536,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": null,
-      "nextRunAt": 1773745200000,
+      "lastSummary": "⚠️ feature-builder: prior run appears stuck; needs cron state reset",
+      "nextRunAt": 1773831600000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 10373,
-      "lastInputTokens": 24967,
-      "lastOutputTokens": 3447
+      "lastTotalTokens": 15972,
+      "lastInputTokens": 26823,
+      "lastOutputTokens": 2716
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
