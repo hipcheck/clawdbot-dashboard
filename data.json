@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773732606781,
+  "updatedAt": 1773734408890,
   "providers": [
     {
       "id": "openai-codex",
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773719185232,
-      "lastStatus": "error",
-      "lastError": "⚠️ ✉️ Message failed",
-      "lastSummary": "I messed up. I need a target for the `message` tool, and the cron job didn't provide one. I was supposed to write a report, which I did. My"
+      "lastRunAt": 1773732600018,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`. I've summarized the gateway status, security audit, update status, and cron health. No critical issues were found."
     },
     {
       "id": "main",
@@ -119,17 +119,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773719185232,
-      "lastStatus": "error",
-      "lastDurationMs": 432834,
-      "consecutiveErrors": 1,
-      "lastError": "⚠️ ✉️ Message failed",
-      "lastSummary": "I messed up. I need a target for the `message` tool, and the cron job didn't provide one. I was supposed to write a report, which I did. My",
-      "nextRunAt": 1773732600000,
+      "lastRunAt": 1773732600018,
+      "lastStatus": "ok",
+      "lastDurationMs": 422631,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`. I've summarized the gateway status, security audit, update status, and cron health. No critical issues were found.",
+      "nextRunAt": 1773819000000,
       "model": null,
-      "lastTotalTokens": 8747,
-      "lastInputTokens": 39648,
-      "lastOutputTokens": 1598
+      "lastTotalTokens": 8231,
+      "lastInputTokens": 18926,
+      "lastOutputTokens": 1175
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
