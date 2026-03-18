@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773804606672,
+  "updatedAt": 1773806408629,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1773821226000
         },
         {
@@ -62,12 +62,12 @@
       "name": "main",
       "emoji": "🤖",
       "activityKind": "cron",
-      "activityLabel": "clawdbot:daily-ops-journal",
+      "activityLabel": "infraops:openclaw-auto-update",
       "activityChannel": null,
-      "lastRunAt": 1773803400017,
+      "lastRunAt": 1773805500016,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-18T03:10:25Z (generated; America/New_York date: 2026-03-17)\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Data/notes updated on disk (see “Worked”).\n\n- Worked\n  - Chat context\n    - Cron-triggered request: produce the Daily Ops Journal for today (America/New_York).\n  - Cron activity (last ~24h, from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `a8c1dd0d-feb9-4882-9cfb-a49526c169d7` — status: ok (this Daily Ops Journal run).\n    - `99b353aa-2921-4694-8da5-9074680234a2` — one run errored with “Message failed”, later run ok.\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` — status: ok.\n    - `a0f40418-7c03-4c36-876f-f0a2504da4bc` — status: ok.\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` — status: ok.\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` — status: error (“Edit … failed” in workspace-km).\n  - Noteworthy disk changes (last ~24h)\n    - `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/triage/queue.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/.learnings/ERRORS.md` updated.\n    - `/home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock` touched.\n\n- Failed/Flaky\n  - Cron `99b353aa-2921-4694-8da5-9074680234a2`: at least one run failed with “⚠️ ✉️ Message failed” before succeeding later.\n  - Cron `c915b0d5-5160-45e8-8c57-a60d742a4640`: failed attempting to edit `~/.openclaw/workspace-km/.learnings/ERRORS.md`.\n\n- Decisions\n  - None recorded.\n\n- Follow-ups\n  - Investigate why outbound messaging sometimes fails in cron (`⚠️ ✉️ Message failed`) — likely missing/invalid target routing in the cron environment.\n  - Investigate why edits to `workspace-km/.learnings/ERRORS.md` failed in cron `c915…` (permissions/path mismatch/concurrent write?).\n\n(Appended to: `/home/clawd/.openclaw/workspace/memory/2026-03-17.md`.)"
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found **no update** to apply.\n\nNote: the first attempt failed because the script couldn’t reach the local OpenClaw gateway (`gateway closed (1000)`). I checked `openclaw gateway status` right after and the gateway is **running** with an OK RPC probe on `ws://127.0.0.1:18789`, then reran the update script and it completed normally."
     },
     {
       "id": "km",
@@ -227,17 +227,17 @@
       "schedule": "45 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773632700013,
+      "lastRunAt": 1773805500016,
       "lastStatus": "ok",
-      "lastDurationMs": 159206,
+      "lastDurationMs": 100116,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Ran `openclaw_auto_update.py`.\n\n- First attempt logged: **SKIP** because `openclaw cron status` failed with a transient `gateway closed (1000)` connection error.\n- Second attempt succeeded and returned: **NOOP (no update)** — meaning OpenClaw is already up to date, so nothing was installed.\n\nLog entries (latest):\n- `2026-03-16T03:46:04Z SKIP (cron status unavailable … gateway closed …)`\n- `2026-03-16T03:47:26Z NOOP (no update)`\n\nAlso: `openclaw gateway status` currently shows the gateway **running** and the RPC probe is **ok**.",
-      "nextRunAt": 1773805500000,
+      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found **no update** to apply.\n\nNote: the first attempt failed because the script couldn’t reach the local OpenClaw gateway (`gateway closed (1000)`). I checked `openclaw gateway status` right after and the gateway is **running** with an OK RPC probe on `ws://127.0.0.1:18789`, then reran the update script and it completed normally.",
+      "nextRunAt": 1773891900000,
       "model": null,
-      "lastTotalTokens": 11984,
-      "lastInputTokens": 13250,
-      "lastOutputTokens": 1540
+      "lastTotalTokens": 9013,
+      "lastInputTokens": 9254,
+      "lastOutputTokens": 335
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
