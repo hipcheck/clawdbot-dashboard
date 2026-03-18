@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773831606406,
+  "updatedAt": 1773833406468,
   "providers": [
     {
       "id": "openai-codex",
@@ -40,10 +40,10 @@
       "activityKind": "cron",
       "activityLabel": "feature-builder:morning-proposal",
       "activityChannel": null,
-      "lastRunAt": 1773745200061,
+      "lastRunAt": 1773831600042,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "⚠️ feature-builder: prior run appears stuck; needs cron state reset"
+      "lastSummary": "<tool_code>exec(command='read ~/.openclaw/cron/state/461680fe-9815-4dc5-8a0a-5898316619f8.json')</tool_code>"
     },
     {
       "id": "infraops",
@@ -101,17 +101,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773745200061,
+      "lastRunAt": 1773831600042,
       "lastStatus": "ok",
-      "lastDurationMs": 136536,
+      "lastDurationMs": 17540,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "⚠️ feature-builder: prior run appears stuck; needs cron state reset",
-      "nextRunAt": 1773831600000,
+      "lastSummary": "<tool_code>exec(command='read ~/.openclaw/cron/state/461680fe-9815-4dc5-8a0a-5898316619f8.json')</tool_code>",
+      "nextRunAt": 1773918000000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 15972,
-      "lastInputTokens": 26823,
-      "lastOutputTokens": 2716
+      "lastTotalTokens": 5207,
+      "lastInputTokens": 5207,
+      "lastOutputTokens": 1677
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
