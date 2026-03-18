@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773819006828,
+  "updatedAt": 1773820808870,
   "providers": [
     {
       "id": "openai-codex",
@@ -125,7 +125,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`. I've summarized the gateway status, security audit, update status, and cron health. No critical issues were found.",
-      "nextRunAt": 1773819000000,
+      "nextRunAt": 1773905400000,
       "model": null,
       "lastTotalTokens": 8231,
       "lastInputTokens": 18926,
