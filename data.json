@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773874808027,
+  "updatedAt": 1773876606552,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 34,
-          "resetAt": 1773875231000
+          "usedPercent": 1,
+          "resetAt": 1773893286000
         },
         {
           "label": "Day",
-          "usedPercent": 12,
+          "usedPercent": 13,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773874680020,
+      "lastRunAt": 1773876480048,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done.\n\n- queue_date: `2026-03-17`\n- Wrote (overwrote) staging note on Andreas MacBook:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Included:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
+      "lastSummary": "- Parsed triage inputs (queue_date = `2026-03-17`)\n  - Tasks (2)\n  - Protocols (5)\n  - Skipped (2)\n\n- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773874680020,
+      "lastRunAt": 1773876480048,
       "lastStatus": "ok",
-      "lastDurationMs": 18044,
+      "lastDurationMs": 18273,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Done.\n\n- queue_date: `2026-03-17`\n- Wrote (overwrote) staging note on Andreas MacBook:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Included:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
-      "nextRunAt": 1773874800000,
+      "lastSummary": "- Parsed triage inputs (queue_date = `2026-03-17`)\n  - Tasks (2)\n  - Protocols (5)\n  - Skipped (2)\n\n- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
+      "nextRunAt": 1773876600000,
       "model": null,
-      "lastTotalTokens": 8492,
-      "lastInputTokens": 2677,
-      "lastOutputTokens": 693
+      "lastTotalTokens": 8486,
+      "lastInputTokens": 2507,
+      "lastOutputTokens": 687
     }
   ]
 }
