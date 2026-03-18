@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773829807612,
+  "updatedAt": 1773831606406,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 0,
+          "usedPercent": 3,
           "resetAt": 1773839225000
         },
         {
           "label": "Day",
-          "usedPercent": 54,
+          "usedPercent": 55,
           "resetAt": 1773852278000
         }
       ],
@@ -52,10 +52,10 @@
       "activityKind": "cron",
       "activityLabel": "healthcheck:security-preflight",
       "activityChannel": null,
-      "lastRunAt": 1773744600015,
+      "lastRunAt": 1773831000041,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL: Security preflight check discovered critical issues.\n\nTop blockers preventing a PASS status:\n\n*   **Gateway Probe Failed**: The deep security audit could not complete its checks because it was missing the `operator.read` scope. This is a critical failure as it prevents a full assessment.\n    *   **Remediation**: Run `openclaw status --all` to debug gateway connectivity and authentication issues, then re-run the security audit.\n\n*   **Weak Model in Fallback Chain**: The `main` agent configuration includes `openai-codex/gpt-4o-mini` as a fallback model. Weaker models can be more susceptible to prompt injection and misuse.\n    *   **Remediation**: Remove the weak model from the configuration.\n    *   **Suggested Patch**:\n        ```json\n        {\n          \"agents\": {\n            \"list\": [\n              {\n                \"id\": \"main\",\n                \"model\": {\n                  \"fallbacks\": [\n                    \"google-gemini-cli/gemini-2.5-pro\",\n                    \"google-gemini-cli/gemini-2.0-flash\",\n                    \"openai-codex/gpt-5.3-codex\"\n                  ]\n                }\n              }\n            ]\n          }\n        }\n        ```\n\n*   **Node Command Denylist is Empty**: The `gateway.nodes.denyCommands` array is currently empty. While not a failure, it is recommended to explicitly deny high-risk commands on remote nodes (e.g., shutdown, reboot) as a defense-in-depth measure."
+      "lastSummary": "FAIL\n\n**Security Preflight Analysis:**\n\n*   **Gateway Probe Failure (CRITICAL):** The `openclaw security audit --deep` command failed its gateway probe due to a missing `operator.read` scope. This indicates a potentially misconfigured or outdated authentication token, preventing security tools from fully inspecting the running gateway process.\n\n*   **Weak Fallback Model (WARN):** The `main` agent configuration includes `openai-codex/gpt-4o-mini` in its fallback list. While functional, this model is below the recommended tier for tool-using agents, increasing susceptibility to prompt injection.\n\n*   **Empty Node Command Denylist (INFO):** The `gateway.nodes.denyCommands` array is currently empty. While not an immediate failure, this means there is no pre-emptive blocklist for dangerous commands that could be run on paired nodes. This is a missed defense-in-depth opportunity.\n\n**Recommended Patches:**\n\n1.  **Regenerate Gateway Auth Token:** The gateway token is likely missing required scopes. Regenerate it to ensure security audits can run completely.\n    ```bash\n    # Run this on the VPS where the gateway is running\n    openclaw gateway token --scopes operator.read,agent.run,agent.read --json > .new-token.json\n    ```\n    Then, manually update the `gateway.auth.token` value in `openclaw.json` with the new token from `.new-token.json`.\n\n2.  **Upgrade Fallback Model:** To harden the `main` agent, replace the weak fallback model with a more robust one.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"openai-codex/gpt-4o-mini\",\n\n    // \"newText\":\n    \"anthropic/claude-3.5-sonnet\",\n    ```\n\n3.  **Populate Node Denylist:** Add common destructive commands to the node denylist as a baseline safeguard.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"denyCommands\": []\n\n    // \"newText\":\n    \"denyCommands\": [\n        \"rm -rf /\",\n        \"dd if=/dev/zero\",\n        \":(){ :|:& };:\",\n        \"mkfs.ext4 /dev/…"
     },
     {
       "id": "main",
@@ -73,13 +73,13 @@
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "cron",
-      "activityLabel": "km:nightly-journal-comment",
-      "activityChannel": null,
-      "lastRunAt": 1773802800024,
-      "lastStatus": "error",
-      "lastError": "⚠️ 📝 Edit: `in ~/.openclaw/workspace-km/.learnings/ERRORS.md (674 chars)` failed",
-      "lastSummary": "- Preconditions\n  - Andreas MacBook node: connected ✅\n\n- Step 1 — CURRENT_TS (America/New_York, computed via `/usr/bin/python3` on Mac)\n  - CURRENT_TS: 2026-03-17 23:00:34 EDT\n\n- Step 2 — TARGET_DATE logic\n  - CURRENT_TS is 23:00:34 (between 12:00:00–23:59:59) → TARGET_DATE = today (NYC)\n  - TARGET_DATE: 2026-03-17\n\n- Step 3 — Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md\n  - File exists ✅\n\n- Step 4 — Formatting normalization\n  - Determined note is effectively empty (template-only: frontmatter + section skeleton + tasks block)\n  - Per instructions: skipped formatting normalization and proceeded to comment insertion\n\n- Step 4.5 — Reminders (from REMINDERS.md on VPS)\n  - Matches for 2026-03-17: none → no Reminders subsection added\n\n- Step 5 — `[[clawdbot]]` comment\n  - Found existing `[[clawdbot]]` section in the template\n  - Replaced the blank placeholder entry under `[[clawdbot]]` with exactly one entry for TARGET_DATE (2026-03-17), including:\n    - Timestamp (NYC): 2026-03-17 23:00:34 EDT\n    - Patterns / what I notice (3 bullets)\n    - Experiments (next 7 days) (4 bullets)\n  - Verified by re-reading the `[[clawdbot]]` section + tail: content is present ✅"
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773831169887,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "Reran and updated **2026-03-17** successfully.\n\n- File: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md`\n- Did a full formatting normalization pass first (tabs → spaces, `*` → `-`, strea"
     },
     {
       "id": "research",
@@ -137,17 +137,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773744600015,
+      "lastRunAt": 1773831000041,
       "lastStatus": "ok",
-      "lastDurationMs": 133044,
+      "lastDurationMs": 129091,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL: Security preflight check discovered critical issues.\n\nTop blockers preventing a PASS status:\n\n*   **Gateway Probe Failed**: The deep security audit could not complete its checks because it was missing the `operator.read` scope. This is a critical failure as it prevents a full assessment.\n    *   **Remediation**: Run `openclaw status --all` to debug gateway connectivity and authentication issues, then re-run the security audit.\n\n*   **Weak Model in Fallback Chain**: The `main` agent configuration includes `openai-codex/gpt-4o-mini` as a fallback model. Weaker models can be more susceptible to prompt injection and misuse.\n    *   **Remediation**: Remove the weak model from the configuration.\n    *   **Suggested Patch**:\n        ```json\n        {\n          \"agents\": {\n            \"list\": [\n              {\n                \"id\": \"main\",\n                \"model\": {\n                  \"fallbacks\": [\n                    \"google-gemini-cli/gemini-2.5-pro\",\n                    \"google-gemini-cli/gemini-2.0-flash\",\n                    \"openai-codex/gpt-5.3-codex\"\n                  ]\n                }\n              }\n            ]\n          }\n        }\n        ```\n\n*   **Node Command Denylist is Empty**: The `gateway.nodes.denyCommands` array is currently empty. While not a failure, it is recommended to explicitly deny high-risk commands on remote nodes (e.g., shutdown, reboot) as a defense-in-depth measure.",
-      "nextRunAt": 1773831000000,
+      "lastSummary": "FAIL\n\n**Security Preflight Analysis:**\n\n*   **Gateway Probe Failure (CRITICAL):** The `openclaw security audit --deep` command failed its gateway probe due to a missing `operator.read` scope. This indicates a potentially misconfigured or outdated authentication token, preventing security tools from fully inspecting the running gateway process.\n\n*   **Weak Fallback Model (WARN):** The `main` agent configuration includes `openai-codex/gpt-4o-mini` in its fallback list. While functional, this model is below the recommended tier for tool-using agents, increasing susceptibility to prompt injection.\n\n*   **Empty Node Command Denylist (INFO):** The `gateway.nodes.denyCommands` array is currently empty. While not an immediate failure, this means there is no pre-emptive blocklist for dangerous commands that could be run on paired nodes. This is a missed defense-in-depth opportunity.\n\n**Recommended Patches:**\n\n1.  **Regenerate Gateway Auth Token:** The gateway token is likely missing required scopes. Regenerate it to ensure security audits can run completely.\n    ```bash\n    # Run this on the VPS where the gateway is running\n    openclaw gateway token --scopes operator.read,agent.run,agent.read --json > .new-token.json\n    ```\n    Then, manually update the `gateway.auth.token` value in `openclaw.json` with the new token from `.new-token.json`.\n\n2.  **Upgrade Fallback Model:** To harden the `main` agent, replace the weak fallback model with a more robust one.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"openai-codex/gpt-4o-mini\",\n\n    // \"newText\":\n    \"anthropic/claude-3.5-sonnet\",\n    ```\n\n3.  **Populate Node Denylist:** Add common destructive commands to the node denylist as a baseline safeguard.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"denyCommands\": []\n\n    // \"newText\":\n    \"denyCommands\": [\n        \"rm -rf /\",\n        \"dd if=/dev/zero\",\n        \":(){ :|:& };:\",\n        \"mkfs.ext4 /dev/…",
+      "nextRunAt": 1773917400000,
       "model": null,
-      "lastTotalTokens": 10595,
-      "lastInputTokens": 18314,
-      "lastOutputTokens": 1632
+      "lastTotalTokens": 10683,
+      "lastInputTokens": 10771,
+      "lastOutputTokens": 1317
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -281,17 +281,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773744733059,
+      "lastRunAt": 1773831129132,
       "lastStatus": "ok",
-      "lastDurationMs": 90259,
+      "lastDurationMs": 64964,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Triage extractor: OK\n\n- Date (yesterday, America/New_York): **2026-03-16**\n- Journal file (Mac): **found** (`/Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md`)\n- Extractor output:\n  - journal_items: 59\n  - highlights: 0\n- Queue built:\n  - kept items written to queue: **10**\n  - output: `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n- Cleanup: deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen the review PWA: **http://openclaw-vps:8765**",
-      "nextRunAt": 1773831000000,
+      "lastSummary": "Triage extractor: OK\n\n- Date (yesterday, America/New_York): 2026-03-17\n- Mac journal read: ✅ `/Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md`\n- Extractor output:\n  - Journal items extracted: 40\n  - Readwise highlights extracted: 0\n- Queue built (after filtering mundane/logistics/template noise + de-dupe):\n  - Kept items: 9 (journal: 9, readwise: 0)\n  - Suggested buckets: task=3, protocol=5, null=1\n- Wrote: `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n- Cleaned up temp file: ✅ deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen to review in the PWA: http://openclaw-vps:8765",
+      "nextRunAt": 1773917400000,
       "model": null,
-      "lastTotalTokens": 17269,
-      "lastInputTokens": 20337,
-      "lastOutputTokens": 4020
+      "lastTotalTokens": 13401,
+      "lastInputTokens": 11922,
+      "lastOutputTokens": 2735
     }
   ]
 }
