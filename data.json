@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773802807228,
+  "updatedAt": 1773804606672,
   "providers": [
     {
       "id": "openai-codex",
@@ -8,11 +8,11 @@
         {
           "label": "5h",
           "usedPercent": 1,
-          "resetAt": 1773803224000
+          "resetAt": 1773821226000
         },
         {
           "label": "Day",
-          "usedPercent": 53,
+          "usedPercent": 54,
           "resetAt": 1773852278000
         }
       ],
@@ -64,22 +64,22 @@
       "activityKind": "cron",
       "activityLabel": "clawdbot:daily-ops-journal",
       "activityChannel": null,
-      "lastRunAt": 1773717000020,
+      "lastRunAt": 1773803400017,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-16T23:10:09-04:00\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Auto-generated artifacts refreshed:\n    - `workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md` (job pipeline refresh)\n    - `workspace/clawdbot-dashboard/data.json`\n  - KM triage queue updated (overwritten):\n    - `workspace-km/triage/queue.json`\n\n- Worked\n  - Cron activity (last ~24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `clawdbot:daily-ops-journal` (jobId: a8c1dd0d-feb9-4882-9cfb-a49526c169d7) — OK (delivered)\n      - Wrote a previous daily ops journal entry; also flagged a possible cron telemetry gap at that time.\n    - `clawdbot:auto-update` (jobId: c621238c-158e-4342-90c7-9ebb9f8ab0a3) — OK (not delivered)\n      - 1st attempt: SKIP due to transient gateway WS close (1000) while running `openclaw cron status`.\n      - 2nd attempt: NOOP (already up to date). Gateway status later OK.\n    - `infraops:security-preflight` (jobId: 5a45f0e7-fed2-450e-91e5-e205656cc8c2) — OK (delivered)\n      - Reported blockers: incomplete deep audit due to gateway auth/scope limitations, weak fallback model listed (`openai-codex/gpt-4o-mini`), and empty `gateway.nodes.denyCommands`.\n    - `km:triage-extractor` (jobId: a0f40418-7c03-4c36-876f-f0a2504da4bc) — OK (delivered)\n      - Parsed Mac journal for **2026-03-15**, kept 12 non-trivial items, wrote `workspace-km/triage/queue.json`, removed `workspace-km/triage/journal-tmp.md`.\n    - `feature-builder:daily-build` (jobId: 461680fe-9815-4dc5-8a0a-5898316619f8) — OK (not delivered)\n      - Ran successfully; no delivered summary logged in the run record.\n    - `clawdbot:job-pipeline` (jobId: 03cf0eec-72cb-4012-87aa-aa0962b1a197) — OK (delivered)\n      - Found 1 new role: Navan — Senior Performance Marketing Manager (Part-time/Hourly).\n    - `km:nikola-nightly-journal` (jobId: c915b0d5-5160-45e8-8c57-a60d742a4640) — OK (delivered)\n     …"
+      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-18T03:10:25Z (generated; America/New_York date: 2026-03-17)\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Data/notes updated on disk (see “Worked”).\n\n- Worked\n  - Chat context\n    - Cron-triggered request: produce the Daily Ops Journal for today (America/New_York).\n  - Cron activity (last ~24h, from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `a8c1dd0d-feb9-4882-9cfb-a49526c169d7` — status: ok (this Daily Ops Journal run).\n    - `99b353aa-2921-4694-8da5-9074680234a2` — one run errored with “Message failed”, later run ok.\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` — status: ok.\n    - `a0f40418-7c03-4c36-876f-f0a2504da4bc` — status: ok.\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` — status: ok.\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` — status: error (“Edit … failed” in workspace-km).\n  - Noteworthy disk changes (last ~24h)\n    - `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/triage/queue.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/.learnings/ERRORS.md` updated.\n    - `/home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock` touched.\n\n- Failed/Flaky\n  - Cron `99b353aa-2921-4694-8da5-9074680234a2`: at least one run failed with “⚠️ ✉️ Message failed” before succeeding later.\n  - Cron `c915b0d5-5160-45e8-8c57-a60d742a4640`: failed attempting to edit `~/.openclaw/workspace-km/.learnings/ERRORS.md`.\n\n- Decisions\n  - None recorded.\n\n- Follow-ups\n  - Investigate why outbound messaging sometimes fails in cron (`⚠️ ✉️ Message failed`) — likely missing/invalid target routing in the cron environment.\n  - Investigate why edits to `workspace-km/.learnings/ERRORS.md` failed in cron `c915…` (permissions/path mismatch/concurrent write?).\n\n(Appended to: `/home/clawd/.openclaw/workspace/memory/2026-03-17.md`.)"
     },
     {
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "cron",
-      "activityLabel": "km:morning-triage-extractor",
+      "activityLabel": "km:nightly-journal-comment",
       "activityChannel": null,
-      "lastRunAt": 1773744733059,
-      "lastStatus": "ok",
-      "lastError": null,
-      "lastSummary": "Triage extractor: OK\n\n- Date (yesterday, America/New_York): **2026-03-16**\n- Journal file (Mac): **found** (`/Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md`)\n- Extractor output:\n  - journal_items: 59\n  - highlights: 0\n- Queue built:\n  - kept items written to queue: **10**\n  - output: `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n- Cleanup: deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen the review PWA: **http://openclaw-vps:8765**"
+      "lastRunAt": 1773802800024,
+      "lastStatus": "error",
+      "lastError": "⚠️ 📝 Edit: `in ~/.openclaw/workspace-km/.learnings/ERRORS.md (674 chars)` failed",
+      "lastSummary": "- Preconditions\n  - Andreas MacBook node: connected ✅\n\n- Step 1 — CURRENT_TS (America/New_York, computed via `/usr/bin/python3` on Mac)\n  - CURRENT_TS: 2026-03-17 23:00:34 EDT\n\n- Step 2 — TARGET_DATE logic\n  - CURRENT_TS is 23:00:34 (between 12:00:00–23:59:59) → TARGET_DATE = today (NYC)\n  - TARGET_DATE: 2026-03-17\n\n- Step 3 — Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md\n  - File exists ✅\n\n- Step 4 — Formatting normalization\n  - Determined note is effectively empty (template-only: frontmatter + section skeleton + tasks block)\n  - Per instructions: skipped formatting normalization and proceeded to comment insertion\n\n- Step 4.5 — Reminders (from REMINDERS.md on VPS)\n  - Matches for 2026-03-17: none → no Reminders subsection added\n\n- Step 5 — `[[clawdbot]]` comment\n  - Found existing `[[clawdbot]]` section in the template\n  - Replaced the blank placeholder entry under `[[clawdbot]]` with exactly one entry for TARGET_DATE (2026-03-17), including:\n    - Timestamp (NYC): 2026-03-17 23:00:34 EDT\n    - Patterns / what I notice (3 bullets)\n    - Experiments (next 7 days) (4 bullets)\n  - Verified by re-reading the `[[clawdbot]]` section + tail: content is present ✅"
     },
     {
       "id": "research",
@@ -173,17 +173,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773716400031,
-      "lastStatus": "ok",
-      "lastDurationMs": 199113,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "Nightly journal task (Nikola) — SUCCESS\n\n- Preconditions\n  - Mac node “Andreas MacBook” connected: YES\n\n- Time computation (via /usr/bin/python3 on Mac; America/New_York)\n  - CURRENT_TS (NYC): 2026-03-16 23:00:13 EDT\n  - TARGET_DATE (rule: before noon ⇒ yesterday): 2026-03-16\n\n- Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-16.md\n  - File present and non-empty: YES\n\n- Step 4 — Formatting normalization (python3-only file ops)\n  - Applied:\n    - Tabs → spaces\n    - List markers normalized to “-”\n    - Tightened blank lines inside list blocks\n    - Ensured content after [[stream of consciousness]] is properly nested as list items\n  - Wrote changes back: YES\n\n- Step 4.5 — Reminders injection\n  - Source checked: /home/clawd/.openclaw/workspace-km/REMINDERS.md\n  - Active reminders matching 2026-03-16: NONE (so no Reminders subsection added)\n\n- Step 5 — [[clawdbot]] comment\n  - Located existing section: “- [[clawdbot]]”\n  - Added exactly one entry for TARGET_DATE under [[clawdbot]] (and verified by re-read):\n    - Date entry: 2026-03-16\n    - Included required subsections:\n      - Timestamp (NYC): 2026-03-16 23:00:13 EDT\n      - Patterns / what I notice\n      - Experiments (next 7 days)\n    - Included optional sections used:\n      - Readwise (with quoted highlight text + book/podcast title; no share links)\n      - Further reading (2 evidence-forward links with relevance)",
-      "nextRunAt": 1773802800000,
+      "lastRunAt": 1773802800024,
+      "lastStatus": "error",
+      "lastDurationMs": 123075,
+      "consecutiveErrors": 1,
+      "lastError": "⚠️ 📝 Edit: `in ~/.openclaw/workspace-km/.learnings/ERRORS.md (674 chars)` failed",
+      "lastSummary": "- Preconditions\n  - Andreas MacBook node: connected ✅\n\n- Step 1 — CURRENT_TS (America/New_York, computed via `/usr/bin/python3` on Mac)\n  - CURRENT_TS: 2026-03-17 23:00:34 EDT\n\n- Step 2 — TARGET_DATE logic\n  - CURRENT_TS is 23:00:34 (between 12:00:00–23:59:59) → TARGET_DATE = today (NYC)\n  - TARGET_DATE: 2026-03-17\n\n- Step 3 — Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md\n  - File exists ✅\n\n- Step 4 — Formatting normalization\n  - Determined note is effectively empty (template-only: frontmatter + section skeleton + tasks block)\n  - Per instructions: skipped formatting normalization and proceeded to comment insertion\n\n- Step 4.5 — Reminders (from REMINDERS.md on VPS)\n  - Matches for 2026-03-17: none → no Reminders subsection added\n\n- Step 5 — `[[clawdbot]]` comment\n  - Found existing `[[clawdbot]]` section in the template\n  - Replaced the blank placeholder entry under `[[clawdbot]]` with exactly one entry for TARGET_DATE (2026-03-17), including:\n    - Timestamp (NYC): 2026-03-17 23:00:34 EDT\n    - Patterns / what I notice (3 bullets)\n    - Experiments (next 7 days) (4 bullets)\n  - Verified by re-reading the `[[clawdbot]]` section + tail: content is present ✅",
+      "nextRunAt": 1773889200000,
       "model": null,
-      "lastTotalTokens": 25292,
-      "lastInputTokens": 26962,
-      "lastOutputTokens": 9203
+      "lastTotalTokens": 14233,
+      "lastInputTokens": 15697,
+      "lastOutputTokens": 4891
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -209,17 +209,17 @@
       "schedule": "10 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773717000020,
+      "lastRunAt": 1773803400017,
       "lastStatus": "ok",
-      "lastDurationMs": 99059,
+      "lastDurationMs": 100781,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-16T23:10:09-04:00\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Auto-generated artifacts refreshed:\n    - `workspace/unfair-advantage/NYC Senior Marketing Manager - Job Pipeline.md` (job pipeline refresh)\n    - `workspace/clawdbot-dashboard/data.json`\n  - KM triage queue updated (overwritten):\n    - `workspace-km/triage/queue.json`\n\n- Worked\n  - Cron activity (last ~24h; from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `clawdbot:daily-ops-journal` (jobId: a8c1dd0d-feb9-4882-9cfb-a49526c169d7) — OK (delivered)\n      - Wrote a previous daily ops journal entry; also flagged a possible cron telemetry gap at that time.\n    - `clawdbot:auto-update` (jobId: c621238c-158e-4342-90c7-9ebb9f8ab0a3) — OK (not delivered)\n      - 1st attempt: SKIP due to transient gateway WS close (1000) while running `openclaw cron status`.\n      - 2nd attempt: NOOP (already up to date). Gateway status later OK.\n    - `infraops:security-preflight` (jobId: 5a45f0e7-fed2-450e-91e5-e205656cc8c2) — OK (delivered)\n      - Reported blockers: incomplete deep audit due to gateway auth/scope limitations, weak fallback model listed (`openai-codex/gpt-4o-mini`), and empty `gateway.nodes.denyCommands`.\n    - `km:triage-extractor` (jobId: a0f40418-7c03-4c36-876f-f0a2504da4bc) — OK (delivered)\n      - Parsed Mac journal for **2026-03-15**, kept 12 non-trivial items, wrote `workspace-km/triage/queue.json`, removed `workspace-km/triage/journal-tmp.md`.\n    - `feature-builder:daily-build` (jobId: 461680fe-9815-4dc5-8a0a-5898316619f8) — OK (not delivered)\n      - Ran successfully; no delivered summary logged in the run record.\n    - `clawdbot:job-pipeline` (jobId: 03cf0eec-72cb-4012-87aa-aa0962b1a197) — OK (delivered)\n      - Found 1 new role: Navan — Senior Performance Marketing Manager (Part-time/Hourly).\n    - `km:nikola-nightly-journal` (jobId: c915b0d5-5160-45e8-8c57-a60d742a4640) — OK (delivered)\n     …",
-      "nextRunAt": 1773803400000,
+      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-18T03:10:25Z (generated; America/New_York date: 2026-03-17)\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Data/notes updated on disk (see “Worked”).\n\n- Worked\n  - Chat context\n    - Cron-triggered request: produce the Daily Ops Journal for today (America/New_York).\n  - Cron activity (last ~24h, from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `a8c1dd0d-feb9-4882-9cfb-a49526c169d7` — status: ok (this Daily Ops Journal run).\n    - `99b353aa-2921-4694-8da5-9074680234a2` — one run errored with “Message failed”, later run ok.\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` — status: ok.\n    - `a0f40418-7c03-4c36-876f-f0a2504da4bc` — status: ok.\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` — status: ok.\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` — status: error (“Edit … failed” in workspace-km).\n  - Noteworthy disk changes (last ~24h)\n    - `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/triage/queue.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/.learnings/ERRORS.md` updated.\n    - `/home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock` touched.\n\n- Failed/Flaky\n  - Cron `99b353aa-2921-4694-8da5-9074680234a2`: at least one run failed with “⚠️ ✉️ Message failed” before succeeding later.\n  - Cron `c915b0d5-5160-45e8-8c57-a60d742a4640`: failed attempting to edit `~/.openclaw/workspace-km/.learnings/ERRORS.md`.\n\n- Decisions\n  - None recorded.\n\n- Follow-ups\n  - Investigate why outbound messaging sometimes fails in cron (`⚠️ ✉️ Message failed`) — likely missing/invalid target routing in the cron environment.\n  - Investigate why edits to `workspace-km/.learnings/ERRORS.md` failed in cron `c915…` (permissions/path mismatch/concurrent write?).\n\n(Appended to: `/home/clawd/.openclaw/workspace/memory/2026-03-17.md`.)",
+      "nextRunAt": 1773889800000,
       "model": null,
-      "lastTotalTokens": 24803,
-      "lastInputTokens": 27956,
-      "lastOutputTokens": 4346
+      "lastTotalTokens": 26992,
+      "lastInputTokens": 38118,
+      "lastOutputTokens": 4530
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
