@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773871213348,
+  "updatedAt": 1773873008094,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 19,
+          "usedPercent": 33,
           "resetAt": 1773875231000
         },
         {
           "label": "Day",
-          "usedPercent": 8,
+          "usedPercent": 12,
           "resetAt": 1774457165000
         }
       ],
@@ -37,25 +37,25 @@
       "id": "feature-builder",
       "name": "Q",
       "emoji": "⚡",
-      "activityKind": "cron",
-      "activityLabel": "feature-builder:morning-proposal",
-      "activityChannel": null,
-      "lastRunAt": 1773831600042,
+      "activityKind": "chat",
+      "activityLabel": "telegram message",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773871732181,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<tool_code>exec(command='read ~/.openclaw/cron/state/461680fe-9815-4dc5-8a0a-5898316619f8.json')</tool_code>"
+      "lastSummary": "<final>Yes. Here is today's build suggestion:\n\n**Automate your NYC job search.**\n\nI can build a script that runs daily to:\n1.  Search major job boards for \"Senior Marketing Manager\" roles in \"New York"
     },
     {
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "cron",
-      "activityLabel": "healthcheck:overnight-prescan",
-      "activityChannel": null,
-      "lastRunAt": 1773833985184,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"111\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 09:37 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773871674288,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`.\n\n[TASK_COMPLETE]"
+      "lastSummary": "I'd be happy to, but I'm not showing any pending approval requests from our conversation.\n\nOur last task was successfully completed on Tuesday when I patched the cron job scripts. There are no outstan"
     },
     {
       "id": "main",
@@ -64,10 +64,10 @@
       "activityKind": "chat",
       "activityLabel": "telegram message",
       "activityChannel": "telegram",
-      "lastRunAt": 1773871004558,
+      "lastRunAt": 1773871842070,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": null
+      "lastSummary": "Found it.\n\n`morning-briefing-tg.py` lives at:\n- `/home/clawd/.openclaw/workspace-feature-builder/morning-briefing-tg.py`\n\nThe thing that’s actually producing the daily “briefing” style message in cron"
     },
     {
       "id": "km",
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773871080021,
+      "lastRunAt": 1773872880024,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Parsed triage inputs:\n  - `queue_date`: `2026-03-17`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Title: `# Triage — 2026-03-17`\n  - Sections: Tasks / Protocols / Meta"
+      "lastSummary": "Wrote/overwrote the Obsidian staging note on **Andreas MacBook**:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n\nContents include:\n- Tasks: 2\n- Protocols: 5\n- Skipped: 2"
     },
     {
       "id": "research",
@@ -187,8 +187,8 @@
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
-      "name": "km:weekly-readwise-indexer",
-      "schedule": "30 2 * * 0",
+      "name": "km:daily-readwise-indexer",
+      "schedule": "0 22 * * *",
       "tz": "America/New_York",
       "enabled": true,
       "lastRunAt": 1773556200051,
@@ -197,29 +197,11 @@
       "consecutiveErrors": 1,
       "lastError": "Error: All models failed (2): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | google-gemini-cli/gemini-2.0-flash: Cloud Code Assist API error (404): Requested entity was not found. (model_not_found)",
       "lastSummary": null,
-      "nextRunAt": 1774161000000,
+      "nextRunAt": 1773885600000,
       "model": null,
       "lastTotalTokens": 6213,
       "lastInputTokens": 6284,
       "lastOutputTokens": 142
-    },
-    {
-      "id": "a8c1dd0d-feb9-4882-9cfb-a49526c169d7",
-      "name": "clawdbot:daily-ops-journal",
-      "schedule": "10 23 * * *",
-      "tz": "America/New_York",
-      "enabled": true,
-      "lastRunAt": 1773803400017,
-      "lastStatus": "ok",
-      "lastDurationMs": 100781,
-      "consecutiveErrors": 0,
-      "lastError": null,
-      "lastSummary": "## Clawdbot Daily Ops Journal\n\n- Timestamp: 2026-03-18T03:10:25Z (generated; America/New_York date: 2026-03-17)\n\n- Shipped/Changed\n  - No git commits in `/home/clawd/.openclaw/workspace` in the last 24h.\n  - Data/notes updated on disk (see “Worked”).\n\n- Worked\n  - Chat context\n    - Cron-triggered request: produce the Daily Ops Journal for today (America/New_York).\n  - Cron activity (last ~24h, from `/home/clawd/.openclaw/cron/runs/*.jsonl`)\n    - `a8c1dd0d-feb9-4882-9cfb-a49526c169d7` — status: ok (this Daily Ops Journal run).\n    - `99b353aa-2921-4694-8da5-9074680234a2` — one run errored with “Message failed”, later run ok.\n    - `5a45f0e7-fed2-450e-91e5-e205656cc8c2` — status: ok.\n    - `a0f40418-7c03-4c36-876f-f0a2504da4bc` — status: ok.\n    - `461680fe-9815-4dc5-8a0a-5898316619f8` — status: ok.\n    - `c915b0d5-5160-45e8-8c57-a60d742a4640` — status: error (“Edit … failed” in workspace-km).\n  - Noteworthy disk changes (last ~24h)\n    - `/home/clawd/.openclaw/workspace/clawdbot-dashboard/data.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/triage/queue.json` updated.\n    - `/home/clawd/.openclaw/workspace-km/.learnings/ERRORS.md` updated.\n    - `/home/clawd/.openclaw/workspace/memory/openclaw-auto-update.lock` touched.\n\n- Failed/Flaky\n  - Cron `99b353aa-2921-4694-8da5-9074680234a2`: at least one run failed with “⚠️ ✉️ Message failed” before succeeding later.\n  - Cron `c915b0d5-5160-45e8-8c57-a60d742a4640`: failed attempting to edit `~/.openclaw/workspace-km/.learnings/ERRORS.md`.\n\n- Decisions\n  - None recorded.\n\n- Follow-ups\n  - Investigate why outbound messaging sometimes fails in cron (`⚠️ ✉️ Message failed`) — likely missing/invalid target routing in the cron environment.\n  - Investigate why edits to `workspace-km/.learnings/ERRORS.md` failed in cron `c915…` (permissions/path mismatch/concurrent write?).\n\n(Appended to: `/home/clawd/.openclaw/workspace/memory/2026-03-17.md`.)",
-      "nextRunAt": 1773889800000,
-      "model": null,
-      "lastTotalTokens": 26992,
-      "lastInputTokens": 38118,
-      "lastOutputTokens": 4530
     },
     {
       "id": "c621238c-158e-4342-90c7-9ebb9f8ab0a3",
@@ -299,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773871080021,
+      "lastRunAt": 1773872880024,
       "lastStatus": "ok",
-      "lastDurationMs": 22916,
+      "lastDurationMs": 22534,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Parsed triage inputs:\n  - `queue_date`: `2026-03-17`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Title: `# Triage — 2026-03-17`\n  - Sections: Tasks / Protocols / Meta",
-      "nextRunAt": 1773871200000,
+      "lastSummary": "Wrote/overwrote the Obsidian staging note on **Andreas MacBook**:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n\nContents include:\n- Tasks: 2\n- Protocols: 5\n- Skipped: 2",
+      "nextRunAt": 1773873000000,
       "model": null,
-      "lastTotalTokens": 8708,
-      "lastInputTokens": 2736,
-      "lastOutputTokens": 942
+      "lastTotalTokens": 8516,
+      "lastInputTokens": 2833,
+      "lastOutputTokens": 709
     }
   ]
 }
