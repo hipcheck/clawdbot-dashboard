@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773867607137,
+  "updatedAt": 1773869408002,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
-          "resetAt": 1773875231000
+          "usedPercent": 13,
+          "resetAt": 1773875230000
         },
         {
           "label": "Day",
-          "usedPercent": 5,
+          "usedPercent": 6,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773867480018,
-      "lastStatus": "error",
-      "lastError": "⚠️ 📱 Nodes: `c43051b43ece5404b37d432e0b480eba7a587df53fbedc603e5fe98fec741daf` failed",
-      "lastSummary": "- Wrote/overwrote staging note on **Andreas MacBook**: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
+      "lastRunAt": 1773869280034,
+      "lastStatus": "ok",
+      "lastError": null,
+      "lastSummary": "- Parsed `queue_date`: `2026-03-17`\n- Decisions summary:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Wrote/overwrote staging note on Andreas MacBook:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
     },
     {
       "id": "research",
@@ -299,17 +299,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773867480018,
-      "lastStatus": "error",
-      "lastDurationMs": 48168,
-      "consecutiveErrors": 1,
-      "lastError": "⚠️ 📱 Nodes: `c43051b43ece5404b37d432e0b480eba7a587df53fbedc603e5fe98fec741daf` failed",
-      "lastSummary": "- Wrote/overwrote staging note on **Andreas MacBook**: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
-      "nextRunAt": 1773867600000,
+      "lastRunAt": 1773869280034,
+      "lastStatus": "ok",
+      "lastDurationMs": 21181,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "- Parsed `queue_date`: `2026-03-17`\n- Decisions summary:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Wrote/overwrote staging note on Andreas MacBook:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
+      "nextRunAt": 1773869400000,
       "model": null,
-      "lastTotalTokens": 8976,
-      "lastInputTokens": 4498,
-      "lastOutputTokens": 1091
+      "lastTotalTokens": 8584,
+      "lastInputTokens": 2948,
+      "lastOutputTokens": 780
     }
   ]
 }
