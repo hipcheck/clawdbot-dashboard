@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773833406468,
+  "updatedAt": 1773835210385,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 3,
+          "usedPercent": 10,
           "resetAt": 1773839225000
         },
         {
           "label": "Day",
-          "usedPercent": 55,
+          "usedPercent": 57,
           "resetAt": 1773852278000
         }
       ],
@@ -50,12 +50,12 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773831000041,
+      "lastRunAt": 1773833985184,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL\n\n**Security Preflight Analysis:**\n\n*   **Gateway Probe Failure (CRITICAL):** The `openclaw security audit --deep` command failed its gateway probe due to a missing `operator.read` scope. This indicates a potentially misconfigured or outdated authentication token, preventing security tools from fully inspecting the running gateway process.\n\n*   **Weak Fallback Model (WARN):** The `main` agent configuration includes `openai-codex/gpt-4o-mini` in its fallback list. While functional, this model is below the recommended tier for tool-using agents, increasing susceptibility to prompt injection.\n\n*   **Empty Node Command Denylist (INFO):** The `gateway.nodes.denyCommands` array is currently empty. While not an immediate failure, this means there is no pre-emptive blocklist for dangerous commands that could be run on paired nodes. This is a missed defense-in-depth opportunity.\n\n**Recommended Patches:**\n\n1.  **Regenerate Gateway Auth Token:** The gateway token is likely missing required scopes. Regenerate it to ensure security audits can run completely.\n    ```bash\n    # Run this on the VPS where the gateway is running\n    openclaw gateway token --scopes operator.read,agent.run,agent.read --json > .new-token.json\n    ```\n    Then, manually update the `gateway.auth.token` value in `openclaw.json` with the new token from `.new-token.json`.\n\n2.  **Upgrade Fallback Model:** To harden the `main` agent, replace the weak fallback model with a more robust one.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"openai-codex/gpt-4o-mini\",\n\n    // \"newText\":\n    \"anthropic/claude-3.5-sonnet\",\n    ```\n\n3.  **Populate Node Denylist:** Add common destructive commands to the node denylist as a baseline safeguard.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"denyCommands\": []\n\n    // \"newText\":\n    \"denyCommands\": [\n        \"rm -rf /\",\n        \"dd if=/dev/zero\",\n        \":(){ :|:& };:\",\n        \"mkfs.ext4 /dev/…"
+      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`.\n\n[TASK_COMPLETE]"
     },
     {
       "id": "main",
@@ -74,12 +74,12 @@
       "name": "Nikola",
       "emoji": "🧠",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"249\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-18 11:57 UTC\"\n}\n```\n\nSender (untrusted metad",
       "activityChannel": "telegram",
-      "lastRunAt": 1773831169887,
+      "lastRunAt": 1773835081752,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Reran and updated **2026-03-17** successfully.\n\n- File: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md`\n- Did a full formatting normalization pass first (tabs → spaces, `*` → `-`, strea"
+      "lastSummary": "Manual (one-time) first — here are the **task** + **protocol/project** items extracted for **2026-03-17** (from `triage/queue.json`):\n\n- **Tasks (suggested_bucket=task)**\n  - Research the possibility "
     },
     {
       "id": "research",
@@ -119,17 +119,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773732600018,
+      "lastRunAt": 1773833985184,
       "lastStatus": "ok",
-      "lastDurationMs": 422631,
+      "lastDurationMs": 190339,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`. I've summarized the gateway status, security audit, update status, and cron health. No critical issues were found.",
+      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`.\n\n[TASK_COMPLETE]",
       "nextRunAt": 1773905400000,
       "model": null,
-      "lastTotalTokens": 8231,
-      "lastInputTokens": 18926,
-      "lastOutputTokens": 1175
+      "lastTotalTokens": 7865,
+      "lastInputTokens": 21888,
+      "lastOutputTokens": 720
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -292,6 +292,24 @@
       "lastTotalTokens": 13401,
       "lastInputTokens": 11922,
       "lastOutputTokens": 2735
+    },
+    {
+      "id": "27a1354d-a66d-4b09-a6c7-bc60317f60c3",
+      "name": "km:triage-swipe-sync",
+      "schedule": "*/2 * * * *",
+      "tz": "America/New_York",
+      "enabled": true,
+      "lastRunAt": 1773835080026,
+      "lastStatus": "ok",
+      "lastDurationMs": 23680,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "- Wrote/overwrote staging note on **Andreas MacBook**: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
+      "nextRunAt": 1773835200000,
+      "model": null,
+      "lastTotalTokens": 8619,
+      "lastInputTokens": 2719,
+      "lastOutputTokens": 804
     }
   ]
 }
