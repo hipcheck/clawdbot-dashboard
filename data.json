@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773835210385,
+  "updatedAt": 1773837006018,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 10,
+          "usedPercent": 12,
           "resetAt": 1773839225000
         },
         {
           "label": "Day",
-          "usedPercent": 57,
+          "usedPercent": 58,
           "resetAt": 1773852278000
         }
       ],
@@ -73,13 +73,13 @@
       "id": "km",
       "name": "Nikola",
       "emoji": "🧠",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"249\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Wed 2026-03-18 11:57 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773835081752,
+      "activityKind": "cron",
+      "activityLabel": "km:triage-swipe-sync",
+      "activityChannel": null,
+      "lastRunAt": 1773836880032,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Manual (one-time) first — here are the **task** + **protocol/project** items extracted for **2026-03-17** (from `triage/queue.json`):\n\n- **Tasks (suggested_bucket=task)**\n  - Research the possibility "
+      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
     },
     {
       "id": "research",
@@ -299,17 +299,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773835080026,
+      "lastRunAt": 1773836880032,
       "lastStatus": "ok",
-      "lastDurationMs": 23680,
+      "lastDurationMs": 22042,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote staging note on **Andreas MacBook**: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
-      "nextRunAt": 1773835200000,
+      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
+      "nextRunAt": 1773837000000,
       "model": null,
-      "lastTotalTokens": 8619,
-      "lastInputTokens": 2719,
-      "lastOutputTokens": 804
+      "lastTotalTokens": 8494,
+      "lastInputTokens": 3798,
+      "lastOutputTokens": 747
     }
   ]
 }
