@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773855006897,
+  "updatedAt": 1773856806868,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 18,
-          "resetAt": 1773857228000
+          "usedPercent": 20,
+          "resetAt": 1773857229000
         },
         {
           "label": "Day",
-          "usedPercent": 1,
+          "usedPercent": 2,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773854880084,
+      "lastRunAt": 1773856680032,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Parsed `queue_date`: `2026-03-17`\n- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Counts:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
+      "lastSummary": "- Wrote/overwrote: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
     },
     {
       "id": "research",
@@ -299,17 +299,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773854880084,
+      "lastRunAt": 1773856680032,
       "lastStatus": "ok",
-      "lastDurationMs": 17861,
+      "lastDurationMs": 25305,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Parsed `queue_date`: `2026-03-17`\n- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Counts:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
-      "nextRunAt": 1773855000000,
+      "lastSummary": "- Wrote/overwrote: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
+      "nextRunAt": 1773856800000,
       "model": null,
-      "lastTotalTokens": 8486,
-      "lastInputTokens": 2525,
-      "lastOutputTokens": 689
+      "lastTotalTokens": 8777,
+      "lastInputTokens": 3015,
+      "lastOutputTokens": 953
     }
   ]
 }
