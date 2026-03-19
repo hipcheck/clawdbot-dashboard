@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773901808184,
+  "updatedAt": 1773903609483,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 9,
+          "usedPercent": 11,
           "resetAt": 1773911288000
         },
         {
           "label": "Day",
-          "usedPercent": 21,
+          "usedPercent": 22,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773901680021,
+      "lastRunAt": 1773903480019,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Done — wrote/overwrote `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md` on Andreas MacBook from the current swipe decisions (Tasks: 2, Protocols: 5, Skipped: 2)."
+      "lastSummary": "- Parsed `queue_date`: `2026-03-17`\n- Decisions → staging note written (overwritten/idempotent) on **Andreas MacBook** at:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Counts:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773901680021,
+      "lastRunAt": 1773903480019,
       "lastStatus": "ok",
-      "lastDurationMs": 26377,
+      "lastDurationMs": 25613,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Done — wrote/overwrote `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md` on Andreas MacBook from the current swipe decisions (Tasks: 2, Protocols: 5, Skipped: 2).",
-      "nextRunAt": 1773901800000,
+      "lastSummary": "- Parsed `queue_date`: `2026-03-17`\n- Decisions → staging note written (overwritten/idempotent) on **Andreas MacBook** at:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Counts:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
+      "nextRunAt": 1773903600000,
       "model": null,
-      "lastTotalTokens": 8613,
-      "lastInputTokens": 3797,
-      "lastOutputTokens": 797
+      "lastTotalTokens": 8513,
+      "lastInputTokens": 2685,
+      "lastOutputTokens": 722
     }
   ]
 }
