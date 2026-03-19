@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773928809330,
+  "updatedAt": 1773930609618,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 26,
-          "resetAt": 1773929287000
+          "usedPercent": 2,
+          "resetAt": 1773947289000
         },
         {
           "label": "Day",
-          "usedPercent": 32,
+          "usedPercent": 33,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773928680035,
+      "lastRunAt": 1773930480016,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Completed triage swipe sync: wrote (overwrote) the staging note on Andreas MacBook at:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\nContent includes empty Tasks/Protocols (no matching decisions for current queue items) and:\n\n- Skipped: 0"
+      "lastSummary": "Wrote/overwrote the Triage staging note on **Andreas MacBook**:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n- Result (from current `decisions.json` + `queue.json`):\n  - Tasks: 0 (no decision IDs matched items in the queue)\n  - Protocols: 0 (no decision IDs matched items in the queue)\n  - Skipped: 2"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773928680035,
+      "lastRunAt": 1773930480016,
       "lastStatus": "ok",
-      "lastDurationMs": 16929,
+      "lastDurationMs": 31585,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Completed triage swipe sync: wrote (overwrote) the staging note on Andreas MacBook at:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\nContent includes empty Tasks/Protocols (no matching decisions for current queue items) and:\n\n- Skipped: 0",
-      "nextRunAt": 1773928800000,
+      "lastSummary": "Wrote/overwrote the Triage staging note on **Andreas MacBook**:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n- Result (from current `decisions.json` + `queue.json`):\n  - Tasks: 0 (no decision IDs matched items in the queue)\n  - Protocols: 0 (no decision IDs matched items in the queue)\n  - Skipped: 2",
+      "nextRunAt": 1773930600000,
       "model": null,
-      "lastTotalTokens": 11501,
-      "lastInputTokens": 5124,
-      "lastOutputTokens": 520
+      "lastTotalTokens": 11886,
+      "lastInputTokens": 5992,
+      "lastOutputTokens": 883
     }
   ]
 }
