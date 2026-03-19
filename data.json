@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773921609189,
+  "updatedAt": 1773923408833,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
+          "usedPercent": 18,
           "resetAt": 1773929287000
         },
         {
           "label": "Day",
-          "usedPercent": 28,
+          "usedPercent": 30,
           "resetAt": 1774457165000
         }
       ],
@@ -50,24 +50,24 @@
       "name": "Geordi",
       "emoji": "🔧",
       "activityKind": "cron",
-      "activityLabel": "healthcheck:security-preflight",
+      "activityLabel": "healthcheck:overnight-prescan",
       "activityChannel": null,
-      "lastRunAt": 1773917400015,
+      "lastRunAt": 1773922865397,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "FAIL\n\nSecurity preflight check discovered 2 primary issues preventing a PASS status.\n\n*   **Gateway Unreachable for Deep Audit**: The security audit could not complete a deep scan (`gateway.probe_failed`) because the CLI's API token is missing the `operator.read` scope. This prevents a full assessment of the gateway's status and configuration.\n*   **Weak Fallback Model**: The `main` agent is configured to fall back to `gpt-4o-mini`, a model below the recommended tier for an agent with its capabilities, increasing the risk of undesirable behavior.\n\n---\n**Configuration Patch Suggestions**\n\nTo resolve these issues, apply the following patches to `/home/clawd/.openclaw/openclaw.json`:\n\n1.  **Fix Gateway Scope Issue**: Replace the simple gateway auth token with an explicit key definition that grants all scopes.\n    *   **Find**:\n        ```json\n          \"auth\": {\n            \"mode\": \"token\",\n            \"token\": \"OPENCLAW_TOKEN_REDACTED\"\n          },\n        ```\n    *   **Replace with**:\n        ```json\n          \"auth\": {\n            \"mode\": \"token\",\n            \"keys\": [\n              {\n                \"key\": \"OPENCLAW_TOKEN_REDACTED\",\n                \"scopes\": [\n                  \"*\"\n                ],\n                \"description\": \"Primary gateway key\"\n              }\n            ]\n          },\n        ```\n\n2.  **Remove Weak Fallback Model**: Remove the insecure model from the `main` agent's fallback list.\n    *   **Find**:\n        ```json\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-4o-mini\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n        ```\n    *   **Replace with**:\n        ```json\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n        ```\n\n**Ot…"
+      "lastSummary": "Nightly prescan complete. I've written the report to `/tmp/openclaw_prescan_summary.md`. No critical issues were found."
     },
     {
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "cron",
-      "activityLabel": "infraops:openclaw-auto-update",
-      "activityChannel": null,
-      "lastRunAt": 1773891900061,
+      "activityKind": "chat",
+      "activityLabel": "json\n{\n  \"message_id\": \"587\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Thu 2026-03-19 12:22 UTC\"\n}\n```\n\nSender (untrusted metad",
+      "activityChannel": "telegram",
+      "lastRunAt": 1773922998789,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now."
+      "lastSummary": "Yep — I’m here.\n\nYour **daily notes triage is ready**. The triage extractor ran successfully and built today’s queue:\n\n- Date: **2026-03-18** (yesterday, NYC)\n- Journal file found: `/Users/andreasallm"
     },
     {
       "id": "km",
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773921480014,
+      "lastRunAt": 1773922800042,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Wrote/overwrote the Triage staging note on **Andreas MacBook**:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\n(Queue date: `2026-03-18`; no matching task/protocol decisions found for the current queue, so Tasks/Protocols are empty; Skipped: 0.)"
+      "lastSummary": "- Read:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json` (queue_date = `2026-03-18`)\n  - `/home/clawd/.openclaw/workspace-km/triage/decisions.json` (present)\n- Computed from `decisions.json` *matched against current queue item ids*:\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n- Mac node status: **online**\n- Wrote/overwrote staging note (idempotent):\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`"
     },
     {
       "id": "research",
@@ -119,17 +119,17 @@
       "schedule": "30 3 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773833985184,
+      "lastRunAt": 1773922865397,
       "lastStatus": "ok",
-      "lastDurationMs": 190339,
+      "lastDurationMs": 490960,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`.\n\n[TASK_COMPLETE]",
+      "lastSummary": "Nightly prescan complete. I've written the report to `/tmp/openclaw_prescan_summary.md`. No critical issues were found.",
       "nextRunAt": 1773991800000,
       "model": null,
-      "lastTotalTokens": 7865,
-      "lastInputTokens": 21888,
-      "lastOutputTokens": 720
+      "lastTotalTokens": 14985,
+      "lastInputTokens": 27588,
+      "lastOutputTokens": 1470
     },
     {
       "id": "5a45f0e7-fed2-450e-91e5-e205656cc8c2",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773921480014,
+      "lastRunAt": 1773922800042,
       "lastStatus": "ok",
-      "lastDurationMs": 23438,
+      "lastDurationMs": 26180,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Wrote/overwrote the Triage staging note on **Andreas MacBook**:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\n(Queue date: `2026-03-18`; no matching task/protocol decisions found for the current queue, so Tasks/Protocols are empty; Skipped: 0.)",
-      "nextRunAt": 1773921600000,
+      "lastSummary": "- Read:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json` (queue_date = `2026-03-18`)\n  - `/home/clawd/.openclaw/workspace-km/triage/decisions.json` (present)\n- Computed from `decisions.json` *matched against current queue item ids*:\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n- Mac node status: **online**\n- Wrote/overwrote staging note (idempotent):\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`",
+      "nextRunAt": 1773923400000,
       "model": null,
-      "lastTotalTokens": 11743,
-      "lastInputTokens": 5804,
-      "lastOutputTokens": 810
+      "lastTotalTokens": 11515,
+      "lastInputTokens": 5987,
+      "lastOutputTokens": 620
     }
   ]
 }
