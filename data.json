@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773918009441,
+  "updatedAt": 1773919808861,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 8,
+          "usedPercent": 10,
           "resetAt": 1773929287000
         },
         {
           "label": "Day",
-          "usedPercent": 26,
+          "usedPercent": 27,
           "resetAt": 1774457165000
         }
       ],
@@ -38,12 +38,12 @@
       "name": "Q",
       "emoji": "⚡",
       "activityKind": "chat",
-      "activityLabel": "telegram message",
+      "activityLabel": "json\n{\n  \"message_id\": \"576\",\n  \"reply_to_id\": \"575\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Thu 2026-03-19 11:07 UTC\",\n  \"ha",
       "activityChannel": "telegram",
-      "lastRunAt": 1773871732181,
+      "lastRunAt": 1773918482599,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "<final>Yes. Here is today's build suggestion:\n\n**Automate your NYC job search.**\n\nI can build a script that runs daily to:\n1.  Search major job boards for \"Senior Marketing Manager\" roles in \"New York"
+      "lastSummary": "<final>Yes. The current plan already works for the Apple Watch.\n\nNotifications sent to the iPhone are automatically mirrored to a paired Apple Watch. The flashcard will appear on your wrist without an"
     },
     {
       "id": "infraops",
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773917880031,
+      "lastRunAt": 1773919680020,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Parsed `queue_date` from `queue.json`: `2026-03-18`\n- Loaded `decisions.json` and matched decisions against the queue item IDs\n  - Matches found: 0 (the IDs in `decisions.json` don’t correspond to the current queue’s item IDs)\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n- Mac node `Andreas MacBook` is online\n- Wrote (overwrote) staging note (idempotent):\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`"
+      "lastSummary": "- Queue date: `2026-03-18`\n- Decisions file present and parsed.\n- Mac node `Andreas MacBook` is online.\n- Wrote (overwrote) staging note:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n\nNote: none of the `decisions.json` IDs matched the current `queue.json` item IDs, so nothing was slotted into Tasks/Protocols/Skipped this run."
     },
     {
       "id": "research",
@@ -101,17 +101,17 @@
       "schedule": "0 7 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773831600042,
+      "lastRunAt": 1773918000018,
       "lastStatus": "ok",
-      "lastDurationMs": 17540,
+      "lastDurationMs": 317687,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "<tool_code>exec(command='read ~/.openclaw/cron/state/461680fe-9815-4dc5-8a0a-5898316619f8.json')</tool_code>",
-      "nextRunAt": 1773918000000,
+      "lastSummary": "## 🔨 Today's Build\n\n**Job Interview Flashcards on Your Wrist**\n\n**Signal:** The DEV.to post \"[Anki On My Wrist](https://dev.to/matheusmaldaner/anki-on-my-wrist-3gi6)\" (2026-03-18) shows a trend of personal knowledge systems on wearable devices.\n\n**Why Andreas:** This directly supports his active NYC job search by turning interview prep into an automated, daily micro-habit.\n\n**Impact:** Higher recall of key facts, talking points, and stories during interviews, leading to better performance.\n**Risk:** The content of the flashcards might become stale or too generic; requires a good content pipeline.\n**Effort:** 2-3 hours for a v1.\n\n**First 3 steps:**\n1. Create a simple text file (`interview_flashcards.txt`) with 10-15 key talking points, one per line.\n2. Write a shell script that reads one random line from the file.\n3. Use `nodes notify` to send the selected line to his iPhone with the title \"Interview Prep\".\n\n**Done looks like:** A daily cron job successfully sends one interview talking point to his iPhone each morning.",
+      "nextRunAt": 1774004400000,
       "model": "google-gemini-cli/gemini-2.5-pro",
-      "lastTotalTokens": 5207,
-      "lastInputTokens": 5207,
-      "lastOutputTokens": 1677
+      "lastTotalTokens": 18418,
+      "lastInputTokens": 23851,
+      "lastOutputTokens": 3974
     },
     {
       "id": "99b353aa-2921-4694-8da5-9074680234a2",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773917880031,
+      "lastRunAt": 1773919680020,
       "lastStatus": "ok",
-      "lastDurationMs": 30273,
+      "lastDurationMs": 26219,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Parsed `queue_date` from `queue.json`: `2026-03-18`\n- Loaded `decisions.json` and matched decisions against the queue item IDs\n  - Matches found: 0 (the IDs in `decisions.json` don’t correspond to the current queue’s item IDs)\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n- Mac node `Andreas MacBook` is online\n- Wrote (overwrote) staging note (idempotent):\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`",
-      "nextRunAt": 1773918000000,
+      "lastSummary": "- Queue date: `2026-03-18`\n- Decisions file present and parsed.\n- Mac node `Andreas MacBook` is online.\n- Wrote (overwrote) staging note:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n\nNote: none of the `decisions.json` IDs matched the current `queue.json` item IDs, so nothing was slotted into Tasks/Protocols/Skipped this run.",
+      "nextRunAt": 1773919800000,
       "model": null,
-      "lastTotalTokens": 11788,
-      "lastInputTokens": 6078,
-      "lastOutputTokens": 877
+      "lastTotalTokens": 11578,
+      "lastInputTokens": 5827,
+      "lastOutputTokens": 708
     }
   ]
 }
