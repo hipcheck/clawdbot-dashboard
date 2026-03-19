@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773905407785,
+  "updatedAt": 1773907209458,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 13,
+          "usedPercent": 15,
           "resetAt": 1773911288000
         },
         {
           "label": "Day",
-          "usedPercent": 22,
+          "usedPercent": 23,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773905280040,
+      "lastRunAt": 1773907081541,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Wrote/overwrote the staging note on Andreas MacBook:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n\nContents include:\n- Tasks: 2\n- Protocols: 5\n- Skipped: 2"
+      "lastSummary": "Wrote/overwrote the triage staging note on Andreas MacBook:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Contents include:\n  - Tasks (2)\n  - Protocols (5)\n  - Meta: Skipped (2)"
     },
     {
       "id": "research",
@@ -125,7 +125,7 @@
       "consecutiveErrors": 0,
       "lastError": null,
       "lastSummary": "Report generated at `/tmp/openclaw_prescan_summary.md`.\n\n[TASK_COMPLETE]",
-      "nextRunAt": 1773905400000,
+      "nextRunAt": 1773991800000,
       "model": null,
       "lastTotalTokens": 7865,
       "lastInputTokens": 21888,
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773905280040,
+      "lastRunAt": 1773907081541,
       "lastStatus": "ok",
-      "lastDurationMs": 23059,
+      "lastDurationMs": 20957,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Wrote/overwrote the staging note on Andreas MacBook:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n\nContents include:\n- Tasks: 2\n- Protocols: 5\n- Skipped: 2",
-      "nextRunAt": 1773905400000,
+      "lastSummary": "Wrote/overwrote the triage staging note on Andreas MacBook:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Contents include:\n  - Tasks (2)\n  - Protocols (5)\n  - Meta: Skipped (2)",
+      "nextRunAt": 1773907200000,
       "model": null,
-      "lastTotalTokens": 8512,
-      "lastInputTokens": 2968,
-      "lastOutputTokens": 709
+      "lastTotalTokens": 8525,
+      "lastInputTokens": 2562,
+      "lastOutputTokens": 715
     }
   ]
 }
