@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773925208639,
+  "updatedAt": 1773927010217,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 21,
+          "usedPercent": 24,
           "resetAt": 1773929287000
         },
         {
           "label": "Day",
-          "usedPercent": 30,
+          "usedPercent": 31,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773925080022,
+      "lastRunAt": 1773926880033,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Wrote/overwrote staging note on **Andreas MacBook**:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\nResult this run (based on `decisions.json` matching current `queue.json` item IDs):\n- Tasks: 0\n- Protocols: 0\n- Skipped: 0"
+      "lastSummary": null
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773925080022,
+      "lastRunAt": 1773926880033,
       "lastStatus": "ok",
-      "lastDurationMs": 39496,
+      "lastDurationMs": 23304,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Wrote/overwrote staging note on **Andreas MacBook**:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\nResult this run (based on `decisions.json` matching current `queue.json` item IDs):\n- Tasks: 0\n- Protocols: 0\n- Skipped: 0",
-      "nextRunAt": 1773925200000,
+      "lastSummary": null,
+      "nextRunAt": 1773927000000,
       "model": null,
-      "lastTotalTokens": 12021,
-      "lastInputTokens": 6383,
-      "lastOutputTokens": 1029
+      "lastTotalTokens": 11702,
+      "lastInputTokens": 6908,
+      "lastOutputTokens": 659
     }
   ]
 }
