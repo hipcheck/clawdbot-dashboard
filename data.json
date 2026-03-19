@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773916208057,
+  "updatedAt": 1773918009441,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 5,
+          "usedPercent": 8,
           "resetAt": 1773929287000
         },
         {
@@ -49,13 +49,13 @@
       "id": "infraops",
       "name": "Geordi",
       "emoji": "🔧",
-      "activityKind": "chat",
-      "activityLabel": "json\n{\n  \"message_id\": \"111\",\n  \"sender_id\": \"1263595535\",\n  \"sender\": \"A A\",\n  \"timestamp\": \"Fri 2026-03-13 09:37 UTC\"\n}\n```\n\nSender (untrusted metad",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773871674288,
+      "activityKind": "cron",
+      "activityLabel": "healthcheck:security-preflight",
+      "activityChannel": null,
+      "lastRunAt": 1773917400015,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "I'd be happy to, but I'm not showing any pending approval requests from our conversation.\n\nOur last task was successfully completed on Tuesday when I patched the cron job scripts. There are no outstan"
+      "lastSummary": "FAIL\n\nSecurity preflight check discovered 2 primary issues preventing a PASS status.\n\n*   **Gateway Unreachable for Deep Audit**: The security audit could not complete a deep scan (`gateway.probe_failed`) because the CLI's API token is missing the `operator.read` scope. This prevents a full assessment of the gateway's status and configuration.\n*   **Weak Fallback Model**: The `main` agent is configured to fall back to `gpt-4o-mini`, a model below the recommended tier for an agent with its capabilities, increasing the risk of undesirable behavior.\n\n---\n**Configuration Patch Suggestions**\n\nTo resolve these issues, apply the following patches to `/home/clawd/.openclaw/openclaw.json`:\n\n1.  **Fix Gateway Scope Issue**: Replace the simple gateway auth token with an explicit key definition that grants all scopes.\n    *   **Find**:\n        ```json\n          \"auth\": {\n            \"mode\": \"token\",\n            \"token\": \"OPENCLAW_TOKEN_REDACTED\"\n          },\n        ```\n    *   **Replace with**:\n        ```json\n          \"auth\": {\n            \"mode\": \"token\",\n            \"keys\": [\n              {\n                \"key\": \"OPENCLAW_TOKEN_REDACTED\",\n                \"scopes\": [\n                  \"*\"\n                ],\n                \"description\": \"Primary gateway key\"\n              }\n            ]\n          },\n        ```\n\n2.  **Remove Weak Fallback Model**: Remove the insecure model from the `main` agent's fallback list.\n    *   **Find**:\n        ```json\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-4o-mini\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n        ```\n    *   **Replace with**:\n        ```json\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n        ```\n\n**Ot…"
     },
     {
       "id": "main",
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773916080040,
+      "lastRunAt": 1773917880031,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
+      "lastSummary": "- Parsed `queue_date` from `queue.json`: `2026-03-18`\n- Loaded `decisions.json` and matched decisions against the queue item IDs\n  - Matches found: 0 (the IDs in `decisions.json` don’t correspond to the current queue’s item IDs)\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n- Mac node `Andreas MacBook` is online\n- Wrote (overwrote) staging note (idempotent):\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`"
     },
     {
       "id": "research",
@@ -137,17 +137,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773831000041,
+      "lastRunAt": 1773917400015,
       "lastStatus": "ok",
-      "lastDurationMs": 129091,
+      "lastDurationMs": 207073,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "FAIL\n\n**Security Preflight Analysis:**\n\n*   **Gateway Probe Failure (CRITICAL):** The `openclaw security audit --deep` command failed its gateway probe due to a missing `operator.read` scope. This indicates a potentially misconfigured or outdated authentication token, preventing security tools from fully inspecting the running gateway process.\n\n*   **Weak Fallback Model (WARN):** The `main` agent configuration includes `openai-codex/gpt-4o-mini` in its fallback list. While functional, this model is below the recommended tier for tool-using agents, increasing susceptibility to prompt injection.\n\n*   **Empty Node Command Denylist (INFO):** The `gateway.nodes.denyCommands` array is currently empty. While not an immediate failure, this means there is no pre-emptive blocklist for dangerous commands that could be run on paired nodes. This is a missed defense-in-depth opportunity.\n\n**Recommended Patches:**\n\n1.  **Regenerate Gateway Auth Token:** The gateway token is likely missing required scopes. Regenerate it to ensure security audits can run completely.\n    ```bash\n    # Run this on the VPS where the gateway is running\n    openclaw gateway token --scopes operator.read,agent.run,agent.read --json > .new-token.json\n    ```\n    Then, manually update the `gateway.auth.token` value in `openclaw.json` with the new token from `.new-token.json`.\n\n2.  **Upgrade Fallback Model:** To harden the `main` agent, replace the weak fallback model with a more robust one.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"openai-codex/gpt-4o-mini\",\n\n    // \"newText\":\n    \"anthropic/claude-3.5-sonnet\",\n    ```\n\n3.  **Populate Node Denylist:** Add common destructive commands to the node denylist as a baseline safeguard.\n\n    *File: `/home/clawd/.openclaw/openclaw.json`*\n    ```json\n    // \"oldText\":\n    \"denyCommands\": []\n\n    // \"newText\":\n    \"denyCommands\": [\n        \"rm -rf /\",\n        \"dd if=/dev/zero\",\n        \":(){ :|:& };:\",\n        \"mkfs.ext4 /dev/…",
-      "nextRunAt": 1773917400000,
+      "lastSummary": "FAIL\n\nSecurity preflight check discovered 2 primary issues preventing a PASS status.\n\n*   **Gateway Unreachable for Deep Audit**: The security audit could not complete a deep scan (`gateway.probe_failed`) because the CLI's API token is missing the `operator.read` scope. This prevents a full assessment of the gateway's status and configuration.\n*   **Weak Fallback Model**: The `main` agent is configured to fall back to `gpt-4o-mini`, a model below the recommended tier for an agent with its capabilities, increasing the risk of undesirable behavior.\n\n---\n**Configuration Patch Suggestions**\n\nTo resolve these issues, apply the following patches to `/home/clawd/.openclaw/openclaw.json`:\n\n1.  **Fix Gateway Scope Issue**: Replace the simple gateway auth token with an explicit key definition that grants all scopes.\n    *   **Find**:\n        ```json\n          \"auth\": {\n            \"mode\": \"token\",\n            \"token\": \"OPENCLAW_TOKEN_REDACTED\"\n          },\n        ```\n    *   **Replace with**:\n        ```json\n          \"auth\": {\n            \"mode\": \"token\",\n            \"keys\": [\n              {\n                \"key\": \"OPENCLAW_TOKEN_REDACTED\",\n                \"scopes\": [\n                  \"*\"\n                ],\n                \"description\": \"Primary gateway key\"\n              }\n            ]\n          },\n        ```\n\n2.  **Remove Weak Fallback Model**: Remove the insecure model from the `main` agent's fallback list.\n    *   **Find**:\n        ```json\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-4o-mini\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n        ```\n    *   **Replace with**:\n        ```json\n            \"fallbacks\": [\n              \"google-gemini-cli/gemini-2.5-pro\",\n              \"google-gemini-cli/gemini-2.0-flash\",\n              \"openai-codex/gpt-5.3-codex\"\n            ]\n        ```\n\n**Ot…",
+      "nextRunAt": 1774003800000,
       "model": null,
-      "lastTotalTokens": 10683,
-      "lastInputTokens": 10771,
-      "lastOutputTokens": 1317
+      "lastTotalTokens": 12155,
+      "lastInputTokens": 20513,
+      "lastOutputTokens": 3575
     },
     {
       "id": "03cf0eec-72cb-4012-87aa-aa0962b1a197",
@@ -263,17 +263,17 @@
       "schedule": "50 6 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773831129132,
+      "lastRunAt": 1773917607088,
       "lastStatus": "ok",
-      "lastDurationMs": 64964,
+      "lastDurationMs": 86704,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Triage extractor: OK\n\n- Date (yesterday, America/New_York): 2026-03-17\n- Mac journal read: ✅ `/Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md`\n- Extractor output:\n  - Journal items extracted: 40\n  - Readwise highlights extracted: 0\n- Queue built (after filtering mundane/logistics/template noise + de-dupe):\n  - Kept items: 9 (journal: 9, readwise: 0)\n  - Suggested buckets: task=3, protocol=5, null=1\n- Wrote: `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n- Cleaned up temp file: ✅ deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen to review in the PWA: http://openclaw-vps:8765",
-      "nextRunAt": 1773917400000,
+      "lastSummary": "Triage extractor: OK\n\n- Date (America/New_York yesterday): **2026-03-18**\n- Journal file (Mac): **found** `/Users/andreasallmaier/Documents/Brain/journal/2026-03-18.md`\n- Extractor output:\n  - journal_items: 28 (kept **11** after filtering)\n  - readwise highlights: 18 (kept **12** after filtering)\n- Wrote triage queue:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json`\n  - Total items in queue: **23**\n- Cleanup: deleted `/home/clawd/.openclaw/workspace-km/triage/journal-tmp.md`\n\nOpen to review: **http://openclaw-vps:8765**",
+      "nextRunAt": 1774003800000,
       "model": null,
-      "lastTotalTokens": 13401,
-      "lastInputTokens": 11922,
-      "lastOutputTokens": 2735
+      "lastTotalTokens": 17967,
+      "lastInputTokens": 16176,
+      "lastOutputTokens": 3527
     },
     {
       "id": "27a1354d-a66d-4b09-a6c7-bc60317f60c3",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773916080040,
+      "lastRunAt": 1773917880031,
       "lastStatus": "ok",
-      "lastDurationMs": 26141,
+      "lastDurationMs": 30273,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
-      "nextRunAt": 1773916200000,
+      "lastSummary": "- Parsed `queue_date` from `queue.json`: `2026-03-18`\n- Loaded `decisions.json` and matched decisions against the queue item IDs\n  - Matches found: 0 (the IDs in `decisions.json` don’t correspond to the current queue’s item IDs)\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 0\n- Mac node `Andreas MacBook` is online\n- Wrote (overwrote) staging note (idempotent):\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`",
+      "nextRunAt": 1773918000000,
       "model": null,
-      "lastTotalTokens": 8631,
-      "lastInputTokens": 2747,
-      "lastOutputTokens": 813
+      "lastTotalTokens": 11788,
+      "lastInputTokens": 6078,
+      "lastOutputTokens": 877
     }
   ]
 }
