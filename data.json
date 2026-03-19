@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773909007752,
+  "updatedAt": 1773910810641,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 17,
+          "usedPercent": 18,
           "resetAt": 1773911288000
         },
         {
           "label": "Day",
-          "usedPercent": 23,
+          "usedPercent": 24,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773908881780,
+      "lastRunAt": 1773910681825,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Read:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`)\n  - `/home/clawd/.openclaw/workspace-km/triage/decisions.json` (present)\n- Computed from decisions:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Mac node status: **Andreas MacBook connected**\n- Wrote (overwrote, idempotent) staging note:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
+      "lastSummary": "- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773908881780,
+      "lastRunAt": 1773910681825,
       "lastStatus": "ok",
-      "lastDurationMs": 18916,
+      "lastDurationMs": 17755,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Read:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`)\n  - `/home/clawd/.openclaw/workspace-km/triage/decisions.json` (present)\n- Computed from decisions:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Mac node status: **Andreas MacBook connected**\n- Wrote (overwrote, idempotent) staging note:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
-      "nextRunAt": 1773909000000,
+      "lastSummary": "- Wrote/overwrote staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
+      "nextRunAt": 1773910800000,
       "model": null,
-      "lastTotalTokens": 8385,
-      "lastInputTokens": 2395,
-      "lastOutputTokens": 648
+      "lastTotalTokens": 8419,
+      "lastInputTokens": 2466,
+      "lastOutputTokens": 605
     }
   ]
 }
