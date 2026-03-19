@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773891006423,
+  "updatedAt": 1773892809625,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 17,
+          "usedPercent": 19,
           "resetAt": 1773893286000
         },
         {
           "label": "Day",
-          "usedPercent": 17,
+          "usedPercent": 18,
           "resetAt": 1774457165000
         }
       ],
@@ -61,13 +61,13 @@
       "id": "main",
       "name": "main",
       "emoji": "🤖",
-      "activityKind": "chat",
-      "activityLabel": "telegram message",
-      "activityChannel": "telegram",
-      "lastRunAt": 1773871842070,
+      "activityKind": "cron",
+      "activityLabel": "infraops:openclaw-auto-update",
+      "activityChannel": null,
+      "lastRunAt": 1773891900061,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Found it.\n\n`morning-briefing-tg.py` lives at:\n- `/home/clawd/.openclaw/workspace-feature-builder/morning-briefing-tg.py`\n\nThe thing that’s actually producing the daily “briefing” style message in cron"
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now."
     },
     {
       "id": "km",
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773890880022,
+      "lastRunAt": 1773892680028,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Read `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`) and `/home/clawd/.openclaw/workspace-km/triage/decisions.json`.\n- Computed:\n  - Tasks (2)\n  - Protocols (5)\n  - Skipped (2)\n- Mac node **Andreas MacBook** was online, so I overwrote the staging note at:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
+      "lastSummary": "Wrote (overwrote) the triage staging note on Andreas MacBook:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Contents:\n  - Tasks (2)\n  - Protocols (5)\n  - Meta: Skipped = 2"
     },
     {
       "id": "research",
@@ -209,17 +209,17 @@
       "schedule": "45 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773805500016,
+      "lastRunAt": 1773891900061,
       "lastStatus": "ok",
-      "lastDurationMs": 100116,
+      "lastDurationMs": 50971,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "NOOP — `openclaw_auto_update.py` ran successfully and found **no update** to apply.\n\nNote: the first attempt failed because the script couldn’t reach the local OpenClaw gateway (`gateway closed (1000)`). I checked `openclaw gateway status` right after and the gateway is **running** with an OK RPC probe on `ws://127.0.0.1:18789`, then reran the update script and it completed normally.",
-      "nextRunAt": 1773891900000,
+      "lastSummary": "Ran `python3 /home/clawd/.openclaw/workspace/scripts/openclaw_auto_update.py`.\n\nResult: **NOOP (no update)** — nothing to update right now.",
+      "nextRunAt": 1773978300000,
       "model": null,
-      "lastTotalTokens": 9013,
-      "lastInputTokens": 9254,
-      "lastOutputTokens": 335
+      "lastTotalTokens": 8334,
+      "lastInputTokens": 5946,
+      "lastOutputTokens": 116
     },
     {
       "id": "e3918934-ca54-44dd-964e-d27888a9946a",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773890880022,
+      "lastRunAt": 1773892680028,
       "lastStatus": "ok",
-      "lastDurationMs": 60022,
+      "lastDurationMs": 16288,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Read `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`) and `/home/clawd/.openclaw/workspace-km/triage/decisions.json`.\n- Computed:\n  - Tasks (2)\n  - Protocols (5)\n  - Skipped (2)\n- Mac node **Andreas MacBook** was online, so I overwrote the staging note at:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
-      "nextRunAt": 1773891000000,
+      "lastSummary": "Wrote (overwrote) the triage staging note on Andreas MacBook:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Contents:\n  - Tasks (2)\n  - Protocols (5)\n  - Meta: Skipped = 2",
+      "nextRunAt": 1773892800000,
       "model": null,
-      "lastTotalTokens": 8500,
-      "lastInputTokens": 2662,
-      "lastOutputTokens": 745
+      "lastTotalTokens": 8437,
+      "lastInputTokens": 2459,
+      "lastOutputTokens": 627
     }
   ]
 }
