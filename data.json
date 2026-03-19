@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773907209458,
+  "updatedAt": 1773909007752,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 15,
+          "usedPercent": 17,
           "resetAt": 1773911288000
         },
         {
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773907081541,
+      "lastRunAt": 1773908881780,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "Wrote/overwrote the triage staging note on Andreas MacBook:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Contents include:\n  - Tasks (2)\n  - Protocols (5)\n  - Meta: Skipped (2)"
+      "lastSummary": "- Read:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`)\n  - `/home/clawd/.openclaw/workspace-km/triage/decisions.json` (present)\n- Computed from decisions:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Mac node status: **Andreas MacBook connected**\n- Wrote (overwrote, idempotent) staging note:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773907081541,
+      "lastRunAt": 1773908881780,
       "lastStatus": "ok",
-      "lastDurationMs": 20957,
+      "lastDurationMs": 18916,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "Wrote/overwrote the triage staging note on Andreas MacBook:\n\n- Path: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n- Contents include:\n  - Tasks (2)\n  - Protocols (5)\n  - Meta: Skipped (2)",
-      "nextRunAt": 1773907200000,
+      "lastSummary": "- Read:\n  - `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`)\n  - `/home/clawd/.openclaw/workspace-km/triage/decisions.json` (present)\n- Computed from decisions:\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Mac node status: **Andreas MacBook connected**\n- Wrote (overwrote, idempotent) staging note:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
+      "nextRunAt": 1773909000000,
       "model": null,
-      "lastTotalTokens": 8525,
-      "lastInputTokens": 2562,
-      "lastOutputTokens": 715
+      "lastTotalTokens": 8385,
+      "lastInputTokens": 2395,
+      "lastOutputTokens": 648
     }
   ]
 }
