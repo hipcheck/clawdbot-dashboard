@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773934211497,
+  "updatedAt": 1773936009396,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 7,
+          "usedPercent": 9,
           "resetAt": 1773947289000
         },
         {
           "label": "Day",
-          "usedPercent": 34,
+          "usedPercent": 35,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773934080015,
+      "lastRunAt": 1773935880027,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote the Obsidian staging note on **Andreas MacBook**:  \n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n- Result of this run (based strictly on `decisions.json` by `id` lookup):\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 24"
+      "lastSummary": "Wrote/overwrote the staging note on Andreas MacBook:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\n(For this run, 0 queue items matched ids in `decisions.json`, so Tasks/Protocols are empty; Skipped = 0.)"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773934080015,
+      "lastRunAt": 1773935880027,
       "lastStatus": "ok",
-      "lastDurationMs": 21807,
+      "lastDurationMs": 39456,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote the Obsidian staging note on **Andreas MacBook**:  \n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n- Result of this run (based strictly on `decisions.json` by `id` lookup):\n  - Tasks: 0\n  - Protocols: 0\n  - Skipped: 24",
-      "nextRunAt": 1773934200000,
+      "lastSummary": "Wrote/overwrote the staging note on Andreas MacBook:\n\n- `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-18.md`\n\n(For this run, 0 queue items matched ids in `decisions.json`, so Tasks/Protocols are empty; Skipped = 0.)",
+      "nextRunAt": 1773936000000,
       "model": null,
-      "lastTotalTokens": 11552,
-      "lastInputTokens": 5812,
-      "lastOutputTokens": 593
+      "lastTotalTokens": 12076,
+      "lastInputTokens": 5257,
+      "lastOutputTokens": 1088
     }
   ]
 }
