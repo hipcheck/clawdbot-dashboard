@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773887407268,
+  "updatedAt": 1773889207314,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,12 +7,12 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 12,
+          "usedPercent": 14,
           "resetAt": 1773893286000
         },
         {
           "label": "Day",
-          "usedPercent": 16,
+          "usedPercent": 17,
           "resetAt": 1774457165000
         }
       ],
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773887280018,
+      "lastRunAt": 1773889080016,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Parsed triage inputs\n  - queue_date: `2026-03-17`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Wrote (overwrote, idempotent) staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
+      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
     },
     {
       "id": "research",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773887280018,
+      "lastRunAt": 1773889080016,
       "lastStatus": "ok",
-      "lastDurationMs": 21528,
+      "lastDurationMs": 29844,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Parsed triage inputs\n  - queue_date: `2026-03-17`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2\n- Wrote (overwrote, idempotent) staging note on **Andreas MacBook**:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
-      "nextRunAt": 1773887400000,
+      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
+      "nextRunAt": 1773889200000,
       "model": null,
-      "lastTotalTokens": 8465,
-      "lastInputTokens": 2609,
-      "lastOutputTokens": 677
+      "lastTotalTokens": 8602,
+      "lastInputTokens": 2995,
+      "lastOutputTokens": 840
     }
   ]
 }
