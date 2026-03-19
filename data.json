@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1773889207314,
+  "updatedAt": 1773891006423,
   "providers": [
     {
       "id": "openai-codex",
@@ -7,7 +7,7 @@
       "windows": [
         {
           "label": "5h",
-          "usedPercent": 14,
+          "usedPercent": 17,
           "resetAt": 1773893286000
         },
         {
@@ -76,10 +76,10 @@
       "activityKind": "cron",
       "activityLabel": "km:triage-swipe-sync",
       "activityChannel": null,
-      "lastRunAt": 1773889080016,
+      "lastRunAt": 1773890880022,
       "lastStatus": "ok",
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2"
+      "lastSummary": "- Read `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`) and `/home/clawd/.openclaw/workspace-km/triage/decisions.json`.\n- Computed:\n  - Tasks (2)\n  - Protocols (5)\n  - Skipped (2)\n- Mac node **Andreas MacBook** was online, so I overwrote the staging note at:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`"
     },
     {
       "id": "research",
@@ -173,17 +173,17 @@
       "schedule": "0 23 * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773802800024,
-      "lastStatus": "error",
-      "lastDurationMs": 123075,
-      "consecutiveErrors": 1,
-      "lastError": "⚠️ 📝 Edit: `in ~/.openclaw/workspace-km/.learnings/ERRORS.md (674 chars)` failed",
-      "lastSummary": "- Preconditions\n  - Andreas MacBook node: connected ✅\n\n- Step 1 — CURRENT_TS (America/New_York, computed via `/usr/bin/python3` on Mac)\n  - CURRENT_TS: 2026-03-17 23:00:34 EDT\n\n- Step 2 — TARGET_DATE logic\n  - CURRENT_TS is 23:00:34 (between 12:00:00–23:59:59) → TARGET_DATE = today (NYC)\n  - TARGET_DATE: 2026-03-17\n\n- Step 3 — Target file\n  - /Users/andreasallmaier/Documents/Brain/journal/2026-03-17.md\n  - File exists ✅\n\n- Step 4 — Formatting normalization\n  - Determined note is effectively empty (template-only: frontmatter + section skeleton + tasks block)\n  - Per instructions: skipped formatting normalization and proceeded to comment insertion\n\n- Step 4.5 — Reminders (from REMINDERS.md on VPS)\n  - Matches for 2026-03-17: none → no Reminders subsection added\n\n- Step 5 — `[[clawdbot]]` comment\n  - Found existing `[[clawdbot]]` section in the template\n  - Replaced the blank placeholder entry under `[[clawdbot]]` with exactly one entry for TARGET_DATE (2026-03-17), including:\n    - Timestamp (NYC): 2026-03-17 23:00:34 EDT\n    - Patterns / what I notice (3 bullets)\n    - Experiments (next 7 days) (4 bullets)\n  - Verified by re-reading the `[[clawdbot]]` section + tail: content is present ✅",
-      "nextRunAt": 1773889200000,
+      "lastRunAt": 1773889200017,
+      "lastStatus": "ok",
+      "lastDurationMs": 255186,
+      "consecutiveErrors": 0,
+      "lastError": null,
+      "lastSummary": "Nikola nightly journal: OK\n\n- Preconditions\n  - Mac node “Andreas MacBook”: connected\n\n- Time / targeting\n  - CURRENT_TS (America/New_York): 2026-03-18 23:00:18-04:00\n  - TARGET_DATE rule applied (12:00–23:59 ⇒ today): TARGET_DATE = 2026-03-18\n  - Target file: `/Users/andreasallmaier/Documents/Brain/journal/2026-03-18.md` (found)\n\n- Step 4 — Formatting normalization (python-only on Mac)\n  - File was not empty-ish, so formatting normalization was applied.\n  - Changes made (wording preserved):\n    - Tabs → 2 spaces\n    - `*`/`+` list markers → `-`\n    - Removed extra blank lines inside list blocks\n  - Updated file written back.\n\n- Step 4.5 — Reminders (from VPS `REMINDERS.md`)\n  - No active reminders matched TARGET_DATE = 2026-03-18 → no Reminders subsection injected.\n\n- Step 5 — `[[clawdbot]]` comment\n  - Located existing `- [[clawdbot]]` section in the journal outline.\n  - Added exactly one entry for 2026-03-18 under it (with NYC timestamp, Patterns, Experiments, plus Further reading + Readwise).\n  - Verified by re-reading the `[[clawdbot]]` section + file tail; entry is present and correctly nested.",
+      "nextRunAt": 1773975600000,
       "model": null,
-      "lastTotalTokens": 14233,
-      "lastInputTokens": 15697,
-      "lastOutputTokens": 4891
+      "lastTotalTokens": 19265,
+      "lastInputTokens": 19905,
+      "lastOutputTokens": 8122
     },
     {
       "id": "ec4c4adb-b20a-456c-ba9b-230db18dd23a",
@@ -281,17 +281,17 @@
       "schedule": "*/2 * * * *",
       "tz": "America/New_York",
       "enabled": true,
-      "lastRunAt": 1773889080016,
+      "lastRunAt": 1773890880022,
       "lastStatus": "ok",
-      "lastDurationMs": 29844,
+      "lastDurationMs": 60022,
       "consecutiveErrors": 0,
       "lastError": null,
-      "lastSummary": "- Wrote/overwrote staging note on Andreas MacBook: `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`\n  - Tasks: 2\n  - Protocols: 5\n  - Skipped: 2",
-      "nextRunAt": 1773889200000,
+      "lastSummary": "- Read `/home/clawd/.openclaw/workspace-km/triage/queue.json` (date: `2026-03-17`) and `/home/clawd/.openclaw/workspace-km/triage/decisions.json`.\n- Computed:\n  - Tasks (2)\n  - Protocols (5)\n  - Skipped (2)\n- Mac node **Andreas MacBook** was online, so I overwrote the staging note at:\n  - `/Users/andreasallmaier/Documents/Brain/Triage/2026-03-17.md`",
+      "nextRunAt": 1773891000000,
       "model": null,
-      "lastTotalTokens": 8602,
-      "lastInputTokens": 2995,
-      "lastOutputTokens": 840
+      "lastTotalTokens": 8500,
+      "lastInputTokens": 2662,
+      "lastOutputTokens": 745
     }
   ]
 }
