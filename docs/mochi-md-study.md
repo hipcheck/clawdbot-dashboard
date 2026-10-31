@@ -74,3 +74,34 @@ Studied 31 Oct 2026 from the homepage, the support and privacy pages, the styles
 
 ## Not copied
 Their name, mascot artwork, copy and exact theme set are theirs. Our app should take the *ideas* (an agent-output reader, changes since last read, calm and cute themes, a companion character) and give them its own name, character and look.
+
+---
+
+# Handoff: decisions made with the user (read this first)
+
+**Goal:** a native iOS/iPadOS Markdown reader for the user's **iPhone Duo** and **iPad**. It's for reading Obsidian notes and the `.md` files AI tools produce, and should be as beautiful and convenient as Mochi.md (which is Mac-only).
+
+## Settled decisions
+- **Native SwiftUI app**, not a web app or PWA. One universal target for iPhone and iPad.
+- The user **has a Mac and a paid Apple Developer account**. Build, sign and install with Xcode; TestFlight is fine for getting it onto both devices.
+- **No file watching or live reload needed.** It just opens .md files well. Mochi.md's "changes since last read" is out of scope for v1.
+- **New GitHub repo** for the app (working name `md-reader`; confirm the name with the user). Don't build it inside `clawdbot-dashboard`.
+- **Don't copy Mochi.md's branding**: name, mascot art, website copy and exact themes. Reuse the ideas with our own look.
+
+## Target devices
+- **iPhone Duo**: Apple's first foldable (released 23 Oct 2026, running iOS 27). Folded, the outer screen is phone-sized; unfolded, the inner screen is about 50% larger than an iPhone 18 Pro Max (close to iPad size). Use a `NavigationSplitView` that collapses to stacked navigation when folded and shows sidebar + reader when unfolded. Test both size classes, and the switch between them while the app is open (folding or unfolding mid-read must keep the scroll position).
+- **iPad**: sidebar + reader, keyboard shortcuts (⌘K quick open, ⌘F find), Stage Manager / multiple windows.
+
+## v1 scope
+1. **Opening files:** register the `.md`/`.markdown` document types so the app appears in the Files app's "Open with…" and the share sheet. Also a document picker for single files.
+2. **Library:** recent files and pinned files. "Open Folder" picks a folder (e.g. an Obsidian vault in iCloud Drive), remembered with a security-scoped bookmark, then a file tree and full-text search across it.
+3. **Reader:** a WKWebView with a bundled, offline renderer (markdown-it + plugins, Shiki or highlight.js, KaTeX, Mermaid). Nothing is fetched from the network.
+   - GFM: tables, footnotes, strikethrough, task lists. Ticking a checkbox writes back to the file.
+   - Obsidian: `> [!type]` callouts, `[[wikilinks]]` (navigate within the opened folder), `![[embeds]]` for images, `==highlights==`, `#tags`.
+   - Frontmatter shown as a metadata card (tags as chips, with a copy-as-JSON button).
+   - Code blocks with a language label and a copy button. Mermaid diagrams with a copy-source button. Math.
+   - Outline of headings (sidebar or sheet), word count and reading time, remembered scroll position per file.
+4. **Themes:** our own set, a few calm and a few cute pastel ones, each with light and dark versions. Plus a typography menu (font: system / rounded / serif; text size; line width). Comfortable line length of about 60–70 characters.
+
+## Later, only if the user asks
+Edit-in-place (CodeMirror 6 live preview), a companion mascot, changes since last read, a Quick Look preview extension, export to PDF.
